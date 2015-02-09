@@ -1,0 +1,2 @@
+#!/bin/sh
+HEROKU_APP=rubytogether HKAPP=rubytogether exec "${HEROKU_COMMAND:-hk}" "$@"
