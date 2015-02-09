@@ -1,4 +1,4 @@
 /.bundle
-/config/database.yml
+/.env.local
 /log/*
 /tmp
