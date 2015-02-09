@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gem "rails", "4.2.0"
 
+gem "devise"
 gem "jquery-rails"
 gem "pg"
 gem "puma"
