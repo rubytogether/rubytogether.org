@@ -1,0 +1,12 @@
+default: &default
+  adapter: postgres
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: ruby_together
+
+test:
+  <<: *default
+  database: ruby_together_test
