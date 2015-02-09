@@ -56,9 +56,9 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
-    dotenv (1.0.2)
-    dotenv-rails (1.0.2)
-      dotenv (= 1.0.2)
+    dotenv (2.0.0.beta)
+    dotenv-rails (2.0.0.beta)
+      dotenv (= 2.0.0.beta)
     erubis (2.7.0)
     execjs (2.3.0)
     globalid (0.3.2)
@@ -162,7 +162,7 @@ PLATFORMS
 
 DEPENDENCIES
   devise
-  dotenv-rails
+  dotenv-rails (~> 2.0.0.beta)
   jquery-rails
   pg
   pry-byebug
