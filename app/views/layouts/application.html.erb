@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RubytogetherOrg</title>
+  <title>Ruby Together</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <section class="flash">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </section>
 
-<%= yield %>
-
+  <%= yield %>
 </body>
 </html>
