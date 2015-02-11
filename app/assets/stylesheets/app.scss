@@ -1,0 +1,18 @@
+$dark_pink: #f092dd;
+$pink: #ffaff0;
+$red: #bf1652;
+$light: #d0d9e5;
+$dark: #392f5a;
+$font-sancoale: 'Sancoale Slab';
+$font-seravek: 'Seravek';
+
+body {
+  background-color: $light;
+  color: $dark;
+  font-family: $font-seravek;
+}
+
+h1 {
+  color: $red;
+  font-family: $font-sancoale;
+}
