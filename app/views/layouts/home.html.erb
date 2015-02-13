@@ -1,9 +1,6 @@
-<% content_for :footer do %>
-  <ul>
-    <li><%= link_to "about us", "/" %></li>
-    <li><%= link_to "contact us", "/contact" %></li>
-    <li><%= link_to "join us", "/join" %></li>
-  </ul>
+<% content_for :header do %>
+  <%= link_to image_tag("rubies.png", width: "200"), "/" %>
+  <%= content_tag :h2, title || "Ruby Together" %>
 <% end %>
 
 <%= render template: "layouts/application" %>
