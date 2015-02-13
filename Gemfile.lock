@@ -83,6 +83,8 @@ GEM
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
     pg (0.18.1)
+    pretty_backtrace (0.1.1)
+      debug_inspector (~> 0.0.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -165,6 +167,7 @@ DEPENDENCIES
   dotenv-rails (~> 2.0.0.beta)
   jquery-rails
   pg
+  pretty_backtrace
   pry-byebug
   pry-rails
   puma
