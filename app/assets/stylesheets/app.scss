@@ -3,16 +3,61 @@ $pink: #ffaff0;
 $red: #bf1652;
 $light: #d0d9e5;
 $dark: #392f5a;
-$font-sancoale: 'Sancoale Slab';
-$font-seravek: 'Seravek';
+
+$font-campton: 'Campton';
 
 body {
   background-color: $light;
   color: $dark;
-  font-family: $font-seravek;
+  font-family: $font-campton;
+  max-width: 580px;
+  margin: auto;
+  padding: 0 2em;
+}
+
+header {
+  text-align: center;
+  margin: 5em 0;
+  
+  img {
+    margin: 2em 0;
+  }
+}
+
+footer {
+  padding-bottom: 2em;
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    float: left;
+    margin-right: 2em;
+  }
 }
 
 h1 {
-  color: $red;
-  font-family: $font-sancoale;
+  font-size: 55px;
+  text-transform: lowercase;
+  margin: 0;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+p {
+  font-size: 28px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: $dark;
+  
+  &:hover {
+    text-decoration: underline;
+  }
 }
