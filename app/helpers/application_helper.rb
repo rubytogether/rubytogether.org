@@ -1,13 +1,10 @@
 module ApplicationHelper
-  def subtitle?
-    !@subtitle.nil?
-  end
 
-  def subtitle(text = nil)
+  def title(text = nil)
     if text
-      @subtitle = text
+      @title = text
     else
-      @subtitle
+      @title
     end
   end
 

@@ -7,25 +7,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <section class="flash">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-  </section>
-
   <header>
-    <%= image_tag "rubies.png", width: "300" %>
-    <h1>Ruby Together</h1>
-    <%= content_tag :h2, subtitle if subtitle? %>
+    <%- if content_for?(:header) -%>
+      <%= content_for :header %>
+    <%- else -%>
+      <%= image_tag("rubies.png", width: "300", class: "home") %>
+      <h1>Ruby Together</h1>
+    <%- end -%>
   </header>
 
   <section class="content">
+    <%- content_tag :section, class: "flash" do %>
+      <%= content_tag :p, notice, class: "notice" if notice %>
+      <%= content_tag :p, alert, class: "alert" if alert %>
+    <%- end if notice || alert -%>
+
     <%= yield %>
   </section>
 
-  <%- if content_for?(:footer) -%>
-  <footer>
-    <%= content_for :footer %>
-  </footer>
-  <%- end -%>
+  <%= content_tag :footer, content_for(:footer) if content_for?(:footer) %>
 </body>
 </html>

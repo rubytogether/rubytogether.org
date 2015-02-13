@@ -18,15 +18,15 @@ body {
 header {
   text-align: center;
   margin: 5em 0;
-  
-  img {
+
+  img.home {
     margin: 2em 0;
   }
 }
 
 footer {
   padding-bottom: 2em;
-  
+
   ul {
     list-style: none;
     padding: 0;
@@ -56,7 +56,7 @@ a {
   text-decoration: none;
   font-weight: bold;
   color: $dark;
-  
+
   &:hover {
     text-decoration: underline;
   }
