@@ -11,6 +11,7 @@ gem "uglifier", ">= 1.3.0"
 
 group :development, :test do
   gem "dotenv-rails", "~> 2.0.0.beta"
+  gem "pretty_backtrace"
   gem "pry-byebug"
   gem "pry-rails"
   gem "web-console", "~> 2.0"
