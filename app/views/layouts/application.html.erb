@@ -12,6 +12,15 @@
     <p class="alert"><%= alert %></p>
   </section>
 
-  <%= yield %>
+  <header>
+    <%= image_tag "rubies.png", width: "300" %>
+    <h1>Ruby Together</h1>
+    <%= content_tag :h2, subtitle if subtitle? %>
+  </header>
+
+  <section class="content">
+    <%= yield %>
+  </section>
+
 </body>
 </html>
