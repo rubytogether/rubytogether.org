@@ -4,6 +4,7 @@
   <title>Ruby Together</title>
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
+  <%= content_for :head if content_for?(:head) %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -26,5 +27,6 @@
   </section>
 
   <%= content_tag :footer, content_for(:footer) if content_for?(:footer) %>
+  <%= content_for(:script) if content_for?(:script) %>
 </body>
 </html>

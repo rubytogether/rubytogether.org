@@ -1,0 +1,2 @@
+class JoinController < ApplicationController
+end

@@ -1,0 +1,38 @@
+<%- content_for :head do -%>
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+<%- end -%>
+
+<%- content_for :script do -%>
+  <script>
+    var checkout = StripeCheckout.configure({
+      key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
+      image: '/images/rubies-square.png',
+      token: function(token) {
+        // Use the token to create the charge with a server-side script.
+        // You can access the token ID with `token.id`
+        console.log("got a token!", token);
+      }
+    });
+
+    $('a[data-subscription="individual"]').click(function(e) {
+      checkout.open({
+        name: 'Ruby Together',
+        description: 'Monthly Membership',
+        amount: 4000
+      });
+      e.preventDefault();
+    });
+
+    $('a[data-subscription="corporation"]').click(function(e) {
+      checkout.open({
+        name: 'Ruby Together',
+        description: 'Monthly Membership',
+        amount: 80000
+      });
+      e.preventDefault();
+    });
+
+  </script>
+<%- end -%>
+
+<%= render template: "layouts/home" %>
