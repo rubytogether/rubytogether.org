@@ -5,7 +5,7 @@
 <%- content_for :script do -%>
   <script>
     var checkout = StripeCheckout.configure({
-      key: 'pk_test_HkN94VKlAXTkZuhprvYf4U7t',
+      key: '<%= Rails.configuration.stripe[:public_key] %>',
       image: '/images/rubies-square.png',
       token: function(token) {
         // Use the token to create the charge with a server-side script.
@@ -17,7 +17,7 @@
     $('a[data-subscription="individual"]').click(function(e) {
       checkout.open({
         name: 'Ruby Together',
-        description: 'Monthly Membership',
+        description: 'Monthly Membership Dues',
         amount: 4000
       });
       e.preventDefault();
@@ -26,7 +26,7 @@
     $('a[data-subscription="corporation"]').click(function(e) {
       checkout.open({
         name: 'Ruby Together',
-        description: 'Monthly Membership',
+        description: 'Monthly Membership Dues',
         amount: 80000
       });
       e.preventDefault();
