@@ -26,7 +26,6 @@
     <%= yield %>
   </section>
 
-  <%= content_tag :footer, content_for(:footer) if content_for?(:footer) %>
   <%= content_for(:script) if content_for?(:script) %>
 </body>
 </html>
