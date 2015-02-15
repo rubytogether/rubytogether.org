@@ -5,27 +5,21 @@
 <p>Join Ruby Together today as an individual for <a href="javascript:;" data-subscription="individual">$40 per month</a>, join as a corporation for <a href="javascript:;" data-subscription="corporation">$800 per month</a>, or just <a href="mailto:hello@rubytogether.org">contact us</a>.</p>
 
 <%- content_for :script do -%>
-  <!-- <script src="https://checkout.stripe.com/checkout.js"></script> -->
+  <script src="https://checkout.stripe.com/checkout.js"></script>
   <script>
     var submitToken = function(token) {
-      $.post('<%= membership_path %>',
-        {token: token}
-      ).done(function(url) {
-        document.location = url;
-      }).fail(function(req, text, error) {
-        document.location = req.responseText;
+      $.post('<%= membership_path %>', {token: token}, function(data) {
+        if (data.result) { document.location = data.url; }
       });
     };
 
-    // var checkout = StripeCheckout.configure({
-    //   key: '<%= Rails.configuration.stripe[:public_key] %>',
-    //   image: '/images/rubies-square.png',
-    //   token: submitToken
-    // });
+    var checkout = StripeCheckout.configure({
+      key: '<%= Rails.configuration.stripe[:public_key] %>',
+      image: '/images/rubies-square.png',
+      token: submitToken
+    });
 
     $('a[data-subscription="individual"]').click(function(e) {
-      return submitToken({id: 'abc123', email: 'bob@example.com', amount: 4000});
-
       checkout.open({
         name: 'Ruby Together',
         description: 'Monthly Membership Dues',
@@ -35,8 +29,6 @@
     });
 
     $('a[data-subscription="corporation"]').click(function(e) {
-      return submitToken({id: 'abc123', email: 'bob@example.com', amount: 80000});
-
       checkout.open({
         name: 'Ruby Together',
         description: 'Monthly Membership Dues',
