@@ -11,7 +11,6 @@ class CreateMembership
   end
 
   def run
-    raise Stripe::CardError, "nooo"
     customer = create_customer(@email, @token)
     # TODO create user in database, send welcome email
     create_charge(customer.id, @amount, @type)
