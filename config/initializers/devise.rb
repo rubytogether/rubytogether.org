@@ -94,10 +94,10 @@ Devise.setup do |config|
   # a value less than 10 in other environments. Note that, for bcrypt (the default
   # encryptor), the cost increases exponentially with the number of stretches (e.g.
   # a value of 20 is already extremely slow: approx. 60 seconds for 1 calculation).
-  config.stretches = Rails.env.test? ? 1 : 10
+  config.stretches = Rails.env.test? ? 1 : 12
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = 'ab08fa3e7d54f1e2efdff7cca88f8ba6380dc9e395f2593f0854970dffe6ea4911921c214854757b4435d235699ac1459613030fec53a18a36133d12b711afe4'
+  config.pepper = 'ab08fa3e7d54f1e2efdff7cca88f8ba6380dc9e395f2593f0854970dffe6ea4911921c214854757b4435d235699ac1459613030fec53a18a36133d12b711afe4'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
