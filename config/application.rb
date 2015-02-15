@@ -33,5 +33,8 @@ module RubyTogether
 
     # Read the secret key base from ENV
     secrets.secret_key_base = ENV['SECRET_KEY_BASE']
+
+    # Automatically reload lib in development
+    config.autoload_paths << Rails.root.join("lib")
   end
 end
