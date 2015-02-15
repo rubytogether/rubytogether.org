@@ -8,10 +8,13 @@
   <!-- <script src="https://checkout.stripe.com/checkout.js"></script> -->
   <script>
     var submitToken = function(token) {
-      // Use the token to create the charge with a server-side script.
-      // You can access the token ID with `token.id`
-      console.log("got a token!", token);
-      $.post('<%= membership_path %>', token);
+      $.post('<%= membership_path %>',
+        {token: token}
+      ).done(function(url) {
+        document.location = url;
+      }).fail(function(req, text, error) {
+        document.location = req.responseText;
+      });
     };
 
     // var checkout = StripeCheckout.configure({
@@ -21,7 +24,7 @@
     // });
 
     $('a[data-subscription="individual"]').click(function(e) {
-      return submitToken({id: 'abc123', email: 'bob@example.com'});
+      return submitToken({id: 'abc123', email: 'bob@example.com', amount: 4000});
 
       checkout.open({
         name: 'Ruby Together',
@@ -32,7 +35,7 @@
     });
 
     $('a[data-subscription="corporation"]').click(function(e) {
-      return submitToken({id: 'abc123', email: 'bob@example.com'});
+      return submitToken({id: 'abc123', email: 'bob@example.com', amount: 80000});
 
       checkout.open({
         name: 'Ruby Together',

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
 
   get "/join" => "memberships#new"
+  resource :membership, only: [:create]
 
   devise_for :users
 end
