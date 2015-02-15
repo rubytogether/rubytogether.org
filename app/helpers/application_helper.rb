@@ -8,4 +8,8 @@ module ApplicationHelper
     end
   end
 
+  def contact_link(text)
+    link_to text, "mailto:hello@rubytogether.org"
+  end
+
 end
