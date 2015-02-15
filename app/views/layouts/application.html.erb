@@ -4,7 +4,6 @@
   <title>Ruby Together</title>
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
-  <%= content_for :head if content_for?(:head) %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -12,8 +11,8 @@
     <%- if content_for?(:header) -%>
       <%= content_for :header %>
     <%- else -%>
-      <%= image_tag("rubies.png", width: "300", class: "home") %>
-      <h1>Ruby Together</h1>
+      <%= link_to image_tag("rubies.png", width: "200"), "/" %>
+      <%= content_tag :h2, title || "Ruby Together" %>
     <%- end -%>
   </header>
 

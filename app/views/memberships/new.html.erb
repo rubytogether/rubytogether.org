@@ -1,0 +1,46 @@
+<%- title "Join Ruby Together" -%>
+
+<p>Any person or company that uses Ruby as part of their work can join and receive <a href="/benefits">members-only benefits</a>. Membership dues fund <a href="/team">our team</a> to work on <a href="/projects">tools and services</a> used by every Ruby developer.</p>
+
+<p>Join Ruby Together today as an individual for <a href="javascript:;" data-subscription="individual">$40 per month</a>, join as a corporation for <a href="javascript:;" data-subscription="corporation">$800 per month</a>, or just <a href="mailto:hello@rubytogether.org">contact us</a>.</p>
+
+<%- content_for :script do -%>
+  <!-- <script src="https://checkout.stripe.com/checkout.js"></script> -->
+  <script>
+    var submitToken = function(token) {
+      // Use the token to create the charge with a server-side script.
+      // You can access the token ID with `token.id`
+      console.log("got a token!", token);
+      $.post('<%= membership_path %>', token);
+    };
+
+    // var checkout = StripeCheckout.configure({
+    //   key: '<%= Rails.configuration.stripe[:public_key] %>',
+    //   image: '/images/rubies-square.png',
+    //   token: submitToken
+    // });
+
+    $('a[data-subscription="individual"]').click(function(e) {
+      return submitToken({id: 'abc123', email: 'bob@example.com'});
+
+      checkout.open({
+        name: 'Ruby Together',
+        description: 'Monthly Membership Dues',
+        amount: 4000
+      });
+      e.preventDefault();
+    });
+
+    $('a[data-subscription="corporation"]').click(function(e) {
+      return submitToken({id: 'abc123', email: 'bob@example.com'});
+
+      checkout.open({
+        name: 'Ruby Together',
+        description: 'Monthly Membership Dues',
+        amount: 80000
+      });
+      e.preventDefault();
+    });
+
+  </script>
+<%- end -%>
