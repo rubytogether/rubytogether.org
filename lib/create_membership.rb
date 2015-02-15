@@ -6,7 +6,7 @@ class CreateMembership
   def initialize(params = {})
     @token  = params.fetch(:id)
     @email  = params.fetch(:email)
-    @amount = params.fetch(:amount)
+    @amount = params.fetch(:amount).to_i
     @type   = membership_type_for(@amount)
   end
 
@@ -45,7 +45,7 @@ private
     when 80000
       "Corporate Member"
     else
-      raise Error, "unknown membership amount '#{amount}'"
+      raise Error, "unknown membership amount #{amount.inspect}"
     end
   end
 
