@@ -16,12 +16,14 @@
     <%- end -%>
   </header>
 
-  <section class="content">
-    <%- content_tag :section, class: "flash" do %>
-      <%= content_tag :p, notice, class: "notice" if notice %>
-      <%= content_tag :p, alert, class: "alert" if alert %>
-    <%- end if notice || alert -%>
+  <section class="flash">
+    <%= content_tag :p, flash.notice, class: "flash notice" if flash.notice %>
+    <%= content_tag :p, class: "flash alert" do %>
+      <%= flash.alert %> If you need help, please <%= contact_link "contact us" %>.
+    <% end if flash.alert %>
+  </section>
 
+  <section class="content">
     <%= yield %>
   </section>
 
