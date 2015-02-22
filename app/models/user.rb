@@ -1,6 +1,13 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+private
+
+  # Normally this method requires a password all the time. In this app,
+  # we want the password to be optional at signup, but never removable.
+  def password_required?
+    !password.nil?
+  end
+
 end
