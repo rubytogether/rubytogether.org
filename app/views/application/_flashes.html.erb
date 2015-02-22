@@ -1,4 +1,4 @@
-<section class="flash">
-  <%= content_tag :p, flash.notice, class: "flash notice" %>
-  <%= content_tag :p, flash.alert, class: "flash alert" %>
+<section class="flashes">
+  <%= content_tag :p, flash.notice, class: "flash notice" if flash.notice %>
+  <%= content_tag :p, flash.alert, class: "flash alert" if flash.alert %>
 </section>
