@@ -7,20 +7,34 @@
 <%- content_for :script do -%>
   <script src="https://checkout.stripe.com/checkout.js"></script>
   <script>
-    var submitToken = function(token) {
-      $.post('<%= membership_path %>', {token: token}, function(data) {
-        if (data.result) { document.location = data.url; }
+    var showError = function(message) {
+      $(".flashes").html('<p class="flash alert">' + message + '</p>');
+    };
+
+    var createCheckout = function(type) {
+      var sendToken = function(token) {
+        token.metadata = {"membership_type": type};
+        $.post('<%= membership_path %>', {token: token}, function(data) {
+          if (data.url) {
+            document.location = data.url;
+          } else if (data.message) {
+            showError(data.message);
+          }
+        }).fail(function(xhr, textStatus, errorThrown) {
+          showError(xhr.responseText);
+        });
+      };
+
+      return StripeCheckout.configure({
+        key: '<%= Rails.configuration.stripe[:public_key] %>',
+        image: '/images/rubies-square.png',
+        token: sendToken
       });
     };
 
-    var checkout = StripeCheckout.configure({
-      key: '<%= Rails.configuration.stripe[:public_key] %>',
-      image: '/images/rubies-square.png',
-      token: submitToken
-    });
-
+    var checkoutIndividual = createCheckout("individual");
     $('a[data-subscription="individual"]').click(function(e) {
-      checkout.open({
+      checkoutIndividual.open({
         name: 'Ruby Together',
         description: 'Monthly Membership Dues',
         amount: 4000
@@ -28,8 +42,9 @@
       e.preventDefault();
     });
 
-    $('a[data-subscription="corporation"]').click(function(e) {
-      checkout.open({
+    var checkoutCorporate = createCheckout("corporate");
+    $('a[data-subscription="corporate"]').click(function(e) {
+      checkoutCorporate.open({
         name: 'Ruby Together',
         description: 'Monthly Membership Dues',
         amount: 80000
