@@ -11,12 +11,17 @@ gem "sass-rails", "~> 5.0"
 gem "stripe"
 gem "uglifier", ">= 1.3.0"
 
+group :development do
+  gem "guard-livereload", "~> 2.4", require: false
+  gem "rack-livereload"
+  gem "web-console", "~> 2.0"
+end
+
 group :development, :test do
   gem "dotenv-rails", "~> 2.0.0.beta"
   gem "pretty_backtrace"
   gem "pry-byebug"
   gem "pry-rails"
-  gem "web-console", "~> 2.0"
 end
 
 group :production do
