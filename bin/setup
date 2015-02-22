@@ -12,6 +12,10 @@ Dir.chdir APP_ROOT do
   puts "\n== Preparing database =="
   system "bin/rake db:setup"
 
+  puts "\n== Installing dependencies =="
+  puts "terminal-notifier"
+  system "brew install terminal-notifier"
+
   puts "\n== Removing old logs and tempfiles =="
   system "rm -f log/*"
   system "rm -rf tmp/cache"

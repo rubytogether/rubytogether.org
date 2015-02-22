@@ -13,7 +13,9 @@ gem "uglifier", ">= 1.3.0"
 
 group :development do
   gem "guard-livereload", "~> 2.4", require: false
+  gem "guard-rails"
   gem "rack-livereload"
+  gem "terminal-notifier-guard", "~> 1.6"
   gem "web-console", "~> 2.0"
 end
 
@@ -22,6 +24,7 @@ group :development, :test do
   gem "pretty_backtrace"
   gem "pry-byebug"
   gem "pry-rails"
+  gem "pry-remote"
 end
 
 group :production do
