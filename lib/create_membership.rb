@@ -6,8 +6,10 @@ class CreateMembership
   def initialize(params = {})
     @token  = params.fetch(:id)
     @email  = params.fetch(:email)
-    @amount = params.fetch(:amount).to_i
-    @type   = membership_type_for(@amount)
+    @type   = params.fetch(:metadata).fetch(:membership_type)
+    @amount = membership_fee_for(@type)
+  rescue => e
+    track_error(e, "Invalid card data returned")
   end
 
   def run
@@ -25,7 +27,7 @@ private
     )
   end
 
-  def create_charge(id, amount)
+  def create_charge(id, amount, type)
     Stripe::Charge.create(
       :customer    => id,
       :amount      => amount,
@@ -33,25 +35,25 @@ private
       :currency    => 'usd'
     )
   rescue Stripe::CardError => e
-    debug_error(e)
-    raise Error, "Stripe error #{e.message}"
+    track_error(e, "Stripe error #{e.message}")
   end
 
-  def membership_type_for(amount)
-    case amount
-    when 4000
-      "Individual Member"
-    when 80000
-      "Corporate Member"
+  def membership_fee_for(type)
+    case type
+    when "individual"
+      4000
+    when "corporate"
+      80000
     else
-      raise Error, "unknown membership amount #{amount.inspect}"
+      raise Error, "unknown membership type #{type.inspect}"
     end
   end
 
-  def debug_error(e)
+  def track_error(e, message)
     # TODO send to exception logger
     return unless defined?(Rails)
     Rails.logger.debug(%|#{e.class}: #{e}\n#{e.backtrace.join("\n  ")}|)
+    raise Error, message
   end
 
 end
