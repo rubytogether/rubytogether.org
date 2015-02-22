@@ -7,21 +7,22 @@
 <%- content_for :script do -%>
   <script src="https://checkout.stripe.com/checkout.js"></script>
   <script>
-    var showError = function(message) {
-      $(".flashes").html('<p class="flash alert">' + message + '</p>');
+    var showFlash = function(message, status) {
+      var type = (status === "success") ? "notice" : "alert";
+      $(".flashes").html('<p class="flash ' + type + '">' + message + '</p>');
     };
 
     var createCheckout = function(type) {
       var sendToken = function(token) {
-        var data =  {token: token, type: type}
+        var data = {email: token.email, token: token.id, type: type};
         $.post('<%= membership_path %>', data, function(res) {
           if (res.url) {
             document.location = res.url;
           } else if (res.message) {
-            showError(res.message);
+            showFlash(res.message, res.result);
           }
         }).fail(function(xhr, textStatus, errorThrown) {
-          showError(xhr.responseText);
+          showFlash("There was an error while charging your card.", "failure");
         });
       };
 

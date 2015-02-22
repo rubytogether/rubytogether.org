@@ -1,53 +1,43 @@
+require "stripe"
+
 class CreateMembership
   Error = Class.new(RuntimeError)
 
-  def run(token, email, type)
-    customer = create_customer(email, token)
-    charge_customer(customer.id, amount, type)
+  def self.run(user, token, plan)
+    new.run(user, token, plan)
+  end
+
+  def run(user, token, plan)
+    customer = customer_for(user)
+    set_card(customer, token)
+    subscribe_to_plan(customer, plan)
+  rescue => e
+    track_error(e, message)
+  end
+
+  def customer_for(user)
+    if user.stripe_id
+      Stripe::Customer.retrieve(user.stripe_id)
+    else
+      Stripe::Customer.create(email: user.email).tap do |c|
+        user.update_attribute(:stripe_id, c.id)
+      end
+    end
+  end
+
+  def set_card(customer, token)
+    old_default = customer.default_card
+    cards = customer.sources
+
+    cards.create(card: token)
+    cards.retrieve(old_default).delete if old_default
+  end
+
+  def subscribe_to_plan(customer, plan)
+    customer.subscriptions.create(plan: plan)
   end
 
 private
-
-  def create_customer(email, token)
-    # TODO send welcome email
-    user = User.where(email: email).first_or_create!
-
-    if user.stripe_id
-      Stripe::Customer.retrieve(user.stripe_id).tap do |c|
-        old = c.default_card
-        c.sources.create(card: token)
-        c.sources.retrieve(old).delete if old
-      end
-    else
-      Stripe::Customer.create(email: email, card: token).tap do |c|
-        user.update_attribute(stripe_id: c.id)
-      end
-    end
-  end
-
-  def charge_customer(id, amount, type)
-    plan = plan_for(type)
-
-    Stripe::Charge.create(
-      :customer    => id,
-      :amount      => plan.amount,
-      :description => plan.name,
-      :currency    => 'usd'
-    )
-  rescue Stripe::CardError => e
-    track_error(e, "Stripe error #{e.message}")
-  end
-
-  def plan_for(type)
-    case type
-    when "individual"
-      Stripe::Plans::INDIVIDUAL
-    when "corporate"
-      Stripe::Plans::CORPORATE
-    else
-      raise Error, "unknown membership type #{type.inspect}"
-    end
-  end
 
   def track_error(e, message)
     # TODO send to exception logger
