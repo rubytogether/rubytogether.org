@@ -14,6 +14,7 @@ gem "uglifier", ">= 1.3.0"
 group :development do
   gem "guard-livereload", "~> 2.4", require: false
   gem "guard-rails"
+  gem "guard-rspec"
   gem "rack-livereload"
   gem "terminal-notifier-guard", "~> 1.6"
   gem "web-console", "~> 2.0"
