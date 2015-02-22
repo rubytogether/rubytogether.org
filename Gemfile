@@ -24,7 +24,6 @@ group :development, :test do
   gem "pretty_backtrace"
   gem "pry-byebug"
   gem "pry-rails"
-  gem "pry-remote"
 end
 
 group :production do
