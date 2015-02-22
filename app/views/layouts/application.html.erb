@@ -15,13 +15,7 @@
       <%= content_tag :h2, title || "Ruby Together" %>
     <%- end -%>
   </header>
-
-  <section class="flash">
-    <%= content_tag :p, flash.notice, class: "flash notice" if flash.notice %>
-    <%= content_tag :p, class: "flash alert" do %>
-      <%= flash.alert %> If you need help, please <%= contact_link "contact us" %>.
-    <% end if flash.alert %>
-  </section>
+  <%= render partial: "flashes" %>
 
   <section class="content">
     <%= yield %>
