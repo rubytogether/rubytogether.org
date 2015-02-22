@@ -2,9 +2,6 @@ require 'create_membership'
 
 class MembershipsController < ApplicationController
 
-  def new
-  end
-
   def create
     token = params.fetch(:token)
     CreateMembership.new(token).run
