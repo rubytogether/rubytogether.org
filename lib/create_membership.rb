@@ -1,33 +1,33 @@
 class CreateMembership
   Error = Class.new(RuntimeError)
 
-  attr_reader :token, :email, :amount, :type
-
-  def initialize(params = {})
-    @token  = params.fetch(:id)
-    @email  = params.fetch(:email)
-    @type   = params.fetch(:metadata).fetch(:membership_type)
-    @amount = membership_fee_for(@type)
-  rescue => e
-    track_error(e, "Invalid card data returned")
-  end
-
-  def run
-    customer = create_customer(@email, @token)
-    # TODO create user in database, send welcome email
-    create_charge(customer.id, @amount, @type)
+  def run(token, email, type)
+    customer = create_customer(email, token)
+    charge_customer(customer.id, amount, type)
   end
 
 private
 
   def create_customer(email, token)
-    Stripe::Customer.create(
-      :email => email,
-      :card  => token
-    )
+    # TODO send welcome email
+    user = User.where(email: email).first_or_create!
+
+    if user.stripe_id
+      Stripe::Customer.retrieve(user.stripe_id).tap do |c|
+        old = c.default_card
+        c.sources.create(card: token)
+        c.sources.retrieve(old).delete if old
+      end
+    else
+      Stripe::Customer.create(email: email, card: token).tap do |c|
+        user.update_attribute(stripe_id: c.id)
+      end
+    end
   end
 
-  def create_charge(id, amount, type)
+  def charge_customer(id, amount, type)
+    amount = membership_fee_for(type)
+
     Stripe::Charge.create(
       :customer    => id,
       :amount      => amount,

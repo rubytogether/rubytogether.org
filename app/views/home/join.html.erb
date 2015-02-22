@@ -13,12 +13,12 @@
 
     var createCheckout = function(type) {
       var sendToken = function(token) {
-        token.metadata = {"membership_type": type};
-        $.post('<%= membership_path %>', {token: token}, function(data) {
-          if (data.url) {
-            document.location = data.url;
-          } else if (data.message) {
-            showError(data.message);
+        var data =  {token: token, type: type}
+        $.post('<%= membership_path %>', data, function(res) {
+          if (res.url) {
+            document.location = res.url;
+          } else if (res.message) {
+            showError(res.message);
           }
         }).fail(function(xhr, textStatus, errorThrown) {
           showError(xhr.responseText);
