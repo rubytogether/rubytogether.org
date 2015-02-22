@@ -36,5 +36,8 @@ module RubyTogether
 
     # Automatically reload lib in development
     config.autoload_paths += [Rails.root.join("lib").to_s]
+
+    # Serve fonts from the assets path
+    config.assets.paths << Rails.root.join('app/assets/fonts')
   end
 end
