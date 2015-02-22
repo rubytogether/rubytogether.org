@@ -26,24 +26,24 @@ private
   end
 
   def charge_customer(id, amount, type)
-    amount = membership_fee_for(type)
+    plan = plan_for(type)
 
     Stripe::Charge.create(
       :customer    => id,
-      :amount      => amount,
-      :description => type,
+      :amount      => plan.amount,
+      :description => plan.name,
       :currency    => 'usd'
     )
   rescue Stripe::CardError => e
     track_error(e, "Stripe error #{e.message}")
   end
 
-  def membership_fee_for(type)
+  def plan_for(type)
     case type
     when "individual"
-      4000
+      Stripe::Plans::INDIVIDUAL
     when "corporate"
-      80000
+      Stripe::Plans::CORPORATE
     else
       raise Error, "unknown membership type #{type.inspect}"
     end
