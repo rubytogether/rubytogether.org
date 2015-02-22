@@ -12,8 +12,8 @@
     <%- if content_for?(:header) -%>
       <%= content_for :header %>
     <%- else -%>
-      <%= image_tag("rubies.png", width: "300", class: "home") %>
-      <h1>Ruby Together</h1>
+      <%= link_to image_tag("rubies.png", width: "200"), "/" %>
+      <%= content_tag :h2, title || "Ruby Together" %>
     <%- end -%>
   </header>
 
