@@ -15,7 +15,7 @@
     var createCheckout = function(type) {
       var sendToken = function(token) {
         var data = {email: token.email, token: token.id, type: type};
-        $.post('<%= membership_path %>', data, function(res) {
+        $.post('<%= join_path %>', data, function(res) {
           if (res.url) {
             document.location = res.url;
           } else if (res.message) {

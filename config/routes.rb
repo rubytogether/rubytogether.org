@@ -5,7 +5,11 @@ Rails.application.routes.draw do
     get "/#{page}" => "home##{page}"
   end
 
-  resource :membership, only: [:create]
+  post "/join" => "membership#create"
 
-  devise_for :users
+  constraints subdomain: "members" do
+    devise_for :users
+    resource :membership, only: [:show]
+  end
+
 end
