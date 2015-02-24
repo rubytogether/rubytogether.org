@@ -26,7 +26,7 @@ class CreateMembership
   end
 
   def set_card(customer, token)
-    old_default = customer.default_card
+    old_default = customer.default_source
     cards = customer.sources
 
     cards.create(card: token)

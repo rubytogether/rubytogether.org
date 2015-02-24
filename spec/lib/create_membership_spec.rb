@@ -26,7 +26,7 @@ RSpec.describe CreateMembership do
     let(:cards) { double("Cards") }
 
     context "without existing card" do
-      let(:customer) { double("Customer", sources: cards, default_card: nil) }
+      let(:customer) { double("Customer", sources: cards, default_source: nil) }
 
       it "adds the card" do
         expect(cards).to receive(:create).with(card: "card_1")
@@ -35,7 +35,7 @@ RSpec.describe CreateMembership do
     end
 
     context "with existing card" do
-      let(:customer) { double("Customer", sources: cards, default_card: "card_1") }
+      let(:customer) { double("Customer", sources: cards, default_source: "card_1") }
 
       it "adds the card and deletes the old one" do
         expect(cards).to receive(:retrieve).with("card_1") do
