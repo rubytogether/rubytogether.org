@@ -1,8 +1,8 @@
 <%- title "Join Ruby Together" -%>
 
-<p>Any person or company that uses Ruby as part of their work can join and receive <a href="/benefits">members-only benefits</a>. Membership dues fund <a href="/team">our team</a> to work on <a href="/projects">tools and services</a> used by every Ruby developer.</p>
+<p>Any person or company that uses Ruby can join and receive <%= link_to "members-only benefits", benefits_path %>. Membership dues fund <%= link_to "our team", team_path %> to <%= link_to "maintain and improve", plans_path %> multiple <%= link_to "tools and services", projects_path %> used by every Ruby developer.</p>
 
-<p>Join Ruby Together today as an individual for <a href="javascript:;" data-subscription="individual">$40 per month</a>, join as a corporation for <a href="javascript:;" data-subscription="corporation">$800 per month</a>, or just <a href="mailto:hello@rubytogether.org">contact us</a>.</p>
+<p>Join Ruby Together today as an individual for <a href="javascript:;" data-subscription="individual">$40 per month</a>, join as a corporation for <a href="javascript:;" data-subscription="corporation">$800 per month</a>, or just <%= contact_us %>.</p>
 
 <%- content_for :script do -%>
   <script src="https://checkout.stripe.com/checkout.js"></script>
