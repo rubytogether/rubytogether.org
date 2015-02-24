@@ -2,10 +2,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :recoverable, :rememberable,
     :trackable, :validatable
 
-  def member?
-    member_until && member_until > Time.now
-  end
-
 private
 
   # Normally this method requires a password all the time. In this app,
