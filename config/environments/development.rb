@@ -43,5 +43,5 @@ Rails.application.configure do
   config.middleware.use Rack::LiveReload
 
   # Require these files to handle Stripe events
-  config.stripe.eager_load = %w[membership_paid]
+  config.stripe.eager_load = %w[stripe/invoice/payment_succeeded]
 end
