@@ -9,6 +9,7 @@ gem "pg"
 gem "puma"
 gem "sass-rails", "~> 5.0"
 gem "stripe-rails"
+gem "sucker_punch", "~> 1.0"
 gem "uglifier", ">= 1.3.0"
 
 group :development do
@@ -29,5 +30,8 @@ group :development, :test do
 end
 
 group :production do
+  gem "librato-rails"
+  gem "newrelic_rpm"
   gem "rails_12factor"
+  gem "rollbar", "~> 1.2.7"
 end
