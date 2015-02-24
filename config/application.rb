@@ -39,5 +39,8 @@ module RubyTogether
 
     # Serve fonts from the assets path
     config.assets.paths << Rails.root.join('app/assets/fonts')
+
+    # Use sucker_punch for background jobs
+    config.active_job.queue_adapter = :sucker_punch
   end
 end
