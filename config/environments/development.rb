@@ -41,4 +41,7 @@ Rails.application.configure do
 
   # Reload the page whenever views are changed
   config.middleware.use Rack::LiveReload
+
+  # Require these files to handle Stripe events
+  config.stripe.eager_load = %w[membership_paid]
 end
