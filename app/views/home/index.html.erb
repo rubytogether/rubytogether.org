@@ -3,4 +3,4 @@
   <h1>Ruby Together</h1>
 <% end %>
 
-<p>Ruby Together combines the power of <a href="/members">our members</a> to support a <a href="/team">team of developers</a> who improve the <a href="/projects">tools and services</a> that Ruby developers use every day. <a href="/join">Join us!</a></p>
+<p>Ruby Together combines the power of <%= link_to "our members", members_path %> to support <%= link_to "a team", team_path %> who <%= link_to "maintain and improve", plans_path %> the <%= link_to "tools and services", projects_path %> that Ruby developers use every day. <%= link_to "Join us!", join_path %></p>

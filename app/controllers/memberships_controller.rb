@@ -14,7 +14,7 @@ class MembershipsController < ApplicationController
   rescue CreateMembership::Error => e
     user.destroy if user.stripe_id.nil?
 
-    contact_us = self.class.helpers.contact_link("contact us")
+    contact_us = self.class.helpers.contact_us
     error = "We ran into an error while trying to charge your card. It " \
       "might work if you try again, or you can #{contact_us} for help."
     render json: {result: "failure", message: error}
