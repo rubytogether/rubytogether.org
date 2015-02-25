@@ -4,6 +4,7 @@ ruby "2.2.0"
 gem "rails", "4.2.0"
 
 gem "devise"
+gem "fastly-rails"
 gem "jquery-rails"
 gem "pg"
 gem "puma"
@@ -30,7 +31,6 @@ group :development, :test do
 end
 
 group :production do
-  gem "fastly-rails"
   gem "librato-rails"
   gem "newrelic_rpm"
   gem "rails_12factor"
