@@ -22,7 +22,7 @@
             showFlash(res.message, res.result);
           }
         }).fail(function(xhr, textStatus, errorThrown) {
-          showFlash("There was an error while charging your card.", "failure");
+          showFlash("Something went wrong when we tried to charge your card. Sorry. :(", "failure");
         });
       };
 
