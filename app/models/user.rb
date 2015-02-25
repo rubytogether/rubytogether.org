@@ -2,9 +2,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :recoverable, :rememberable,
     :trackable, :validatable
 
-  def stripe
-    Stripe::Customer.retrieve(stripe_id)
-  end
 
 private
 
