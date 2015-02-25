@@ -5,6 +5,6 @@ Rails.application.routes.draw do
     get "/#{page}" => "home##{page}"
   end
 
-  devise_for :users
+  devise_for :users, path: ""
   resource :membership, only: [:create, :show]
 end
