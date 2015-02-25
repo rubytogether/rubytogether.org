@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20150224175850) do
     t.integer  "user_id"
     t.string   "name"
     t.string   "description"
-    t.integer  "type",        default: 0
+    t.integer  "kind",        default: 0
     t.datetime "expires_at"
   end
 
