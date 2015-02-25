@@ -8,6 +8,7 @@ gem "fastly-rails"
 gem "jquery-rails"
 gem "pg"
 gem "puma"
+gem "rollbar", "~> 1.2.7"
 gem "sass-rails", "~> 5.0"
 gem "stripe-rails"
 gem "sucker_punch", "~> 1.0"
@@ -34,5 +35,4 @@ group :production do
   gem "librato-rails"
   gem "newrelic_rpm"
   gem "rails_12factor"
-  gem "rollbar", "~> 1.2.7"
 end
