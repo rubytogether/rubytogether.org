@@ -9,11 +9,12 @@ class CreateMembership
 
   def run(user, token, plan)
     customer = customer_for(user)
-    set_card(customer, token)
+    card = set_card(customer, token)
     subscribe_to_plan(customer, plan)
-    create_membership_record(user, plan)
+    create_membership_record(user, card, plan)
   rescue => e
-    track_error(e)
+    Rollbar.error(e)
+    raise Error, "#{e.class}: #{e.message}"
   end
 
   def customer_for(user)
@@ -21,10 +22,12 @@ class CreateMembership
       customer = Stripe::Customer.retrieve(user.stripe_id)
     end
 
-    if customer.nil? || customer.deleted
+    if customer.nil? || customer.respond_to?(:deleted) && customer.deleted
       Stripe::Customer.create(email: user.email).tap do |c|
         user.update_attribute(:stripe_id, c.id)
       end
+    else
+      customer
     end
   end
 
@@ -32,25 +35,21 @@ class CreateMembership
     old_default = customer.default_source
     cards = customer.sources
 
-    cards.create(card: token)
+    card = cards.create(card: token)
     cards.retrieve(old_default).delete if old_default
+    card
   end
 
   def subscribe_to_plan(customer, plan)
     customer.subscriptions.create(plan: plan)
   end
 
-  def create_membership_record(user, plan)
-    user.create_membership!(type: plan.id)
-  end
-
-private
-
-  def track_error(e)
-    # TODO send to exception logger
-    return unless defined?(Rails)
-    Rails.logger.debug(%|#{e.class}: #{e.message}\n#{e.backtrace.join("\n  ")}|)
-    raise Error, "#{e.class}: #{e.message}"
+  def create_membership_record(user, card, plan)
+    user.create_membership!(
+      kind: plan.id,
+      card_brand: card.brand,
+      card_last4: card.last4
+    )
   end
 
 end

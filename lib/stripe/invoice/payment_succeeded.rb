@@ -1,19 +1,14 @@
 module Stripe
   class Invoice
-    module PaymentSucceeded
+    class PaymentSucceeded
       include Stripe::Callbacks
 
       after_invoice_payment_succeeded! do |invoice, event|
-        mark_customer_paid_until(invoice.customer, invoice.period_end)
-      end
-
-    private
-
-      def mark_customer_paid_until(stripe_id, timestamp)
-        user = User.where(stripe_id: stripe_id).first!
-        user && user.update_attributes(member_until: Time.at(timestamp))
-      rescue => e
-        Rails.logger.error("#{e.class}: #{e.message}", e.backtrace.join("  \n"))
+        customer = Stripe::Customer.retrieve(invoice.customer)
+        subscription = customer.subscriptions.retrieve(invoice.subscription)
+        expiration = Time.at(subscription.current_period_end)
+        user = User.where(stripe_id: customer.id).first!
+        user.membership.update_attributes!(expires_at: expiration)
       end
 
     end

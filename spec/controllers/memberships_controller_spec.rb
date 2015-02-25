@@ -12,7 +12,7 @@ RSpec.describe MembershipsController, type: :controller do
       expect(subject).to receive(:plan_for).with("individual") { plan }
       expect(CreateMembership).to receive(:run).with(user, "abc", plan)
 
-      post :create, token: "abc", email: "alice@example.com", type: "individual"
+      post :create, token: "abc", email: "alice@example.com", kind: "individual"
 
       expect(JSON.parse(response.body)).to include("result" => "success")
     end

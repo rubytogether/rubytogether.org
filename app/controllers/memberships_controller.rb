@@ -1,10 +1,10 @@
-require 'create_membership'
+require "create_membership"
 
 class MembershipsController < ApplicationController
 
   def create
     user = User.where(email: params.fetch(:email)).first_or_create!
-    plan = plan_for(params.fetch(:type))
+    plan = plan_for(params.fetch(:kind))
 
     CreateMembership.run(user, params.fetch(:token), plan)
 
@@ -21,21 +21,21 @@ class MembershipsController < ApplicationController
   end
 
   def show
-    @user = User.first
-    @membership = @user.membership
+    sign_in(User.first)
+    @membership = current_user.membership
     redirect_to join_path unless @membership
   end
 
 private
 
-  def plan_for(type)
-    case type
+  def plan_for(kind)
+    case kind
     when "individual"
       Stripe::Plans::INDIVIDUAL
     when "corporate"
       Stripe::Plans::CORPORATE
     else
-      raise Error, "unknown membership type #{type.inspect}"
+      raise Error, "unknown membership kind #{kind.inspect}"
     end
   end
 

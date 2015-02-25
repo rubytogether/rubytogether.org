@@ -8,13 +8,13 @@
   <script src="https://checkout.stripe.com/checkout.js"></script>
   <script>
     var showFlash = function(message, status) {
-      var type = (status === "success") ? "notice" : "alert";
-      $(".flashes").html('<p class="flash ' + type + '">' + message + '</p>');
+      var name = (status === "success") ? "notice" : "alert";
+      $(".flashes").html('<p class="flash ' + name + '">' + message + '</p>');
     };
 
-    var createCheckout = function(type) {
+    var createCheckout = function(kind) {
       var sendToken = function(token) {
-        var data = {email: token.email, token: token.id, type: type};
+        var data = {email: token.email, token: token.id, kind: kind};
         $.post('<%= membership_path %>', data, function(res) {
           if (res.url) {
             document.location = res.url;
