@@ -1,3 +1,15 @@
 <%- title "your membership" -%>
 
-<p>To change your membership or update your contact information, please <%= contact_us %>.</p>
+<p>Hello, <%= @user.email %>. You are <%= @membership.full_name %> of Ruby Together.</p>
+
+<p>
+  <%- if @membership.name -%>
+    You are credited on our members page as "<%= @membership.name %>".</p>
+  <%- else -%>
+    You are not credited on our <%= link_to "members page", members_path %>. If you'd like to be credited, <%= link_to "add your name" %>.
+  <%- end -%>
+<p>
+
+<p>Your membership is currently <%= @membership.status %>.</p>
+
+<p>If you need help with your membership, please <%= contact_us %>.</p>
