@@ -11,6 +11,7 @@ class CreateMembership
     customer = customer_for(user)
     set_card(customer, token)
     subscribe_to_plan(customer, plan)
+    create_membership_record(user, plan)
   rescue => e
     track_error(e)
   end
@@ -37,6 +38,10 @@ class CreateMembership
 
   def subscribe_to_plan(customer, plan)
     customer.subscriptions.create(plan: plan)
+  end
+
+  def create_membership_record(user, plan)
+    user.create_membership!(type: plan.id)
   end
 
 private
