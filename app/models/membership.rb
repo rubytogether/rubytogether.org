@@ -22,4 +22,8 @@ class Membership < ActiveRecord::Base
     end
   end
 
+  def active?
+    status == "active"
+  end
+
 end
