@@ -12,7 +12,7 @@ class CreateMembership
     set_card(customer, token)
     subscribe_to_plan(customer, plan)
   rescue => e
-    track_error(e, message)
+    track_error(e)
   end
 
   def customer_for(user)
@@ -41,11 +41,11 @@ class CreateMembership
 
 private
 
-  def track_error(e, message)
+  def track_error(e)
     # TODO send to exception logger
     return unless defined?(Rails)
-    Rails.logger.debug(%|#{e.class}: #{e}\n#{e.backtrace.join("\n  ")}|)
-    raise Error, message
+    Rails.logger.debug(%|#{e.class}: #{e.message}\n#{e.backtrace.join("\n  ")}|)
+    raise Error, "#{e.class}: #{e.message}"
   end
 
 end
