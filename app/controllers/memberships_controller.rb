@@ -21,6 +21,9 @@ class MembershipsController < ApplicationController
   end
 
   def show
+    @user = User.first
+    @membership = @user.membership
+    redirect_to join_path unless @membership
   end
 
 private
