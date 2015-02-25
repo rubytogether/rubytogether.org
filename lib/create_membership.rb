@@ -17,8 +17,10 @@ class CreateMembership
 
   def customer_for(user)
     if user.stripe_id
-      Stripe::Customer.retrieve(user.stripe_id)
-    else
+      customer = Stripe::Customer.retrieve(user.stripe_id)
+    end
+
+    if customer.nil? || customer.deleted
       Stripe::Customer.create(email: user.email).tap do |c|
         user.update_attribute(:stripe_id, c.id)
       end
