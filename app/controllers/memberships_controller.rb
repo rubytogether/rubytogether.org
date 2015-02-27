@@ -12,12 +12,11 @@ class MembershipsController < ApplicationController
       "We've sent you a welcome email with more information."
     render json: {result: "success", message: notice}
   rescue CreateMembership::Error => e
-    user.destroy if user.stripe_id.nil?
-
-    contact_us = self.class.helpers.contact_us
-    error = "There was an error while charging your card. It " \
-      "might work if you try again, or you can #{contact_us} for help."
-    render json: {result: "failure", message: error}
+    user.destroy if user.persisted?
+    render_failure
+  rescue => e
+    Rollbar.error(e)
+    render_failure
   end
 
   def show
@@ -37,6 +36,13 @@ private
     else
       raise Error, "unknown membership kind #{kind.inspect}"
     end
+  end
+
+  def render_failure
+    contact_us = self.class.helpers.contact_us
+    error = "There was an error while charging your card. It " \
+      "might work if you try again, or you can #{contact_us} for help."
+    render json: {result: "failure", message: error}
   end
 
 end
