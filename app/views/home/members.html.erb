@@ -1,5 +1,12 @@
 <%- title "Ruby Together Members" -%>
 
-<p>Corporate members include <%= link_to "Stripe", "https://stripe.com" %>, payments infrastructure for the internet, and <%= link_to "Engine Yard", "http://engineyard.com" %>, the platform-as-a-service of your dreams.</p>
+<p>Corporate members include
+  <% @corporate[0...-1].each do |name, desc, url| %>
+    <%= link_to name, url %>, <%= desc %>,
+  <% end %>
+  <%- name, desc, url = @corporate[-1] -%>
+  and <%= link_to name, url %>, <%= desc %>.
+</p>
 
-<p>Individual members include André Arko, Aaron Patterson, Steve Klabnik, Sarah Mei, Terence Lee, Ines Sombra, Joel Watson, and <%= link_to "viewers like you", join_path %>.</p>
+<%- @individual << link_to("viewers like you", join_path) -%>
+<p>Individual members include <%= @individual.to_sentence.html_safe %>.</p>

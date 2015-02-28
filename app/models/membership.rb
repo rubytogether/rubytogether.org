@@ -1,6 +1,9 @@
 class Membership < ActiveRecord::Base
   enum kind: %i[individual corporate]
 
+  scope :active, -> { where("expires_at > ?", Time.now) }
+  scope :named,  -> { where("name IS NOT NULL") }
+
   def full_name
     case kind
     when "individual"
