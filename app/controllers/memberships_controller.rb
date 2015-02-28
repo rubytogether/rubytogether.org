@@ -4,9 +4,7 @@ class MembershipsController < ApplicationController
 
   def create
     user = User.where(email: params.fetch(:email)).first_or_create!
-    plan = plan_for(params.fetch(:kind))
-
-    CreateMembership.run(user, params.fetch(:token), plan)
+    CreateMembership.run(user, params.fetch(:token), params.fetch(:kind))
 
     notice = "Success! You are now a member of Ruby Together. " \
       "We've sent you a welcome email with more information."
@@ -26,17 +24,6 @@ class MembershipsController < ApplicationController
   end
 
 private
-
-  def plan_for(kind)
-    case kind
-    when "individual"
-      Stripe::Plans::INDIVIDUAL
-    when "corporate"
-      Stripe::Plans::CORPORATE
-    else
-      raise Error, "unknown membership kind #{kind.inspect}"
-    end
-  end
 
   def render_failure
     contact_us = self.class.helpers.contact_us

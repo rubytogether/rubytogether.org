@@ -3,13 +3,14 @@ require "stripe"
 class CreateMembership
   Error = Class.new(RuntimeError)
 
-  def self.run(user, token, plan)
-    new.run(user, token, plan)
+  def self.run(user, token, plan_name)
+    new.run(user, token, plan_name)
   end
 
-  def run(user, token, plan)
+  def run(user, token, plan_name)
     customer = customer_for(user)
     card = set_card(customer, token)
+    plan = plan_for(plan_name)
     subscribe_to_plan(customer, plan)
     create_membership_record(user, card, plan)
   rescue => e
@@ -50,6 +51,17 @@ class CreateMembership
       card_brand: card.brand,
       card_last4: card.last4
     )
+  end
+
+  def plan_for(kind)
+    case kind
+    when "individual"
+      Stripe::Plans::INDIVIDUAL
+    when "corporate"
+      Stripe::Plans::CORPORATE
+    else
+      raise Error, "unknown membership kind #{kind.inspect}"
+    end
   end
 
 end
