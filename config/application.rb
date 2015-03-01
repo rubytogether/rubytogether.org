@@ -39,5 +39,9 @@ module RubyTogether
 
     # Use sucker_punch for background jobs
     config.active_job.queue_adapter = :sucker_punch
+
+    def log_error(e)
+      Rails.logger.debug(%|#{e.class}: #{e.message}\n#{e.backtrace.join("\n")}|)
+    end
   end
 end
