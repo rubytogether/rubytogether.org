@@ -23,6 +23,15 @@ class MembershipsController < ApplicationController
     redirect_to join_path unless @membership
   end
 
+  def metadata
+    render json: {
+      param: request_forgery_protection_token,
+      token: form_authenticity_token,
+      url: membership_path,
+      stripe_key: Rails.configuration.stripe.publishable_key
+    }
+  end
+
 private
 
   def render_failure

@@ -12,4 +12,3 @@
 //
 //= require jquery2.min
 //= require jquery_ujs
-//= require_tree .
