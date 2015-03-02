@@ -1,20 +1,17 @@
 <%- title "your membership" -%>
 
-<p>Hello, <%= current_user.email %>. You are <%= @membership.full_name %> of Ruby Together.</p>
-
-<p>
-  Your membership is currently <%= @membership.status %>.
+<p>Hello! You are <%= @membership.kind_name %> of Ruby Together, and your membership is currently <%= @membership.status %>.
   <%- if @membership.active? -%>
-    Monthly membership dues will be charged to your <%= @membership.card_brand %> ending in <%= @membership.card_last4 %>
+    Monthly membership dues will be charged to your <%= @membership.card_brand %> ending in <%= @membership.card_last4 %>.
   <%- end -%>
 </p>
 
 <p>
   <%- if @membership.name -%>
-    You are credited on our members page as "<%= @membership.name %>".
+    You <%= @membership.active? ? "are" : "will be" %> credited on our <%= link_to "members page", members_path %> as "<%= @membership.name %>".
   <%- else -%>
-    You are not credited on our <%= link_to "members page", members_path %>. If you'd like to be credited, we can add your name.
+    You are not credited on our <%= link_to "members page", members_path %>. If you'd like to be credited, <%= link_to "add your name", edit_membership_path %>.
   <%- end -%>
 <p>
 
-<p>For help with your membership, please <%= contact_us %>.</p>
+<p><%= link_to "Update your membership", edit_membership_path %> to change your name, email address, or billing information. For help with anything else, <%= contact_us %>.</p>
