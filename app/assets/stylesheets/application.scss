@@ -68,3 +68,7 @@ input[type="text"] {
 input[type="submit"] {
   @extend %text;
 }
+
+.login-links a {
+  font-size: 20px;
+}
