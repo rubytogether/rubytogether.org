@@ -5,6 +5,6 @@
 <p>Join Ruby Together today as an individual for <a href="javascript:;" data-subscription="individual">$40 per month</a>, join as a corporation for <a href="javascript:;" data-subscription="corporation">$800 per month</a>, or just <%= contact_us %>.</p>
 
 <%- content_for :script do -%>
-  <script src="https://checkout.stripe.com/checkout.js"></script>
-  <%= javascript_include_tag "join" %>
+  <%= javascript_include_tag "https://checkout.stripe.com/checkout.js" %>
+  <%= javascript_include_tag "subscribe" %>
 <%- end -%>

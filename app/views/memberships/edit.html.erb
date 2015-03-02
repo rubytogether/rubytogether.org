@@ -17,3 +17,12 @@
     <%= f.submit "Save Changes" %>
   </div>
 <% end %>
+
+<p>Monthly membership dues of <%= number_to_currency @membership.dollar_amount %> will be charged to your <%= @membership.card_brand %> ending in <%= @membership.card_last4 %>. To change the card we will charge, <%= link_to_card_form "update your payment information", @membership %>.</p>
+
+<p>You can also <%= link_to "cancel your membership", "javascript:;" %>.</p>
+
+<%- content_for :script do -%>
+  <%= javascript_include_tag "https://checkout.stripe.com/checkout.js" %>
+  <%= javascript_include_tag "subscribe" %>
+<%- end -%>

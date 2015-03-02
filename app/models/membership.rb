@@ -6,6 +6,14 @@ class Membership < ActiveRecord::Base
 
   belongs_to :user
 
+  def dollar_amount
+    amount / 100
+  end
+
+  def amount
+    Stripe::Plans.const_get(kind.upcase).amount
+  end
+
   def kind_name
     case kind
     when "individual"

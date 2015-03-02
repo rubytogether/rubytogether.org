@@ -1,16 +1,7 @@
 require "create_membership"
 
 class MembershipsController < ApplicationController
-  before_action :authenticate_member!, except: [:create, :metadata]
-
-  def metadata
-    render json: {
-      param: request_forgery_protection_token,
-      token: form_authenticity_token,
-      url: membership_path,
-      stripe_key: Rails.configuration.stripe.publishable_key
-    }
-  end
+  before_action :authenticate_member!, except: [:create]
 
   def create
     user = User.where(email: params.fetch(:email)).first_or_create!
@@ -36,8 +27,23 @@ class MembershipsController < ApplicationController
   end
 
   def update
-    current_user.update!(email: params[:user][:email])
-    current_user.membership.update!(name: params[:membership][:name])
+    if params.has_key?(:user)
+      current_user.update!(email: params[:user].fetch(:email))
+    end
+
+    if params.has_key?(:membership)
+      current_user.membership.update!(name: params[:membership].fetch(:name))
+    end
+
+    if params.has_key?(:token)
+      customer = Stripe::Customer.retreive(current_user.stripe_id)
+      old_default = customer.default_source
+      cards = customer.sources
+
+      card = cards.create(card: params[:token])
+      cards.retrieve(old_default).delete if old_default
+    end
+
     redirect_to membership_path
   rescue ActiveRecord::RecordInvalid
     get_membership
