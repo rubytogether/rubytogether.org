@@ -20,4 +20,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  membership_mailer:
+    welcome:
+      subject:
+        "Welcome to Ruby Together"
+    goodbye:
+      subject:
+        "Your Ruby Together membership has been cancelled"
+    problem:
+      subject:
+        "Ruby Together membership payment overdue"

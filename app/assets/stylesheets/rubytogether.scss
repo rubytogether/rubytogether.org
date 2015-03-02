@@ -1,0 +1,35 @@
+//= require 'campton'
+
+$dark_pink: #f092dd;
+$pink: #ffaff0;
+$red: #bf1652;
+$light: #d1d9e5;
+$dark: #392f5a;
+
+body {
+  background-color: $light;
+  color: $dark;
+  font-family: 'Campton';
+  font-size: 28px;
+}
+
+h1 {
+  font-size: 55px;
+  margin: 0;
+  text-transform: lowercase;
+}
+
+h2 {
+  font-size: 36px;
+  text-transform: lowercase;
+}
+
+a {
+  color: $dark;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
