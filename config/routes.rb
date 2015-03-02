@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resource :membership, only: [:create, :show] do
     collection { get :metadata }
   end
+
 end
