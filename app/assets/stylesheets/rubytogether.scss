@@ -1,4 +1,4 @@
-//= require 'campton'
+@import "campton";
 
 $dark_pink: #f092dd;
 $pink: #ffaff0;
@@ -6,11 +6,15 @@ $red: #bf1652;
 $light: #d1d9e5;
 $dark: #392f5a;
 
-body {
-  background-color: $light;
+%text {
   color: $dark;
   font-family: 'Campton';
   font-size: 28px;
+}
+
+body {
+  background-color: $light;
+  @extend %text;
 }
 
 h1 {
@@ -26,6 +30,8 @@ h2 {
 
 a {
   color: $dark;
+  font-family: 'Campton';
+  font-size: 28px;
   font-weight: bold;
   text-decoration: none;
 

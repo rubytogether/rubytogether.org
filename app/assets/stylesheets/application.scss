@@ -10,9 +10,10 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require 'rubytogether'
  *= require_self
  */
+
+@import "rubytogether";
 
 body {
   margin: auto;
@@ -41,4 +42,29 @@ header {
 
 section.content {
   padding-bottom: 1em;
+}
+
+form {
+  margin-bottom: 15px;
+
+  .field {
+    margin-top: 15px;
+  }
+}
+
+label {
+  float: left;
+  width: 160px;
+  line-height: 45px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  @extend %text;
+  width: 250px;
+}
+
+input[type="submit"] {
+  @extend %text;
 }
