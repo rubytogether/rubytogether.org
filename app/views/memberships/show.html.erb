@@ -3,19 +3,18 @@
 <p>Hello, <%= current_user.email %>. You are <%= @membership.full_name %> of Ruby Together.</p>
 
 <p>
-  Your membership is currently <%= @membership.status %>
+  Your membership is currently <%= @membership.status %>.
   <%- if @membership.active? -%>
-    , and monthly membership dues will be charged to your <%= @membership.card_brand %> ending in <%= @membership.card_last4 %>
+    Monthly membership dues will be charged to your <%= @membership.card_brand %> ending in <%= @membership.card_last4 %>
   <%- end -%>
-  .
 </p>
 
 <p>
   <%- if @membership.name -%>
-    You are credited on our members page as "<%= @membership.name %>".</p>
+    You are credited on our members page as "<%= @membership.name %>".
   <%- else -%>
     You are not credited on our <%= link_to "members page", members_path %>. If you'd like to be credited, we can add your name.
   <%- end -%>
 <p>
 
-<p>If you need help with your membership, please <%= contact_us %>.</p>
+<p>For help with your membership, please <%= contact_us %>.</p>

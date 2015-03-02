@@ -3,7 +3,9 @@ class MembershipMailerPreview < ActionMailer::Preview
 
   # Preview this email at http://localhost:3000/rails/mailers/membership_mailer/welcome
   def welcome
-    MembershipMailer.welcome(User.first)
+    user = User.first
+    token = user.generate_reset_password_token!
+    MembershipMailer.welcome(user, token)
   end
 
   # Preview this email at http://localhost:3000/rails/mailers/membership_mailer/goodbye

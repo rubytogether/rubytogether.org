@@ -13,6 +13,7 @@ class CreateMembership
     plan = plan_for(plan_name)
     subscribe_to_plan(customer, plan)
     create_membership_record(user, card, plan)
+    email_new_member(user)
   rescue => e
     Rollbar.error(e)
     raise Error, "#{e.class}: #{e.message}"
@@ -51,6 +52,11 @@ class CreateMembership
       card_brand: card.brand,
       card_last4: card.last4
     )
+  end
+
+  def email_new_member(user)
+    token = user.generate_reset_password_token!
+    MembershipMailer.welcome(user, token).deliver_later
   end
 
   def plan_for(kind)

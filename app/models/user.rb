@@ -4,6 +4,13 @@ class User < ActiveRecord::Base
 
   has_one :membership
 
+  scope :live_login_token, -> { where("login_token_created_at > ?", Time.now) }
+  scope :with_login_token, -> (token) { live_login_token.where(login_token: token) }
+
+  def generate_reset_password_token!
+    set_reset_password_token
+  end
+
 private
 
   # Normally this method requires a password all the time. In this app,

@@ -1,6 +1,7 @@
 require "create_membership"
 
 class MembershipsController < ApplicationController
+  before_action :authenticate_member!
 
   def create
     user = User.where(email: params.fetch(:email)).first_or_create!
@@ -18,7 +19,6 @@ class MembershipsController < ApplicationController
   end
 
   def show
-    sign_in(User.first)
     @membership = current_user.membership
     redirect_to join_path unless @membership
   end
@@ -39,6 +39,13 @@ private
     error = "There was an error while charging your card. It " \
       "might work if you try again, or you can #{contact_us} for help."
     render json: {result: "failure", message: error}
+  end
+
+  def authenticate_member!
+    user = User.with_reset_password_token(params[:token]) if params.has_key?(:token)
+    sign_in(user) if user
+
+    return authenticate_user!
   end
 
 end
