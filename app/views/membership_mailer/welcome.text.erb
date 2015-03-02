@@ -1,3 +1,7 @@
-MembershipMailer#welcome
+Thanks for joining Ruby Together.
 
-<%= @greeting %>, find me in app/views/membership_mailer/welcome.text.erb
+Your membership dues will be charged automatically every month. Dues are fully tax deductible.
+
+Add your name to the list of members or manage your membership here:
+
+<%= membership_url(token: @token) %>
