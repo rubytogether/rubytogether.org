@@ -4,7 +4,9 @@ class Membership < ActiveRecord::Base
   scope :active, -> { where("expires_at > ?", Time.now) }
   scope :named,  -> { where("name IS NOT NULL") }
 
-  def full_name
+  belongs_to :user
+
+  def kind_name
     case kind
     when "individual"
       "an individual member"

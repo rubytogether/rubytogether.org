@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
 
   devise_for :users, path: ""
-  resource :membership, only: [:create, :show] do
+  resource :membership, only: [:create, :show, :edit, :update] do
     collection { get :metadata }
   end
 
