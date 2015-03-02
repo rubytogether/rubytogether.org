@@ -10,32 +10,19 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require 'campton'
- *= require_tree .
+ *= require 'rubytogether'
  *= require_self
  */
 
-$dark_pink: #f092dd;
-$pink: #ffaff0;
-$red: #bf1652;
-$light: #d1d9e5;
-$dark: #392f5a;
-
-$font-campton: 'Campton';
-
 body {
-  background-color: $light;
-  color: $dark;
-  font-family: $font-campton;
-  max-width: 580px;
   margin: auto;
+  max-width: 580px;
   padding: 0 2em;
-  font-size: 28px;
 }
 
 header {
-  text-align: center;
   margin: 2em 0 2.5em 0;
+  text-align: center;
 
   img.home {
     margin: 0.5em 0;
@@ -43,9 +30,9 @@ header {
 }
 
 .flash {
-  padding: 18px 20px;
   border: solid 5px;
   border-radius: 25px;
+  padding: 18px 20px;
 
   &.alert {
     border-color: #bf1652;
@@ -54,25 +41,4 @@ header {
 
 section.content {
   padding-bottom: 1em;
-}
-
-h1 {
-  font-size: 55px;
-  text-transform: lowercase;
-  margin: 0;
-}
-
-h2 {
-  font-size: 36px;
-  text-transform: lowercase;
-}
-
-a {
-  text-decoration: none;
-  font-weight: bold;
-  color: $dark;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }
