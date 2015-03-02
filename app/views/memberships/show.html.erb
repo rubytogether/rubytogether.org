@@ -1,10 +1,6 @@
 <%- title "your membership" -%>
 
-<p>Hello! You are <%= @membership.kind_name %> of Ruby Together, and your membership is currently <%= @membership.status %>.
-  <%- if @membership.active? -%>
-    Monthly membership dues will be charged to your <%= @membership.card_brand %> ending in <%= @membership.card_last4 %>.
-  <%- end -%>
-</p>
+<p>Hello! You are <%= @membership.kind_name %> of Ruby Together, and your membership is currently <%= @membership.status %>.</p>
 
 <p>
   <%- if @membership.name -%>

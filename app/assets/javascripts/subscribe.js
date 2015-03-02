@@ -1,6 +1,6 @@
 jQuery(function($) {
   // Fetch valid CSRF tokens to use later
-  $.getJSON("/membership/metadata.json").then(function(json) {
+  $.getJSON("/csrf.json").then(function(json) {
     $("meta[name=csrf-param]").attr("content", json.param);
     $("meta[name=csrf-token]").attr("content", json.token);
 
@@ -12,7 +12,11 @@ jQuery(function($) {
     var sendToken = function(kind) {
       return function(token) {
         var data = {email: token.email, token: token.id, kind: kind};
-        $.post(json.url, data, function(res) {
+
+        $.ajax("/membership", {
+          data: data,
+          type: (kind === "update" ? "PUT" : "POST")
+        }).done(function(res) {
           if (res.url) {
             document.location = res.url;
           } else if (res.message) {
@@ -24,31 +28,22 @@ jQuery(function($) {
       };
     };
 
-    var createCheckout = function(kind, key) {
-      return StripeCheckout.configure({
-        key: key,
+    $("a[data-subscription]").click(function(e) {
+      var kind = $(e.target).data("subscription");
+      var amount = $(e.target).data("dollar-amount");
+
+      var options = {
+        allowRememberMe: false,
+        description: "Membership ($" + amount + " per month)",
+        email: $(e.target).data("email"),
         image: "/images/rubies-square.png",
+        key: $("meta[name=stripe-token]").attr("content"),
+        name: "Ruby Together",
+        panelLabel: "Subscribe",
         token: sendToken(kind)
-      });
-    };
+      };
 
-    var checkoutIndividual = createCheckout("individual", json.stripe_key);
-    $("a[data-subscription='individual']").click(function(e) {
-      checkoutIndividual.open({
-        name: "Ruby Together",
-        description: "Monthly Membership Dues",
-        amount: 4000
-      });
-      e.preventDefault();
-    });
-
-    var checkoutCorporate = createCheckout("corporate", json.stripe_key);
-    $("a[data-subscription='corporate']").click(function(e) {
-      checkoutCorporate.open({
-        name: "Ruby Together",
-        description: "Monthly Membership Dues",
-        amount: 80000
-      });
+      StripeCheckout.configure(options).open();
       e.preventDefault();
     });
 

@@ -24,4 +24,17 @@ module ApplicationHelper
     content_tag :a, "Rubygems.org", href: "http://rubygems.org"
   end
 
+  def stripe_meta_tag
+    tag :meta, name: "stripe-token",
+      content: Rails.configuration.stripe.publishable_key
+  end
+
+  def link_to_card_form(text, membership)
+    link_to(text, "javascript:;",
+      "data-subscription" => "update",
+      "data-email" => membership.user.email,
+      "data-dollar-amount" => membership.dollar_amount
+    )
+  end
+
 end

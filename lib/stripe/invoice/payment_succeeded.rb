@@ -8,8 +8,10 @@ module Stripe
         subscription = customer.subscriptions.retrieve(invoice.subscription)
         expiration = Time.at(subscription.current_period_end)
         user = User.where(stripe_id: customer.id).includes(:membership).first!
-        user.membership.update_attributes!(expires_at: expiration)
-        FastlyRails.client.purge_by_key("members")
+        if user
+          user.membership.update_attributes!(expires_at: expiration)
+          FastlyRails.client.purge_by_key("members")
+        end
       end
 
     end
