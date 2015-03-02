@@ -1,5 +1,11 @@
-<h1>MembershipMailer#welcome</h1>
+<h1>Welcome</h1>
+
+<p class="lead">
+  Thanks for joining Ruby Together.
+</p>
 
 <p>
-  <%= @greeting %>, find me in app/views/membership_mailer/welcome.html.erb
+  Your membership dues will be charged automatically every month. Dues are fully tax deductible.
 </p>
+
+<p>Add your name to the <%= link_to "list of members", members_url %> on the <%= link_to "manage your membership", membership_url(token: @token) %> page.</p>

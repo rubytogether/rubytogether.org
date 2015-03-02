@@ -1,8 +1,5 @@
 //= require 'rubytogether'
-
-/**********************************************
-* Ink v1.0.5 - Copyright 2013 ZURB Inc        *
-**********************************************/
+// some styles from Ink v1.0.5 - Copyright 2013 ZURB Inc
 
 /* Client-specific Styles & Reset */
 
@@ -329,17 +326,11 @@ h1, h2, h3, h4, h5, h6 {
   word-break: normal;
 }
 
-h1 {font-size: 40px;}
-h2 {font-size: 36px;}
-h3 {font-size: 32px;}
-h4 {font-size: 28px;}
-h5 {font-size: 24px;}
-h6 {font-size: 20px;}
-body, table.body, p, td {font-size: 14px;line-height:19px;}
-
-p.lead, p.lede, p.leed {
-  font-size: 18px;
-  line-height:21px;
+p.lead {
+  font-size: 35px;
+  line-height: 35px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 p {
@@ -348,50 +339,6 @@ p {
 
 small {
   font-size: 10px;
-}
-
-a {
-  color: #2ba6cb;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #2795b6 !important;
-}
-
-a:active {
-  color: #2795b6 !important;
-}
-
-a:visited {
-  color: #2ba6cb !important;
-}
-
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
-  color: #2ba6cb;
-}
-
-h1 a:active,
-h2 a:active,
-h3 a:active,
-h4 a:active,
-h5 a:active,
-h6 a:active {
-  color: #2ba6cb !important;
-}
-
-h1 a:visited,
-h2 a:visited,
-h3 a:visited,
-h4 a:visited,
-h5 a:visited,
-h6 a:visited {
-  color: #2ba6cb !important;
 }
 
 /* Panels */
@@ -408,153 +355,6 @@ h6 a:visited {
 
 .sub-grid td.sub-columns {
   padding-bottom: 0;
-}
-
-/* Buttons */
-
-table.button,
-table.tiny-button,
-table.small-button,
-table.medium-button,
-table.large-button {
-  width: 100%;
-  overflow: hidden;
-}
-
-table.button td,
-table.tiny-button td,
-table.small-button td,
-table.medium-button td,
-table.large-button td {
-  display: block;
-  width: auto !important;
-  text-align: center;
-  background: #2ba6cb;
-  border: 1px solid #2284a1;
-  color: #ffffff;
-  padding: 8px 0;
-}
-
-table.tiny-button td {
-  padding: 5px 0 4px;
-}
-
-table.small-button td {
-  padding: 8px 0 7px;
-}
-
-table.medium-button td {
-  padding: 12px 0 10px;
-}
-
-table.large-button td {
-  padding: 21px 0 18px;
-}
-
-table.button td a,
-table.tiny-button td a,
-table.small-button td a,
-table.medium-button td a,
-table.large-button td a {
-  font-weight: bold;
-  text-decoration: none;
-  font-family: Helvetica, Arial, sans-serif;
-  color: #ffffff;
-  font-size: 16px;
-}
-
-table.tiny-button td a {
-  font-size: 12px;
-  font-weight: normal;
-}
-
-table.small-button td a {
-  font-size: 16px;
-}
-
-table.medium-button td a {
-  font-size: 20px;
-}
-
-table.large-button td a {
-  font-size: 24px;
-}
-
-table.button:hover td,
-table.button:visited td,
-table.button:active td {
-  background: #2795b6 !important;
-}
-
-table.button:hover td a,
-table.button:visited td a,
-table.button:active td a {
-  color: #fff !important;
-}
-
-table.button:hover td,
-table.tiny-button:hover td,
-table.small-button:hover td,
-table.medium-button:hover td,
-table.large-button:hover td {
-  background: #2795b6 !important;
-}
-
-table.button:hover td a,
-table.button:active td a,
-table.button td a:visited,
-table.tiny-button:hover td a,
-table.tiny-button:active td a,
-table.tiny-button td a:visited,
-table.small-button:hover td a,
-table.small-button:active td a,
-table.small-button td a:visited,
-table.medium-button:hover td a,
-table.medium-button:active td a,
-table.medium-button td a:visited,
-table.large-button:hover td a,
-table.large-button:active td a,
-table.large-button td a:visited {
-  color: #ffffff !important;
-}
-
-table.secondary td {
-  background: #e9e9e9;
-  border-color: #d0d0d0;
-  color: #555;
-}
-
-table.secondary td a {
-  color: #555;
-}
-
-table.secondary:hover td {
-  background: #d0d0d0 !important;
-  color: #555;
-}
-
-table.secondary:hover td a,
-table.secondary td a:visited,
-table.secondary:active td a {
-  color: #555 !important;
-}
-
-table.success td {
-  background: #5da423;
-  border-color: #457a1a;
-}
-
-table.success:hover td {
-  background: #457a1a !important;
-}
-
-table.alert td {
-  background: #c60f13;
-  border-color: #970b0e;
-}
-
-table.alert:hover td {
-  background: #970b0e !important;
 }
 
 table.radius td {
@@ -579,7 +379,7 @@ body.outlook p {
 
 @media only screen and (max-width: 600px) {
 
-  table[class="body"] img {
+  table[class="body"] img:not(.header) {
     width: auto !important;
     height: auto !important;
   }
@@ -686,33 +486,6 @@ body.outlook p {
   }
 }
 
-table.facebook td {
-  background: #3b5998;
-  border-color: #2d4473;
-}
-
-table.facebook:hover td {
-  background: #2d4473 !important;
-}
-
-table.twitter td {
-  background: #00acee;
-  border-color: #0087bb;
-}
-
-table.twitter:hover td {
-  background: #0087bb !important;
-}
-
-table.google-plus td {
-  background-color: #DB4A39;
-  border-color: #CC0000;
-}
-
-table.google-plus:hover td {
-  background: #CC0000 !important;
-}
-
 .template-label {
   color: #ffffff;
   font-weight: bold;
@@ -750,4 +523,12 @@ table.columns .right-text-pad {
   table[class="body"] .left-text-pad {
     padding-right: 10px !important;
   }
+}
+
+img.header {
+  width: 100px;
+}
+
+.header h2 {
+  margin-top: 8px;
 }
