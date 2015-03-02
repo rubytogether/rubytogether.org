@@ -36,6 +36,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    addressable (2.3.7)
     aggregate (0.2.2)
     arel (6.0.0)
     bcrypt (3.1.10)
@@ -50,6 +51,8 @@ GEM
       timers (~> 4.0.0)
     coderay (1.1.0)
     columnize (0.9.0)
+    css_parser (1.3.6)
+      addressable
     curb (0.8.6)
     curb-fu (0.6.2)
       curb (>= 0.5.4.0)
@@ -108,6 +111,7 @@ GEM
       rspec (>= 2.99.0, < 4.0)
     hike (1.2.3)
     hitimes (1.2.2)
+    htmlentities (4.3.3)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
     jquery-rails (4.0.3)
@@ -150,6 +154,12 @@ GEM
       shellany (~> 0.0)
     orm_adapter (0.5.0)
     pg (0.18.1)
+    premailer (1.8.4)
+      css_parser (>= 1.3.6)
+      htmlentities (>= 4.0.0)
+    premailer-rails (1.8.0)
+      actionmailer (>= 3, < 5)
+      premailer (~> 1.7, >= 1.7.9)
     pretty_backtrace (0.1.1)
       debug_inspector (~> 0.0.1)
     pry (0.10.1)
@@ -163,6 +173,8 @@ GEM
       pry (>= 0.9.10)
     puma (2.11.0)
       rack (>= 1.1, < 2.0)
+    quiet_assets (1.1.0)
+      railties (>= 3.1, < 5.0)
     rack (1.6.0)
     rack-livereload (0.3.15)
       rack
@@ -288,11 +300,14 @@ DEPENDENCIES
   jquery-rails
   librato-rails
   newrelic_rpm
+  nokogiri
   pg
+  premailer-rails
   pretty_backtrace
   pry-byebug
   pry-rails
   puma
+  quiet_assets
   rack-livereload
   rails (= 4.2.0)
   rails_12factor
