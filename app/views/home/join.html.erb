@@ -2,7 +2,7 @@
 
 <p>Any person or company that uses Ruby can join and receive <%= link_to "members-only benefits", benefits_path %>. Membership dues fund <%= link_to "our team", team_path %> to <%= link_to "maintain and improve", plans_path %> multiple <%= link_to "tools and services", projects_path %> used by every Ruby developer.</p>
 
-<p>Join Ruby Together today as an individual for <a href="javascript:;" data-subscription="individual">$40 per month</a>, join as a corporation for <a href="javascript:;" data-subscription="corporation">$800 per month</a>, or just <%= contact_us %>.</p>
+<p>Join Ruby Together today as an individual for <a href="javascript:;" data-subscription="individual" data-dollar-amount="40">$40 per month</a>, join as a corporation for <a href="javascript:;" data-subscription="corporation" data-dollar-amount="800">$800 per month</a>, or just <%= contact_us %>.</p>
 
 <%- content_for :script do -%>
   <%= javascript_include_tag "https://checkout.stripe.com/checkout.js" %>
