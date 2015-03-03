@@ -50,6 +50,14 @@ class MembershipsController < ApplicationController
     render :edit
   end
 
+  def destroy
+    customer = Stripe::Customer.retrieve(current_user.stripe_id)
+    subscription = customer.subscriptions.all.first
+    subscription.delete if subscription
+    current_user.membership.update expires_at: Time.now
+    redirect_to membership_path
+  end
+
 private
 
   def render_failure
