@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   end
 
   devise_for :users, path: ""
-  resource :membership, only: [:create, :show, :edit, :update]
+  resource :membership, except: [:new]
 end
