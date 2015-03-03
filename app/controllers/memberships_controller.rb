@@ -42,6 +42,7 @@ class MembershipsController < ApplicationController
 
       card = cards.create(card: params[:token])
       cards.retrieve(old_default).delete if old_default
+      current_user.membership.update!(expires_at: nil) # back to pending
     end
 
     redirect_to membership_path
