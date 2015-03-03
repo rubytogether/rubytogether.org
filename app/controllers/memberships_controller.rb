@@ -36,7 +36,7 @@ class MembershipsController < ApplicationController
     end
 
     if params.has_key?(:token)
-      customer = Stripe::Customer.retreive(current_user.stripe_id)
+      customer = Stripe::Customer.retrieve(current_user.stripe_id)
       old_default = customer.default_source
       cards = customer.sources
 
