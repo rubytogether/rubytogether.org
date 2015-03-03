@@ -1,13 +1,15 @@
 <%- title "your membership" -%>
 
-<p>Hello! You are <%= @membership.kind_name %> of Ruby Together, and your membership is currently <%= @membership.status %>.</p>
+<p>Hello! Your <%= @membership.kind %> membership with Ruby Together is <%= @membership.status %>.</p>
 
+<%- if @membership.active? -%>
 <p>
   <%- if @membership.name -%>
-    You <%= @membership.active? ? "are" : "will be" %> credited on our <%= link_to "members page", members_path %> as "<%= @membership.name %>".
+    You are credited on our <%= link_to "members page", members_path %> as "<%= @membership.name %>".
   <%- else -%>
     You are not credited on our <%= link_to "members page", members_path %>. If you'd like to be credited, <%= link_to "add your name", edit_membership_path %>.
   <%- end -%>
 <p>
+<%- end -%>
 
-<p><%= link_to "Update your membership", edit_membership_path %> to change your name, email address, or billing information. For help with anything else, <%= contact_us %>.</p>
+<p><%= link_to "Update your information", edit_membership_path %> to change your name, email address, or billing information. For help with anything else, <%= contact_us %>.</p>
