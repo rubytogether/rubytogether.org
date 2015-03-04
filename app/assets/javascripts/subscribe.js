@@ -1,5 +1,4 @@
 jQuery(function($) {
-  // Fetch valid CSRF tokens to use later
   $.getJSON("/csrf.json").then(function(json) {
     $("meta[name=csrf-param]").attr("content", json.param);
     $("meta[name=csrf-token]").attr("content", json.token);
@@ -9,22 +8,23 @@ jQuery(function($) {
       $(".flashes").html("<p class='flash " + name + "'>" + message + "</p>");
     };
 
+    var doneFn = function(res) {
+      if (res.url) {
+        document.location = res.url;
+      } else if (res.message) {
+        showFlash(res.message, res.result);
+      }
+    };
+
+    var failFn = function(xhr, textStatus, errorThrown) {
+      showFlash("Something went wrong. :(", "failure");
+    };
+
     var sendToken = function(kind) {
       return function(token) {
         var data = {email: token.email, token: token.id, kind: kind};
-
-        $.ajax("/membership", {
-          data: data,
-          type: (kind === "update" ? "PUT" : "POST")
-        }).done(function(res) {
-          if (res.url) {
-            document.location = res.url;
-          } else if (res.message) {
-            showFlash(res.message, res.result);
-          }
-        }).fail(function(xhr, textStatus, errorThrown) {
-          showFlash("Something went wrong. :(", "failure");
-        });
+        var url = (kind === "update") ? "/membership/card" : "/membership";
+        $.post(url, data).done(doneFn).fail(failFn);
       };
     };
 
@@ -46,6 +46,5 @@ jQuery(function($) {
       StripeCheckout.configure(options).open();
       e.preventDefault();
     });
-
   });
 });

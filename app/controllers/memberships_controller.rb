@@ -35,16 +35,6 @@ class MembershipsController < ApplicationController
       current_user.membership.update!(name: params[:membership].fetch(:name))
     end
 
-    if params.has_key?(:token)
-      customer = Stripe::Customer.retrieve(current_user.stripe_id)
-      old_default = customer.default_source
-      cards = customer.sources
-
-      card = cards.create(card: params[:token])
-      cards.retrieve(old_default).delete if old_default
-      current_user.membership.update!(expires_at: nil) # back to pending
-    end
-
     redirect_to membership_path
   rescue ActiveRecord::RecordInvalid
     get_membership
@@ -57,6 +47,21 @@ class MembershipsController < ApplicationController
     subscription.delete if subscription
     current_user.membership.update expires_at: Time.now
     redirect_to membership_path
+  end
+
+  def card
+    customer = Stripe::Customer.retrieve(current_user.stripe_id)
+    old_default = customer.default_source
+    cards = customer.sources
+
+    card = cards.create(card: params.fetch(:token))
+    cards.retrieve(old_default).delete if old_default
+
+    notice = "Your card on file has been updated."
+    render json: {result: "success", message: notice}
+  rescue => e
+    Rollbar.error(e)
+    render_failure
   end
 
 private
