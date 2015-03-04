@@ -30,3 +30,17 @@ Rollbar.configure do |config|
   # Use sucker punch for asynchronous reporting
   config.use_sucker_punch
 end if ENV.has_key?("ROLLBAR_ACCESS_TOKEN")
+
+module Rollbar
+  class << self
+
+    alias old_error error
+
+    def error(*args)
+      e = args.first
+      ::Rails.logger.error("#{e.class}: #{e.message}\n#{e.backtrace.join(" \n")}")
+      old_error(*args)
+    end
+
+  end
+end if Rails.env.development?
