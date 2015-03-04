@@ -37,4 +37,13 @@ module ApplicationHelper
     )
   end
 
+  def link_to_plan(text, plan)
+    dollars = (plan.amount / 100).to_s
+    text.gsub!("$$", "$#{dollars}")
+    link_to(text, "javascript:;",
+      "data-subscription" => plan.to_s,
+      "data-dollar-amount" => dollars
+    )
+  end
+
 end

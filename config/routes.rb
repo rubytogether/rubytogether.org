@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   end
 
   devise_for :users, path: ""
-  resource :membership, except: [:new]
+  resource :membership, except: [:new] do
+    collection { post :card }
+  end
 end
