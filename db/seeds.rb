@@ -3,8 +3,15 @@
 
 [User, Membership].each(&:destroy_all)
 
+andre = User.create!(
+  email: "mail@arko.net",
+  encrypted_password: "$2a$12$lPDc097WBP/Fds25KKLFmOvpVk8jF5.8rqyoiU2gICtCwNV7phzSq",
+)
+
+Membership.create!(user: andre, name: "André Arko",
+  kind: :individual, expires_at: 1.year.from_now)
+
 directors = [
-  "André Arko",
   "Aaron Patterson",
   "Steve Klabnik",
   "Sarah Mei",
