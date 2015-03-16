@@ -12,6 +12,15 @@ $dark: #392f5a;
   font-size: 28px;
 }
 
+.article {
+  @extend %text;
+  font-size: 22px;
+
+  a {
+    font-size: 22px;
+  }
+}
+
 body {
   background-color: $light;
   @extend %text;
@@ -39,3 +48,4 @@ a {
     text-decoration: underline;
   }
 }
+
