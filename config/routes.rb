@@ -7,8 +7,11 @@ Rails.application.routes.draw do
     get "/#{page}" => "home##{page}"
   end
 
+  get "/news/:action", controller: "news"
+
   devise_for :users, path: ""
   resource :membership, except: [:new] do
     collection { post :card }
   end
+
 end
