@@ -6,14 +6,4 @@ class MembershipMailer < ApplicationMailer
     mail to: user.email
   end
 
-  def goodbye(user)
-    @user = user
-    mail to: user.email
-  end
-
-  def problem(user)
-    @user = user
-    mail to: user.email
-  end
-
 end

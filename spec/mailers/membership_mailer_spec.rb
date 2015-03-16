@@ -2,44 +2,19 @@ require "rails_helper"
 
 RSpec.describe MembershipMailer, type: :mailer do
   describe "welcome" do
-    let(:mail) { MembershipMailer.welcome }
+    let(:user) { User.new(email: "to@example.org") }
+    let(:token) { "abc123" }
+    let(:mail) { MembershipMailer.welcome(user, token) }
 
     it "renders the headers" do
-      expect(mail.subject).to eq("Welcome")
+      expect(mail.subject).to eq("Welcome to Ruby Together")
       expect(mail.to).to eq(["to@example.org"])
-      expect(mail.from).to eq(["from@example.com"])
+      expect(mail.from).to eq(["hello@rubytogether.org"])
     end
 
     it "renders the body" do
-      expect(mail.body.encoded).to match("Hi")
-    end
-  end
-
-  describe "goodbye" do
-    let(:mail) { MembershipMailer.goodbye }
-
-    it "renders the headers" do
-      expect(mail.subject).to eq("Goodbye")
-      expect(mail.to).to eq(["to@example.org"])
-      expect(mail.from).to eq(["from@example.com"])
-    end
-
-    it "renders the body" do
-      expect(mail.body.encoded).to match("Hi")
-    end
-  end
-
-  describe "problem" do
-    let(:mail) { MembershipMailer.problem }
-
-    it "renders the headers" do
-      expect(mail.subject).to eq("Problem")
-      expect(mail.to).to eq(["to@example.org"])
-      expect(mail.from).to eq(["from@example.com"])
-    end
-
-    it "renders the body" do
-      expect(mail.body.encoded).to match("Hi")
+      expect(mail.body.encoded).to include("Thanks for joining")
+      expect(mail.body.encoded).to include("/membership?token=#{token}")
     end
   end
 
