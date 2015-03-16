@@ -21,7 +21,7 @@ private
   end
 
   def delete_stripe_customer
-    Stripe::Customer.retrieve(stripe_id).delete
+    Stripe::Customer.retrieve(stripe_id).delete if stripe_id
   end
 
 end
