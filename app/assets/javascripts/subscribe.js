@@ -46,11 +46,11 @@ jQuery(function($) {
 
       var options = {
         allowRememberMe: false,
-        description: "Membership ($" + amount + " per month)",
+        description: "$" + amount + " per month",
         email: $(e.target).data("email"),
         image: "/images/rubies-square.png",
         key: $("meta[name=stripe-token]").attr("content"),
-        name: "Ruby Together",
+        name: "Ruby Together Membership",
         panelLabel: "Subscribe",
         token: sendToken(kind)
       };
