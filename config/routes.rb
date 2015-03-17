@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get "/news/:action", controller: "news"
 
   devise_for :users, path: ""
-  resource :membership, except: [:new] do
+  resource :membership do
     collection { post :card }
   end
 

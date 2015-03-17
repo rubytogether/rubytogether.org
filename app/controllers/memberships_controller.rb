@@ -1,7 +1,11 @@
 require "create_membership"
 
 class MembershipsController < ApplicationController
-  before_action :authenticate_member!, except: [:create]
+  before_action :authenticate_member!, except: [:new, :create]
+
+  def new
+    @membership = Membership.new(user: User.new)
+  end
 
   def create
     user = User.where(email: params.fetch(:email)).first_or_create!
