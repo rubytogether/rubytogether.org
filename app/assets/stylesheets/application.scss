@@ -63,6 +63,7 @@ input[type="text"],
 textarea {
   @extend %text;
   padding: 5px 5px 0 5px;
+  border: 0;
 }
 
 input[type="submit"] {
