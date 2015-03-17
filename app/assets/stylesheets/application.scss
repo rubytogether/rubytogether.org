@@ -48,22 +48,19 @@ form {
   margin-bottom: 15px;
 
   .field, .actions {
-    margin-top: 15px;
-    clear: left;
+    margin: 20px auto;
+    width: 380px;
   }
 }
 
 label {
-  float: left;
-  width: 160px;
-  line-height: 50px;
+  display: block;
 }
 
 input[type="email"],
 input[type="password"],
 input[type="text"] {
   @extend %text;
-  width: 250px;
   padding: 5px 5px 0 5px;
 }
 
