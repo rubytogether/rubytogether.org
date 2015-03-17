@@ -14,6 +14,10 @@ jQuery(function($) {
       } else if (res.message) {
         showFlash(res.message, res.result);
       }
+
+      if (res.result == "success") {
+        $("form[data-membership]").hide();
+      }
     };
 
     var failFn = function(xhr, textStatus, errorThrown) {
