@@ -38,6 +38,7 @@ class MembershipsController < ApplicationController
 
     if params.has_key?(:membership)
       current_user.membership.update!(name: params[:membership].fetch(:name))
+      FastlyRails.client.purge_by_key("members")
     end
 
     redirect_to membership_path
