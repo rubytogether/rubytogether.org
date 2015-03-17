@@ -5,7 +5,10 @@ jQuery(function($) {
 
     var showFlash = function(message, status) {
       var name = (status === "success") ? "notice" : "alert";
+      // fill the flash div with the message and the class for the flash type
       $(".flashes").html("<p class='flash " + name + "'>" + message + "</p>");
+      // scroll so that the flash is on the screen, if needed
+      $('html, body').animate({scrollTop: $(".flashes").offset().top}, 1000);
     };
 
     var doneFn = function(res) {
