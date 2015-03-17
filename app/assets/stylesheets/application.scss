@@ -59,7 +59,8 @@ label {
 
 input[type="email"],
 input[type="password"],
-input[type="text"] {
+input[type="text"],
+textarea {
   @extend %text;
   padding: 5px 5px 0 5px;
 }
