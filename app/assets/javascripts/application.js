@@ -12,3 +12,4 @@
 //
 //= require jquery2.min
 //= require jquery_ujs
+//= require jquery.serialize-object.min
