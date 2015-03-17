@@ -3,16 +3,16 @@ require "stripe"
 class CreateMembership
   Error = Class.new(RuntimeError)
 
-  def self.run(user, token, plan_name)
-    new.run(user, token, plan_name)
+  def self.run(info, user, token, plan_name)
+    new.run(info, user, token, plan_name)
   end
 
-  def run(user, token, plan_name)
+  def run(info, user, token, plan_name)
     customer = customer_for(user)
     card = set_card(customer, token)
     plan = plan_for(plan_name)
     subscribe_to_plan(customer, plan)
-    create_membership_record(user, card, plan)
+    create_membership_record(info, user, card, plan)
     email_new_member(user)
   rescue => e
     Rollbar.error(e)
@@ -46,12 +46,13 @@ class CreateMembership
     customer.subscriptions.create(plan: plan)
   end
 
-  def create_membership_record(user, card, plan)
-    user.create_membership!(
+  def create_membership_record(info, user, card, plan)
+    attrs = info.merge(
       kind: plan.id,
       card_brand: card.brand,
       card_last4: card.last4
     )
+    user.create_membership!(attrs)
   end
 
   def email_new_member(user)
