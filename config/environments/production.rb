@@ -80,4 +80,5 @@ Rails.application.configure do
   # Use Postmark to send email
   config.action_mailer.delivery_method   = :postmark
   config.action_mailer.postmark_settings = { :api_token => ENV.fetch("POSTMARK_API_TOKEN") }
+  config.action_mailer.asset_host = "http://" + config.action_controller.asset_host
 end
