@@ -5,7 +5,8 @@ class MembershipsController < ApplicationController
 
   def create
     user = User.where(email: params.fetch(:email)).first_or_create!
-    CreateMembership.run(user, params.fetch(:token), params.fetch(:kind))
+    token, kind = params.fetch(:token), params.fetch(:kind)
+    CreateMembership.run(membership_params, user, token, kind)
 
     notice = "Success! You are now a member of Ruby Together. " \
       "We've sent you a welcome email with more information."
@@ -83,6 +84,13 @@ private
   def get_membership
     @membership = current_user.membership
     redirect_to join_path unless @membership
+  end
+
+  def membership_params
+    return {} unless params.has_key?(:membership)
+
+    params.require(:membership).permit(:name, :url, :twitter, :description,
+      :logo_url, :contact_name, :contact_phone, :contact_email)
   end
 
 end
