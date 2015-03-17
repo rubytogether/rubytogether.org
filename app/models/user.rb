@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   devise :database_authenticatable, :recoverable, :trackable, :validatable
 
-  has_one :membership
+  has_one :membership, dependent: :destroy
 
   scope :live_login_token, -> { where("login_token_created_at > ?", Time.now) }
   scope :with_login_token, -> (token) { live_login_token.where(login_token: token) }
