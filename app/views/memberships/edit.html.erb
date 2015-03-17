@@ -1,15 +1,19 @@
 <%- title "Update Membership" -%>
 
 <%= form_for @membership, url: membership_path do |f| %>
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
+  <% if @membership.corporate? %>
+    <%= render "corporate_fields", f: f %>
+  <% else %>
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+  <% end %>
 
-  <%= fields_for @membership.user do |ff| %>
+  <%= fields_for @membership.user do |uf| %>
   <div class="field">
-    <%= ff.label :email %>
-    <%= ff.text_field :email %>
+    <%= uf.label :email %>
+    <%= uf.text_field :email %>
   </div>
   <% end %>
 
