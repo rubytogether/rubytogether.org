@@ -1,0 +1,50 @@
+<%- title "Ruby Together<br>Corporate Membership".html_safe -%>
+
+<%= form_for @membership, url: membership_path, html: {"data-membership" => true} do |f| %>
+  <div class="field">
+    <%= f.label :name, "Company Name" %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :url, "Company Website" %>
+    <%= f.text_field :url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :twitter, "Company Twitter Handle" %>
+    <%= f.text_field :twitter %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description, "Company Description<br>(for member list)".html_safe %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :logo_url, "Company Logo URL<br>(for member list)".html_safe %>
+    <%= f.text_field :logo_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :contact_name, "Contact Person Name" %>
+    <%= f.text_field :contact_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :contact_phone, "Contact Person Phone #" %>
+    <%= f.text_field :contact_phone %>
+  </div>
+
+  <div class="actions">
+    <p>
+      Finally, add your<br>
+      <%= link_to_plan "payment information →", Stripe::Plans::CORPORATE %>
+    </p>
+  </div>
+<% end %>
+
+<%- content_for :script do -%>
+  <%= javascript_include_tag "https://checkout.stripe.com/checkout.js" %>
+  <%= javascript_include_tag "subscribe" %>
+<%- end -%>
