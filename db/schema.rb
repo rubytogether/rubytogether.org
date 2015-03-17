@@ -20,11 +20,15 @@ ActiveRecord::Schema.define(version: 20150227213153) do
     t.integer  "user_id"
     t.string   "name"
     t.string   "description"
-    t.integer  "kind",        default: 0
+    t.integer  "kind",          default: 0
     t.datetime "expires_at"
     t.string   "card_brand"
     t.string   "card_last4"
     t.string   "url"
+    t.string   "twitter"
+    t.string   "contact_name"
+    t.string   "contact_phone"
+    t.string   "logo_url"
   end
 
   create_table "users", force: :cascade do |t|
