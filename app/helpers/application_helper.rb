@@ -26,7 +26,7 @@ module ApplicationHelper
 
   def stripe_meta_tag
     tag :meta, name: "stripe-token",
-      content: Rails.configuration.stripe.publishable_key
+      content: Rails.configuration.x.stripe_publishable_key
   end
 
   def link_to_card_form(text, membership)
