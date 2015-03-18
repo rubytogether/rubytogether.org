@@ -17,11 +17,11 @@ module ApplicationHelper
   end
 
   def rubygems
-    content_tag :a, "Rubygems", href: "https://rubygems.org/pages/download"
+    content_tag :a, "RubyGems", href: "https://rubygems.org/pages/download"
   end
 
   def rubygems_org
-    content_tag :a, "Rubygems.org", href: "http://rubygems.org"
+    content_tag :a, "RubyGems.org", href: "http://rubygems.org"
   end
 
   def stripe_meta_tag
