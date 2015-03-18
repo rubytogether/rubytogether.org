@@ -24,5 +24,6 @@
   </section>
 
   <%= content_for(:script) if content_for?(:script) %>
+  <%= render "google_analytics" if Rails.env.production? %>
 </body>
 </html>
