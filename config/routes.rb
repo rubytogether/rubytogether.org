@@ -9,7 +9,10 @@ Rails.application.routes.draw do
 
   get "/news/:action", controller: "news"
 
+  mount StripeEvent::Engine, at: "/stripe/events"
+
   devise_for :users, path: ""
+
   resource :membership do
     collection { post :card }
   end
