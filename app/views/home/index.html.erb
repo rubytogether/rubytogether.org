@@ -1,6 +1,12 @@
 <% content_for :header do %>
-  <%= image_tag("rubies.png", width: "300", class: "home") %>
+  <%= image_tag("rubies.png", width: "250", class: "home") %>
   <h1>Ruby Together</h1>
 <% end %>
 
-<p>Ruby Together combines the power of <%= link_to "our members", members_path %> to support <%= link_to "a team", team_path %> who <%= link_to "maintain and improve", plans_path %> the <%= link_to "tools and services", projects_path %> that Ruby developers use every day. Read more about <%= link_to "why we exist", url_for(controller: :news, action: "2015-03-17-announcing-ruby-together") %> and <%= link_to "join us today!", join_path %></p>
+<p>Ruby Together is dedicated to sustaining and improving the tools and infrastructure of the Ruby programming language.</p>
+
+<p>We pool money from <%= link_to "our members", members_path %> to allow <%= link_to "our team", team_path %> to make <%= link_to "improvements", plans_path %> that benefit everyone who uses Ruby. To start with, we're focusing on the <%= link_to "public infrastructure", projects_path %> of the Ruby language.</p>
+
+<p>As a 501(c)(6) non-profit trade association, Ruby Together is run by a <%= link_to "board of directors", team_path %> who decide which projects to fund. When you join us, you'll get a vote in the annual board member election, helping us decide how to spend the money we collect.</p>
+
+<p><%= link_to "Join us today", join_path %> and start making a difference in the future of Ruby!</p>
