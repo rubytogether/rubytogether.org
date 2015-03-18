@@ -9,16 +9,7 @@ $dark: #392f5a;
 %text {
   color: $dark;
   font-family: 'Campton';
-  font-size: 26px;
-}
-
-.article {
-  @extend %text;
   font-size: 22px;
-
-  a {
-    font-size: 22px;
-  }
 }
 
 body {
@@ -27,7 +18,7 @@ body {
 }
 
 h1 {
-  font-size: 55px;
+  font-size: 45px;
   margin: 0;
   text-transform: lowercase;
 }
@@ -38,9 +29,7 @@ h2 {
 }
 
 a {
-  color: $dark;
-  font-family: 'Campton';
-  font-size: 28px;
+  @extend %text;
   font-weight: bold;
   text-decoration: none;
 
