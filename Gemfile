@@ -14,7 +14,7 @@ gem "puma"
 gem "rdiscount"
 gem "rollbar", "~> 1.2.7"
 gem "sass-rails", "~> 5.0"
-gem "stripe-rails"
+gem "stripe_event", "~> 1.5"
 gem "sucker_punch", "~> 1.0"
 gem "uglifier", ">= 1.3.0"
 
