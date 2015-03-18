@@ -8,7 +8,7 @@ We'll also provide [benefits just for members][benefits]. To begin with, opportu
 
 The community that has grown up around Ruby is amazing, and provides many fantastic (and fantastically useful) tools that any developer can use. Let's work together to make sure those tools (and the community) are the best that they can be, for everyone.
 
-If you or your company has benefited from the free and open-source tools available in Ruby, support those tools by becoming a member of Ruby Together. Membership dues directly fund work that benefits everyone using Ruby, and are fully tax-deductible. Both individual and corporate memberships are available. [Join us today][join]!
+If you or your company has benefited from the free and open-source tools available in Ruby, support those tools by becoming a member of Ruby Together. Membership dues directly fund work that benefits everyone using Ruby, and are usually tax-deductible. Both individual and corporate memberships are available. [Join us today][join]!
 
 [projects]: <%= projects_path %>
 [benefits]: <%= benefits_path %>
