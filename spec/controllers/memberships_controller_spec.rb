@@ -19,8 +19,8 @@ RSpec.describe MembershipsController, type: :controller do
     end
 
     it "forwards corporate membership information" do
-      expect(CreateMembership).to receive(:run).with(
-        {"contact_name" => "Some One"}, user, "abc", "corporate")
+      membership = hash_including("contact_name" => "Some One", "expires_at" => 1.month.from_now.iso8601)
+      expect(CreateMembership).to receive(:run).with(membership, user, "abc", "corporate")
 
       post :create, token: "abc", email: "alice@example.com", kind: "corporate",
         membership: {contact_name: "Some One"}
