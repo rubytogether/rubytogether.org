@@ -2,6 +2,7 @@ require "create_membership"
 
 class MembershipsController < ApplicationController
   before_action :authenticate_member!, except: [:new, :create]
+  after_action :set_cache_control_headers, only: [:new]
 
   def new
     @membership = Membership.new(user: User.new)
