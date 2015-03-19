@@ -9,6 +9,6 @@ namespace :fastly do
   desc "Purge all cached content from Fastly"
   task :purge do
     service_id = ENV.fetch('FASTLY_SERVICE_ID')
-    FastlyRails.client.get_service(service_id).
+    FastlyRails.client.get_service(service_id).purge_all
   end
 end
