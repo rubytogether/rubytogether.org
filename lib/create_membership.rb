@@ -45,7 +45,7 @@ class CreateMembership
   end
 
   def subscribe_to_plan(customer, plan)
-    customer.subscriptions.create(plan: plan)
+    customer.subscriptions.create(plan: plan.id)
   end
 
   def create_membership_record(info, user, card, plan)
@@ -67,14 +67,7 @@ class CreateMembership
   end
 
   def plan_for(kind)
-    case kind
-    when "individual"
-      Stripe::Plans::INDIVIDUAL
-    when "corporate"
-      Stripe::Plans::CORPORATE
-    else
-      raise Error, "unknown membership kind #{kind.inspect}"
-    end
+    MembershipPlan[kind.to_sym] || raise("Unknown plan #{kind}")
   end
 
 end

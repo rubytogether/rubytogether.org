@@ -10,8 +10,10 @@ if ENV.has_key?("STRIPE_WEBHOOK_SECRET")
   StripeEvent.authentication_secret = ENV.fetch("STRIPE_WEBHOOK_SECRET")
 end
 
+require 'stripe/plans'
 require 'stripe/invoice/payment_succeeded'
 
 StripeEvent.configure do |events|
-  events.subscribe 'invoice.payment_succeeded', Stripe::Invoice::PaymentSucceeded.new(Rails.logger)
+  events.subscribe 'invoice.payment_succeeded',
+    Stripe::Invoice::PaymentSucceeded.new(Rails.logger)
 end

@@ -11,7 +11,7 @@ class Membership < ActiveRecord::Base
   end
 
   def amount
-    Stripe::Plans.const_get(kind.upcase).amount
+    MembershipPlan[kind.to_sym].amount
   end
 
   def kind_name

@@ -45,9 +45,6 @@ Rails.application.configure do
   # Reload the page whenever views are changed
   config.middleware.use Rack::LiveReload
 
-  # Require these files to handle Stripe events
-  config.stripe.eager_load = %w[stripe/invoice/payment_succeeded]
-
   # Ignore rack-livereload assets, too
   config.quiet_assets_paths << "/__rack"
 end

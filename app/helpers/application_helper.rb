@@ -37,7 +37,8 @@ module ApplicationHelper
     )
   end
 
-  def link_to_plan(text, plan)
+  def link_to_plan(text, name)
+    plan = MembershipPlan[name.to_sym]
     dollars = (plan.amount / 100).to_s
     text.gsub!("$$", "$#{dollars}")
     link_to(text, "javascript:;",
