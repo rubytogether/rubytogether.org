@@ -112,6 +112,10 @@ GEM
     hike (1.2.3)
     hitimes (1.2.2)
     htmlentities (4.3.3)
+    http (0.7.2)
+      http-form_data (~> 1.0.0)
+      http_parser.rb (~> 0.6.0)
+    http-form_data (1.0.0)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
     jquery-rails (4.0.3)
@@ -304,6 +308,7 @@ DEPENDENCIES
   guard-livereload (~> 2.4)
   guard-rails
   guard-rspec
+  http
   jquery-rails
   librato-rails
   newrelic_rpm

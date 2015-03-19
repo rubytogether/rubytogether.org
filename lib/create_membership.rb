@@ -1,4 +1,5 @@
 require "stripe"
+require "slack"
 
 class CreateMembership
   Error = Class.new(RuntimeError)
@@ -14,6 +15,7 @@ class CreateMembership
     subscribe_to_plan(customer, plan)
     create_membership_record(info, user, card, plan)
     email_new_member(user)
+    invite_to_slack(user)
   rescue => e
     Rollbar.error(e)
     raise Error, "#{e.class}: #{e.message}"
@@ -58,6 +60,10 @@ class CreateMembership
   def email_new_member(user)
     token = user.generate_reset_password_token!
     MembershipMailer.welcome(user, token).deliver_later
+  end
+
+  def invite_to_slack(user)
+    Slack.team.invite(user.email)
   end
 
   def plan_for(kind)

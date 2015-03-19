@@ -5,6 +5,7 @@ gem "rails", "4.2.0"
 
 gem "devise"
 gem "fastly-rails"
+gem "http"
 gem "jquery-rails"
 gem "nokogiri"
 gem "pg"
