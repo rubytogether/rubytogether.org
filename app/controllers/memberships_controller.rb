@@ -95,7 +95,7 @@ private
     return {} unless params.has_key?(:membership)
 
     params.require(:membership).permit(:name, :url, :twitter, :description,
-      :logo_url, :contact_name, :contact_phone, :contact_email).merge(expires_at: 1.month.from_now)
+      :logo_url, :contact_name, :contact_phone, :contact_email).merge(expires_at: 1.month.from_now.iso8601)
   end
 
 end
