@@ -5,7 +5,7 @@
 <%- if @membership.active? -%>
 <p>
   <%- if @membership.name -%>
-    You are credited on our <%= link_to "members page", members_path %> as "<%= @membership.name %>".
+    You are credited on our <%= link_to "members page", members_path %> as &ldquo;<%= @membership.name %>&rdquo;.
   <%- else -%>
     You are not credited on our <%= link_to "members page", members_path %>. If you'd like to be credited, <%= link_to "add your name", edit_membership_path %>.
   <%- end -%>
