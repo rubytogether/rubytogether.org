@@ -22,7 +22,7 @@ module Stripe
 
         expiration = Time.at(subscription.current_period_end)
         user.membership.update_attributes!(expires_at: expiration)
-        FastlyRails.client.purge_by_key("members")
+        FastlyRails.purge_by_key("members")
       end
 
     end
