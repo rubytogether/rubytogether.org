@@ -1,10 +1,15 @@
 require 'uri'
 
 uri = URI.parse ENV.fetch('DEFAULT_URL')
+
 defaults = {
   host: uri.host,
-  port: uri.port
+  protocol: uri.scheme
 }
+
+unless uri.port == 80 || uri.port == 443
+  defaults.merge!(port: uri.port)
+end
 
 Rails.application.config.action_mailer.default_url_options = defaults
 
