@@ -10,7 +10,7 @@ module Stripe
         invoice = event.data.object
 
         customer = Stripe::Customer.retrieve(invoice.customer)
-        return if customer.nil? || customer.deleted
+        return if customer.respond_to?(:deleted) && customer.deleted
 
         subscription = customer.subscriptions.find do |s|
           s.id == invoice.subscription
