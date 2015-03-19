@@ -12,11 +12,11 @@ gem "pg"
 gem "premailer-rails"
 gem "puma"
 gem "rdiscount"
-gem "rollbar", "~> 1.2.7"
+gem "rollbar", "~> 1.4"
 gem "sass-rails", "~> 5.0"
 gem "stripe_event", "~> 1.5"
 gem "sucker_punch", "~> 1.0"
-gem "uglifier", ">= 1.3.0"
+gem "uglifier", "~> 2.7"
 
 group :development do
   gem "guard-livereload", "~> 2.4", require: false
