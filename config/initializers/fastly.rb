@@ -3,7 +3,7 @@ FastlyRails.configure do |c|
   c.service_id = ENV.fetch("FASTLY_SERVICE_ID") # The Fastly service you will be using, required
 end if ENV.has_key?("FASTLY_SERVICE_ID")
 
-class FastlyRails
+module FastlyRails
 
   def self.purge_by_key(key)
     return unless configuration.service_id
