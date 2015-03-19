@@ -63,7 +63,7 @@ class CreateMembership
   end
 
   def invite_to_slack(user)
-    Slack.team.invite(user.email)
+    Slack.team && Slack.team.invite(user.email)
   end
 
   def plan_for(kind)
