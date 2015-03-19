@@ -3,8 +3,8 @@ class HomeController < ApplicationController
 
   def members
     set_surrogate_key_header("members")
-    @corporate = Membership.corporate.named.active.pluck(:name, :description, :url)
-    @individual = Membership.individual.named.active.pluck(:name)
+    @corporate = Membership.corporate.named.active.order(:created_at).pluck(:name, :description, :url)
+    @individual = Membership.individual.named.active.order(:created_at).pluck(:name)
   end
 
 end
