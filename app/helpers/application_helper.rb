@@ -10,7 +10,7 @@ module ApplicationHelper
 
   def title_tag
     text = @title || "Ruby Together"
-    text << " - Ruby Together" unless text[/ruby together/i]
+    text += " - Ruby Together" unless text[/ruby together/i]
     content_tag :title, text.gsub(/<br\/?>/, " ")
   end
 
