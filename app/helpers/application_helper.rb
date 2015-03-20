@@ -8,6 +8,12 @@ module ApplicationHelper
     end
   end
 
+  def title_tag
+    text = @title || "Ruby Together"
+    text << " - Ruby Together" unless text[/ruby together/i]
+    content_tag :title, text.gsub(/<br\/?>/, " ")
+  end
+
   def contact_us
     link_to "contact us", "mailto:hello@rubytogether.org"
   end
