@@ -3,7 +3,18 @@ Rails.application.routes.draw do
 
   get "/csrf" => "application#csrf"
 
-  %w[benefits contact join members plans projects rubygems team].each do |page|
+  %w[
+    benefits
+    companies
+    contact
+    join
+    members
+    plans
+    projects
+    rubygems
+    team
+    why
+  ].each do |page|
     get "/#{page}" => "home##{page}"
   end
 
