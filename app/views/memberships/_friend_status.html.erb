@@ -1,0 +1,5 @@
+<p>Hello! Your subscription as a friend of Ruby Together is <%= @membership.status %>.</p>
+
+<%- if @membership.active? -%>
+<p>Thanks for your support!</p>
+<%- end -%>

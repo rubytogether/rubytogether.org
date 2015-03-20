@@ -1,5 +1,5 @@
 class Membership < ActiveRecord::Base
-  enum kind: %i[individual corporate]
+  enum kind: %i[individual corporate friend]
 
   scope :active, -> { where("expires_at > ?", Time.now) }
   scope :named,  -> { where("name IS NOT NULL") }

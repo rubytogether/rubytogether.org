@@ -1,9 +1,25 @@
+<% if @kind == "friend" %>
+
+Thanks for supporting Ruby Together.
+
+Your subscription will be charged automatically every month, and we'll send another email with the receipt for your first payment.
+
+Ruby Together is a trade association, not a charity, so your contribution is probably not tax-deductible. (Ask your accountant to be sure, though. YMMV.)
+
+If you want to change your name or email address, you can manage your membership here:
+
+<%= membership_url(token: @token) %>.
+
+<% else %>
+
 Thanks for joining Ruby Together.
 
-Your membership dues will be charged automatically every month, and are tax-deductible by anyone using Ruby as part of their business. (Ask your accountant to be sure, may not apply outside the US. YMMV.)
+Your membership dues will be charged automatically every month, and we'll send another email with the receipt for your first payment.
 
-We'll send another email with the receipt for your first payment.
+Membership dues are tax-deductible by anyone using Ruby as part of their business. (Ask your accountant to be sure, may not apply outside the US. YMMV.)
 
 In order to be credited on our members page, just fill in your name on the "manage your membership" page:
 
 <%= membership_url(token: @token) %>
+
+<% end %>

@@ -6,7 +6,7 @@
 
 <p>To learn more, read about <%= link_to "why you should join", why_path %> Ruby Together, or read about how joining Ruby Together is <%= link_to "good for your company", companies_path %>.</p>
 
-<p>Join Ruby Together as an individual for <%= link_to_plan "$$ per month", "individual" %>, join as a corporation for <%= link_to "$800 per month", new_membership_path %>, or just <%= contact_us %>.</p>
+<p>Join Ruby Together as an individual for <%= link_to_plan "$$ per month", "individual" %>, join as a corporation for <%= link_to "$800 per month", new_membership_path %>, support us by joining <%= link_to "friends of Ruby Together", friends_path %>, or just <%= contact_us %>.
 
 <%- content_for :script do -%>
   <%= javascript_include_tag "https://checkout.stripe.com/checkout.js" %>

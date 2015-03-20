@@ -9,6 +9,13 @@ MembershipPlan = Struct.new(:name, :amount, :interval, :id) do
 end
 
 MembershipPlan.all = {
+  friend: MembershipPlan.new(
+    'Friends of Ruby Together',
+    1000,
+    'month',
+    'friend'
+  ),
+
   individual: MembershipPlan.new(
     'Individual Membership',
     4000,

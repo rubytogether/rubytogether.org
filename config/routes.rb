@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     benefits
     companies
     contact
+    friends
     join
     members
     plans

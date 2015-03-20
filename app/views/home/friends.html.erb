@@ -1,0 +1,12 @@
+<% title "Friends of Ruby Together" %>
+
+<p>Friends of Ruby Together is a way for people who want to support our work to contribute without joining the Ruby Together trade association as a voting member.</p>
+
+<p>While friends of Ruby Together do not receive <%= link_to "member benefits", benefits_path %>, all contributions are used to fund work on Ruby Together's <%= link_to "projects", projects_path %>.</p>
+
+<p>Subscribe for just <%= link_to_plan "$$ per month", "friend" %> to become a friend of Ruby Together today!</p>
+
+<%- content_for :script do -%>
+  <%= javascript_include_tag "https://checkout.stripe.com/checkout.js" %>
+  <%= javascript_include_tag "subscribe" %>
+<%- end -%>

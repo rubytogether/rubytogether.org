@@ -1,5 +1,18 @@
 <h1>Welcome</h1>
 
+<% if @kind == "friend" %>
+
+<p class="lead">Thanks for supporting Ruby Together.</p>
+
+<p>Your subscription will be charged automatically every month, and we'll send another email with the receipt for your first payment.</p>
+
+<p>Ruby Together is a trade association, not a charity, so your contribution is probably not tax-deductible. (Ask your accountant to be sure, though. YMMV.)
+</p>
+
+<p>If you want to change your name or email address, you can <%= link_to "manage your membership", membership_url(token: @token) %>.</p>
+
+<% else %>
+
 <p class="lead">Thanks for joining Ruby Together.</p>
 
 <p>Your membership dues will be charged automatically every month, and we'll send another email with the receipt for your first payment.</p>
@@ -8,3 +21,5 @@
 </p>
 
 <p>In order to be credited in our <%= link_to "list of members", members_url %>, just fill in your name on the <%= link_to "manage your membership", membership_url(token: @token) %> page.</p>
+
+<% end %>
