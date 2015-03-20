@@ -18,8 +18,6 @@ Rails.application.routes.draw do
     get "/#{page}" => "home##{page}"
   end
 
-  get "/news/:action", controller: "news"
-
   mount StripeEvent::Engine, at: "/stripe/events"
 
   devise_for :users, path: ""
@@ -27,5 +25,6 @@ Rails.application.routes.draw do
   resource :membership do
     collection { post :card }
   end
+  resources :news, only: [:index, :show]
 
 end

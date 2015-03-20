@@ -1,0 +1,10 @@
+<% title "Ruby Together News" %>
+
+<% @posts.group_by(&:date).each do |date, posts| %>
+<p><%= date %></p>
+<ul>
+<% posts.each do |post| %>
+  <li><%= link_to post.name, post.path %></li>
+<% end %>
+</ul>
+<% end %>
