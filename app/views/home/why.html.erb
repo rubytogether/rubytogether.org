@@ -1,11 +1,16 @@
 <% title "Why Join Ruby Together?" %>
 
-<p>As a company that builds software with Ruby, your business and its profits rely on the <%= link_to "public infrastructure", projects_path %> of the Ruby language, including <%= rubygems %>, <%= bundler %>, and the <%= rubygems_org %> servers. That infrastructure is critical to the operation of your business, and  before Ruby Together, it was maintained entirely by volunteers!</p>
+<p>As a person who builds software with Ruby, you depend on the <%= link_to "public infrastructure", projects_path %> of the Ruby language, including <%= rubygems %>, <%= bundler %>, and the <%= rubygems_org %> servers. Before Ruby Together, that infrastructure was maintained entirely by volunteers!</p>
 
-<p>Ruby Together pays our <%= link_to "systems administrators and developers", team_path %> fairly for their work on Ruby infrastructure, ensuring that issues can be resolved as needed rather than <%= link_to "waiting for a volunteer to be awake and have spare time", "http://blog.rubygems.org/2014/08/07/postmortem.html" %>. RubyGems.org downtime keeps your developers from being able to work on your business, a cost much higher than membership dues.</p>
+<p>Ruby Together pays our <%= link_to "systems administrators and developers", team_path %> fairly for their work on Ruby infrastructure, providing you with valuable access to the tools you use on a daily basis.</p>
 
-<p>In addition to supporting infrastructure you depend on, membership in Ruby Together means that your engineers will have access to <%= link_to "some of the most knowledgable Ruby developers", team_path %> in the world. Chances are good your developers would love to chat with the developer of <%= bundler %> about managing dependencies and other problems that you've encountered. Members can do that.</p>
+<p>On top of supporting the infrastructure you use every day, membership in Ruby Together means that you will have access to some of <%= link_to "the best Ruby developers", members_path %> in the world. Next time you're ready to throw your computer across the room because of dependencies, you'll have support group to talk to about it.</p>
 
-<p>We already have a <%= link_to "long roadmap", plans_path %> of improvements that will make Ruby better for everyone, including your team. Faster bundling, stable servers, and new features and projects to support increased development speed and security. <%= link_to "Our team", team_path %> has an solid track record of delivering improvements to Ruby's <%= link_to "public infrastructure", projects_path %> for years now, and Ruby Together will allow that to continue for years to come.</p>
+<p>We already have a <%= link_to "specific roadmap", plans_path %> of improvements that will make Ruby better for everyone, including you. Faster bundling, more stable servers, and new features and projects that will increase your development speed and security. <%= link_to "Our team", team_path %> has a solid track record of delivering improvements to Ruby's <%= link_to "public infrastructure", projects_path %> for years now, and Ruby Together will enable those improvements to continue for years to come.</p>
 
-<p>Corporate membership in Ruby Together provides your development team with the direct benefits of networking opportunities and the indirect benefits of stable, well-maintained Ruby infrastructure. As Ruby Together grows, the <%= link_to "benefits of membership", benefits_path %> will grow as well. Start experiencing those benefits right away when you <%= link_to "join Ruby Together", new_membership_path %>!</p>
+<p>Membership in Ruby Together provides you with the direct benefits of networking opportunities and the indirect benefits of stable, well-maintained Ruby infrastructure. As Ruby Together grows, the <%= link_to "benefits of membership", benefits_path %> will grow as well. Start experiencing those benefits right away when you <%= link_to_plan "join Ruby Together", "individual" %>!</p>
+
+<%- content_for :script do -%>
+  <%= javascript_include_tag "https://checkout.stripe.com/checkout.js" %>
+  <%= javascript_include_tag "subscribe" %>
+<%- end -%>
