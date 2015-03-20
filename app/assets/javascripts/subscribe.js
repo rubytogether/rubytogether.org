@@ -41,8 +41,10 @@ jQuery(function($) {
     };
 
     $("a[data-subscription]").click(function(e) {
-      var kind = $(e.target).data("subscription");
-      var amount = $(e.target).data("dollar-amount");
+      var el = $(e.target);
+      var kind = el.data("subscription");
+      var amount = el.data("dollar-amount");
+      var name = el.data("subscription-name");
 
       var options = {
         allowRememberMe: false,
@@ -50,7 +52,7 @@ jQuery(function($) {
         email: $(e.target).data("email"),
         image: "/images/rubies-square.png",
         key: $("meta[name=stripe-token]").attr("content"),
-        name: "Ruby Together Membership",
+        name: name,
         panelLabel: "Subscribe",
         token: sendToken(kind)
       };

@@ -49,7 +49,8 @@ module ApplicationHelper
     text.gsub!("$$", "$#{dollars}")
     link_to(text, "javascript:;",
       "data-subscription" => plan.id,
-      "data-dollar-amount" => dollars
+      "data-dollar-amount" => dollars,
+      "data-subscription-name" => plan.name
     )
   end
 

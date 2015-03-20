@@ -10,14 +10,14 @@ end
 
 MembershipPlan.all = {
   individual: MembershipPlan.new(
-    'Ruby Together Individual Membership',
+    'Individual Membership',
     4000,
     'month',
     'individual'
   ),
 
   corporate: MembershipPlan.new(
-    'Ruby Together Corporate Membership',
+    'Corporate Membership',
     80000,
     'month',
     'corporate'
