@@ -58,5 +58,26 @@ jQuery(function($) {
       StripeCheckout.configure(options).open();
       e.preventDefault();
     });
+
+    $("a[data-charge]").click(function(e) {
+      var el = $(e.target);
+      var amount = $("#" + el.data("amount-input")).val();
+
+      var options = {
+        description: "$" + amount + " one-time contribution",
+        email: $(e.target).data("email"),
+        image: "/images/rubies-square.png",
+        key: $("meta[name=stripe-token]").attr("content"),
+        name: el.data("charge-name"),
+        token: function(token) {
+          var url = "/charge";
+          var data = {token: token.id, amount: amount};
+          $.post(url, data).done(doneFn).fail(failFn);
+        }
+      };
+
+      StripeCheckout.configure(options).open();
+      e.preventDefault();
+    });
   });
 });

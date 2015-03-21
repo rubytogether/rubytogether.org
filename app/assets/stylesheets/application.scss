@@ -73,3 +73,10 @@ input[type="submit"] {
 .login-links a {
   font-size: 20px;
 }
+
+input.inline {
+  height: 26px;
+  padding: 2px 0 0 4px;
+  width: 30px;
+  vertical-align: top;
+}

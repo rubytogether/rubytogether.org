@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   resource :membership do
     collection { post :card }
   end
+  resource :charge, only: [:create]
   resources :news, only: [:index, :show]
 
 end
