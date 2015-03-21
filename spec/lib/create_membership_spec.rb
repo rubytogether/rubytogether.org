@@ -60,12 +60,19 @@ RSpec.describe CreateMembership do
   end
 
   describe "#invite_to_slack" do
+    let(:user) { double("User", email: "a@b.c") }
+
     it "POSTs to Slack asking for an invite" do
       slack = double("Slack").tap{|d| expect(d).to receive(:invite) }
       allow(Slack).to receive(:team) { slack }
 
-      user = double("User", email: "a@b.c")
-      subject.invite_to_slack(user)
+      plan = double(id: "individual")
+      subject.invite_to_slack(user, plan)
+    end
+
+    it "doesn't invite friends" do
+      plan = double(id: "friend")
+      subject.invite_to_slack(user, plan)
     end
   end
 

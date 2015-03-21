@@ -15,7 +15,7 @@ class CreateMembership
     subscribe_to_plan(customer, plan)
     create_membership_record(info, user, card, plan)
     email_new_member(user, plan)
-    invite_to_slack(user)
+    invite_to_slack(user, plan)
   rescue => e
     Rollbar.error(e)
     raise Error, "#{e.class}: #{e.message}"
@@ -62,7 +62,8 @@ class CreateMembership
     MembershipMailer.welcome(user, plan.id, token).deliver_later
   end
 
-  def invite_to_slack(user)
+  def invite_to_slack(user, plan)
+    return if plan.id == "friend"
     Slack.team && Slack.team.invite(user.email)
   end
 
