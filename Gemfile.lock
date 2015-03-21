@@ -37,7 +37,6 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.3.7)
-    aggregate (0.2.2)
     arel (6.0.0)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
@@ -76,8 +75,6 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.7)
     execjs (2.4.0)
-    faraday (0.9.1)
-      multipart-post (>= 1.2, < 3)
     fastly (1.1.5)
       curb (~> 0.8.6)
       curb-fu (~> 0.6.2)
@@ -123,16 +120,6 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.2)
-    librato-metrics (1.5.0)
-      aggregate (~> 0.2.2)
-      faraday (~> 0.7)
-      multi_json
-    librato-rack (0.4.5)
-      librato-metrics (~> 1.1)
-    librato-rails (0.11.1)
-      activesupport (>= 3.0)
-      librato-rack (~> 0.4.2)
-      railties (>= 3.0)
     listen (2.8.5)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
@@ -147,7 +134,6 @@ GEM
     mini_portile (0.6.2)
     minitest (5.5.1)
     multi_json (1.11.0)
-    multipart-post (2.0.0)
     nenv (0.2.0)
     netrc (0.10.3)
     newrelic_rpm (3.10.0.279)
@@ -313,7 +299,6 @@ DEPENDENCIES
   guard-rspec
   http
   jquery-rails
-  librato-rails
   newrelic_rpm
   nilify_blanks
   nokogiri
