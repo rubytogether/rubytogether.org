@@ -3,8 +3,10 @@ require "create_charge"
 class ChargesController < ApplicationController
 
   def create
-    token, amount = params.fetch(:token), params.fetch(:amount).to_i
-    CreateCharge.new.run(token, amount)
+    token = params.fetch(:token)
+    amount = params.fetch(:amount).to_i
+    email = params.fetch(:email)
+    CreateCharge.new.run(token, amount, email)
 
     render json: {result: "success", message: success}
   rescue CreateCharge::Error => e

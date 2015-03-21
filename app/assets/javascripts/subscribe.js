@@ -71,7 +71,7 @@ jQuery(function($) {
         name: el.data("charge-name"),
         token: function(token) {
           var url = "/charge";
-          var data = {token: token.id, amount: amount};
+          var data = {token: token.id, amount: amount, email: token.email};
           $.post(url, data).done(doneFn).fail(failFn);
         }
       };
