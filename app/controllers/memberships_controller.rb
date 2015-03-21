@@ -73,7 +73,7 @@ private
 
   def success_for(kind)
     kind = "member" unless (kind == "friend")
-    "Success! You are now a #{kind} of Ruby Together." \
+    "Success! You are now a #{kind} of Ruby Together. " \
       "We've sent you a welcome email with more information."
   end
 
