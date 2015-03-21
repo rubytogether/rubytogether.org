@@ -13,9 +13,7 @@ class MembershipsController < ApplicationController
     token, kind = params.fetch(:token), params.fetch(:kind)
     CreateMembership.run(membership_params, user, token, kind)
 
-    notice = "Success! You are now a member of Ruby Together. " \
-      "We've sent you a welcome email with more information."
-    render json: {result: "success", message: notice}
+    render json: {result: "success", message: success_for(kind)}
   rescue CreateMembership::Error => e
     user.destroy if user.persisted?
     render_failure
@@ -72,6 +70,12 @@ class MembershipsController < ApplicationController
   end
 
 private
+
+  def success_for(kind)
+    kind = "member" unless (kind == "friend")
+    "Success! You are now a #{kind} of Ruby Together."
+      "We've sent you a welcome email with more information."
+  end
 
   def render_failure
     contact_us = self.class.helpers.contact_us
