@@ -14,7 +14,7 @@ class CreateMembership
     plan = plan_for(plan_name)
     subscribe_to_plan(customer, plan)
     create_membership_record(info, user, card, plan)
-    email_new_member(user)
+    email_new_member(user, plan)
     invite_to_slack(user)
   rescue => e
     Rollbar.error(e)
@@ -57,9 +57,9 @@ class CreateMembership
     user.create_membership!(attrs)
   end
 
-  def email_new_member(user)
+  def email_new_member(user, plan)
     token = user.generate_reset_password_token!
-    MembershipMailer.welcome(user, token).deliver_later
+    MembershipMailer.welcome(user, plan.id, token).deliver_later
   end
 
   def invite_to_slack(user)
