@@ -5,7 +5,7 @@ class NewsController < ApplicationController
 
   def index
     news = Rails.root.join("app/views/news")
-    @posts = news.each_child(false).map do |file|
+    @posts = news.each_child(false).sort.map do |file|
       next if file.to_s.include?("index.html.erb")
       path = file.basename(".html.md").to_s
       date = path[0..9]
