@@ -46,7 +46,6 @@ jQuery(function($) {
       var amount = el.data("dollar-amount");
 
       var options = {
-        allowRememberMe: false,
         description: "$" + amount + " per month",
         email: $(e.target).data("email"),
         image: "/images/rubies-square.png",
