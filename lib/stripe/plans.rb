@@ -1,4 +1,4 @@
-MembershipPlan = Struct.new(:name, :amount, :interval, :id) do
+MembershipPlan = Struct.new(:id, :name, :interval, :amount, :currency) do
   class << self
     attr_accessor :all
 
@@ -10,24 +10,27 @@ end
 
 MembershipPlan.all = {
   friend: MembershipPlan.new(
+    'friend',
     'Friends of Ruby Together',
-    1000,
     'month',
-    'friend'
+    1000,
+    'usd'
   ),
 
   individual: MembershipPlan.new(
+    'individual',
     'Individual Membership',
-    4000,
     'month',
-    'individual'
+    4000,
+    'usd'
   ),
 
   corporate: MembershipPlan.new(
+    'corporate',
     'Corporate Membership',
-    80000,
     'month',
-    'corporate'
+    80000,
+    'usd'
   )
 }
 
