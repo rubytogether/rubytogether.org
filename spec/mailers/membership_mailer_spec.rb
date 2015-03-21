@@ -9,13 +9,10 @@ RSpec.describe MembershipMailer, type: :mailer do
     context "for members" do
       let(:plan) { "individual" }
 
-      it "renders the headers" do
+      it "emails thanks for joining" do
         expect(mail.subject).to eq("Welcome to Ruby Together")
         expect(mail.to).to eq(["to@example.org"])
         expect(mail.from).to eq(["hello@rubytogether.org"])
-      end
-
-      it "renders the body" do
         expect(mail.body.encoded).to include("Thanks for joining")
         expect(mail.body.encoded).to include("/membership?token=#{token}")
       end
@@ -24,14 +21,11 @@ RSpec.describe MembershipMailer, type: :mailer do
     context "for friends" do
       let(:plan) { "friend" }
 
-      it "renders the headers" do
+      it "emails thanks for supporting" do
         expect(mail.subject).to eq("Thanks from Ruby Together")
         expect(mail.to).to eq(["to@example.org"])
         expect(mail.from).to eq(["hello@rubytogether.org"])
-      end
-
-      it "renders the body" do
-        expect(mail.body.encoded).to include("Thanks for supporting")
+        expect(mail.body.encoded).to include("Thanks for your support")
         expect(mail.body.encoded).to include("/membership?token=#{token}")
       end
     end
