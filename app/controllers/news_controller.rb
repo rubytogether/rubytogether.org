@@ -20,7 +20,7 @@ class NewsController < ApplicationController
       file = id + ".html.md"
 
       if Rails.root.join("app/views/news", file).exist?
-        Post.from_file(file)
+        Post.from_file(id)
       else
         raise ActiveRecord::RecordNotFound
       end
