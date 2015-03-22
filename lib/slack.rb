@@ -8,8 +8,8 @@ module Slack
       Slack.team && Slack.team.invite(email)
     end
 
-    def say(message)
-      Slack.notifier && Slack.notifier.ping(message)
+    def say(message, options = {})
+      Slack.notifier && Slack.notifier.ping(message, options)
     end
   end
 
