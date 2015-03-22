@@ -1,11 +1,26 @@
 MembershipPlan = Struct.new(:id, :name, :interval, :amount, :currency) do
   class << self
     attr_accessor :all
-
-    def [](name)
-      all[name]
-    end
   end
+
+  def self.[](name)
+    all[name]
+  end
+
+  def self.subscriber_counts
+    all.map do |name, plan|
+      [name, plan.subscriber_count]
+    end.to_h
+  end
+
+  def subscriber_count
+    Stripe::Customer.all(
+      "include[]"=>"total_count",
+      "limit" => "1",
+      "subscription[plan]" => id
+    ).total_count
+  end
+
 end
 
 MembershipPlan.all = {

@@ -16,4 +16,16 @@ require 'stripe/invoice/payment_succeeded'
 StripeEvent.configure do |events|
   events.subscribe 'invoice.payment_succeeded',
     Stripe::Invoice::PaymentSucceeded.new(Rails.logger)
+
+  events.subscribe 'customer.subscription.created' do
+    msg = "Subscriber counts: "
+    msg << MembershipPlan.subscriber_counts.map do |name, count|
+      "#{count} #{name.capitalize}"
+    end.to_sentence
+
+    Slack.say msg,
+      username: "Subscribers",
+      channel: "#stripe",
+      icon_emoji: ":chart_with_upwards_trend:"
+  end
 end
