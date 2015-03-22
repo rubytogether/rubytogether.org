@@ -14,8 +14,8 @@ module ApplicationHelper
     content_tag :title, text.gsub(/<br\/?>/, " ")
   end
 
-  def contact_us
-    link_to "contact us", "mailto:hello@rubytogether.org"
+  def contact_us(text = "contact us")
+    link_to text, "mailto:hello@rubytogether.org"
   end
 
   def bundler

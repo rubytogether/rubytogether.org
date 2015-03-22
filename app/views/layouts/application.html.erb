@@ -23,6 +23,15 @@
     <%= yield %>
   </section>
 
+  <footer>
+    <ul>
+      <li><%= link_to "news", news_index_path %></li>
+      <li><%= link_to "team", team_path %></li>
+      <li><%= link_to "members", members_path %></li>
+      <li><%= link_to "join", join_path %></li>
+      <li><%= contact_us("contact") %></li>
+    </ul>
+  </footer>
   <%= content_for(:script) if content_for?(:script) %>
   <%= render "google_analytics" if Rails.env.production? %>
 </body>

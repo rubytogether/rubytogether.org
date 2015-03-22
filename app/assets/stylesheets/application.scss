@@ -40,8 +40,23 @@ header {
   }
 }
 
+footer {
+  text-align: center;
+  padding-bottom: 25px;
+
+  li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 1em;
+  }
+
+  a {
+    font-size: 14px;
+  }
+}
+
 section.content {
-  padding-bottom: 1em;
+  padding-bottom: 10px;
 }
 
 form {
