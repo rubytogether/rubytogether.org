@@ -2,10 +2,15 @@ class CreateCharge
   Error = Class.new(RuntimeError)
 
   def run(token, amount, email)
+    validate_amount(amount)
     charge_customer(token, amount, email)
   rescue => e
     Rollbar.error(e)
     raise Error, "#{e.class}: #{e.message}"
+  end
+
+  def validate_amount(amount)
+    raise Error, "Minimum amount is $1" if amount < 1
   end
 
   def charge_customer(token, dollars, email)
