@@ -25,7 +25,8 @@ RSpec.describe MembershipMailer, type: :mailer do
         expect(mail.subject).to eq("Thanks from Ruby Together")
         expect(mail.to).to eq(["to@example.org"])
         expect(mail.from).to eq(["hello@rubytogether.org"])
-        expect(mail.body.encoded).to include("Thanks for your support")
+        expect(mail.body.encoded).to include("<h1>Thanks")
+        expect(mail.body.encoded).to include("We appreciate your support")
         expect(mail.body.encoded).to include("/membership?token=#{token}")
       end
     end

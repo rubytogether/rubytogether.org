@@ -1,8 +1,7 @@
-<h1>Welcome</h1>
-
 <% if @plan == "friend" %>
+<h1>Thanks</h1>
 
-<p class="lead">Thanks for your support.</p>
+<p class="lead">We appreciate your support.</p>
 
 <p>Your subscription as a friend of Ruby Together will be charged automatically every month, and we'll send another email with the receipt for your first payment.</p>
 
@@ -12,6 +11,7 @@
 <p>If you want to change your name or email address, you can <%= link_to "manage your membership", membership_url(token: @token) %>.</p>
 
 <% else %>
+<h1>Welcome</h1>
 
 <p class="lead">Thanks for joining Ruby Together.</p>
 
