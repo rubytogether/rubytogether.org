@@ -4,8 +4,8 @@ require "slack"
 class CreateMembership
   Error = Class.new(RuntimeError)
 
-  def self.run(info, user, token, plan_name)
-    new.run(info, user, token, plan_name)
+  def self.run(*args)
+    new.run(*args)
   end
 
   def run(info, user, token, plan_name)

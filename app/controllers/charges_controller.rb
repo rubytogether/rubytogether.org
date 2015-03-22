@@ -6,9 +6,10 @@ class ChargesController < ApplicationController
     token = params.fetch(:token)
     amount = params.fetch(:amount).to_i
     email = params.fetch(:email)
-    CreateCharge.new.run(token, amount, email)
-
-    render json: {result: "success", message: success}
+    CreateCharge.run(token, amount, email)
+    render_success
+  rescue CreateCharge::Error => e
+    render_failure(e.message)
   rescue => e
     Rollbar.error(e)
     render_failure
@@ -16,16 +17,17 @@ class ChargesController < ApplicationController
 
 private
 
-  def success
-    "Success! Thanks for contributing to Ruby Together. " \
+  def render_success
+    message = "Success! Thanks for contributing to Ruby Together. " \
       "We'll send you an email with a receipt."
+    render json: {result: "success", message: message}
   end
 
-  def render_failure
+  def render_failure(message = nil)
     contact_us = self.class.helpers.contact_us
-    error = "There was an error while charging your card. It " \
+    message ||= "There was an error while charging your card. It " \
       "might work if you try again, or you can #{contact_us} for help."
-    render json: {result: "failure", message: error}
+    render json: {result: "failure", message: message}
   end
 
 end
