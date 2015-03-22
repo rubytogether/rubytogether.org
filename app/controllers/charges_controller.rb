@@ -9,9 +9,6 @@ class ChargesController < ApplicationController
     CreateCharge.new.run(token, amount, email)
 
     render json: {result: "success", message: success}
-  rescue CreateCharge::Error => e
-    user.destroy if user.persisted?
-    render_failure
   rescue => e
     Rollbar.error(e)
     render_failure
