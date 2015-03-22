@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root "home#index"
 
   get "/csrf" => "application#csrf"
+  get "/news.xml" => "news#index", format: "xml"
 
   %w[
     benefits
@@ -28,5 +29,4 @@ Rails.application.routes.draw do
   end
   resource :charge, only: [:create]
   resources :news, only: [:index, :show]
-
 end
