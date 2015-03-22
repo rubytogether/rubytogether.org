@@ -249,6 +249,7 @@ GEM
       sprockets-rails (>= 2.0, < 4.0)
       tilt (~> 1.1)
     shellany (0.0.1)
+    slack-notifier (1.1.0)
     slop (3.6.0)
     sprockets (2.12.3)
       hike (~> 1.2)
@@ -317,6 +318,7 @@ DEPENDENCIES
   rollbar (~> 1.4)
   rspec-rails
   sass-rails (~> 5.0)
+  slack-notifier
   stripe_event (~> 1.5)
   sucker_punch (~> 1.0)
   terminal-notifier-guard (~> 1.6)

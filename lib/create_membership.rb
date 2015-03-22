@@ -63,8 +63,7 @@ class CreateMembership
   end
 
   def invite_to_slack(user, plan)
-    return if plan.id == "friend"
-    Slack.team && Slack.team.invite(user.email)
+    Slack.invite(user.email) unless plan.id == "friend"
   end
 
   def plan_for(kind)
