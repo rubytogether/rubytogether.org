@@ -30,6 +30,10 @@ module ApplicationHelper
     content_tag :a, "RubyGems.org", href: "http://rubygems.org"
   end
 
+  def rubybench
+    content_tag :a, "RubyBench.org", href: "http://rubybench.org"
+  end
+
   def stripe_meta_tag
     tag :meta, name: "stripe-token",
       content: Rails.configuration.x.stripe_publishable_key
