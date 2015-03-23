@@ -1,7 +1,7 @@
 require "slack"
 
-describe Slack do
-  subject(:slack) { Slack.new("rt", "abc123") }
+describe Slack::Team do
+  subject(:slack) { Slack::Team.new("rt", "abc123") }
 
   describe "#invite" do
     def stub_invite(status)
