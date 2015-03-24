@@ -14,10 +14,17 @@ require 'stripe/plans'
 require 'stripe/invoice/payment_succeeded'
 
 StripeEvent.configure do |events|
-  events.subscribe 'invoice.payment_succeeded',
-    Stripe::Invoice::PaymentSucceeded.new(Rails.logger)
 
-  events.subscribe 'customer.subscription.created' do
+  events.subscribe 'invoice.payment_succeeded',
+    Stripe::Invoice::PaymentSucceeded.new
+
+  events.subscribe 'customer.source.created' do |event|
+    card = event.data.object
+    user = User.where(stripe_id: card.customer).first!
+    user.membership.update!(card_brand: card.brand, card_last4: card.last4)
+  end
+
+  events.subscribe 'customer.subscription.created' do |event|
     msg = "Subscriber counts: "
     msg << MembershipPlan.subscriber_counts.map do |name, count|
       "#{count} #{name.capitalize}"
@@ -28,4 +35,5 @@ StripeEvent.configure do |events|
       channel: "#stripe",
       icon_emoji: ":chart_with_upwards_trend:"
   end
+
 end
