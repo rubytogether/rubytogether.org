@@ -1,6 +1,6 @@
 require "slack"
 
-describe Slack::Team do
+RSpec.describe Slack::Team do
   subject(:slack) { Slack::Team.new("rt", "abc123") }
 
   describe "#invite" do
