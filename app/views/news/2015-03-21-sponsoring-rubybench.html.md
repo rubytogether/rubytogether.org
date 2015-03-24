@@ -6,6 +6,6 @@ RubyBench provides public benchmarks, running a large suite of performance tests
 
 With historical and current performance information, it is possible to find performance regressions quickly, as well as release new versions with confidence that performance has stayed the same or gotten even better. This assurance allows developers to upgrade their projects to newer versions of Ruby and Rails more frequently, more easily, and with greater confidence.
 
-Today, I'm happy to announce that Ruby Together has agreed to fund the server hardware that runs the RubyBench benchmark suite, taking over for RubyBench founding sponsor [Rubytune](http://rubytune.com). In addition to funding the server hardware, Ruby Together together plans to fund work maintaining and expanding RubyBench in the future.
+Today, I'm happy to announce that Ruby Together has agreed to fund the server hardware that runs the RubyBench benchmark suite, taking over for RubyBench founding sponsor [Rubytune](http://rubytune.com). In addition to funding the server hardware, Ruby Together plans to fund work maintaining and expanding RubyBench in the future.
 
 To support our work with RubyBench and other projects, [join Ruby Together](<%= join_path %>) today.
