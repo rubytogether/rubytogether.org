@@ -11,13 +11,21 @@ RSpec.describe "Stripe webhooks", :vcr do
   end
 
   describe "customer.source.created" do
-    let(:user) { User.create!(stripe_id: "cus_5uQi8EF4cZQdZR", email: "a@b.c") }
-    let(:membership) { Membership.create(user: user, card_last4: "1234") }
-
     it "runs our hook" do
+      user = User.create!(stripe_id: "cus_5uQi8EF4cZQdZR", email: "a@b.c")
+      membership = Membership.create(user: user, card_last4: "1234")
+
       expect {
         post "/stripe/events", id: "evt_15jcmzAcWgwn5pBtGKgreAit"
       }.to change { membership.reload.card_last4 }
+    end
+
+    context "when user doesn't exist yet" do
+      it "returns a 404" do
+        expect {
+          post "/stripe/events", id: "evt_15jcmzAcWgwn5pBtGKgreAit"
+        }.to raise_error(ActiveRecord::RecordNotFound)
+      end
     end
   end
 
