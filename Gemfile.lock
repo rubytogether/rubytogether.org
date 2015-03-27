@@ -138,7 +138,6 @@ GEM
     multi_json (1.11.0)
     nenv (0.2.0)
     netrc (0.10.3)
-    newrelic_rpm (3.10.0.279)
     nilify_blanks (1.2.0)
       activerecord (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -307,7 +306,6 @@ DEPENDENCIES
   guard-rspec
   http
   jquery-rails
-  newrelic_rpm
   nilify_blanks
   nokogiri
   pg
