@@ -37,7 +37,7 @@ group :development, :test do
   gem "pry-rails"
   gem "rspec-rails"
   gem "vcr"
-  gem "webmock"
+  gem "webmock", require: false
 end
 
 group :production do
