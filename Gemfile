@@ -36,11 +36,14 @@ group :development, :test do
   gem "pry-byebug"
   gem "pry-rails"
   gem "rspec-rails"
-  gem "vcr"
-  gem "webmock", require: false
 end
 
 group :production do
   gem "postmark-rails"
   gem "rails_12factor"
+end
+
+group :test do
+  gem "webmock"
+  gem "vcr"
 end
