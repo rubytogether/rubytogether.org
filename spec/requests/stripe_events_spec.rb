@@ -2,14 +2,6 @@ require 'vcr_helper'
 
 RSpec.describe "Stripe webhooks", :vcr do
 
-  before do
-    WebMock.enable!
-  end
-
-  after do
-    WebMock.disable!
-  end
-
   describe "customer.source.created" do
     it "runs our hook" do
       user = User.create!(stripe_id: "cus_5uQi8EF4cZQdZR", email: "a@b.c")
