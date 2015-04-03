@@ -4,7 +4,7 @@
   <p class="post-date"><%= date %></p>
   <ul class="post-names">
   <% posts.each do |post| %>
-    <li class="post-name"><%= link_to post.title, news_path(CGI.escape(post.id)) %></li>
+    <li class="post-name"><%= link_to post.title, news_path(post.id) %></li>
   <% end %>
   </ul>
 <% end %>
