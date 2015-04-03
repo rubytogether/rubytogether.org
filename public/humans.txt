@@ -1,0 +1,17 @@
+/* TEAM */
+
+    Bundler dev: André Arko
+    Twitter: @indirect
+    Website: http://arko.net
+    Location: San Francisco, CA
+    
+    RubyGems.org ops: David Radcliffe
+    Twitter: @dwradcliffe
+    Website: https://dwradcliffe.com
+    Location: Avon, IN
+
+/* SITE */
+
+    Design by: @sailorhg
+    Website: http://sailorhg.com
+    Location: San Francisco, CA
