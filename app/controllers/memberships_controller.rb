@@ -31,14 +31,10 @@ class MembershipsController < ApplicationController
   end
 
   def update
-    if params.has_key?(:user)
-      current_user.update!(email: params[:user].fetch(:email))
-    end
-
-    if params.has_key?(:membership)
-      current_user.membership.update!(name: params[:membership].fetch(:name))
-      FastlyRails.purge_by_key("members")
-    end
+    user_params = params.require(:user).permit(:email)
+    current_user.update!(user_params)
+    current_user.membership.update!(membership_params)
+    FastlyRails.purge_by_key("members")
 
     redirect_to membership_path
   rescue ActiveRecord::RecordInvalid
