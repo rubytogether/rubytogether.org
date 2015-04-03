@@ -4,7 +4,7 @@ class NewsController < ApplicationController
   Post = Struct.new(:name, :date, :id) do
     def self.from_file(file)
       date = Date.parse(file[0..9])
-      new(file[10..-1].titleize, date, file)
+      new(file[10..-1], date, file)
     end
 
     def self.all
@@ -32,6 +32,10 @@ class NewsController < ApplicationController
 
     def body
       pathname.read
+    end
+
+    def title
+      name.titleize
     end
   end
 
