@@ -78,6 +78,7 @@ input[type="password"],
 input[type="text"],
 textarea {
   @extend %body-text;
+  width: 345px;
   padding: 5px 5px 0 5px;
   border: 0;
 }
