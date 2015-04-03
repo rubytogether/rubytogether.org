@@ -1,0 +1,792 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/events/evt_15nY3IAcWgwn5pBtisl4M4d6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.1 p85 (2015-02-26)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        ivy.local 14.1.0 Darwin Kernel Version 14.1.0: Thu Feb 26 19:26:47 PST 2015;
+        root:xnu-2782.10.73~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 03 Apr 2015 16:57:33 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1193'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_IOsm64DgEEPQkdRQ
+      Stripe-Version:
+      - '2015-02-18'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "evt_15nY3IAcWgwn5pBtisl4M4d6",
+          "created": 1428080032,
+          "livemode": false,
+          "type": "customer.subscription.created",
+          "data": {
+            "object": {
+              "id": "sub_5zX7ha6aVZ6Xeh",
+              "plan": {
+                "interval": "month",
+                "name": "Ruby Together Individual Membership",
+                "created": 1425204514,
+                "amount": 4000,
+                "currency": "usd",
+                "id": "individual",
+                "object": "plan",
+                "livemode": false,
+                "interval_count": 1,
+                "trial_period_days": null,
+                "metadata": {},
+                "statement_descriptor": null
+              },
+              "object": "subscription",
+              "start": 1428080032,
+              "status": "active",
+              "customer": "cus_5zX7jk6DxkTfzh",
+              "cancel_at_period_end": false,
+              "current_period_start": 1428080032,
+              "current_period_end": 1430672032,
+              "ended_at": null,
+              "trial_start": null,
+              "trial_end": null,
+              "canceled_at": null,
+              "quantity": 1,
+              "application_fee_percent": null,
+              "discount": null,
+              "tax_percent": null,
+              "metadata": {}
+            }
+          },
+          "object": "event",
+          "pending_webhooks": 0,
+          "request": "iar_5zX7MhAJ6RJnbJ",
+          "api_version": "2015-02-18"
+        }
+    http_version: 
+  recorded_at: Fri, 03 Apr 2015 16:57:33 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=friend
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.1 p85 (2015-02-26)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        ivy.local 14.1.0 Darwin Kernel Version 14.1.0: Thu Feb 26 19:26:47 PST 2015;
+        root:xnu-2782.10.73~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 03 Apr 2015 16:57:34 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '10547'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_lz7yQTjFUcXOJzgb
+      Stripe-Version:
+      - '2015-02-18'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "total_count": 1,
+          "has_more": false,
+          "url": "/v1/customers",
+          "data": [
+            {
+              "object": "customer",
+              "created": 1426914712,
+              "id": "cus_5uTrwi73ORufop",
+              "livemode": false,
+              "description": null,
+              "email": "mail@arko.net",
+              "delinquent": false,
+              "metadata": {},
+              "subscriptions": {
+                "object": "list",
+                "total_count": 8,
+                "has_more": false,
+                "url": "/v1/customers/cus_5uTrwi73ORufop/subscriptions",
+                "data": [
+                  {
+                    "id": "sub_5zWY0bCk9P63qI",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Ruby Together Corporate Membership",
+                      "created": 1425204514,
+                      "amount": 80000,
+                      "currency": "usd",
+                      "id": "corporate",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1428077942,
+                    "status": "active",
+                    "customer": "cus_5uTrwi73ORufop",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1428077942,
+                    "current_period_end": 1430669942,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  },
+                  {
+                    "id": "sub_5v8MTFDMkj3FZd",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Friends of Ruby Together",
+                      "created": 1426914345,
+                      "amount": 1000,
+                      "currency": "usd",
+                      "id": "friend",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1427065398,
+                    "status": "active",
+                    "customer": "cus_5uTrwi73ORufop",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1427065398,
+                    "current_period_end": 1429743798,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  },
+                  {
+                    "id": "sub_5v8LR3bFp7Kkqb",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Ruby Together Individual Membership",
+                      "created": 1425204514,
+                      "amount": 4000,
+                      "currency": "usd",
+                      "id": "individual",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1427065330,
+                    "status": "active",
+                    "customer": "cus_5uTrwi73ORufop",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1427065330,
+                    "current_period_end": 1429743730,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  },
+                  {
+                    "id": "sub_5uULtZdPpqWk1a",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Friends of Ruby Together",
+                      "created": 1426914345,
+                      "amount": 1000,
+                      "currency": "usd",
+                      "id": "friend",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1426916515,
+                    "status": "active",
+                    "customer": "cus_5uTrwi73ORufop",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1426916515,
+                    "current_period_end": 1429594915,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  },
+                  {
+                    "id": "sub_5uUEOSs0JaL0Mw",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Friends of Ruby Together",
+                      "created": 1426914345,
+                      "amount": 1000,
+                      "currency": "usd",
+                      "id": "friend",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1426916109,
+                    "status": "active",
+                    "customer": "cus_5uTrwi73ORufop",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1426916109,
+                    "current_period_end": 1429594509,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  },
+                  {
+                    "id": "sub_5uUCbKXgg5PEN9",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Friends of Ruby Together",
+                      "created": 1426914345,
+                      "amount": 1000,
+                      "currency": "usd",
+                      "id": "friend",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1426915972,
+                    "status": "active",
+                    "customer": "cus_5uTrwi73ORufop",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1426915972,
+                    "current_period_end": 1429594372,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  },
+                  {
+                    "id": "sub_5uTusaTPgBKGOI",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Friends of Ruby Together",
+                      "created": 1426914345,
+                      "amount": 1000,
+                      "currency": "usd",
+                      "id": "friend",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1426914865,
+                    "status": "active",
+                    "customer": "cus_5uTrwi73ORufop",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1426914865,
+                    "current_period_end": 1429593265,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  },
+                  {
+                    "id": "sub_5uTrNVqcsc8Xgx",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Friends of Ruby Together",
+                      "created": 1426914345,
+                      "amount": 1000,
+                      "currency": "usd",
+                      "id": "friend",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1426914713,
+                    "status": "active",
+                    "customer": "cus_5uTrwi73ORufop",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1426914713,
+                    "current_period_end": 1429593113,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  }
+                ]
+              },
+              "discount": null,
+              "account_balance": 0,
+              "currency": "usd",
+              "sources": {
+                "object": "list",
+                "total_count": 1,
+                "has_more": false,
+                "url": "/v1/customers/cus_5uTrwi73ORufop/sources",
+                "data": [
+                  {
+                    "id": "card_15nXVUAcWgwn5pBto7joC0j5",
+                    "object": "card",
+                    "last4": "4242",
+                    "brand": "Visa",
+                    "funding": "credit",
+                    "exp_month": 2,
+                    "exp_year": 2022,
+                    "fingerprint": "Jus3vECqxH1Ctmdh",
+                    "country": "US",
+                    "name": "mail@arko.net",
+                    "address_line1": null,
+                    "address_line2": null,
+                    "address_city": null,
+                    "address_state": null,
+                    "address_zip": null,
+                    "address_country": null,
+                    "cvc_check": null,
+                    "address_line1_check": null,
+                    "address_zip_check": null,
+                    "dynamic_last4": null,
+                    "metadata": {},
+                    "customer": "cus_5uTrwi73ORufop"
+                  }
+                ]
+              },
+              "default_source": "card_15nXVUAcWgwn5pBto7joC0j5"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Fri, 03 Apr 2015 16:57:34 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=individual
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.1 p85 (2015-02-26)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        ivy.local 14.1.0 Darwin Kernel Version 14.1.0: Thu Feb 26 19:26:47 PST 2015;
+        root:xnu-2782.10.73~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 03 Apr 2015 16:57:35 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2800'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_F3nsINrvZYj3j9le
+      Stripe-Version:
+      - '2015-02-18'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "total_count": 3,
+          "has_more": true,
+          "url": "/v1/customers",
+          "data": [
+            {
+              "object": "customer",
+              "created": 1428080030,
+              "id": "cus_5zX7jk6DxkTfzh",
+              "livemode": false,
+              "description": null,
+              "email": "alice@example.com",
+              "delinquent": false,
+              "metadata": {},
+              "subscriptions": {
+                "object": "list",
+                "total_count": 1,
+                "has_more": false,
+                "url": "/v1/customers/cus_5zX7jk6DxkTfzh/subscriptions",
+                "data": [
+                  {
+                    "id": "sub_5zX7ha6aVZ6Xeh",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Ruby Together Individual Membership",
+                      "created": 1425204514,
+                      "amount": 4000,
+                      "currency": "usd",
+                      "id": "individual",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1428080032,
+                    "status": "active",
+                    "customer": "cus_5zX7jk6DxkTfzh",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1428080032,
+                    "current_period_end": 1430672032,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  }
+                ]
+              },
+              "discount": null,
+              "account_balance": 0,
+              "currency": "usd",
+              "sources": {
+                "object": "list",
+                "total_count": 1,
+                "has_more": false,
+                "url": "/v1/customers/cus_5zX7jk6DxkTfzh/sources",
+                "data": [
+                  {
+                    "id": "card_15nY3CAcWgwn5pBtwYqmzfec",
+                    "object": "card",
+                    "last4": "4242",
+                    "brand": "Visa",
+                    "funding": "credit",
+                    "exp_month": 2,
+                    "exp_year": 2022,
+                    "fingerprint": "Jus3vECqxH1Ctmdh",
+                    "country": "US",
+                    "name": "alice@example.com",
+                    "address_line1": null,
+                    "address_line2": null,
+                    "address_city": null,
+                    "address_state": null,
+                    "address_zip": null,
+                    "address_country": null,
+                    "cvc_check": "pass",
+                    "address_line1_check": null,
+                    "address_zip_check": null,
+                    "dynamic_last4": null,
+                    "metadata": {},
+                    "customer": "cus_5zX7jk6DxkTfzh"
+                  }
+                ]
+              },
+              "default_source": "card_15nY3CAcWgwn5pBtwYqmzfec"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Fri, 03 Apr 2015 16:57:35 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.1 p85 (2015-02-26)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        ivy.local 14.1.0 Darwin Kernel Version 14.1.0: Thu Feb 26 19:26:47 PST 2015;
+        root:xnu-2782.10.73~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 03 Apr 2015 16:57:36 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2791'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_FY0FKYgyLzMMxhnd
+      Stripe-Version:
+      - '2015-02-18'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "total_count": 4,
+          "has_more": true,
+          "url": "/v1/customers",
+          "data": [
+            {
+              "object": "customer",
+              "created": 1428079716,
+              "id": "cus_5zX2RXpPOoKiT5",
+              "livemode": false,
+              "description": null,
+              "email": "mail@arko.net",
+              "delinquent": false,
+              "metadata": {},
+              "subscriptions": {
+                "object": "list",
+                "total_count": 1,
+                "has_more": false,
+                "url": "/v1/customers/cus_5zX2RXpPOoKiT5/subscriptions",
+                "data": [
+                  {
+                    "id": "sub_5zX2NUj04Yrn46",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Ruby Together Corporate Membership",
+                      "created": 1425204514,
+                      "amount": 80000,
+                      "currency": "usd",
+                      "id": "corporate",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1428079717,
+                    "status": "active",
+                    "customer": "cus_5zX2RXpPOoKiT5",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1428079717,
+                    "current_period_end": 1430671717,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  }
+                ]
+              },
+              "discount": null,
+              "account_balance": 0,
+              "currency": "usd",
+              "sources": {
+                "object": "list",
+                "total_count": 1,
+                "has_more": false,
+                "url": "/v1/customers/cus_5zX2RXpPOoKiT5/sources",
+                "data": [
+                  {
+                    "id": "card_15nXy8AcWgwn5pBt0PJgsQVk",
+                    "object": "card",
+                    "last4": "4242",
+                    "brand": "Visa",
+                    "funding": "credit",
+                    "exp_month": 2,
+                    "exp_year": 2022,
+                    "fingerprint": "Jus3vECqxH1Ctmdh",
+                    "country": "US",
+                    "name": "mail@arko.net",
+                    "address_line1": null,
+                    "address_line2": null,
+                    "address_city": null,
+                    "address_state": null,
+                    "address_zip": null,
+                    "address_country": null,
+                    "cvc_check": "pass",
+                    "address_line1_check": null,
+                    "address_zip_check": null,
+                    "dynamic_last4": null,
+                    "metadata": {},
+                    "customer": "cus_5zX2RXpPOoKiT5"
+                  }
+                ]
+              },
+              "default_source": "card_15nXy8AcWgwn5pBt0PJgsQVk"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Fri, 03 Apr 2015 16:57:35 GMT
+recorded_with: VCR 2.9.3

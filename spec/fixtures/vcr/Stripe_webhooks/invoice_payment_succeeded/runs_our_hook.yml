@@ -1,0 +1,288 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/events/evt_15nY3IAcWgwn5pBtGGpjLCBH
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.1 p85 (2015-02-26)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        ivy.local 14.1.0 Darwin Kernel Version 14.1.0: Thu Feb 26 19:26:47 PST 2015;
+        root:xnu-2782.10.73~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 03 Apr 2015 16:57:39 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2352'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_fDNH4MBDN7jEwR6s
+      Stripe-Version:
+      - '2015-02-18'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "evt_15nY3IAcWgwn5pBtGGpjLCBH",
+          "created": 1428080032,
+          "livemode": false,
+          "type": "invoice.payment_succeeded",
+          "data": {
+            "object": {
+              "date": 1428080032,
+              "id": "in_15nY3IAcWgwn5pBtMz4J7Ljn",
+              "period_start": 1428080032,
+              "period_end": 1428080032,
+              "lines": {
+                "object": "list",
+                "total_count": 1,
+                "has_more": false,
+                "url": "/v1/invoices/in_15nY3IAcWgwn5pBtMz4J7Ljn/lines",
+                "data": [
+                  {
+                    "id": "sub_5zX7ha6aVZ6Xeh",
+                    "object": "line_item",
+                    "type": "subscription",
+                    "livemode": false,
+                    "amount": 4000,
+                    "currency": "usd",
+                    "proration": false,
+                    "period": {
+                      "start": 1428080032,
+                      "end": 1430672032
+                    },
+                    "subscription": null,
+                    "quantity": 1,
+                    "plan": {
+                      "interval": "month",
+                      "name": "Ruby Together Individual Membership",
+                      "created": 1425204514,
+                      "amount": 4000,
+                      "currency": "usd",
+                      "id": "individual",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "description": null,
+                    "discountable": true,
+                    "metadata": {}
+                  }
+                ]
+              },
+              "subtotal": 4000,
+              "total": 4000,
+              "customer": "cus_5zX7jk6DxkTfzh",
+              "object": "invoice",
+              "attempted": true,
+              "closed": true,
+              "forgiven": false,
+              "paid": true,
+              "livemode": false,
+              "attempt_count": 1,
+              "amount_due": 4000,
+              "currency": "usd",
+              "starting_balance": 0,
+              "ending_balance": 0,
+              "next_payment_attempt": null,
+              "webhooks_delivered_at": null,
+              "charge": "ch_15nY3IAcWgwn5pBtLSKgqlme",
+              "discount": null,
+              "application_fee": null,
+              "subscription": "sub_5zX7ha6aVZ6Xeh",
+              "tax_percent": null,
+              "tax": null,
+              "metadata": {},
+              "statement_descriptor": null,
+              "description": null,
+              "receipt_number": null
+            }
+          },
+          "object": "event",
+          "pending_webhooks": 0,
+          "request": "iar_5zX7MhAJ6RJnbJ",
+          "api_version": "2015-02-18"
+        }
+    http_version: 
+  recorded_at: Fri, 03 Apr 2015 16:57:38 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers/cus_5zX7jk6DxkTfzh
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.1 p85 (2015-02-26)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        ivy.local 14.1.0 Darwin Kernel Version 14.1.0: Thu Feb 26 19:26:47 PST 2015;
+        root:xnu-2782.10.73~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 03 Apr 2015 16:57:40 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2346'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_6pP0DQiDqx7oQAIN
+      Stripe-Version:
+      - '2015-02-18'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "customer",
+          "created": 1428080030,
+          "id": "cus_5zX7jk6DxkTfzh",
+          "livemode": false,
+          "description": null,
+          "email": "alice@example.com",
+          "delinquent": false,
+          "metadata": {},
+          "subscriptions": {
+            "object": "list",
+            "total_count": 1,
+            "has_more": false,
+            "url": "/v1/customers/cus_5zX7jk6DxkTfzh/subscriptions",
+            "data": [
+              {
+                "id": "sub_5zX7ha6aVZ6Xeh",
+                "plan": {
+                  "interval": "month",
+                  "name": "Ruby Together Individual Membership",
+                  "created": 1425204514,
+                  "amount": 4000,
+                  "currency": "usd",
+                  "id": "individual",
+                  "object": "plan",
+                  "livemode": false,
+                  "interval_count": 1,
+                  "trial_period_days": null,
+                  "metadata": {},
+                  "statement_descriptor": null
+                },
+                "object": "subscription",
+                "start": 1428080032,
+                "status": "active",
+                "customer": "cus_5zX7jk6DxkTfzh",
+                "cancel_at_period_end": false,
+                "current_period_start": 1428080032,
+                "current_period_end": 1430672032,
+                "ended_at": null,
+                "trial_start": null,
+                "trial_end": null,
+                "canceled_at": null,
+                "quantity": 1,
+                "application_fee_percent": null,
+                "discount": null,
+                "tax_percent": null,
+                "metadata": {}
+              }
+            ]
+          },
+          "discount": null,
+          "account_balance": 0,
+          "currency": "usd",
+          "sources": {
+            "object": "list",
+            "total_count": 1,
+            "has_more": false,
+            "url": "/v1/customers/cus_5zX7jk6DxkTfzh/sources",
+            "data": [
+              {
+                "id": "card_15nY3CAcWgwn5pBtwYqmzfec",
+                "object": "card",
+                "last4": "4242",
+                "brand": "Visa",
+                "funding": "credit",
+                "exp_month": 2,
+                "exp_year": 2022,
+                "fingerprint": "Jus3vECqxH1Ctmdh",
+                "country": "US",
+                "name": "alice@example.com",
+                "address_line1": null,
+                "address_line2": null,
+                "address_city": null,
+                "address_state": null,
+                "address_zip": null,
+                "address_country": null,
+                "cvc_check": "pass",
+                "address_line1_check": null,
+                "address_zip_check": null,
+                "dynamic_last4": null,
+                "metadata": {},
+                "customer": "cus_5zX7jk6DxkTfzh"
+              }
+            ]
+          },
+          "default_source": "card_15nY3CAcWgwn5pBtwYqmzfec"
+        }
+    http_version: 
+  recorded_at: Fri, 03 Apr 2015 16:57:39 GMT
+recorded_with: VCR 2.9.3
