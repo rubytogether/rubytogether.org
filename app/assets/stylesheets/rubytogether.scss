@@ -11,10 +11,14 @@ $dark: #2a255f;
   font-family: 'Campton';
 }
 
-body {
-  background-color: $light;
-  font-size: 22px;
+%body-text {
   @extend %text;
+  font-size: 22px;
+}
+
+body {
+  @extend %body-text;
+  background-color: $light;
 }
 
 h1 {
@@ -41,4 +45,3 @@ a {
     text-decoration: underline;
   }
 }
-

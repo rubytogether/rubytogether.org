@@ -43,6 +43,7 @@ header {
 footer {
   text-align: center;
   padding-bottom: 25px;
+  font-size: 14px;
 
   ul {
     padding-left: 0;
@@ -52,10 +53,6 @@ footer {
     display: inline-block;
     list-style: none;
     margin-right: 1em;
-  }
-
-  a {
-    font-size: 14px;
   }
 }
 
@@ -80,17 +77,16 @@ input[type="email"],
 input[type="password"],
 input[type="text"],
 textarea {
-  @extend %text;
+  @extend %body-text;
   padding: 5px 5px 0 5px;
   border: 0;
 }
 
 input[type="submit"] {
-  @extend %text;
+  @extend %body-text;
 }
 
-.login-links a {
-  font-size: 20px;
+.login-links {
 }
 
 input.inline {
