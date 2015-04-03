@@ -9,11 +9,11 @@ $dark: #2a255f;
 %text {
   color: $dark;
   font-family: 'Campton';
-  font-size: 22px;
 }
 
 body {
   background-color: $light;
+  font-size: 22px;
   @extend %text;
 }
 
@@ -26,6 +26,10 @@ h1 {
 h2 {
   font-size: 36px;
   text-transform: lowercase;
+}
+
+h3 {
+  font-size: 24px;
 }
 
 a {

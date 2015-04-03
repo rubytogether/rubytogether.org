@@ -1,12 +1,16 @@
 <%- title "Ruby Together Members" -%>
 
-<p>Corporate members include
-  <% @corporate[0...-1].each do |name, desc, url| %>
-    <%= link_to name, url %>, <%= desc %>,
+<% @corporate.each do |name, desc, url, logo_url| %>
+<h3 class="company-name">
+  <% if logo_url %>
+    <%= link_to image_tag(logo_url, class: "company-logo"), url %>
+  <% else %>
+    <%= link_to name, url %>
   <% end %>
-  <%- name, desc, url = @corporate[-1] -%>
-  and <%= link_to name, url %>, <%= desc %>.
-</p>
+</h3>
+<p class="company-description"><%= desc %></p>
+<% end %>
 
+<h3>Individual Members</h3>
 <%- @individual << link_to("viewers like you", join_path) -%>
 <p>Individual members include <%= @individual.to_sentence.html_safe %>.</p>
