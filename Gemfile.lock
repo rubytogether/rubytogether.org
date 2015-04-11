@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/puma/puma.git
+  revision: d3bf7fea4bfe641aded700621982827224cb1e29
+  specs:
+    puma (2.11.1)
+      rack (>= 1.1, < 2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -171,8 +178,6 @@ GEM
       pry (~> 0.10)
     pry-rails (0.3.3)
       pry (>= 0.9.10)
-    puma (2.11.0)
-      rack (>= 1.1, < 2.0)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.0)
@@ -314,7 +319,7 @@ DEPENDENCIES
   pretty_backtrace
   pry-byebug
   pry-rails
-  puma
+  puma!
   quiet_assets
   rack-livereload
   rails (= 4.2.0)
