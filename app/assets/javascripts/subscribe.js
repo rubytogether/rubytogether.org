@@ -46,11 +46,11 @@ jQuery(function($) {
       var amount = el.data("dollar-amount");
 
       var options = {
-        description: "$" + amount + " per month",
+        description: el.data("subscription-name") + " ($" + amount + "/mo)",
         email: $(e.target).data("email"),
         image: "/images/rubies-square.png",
         key: $("meta[name=stripe-token]").attr("content"),
-        name: el.data("subscription-name"),
+        name: "Ruby Together",
         panelLabel: "Subscribe",
         token: sendToken(kind)
       };
@@ -64,11 +64,11 @@ jQuery(function($) {
       var amount = $("#" + el.data("amount-input")).val();
 
       var options = {
-        description: "$" + amount + " one-time contribution",
+        description: "One-time contribution of $" + amount,
         email: $(e.target).data("email"),
         image: "/images/rubies-square.png",
         key: $("meta[name=stripe-token]").attr("content"),
-        name: el.data("charge-name"),
+        name: "Ruby Together",
         token: function(token) {
           var url = "/charge";
           var data = {token: token.id, amount: amount, email: token.email};
