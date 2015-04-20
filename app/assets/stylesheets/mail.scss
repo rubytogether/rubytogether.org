@@ -98,6 +98,7 @@ table.container {
   width: 580px;
   margin: 0 auto;
   text-align: inherit;
+  padding-bottom: 50px;
 }
 
 table.row {
@@ -527,9 +528,15 @@ table.columns .right-text-pad {
 }
 
 img.header {
-  width: 100px;
+  width: 200px;
+  float: none;
 }
 
 .header h2 {
   margin-top: 8px;
+}
+
+.row.header {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
