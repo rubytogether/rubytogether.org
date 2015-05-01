@@ -6,6 +6,8 @@ class Membership < ActiveRecord::Base
 
   belongs_to :user
 
+  before_save :normalize_url
+
   def dollar_amount
     amount / 100
   end
@@ -30,6 +32,12 @@ class Membership < ActiveRecord::Base
 
   def active?
     status == "active"
+  end
+
+private
+
+  def normalize_url
+    self.url = "http://#{url}" unless url.match(/^https?\:\/\//)
   end
 
 end
