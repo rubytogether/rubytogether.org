@@ -4,9 +4,7 @@
 
 <p>Members get <%= link_to "other benefits", benefits_path %> too, such as recognition on the members page and an invitation to the Ruby Together chat room. Corporate members also get a credit in the release notes of supported projects and during conference talks by supported developers.</p>
 
-<p>To learn more, read about <%= link_to "why you should join", why_path %> Ruby Together, or read about how joining Ruby Together is <%= link_to "good for your company", companies_path %>.</p>
-
-<p>Join Ruby Together as an individual for <%= link_to_plan "$$ per month", "individual" %>, join us as <%= link_to "a corporate member", new_membership_path %>, support us <%= link_to "with any amount", friends_path %>, or just <%= contact_us %>.
+<p>Join Ruby Together as an individual for <%= link_to_plan "$$ per month", "individual" %>, support us <%= link_to "with any amount", friends_path %>, join us as <%= link_to "a corporate member", new_membership_path %>, or just <%= contact_us %>.
 
 <%- content_for :script do -%>
   <%= javascript_include_tag "https://checkout.stripe.com/checkout.js" %>
