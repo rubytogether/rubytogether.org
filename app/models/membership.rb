@@ -10,8 +10,12 @@ class Membership < ActiveRecord::Base
     amount / 100
   end
 
+  def plan
+    MembershipPlan[kind.to_sym]
+  end
+
   def amount
-    MembershipPlan[kind.to_sym].amount
+    plan.amount
   end
 
   def status

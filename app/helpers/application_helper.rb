@@ -43,7 +43,8 @@ module ApplicationHelper
     link_to(text, "javascript:;",
       "data-subscription" => "update",
       "data-email" => membership.user.email,
-      "data-dollar-amount" => membership.dollar_amount
+      "data-dollar-amount" => membership.dollar_amount,
+      "data-subscription-name" => membership.plan.name
     )
   end
 
