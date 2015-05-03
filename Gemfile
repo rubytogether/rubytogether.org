@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 ruby "2.2.2"
 
-gem "rails", "4.2.0"
+gem "rails", "4.2.1"
 
 gem "devise"
 gem "fastly-rails"
@@ -31,7 +31,7 @@ group :development do
 end
 
 group :development, :test do
-  gem "dotenv-rails", "~> 2.0.0.beta"
+  gem "dotenv-rails", "~> 2.0"
   gem "pretty_backtrace"
   gem "pry-byebug"
   gem "pry-rails"
