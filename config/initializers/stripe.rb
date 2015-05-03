@@ -20,8 +20,9 @@ StripeEvent.configure do |events|
 
   events.subscribe 'customer.source.created' do |event|
     card = event.data.object
-    user = User.where(stripe_id: card.customer).first!
-    user.membership.update!(card_brand: card.brand, card_last4: card.last4)
+    user_id = User.where(stripe_id: card.customer).pluck(:id).first
+    membership = Membership.where(user_id: user_id).first!
+    membership.update!(card_brand: card.brand, card_last4: card.last4)
   end
 
   events.subscribe 'customer.subscription.created' do |event|
