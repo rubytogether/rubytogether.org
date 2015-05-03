@@ -37,6 +37,7 @@ class Membership < ActiveRecord::Base
 private
 
   def normalize_url
+    return unless url
     self.url = "http://#{url}" unless url.match(/^https?\:\/\//)
   end
 
