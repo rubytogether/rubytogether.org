@@ -67,6 +67,10 @@ form {
     margin: 20px auto;
     width: 340px;
   }
+
+  .actions {
+    text-align: right;
+  }
 }
 
 label {
@@ -78,7 +82,7 @@ input[type="password"],
 input[type="text"],
 textarea {
   @extend %body-text;
-  width: 345px;
+  width: 330px;
   padding: 5px 5px 0 5px;
   border: 0;
 }
