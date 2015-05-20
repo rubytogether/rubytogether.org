@@ -12,6 +12,30 @@
 
 /* SITE */
 
-    Design by: @sailorhg
+    Design: Amy Wibowo
+    Twitter: @sailorhg
     Website: http://sailorhg.com
     Location: San Francisco, CA
+
+/* BOARD OF DIRECTORS */
+
+    André Arko
+    Twitter: @indirect
+
+    Steve Klabnik
+    Twitter: @steveklabnik
+
+    Terence Lee
+    Twitter: @hone02
+
+    Sarah Mei
+    Twitter: @sarahmei
+
+    Aaron Patterson
+    Twitter: @tenderlove
+
+    Ines Sombra
+    Twitter: @randommood
+
+    Joel Watson
+    Twitter: @watsonian
