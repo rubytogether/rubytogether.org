@@ -9,9 +9,22 @@
   <%= render "corporate_fields", f: f %>
 
   <div class="actions">
+    <p>Finally, membership level:</p>
     <p>
-      Finally, add your<br>
-      <%= link_to_plan "payment information →", :corporate %>
+      <%= link_to_plan "Topaz Member →", :corporate_topaz %><br>
+      $200/month <span style="float:right">1-10 employees</span>
+    </p>
+    <p>
+      <%= link_to_plan "Emerald Member →", :corporate %><br>
+      $800/month <span style="float:right">10+ employees</span>
+    </p>
+    <p>
+      <%= link_to_plan "Sapphire Member →", :corporate %><br>
+      $2,000/month <span style="float:right">50+ employees</span>
+    </p>
+    <p>
+      <%= link_to_plan "Ruby Member →", :corporate %><br>
+      $5,000/month <span style="float:right">100+ employees</span>
     </p>
   </div>
 <% end %>

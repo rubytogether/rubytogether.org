@@ -10,7 +10,7 @@ if ENV.has_key?("STRIPE_WEBHOOK_SECRET")
   StripeEvent.authentication_secret = ENV.fetch("STRIPE_WEBHOOK_SECRET")
 end
 
-require 'stripe/plans'
+require 'membership_plan'
 require 'stripe/invoice/payment_succeeded'
 
 StripeEvent.configure do |events|
