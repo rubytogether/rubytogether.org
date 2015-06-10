@@ -23,7 +23,10 @@ class CreateMembership
 
   def customer_for(user)
     if user.stripe_id
-      customer = Stripe::Customer.retrieve(user.stripe_id)
+      begin
+        customer = Stripe::Customer.retrieve(user.stripe_id)
+      rescue Stripe::InvalidRequestError
+      end
     end
 
     if customer.nil? || customer.respond_to?(:deleted) && customer.deleted
