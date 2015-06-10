@@ -19,8 +19,14 @@ namespace :stripe do
     require_relative "./config/initializers/stripe"
     current_ids = Stripe::Plan.all.map(&:id)
 
-    MembershipPlan.all.values.
-      reject{|plan| current_ids.include?(plan.id) }.
-      each{|plan| Stripe::Plan.create(plan.to_h) }
+    all_plans = MembershipPlan.all.values
+    all_plans.each do |plan|
+      if current_ids.include?(plan.id)
+        puts "Plan #{plan.id} (#{plan.name}) already exists."
+      else
+        puts "Creating plan #{plan.id} (#{plan.name})..."
+        Stripe::Plan.create(plan.to_h)
+      end
+    end
   end
 end
