@@ -18,6 +18,10 @@ class Membership < ActiveRecord::Base
     MembershipPlan[kind.to_sym]
   end
 
+  def shortname
+    plan.shortname
+  end
+
   def amount
     plan.amount
   end
