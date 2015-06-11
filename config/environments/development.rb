@@ -42,10 +42,6 @@ Rails.application.configure do
   # Reload the page whenever views are changed
   config.middleware.use Rack::LiveReload
 
-  # Why preflight needs this now, I have no idea
-  server = Rails::Server.new.options
-  config.action_controller.asset_host = "http://#{server[:Host]}:#{server[:Port]}"
-
   # Ignore rack-livereload assets, too
   config.quiet_assets_paths << "/__rack"
 end
