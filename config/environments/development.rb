@@ -39,9 +39,6 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
-  # Automatically reload lib in development
-  config.autoload_paths += [Rails.root.join("lib").to_s]
-
   # Reload the page whenever views are changed
   config.middleware.use Rack::LiveReload
 

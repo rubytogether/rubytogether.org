@@ -39,5 +39,8 @@ module RubyTogether
 
     # Use sucker_punch for background jobs
     config.active_job.queue_adapter = :sucker_punch
+
+    # Automatically reload lib in development
+    config.autoload_paths << Rails.root.join('lib')
   end
 end
