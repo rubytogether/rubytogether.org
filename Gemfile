@@ -17,7 +17,6 @@ gem "rollbar", "~> 1.4"
 gem "sass-rails", "~> 5.0"
 gem "slack-notifier"
 gem "stripe_event", "~> 1.5"
-gem "sucker_punch", "~> 1.0"
 gem "uglifier", "~> 2.7"
 
 group :development do

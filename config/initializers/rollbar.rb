@@ -26,9 +26,6 @@ Rollbar.configure do |config|
 
   # Enable asynchronous reporting
   config.use_async = true
-
-  # Use sucker punch for asynchronous reporting
-  config.use_sucker_punch
 end if ENV.has_key?("ROLLBAR_ACCESS_TOKEN")
 
 module Rollbar
