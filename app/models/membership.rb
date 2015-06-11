@@ -1,5 +1,7 @@
+require "membership_plan"
+
 class Membership < ActiveRecord::Base
-  enum kind: %i[individual corporate friend]
+  enum kind: MembershipPlan.ids
 
   scope :active, -> { where("expires_at > ?", Time.now) }
   scope :named,  -> { where("name IS NOT NULL") }

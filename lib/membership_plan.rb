@@ -7,6 +7,10 @@ MembershipPlan = Struct.new(:id, :name, :interval, :amount, :currency) do
     all[name]
   end
 
+  def self.ids
+    MembershipPlan::INFO.keys
+  end
+
   def self.subscriber_counts
     all.map do |name, plan|
       [name, plan.subscriber_count]
@@ -23,10 +27,10 @@ MembershipPlan = Struct.new(:id, :name, :interval, :amount, :currency) do
 end
 
 MembershipPlan::INFO = {
-  friend: {name: 'Friend of Ruby Together', amount: 1000},
   individual: {name: 'Personal Member', amount: 4000},
-  corporate_topaz: {name: 'Topaz Member', amount: 20000},
   corporate: {name: 'Emerald Member', amount: 80000},
+  friend: {name: 'Friend of Ruby Together', amount: 1000},
+  corporate_topaz: {name: 'Topaz Member', amount: 20000},
   corporate_sapphire: {name: 'Sapphire Member', amount: 200000},
   corporate_ruby: {name: 'Ruby Member', amount: 500000}
 }
