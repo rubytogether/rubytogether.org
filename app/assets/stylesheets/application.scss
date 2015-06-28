@@ -21,6 +21,10 @@ body {
   padding: 0 2em;
 }
 
+section {
+  margin-bottom: 1.75em;
+}
+
 header {
   margin: 2em 0 2.5em 0;
   text-align: center;
@@ -160,4 +164,25 @@ input.inline {
 
 .post-name {
   list-style: none;
+}
+
+// /index
+
+.join-box {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.join-box > .title > a {
+  font-size: 20px;
+}
+
+.join-box > .link > a {
+  color: $red;
+}
+
+.join-box > .learn-more > a {
+  font-size: 18px;
+  font-weight: normal;
 }

@@ -1,12 +1,39 @@
 <% content_for :header do %>
-  <%= image_tag("rubies.png", width: "250", class: "home") %>
-  <h1>Ruby Together</h1>
+  <section style="float: left">
+    <%= image_tag("rubies.png", width: "25") %>
+    Ruby Together
+  </section>
+  <section style="clear: both;">
+    <%= image_tag("rubies.png", width: "250", class: "home") %>
+    <h1>shared tools should work</h1>
+  </section>
 <% end %>
 
-<p>Ruby Together is dedicated to sustaining and improving the tools and infrastructure of the Ruby programming language.</p>
+<p>Stop hoping that developers will maintain and improve Ruby's public infrastructure for free in their spare time, and start relying on tools that work.</p>
 
-<p>We pool funds from <%= link_to "corporate and individual members", members_path %> to pay <%= link_to "our team", team_path %> to make <%= link_to "improvements", plans_path %> that benefit everyone who uses Ruby. To start with, we're focusing on the <%= link_to "public infrastructure", projects_path %> of the Ruby language.</p>
+<section>
+<p><b>Ruby Together is a better way to maintain and improve the Ruby tools that everyone relies on.</b></p>
 
-<p>As a 501(c)(6) non-profit trade association, Ruby Together is run by a <%= link_to "board of directors", team_path %>. When you join, you'll get a vote in the annual board member election, helping decide how to spend the money we collect.</p>
+<ul>
+  <li>Community funding allows Ruby Together to pay developers to work on improving Bundler, RubyGems.org, and other shared tools.</li>
+  <li>The Ruby Together board of directors (elected by members) selects the most impactful projects to work on.</li>
+  <li>Ruby Together publishes monthly updates showing progress and results.</li>
+</ul>
+</section>
 
-<p>To learn more, read about <%= link_to "why you should join", why_path %> Ruby Together, or how joining is <%= link_to "good for your company", companies_path %>. Start making a difference in the future of Ruby by <%= link_to "joining us today", join_path %>!</p>
+<section>
+<p><i>“Better tooling means ease of use for our engineers and customers. Our engineering and support teams benefit by having things working better at a fast pace, meaning we can provide more to our customer base.”</i></p>
+<p>— PJ Hagerty, Community Team Lead at Engine Yard, a Ruby Together corporate member</p>
+</section>
+
+<section class="join-box">
+  <p class="title"><b>Developers</b><p>
+  <p class="link"><%= link_to "Join Ruby Together" %></p>
+  <p class="learn-more"><%= link_to "Learn More" %></p>
+</section>
+
+<section class="join-box">
+  <p class="title"><b>Companies</b><p>
+  <p class="link"><%= link_to "Join Ruby Together" %></p>
+  <p class="learn-more"><%= link_to "Learn More" %></p>
+</section>
