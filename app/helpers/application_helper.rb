@@ -15,6 +15,7 @@ module ApplicationHelper
   end
 
   def contact_us(text = "contact us")
+    text = yield if block_given?
     link_to text, "mailto:hello@rubytogether.org"
   end
 
