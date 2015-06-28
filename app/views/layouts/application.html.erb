@@ -26,14 +26,36 @@
   </section>
 
   <footer>
-    <ul>
-      <li><%= link_to "news", news_index_path %></li>
-      <li><%= link_to "team", team_path %></li>
-      <li><%= link_to "members", members_path %></li>
-      <li><%= link_to "join", join_path %></li>
-      <li><%= contact_us("contact") %></li>
-    </ul>
+    <%- if content_for?(:footer) -%>
+      <%= content_for(:footer) %>
+    <%- else -%>
+      <section>
+        <form action="https://www.getdrip.com/forms/6239290/submissions" method="post" target="_blank" data-drip-embedded-form="6239290">
+          <p data-drip-attribute="description">
+            Stay posted on Ruby Together news and progress!
+          </p>
+          <div class="inline-field">
+            <label for="fields[email]">Email</label>
+            <input type="email" name="fields[email]" value="" />
+          </div>
+          <div class="inline-actions">
+            <input type="submit" name="submit" value="Sign Up" data-drip-attribute="sign-up-button" />
+          </div>
+          <div style="clear: both;"></div>
+        </form>
+      </section>
+    <%- end -%>
+    <nav>
+      <ul>
+        <li><%= link_to "news", news_index_path %></li>
+        <li><%= link_to "team", team_path %></li>
+        <li><%= link_to "members", members_path %></li>
+        <li><%= link_to "join", join_path %></li>
+        <li><%= contact_us("contact") %></li>
+      </ul>
+    </nav>
   </footer>
+
   <%= content_for(:script) if content_for?(:script) %>
   <%= render "google_analytics" if Rails.env.production? %>
 </body>

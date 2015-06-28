@@ -41,10 +41,15 @@ header {
 }
 
 footer {
-  text-align: center;
   padding-bottom: 25px;
-  font-size: 14px;
 
+  nav {
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+nav {
   ul {
     padding-left: 0;
   }
@@ -70,6 +75,22 @@ form {
 
   .actions {
     text-align: right;
+  }
+
+  .inline-field {
+    float: left;
+
+    label {
+      display: inline-block;
+      float: left;
+      margin-right: 10px;
+      padding-top: 5px;
+    }
+  }
+
+  .inline-actions {
+    float: left;
+    margin-left: 25px;
   }
 }
 
