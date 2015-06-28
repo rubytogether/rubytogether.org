@@ -1,0 +1,32 @@
+@import "colors";
+
+/* Iconic theme rules. Don't delete! */
+
+@mixin iconic-color($color) {
+	fill: $color;
+	stroke: $color;
+}
+
+/* Hide all icons that are waiting to be injected */
+img.iconic {
+  display: none;
+}
+
+/* Make sure filled and text elements only get fills */
+.iconic-property-fill, .iconic-property-text {
+	stroke: none !important;
+}
+
+/* Make sure stroked elements only get strokes */
+.iconic-property-stroke {
+	fill: none !important;
+}
+
+/* Theme-specific rules */
+
+.iconic * {
+  @include iconic-color($dark);
+}
+
+.iconic .iconic-property-accent {
+}

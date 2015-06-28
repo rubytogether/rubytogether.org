@@ -1,0 +1,9 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" data-icon="envelope-closed" width="16" height="16" class="iconic iconic-envelope iconic-size-sm iconic-envelope-closed" viewBox="0 0 16 16">
+  <g>
+    <title>Envelope Closed</title>
+  </g>
+  <g data-width="16" data-height="12" class="iconic-container iconic-envelope-closed" transform="scale(1 1 ) translate(0 2 ) ">
+    <path class="iconic-envelope-closed-envelope-flap iconic-property-accent iconic-property-fill" d="M8 6l8-4v-2h-16v2z"></path>
+    <path class="iconic-envelope-closed-envelope-body iconic-property-fill" d="M8 8l-8-4v8h16v-8z"></path>
+  </g>
+</svg>

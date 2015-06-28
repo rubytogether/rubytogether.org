@@ -51,7 +51,15 @@
         <li><%= link_to "team", team_path %></li>
         <li><%= link_to "members", members_path %></li>
         <li><%= link_to "join", join_path %></li>
-        <li><%= contact_us("contact") %></li>
+        <li><%= link_to "https://twitter.com/rubytogether" do %>
+          <img class="iconic" data-src="iconic/social-twitter-sm.svg">
+        <% end %></li>
+        <li><%= link_to "https://github.com.com/rubytogether" do %>
+          <img class="iconic" data-src="iconic/social-github-sm.svg">
+        <% end %></li>
+        <li><%= contact_us do %>
+          <img class="iconic" data-src="iconic/envelope-closed-sm.svg">
+        <% end %></li>
       </ul>
     </nav>
   </footer>

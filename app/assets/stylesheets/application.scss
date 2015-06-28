@@ -14,6 +14,7 @@
  */
 
 @import "rubytogether";
+@import "iconic";
 
 body {
   margin: auto;
@@ -62,6 +63,11 @@ nav {
     display: inline-block;
     list-style: none;
     margin-right: 1em;
+  }
+
+  .iconic {
+    position: relative;
+    top: 3px;
   }
 }
 
