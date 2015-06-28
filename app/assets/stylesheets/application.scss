@@ -85,10 +85,24 @@ textarea {
   width: 330px;
   padding: 5px 5px 0 5px;
   border: 0;
+  background-color: $light;
+  border-bottom: 1px solid $dark;
 }
 
 input[type="submit"] {
   @extend %body-text;
+  font-size: 16px;
+  background: $light;
+  color: $dark;
+  border: 2px solid $dark;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 4px;
+
+  &:hover {
+    color: $light;
+    background-color: $dark;
+  }
 }
 
 .login-links {
