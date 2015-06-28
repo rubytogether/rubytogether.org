@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     benefits
     companies
     contact
+    developers
     friends
     join
     members

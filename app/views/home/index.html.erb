@@ -28,12 +28,17 @@
 
 <section class="join-box">
   <p class="title"><b>Developers</b><p>
-  <p class="link"><%= link_to "Join Ruby Together" %></p>
-  <p class="learn-more"><%= link_to "Learn More" %></p>
+  <p class="link"><%= link_to_plan "Join Ruby Together", "individual" %></p>
+  <p class="learn-more"><%= link_to "Learn More", developers_path %></p>
 </section>
 
 <section class="join-box">
   <p class="title"><b>Companies</b><p>
-  <p class="link"><%= link_to "Join Ruby Together" %></p>
-  <p class="learn-more"><%= link_to "Learn More" %></p>
+  <p class="link"><%= link_to "Join Ruby Together", new_membership_path %></p>
+  <p class="learn-more"><%= link_to "Learn More", companies_path %></p>
 </section>
+
+<%- content_for :script do -%>
+  <%= javascript_include_tag "https://checkout.stripe.com/checkout.js" %>
+  <%= javascript_include_tag "subscribe" %>
+<%- end -%>

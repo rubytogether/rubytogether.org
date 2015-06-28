@@ -27,12 +27,12 @@ MembershipPlan = Struct.new(:id, :shortname, :name, :interval, :amount, :currenc
 end
 
 MembershipPlan::INFO = {
-  individual: {name: 'Personal Member', amount: 4000, shortname: 'personal'},
-  corporate: {name: 'Emerald Member', amount: 80000, shortname: 'Emerald'},
+  individual: {name: 'Developer Membership', amount: 4000, shortname: 'personal'},
+  corporate: {name: 'Emerald Memberbership', amount: 80000, shortname: 'Emerald'},
   friend: {name: 'Friend of Ruby Together', amount: 1000, shortname: 'friend'},
-  corporate_topaz: {name: 'Topaz Member', amount: 20000, shortname: 'Topaz'},
-  corporate_sapphire: {name: 'Sapphire Member', amount: 200000, shortname: 'Sapphire'},
-  corporate_ruby: {name: 'Ruby Member', amount: 500000, shortname: 'Ruby'}
+  corporate_topaz: {name: 'Topaz Membership', amount: 20000, shortname: 'Topaz'},
+  corporate_sapphire: {name: 'Sapphire Membership', amount: 200000, shortname: 'Sapphire'},
+  corporate_ruby: {name: 'Ruby Membership', amount: 500000, shortname: 'Ruby'}
 }
 
 MembershipPlan.all = Hash[MembershipPlan::INFO.map do |id, info|
