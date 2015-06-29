@@ -34,11 +34,6 @@ h3 {
 a {
   @extend %text;
   font-weight: bold;
-  text-decoration: none;
-
-  &:hover, &:active {
-    text-decoration: underline;
-  }
 }
 
 li {
