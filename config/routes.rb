@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     friends
     join
     members
+    newsletter
     plans
     projects
     rubygems

@@ -52,6 +52,10 @@ header {
   color: $red;
 }
 
+.aside {
+  font-size: 14px;
+}
+
 .flash {
   border: solid 5px;
   border-radius: 25px;
@@ -197,7 +201,7 @@ input.inline {
   list-style: none;
 }
 
-// /index
+// index
 
 .join-box {
   float: left;
@@ -234,6 +238,7 @@ input.inline {
   }
 }
 
+// please wait spinner
 @import "compass/css3/filter";
 @import "compass/css3/animation";
 @import "compass/css3/transform";
