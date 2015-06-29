@@ -4,16 +4,7 @@ Rails.application.routes.draw do
   get "/csrf" => "application#csrf"
   get "/news.xml" => "news#index", format: "xml"
 
-  %w[
-    companies
-    contact
-    developers
-    members
-    plans
-    projects
-    rubygems
-    team
-  ].each do |page|
+  %w[companies developers members roadmap rubygems team].each do |page|
     get "/#{page}" => "home##{page}"
   end
 
