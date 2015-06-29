@@ -266,3 +266,57 @@ input.inline {
                   drop-shadow(-5px -0px 30px $light));
   @include animation(spin 5s linear infinite);
 }
+
+
+// roadmap progress bar
+.progress-bar {
+  margin-bottom: 1.75em;
+}
+
+.progress-bar-entry {
+  position: relative;
+  clear: both;
+  border-left: 70px solid;
+  margin-left: 50px;
+  min-height: 100px;
+  padding: 0.5em 0 0.5em 25px;
+
+  &:nth-child(1) { border-color: rgba($red, 0.2); }
+  &:nth-child(2) { border-color: rgba(229, 85,  126, 0.2); }
+  &:nth-child(3) { border-color: rgba(213, 126, 182, 0.2); }
+  &:nth-child(4) { border-color: rgba(145, 60,  146, 1); }
+  &:nth-child(5) { border-color: rgba(30,  23,  78,  1); }
+
+  .amount {
+    position: absolute;
+    left: -140px;
+    top: 50%;
+    width: 95px;
+    @include transform(
+      rotateZ(-90deg)
+      translateX(50%)
+    );
+  }
+
+  .callout {
+    // position: absolute;
+    // left: -200px;
+    // top: 75%;
+    // margin: 0;
+    font-weight: bold;
+  }
+
+  .title {
+    font-weight: bold;
+    margin: 0 0 0.2em 0;
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  ul li {
+    line-height: 1em;
+    margin-bottom: 0.2em;
+  }
+}
