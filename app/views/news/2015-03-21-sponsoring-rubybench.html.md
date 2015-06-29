@@ -1,6 +1,6 @@
 <% title "Sponsoring RubyBench" %>
 
-Since before Ruby Together even launched, supporting and improving [public Ruby infrastructure](<%= projects_path %>) has been our goal. Although we decided to focus on Bundler and Rubygems.org as our first two projects, we already had our eye on [RubyBench](http://rubybench.org) as a project to support.
+Since before Ruby Together even launched, supporting and improving [public Ruby infrastructure](<%= roadmap_path %>) has been our goal. Although we decided to focus on Bundler and Rubygems.org as our first two projects, we already had our eye on [RubyBench](http://rubybench.org) as a project to support.
 
 RubyBench provides public benchmarks, running a large suite of performance tests against every commit of Ruby. It also benchmarks every commit to Rails against the performance benchmark suite of the Discourse project. These two benchmarks combined provide massive utility to Ruby developers around the world.
 

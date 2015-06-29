@@ -6,4 +6,4 @@ As part of this partnership, Ruby Central will continue to underwrite hosting an
 
 In this way, the partnership accomplishes the goals of both Ruby Central and Ruby Together, ensuring that RubyGems.org is funded and stable for the long term, while also providing a way for it to grow and improve without relying on unpaid labor from volunteers.
 
-To support Ruby Together in its work maintaining and developing Ruby's [public infrastructure](<%= projects_path %>), [become a member](<%= join_path %>) today!
+To support Ruby Together in its work maintaining and developing Ruby's [public infrastructure](<%= roadmap_path %>), [become a member](<%= join_path %>) today!
