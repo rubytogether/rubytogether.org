@@ -27,7 +27,7 @@ Rails.application.routes.draw do
 
   devise_for :users, path: ""
 
-  resource :membership do
+  resource :membership, except: [:edit] do
     collection { post :card }
   end
   resource :charge, only: [:create]

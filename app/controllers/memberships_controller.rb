@@ -27,10 +27,6 @@ class MembershipsController < ApplicationController
     get_membership
   end
 
-  def edit
-    get_membership
-  end
-
   def update
     user_params = params.require(:user).permit(:email)
     current_user.update!(user_params)
