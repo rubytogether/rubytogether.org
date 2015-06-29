@@ -5,12 +5,9 @@ Rails.application.routes.draw do
   get "/news.xml" => "news#index", format: "xml"
 
   %w[
-    benefits
     companies
     contact
     developers
-    friends
-    join
     members
     newsletter
     plans
@@ -19,7 +16,6 @@ Rails.application.routes.draw do
     team
     welcome
     welcome_friend
-    why
   ].each do |page|
     get "/#{page}" => "home##{page}"
   end
