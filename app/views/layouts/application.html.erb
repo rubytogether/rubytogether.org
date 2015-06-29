@@ -5,15 +5,14 @@
   <meta name="viewport" content="width=500">
   <link href="/news.xml" rel="alternate" title="Ruby Together News" type="application/atom+xml">
   <%= render "favicons" %>
-  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= stylesheet_link_tag "application", media: "all" %>
   <%= csrf_meta_tags %>
   <%= stripe_meta_tag %>
 </head>
 <body>
   <header>
     <section style="float: left">
-      <%= image_tag("rubies.png", width: "25") %>
-      Ruby Together
+      <%= image_tag("rubies.png", width: "25") %> Ruby Together
     </section>
     <section style="clear: both;">
       <%- if content_for?(:header) -%>
