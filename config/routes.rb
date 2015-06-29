@@ -9,24 +9,26 @@ Rails.application.routes.draw do
     contact
     developers
     members
-    newsletter
     plans
     projects
     rubygems
     team
-    welcome
-    welcome_friend
   ].each do |page|
     get "/#{page}" => "home##{page}"
   end
 
-  mount StripeEvent::Engine, at: "/stripe/events"
+  scope :thanks, as: :thanks do
+    %w[friend member newsletter].each do |page|
+      get "/#{page}" => "thanks##{page}"
+    end
+  end
 
-  devise_for :users, path: ""
-
+  resource :charge, only: [:create]
   resource :membership, except: [:edit] do
     collection { post :card }
   end
-  resource :charge, only: [:create]
   resources :news, only: [:index, :show]
+
+  mount StripeEvent::Engine, at: "/stripe/events"
+  devise_for :users, path: ""
 end

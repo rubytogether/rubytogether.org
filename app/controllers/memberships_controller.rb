@@ -99,9 +99,9 @@ private
   def redirect_url(kind)
     case kind
     when "friend"
-      welcome_friend_path
+      thanks_friend_path
     else
-      welcome_path
+      thanks_member_path
     end
   end
 

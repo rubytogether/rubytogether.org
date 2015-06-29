@@ -20,7 +20,7 @@ private
   def render_success
     message = "Success! Thanks for contributing to Ruby Together. " \
       "We'll send you an email with a receipt."
-    render json: {result: "success", url: welcome_friend_path}
+    render json: {result: "success", url: thanks_friend_path}
   end
 
   def render_failure(message = nil)
