@@ -33,8 +33,3 @@
   <p class="link"><%= link_to "Join Ruby Together", new_membership_path %></p>
   <p class="learn-more"><%= link_to "Learn More", companies_path %></p>
 </section>
-
-<%- content_for :script do -%>
-  <%= javascript_include_tag "https://checkout.stripe.com/checkout.js" %>
-  <%= javascript_include_tag "subscribe" %>
-<%- end -%>

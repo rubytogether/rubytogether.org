@@ -27,8 +27,3 @@
 <%- else -%>
   <p>You have no payment information stored. You can <%= link_to_card_form "update your payment information", @membership %>.</p>
 <%- end -%>
-
-<%- content_for :script do -%>
-  <%= javascript_include_tag "https://checkout.stripe.com/checkout.js" %>
-  <%= javascript_include_tag "subscribe" %>
-<%- end -%>

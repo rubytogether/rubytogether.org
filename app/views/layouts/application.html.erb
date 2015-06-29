@@ -6,7 +6,6 @@
   <link href="/news.xml" rel="alternate" title="Ruby Together News" type="application/atom+xml">
   <%= render "favicons" %>
   <%= stylesheet_link_tag    "application", media: "all" %>
-  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <%= stripe_meta_tag %>
 </head>
@@ -70,6 +69,8 @@
     </nav>
   </footer>
 
+  <%= javascript_include_tag "https://checkout.stripe.com/checkout.js" %>
+  <%= javascript_include_tag "application" %>
   <%= content_for(:script) if content_for?(:script) %>
   <%= render "google_analytics" if Rails.env.production? %>
 </body>

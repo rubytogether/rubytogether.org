@@ -9,8 +9,3 @@
 <p>We already have a <%= link_to "specific roadmap", plans_path %> of improvements that will make Ruby better for everyone, including you. Faster bundling, more stable servers, and new features and projects that will increase your development speed and security. <%= link_to "Our team", team_path %> has a solid track record of delivering improvements to Ruby's <%= link_to "public infrastructure", projects_path %> for years now, and Ruby Together will enable those improvements to continue for years to come.</p>
 
 <p>Membership in Ruby Together provides you with the direct benefits of networking opportunities and the indirect benefits of stable, well-maintained Ruby infrastructure. As Ruby Together grows, the <%= link_to "benefits of membership", benefits_path %> will grow as well. Start experiencing those benefits right away when you <%= link_to_plan "join Ruby Together", "individual" %>!</p>
-
-<%- content_for :script do -%>
-  <%= javascript_include_tag "https://checkout.stripe.com/checkout.js" %>
-  <%= javascript_include_tag "subscribe" %>
-<%- end -%>

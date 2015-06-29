@@ -9,8 +9,3 @@
 <p>
   If subscriptions aren't your thing, you can contribute any amount, like say $<%= text_field_tag "one-time-amount", "10", class: "inline" %> <%= link_to "just this one time", "javascript:;", "data-amount-input" => "one-time-amount", "data-charge" => true, "data-charge-name" => "Ruby Together" %>.
 </p>
-
-<%- content_for :script do -%>
-  <%= javascript_include_tag "https://checkout.stripe.com/checkout.js" %>
-  <%= javascript_include_tag "subscribe" %>
-<%- end -%>

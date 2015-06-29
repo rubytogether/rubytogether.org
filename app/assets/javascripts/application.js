@@ -14,3 +14,4 @@
 //= require jquery_ujs
 //= require jquery.serialize-object.min
 //= require iconic.min
+//= require subscribe
