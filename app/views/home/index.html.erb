@@ -7,29 +7,31 @@
 
 <p>Stop hoping that developers will maintain and improve Ruby's public infrastructure for free in their spare time, and start relying on tools that work.</p>
 
-<section>
-<p><b>Ruby Together is a better way to maintain and improve the Ruby tools that everyone relies on.</b></p>
+<section class="group">
+  <h4>Ruby Together is a better way to maintain and improve the Ruby tools that everyone relies on.</h4>
 
-<ul>
-  <li>Community funding allows Ruby Together to pay developers to work on improving Bundler, RubyGems.org, and other shared tools.</li>
-  <li>The Ruby Together board of directors (elected by members) selects the most impactful projects to work on.</li>
-  <li>Ruby Together publishes monthly updates showing progress and results.</li>
-</ul>
+  <ul>
+    <li>Community funding allows Ruby Together to pay developers to work on improving Bundler, RubyGems.org, and other shared tools.</li>
+    <li>The Ruby Together board of directors (elected by members) selects the most impactful projects to work on.</li>
+    <li>Ruby Together publishes monthly updates showing progress and results.</li>
+  </ul>
 </section>
 
-<section>
-<p><i>“Better tooling means ease of use for our engineers and customers. Our engineering and support teams benefit by having things working better at a fast pace, meaning we can provide more to our customer base.”</i></p>
-<p>— PJ Hagerty, Community Team Lead at Engine Yard, a Ruby Together corporate member</p>
+<section class="group">
+  <p>“Better tooling means ease of use for our engineers and customers. Our engineering and support teams benefit by having things working better at a fast pace, meaning we can provide more to our customer base.”</p>
+  <p>— PJ Hagerty, Community Team Lead at Engine Yard</p>
 </section>
 
-<section class="join-box">
-  <p class="title"><b>Developers</b><p>
-  <p class="link"><%= link_to_plan "Join Ruby Together", "individual" %></p>
-  <p class="learn-more"><%= link_to "Learn More", developers_path %></p>
-</section>
+<section class="group">
+  <div class="join-box center">
+    <p class="title">Developers</p>
+    <p class="link"><%= link_to_plan "Join Ruby Together", "individual" %></p>
+    <p class="learn-more"><%= link_to "Learn More", developers_path %></p>
+  </div>
 
-<section class="join-box">
-  <p class="title"><b>Companies</b><p>
-  <p class="link"><%= link_to "Join Ruby Together", new_membership_path %></p>
-  <p class="learn-more"><%= link_to "Learn More", companies_path %></p>
+  <div class="join-box center">
+    <p class="title">Companies</p>
+    <p class="link"><%= link_to "Join Ruby Together", companies_path(anchor: "plans") %></p>
+    <p class="learn-more"><%= link_to "Learn More", companies_path(anchor: "faq") %></p>
+  </div>
 </section>

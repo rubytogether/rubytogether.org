@@ -1,11 +1,88 @@
-<% title "Good For Companies, Too" %>
+<% title "Put Better Tools In Your Toolbox" %>
 
-<p>As a company that builds software with Ruby, your business and its profits rely on the <%= link_to "public infrastructure", projects_path %> of the Ruby language, including <%= rubygems %>, <%= bundler %>, and the <%= rubygems_org %> servers. That infrastructure is critical to the operation of your business, and before Ruby Together, it was maintained entirely by volunteers!</p>
+<section class="group">
+<p>Companies rely on robust tools to build the best apps possible, but the volunteers who maintain those critical Ruby tools and infrastructure can't keep up in their free time. All too often, individual companies end up paying full-time engineers to privately work around issues shared by the entire Ruby community.</p>
 
-<p>Ruby Together pays our <%= link_to "systems administrators and developers", team_path %> fairly for their work on Ruby infrastructure, ensuring that issues can be resolved as needed rather than <%= link_to "waiting for a volunteer to be awake and have spare time", "http://blog.rubygems.org/2014/08/07/postmortem.html" %>. RubyGems.org downtime keeps your developers from being able to work on your business, a cost much higher than membership dues.</p>
+<h4>Ruby Together offers a better way.</h4>
 
-<p>In addition to supporting infrastructure you depend on, membership in Ruby Together means that your engineers will have access to some of <%= link_to "the best Ruby developers", members_path %> in the world. Chances are good your developers would love to chat with the developer of <%= bundler %> about managing dependencies and other problems that you've encountered. Members can do that.</p>
+<p>Development teams should never have to sit idle because of problems that could be prevented by maintenance. Sometimes, the work that couldn't be done culminates in a disaster, like RubyGems.org going down for days.</p>
 
-<p>We already have a <%= link_to "specific roadmap", plans_path %> of improvements that will make Ruby better for everyone, including your team. Faster bundling, stable servers, and new features and projects that will increase development speed and security. <%= link_to "Our team", team_path %> has a solid track record of delivering year-over-year improvements to Ruby's <%= link_to "public infrastructure", projects_path %>, and Ruby Together will enable those improvements to continue for years to come.</p>
+<p>Companies shouldn't have to pay full-time developers to work on private solutions to public issues. Ruby Together provides a model where companies can spend more time building great apps, instead of spending time on the tools that make those apps possible.</p>
 
-<p>Corporate membership in Ruby Together provides your development team with the direct benefits of networking opportunities and the indirect benefits of stable, well-maintained Ruby infrastructure. As a 501(c)(6) non-profit, membership dues paid to Ruby Together are usually tax-deductible. Corporate memberships start at just $200 per month, and every level provides special benefits to your company. Learn more by <%= link_to "reading our prospectus", "/prospectus.pdf" %>, then start experiencing those benefits right away by <%= link_to "joining Ruby Together", new_membership_path %>!</p>
+<h4 class="center"><%= link_to "Support Ruby Together's work!", "#plans", class: "callout" %></h4>
+</section>
+
+
+<section class="group">
+  <h4>When you support Ruby Together, you get:</h4>
+
+  <ul>
+    <li>Top-notch work on the Ruby tools your developers use, for a miniscule fraction of the costs involved.</li>
+    <li>Monthly <%= link_to "progress updates", news_index_path %> showing exactly where your money goes. We'll use it wisely, and you'll see how.</li>
+    <li>Voting rights to elect Ruby Together <%= link_to "board members", team_path(anchor: "board") %>, who decide which projects to fund for the greatest community impact.</li>
+    <li>Access to some of the best Ruby developers in the world. Chat with other members and the Ruby Together team in our members-only Slack channel.</li>
+  </ul>
+
+  <p><%= link_to "Our team", team_path %> has a proven track record of delivering year-over-year improvements to Ruby's <%= link_to "public infrastructure", projects_path %>. With funding, we'll transform the tools you use so that they work for you. Like tools should.</p>
+
+  <p><i>Ruby Together is a 501(c)(6) non-profit trade association, and your contributions should be tax deductible.</i></p>
+
+  <p>“The more contributors can live off their open-source work, the more they'll be able to devote to that work and the better their software will be for everyone. This is why we've been contributing funds to the open-source infrastructure we rely on.”</p>
+  <p>— Andreas Fuchs, Stripe</p>
+</section>
+
+
+<section id="plans" class="group">
+  <section class="join-box">
+    <p class="title">Ruby Member</p>
+    <p class="price"><span class="currency">$</span>5000 per month</p>
+    <p>Meet with the Ruby Together team about your infrastructure needs</p>
+    <p>Two annual guest blog posts from the Ruby Together team</p>
+    <p>Twice-monthly status reports with more detail</p>
+    <p class="link"><%= link_to_plan "Become a Ruby Member!", "corporate_ruby" %></p>
+  </section>
+
+  <section class="join-box">
+    <p class="title">Sapphire Member</p>
+    <p class="price"><span class="currency">$</span>2000 per month</p>
+    <p>Logo on conference talk slides thanking members</p>
+    <p>One annual guest blog post from the Ruby Together team</p>
+    <p>Customized thank you tweet each month by @rubytogether</p>
+    <p class="link"><%= link_to_plan "Become a Sapphire Member!", "corporate_sapphire" %></p>
+  </section>
+
+  <section class="join-box">
+    <p class="title">Emerald Member</p>
+    <p class="price"><span class="currency">$</span>800 per month</p>
+    <p>Prominent position in the Ruby Together member list</p>
+    <p>Recognition as new member in Ruby Together blog post</p>
+    <p>Thank you tweet from @rubytogether</p>
+    <p class="link"><%= link_to_plan "Become a Emerald Member!", "corporate" %></p>
+  </section>
+
+  <section class="join-box">
+    <p class="title">Topaz Member</p>
+    <p class="price"><span class="currency">$</span>200 per month</p>
+    <p>Annual vote on Ruby Together board members</p>
+    <p>Monthly newsletter with progress updates</p>
+    <p>Invitation to members-only Slack team for group chat</p>
+    <p class="link"><%= link_to_plan "Become a Topaz Member!", "corporate_topaz" %></p>
+  </section>
+</section>
+
+
+<section id="faq" class="group">
+  <h3>FAQ</h3>
+
+  <h4>Who is Ruby Together paying to improve these tools?</h4>
+
+  <p>Expert Ruby developers that the community knows and trusts. Our entire team is listed on the <%= link_to "team page" %>.</p>
+
+  <h4>How do I control how my money will be spent?</h4>
+
+  <p>As a member, you'll vote directors on to the Ruby Together <%= link_to "board of directors", team_path(anchor: "board") %> every year. The board members you vote for will decide which projects to fund.</p>
+
+  <h4>What makes this different from past Ruby fundraising disasters?</h4>
+
+  <p>We're completely open about the projects that we're working on, and the progress that we've made so far. Unlike past efforts, our funding and public update cycle is monthly. If at any time you don't think our work is worth your money, you can stop supporting it. Easy peasy.</p>
+</section>

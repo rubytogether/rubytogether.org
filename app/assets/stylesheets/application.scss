@@ -22,7 +22,16 @@ body {
   padding: 0 2em;
 }
 
-section {
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+section.group {
+  @extend %clearfix;
   margin-bottom: 1.75em;
 }
 
@@ -33,6 +42,14 @@ header {
   img.home {
     margin: 0.5em 0;
   }
+}
+
+.center {
+  text-align: center;
+}
+
+.callout {
+  color: $red;
 }
 
 .flash {
@@ -94,7 +111,7 @@ form {
       display: inline-block;
       float: left;
       margin-right: 10px;
-      padding-top: 5px;
+      padding-top: 8px;
     }
   }
 
@@ -176,19 +193,35 @@ input.inline {
 
 .join-box {
   float: left;
-  width: 50%;
-  text-align: center;
+  width: 47%;
+  margin-right: 3%;
+  margin-bottom: 0;
+
+  &:nth-child(even) {
+    margin-right: 0;
+    margin-left: 3%;
+  }
 }
 
-.join-box > .title > a {
-  font-size: 20px;
+.join-box > .title {
+  font-weight: bold;
 }
 
 .join-box > .link > a {
-  color: $red;
+  @extend .callout;
 }
 
 .join-box > .learn-more > a {
   font-size: 18px;
   font-weight: normal;
+}
+
+.join-box > .price {
+  font-weight: bold;
+
+  .currency {
+    float: left;
+    font-size: 11px;
+    margin-top: 4px;
+  }
 }
