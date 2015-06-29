@@ -3,6 +3,10 @@ jQuery(function($) {
     $("meta[name=csrf-param]").attr("content", json.param);
     $("meta[name=csrf-token]").attr("content", json.token);
 
+    var blockUI = function() {
+      $.blockUI({ message: $(".spinner"), css: {backgroundColor: "none", border: "none"} });
+    };
+
     var showFlash = function(message, status) {
       var name = (status === "success") ? "notice" : "alert";
       // fill the flash div with the message and the class for the flash type
@@ -33,7 +37,7 @@ jQuery(function($) {
 
     var sendToken = function(kind) {
       return function(token) {
-        $.blockUI({ message: $(".spinner"), css: {backgroundColor: "none", border: "none"} });
+        blockUI();
 
         var url = (kind === "update") ? "/membership/card" : "/membership";
         var data = {email: token.email, token: token.id, kind: kind};
@@ -76,6 +80,7 @@ jQuery(function($) {
         key: $("meta[name=stripe-token]").attr("content"),
         name: "Ruby Together",
         token: function(token) {
+          blockUI();
           var url = "/charge";
           var data = {token: token.id, amount: amount, email: token.email};
           $.post(url, data).done(doneFn).fail(failFn);

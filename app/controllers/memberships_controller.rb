@@ -14,7 +14,7 @@ class MembershipsController < ApplicationController
     CreateMembership.run(membership_params, user, token, kind)
     sign_in(user)
 
-    render json: {result: "success", url: welcome_path}
+    render json: {result: "success", url: redirect_url(kind) }
   rescue CreateMembership::Error => e
     user.destroy if user.persisted?
     render_failure
@@ -94,6 +94,15 @@ private
 
     params.require(:membership).permit(:name, :url, :twitter, :description,
       :logo_url, :contact_name, :contact_phone, :contact_email).merge(expires_at: 1.month.from_now.iso8601)
+  end
+
+  def redirect_url(kind)
+    case kind
+    when "friend"
+      welcome_friend_path
+    else
+      welcome_path
+    end
   end
 
 end
