@@ -40,6 +40,10 @@ module ApplicationHelper
       content: Rails.configuration.x.stripe_publishable_key
   end
 
+  def iconic_tag(name)
+    tag :img, class: "iconic", :"data-src" => "iconic/#{name}.svg"
+  end
+
   def link_to_card_form(text, membership)
     link_to(text, "javascript:;",
       "data-subscription" => "update",
