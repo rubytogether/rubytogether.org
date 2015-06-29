@@ -1,10 +1,18 @@
 <%- title "Ruby Together Members" -%>
 
-<% @corporate.each do |name, desc, url| %>
+<h2>Corporate Members</h2>
+
+<% @featured_companies.each do |name, desc, url| %>
   <h3 class="company-name"><%= link_to name, url %></h3>
   <p class="company-description"><%= desc %></p>
 <% end %>
 
-<h3>Individual Members</h3>
+<p>
+  As well as
+  <%= @other_companies.map{|n, u| link_to n, u }.to_sentence.html_safe %>.
+</p>
+
+<h2>Individual Members</h2>
+
 <%- @individual << link_to("viewers like you", join_path) -%>
 <p>Individual members include <%= @individual.to_sentence.html_safe %>.</p>

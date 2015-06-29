@@ -3,8 +3,17 @@ require "membership_plan"
 class Membership < ActiveRecord::Base
   enum kind: MembershipPlan.ids
 
+  def self.kinds_for(*kinds)
+    kinds.map{|k| Membership.kinds[k] }
+  end
+
   scope :active, -> { where("expires_at > ?", Time.now) }
   scope :named,  -> { where("name IS NOT NULL") }
+
+  scope :featured_companies, -> {
+    where(kind: Membership.kinds_for(:corporate, :corporate_sapphire, :corporate_ruby))
+  }
+  scope :nonfeatured_companies, -> { where(kind: Membership.kinds_for(:corporate_topaz)) }
 
   belongs_to :user
 
