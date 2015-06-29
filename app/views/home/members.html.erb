@@ -1,21 +1,28 @@
 <%- title "Ruby Together Members" -%>
 
-<h2>Corporate Members</h2>
+<section class="group">
+  <h3>Corporate Members</h3>
 
-<% @featured_companies.each do |name, desc, url| %>
-  <h3 class="company-name"><%= link_to name, url %></h3>
-  <p class="company-description"><%= desc %></p>
-<% end %>
+  <% @featured_companies.each do |name, desc, url| %>
+    <h4 class="company-name"><%= link_to name, url %></h3>
+    <p class="company-description"><%= desc %></p>
+  <% end %>
 
-<p>
-  As well as
-  <%= @other_companies.map{|n, u| link_to n, u }.to_sentence.html_safe %>.
-</p>
+  <p>
+    As well as
+    <%= @other_companies.map{|n, u| link_to(n, u) }.to_sentence.html_safe %>.
+  </p>
 
-<h2>Individual Members</h2>
+  <p class="center">Didn’t see your company’s name? <%= link_to "Add it now!", companies_path %></p>
+</section>
 
-<%- @individual << link_to("viewers like you", join_path) -%>
-<p>
-  Our <%= @individual_count %> <%= "individual member".pluralize(@individual_count) %>
-  include <%= @individual.to_sentence.html_safe %>.
-</p>
+<section class="group">
+  <h3>Individual Members</h3>
+  <%- @individual << link_to("viewers like you", developers_path) -%>
+  <p>
+    Our <%= @individual_count %> <%= "individual member".pluralize(@individual_count) %>
+    include <%= @individual.to_sentence.html_safe %>.
+  </p>
+
+  <p class="center"><%= link_to "Become an individual member now!", developers_path %></p>
+</section>
