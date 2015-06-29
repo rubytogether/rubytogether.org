@@ -12,12 +12,18 @@
 </head>
 <body>
   <header>
-    <%- if content_for?(:header) -%>
-      <%= content_for :header %>
-    <%- else -%>
-      <%= link_to image_tag("rubies.png", width: "200"), "/" %>
-      <%= content_tag :h2, title || "Ruby Together" %>
-    <%- end -%>
+    <section style="float: left">
+      <%= image_tag("rubies.png", width: "25") %>
+      Ruby Together
+    </section>
+    <section style="clear: both;">
+      <%- if content_for?(:header) -%>
+        <%= content_for :header %>
+      <%- else -%>
+          <%= link_to image_tag("rubies.png", width: "200"), "/" %>
+          <%= content_tag :h2, title || "Ruby Together" %>
+      <%- end -%>
+    </section>
   </header>
   <%= render partial: "flashes" %>
 
