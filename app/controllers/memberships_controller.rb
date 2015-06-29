@@ -12,8 +12,9 @@ class MembershipsController < ApplicationController
     user = User.where(email: params.fetch(:email)).first_or_create!
     token, kind = params.fetch(:token), params.fetch(:kind)
     CreateMembership.run(membership_params, user, token, kind)
+    sign_in(user)
 
-    render json: {result: "success", message: success_for(kind)}
+    render json: {result: "success", url: welcome_path}
   rescue CreateMembership::Error => e
     user.destroy if user.persisted?
     render_failure

@@ -13,5 +13,6 @@
 //= require jquery2.min
 //= require jquery_ujs
 //= require jquery.serialize-object.min
+//= require jquery.blockUI
 //= require iconic.min
 //= require subscribe

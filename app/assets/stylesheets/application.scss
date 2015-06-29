@@ -233,3 +233,25 @@ input.inline {
     margin-top: 4px;
   }
 }
+
+@import "compass/css3/filter";
+@import "compass/css3/animation";
+@import "compass/css3/transform";
+
+@include keyframes(spin) {
+  0% {
+    @include transform(rotate(0deg));
+  }
+  100% {
+    @include transform(rotate(360deg));
+  }
+}
+
+.spinner {
+  background-image: url('/images/rubies.png');
+  @include filter(drop-shadow( 0px  5px 30px $light)
+                  drop-shadow( 5px  0px 30px $light)
+                  drop-shadow(-0px -5px 30px $light)
+                  drop-shadow(-5px -0px 30px $light));
+  @include animation(spin 5s linear infinite);
+}

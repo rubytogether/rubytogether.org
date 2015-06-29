@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     projects
     rubygems
     team
+    welcome
     why
   ].each do |page|
     get "/#{page}" => "home##{page}"

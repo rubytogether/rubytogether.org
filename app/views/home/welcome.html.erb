@@ -1,0 +1,11 @@
+<% title "You're a gem!" %>
+
+<p>Thank you for joining Ruby Together! Your support means the world to us. ❤️</p>
+
+<p>If you would like your name to appear in the <%= link_to "list of members", members_path %>, you can add or update your membership details on the <%= link_to "manage your membership", membership_path %> page. We've sent you an email with a link as well, in case you need to return later.</p>
+
+<p>Please take a moment and encourage your Ruby friends to join Ruby Together, too. More support for Ruby Together means we can give back more awesome to the Ruby community.</p>
+
+<p class="center"><%= link_to_tweet "Tweet about Ruby Together", "I just joined @rubytogether! See why you should too and support Ruby OSS at", "https://rubytogether.org" %>, or <%= mail_to "", "send an email", subject: "I joined Ruby Together. Here's why you should too.", body: "I just joined Ruby Together, a nonprofit that pays developers to dedicate time to improving Bundler and other shared Ruby tools.
+
+Supporting Ruby Together means we can stop relying on developers to fix shared tools in their spare time and start relying on the tools themselves. If you're interested in supporting robust Ruby tools, check it out!" %>!</p>

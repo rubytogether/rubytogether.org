@@ -44,6 +44,12 @@ module ApplicationHelper
     tag :img, class: "iconic", :"data-src" => "iconic/#{name}.svg"
   end
 
+  def link_to_tweet(text, tweet, url = nil)
+    twitter_url = "https://twitter.com/intent/tweet?text=#{URI.escape(tweet)}"
+    twitter_url << "&url=#{URI.escape(url)}" if url
+    link_to text, twitter_url
+  end
+
   def link_to_card_form(text, membership)
     link_to(text, "javascript:;",
       "data-subscription" => "update",

@@ -3,6 +3,7 @@ ruby "2.2.2"
 
 gem "rails", "4.2.1"
 
+gem "compass-rails", "~> 2.0.4"
 gem "devise"
 gem "fastly-rails"
 gem "http"

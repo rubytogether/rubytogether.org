@@ -12,8 +12,11 @@ jQuery(function($) {
     };
 
     var doneFn = function(res) {
+      $.unblockUI();
       if (res.url) {
-        document.location = res.url;
+        setTimeout(function() {
+          document.location = res.url;
+        }, 250);
       } else if (res.message) {
         showFlash(res.message, res.result);
       }
@@ -24,11 +27,14 @@ jQuery(function($) {
     };
 
     var failFn = function(xhr, textStatus, errorThrown) {
+      $.unblockUI();
       showFlash("Something went wrong. :(", "failure");
     };
 
     var sendToken = function(kind) {
       return function(token) {
+        $.blockUI({ message: $(".spinner"), css: {backgroundColor: "none", border: "none"} });
+
         var url = (kind === "update") ? "/membership/card" : "/membership";
         var data = {email: token.email, token: token.id, kind: kind};
 
