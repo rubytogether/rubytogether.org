@@ -7,7 +7,7 @@ class NewsController < ApplicationController
 
   def show
     name = sanitize_filename(params[:id])
-    render Post.find!(name).id
+    render inline: Post.find!(name).body, type: "md", layout: "news"
   end
 
 private
