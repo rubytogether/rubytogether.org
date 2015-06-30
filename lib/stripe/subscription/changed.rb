@@ -3,12 +3,11 @@ module Stripe
     class Changed
 
       def call(event)
-        msg = "Subscriber counts: "
-        msg << MembershipPlan.subscriber_counts.map do |name, count|
-          "#{count} #{name.capitalize}"
+        message = MembershipPlan.subscriber_counts.map do |name, count|
+          "#{count} #{name.pluralize(count)}"
         end.to_sentence
 
-        Slack.say(msg,
+        Slack.say(message,
           username: "Subscribers",
           channel: "#stripe",
           icon_emoji: ":chart_with_upwards_trend:"

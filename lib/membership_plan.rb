@@ -13,7 +13,7 @@ MembershipPlan = Struct.new(:id, :shortname, :name, :interval, :amount, :currenc
 
   def self.subscriber_counts
     all.map do |name, plan|
-      [name, plan.subscriber_count]
+      [plan.name, plan.subscriber_count]
     end.to_h
   end
 

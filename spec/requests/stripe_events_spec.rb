@@ -34,7 +34,7 @@ RSpec.describe "Stripe webhooks", :vcr do
 
   describe "customer.subscription.created" do
     it "runs our hook" do
-      message = "Subscriber counts: 1 Friend, 3 Individual, and 4 Corporate"
+      message = "3 Personal Members, 4 Emerald Members, 1 Friend of Ruby Together, 0 Topaz Members, 0 Sapphire Members, and 2 Ruby Members"
       options = an_instance_of(Hash)
       expect(Slack).to receive(:say).with(message, options)
       post "/stripe/events", id: "evt_15nY3IAcWgwn5pBtisl4M4d6"
