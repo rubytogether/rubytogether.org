@@ -4,4 +4,4 @@ Ruby Together is immensely pleased to announce that [Cloud City Development](htt
 
 Cloud City continues to support work on the open source powering Ruby's infrastructure both indirectly, by providing André with consulting work to ensure his bills are paid, and directly, as a member of Ruby Together.
 
-Join Cloud City in supporting and improving the infrastructure that all Rubyists depend on by [becoming a member](<%= join_path %>) of Ruby Together.
+Join Cloud City in supporting and improving the infrastructure that all Rubyists depend on by [becoming a member](<%= root_path(anchor: "join") %>) of Ruby Together.

@@ -8,4 +8,4 @@ With historical and current performance information, it is possible to find perf
 
 Today, I'm happy to announce that Ruby Together has agreed to fund the server hardware that runs the RubyBench benchmark suite, taking over for RubyBench founding sponsor [Rubytune](http://rubytune.com). In addition to funding the server hardware, Ruby Together plans to fund work maintaining and expanding RubyBench in the future.
 
-To support our work with RubyBench and other projects, [join Ruby Together](<%= join_path %>) today.
+To support our work with RubyBench and other projects, [join Ruby Together](<%= root_path(anchor: "join") %>) today.

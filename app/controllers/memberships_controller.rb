@@ -86,7 +86,7 @@ private
 
   def get_membership
     @membership = current_user.membership
-    redirect_to join_path unless @membership
+    redirect_to root_path(anchor: "join") unless @membership
   end
 
   def membership_params
