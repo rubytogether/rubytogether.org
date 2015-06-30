@@ -5,6 +5,10 @@ VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures/vcr'
   c.hook_into :webmock
   c.configure_rspec_metadata!
+
+  # This allows VCR to save responses, adding them to existing saved responses.
+  # Only enable it when e.g. there are new plan types causing new requests.
+  # c.default_cassette_options = { :record => :new_episodes }
 end
 
 RSpec.configure do |config|
