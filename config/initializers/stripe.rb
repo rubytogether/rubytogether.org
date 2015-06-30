@@ -11,12 +11,13 @@ if ENV.has_key?("STRIPE_WEBHOOK_SECRET")
 end
 
 require 'membership_plan'
-require 'stripe/invoice/payment_succeeded'
+require 'stripe_event/invoice/payment_succeeded'
+require 'stripe_event/subscription/changed'
 
 StripeEvent.configure do |events|
 
   events.subscribe 'invoice.payment_succeeded',
-    Stripe::Invoice::PaymentSucceeded.new
+    StripeEvent::Invoice::PaymentSucceeded.new
 
   events.subscribe 'customer.source.created' do |event|
     card = event.data.object
@@ -26,9 +27,9 @@ StripeEvent.configure do |events|
   end
 
   events.subscribe 'customer.subscription.created',
-    Stripe::Subscription::Changed.new
+    StripeEvent::Subscription::Changed.new
 
   events.subscribe 'customer.subscription.deleted',
-    Stripe::Subscription::Changed.new
+    StripeEvent::Subscription::Changed.new
 
 end

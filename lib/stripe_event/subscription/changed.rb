@@ -1,5 +1,5 @@
-module Stripe
-  class Subscription
+module StripeEvent
+  module Subscription
     class Changed
 
       def call(event)

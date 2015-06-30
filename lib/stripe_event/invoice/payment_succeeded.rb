@@ -1,5 +1,5 @@
-module Stripe
-  class Invoice
+module StripeEvent
+  module Invoice
     class PaymentSucceeded
 
       def call(event)
