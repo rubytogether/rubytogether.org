@@ -33,8 +33,27 @@ Post = Struct.new(:name, :date, :id) do
     name.titleize
   end
 
+  def summary
+    meta && meta["summary"]
+  end
+
   def body
-    pathname.read
+    parse unless @body
+    @body
+  end
+
+  def meta
+    parse unless @meta
+    @meta
+  end
+
+private
+
+  def parse
+    pathname.read.match(/\A(?:---(.*?)\n---)?(.*)/m) do |matches|
+      @meta = YAML.load(matches[1]) if matches[1]
+      @body = matches[2]
+    end
   end
 
 end

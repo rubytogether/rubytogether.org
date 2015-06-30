@@ -1,10 +1,20 @@
 <% title "Ruby Together News" %>
 
+<p class="center">Monthly progress reports and other Ruby Together updates. See exactly what we’re doing with with the money we raise.</p>
+
 <% @posts.group_by(&:date).each do |date, posts| %>
-  <p class="post-date"><%= date %></p>
+  <p class="post-date"><%= date.strftime("%B %e, %Y") %></p>
   <ul class="post-names">
   <% posts.each do |post| %>
-    <li class="post-name"><%= link_to post.title, news_path(post.id) %></li>
+    <li>
+      <%= link_to post.title, news_path(post.id), class: "post-name" %>
+      <% if post.summary %>
+        <p class="post-summary">
+          <%= post.summary %>
+          <%= link_to "read more…", news_path(post.id) %>
+        </p>
+      <% end %>
+    </li>
   <% end %>
   </ul>
 <% end %>

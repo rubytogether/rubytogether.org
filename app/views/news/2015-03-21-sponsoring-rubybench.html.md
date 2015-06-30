@@ -1,3 +1,6 @@
+---
+summary: The RubyBench project is a great resource for Ruby developers, and Ruby Together is sponsoring the hardware in runs on.
+---
 <% title "Sponsoring RubyBench" %>
 
 Since before Ruby Together even launched, supporting and improving [public Ruby infrastructure](<%= roadmap_path %>) has been our goal. Although we decided to focus on Bundler and Rubygems.org as our first two projects, we already had our eye on [RubyBench](http://rubybench.org) as a project to support.

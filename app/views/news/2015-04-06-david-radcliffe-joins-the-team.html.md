@@ -1,3 +1,6 @@
+---
+summary: We've hired David Radcliffe, a prolific contributor to the software that keeps RubyGems.org running.
+---
 <% title "David Radcliffe joins the team" %>
 
 Today we are excited to announce that Ruby Together has begun paying [David Radcliffe](https://dwradcliffe.com), the lead developer of the [RubyGems infrastructure project](https://github.com/rubygems/rubygems-infra).

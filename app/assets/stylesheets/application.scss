@@ -195,15 +195,26 @@ input.inline {
 // /news
 
 .post-date {
-  margin-bottom: 0.25em;
+  font-size: 14px;
+  margin: 0.5em 45px 0.25em 45px;
 }
 
 .post-names {
-  margin-top: 0.25em;
+  margin: 0.25em 45px 1.25em 45px;
+  padding-left: 0;
+
+  li {
+    list-style: none;
+  }
 }
 
-.post-name {
-  list-style: none;
+.post-summary {
+  font-size: 16px;
+  margin-top: 0.25em;
+
+  a {
+    font-size: 14px;
+  }
 }
 
 // index

@@ -1,3 +1,6 @@
+---
+summary: Ruby Together is a non-profit trade association dedicated to the needs of the Ruby community.
+---
 <% title "Announcing Ruby Together" %>
 
 All of the infrastructure used by Ruby developers today, including Bundler, RubyGems, and [RubyGems.org](https://rubygems.org/) is maintained and developed by volunteers.  While it's good that no one company controls resources shared by the community, it's terrible that the only people who work on our shared infrastructure are doing so for free and in their spare time.

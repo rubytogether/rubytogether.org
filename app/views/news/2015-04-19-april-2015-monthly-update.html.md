@@ -1,3 +1,6 @@
+---
+summary: In our first month of operation, we hired our first two developers, and accomplished a record amount of work on both Bundler and RubyGems.org.
+---
 <% title "April 2015 Monthly Update" %>
 
 Hello, everyone! This is the Ruby Together monthly update for April, 2015. This was our first month in operation, and we were able to make a huge amount of progress this month.

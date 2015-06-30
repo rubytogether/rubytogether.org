@@ -1,3 +1,6 @@
+---
+summary: Ruby Together & Ruby Central have agreed to work together to make RubyGems.org better than ever.
+---
 <% title "Announcing The Rubygems Partnership" %>
 
 We are pleased to announce that Ruby Together has joined with [Ruby Central](http://rubycentral.org) to create [The Rubygems Partnership](<%= rubygems_path %>), an ongoing project to improve the stability and performance of [RubyGems.org](https://rubygems.org).
