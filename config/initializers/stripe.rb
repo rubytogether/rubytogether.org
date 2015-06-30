@@ -25,16 +25,10 @@ StripeEvent.configure do |events|
     membership.update!(card_brand: card.brand, card_last4: card.last4)
   end
 
-  events.subscribe 'customer.subscription.created' do |event|
-    msg = "Subscriber counts: "
-    msg << MembershipPlan.subscriber_counts.map do |name, count|
-      "#{count} #{name.capitalize}"
-    end.to_sentence
+  events.subscribe 'customer.subscription.created',
+    Stripe::Subscription::Changed.new
 
-    Slack.say msg,
-      username: "Subscribers",
-      channel: "#stripe",
-      icon_emoji: ":chart_with_upwards_trend:"
-  end
+  events.subscribe 'customer.subscription.deleted',
+    Stripe::Subscription::Changed.new
 
 end
