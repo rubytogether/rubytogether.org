@@ -1,0 +1,9 @@
+<% description = capture do %>
+  Share this update <%= link_to_tweet "on Twitter", title, request.url %>, or <%= mail_to "", "via email", subject: title, body: "Read about it at #{request.url}" %>, or subscribe to our newsletter so you never miss an update.
+<% end %>
+
+<% content_for(:footer, render("newsletter_form", message: description)) %>
+
+<%= render_layout("application") do %>
+  <%= yield %>
+<% end %>
