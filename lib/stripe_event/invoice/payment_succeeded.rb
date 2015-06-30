@@ -1,20 +1,15 @@
 module StripeEvent
   module Invoice
-    class PaymentSucceeded
+    class PaymentSucceeded < Base
 
       def call(event)
-        invoice = event.data.object
+        user = user_for_event(event)
+        return unless user
 
-        customer = Stripe::Customer.retrieve(invoice.customer)
-        return if customer.respond_to?(:deleted) && customer.deleted
-
-        subscription = customer.subscriptions.find do |s|
-          s.id == invoice.subscription
+        subscription = user.stripe_customer.subscriptions.find do |s|
+          s.id == event.data.object.subscription
         end
         return unless subscription
-
-        user = User.where(stripe_id: customer.id).includes(:membership).first
-        return unless user
 
         # move back membership expiration time to the end paid for
         expiration = Time.at(subscription.current_period_end)

@@ -1,6 +1,6 @@
 module StripeEvent
   module Subscription
-    class Changed
+    class Changed < Base
 
       def call(event)
         message = MembershipPlan.subscriber_counts.map do |name, count|

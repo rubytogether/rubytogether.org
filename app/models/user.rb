@@ -8,8 +8,15 @@ class User < ActiveRecord::Base
 
   after_destroy :delete_stripe_customer
 
+  attr_writer :stripe_customer
+
   def generate_reset_password_token!
     set_reset_password_token
+  end
+
+  def stripe_customer
+    return nil if stripe_id.nil?
+    @stripe_customer ||= Stripe::Customer.retrieve(stripe_id)
   end
 
 private
@@ -21,7 +28,7 @@ private
   end
 
   def delete_stripe_customer
-    Stripe::Customer.retrieve(stripe_id).delete if stripe_id
+    stripe_customer.delete
   rescue Stripe::InvalidRequestError => e
     Rails.logger.warn "Deleting stripe customer #{stripe_id} raised #{e}: #{e.message}"
   end
