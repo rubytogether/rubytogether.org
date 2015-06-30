@@ -42,10 +42,15 @@ RSpec.describe "Stripe webhooks", :vcr do
   end
 
   describe "customer.subscription.destroyed" do
+    before do
+      User.create!(stripe_id: "cus_6VvtoGAz7B9hfA", email: "alice@example.com")
+    end
+
     it "runs our hook" do
       message = "0 Personal Members, 1 Emerald Member, 0 Friend of Ruby Togethers, 0 Topaz Members, 0 Sapphire Members, and 2 Ruby Members"
       options = an_instance_of(Hash)
       expect(Slack).to receive(:say).with(message, options)
+      expect(Slack).to receive(:deactivate).with("alice@example.com")
       post "/stripe/events", id: "evt_16JFdCAcWgwn5pBtC5eqLlUX"
     end
   end

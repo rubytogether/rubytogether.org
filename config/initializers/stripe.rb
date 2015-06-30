@@ -13,6 +13,7 @@ end
 require 'membership_plan'
 require 'stripe_event/invoice/payment_succeeded'
 require 'stripe_event/subscription/changed'
+require 'stripe_event/subscription/deleted'
 
 StripeEvent.configure do |events|
 
@@ -30,6 +31,6 @@ StripeEvent.configure do |events|
     StripeEvent::Subscription::Changed.new
 
   events.subscribe 'customer.subscription.deleted',
-    StripeEvent::Subscription::Changed.new
+    StripeEvent::Subscription::Deleted.new
 
 end

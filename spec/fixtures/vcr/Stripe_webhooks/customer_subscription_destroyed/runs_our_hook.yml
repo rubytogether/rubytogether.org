@@ -1320,4 +1320,888 @@ http_interactions:
         }
     http_version: 
   recorded_at: Tue, 30 Jun 2015 03:42:35 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers/cus_6VvtoGAz7B9hfA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.2 p95 (2015-04-13)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        ivy-2.local 14.3.0 Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015;
+        root:xnu-2782.20.48~5/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 30 Jun 2015 07:24:26 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '11089'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_6WLo7WSlwnq7Nf
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "customer",
+          "created": 1435552677,
+          "id": "cus_6VvtoGAz7B9hfA",
+          "livemode": false,
+          "description": null,
+          "email": "mail@arko.net",
+          "delinquent": false,
+          "metadata": {},
+          "subscriptions": {
+            "object": "list",
+            "total_count": 10,
+            "has_more": false,
+            "url": "/v1/customers/cus_6VvtoGAz7B9hfA/subscriptions",
+            "data": [
+              {
+                "id": "sub_6VxdYMCONitqZy",
+                "plan": {
+                  "interval": "month",
+                  "name": "Emerald Member",
+                  "created": 1433963948,
+                  "amount": 80000,
+                  "currency": "usd",
+                  "id": "corporate",
+                  "object": "plan",
+                  "livemode": false,
+                  "interval_count": 1,
+                  "trial_period_days": null,
+                  "metadata": {},
+                  "statement_descriptor": null
+                },
+                "object": "subscription",
+                "start": 1435559135,
+                "status": "active",
+                "customer": "cus_6VvtoGAz7B9hfA",
+                "cancel_at_period_end": false,
+                "current_period_start": 1435559135,
+                "current_period_end": 1438151135,
+                "ended_at": null,
+                "trial_start": null,
+                "trial_end": null,
+                "canceled_at": null,
+                "quantity": 1,
+                "application_fee_percent": null,
+                "discount": null,
+                "tax_percent": null,
+                "metadata": {}
+              },
+              {
+                "id": "sub_6VxcH5lGdgaj0Q",
+                "plan": {
+                  "interval": "month",
+                  "name": "Emerald Member",
+                  "created": 1433963948,
+                  "amount": 80000,
+                  "currency": "usd",
+                  "id": "corporate",
+                  "object": "plan",
+                  "livemode": false,
+                  "interval_count": 1,
+                  "trial_period_days": null,
+                  "metadata": {},
+                  "statement_descriptor": null
+                },
+                "object": "subscription",
+                "start": 1435559068,
+                "status": "active",
+                "customer": "cus_6VvtoGAz7B9hfA",
+                "cancel_at_period_end": false,
+                "current_period_start": 1435559068,
+                "current_period_end": 1438151068,
+                "ended_at": null,
+                "trial_start": null,
+                "trial_end": null,
+                "canceled_at": null,
+                "quantity": 1,
+                "application_fee_percent": null,
+                "discount": null,
+                "tax_percent": null,
+                "metadata": {}
+              },
+              {
+                "id": "sub_6VxbBDcWNQ9QFD",
+                "plan": {
+                  "interval": "month",
+                  "name": "Ruby Member",
+                  "created": 1433963948,
+                  "amount": 500000,
+                  "currency": "usd",
+                  "id": "corporate_ruby",
+                  "object": "plan",
+                  "livemode": false,
+                  "interval_count": 1,
+                  "trial_period_days": null,
+                  "metadata": {},
+                  "statement_descriptor": null
+                },
+                "object": "subscription",
+                "start": 1435559038,
+                "status": "active",
+                "customer": "cus_6VvtoGAz7B9hfA",
+                "cancel_at_period_end": false,
+                "current_period_start": 1435559038,
+                "current_period_end": 1438151038,
+                "ended_at": null,
+                "trial_start": null,
+                "trial_end": null,
+                "canceled_at": null,
+                "quantity": 1,
+                "application_fee_percent": null,
+                "discount": null,
+                "tax_percent": null,
+                "metadata": {}
+              },
+              {
+                "id": "sub_6Vxav5NzaSMVY1",
+                "plan": {
+                  "interval": "month",
+                  "name": "Ruby Member",
+                  "created": 1433963948,
+                  "amount": 500000,
+                  "currency": "usd",
+                  "id": "corporate_ruby",
+                  "object": "plan",
+                  "livemode": false,
+                  "interval_count": 1,
+                  "trial_period_days": null,
+                  "metadata": {},
+                  "statement_descriptor": null
+                },
+                "object": "subscription",
+                "start": 1435558960,
+                "status": "active",
+                "customer": "cus_6VvtoGAz7B9hfA",
+                "cancel_at_period_end": false,
+                "current_period_start": 1435558960,
+                "current_period_end": 1438150960,
+                "ended_at": null,
+                "trial_start": null,
+                "trial_end": null,
+                "canceled_at": null,
+                "quantity": 1,
+                "application_fee_percent": null,
+                "discount": null,
+                "tax_percent": null,
+                "metadata": {}
+              },
+              {
+                "id": "sub_6VxPP1sCQDCIMo",
+                "plan": {
+                  "interval": "month",
+                  "name": "Ruby Member",
+                  "created": 1433963948,
+                  "amount": 500000,
+                  "currency": "usd",
+                  "id": "corporate_ruby",
+                  "object": "plan",
+                  "livemode": false,
+                  "interval_count": 1,
+                  "trial_period_days": null,
+                  "metadata": {},
+                  "statement_descriptor": null
+                },
+                "object": "subscription",
+                "start": 1435558337,
+                "status": "active",
+                "customer": "cus_6VvtoGAz7B9hfA",
+                "cancel_at_period_end": false,
+                "current_period_start": 1435558337,
+                "current_period_end": 1438150337,
+                "ended_at": null,
+                "trial_start": null,
+                "trial_end": null,
+                "canceled_at": null,
+                "quantity": 1,
+                "application_fee_percent": null,
+                "discount": null,
+                "tax_percent": null,
+                "metadata": {}
+              },
+              {
+                "id": "sub_6VxOcXjHiuOzgl",
+                "plan": {
+                  "interval": "month",
+                  "name": "Ruby Member",
+                  "created": 1433963948,
+                  "amount": 500000,
+                  "currency": "usd",
+                  "id": "corporate_ruby",
+                  "object": "plan",
+                  "livemode": false,
+                  "interval_count": 1,
+                  "trial_period_days": null,
+                  "metadata": {},
+                  "statement_descriptor": null
+                },
+                "object": "subscription",
+                "start": 1435558253,
+                "status": "active",
+                "customer": "cus_6VvtoGAz7B9hfA",
+                "cancel_at_period_end": false,
+                "current_period_start": 1435558253,
+                "current_period_end": 1438150253,
+                "ended_at": null,
+                "trial_start": null,
+                "trial_end": null,
+                "canceled_at": null,
+                "quantity": 1,
+                "application_fee_percent": null,
+                "discount": null,
+                "tax_percent": null,
+                "metadata": {}
+              },
+              {
+                "id": "sub_6VxNhAmxk4dhBi",
+                "plan": {
+                  "interval": "month",
+                  "name": "Ruby Member",
+                  "created": 1433963948,
+                  "amount": 500000,
+                  "currency": "usd",
+                  "id": "corporate_ruby",
+                  "object": "plan",
+                  "livemode": false,
+                  "interval_count": 1,
+                  "trial_period_days": null,
+                  "metadata": {},
+                  "statement_descriptor": null
+                },
+                "object": "subscription",
+                "start": 1435558196,
+                "status": "active",
+                "customer": "cus_6VvtoGAz7B9hfA",
+                "cancel_at_period_end": false,
+                "current_period_start": 1435558196,
+                "current_period_end": 1438150196,
+                "ended_at": null,
+                "trial_start": null,
+                "trial_end": null,
+                "canceled_at": null,
+                "quantity": 1,
+                "application_fee_percent": null,
+                "discount": null,
+                "tax_percent": null,
+                "metadata": {}
+              },
+              {
+                "id": "sub_6VxMi2GvaDO4pE",
+                "plan": {
+                  "interval": "month",
+                  "name": "Ruby Member",
+                  "created": 1433963948,
+                  "amount": 500000,
+                  "currency": "usd",
+                  "id": "corporate_ruby",
+                  "object": "plan",
+                  "livemode": false,
+                  "interval_count": 1,
+                  "trial_period_days": null,
+                  "metadata": {},
+                  "statement_descriptor": null
+                },
+                "object": "subscription",
+                "start": 1435558143,
+                "status": "active",
+                "customer": "cus_6VvtoGAz7B9hfA",
+                "cancel_at_period_end": false,
+                "current_period_start": 1435558143,
+                "current_period_end": 1438150143,
+                "ended_at": null,
+                "trial_start": null,
+                "trial_end": null,
+                "canceled_at": null,
+                "quantity": 1,
+                "application_fee_percent": null,
+                "discount": null,
+                "tax_percent": null,
+                "metadata": {}
+              },
+              {
+                "id": "sub_6VxMdGnUk73YUn",
+                "plan": {
+                  "interval": "month",
+                  "name": "Ruby Member",
+                  "created": 1433963948,
+                  "amount": 500000,
+                  "currency": "usd",
+                  "id": "corporate_ruby",
+                  "object": "plan",
+                  "livemode": false,
+                  "interval_count": 1,
+                  "trial_period_days": null,
+                  "metadata": {},
+                  "statement_descriptor": null
+                },
+                "object": "subscription",
+                "start": 1435558109,
+                "status": "active",
+                "customer": "cus_6VvtoGAz7B9hfA",
+                "cancel_at_period_end": false,
+                "current_period_start": 1435558109,
+                "current_period_end": 1438150109,
+                "ended_at": null,
+                "trial_start": null,
+                "trial_end": null,
+                "canceled_at": null,
+                "quantity": 1,
+                "application_fee_percent": null,
+                "discount": null,
+                "tax_percent": null,
+                "metadata": {}
+              },
+              {
+                "id": "sub_6VvtqZoMBxfnRl",
+                "plan": {
+                  "interval": "month",
+                  "name": "Ruby Member",
+                  "created": 1433963948,
+                  "amount": 500000,
+                  "currency": "usd",
+                  "id": "corporate_ruby",
+                  "object": "plan",
+                  "livemode": false,
+                  "interval_count": 1,
+                  "trial_period_days": null,
+                  "metadata": {},
+                  "statement_descriptor": null
+                },
+                "object": "subscription",
+                "start": 1435552677,
+                "status": "active",
+                "customer": "cus_6VvtoGAz7B9hfA",
+                "cancel_at_period_end": false,
+                "current_period_start": 1435552677,
+                "current_period_end": 1438144677,
+                "ended_at": null,
+                "trial_start": null,
+                "trial_end": null,
+                "canceled_at": null,
+                "quantity": 1,
+                "application_fee_percent": null,
+                "discount": null,
+                "tax_percent": null,
+                "metadata": {}
+              }
+            ]
+          },
+          "discount": null,
+          "account_balance": 0,
+          "currency": "usd",
+          "sources": {
+            "object": "list",
+            "total_count": 1,
+            "has_more": false,
+            "url": "/v1/customers/cus_6VvtoGAz7B9hfA/sources",
+            "data": [
+              {
+                "id": "card_16IwQEAcWgwn5pBtPU8LfP8V",
+                "object": "card",
+                "last4": "4242",
+                "brand": "Visa",
+                "funding": "credit",
+                "exp_month": 2,
+                "exp_year": 2022,
+                "fingerprint": "Jus3vECqxH1Ctmdh",
+                "country": "US",
+                "name": "mail@arko.net",
+                "address_line1": null,
+                "address_line2": null,
+                "address_city": null,
+                "address_state": null,
+                "address_zip": null,
+                "address_country": null,
+                "cvc_check": null,
+                "address_line1_check": null,
+                "address_zip_check": null,
+                "tokenization_method": null,
+                "dynamic_last4": null,
+                "metadata": {},
+                "customer": "cus_6VvtoGAz7B9hfA"
+              }
+            ]
+          },
+          "default_source": "card_16IwQEAcWgwn5pBtPU8LfP8V"
+        }
+    http_version: 
+  recorded_at: Tue, 30 Jun 2015 07:24:26 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers/cus_6VvtoGAz7B9hfA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.2 p95 (2015-04-13)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        ivy-2.local 14.3.0 Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015;
+        root:xnu-2782.20.48~5/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 30 Jun 2015 07:27:16 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '11089'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_6WLqHWPfJ1brry
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "customer",
+          "created": 1435552677,
+          "id": "cus_6VvtoGAz7B9hfA",
+          "livemode": false,
+          "description": null,
+          "email": "mail@arko.net",
+          "delinquent": false,
+          "metadata": {},
+          "subscriptions": {
+            "object": "list",
+            "total_count": 10,
+            "has_more": false,
+            "url": "/v1/customers/cus_6VvtoGAz7B9hfA/subscriptions",
+            "data": [
+              {
+                "id": "sub_6VxdYMCONitqZy",
+                "plan": {
+                  "interval": "month",
+                  "name": "Emerald Member",
+                  "created": 1433963948,
+                  "amount": 80000,
+                  "currency": "usd",
+                  "id": "corporate",
+                  "object": "plan",
+                  "livemode": false,
+                  "interval_count": 1,
+                  "trial_period_days": null,
+                  "metadata": {},
+                  "statement_descriptor": null
+                },
+                "object": "subscription",
+                "start": 1435559135,
+                "status": "active",
+                "customer": "cus_6VvtoGAz7B9hfA",
+                "cancel_at_period_end": false,
+                "current_period_start": 1435559135,
+                "current_period_end": 1438151135,
+                "ended_at": null,
+                "trial_start": null,
+                "trial_end": null,
+                "canceled_at": null,
+                "quantity": 1,
+                "application_fee_percent": null,
+                "discount": null,
+                "tax_percent": null,
+                "metadata": {}
+              },
+              {
+                "id": "sub_6VxcH5lGdgaj0Q",
+                "plan": {
+                  "interval": "month",
+                  "name": "Emerald Member",
+                  "created": 1433963948,
+                  "amount": 80000,
+                  "currency": "usd",
+                  "id": "corporate",
+                  "object": "plan",
+                  "livemode": false,
+                  "interval_count": 1,
+                  "trial_period_days": null,
+                  "metadata": {},
+                  "statement_descriptor": null
+                },
+                "object": "subscription",
+                "start": 1435559068,
+                "status": "active",
+                "customer": "cus_6VvtoGAz7B9hfA",
+                "cancel_at_period_end": false,
+                "current_period_start": 1435559068,
+                "current_period_end": 1438151068,
+                "ended_at": null,
+                "trial_start": null,
+                "trial_end": null,
+                "canceled_at": null,
+                "quantity": 1,
+                "application_fee_percent": null,
+                "discount": null,
+                "tax_percent": null,
+                "metadata": {}
+              },
+              {
+                "id": "sub_6VxbBDcWNQ9QFD",
+                "plan": {
+                  "interval": "month",
+                  "name": "Ruby Member",
+                  "created": 1433963948,
+                  "amount": 500000,
+                  "currency": "usd",
+                  "id": "corporate_ruby",
+                  "object": "plan",
+                  "livemode": false,
+                  "interval_count": 1,
+                  "trial_period_days": null,
+                  "metadata": {},
+                  "statement_descriptor": null
+                },
+                "object": "subscription",
+                "start": 1435559038,
+                "status": "active",
+                "customer": "cus_6VvtoGAz7B9hfA",
+                "cancel_at_period_end": false,
+                "current_period_start": 1435559038,
+                "current_period_end": 1438151038,
+                "ended_at": null,
+                "trial_start": null,
+                "trial_end": null,
+                "canceled_at": null,
+                "quantity": 1,
+                "application_fee_percent": null,
+                "discount": null,
+                "tax_percent": null,
+                "metadata": {}
+              },
+              {
+                "id": "sub_6Vxav5NzaSMVY1",
+                "plan": {
+                  "interval": "month",
+                  "name": "Ruby Member",
+                  "created": 1433963948,
+                  "amount": 500000,
+                  "currency": "usd",
+                  "id": "corporate_ruby",
+                  "object": "plan",
+                  "livemode": false,
+                  "interval_count": 1,
+                  "trial_period_days": null,
+                  "metadata": {},
+                  "statement_descriptor": null
+                },
+                "object": "subscription",
+                "start": 1435558960,
+                "status": "active",
+                "customer": "cus_6VvtoGAz7B9hfA",
+                "cancel_at_period_end": false,
+                "current_period_start": 1435558960,
+                "current_period_end": 1438150960,
+                "ended_at": null,
+                "trial_start": null,
+                "trial_end": null,
+                "canceled_at": null,
+                "quantity": 1,
+                "application_fee_percent": null,
+                "discount": null,
+                "tax_percent": null,
+                "metadata": {}
+              },
+              {
+                "id": "sub_6VxPP1sCQDCIMo",
+                "plan": {
+                  "interval": "month",
+                  "name": "Ruby Member",
+                  "created": 1433963948,
+                  "amount": 500000,
+                  "currency": "usd",
+                  "id": "corporate_ruby",
+                  "object": "plan",
+                  "livemode": false,
+                  "interval_count": 1,
+                  "trial_period_days": null,
+                  "metadata": {},
+                  "statement_descriptor": null
+                },
+                "object": "subscription",
+                "start": 1435558337,
+                "status": "active",
+                "customer": "cus_6VvtoGAz7B9hfA",
+                "cancel_at_period_end": false,
+                "current_period_start": 1435558337,
+                "current_period_end": 1438150337,
+                "ended_at": null,
+                "trial_start": null,
+                "trial_end": null,
+                "canceled_at": null,
+                "quantity": 1,
+                "application_fee_percent": null,
+                "discount": null,
+                "tax_percent": null,
+                "metadata": {}
+              },
+              {
+                "id": "sub_6VxOcXjHiuOzgl",
+                "plan": {
+                  "interval": "month",
+                  "name": "Ruby Member",
+                  "created": 1433963948,
+                  "amount": 500000,
+                  "currency": "usd",
+                  "id": "corporate_ruby",
+                  "object": "plan",
+                  "livemode": false,
+                  "interval_count": 1,
+                  "trial_period_days": null,
+                  "metadata": {},
+                  "statement_descriptor": null
+                },
+                "object": "subscription",
+                "start": 1435558253,
+                "status": "active",
+                "customer": "cus_6VvtoGAz7B9hfA",
+                "cancel_at_period_end": false,
+                "current_period_start": 1435558253,
+                "current_period_end": 1438150253,
+                "ended_at": null,
+                "trial_start": null,
+                "trial_end": null,
+                "canceled_at": null,
+                "quantity": 1,
+                "application_fee_percent": null,
+                "discount": null,
+                "tax_percent": null,
+                "metadata": {}
+              },
+              {
+                "id": "sub_6VxNhAmxk4dhBi",
+                "plan": {
+                  "interval": "month",
+                  "name": "Ruby Member",
+                  "created": 1433963948,
+                  "amount": 500000,
+                  "currency": "usd",
+                  "id": "corporate_ruby",
+                  "object": "plan",
+                  "livemode": false,
+                  "interval_count": 1,
+                  "trial_period_days": null,
+                  "metadata": {},
+                  "statement_descriptor": null
+                },
+                "object": "subscription",
+                "start": 1435558196,
+                "status": "active",
+                "customer": "cus_6VvtoGAz7B9hfA",
+                "cancel_at_period_end": false,
+                "current_period_start": 1435558196,
+                "current_period_end": 1438150196,
+                "ended_at": null,
+                "trial_start": null,
+                "trial_end": null,
+                "canceled_at": null,
+                "quantity": 1,
+                "application_fee_percent": null,
+                "discount": null,
+                "tax_percent": null,
+                "metadata": {}
+              },
+              {
+                "id": "sub_6VxMi2GvaDO4pE",
+                "plan": {
+                  "interval": "month",
+                  "name": "Ruby Member",
+                  "created": 1433963948,
+                  "amount": 500000,
+                  "currency": "usd",
+                  "id": "corporate_ruby",
+                  "object": "plan",
+                  "livemode": false,
+                  "interval_count": 1,
+                  "trial_period_days": null,
+                  "metadata": {},
+                  "statement_descriptor": null
+                },
+                "object": "subscription",
+                "start": 1435558143,
+                "status": "active",
+                "customer": "cus_6VvtoGAz7B9hfA",
+                "cancel_at_period_end": false,
+                "current_period_start": 1435558143,
+                "current_period_end": 1438150143,
+                "ended_at": null,
+                "trial_start": null,
+                "trial_end": null,
+                "canceled_at": null,
+                "quantity": 1,
+                "application_fee_percent": null,
+                "discount": null,
+                "tax_percent": null,
+                "metadata": {}
+              },
+              {
+                "id": "sub_6VxMdGnUk73YUn",
+                "plan": {
+                  "interval": "month",
+                  "name": "Ruby Member",
+                  "created": 1433963948,
+                  "amount": 500000,
+                  "currency": "usd",
+                  "id": "corporate_ruby",
+                  "object": "plan",
+                  "livemode": false,
+                  "interval_count": 1,
+                  "trial_period_days": null,
+                  "metadata": {},
+                  "statement_descriptor": null
+                },
+                "object": "subscription",
+                "start": 1435558109,
+                "status": "active",
+                "customer": "cus_6VvtoGAz7B9hfA",
+                "cancel_at_period_end": false,
+                "current_period_start": 1435558109,
+                "current_period_end": 1438150109,
+                "ended_at": null,
+                "trial_start": null,
+                "trial_end": null,
+                "canceled_at": null,
+                "quantity": 1,
+                "application_fee_percent": null,
+                "discount": null,
+                "tax_percent": null,
+                "metadata": {}
+              },
+              {
+                "id": "sub_6VvtqZoMBxfnRl",
+                "plan": {
+                  "interval": "month",
+                  "name": "Ruby Member",
+                  "created": 1433963948,
+                  "amount": 500000,
+                  "currency": "usd",
+                  "id": "corporate_ruby",
+                  "object": "plan",
+                  "livemode": false,
+                  "interval_count": 1,
+                  "trial_period_days": null,
+                  "metadata": {},
+                  "statement_descriptor": null
+                },
+                "object": "subscription",
+                "start": 1435552677,
+                "status": "active",
+                "customer": "cus_6VvtoGAz7B9hfA",
+                "cancel_at_period_end": false,
+                "current_period_start": 1435552677,
+                "current_period_end": 1438144677,
+                "ended_at": null,
+                "trial_start": null,
+                "trial_end": null,
+                "canceled_at": null,
+                "quantity": 1,
+                "application_fee_percent": null,
+                "discount": null,
+                "tax_percent": null,
+                "metadata": {}
+              }
+            ]
+          },
+          "discount": null,
+          "account_balance": 0,
+          "currency": "usd",
+          "sources": {
+            "object": "list",
+            "total_count": 1,
+            "has_more": false,
+            "url": "/v1/customers/cus_6VvtoGAz7B9hfA/sources",
+            "data": [
+              {
+                "id": "card_16IwQEAcWgwn5pBtPU8LfP8V",
+                "object": "card",
+                "last4": "4242",
+                "brand": "Visa",
+                "funding": "credit",
+                "exp_month": 2,
+                "exp_year": 2022,
+                "fingerprint": "Jus3vECqxH1Ctmdh",
+                "country": "US",
+                "name": "mail@arko.net",
+                "address_line1": null,
+                "address_line2": null,
+                "address_city": null,
+                "address_state": null,
+                "address_zip": null,
+                "address_country": null,
+                "cvc_check": null,
+                "address_line1_check": null,
+                "address_zip_check": null,
+                "tokenization_method": null,
+                "dynamic_last4": null,
+                "metadata": {},
+                "customer": "cus_6VvtoGAz7B9hfA"
+              }
+            ]
+          },
+          "default_source": "card_16IwQEAcWgwn5pBtPU8LfP8V"
+        }
+    http_version: 
+  recorded_at: Tue, 30 Jun 2015 07:27:16 GMT
 recorded_with: VCR 2.9.3
