@@ -15,4 +15,7 @@
 <h2>Individual Members</h2>
 
 <%- @individual << link_to("viewers like you", join_path) -%>
-<p>Individual members include <%= @individual.to_sentence.html_safe %>.</p>
+<p>
+  Our <%= @individual_count %> <%= "individual member".pluralize(@individual_count) %>
+  include <%= @individual.to_sentence.html_safe %>.
+</p>
