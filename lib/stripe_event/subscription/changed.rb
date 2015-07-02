@@ -3,9 +3,15 @@ module StripeEvent
     class Changed < Base
 
       def call(event)
-        message = MembershipPlan.subscriber_counts.map do |name, count|
-          "#{count} #{name.pluralize(count)}"
+        subscriber_counts = MembershipPlan.subscriber_counts
+        message = subscriber_counts.map do |plan, count|
+          "#{count} #{plan.name.pluralize(count)}"
         end.to_sentence
+
+        estimate = subscriber_counts.inject(0) do |total, (plan, count)|
+          total += plan.amount * count
+        end
+        message << ". Projected revenue now #{number_to_currency(estimate/100)} per month."
 
         Slack.say(message,
           username: "Subscribers",
