@@ -8,6 +8,20 @@ Rails.application.routes.draw do
     get "/#{page}" => "home##{page}"
   end
 
+  redirects = {
+    "/benefits" => "/",
+    "/contact" => "/",
+    "/friends" => "/developers",
+    "/join" => "/",
+    "/plans" => "/roadmap",
+    "/projects" => "/roadmap",
+    "/why" => "/developers"
+  }
+
+  redirects.each do |page, destination|
+    get page, to: redirect(destination)
+  end
+
   scope :thanks, as: :thanks do
     %w[friend member newsletter].each do |page|
       get "/#{page}" => "thanks##{page}"
