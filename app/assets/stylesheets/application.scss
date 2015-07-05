@@ -295,7 +295,7 @@ input.inline {
   &:nth-child(1) { border-color: rgba($red, 0.2); }
   &:nth-child(2) { border-color: rgba(229, 85,  126, 0.2); }
   &:nth-child(3) { border-color: rgba(213, 126, 182, 0.2); }
-  &:nth-child(4) { border-color: rgba(145, 60,  146, 1); }
+  &:nth-child(4) { border-color: rgba(145, 60,  146, 0.2); }
   &:nth-child(5) { border-color: rgba(30,  23,  78,  1); }
 
   .amount {
