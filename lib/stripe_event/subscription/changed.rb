@@ -1,6 +1,7 @@
 module StripeEvent
   module Subscription
     class Changed < Base
+      include ActiveSupport::NumberHelper
 
       def call(event)
         subscriber_counts = MembershipPlan.subscriber_counts
