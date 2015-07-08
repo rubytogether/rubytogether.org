@@ -32,24 +32,29 @@ RSpec.describe "Stripe webhooks", :vcr do
     end
   end
 
+  let(:slack_options) { {:username=>"Subscribers", :channel=>"#stripe", :icon_emoji=>":chart_with_upwards_trend:"} }
+
   describe "customer.subscription.created" do
+    let(:message) {
+      "3 Personal Members, 4 Emerald Members, 1 Friend of Ruby Together, 0 Topaz Members, " \
+        "0 Sapphire Members, and 2 Ruby Members. Projected revenue now $13,330.00 per month."
+    }
+
     it "runs our hook" do
-      message = "3 Personal Members, 4 Emerald Members, 1 Friend of Ruby Together, 0 Topaz Members, 0 Sapphire Members, and 2 Ruby Members"
-      options = an_instance_of(Hash)
-      expect(Slack).to receive(:say).with(message, options)
+      expect(Slack).to receive(:say).with(message, slack_options)
       post "/stripe/events", id: "evt_15nY3IAcWgwn5pBtisl4M4d6"
     end
   end
 
   describe "customer.subscription.destroyed" do
-    before do
-      User.create!(stripe_id: "cus_6VvtoGAz7B9hfA", email: "alice@example.com")
-    end
+    let(:message) {
+      "0 Personal Members, 1 Emerald Member, 0 Friends of Ruby Together, 0 Topaz Members, " \
+        "0 Sapphire Members, and 2 Ruby Members. Projected revenue now $10,800.00 per month."
+    }
 
     it "runs our hook" do
-      message = "0 Personal Members, 1 Emerald Member, 0 Friend of Ruby Togethers, 0 Topaz Members, 0 Sapphire Members, and 2 Ruby Members"
-      options = an_instance_of(Hash)
-      expect(Slack).to receive(:say).with(message, options)
+      User.create!(stripe_id: "cus_6VvtoGAz7B9hfA", email: "alice@example.com")
+      expect(Slack).to receive(:say).with(message, slack_options)
       expect(Slack).to receive(:deactivate).with("alice@example.com")
       post "/stripe/events", id: "evt_16JFdCAcWgwn5pBtC5eqLlUX"
     end
