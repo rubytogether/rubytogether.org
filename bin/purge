@@ -1,0 +1,10 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+if [[ -z "$1" ]]; then
+  echo "Usage: $0 [ENVIRONMENT]"
+else
+  echo "Purging Fastly cache for $1..."
+  "bin/$1" surrogate bin/rake fastly:purge
+fi
