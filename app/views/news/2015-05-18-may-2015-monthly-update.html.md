@@ -1,5 +1,5 @@
 ---
-summary: For our second month, Bundler made five bugfix releases, three prerealeses, and pushed the 1.10 to release candidate, and RubyGems.org finally started deleting gems when they are yanked.
+summary: For our second month, Bundler made five bugfix releases, three prerealeses, and pushed the 1.10 release candidate. RubyGems.org finally started deleting gems when they are yanked.
 ---
 <% title "May 2015 Monthly Update" %>
 
