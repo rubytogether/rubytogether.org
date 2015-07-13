@@ -35,6 +35,14 @@ section.group {
   margin-bottom: 1.75em;
 }
 
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 header {
   margin: 2em 0 2.5em 0;
   text-align: center;
@@ -44,7 +52,6 @@ header {
   }
 
   a {
-    text-decoration: none;
     font-weight: normal;
   }
 }
@@ -54,7 +61,7 @@ header {
 }
 
 .callout {
-  color: $red;
+  font-size: 28px;
 }
 
 .aside {
@@ -109,78 +116,6 @@ section.content {
   padding-bottom: 10px;
 }
 
-form {
-  margin-bottom: 15px;
-
-  .field, .actions {
-    margin: 20px auto;
-    width: 340px;
-  }
-
-  .actions {
-    text-align: right;
-  }
-
-  .inline-field {
-    float: left;
-
-    label {
-      display: inline-block;
-      float: left;
-      margin-right: 10px;
-      padding-top: 8px;
-    }
-  }
-
-  .inline-actions {
-    float: left;
-    margin-left: 25px;
-  }
-}
-
-label {
-  display: block;
-}
-
-input[type="email"],
-input[type="password"],
-input[type="text"],
-textarea {
-  @extend %body-text;
-  width: 330px;
-  padding: 5px 5px 0 5px;
-  border: 0;
-  background-color: $light;
-  border-bottom: 1px solid $dark;
-}
-
-input[type="submit"] {
-  @extend %body-text;
-  font-size: 16px;
-  background: $light;
-  color: $dark;
-  border: 2px solid $dark;
-  border-radius: 5px;
-  padding-top: 5px;
-  padding-bottom: 4px;
-
-  &:hover {
-    color: $light;
-    background-color: $dark;
-  }
-}
-
-.login-links {
-  text-align: center;
-}
-
-input.inline {
-  height: 26px;
-  padding: 2px 0 0 4px;
-  width: 30px;
-  vertical-align: top;
-}
-
 // /members
 
 .company-logo {
@@ -224,6 +159,7 @@ input.inline {
   width: 47%;
   margin-right: 3%;
   margin-bottom: 0;
+  margin-top: 40px;
 
   &:nth-child(even) {
     margin-right: 0;
@@ -232,17 +168,29 @@ input.inline {
 }
 
 .join-box > .title {
-  font-weight: bold;
   margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 28px;
 }
 
-.join-box > .link > a {
-  @extend .callout;
+.hollow-button {
+  background-color: $light;
+  border: 2px solid $dark;
+  padding: 10px 15px 7px 15px;
+
+  &:hover {
+    background-color: $dark;
+    color: $light;
+
+    a {
+      color: $light;
+      text-decoration: none;
+    }
+  }
 }
 
 .join-box > .learn-more > a {
   font-size: 18px;
-  font-weight: normal;
 }
 
 .join-box > .price {
@@ -325,4 +273,120 @@ input.inline {
     line-height: 1em;
     margin-bottom: 0.2em;
   }
+}
+
+form {
+  margin-bottom: 15px;
+
+  .field, .actions {
+    margin: 20px auto;
+    width: 340px;
+  }
+
+  .actions {
+    text-align: right;
+  }
+}
+
+form.newsletter {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+label {
+  display: block;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+textarea {
+  @extend %body-text;
+  width: 330px;
+  padding: 10px 5px 5px 5px;
+  border: 0;
+  background-color: #fff;
+}
+
+button,
+input[type="submit"] {
+  @extend %body-text;
+  font-size: 16px;
+  background: $dark;
+  color: $light;
+  border: 0;
+  border-radius: 4px;
+  padding: 12px 15px 9px 15px;
+
+  &:hover {
+    background-color: lighten($dark, 20%);
+  }
+}
+
+.inline-field {
+  width: 516px;
+  margin: 15px auto;
+
+  label {
+    float: left;
+    margin-top: 12px;
+    margin-right: 15px;
+  }
+
+  input {
+    float: left;
+    margin-right: 0;
+  }
+
+  input[type="email"] {
+    margin-right: 15px;
+  }
+}
+
+.login-links {
+  text-align: center;
+}
+
+.quote {
+  font-style: italic;
+  padding: 15px 40px 0 40px;
+  margin-bottom: 0;
+
+  &:before {
+    content: "“";
+    font-size: 28px;
+    line-height: 18px;
+    position: relative;
+    top: 5px;
+    left: -15px;
+    margin-right: -8px;
+  }
+
+  &:after {
+    content: "”";
+    font-size: 28px;
+    line-height: 18px;
+    position: relative;
+    top: 5px;
+  }
+}
+
+.attribution {
+  display: block;
+  float: right;
+  font-style: normal;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+#faq {
+  padding-top: 35px;
 }

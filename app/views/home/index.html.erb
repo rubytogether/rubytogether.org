@@ -1,12 +1,12 @@
 <% content_for :header do %>
   <%= image_tag("rubies.png", width: "250", class: "home") %>
-  <h1 class="home">shared tools should work</h1>
+  <h1 class="home">Ruby Together</h1>
 <% end %>
 
-<p>Stop hoping that developers will maintain and improve Ruby's public infrastructure for free in their spare time, and start relying on tools that work.</p>
+<p>Stop hoping that developers will maintain and improve Ruby's public infrastructure for free in their spare time, and start relying on tools that actually work.</p>
 
 <section class="group">
-  <h4>Ruby Together is a better way to maintain and improve the Ruby tools that everyone relies on.</h4>
+  <p class="callout">There's a better way to maintain and improve our shared Ruby tools.</p>
 
   <ul>
     <li>Community funding allows Ruby Together to pay developers to work on improving Bundler, RubyGems.org, and other shared tools.</li>
@@ -15,21 +15,9 @@
   </ul>
 </section>
 
-<section class="group">
-  <p>“Better tooling means ease of use for our engineers and customers. Our engineering and support teams benefit by having things working better at a fast pace, meaning we can provide more to our customer base.”</p>
-  <p>— PJ Hagerty, Community Team Lead at Engine Yard</p>
+<section>
+  <p class="quote">Better tooling means ease of use for our engineers and customers. Our engineering and support teams benefit by having things working better at a fast pace, meaning we can provide more to our customer base.</p>
+  <p class="attribution">— PJ Hagerty, Community Team Lead at Engine Yard</p>
 </section>
 
-<section id="join" class="group">
-  <div class="join-box center">
-    <p class="title">Developers</p>
-    <p class="link"><%= link_to_plan "Join Ruby Together", "individual" %></p>
-    <p class="learn-more"><%= link_to "Learn More", developers_path %></p>
-  </div>
-
-  <div class="join-box center">
-    <p class="title">Companies</p>
-    <p class="link"><%= link_to "Join Ruby Together", companies_path(anchor: "plans") %></p>
-    <p class="learn-more"><%= link_to "Learn More", companies_path(anchor: "faq") %></p>
-  </div>
-</section>
+<%= render "join" %>

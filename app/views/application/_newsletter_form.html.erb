@@ -1,14 +1,12 @@
 <section>
-  <form action="https://www.getdrip.com/forms/6239290/submissions" method="post" target="_blank" data-drip-embedded-form="6239290">
+  <form class="newsletter" action="https://www.getdrip.com/forms/6239290/submissions" method="post" target="_blank" data-drip-embedded-form="6239290">
     <div data-drip-attribute="description">
       <%= local_assigns.fetch :message, "Stay posted on Ruby Together news and progress!" %>
     </div>
     <div class="inline-field">
       <label for="fields[email]">Email</label>
-      <input type="email" name="fields[email]" value="" />
-    </div>
-    <div class="inline-actions">
-      <input type="submit" name="submit" value="Sign Up" data-drip-attribute="sign-up-button" />
+      <input type="email" name="fields[email]" value="">
+      <input type="submit" name="submit" value="Sign Up" data-drip-attribute="sign-up-button">
     </div>
     <div style="clear: both;"></div>
   </form>

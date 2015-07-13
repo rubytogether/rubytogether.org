@@ -3,7 +3,7 @@
 <p class="center">Take a look at where we're headed.</p>
 
 <section class="group">
-  <h3>Focus Areas</h3>
+  <h3 id="focus-areas">Focus Areas</h3>
 
   <p>Today, Ruby Together is committed to improving the three most widely-used core Ruby tools:</p>
 
@@ -16,23 +16,23 @@
 
 
 <section class="group">
-  <h3>Upcoming Projects</h3>
+  <h3 id="upcoming-projects">Upcoming Projects</h3>
 
   <p>As time and funding permits, the Ruby Together team will:</p>
-  
+
   <ul>
-    <li>Finish rolling out a new gem index that will make installing gems two to ten times faster than today</li>
-    <li>Migrate the entire RubyGems.org site to use the Fastly CDN, providing dramitic speed improvements in downloading gems and gem data</li>
-    <li>Build a gem caching server to easily allow data centers and offices to store local copies of the gems they need, public or private</li>
+    <li>Roll out a <%= link_to "new gem index", "http://andre.arko.net/2014/03/28/the-new-rubygems-index-format/" %> that will make installing gems two to ten times faster than today</li>
+    <li>Migrate the entire RubyGems.org site to use the <%= link_to "Fastly CDN", "http://fastly.com" %>, providing dramitic speed improvements in downloading gems and gem data</li>
+    <li>Build a gem caching server to easily allow data centers and offices to cache local copies of the gems they need, whether public or private</li>
     <li>Create a public Ruby ecosystem analytics dashboard, including Ruby version usage, Bundler version usage, and dramatically expanded statistics for each gem</li>
   </ul>
-  
+
   <p>And there will be more! We start new projects based on community need and Ruby Together's available funding.</p>
 </section>
 
-<section class="group">
+<section>
   <h3>Funding Levels</h3>
-  
+
   <section class="progress-bar">
     <section class="progress-bar-entry">
       <p class="amount">$50k+</p>
@@ -85,25 +85,12 @@
       </ul>
     </section>
   </section>
-  
+
   <p>We have ambitious fundraising goals, and as we hit them we will kick off even bigger projects. We want to merge Bundler and RubyGems to stop bugs due to mismatched versions forever. We also want to expand <%= link_to "RubyBench.org", "http://rubybench.org" %> until it can serve as a full, public benchmork for every commit and version of Ruby and Rails. There's a lot more.</p>
-  
-  <p>When we hit $35k per month, we'll have someone working on these core tools full time. Once we hit $50k per month, we'll hire a second full-time developer to focus on maintaining and improving Ruby on Rails, as well.</p>
-  
-  <p>Ruby needs this, <b>and we need your support to do it</b>.</p>
+
+  <p>When we hit $35k per month, we'll not only have developers maintaining every core tool, we'll have someone working to improve those tools full time as well. When we hit $50k per month, we'll hire a second full-time developer to focus on maintaining and improving Rails and Ruby itself.</p>
+
+  <p>Ruby needs this, and we need your help to get it done.</p>
 </section>
 
-
-<section class="group">
-  <div class="join-box center">
-    <p class="title">Developers</p>
-    <p class="link"><%= link_to_plan "Join Ruby Together", "individual" %></p>
-    <p class="learn-more"><%= link_to "Learn More", developers_path %></p>
-  </div>
-
-  <div class="join-box center">
-    <p class="title">Companies</p>
-    <p class="link"><%= link_to "Join Ruby Together", companies_path(anchor: "plans") %></p>
-    <p class="learn-more"><%= link_to "Learn More", companies_path(anchor: "faq") %></p>
-  </div>
-</section>
+<%= render "join" %>
