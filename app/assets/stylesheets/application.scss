@@ -292,11 +292,14 @@ input.inline {
   min-height: 100px;
   padding: 0.5em 0 0.5em 25px;
 
-  &:nth-child(1) { border-color: rgba($red, 0.2); }
-  &:nth-child(2) { border-color: rgba(229, 85,  126, 0.2); }
-  &:nth-child(3) { border-color: rgba(213, 126, 182, 0.2); }
-  &:nth-child(4) { border-color: rgba(145, 60,  146, 0.2); }
-  &:nth-child(5) { border-color: rgba(30,  23,  78,  1); }
+  &:nth-child(1) { border-color: rgba($red, 1); }
+  &:nth-child(2) { border-color: rgba(229, 85,  126, 1); }
+  &:nth-child(3) { border-color: rgba(213, 126, 182, 1); }
+  &:nth-child(4) { border-color: rgba(145, 60,  146, 1); }
+  &:nth-child(5) {
+    border-color: rgba(30, 23, 78, 1);
+    background-color: #fff;
+  }
 
   .amount {
     position: absolute;
@@ -307,14 +310,6 @@ input.inline {
       rotateZ(-90deg)
       translateX(50%)
     );
-  }
-
-  .callout {
-    // position: absolute;
-    // left: -200px;
-    // top: 75%;
-    // margin: 0;
-    font-weight: bold;
   }
 
   .title {
