@@ -41,7 +41,7 @@ module ApplicationHelper
   end
 
   def iconic_tag(name)
-    tag :img, class: "iconic", :"data-src" => "iconic/#{name}.svg"
+    tag :img, class: "iconic", :"data-src" => "/iconic/#{name}.svg"
   end
 
   def link_to_tweet(text, tweet, url = nil)
