@@ -1,3 +1,5 @@
+<%= content_for?(:footer) ? content_for(:footer) : render("newsletter_form") %>
+
 <nav>
   <ul>
     <li><%= link_to "news", news_index_path %></li>
