@@ -312,14 +312,18 @@ button,
 input[type="submit"] {
   @extend %body-text;
   font-size: 16px;
-  background: $dark;
+  background-color: $dark;
   color: $light;
   border: 0;
   border-radius: 4px;
   padding: 12px 15px 9px 15px;
 
   &:hover {
-    background-color: lighten($dark, 20%);
+    cursor: pointer;
+    background-color: $light;
+    border: 2px solid $dark;
+    padding: 10px 13px 7px 13px;
+    color: $dark;
   }
 }
 
