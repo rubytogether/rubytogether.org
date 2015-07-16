@@ -1,6 +1,6 @@
 <% title "Work without workarounds" %>
 
-<section class="group">
+<section>
   <p>Stop relying on workarounds or waiting for someone to fix shared Ruby tools in their spare time! Ruby Together pays developers to dedicate time to maintaining and improving shared Ruby tools so they work better for everyone.</p>
 
   <p>We depend on the community to make that dedicated work possible.</p>
@@ -14,9 +14,9 @@
   </ul>
 
   <p><%= link_to "Our team", team_path %> has a proven track record of delivering year-over-year improvements to Ruby's <%= link_to "public infrastructure", roadmap_path %>. With funding, we'll transform the tools you use so that they work for you. Like tools should.</p>
+</section>
 
-  <p><i>Ruby Together is a 501(c)(6) non-profit trade association, and membership dues should be tax deductible. (Donations for other amounts will not be tax-deductible.)</i></p>
-
+<section class="group">
   <section class="join-box" id="plans">
     <p class="title">Developer Membership</p>
     <p class="price"><span class="currency">$</span>40 per month</p>
@@ -34,6 +34,10 @@
     <p class="link"><%= link_to_plan "Be a friend!", "friend" %></p>
     <p>Or contribute any amount, like say, $<%= text_field_tag "one-time-amount", "15", class: "inline" %> <%= link_to "just this once", "javascript:;", "data-amount-input" => "one-time-amount", "data-charge" => true, "data-charge-name" => "Ruby Together", "class" => "callout" %>
   </section>
+</section>
+
+<section>
+  <p class="aside">Ruby Together is a 501(c)(6) non-profit trade association, which makes membership dues tax deductible. (Check with your accountant to be sure, though.)</p>
 </section>
 
 <%= render "faq" %>

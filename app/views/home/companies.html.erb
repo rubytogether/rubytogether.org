@@ -14,7 +14,7 @@
   <p class="center"><button class="hollow-button"><%= link_to "Support Ruby Together's work!", "#plans" %></button></p>
 </section>
 
-<section class="group">
+<section class="clearfix">
   <p class="callout">When you support Ruby Together, you get:</p>
 
   <ul>
@@ -25,9 +25,7 @@
   </ul>
 
   <p><%= link_to "Our team", team_path %> has a proven track record of delivering year-over-year improvements to Ruby's <%= link_to "public infrastructure", roadmap_path %>. With funding, we'll transform the tools you use so that they work for you. Like tools should.</p>
-</section>
 
-<section class="clearfix">
   <p class="quote">The more contributors can live off their open-source work, the more they'll be able to devote to that work and the better their software will be for everyone. This is why we've been contributing funds to the open-source infrastructure we rely on.</p>
   <p class="attribution">— Andreas Fuchs, Stripe</p>
 </section>
@@ -68,6 +66,10 @@
     <p>Invitation to members-only Slack team for group chat</p>
     <button class="hollow-button"><%= link_to_plan "Become a Topaz Member!", "corporate_topaz" %></button>
   </section>
+</section>
+
+<section>
+  <p class="aside">Ruby Together is a 501(c)(6) non-profit trade association, which makes membership dues tax deductible. (Check with your accountant to be sure, though.)</p>
 </section>
 
 <%= render 'faq' %>
