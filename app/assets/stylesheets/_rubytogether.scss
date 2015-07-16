@@ -33,6 +33,7 @@ h3 {
 
 a {
   @extend %text;
+  text-decoration: none;
   font-weight: bold;
 }
 
