@@ -236,7 +236,7 @@ section.content {
   &:before {
     content: "►";
     position: absolute;
-    bottom: 78px;
+    bottom: 11%;
     left: 0;
     font-size: 30px;
   }
@@ -456,6 +456,12 @@ input[type="submit"] {
     width: 26px;
     height: 26px;
   }
+
+  .progress-bar-entry {
+    &:nth-child(2) {
+      .amount { bottom: 15px; }
+    }
+  }
 }
 
 @media only screen
@@ -464,11 +470,16 @@ input[type="submit"] {
   and (orientation: portrait) {
 
   %text {
-    font-size: 30px;
+    font-size: 26px;
+  }
+
+
+  h3 {
+    font-size: 32px;
   }
 
   .callout {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   .quote {
@@ -501,6 +512,27 @@ input[type="submit"] {
   .inline-field {
     input[type="submit"] {
       font-size: 25px;
+    }
+  }
+
+  .progress-bar {
+    &:before {
+      left: -22px;
+    }
+  }
+
+  .progress-bar-entry {
+    margin-left: 0;
+    padding-left: 12px;
+    padding-right: 10px;
+    font-size: 24px;
+
+    .amount {
+      font-size: 22px;
+    }
+
+    ul {
+      padding-left: 1em;
     }
   }
 }
