@@ -3,6 +3,7 @@ class NewsController < ApplicationController
 
   def index
     @posts = Post.all
+    @posts.reject!(&:draft) if Rails.env.production?
   end
 
   def show

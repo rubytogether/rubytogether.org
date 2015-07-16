@@ -12,7 +12,7 @@ Post = Struct.new(:name, :date, :id) do
       file = File.basename(path, ".html.md")
       next if file.start_with?("index")
       from_file(file)
-    end.compact.reverse.reject(&:draft)
+    end.compact.reverse
   end
 
   def self.find!(id)
