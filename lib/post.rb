@@ -12,7 +12,7 @@ Post = Struct.new(:name, :date, :id) do
       file = File.basename(path, ".html.md")
       next if file.start_with?("index")
       from_file(file)
-    end.compact.reverse
+    end.compact.reverse.reject(&:draft)
   end
 
   def self.find!(id)
@@ -35,6 +35,10 @@ Post = Struct.new(:name, :date, :id) do
 
   def summary
     meta && meta["summary"]
+  end
+
+  def draft
+    meta && meta["draft"]
   end
 
   def body
