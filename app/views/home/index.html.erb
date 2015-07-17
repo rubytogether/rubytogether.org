@@ -1,13 +1,15 @@
 <% content_for :header do %>
-  <%= image_tag("rubies.png", width: "250", class: "home") %>
+  <%= image_tag("rubies.png", width: "125", class: "home") %>
   <h1 class="home">Ruby Together</h1>
 <% end %>
 
-<p>Stop hoping that volunteers will have free time to maintain the Ruby developer tools that your work depends on.</p>
+<section>
+  <p class="center super-callout">Shared tools should work.</p>
+
+  <p>Stop hoping that volunteers will have free time to maintain the Ruby developer tools that your work depends on.</p>
+</section>
 
 <section>
-  <p class="callout">Shared tools should work.</p>
-
   <ul>
     <li><%= link_to "Community funding", roadmap_path %> allows Ruby Together to pay developers to work on improving Bundler, RubyGems.org, and other shared tools.</li>
     <li>The Ruby Together <%= link_to "board of directors", team_path %>, elected by members, selects the most impactful projects to fund.</li>

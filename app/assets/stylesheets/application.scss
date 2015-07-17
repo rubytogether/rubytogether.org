@@ -47,8 +47,13 @@ header {
   margin: 2em 0 2.5em 0;
   text-align: center;
 
+  h1.home {
+    margin-top: 0;
+    font-size: 30px;
+  }
+
   img.home {
-    margin: 0.5em 0;
+    margin: 0;
   }
 
   a {
@@ -62,6 +67,11 @@ header {
 
 .callout {
   font-size: 28px;
+}
+
+.super-callout {
+  font-size: 47px;
+  margin: 1.25em 0 1.25em 0;
 }
 
 .aside {
