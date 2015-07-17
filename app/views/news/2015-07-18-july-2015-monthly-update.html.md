@@ -62,7 +62,4 @@ Until next time,
 André and the Ruby Together team
 
 <br>
-
-[Tweet](https://twitter.com/intent/tweet?text=The%20Ruby%20Together%20June%202015%20update:%20Bundler%201.10%20and%20ShipIt%20for%20RubyGems.org&url=https://rubytogether.org/news/) or [email](mailto:?body=The%20Ruby%20Together%20June%202015%20update:%20Bundler%201.10%20and%20ShipIt%20for%20RubyGems.org.subject=I%20joined%20Ruby%20Together.%20Here%27s%20why%20you%20should%20too.) this update to other Rubyists who can benefit from Ruby Together's work.
-
-Not a member yet? [Sign up now](https://rubytogether.org) to keep Ruby Together going.
+Not a member yet? [Sign up now](https://rubytogether.org) to support our work.
