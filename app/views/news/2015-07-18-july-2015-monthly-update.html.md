@@ -58,9 +58,10 @@ During the months of June and July, Ruby Together took in $20,811.92 and spent $
 
 Spending on professional services is high right now, because the company is still getting off the ground in our third and fourth months of existence. As our revenue grows, we expect to spend more on developer time and servers, and the same amount or less on professional services and overhead.
 
-Until next time,
+Until next time,  
 André and the Ruby Together team
 
+<br>
 
 [Tweet](https://twitter.com/intent/tweet?text=The%20Ruby%20Together%20June%202015%20update:%20Bundler%201.10%20and%20ShipIt%20for%20RubyGems.org&url=https://rubytogether.org/news/) or [email](mailto:?body=The%20Ruby%20Together%20June%202015%20update:%20Bundler%201.10%20and%20ShipIt%20for%20RubyGems.org.subject=I%20joined%20Ruby%20Together.%20Here%27s%20why%20you%20should%20too.) this update to other Rubyists who can benefit from Ruby Together's work.
 
