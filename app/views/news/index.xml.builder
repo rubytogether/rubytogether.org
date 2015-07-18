@@ -4,8 +4,8 @@ atom_feed root_url: news_index_path, schema_date: "2015" do |feed|
 
   @posts.each do |post|
     feed.entry(post, id: post.id, url: news_path(post.id)) do |entry|
-      entry.title(post.name)
-      entry.content(render(file: post.pathname, format: :md), type: 'html')
+      entry.title(post.title)
+      entry.content(render(inline: post.body, type: "md"), type: 'html')
 
       entry.author do |author|
         author.name("Ruby Together")
