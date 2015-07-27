@@ -10,6 +10,9 @@ class Membership < ActiveRecord::Base
   scope :active, -> { where("expires_at > ?", Time.now) }
   scope :named,  -> { where("name IS NOT NULL") }
 
+  scope :developer, -> { where(kind: Membership.kinds_for(:individual)) }
+  scope :company, -> { where("kind NOT IN (?)", Membership.kinds_for(:individual, :friend)) }
+
   scope :featured_companies, -> {
     where(kind: Membership.kinds_for(:corporate, :corporate_sapphire, :corporate_ruby))
   }
