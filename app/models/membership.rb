@@ -14,7 +14,7 @@ class Membership < ActiveRecord::Base
   scope :company, -> { where("kind NOT IN (?)", Membership.kinds_for(:individual, :friend)) }
 
   scope :featured_companies, -> {
-    where(kind: Membership.kinds_for(:corporate, :corporate_sapphire, :corporate_ruby))
+    where(kind: Membership.kinds_for(:corporate_emerald, :corporate_sapphire, :corporate_ruby))
   }
   scope :nonfeatured_companies, -> { where(kind: Membership.kinds_for(:corporate_topaz)) }
 

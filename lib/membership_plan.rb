@@ -28,7 +28,7 @@ end
 
 MembershipPlan::INFO = {
   individual: {name: 'Developer Membership', amount: 4000, shortname: 'personal'},
-  corporate: {name: 'Emerald Memberbership', amount: 80000, shortname: 'Emerald'},
+  corporate_emerald: {name: 'Emerald Memberbership', amount: 80000, shortname: 'Emerald'},
   friend: {name: 'Friend of Ruby Together', amount: 1000, shortname: 'friend'},
   corporate_topaz: {name: 'Topaz Membership', amount: 20000, shortname: 'Topaz'},
   corporate_sapphire: {name: 'Sapphire Membership', amount: 200000, shortname: 'Sapphire'},
