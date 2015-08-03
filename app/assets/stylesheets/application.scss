@@ -185,18 +185,20 @@ section.content {
 }
 
 .hollow-button {
+  @extend %body-text;
+  font-size: 16px;
+  line-height: 16px;
+  display: inline-block;
   background-color: $light;
-  border: 2px solid $dark;
   padding: 10px 15px 7px 15px;
+  margin: 6px 0;
+  border: 2px solid $dark;
+  border-radius: 4px;
 
   &:hover {
     background-color: $dark;
     color: $light;
-
-    a {
-      color: $light;
-      text-decoration: none;
-    }
+    text-decoration: none;
   }
 }
 
@@ -221,20 +223,23 @@ section.content {
 
 @include keyframes(spin) {
   0% {
-    @include transform(rotate(0deg));
+    @include transform(rotate(-10deg));
+  }
+  50% {
+    @include transform(rotate(10deg));
   }
   100% {
-    @include transform(rotate(360deg));
+    @include transform(rotate(-10deg));
   }
 }
 
 .spinner {
   background-image: url('/images/rubies.png');
-  @include filter(drop-shadow( 0px  5px 30px $light)
-                  drop-shadow( 5px  0px 30px $light)
-                  drop-shadow(-0px -5px 30px $light)
-                  drop-shadow(-5px -0px 30px $light));
-  @include animation(spin 5s linear infinite);
+  @include filter(drop-shadow( 0px  5px 15px $light)
+                  drop-shadow( 5px  0px 15px $light)
+                  drop-shadow(-0px -5px 15px $light)
+                  drop-shadow(-5px -0px 15px $light));
+  @include animation(spin 2s ease-in-out infinite);
 }
 
 
@@ -509,9 +514,7 @@ input[type="submit"] {
   }
 
   .hollow-button {
-    a {
-      font-size: 26px;
-    }
+    font-size: 26px;
     line-height: 26px;
   }
 
