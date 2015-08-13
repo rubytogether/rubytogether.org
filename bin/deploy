@@ -11,5 +11,6 @@ fi
 
 if [[ "$1" == "production" ]]; then
   echo "Purging Fastly cache for $1..."
+  sleep 5
   "bin/$1" surrogate bin/rake fastly:purge
 fi
