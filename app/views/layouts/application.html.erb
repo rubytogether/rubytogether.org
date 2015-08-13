@@ -31,6 +31,7 @@
   </footer>
 
   <img class="spinner" src="/images/rubies.png" width="100" style="display: none;">
+  <%= stylesheet_link_tag "campton", media: "all" %>
   <%= javascript_include_tag "https://checkout.stripe.com/checkout.js" %>
   <%= javascript_include_tag "application" %>
   <%= content_for(:script) if content_for?(:script) %>

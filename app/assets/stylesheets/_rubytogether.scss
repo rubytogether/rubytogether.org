@@ -1,9 +1,8 @@
 @import "colors";
-@import "campton";
 
 %text {
   color: $dark;
-  font-family: 'Campton';
+  font-family: "Campton", "Verdana", sans-serif;
 }
 
 %body-text {
