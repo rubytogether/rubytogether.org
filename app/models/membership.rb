@@ -51,6 +51,10 @@ class Membership < ActiveRecord::Base
   def active?
     status == "active"
   end
+  
+  def corporate?
+    kind.start_with?("corporate")
+  end
 
 private
 
