@@ -32,3 +32,10 @@ corporations = [
 corporations.each do |name, description, url|
   Membership.create!(expires_at: 1.year.from_now, name: name, description: description, url: url, kind: :corporate_emerald)
 end
+
+Membership.create!(
+  expires_at: 1.year.from_now,
+  name: "Kickstarter",
+  url: "https://kickstarter.com",
+  kind: :corporate_topaz
+)
