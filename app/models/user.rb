@@ -28,7 +28,7 @@ private
   end
 
   def delete_stripe_customer
-    stripe_customer.delete
+    stripe_customer && stripe_customer.delete
   rescue Stripe::InvalidRequestError => e
     Rails.logger.warn "Deleting stripe customer #{stripe_id} raised #{e}: #{e.message}"
   end
