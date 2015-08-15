@@ -9,8 +9,14 @@ fi
 
 "bin/$1" push
 
-if [[ "$1" == "production" ]]; then
+case $1 in
+"production")
   echo "Purging Fastly cache for $1..."
   sleep 5
   "bin/$1" surrogate bin/rake fastly:purge
-fi
+  ;;
+"staging")
+  echo "Migrating database..."
+  "bin/$1" surrogate bin/rake db:migrate
+  ;;
+esac
