@@ -1,0 +1,4 @@
+#!/bin/bash
+
+DIR=$(dirname $BASH_SOURCE)
+exec "$DIR/guard" -g server
