@@ -58,8 +58,5 @@ During the months of June and July, Ruby Together took in $20,811.92 and spent $
 
 Spending on professional services is high right now, because the company is still getting off the ground in our third and fourth months of existence. As our revenue grows, we expect to spend more on developer time and servers, and the same amount or less on professional services and overhead.
 
-Until next time,  
+Until next time,<br>
 André and the Ruby Together team
-
-<br>
-Not a member yet? [Sign up now](https://rubytogether.org) to support our work.

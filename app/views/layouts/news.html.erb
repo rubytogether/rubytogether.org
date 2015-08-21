@@ -2,7 +2,10 @@
   Share this update <%= link_to_tweet "on Twitter", "Ruby Together — #{title}", request.url %>, or <%= mail_to "", "via email", subject: "Ruby Together — #{title}", body: "Read about it at #{request.url}" %>, or subscribe to our newsletter so you never miss an update.
 <% end %>
 
-<% content_for(:footer, render("newsletter_form", message: description)) %>
+<% content_for(:footer) do %>
+  <div class="center">Not a member yet? <%= link_to "Sign up now", root_path %> to support our work.</div>
+  <%= render("newsletter_form", message: description) %>
+<% end %>
 
 <%= render_layout("application") do %>
   <%= yield %>
