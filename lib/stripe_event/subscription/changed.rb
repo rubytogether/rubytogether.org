@@ -9,9 +9,15 @@ module StripeEvent
           "#{count} #{plan.name.pluralize(count)}"
         end.to_sentence
 
+        prepaid = Membership.where("expires_at > ?", 1.month.from_now).group_by(&:plan)
+
         estimate = subscriber_counts.inject(0) do |total, (plan, count)|
-          total += plan.amount * count
+          monthly_count = count - prepaid.fetch(plan, []).size
+          puts "#{plan.id}: #{count} down to #{monthly_count}"
+          total += plan.amount * monthly_count
         end
+        estimate += 80000 # EY is 2x Emerald
+        estimate += 52000 # Stripe pays for 13 individual memberships, too
         message << ". Projected revenue now #{number_to_currency(estimate/100)} per month."
 
         Slack.say(message,
