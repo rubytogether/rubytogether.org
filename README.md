@@ -17,3 +17,9 @@ and so is this app.
 Contributions are welcome, see [CONTRIBUTING.md][1] for guidelines. Thanks!
 
 [1]: CONTRIBUTING.md
+
+## code of conduct
+
+Ruby Together is committed to fostering a welcoming community, see [CODE_OF_CONDUCT.md][2] for more details.
+
+[2]: CODE_OF_CONDUCT.md
