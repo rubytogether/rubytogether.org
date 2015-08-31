@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 ruby File.read(".ruby-version").chomp
 
-gem "rails", "4.2.2"
+gem "rails", "4.2.4"
 
 gem "compass-rails", "~> 2.0.4"
 gem "devise"
@@ -28,6 +28,7 @@ group :development do
   gem "rack-livereload"
   gem "terminal-notifier-guard", "~> 1.6"
   gem "web-console", "~> 2.0"
+  gem "foreman"
 end
 
 group :development, :test do
