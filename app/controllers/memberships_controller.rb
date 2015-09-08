@@ -50,6 +50,14 @@ class MembershipsController < ApplicationController
       card_last4: card.last4
     )
 
+    render json: {
+      result: "success",
+      message: "Your card on file has been updated.",
+      replace: {
+        selector: ".card-info",
+        text: "#{card.brand} ending in #{card.last4}"
+      }
+    }
     notice = "Your card on file has been updated."
     render json: {result: "success", message: notice}
   rescue => e

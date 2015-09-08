@@ -21,8 +21,14 @@ jQuery(function($) {
         setTimeout(function() {
           document.location = res.url;
         }, 250);
-      } else if (res.message) {
+      }
+
+      if (res.message) {
         showFlash(res.message, res.result);
+      }
+
+      if (res.replace) {
+        $(res.replace.selector).text(res.replace.text);
       }
     };
 
