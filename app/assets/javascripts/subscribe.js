@@ -24,10 +24,6 @@ jQuery(function($) {
       } else if (res.message) {
         showFlash(res.message, res.result);
       }
-
-      if (res.result == "success") {
-        $("form[data-membership]").hide();
-      }
     };
 
     var failFn = function(xhr, textStatus, errorThrown) {
@@ -41,10 +37,6 @@ jQuery(function($) {
 
         var url = (kind === "update") ? "/membership/card" : "/membership";
         var data = {email: token.email, token: token.id, kind: kind};
-
-        $("form[data-membership]").serializeArray().forEach(function(item) {
-          data[item.name] = item.value;
-        });
 
         $.post(url, data).done(doneFn).fail(failFn);
       };

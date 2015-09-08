@@ -29,7 +29,7 @@ Rails.application.routes.draw do
   end
 
   resource :charge, only: [:create]
-  resource :membership, except: [:edit] do
+  resource :membership, only: [:create, :show, :update, :destroy] do
     collection { post :card }
   end
   resources :news, only: [:index, :show]
