@@ -24,7 +24,7 @@ Here are a few technical guidelines to follow:
 
     `./bin/setup`
 
-1. Run `foreman start`.
+1. Run `heroku local`.
 
 
 ## Testing
