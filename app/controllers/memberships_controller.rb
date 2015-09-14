@@ -4,10 +4,6 @@ class MembershipsController < ApplicationController
   before_action :authenticate_member!, except: [:new, :create]
   after_action :set_cache_control_headers, only: [:new]
 
-  def new
-    @membership = Membership.new(user: User.new)
-  end
-
   def create
     user = User.where(email: params.fetch(:email)).first_or_create!
     token, kind = params.fetch(:token), params.fetch(:kind)
@@ -48,13 +44,20 @@ class MembershipsController < ApplicationController
   end
 
   def card
-    customer = Stripe::Customer.retrieve(current_user.stripe_id)
-    old_default = customer.default_source
-    cards = customer.sources
+    card = customer.replace_card(params.fetch(:token))
+    current_user.membership.update!(
+      card_brand: card.brand,
+      card_last4: card.last4
+    )
 
-    card = cards.create(card: params.fetch(:token))
-    cards.retrieve(old_default).delete if old_default
-
+    render json: {
+      result: "success",
+      message: "Your card on file has been updated.",
+      replace: {
+        selector: ".card-info",
+        text: "#{card.brand} ending in #{card.last4}"
+      }
+    }
     notice = "Your card on file has been updated."
     render json: {result: "success", message: notice}
   rescue => e
@@ -103,6 +106,10 @@ private
     else
       thanks_member_path
     end
+  end
+
+  def customer
+    Customer.for_user(current_user)
   end
 
 end

@@ -21,12 +21,14 @@ jQuery(function($) {
         setTimeout(function() {
           document.location = res.url;
         }, 250);
-      } else if (res.message) {
+      }
+
+      if (res.message) {
         showFlash(res.message, res.result);
       }
 
-      if (res.result == "success") {
-        $("form[data-membership]").hide();
+      if (res.replace) {
+        $(res.replace.selector).text(res.replace.text);
       }
     };
 
@@ -41,10 +43,6 @@ jQuery(function($) {
 
         var url = (kind === "update") ? "/membership/card" : "/membership";
         var data = {email: token.email, token: token.id, kind: kind};
-
-        $("form[data-membership]").serializeArray().forEach(function(item) {
-          data[item.name] = item.value;
-        });
 
         $.post(url, data).done(doneFn).fail(failFn);
       };
