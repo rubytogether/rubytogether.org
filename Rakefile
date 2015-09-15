@@ -31,7 +31,7 @@ namespace :stripe do
         puts "Plan #{plan.id} (#{plan.name}) already exists."
       else
         puts "Creating plan #{plan.id} (#{plan.name})..."
-        Stripe::Plan.create(plan.to_h)
+        Stripe::Plan.create(plan.to_stripe)
       end
     end
   end

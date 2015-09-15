@@ -24,6 +24,10 @@ MembershipPlan = Struct.new(:id, :shortname, :name, :interval, :amount, :currenc
       "subscription[plan]" => id
     ).total_count
   end
+
+  def to_stripe
+    to_h.slice(:id, :name, :interval, :amount, :currency)
+  end
 end
 
 MembershipPlan::INFO = {
