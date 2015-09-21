@@ -1,3 +1,5 @@
+require "stripe_event/base"
+
 module StripeEvent
   module Invoice
     class PaymentSucceeded < Base

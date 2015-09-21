@@ -286,6 +286,7 @@ section.content {
 
   &:nth-child(4) {
     border-color: rgba(145, 60,  146, 1);
+    background-color: #fff;
     .amount { bottom: 13px; }
   }
 
@@ -516,13 +517,19 @@ input[type="submit"] {
     font-size: 32px;
   }
 
+  .join-box .learn-more a {
+    font-size: 24px;
+  }
+
+  #plans .join-box {
+    width: 100%;
+    margin-bottom: 2em;
+    margin-right: 0;
+  }
+
   .hollow-button {
     font-size: 26px;
     line-height: 26px;
-  }
-
-  .join-box .learn-more a {
-    font-size: 24px;
   }
 
   .inline-field {
