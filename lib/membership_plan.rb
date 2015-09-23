@@ -8,7 +8,21 @@ MembershipPlan = Struct.new(:id, :shortname, :name, :interval, :amount, :currenc
   end
 
   def self.ids
-    MembershipPlan::INFO.keys
+    # Postgres enums can't be re-ordered, so we order the plan list here
+    [:individual, :corporate_emerald, :friend, :corporate_topaz, :corporate_sapphire,
+      :corporate_ruby, :corporate_jade, :corporate_onyx]
+  end
+
+  def self.featured_ids
+    [:corporate_emerald, :corporate_sapphire, :corporate_ruby]
+  end
+
+  def self.nonfeatured_ids
+    [:corporate_topaz, :corporate_jade, :corporate_onyx]
+  end
+
+  def self.developer_ids
+    [:individual, :friend]
   end
 
   def self.subscriber_counts
