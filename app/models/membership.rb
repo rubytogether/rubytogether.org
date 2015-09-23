@@ -9,6 +9,7 @@ class Membership < ActiveRecord::Base
 
   scope :active, -> { where("expires_at > ?", Time.now) }
   scope :named,  -> { where("name IS NOT NULL") }
+  scope :since, -> (time) { where("created_at > ?", time) }
 
   scope :developer, -> { where(kind: Membership.kinds_for(:individual)) }
   scope :company, -> { where("kind NOT IN (?)", Membership.kinds_for(:individual, :friend)) }
@@ -16,7 +17,7 @@ class Membership < ActiveRecord::Base
   scope :featured_companies, -> {
     where(kind: Membership.kinds_for(:corporate_emerald, :corporate_sapphire, :corporate_ruby))
   }
-  scope :nonfeatured_companies, -> { where(kind: Membership.kinds_for(:corporate_topaz)) }
+  scope :nonfeatured_companies, -> { where(kind: MembershipPlan.featured_ids) }
 
   belongs_to :user
 
@@ -51,7 +52,7 @@ class Membership < ActiveRecord::Base
   def active?
     status == "active"
   end
-  
+
   def corporate?
     kind.start_with?("corporate")
   end
