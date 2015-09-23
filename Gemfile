@@ -12,6 +12,7 @@ gem "nilify_blanks"
 gem "nokogiri"
 gem "pg"
 gem "premailer-rails"
+gem "pry-rails"
 gem "puma", "~> 2.12"
 gem "rdiscount"
 gem "rollbar", "~> 2.0"
@@ -34,7 +35,6 @@ group :development, :test do
   gem "dotenv-rails", "~> 2.0"
   gem "pretty_backtrace"
   gem "pry-byebug"
-  gem "pry-rails"
   gem "rspec-rails"
 end
 
