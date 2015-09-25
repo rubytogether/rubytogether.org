@@ -58,8 +58,6 @@ class MembershipsController < ApplicationController
         text: "#{card.brand} ending in #{card.last4}"
       }
     }
-    notice = "Your card on file has been updated."
-    render json: {result: "success", message: notice}
   rescue => e
     Rollbar.error(e)
     render_failure
