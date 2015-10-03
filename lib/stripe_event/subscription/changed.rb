@@ -13,7 +13,6 @@ module StripeEvent
 
         estimate = subscriber_counts.inject(0) do |total, (plan, count)|
           monthly_count = count - prepaid.fetch(plan, []).size
-          puts "#{plan.id}: #{count} down to #{monthly_count}"
           total += plan.amount * monthly_count
         end
         estimate += 80000 # EY is 2x Emerald
