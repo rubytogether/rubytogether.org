@@ -7,8 +7,7 @@ RSpec.describe MembershipPlan do
   end
 
   it "includes all plans in developer, featured, and non-featured ids" do
-    scopes = MembershipPlan.developer_ids + MembershipPlan.featured_ids +
-      MembershipPlan.nonfeatured_ids
+    scopes = %i[individual friend] + MembershipPlan.company_ids
     expect(scopes.sort).to eq(MembershipPlan::INFO.keys.sort)
   end
 end

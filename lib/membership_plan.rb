@@ -13,16 +13,16 @@ MembershipPlan = Struct.new(:id, :shortname, :name, :interval, :amount, :currenc
       :corporate_ruby, :corporate_jade, :corporate_onyx]
   end
 
+  def self.company_ids
+    featured_ids + nonfeatured_ids
+  end
+
   def self.featured_ids
     [:corporate_emerald, :corporate_sapphire, :corporate_ruby]
   end
 
   def self.nonfeatured_ids
     [:corporate_topaz, :corporate_jade, :corporate_onyx]
-  end
-
-  def self.developer_ids
-    [:individual, :friend]
   end
 
   def self.subscriber_counts

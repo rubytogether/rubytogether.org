@@ -4,20 +4,20 @@ class Membership < ActiveRecord::Base
   enum kind: MembershipPlan.ids
 
   def self.kinds_for(*kinds)
-    kinds.map{|k| Membership.kinds[k] }
+    kinds.flatten.map{|k| Membership.kinds[k] }
   end
 
   scope :active, -> { where("expires_at > ?", Time.now) }
   scope :named,  -> { where("name IS NOT NULL") }
   scope :since, -> (time) { where("created_at > ?", time) }
 
-  scope :developer, -> { where(kind: Membership.kinds_for(:individual)) }
-  scope :company, -> { where("kind NOT IN (?)", Membership.kinds_for(:individual, :friend)) }
+  scope :developer, -> { where(kind: kinds_for(:individual)) }
+  scope :company, -> { where(kind: kinds_for(MembershipPlan.company_ids)) }
 
   scope :featured_companies, -> {
-    where(kind: Membership.kinds_for(:corporate_emerald, :corporate_sapphire, :corporate_ruby))
-  }
-  scope :nonfeatured_companies, -> { where(kind: MembershipPlan.featured_ids) }
+    where(kind: kinds_for(MembershipPlan.featured_ids)) }
+  scope :nonfeatured_companies, -> {
+    where(kind: kinds_for(MembershipPlan.nonfeatured_ids)) }
 
   belongs_to :user
 
