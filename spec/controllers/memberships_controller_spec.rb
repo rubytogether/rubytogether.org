@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe MembershipsController, type: :controller do
-  let(:user) { double("User", stripe_id: "c_1", email: "alice@example.com") }
+  let(:user) { double("User", stripe_id: "c_1", email: "alice@example.com", devise_scope: :user) }
 
   describe "create" do
     before do
