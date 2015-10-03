@@ -15,7 +15,8 @@ Rails.application.routes.draw do
     "/join" => "/",
     "/plans" => "/roadmap",
     "/projects" => "/roadmap",
-    "/why" => "/developers"
+    "/why" => "/developers",
+    "/membership/new" => "/companies"
   }
 
   redirects.each do |page, destination|
