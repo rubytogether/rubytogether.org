@@ -1,7 +1,7 @@
 require "create_membership"
 
 class MembershipsController < ApplicationController
-  before_action :authenticate_member!, except: [:new, :create]
+  before_action :token_authenticate_user!, only: [:show]
   after_action :set_cache_control_headers, only: [:new]
 
   def create
@@ -78,7 +78,7 @@ private
     render json: {result: "failure", message: error}
   end
 
-  def authenticate_member!
+  def token_authenticate_user!
     user = User.with_reset_password_token(params[:token]) if params.has_key?(:token)
     sign_in(user) if user
 
