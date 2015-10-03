@@ -6,7 +6,7 @@ RSpec.describe NewsController, type: :controller do
 
     it "renders" do
       expect(response.code).to eq("200")
-      expect(response).to render_template "news/2015-03-17-announcing-ruby-together"
+      expect(response).to render_template "layouts/news"
     end
   end
 end
