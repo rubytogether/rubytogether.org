@@ -13,16 +13,16 @@
     <%= @other_companies.map{|n, u| u.nil? ? n : link_to(n, u) }.to_sentence.html_safe %>.
   </p>
 
-  <p class="center">Didn’t see your company’s name? <%= link_to "Add it now!", companies_path %></p>
+  <p class="center">Didn’t see your company’s name? <%= link_to "Add it!", companies_path %></p>
 </section>
 
 <section class="group">
-  <h3>Individual Members</h3>
+  <h3>Developer Members</h3>
   <%- @individual << link_to("viewers like you", developers_path) -%>
   <p>
-    Our <%= @individual_count %> <%= "individual member".pluralize(@individual_count) %>
+    Our <%= @individual_count %> <%= "developer member".pluralize(@individual_count) %>
     include <%= @individual.to_sentence.html_safe %>.
   </p>
 
-  <p class="center"><%= link_to "Become an individual member now!", developers_path %></p>
+  <p class="center"><%= link_to "Become a member today!", developers_path %></p>
 </section>
