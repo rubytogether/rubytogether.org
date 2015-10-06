@@ -1,5 +1,8 @@
+sudo: false # container infrastructure
 language: ruby
+before_script: bin/setup
 bundler_args: "--without production development"
+cache: bundler
 notifications:
   slack:
     secure: A2U1yGwdkRCqimsBAUFFVxfqg0EqNEFHkQWLWpRcv5re4wJWKaDeZy2TAC50Ig+k+03ee3bEFs9ldgqvrj/ndPijqPShQq0vxKRTIVmVpyYB5iPLilI8bfgJPdBElvU12pEiIOs4fRegq3Xq3Gq/rMht/o2lBJEeJQFj3SP3nrg=
