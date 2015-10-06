@@ -7,6 +7,8 @@ module StripeEvent
 
       user = User.includes(:membership).where(stripe_id: customer.id).first
       user.stripe_customer = customer if user
+
+      Rollbar.scope!(person: {id: user.id, email: user.email})
       user
     end
 
