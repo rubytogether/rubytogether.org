@@ -178,8 +178,6 @@ GEM
     premailer-rails (1.8.2)
       actionmailer (>= 3, < 5)
       premailer (~> 1.7, >= 1.7.9)
-    pretty_backtrace (0.1.1)
-      debug_inspector (~> 0.0.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -327,7 +325,6 @@ DEPENDENCIES
   pg
   postmark-rails
   premailer-rails
-  pretty_backtrace
   pry-byebug
   pry-rails
   puma (~> 2.12)

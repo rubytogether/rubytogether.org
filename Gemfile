@@ -33,7 +33,6 @@ end
 
 group :development, :test do
   gem "dotenv-rails", "~> 2.0"
-  gem "pretty_backtrace", require: "pretty_backtrace/enable"
   gem "pry-byebug"
   gem "rspec-rails"
 end
