@@ -36,5 +36,6 @@
   <%= javascript_include_tag "application" %>
   <%= content_for(:script) if content_for?(:script) %>
   <%= render "google_analytics" if Rails.env.production? %>
+  <%= render "intercom" %>
 </body>
 </html>
