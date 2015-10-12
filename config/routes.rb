@@ -36,5 +36,5 @@ Rails.application.routes.draw do
   resources :news, only: [:index, :show]
 
   mount StripeEvent::Engine, at: "/stripe/events"
-  devise_for :users, path: ""
+  devise_for :users, path: "", controllers: {sessions: "sessions"}
 end
