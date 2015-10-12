@@ -20,6 +20,8 @@ class MembershipsController < ApplicationController
   end
 
   def show
+    # only set intercom user on this uncached page
+    @intercom = Intercom.settings(current_user)
     get_membership
   end
 
