@@ -382,22 +382,20 @@ input[type="submit"] {
 }
 
 .inline-field {
-  width: 516px;
   margin: 15px auto;
 
   label {
-    float: left;
-    margin-top: 12px;
-    margin-right: 15px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
   }
 
   input {
-    float: left;
     margin-right: 0;
   }
 
   input[type="email"] {
-    margin-right: 15px;
+    margin-right: 10px;
   }
 }
 
