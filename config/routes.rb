@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     "/benefits" => "/",
     "/contact" => "/",
     "/friends" => "/developers",
-    "/join" => "/",
+    "/join" => "/#join",
     "/plans" => "/roadmap",
     "/projects" => "/roadmap",
     "/why" => "/developers",
