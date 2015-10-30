@@ -15,7 +15,6 @@ module StripeEvent
           monthly_count = count - prepaid.fetch(plan, []).size
           total += plan.amount * monthly_count
         end
-        estimate += 80000 # EY is 2x Emerald
         estimate += 52000 # Stripe pays for 13 individual memberships, too
         message << ". Projected revenue now #{number_to_currency(estimate/100)} per month."
 
