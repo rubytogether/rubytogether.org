@@ -4,10 +4,12 @@
   <%= title_tag %>
   <meta name="viewport" content="width=500">
   <link href="/news.xml" rel="alternate" title="Ruby Together News" type="application/atom+xml">
-  <%= render "favicons" %>
   <%= stylesheet_link_tag "application", media: "all" %>
-  <%= csrf_meta_tags %>
+  <%= javascript_include_tag "https://checkout.stripe.com/checkout.js", async: true %>
+  <%= javascript_include_tag "application", async: true %>
+  <%= render "favicons" %>
   <%= stripe_meta_tag %>
+  <%= csrf_meta_tags %>
 </head>
 <body>
   <header>
@@ -32,8 +34,6 @@
 
   <img class="spinner" src="/images/rubies.png" width="100" style="display: none;">
   <%= stylesheet_link_tag "campton", media: "all" %>
-  <%= javascript_include_tag "https://checkout.stripe.com/checkout.js" %>
-  <%= javascript_include_tag "application" %>
   <%= content_for(:script) if content_for?(:script) %>
   <%= render "google_analytics" if Rails.env.production? %>
   <%= render "intercom" %>
