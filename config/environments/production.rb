@@ -20,9 +20,11 @@ Rails.application.configure do
   # NGINX, varnish or squid.
   # config.action_dispatch.rack_cache = true
 
-  # Disable serving static files from the `/public` folder by default since
-  # Apache or NGINX already handles this.
+  # Serve static files when running on e.g. Heroku
   config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
+
+  # Set static files to be cached forever
+  config.static_cache_control = "public, s-maxage=15552000, max-age=2592000"
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
