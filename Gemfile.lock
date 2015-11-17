@@ -75,6 +75,7 @@ GEM
     curb-fu (0.6.2)
       curb (>= 0.5.4.0)
       rack-test (>= 0.2.0)
+    currentsh (0.3.2)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
     devise (3.5.2)
@@ -312,6 +313,7 @@ PLATFORMS
 
 DEPENDENCIES
   compass-rails (~> 2.0.4)
+  currentsh
   devise
   dotenv-rails (~> 2.0)
   fastly-rails
