@@ -17,7 +17,7 @@
       <%- if content_for?(:header) -%>
         <%= content_for :header %>
       <%- else -%>
-          <%= link_to image_tag("rubies.png", width: "200"), "/" %>
+          <%= link_to image_tag("rubies.svg", width: "200"), "/" %>
           <%= content_tag :h1, title || "Ruby Together" %>
       <%- end -%>
     </section>
@@ -32,7 +32,7 @@
     <%= render "footer" %>
   </footer>
 
-  <img class="spinner" src="/images/rubies.png" width="100" style="display: none;">
+  <img class="spinner" src="/images/rubies.svg" width="100" style="display: none;">
   <%= stylesheet_link_tag "campton", media: "all" %>
   <%= content_for(:script) if content_for?(:script) %>
   <%= render "google_analytics" if Rails.env.production? %>
