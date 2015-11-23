@@ -24,7 +24,7 @@ module Slack
 
     def invite(email)
       res = post("/api/users.admin.invite", token: @api_key, email: email)
-      raise "Slack invitation failed" unless res.status.code == 200
+      raise "Slack invitation failed: #{response_debug(res)}" unless res.status.ok?
     end
 
     def deactivate(email)
@@ -32,9 +32,8 @@ module Slack
       return unless user_id
 
       res = post("/api/users.admin.setInactive",
-        user: user_id, set_active: true, token: @api_key
-      )
-      raise "Slack deactivate failed" unless res.status.code == 200
+        user: user_id, set_active: true, token: @api_key)
+      raise "Slack deactivate failed: #{response_debug(res)}" unless res.status.ok?
     end
 
   private
@@ -42,6 +41,10 @@ module Slack
     def post(path, data)
       url = File.join("https://#{@team}.slack.com", path)
       HTTP.post(url, form: data)
+    end
+
+    def response_debug(res)
+      "HTTP #{res.status.code} #{res.status.reason}\n#{res.body}"
     end
 
     def user_id_for(email)

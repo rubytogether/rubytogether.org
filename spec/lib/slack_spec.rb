@@ -12,13 +12,14 @@ RSpec.describe Slack::Team do
     end
 
     it "asks Slack to send an invite" do
-      stub_invite double(status: double(code: 200))
+      stub_invite double(status: double(ok?: true))
       slack.invite("a@b.c")
     end
 
     it "raises on errors" do
-      stub_invite double(status: double(code: 403))
-      expect { slack.invite("a@b.c") }.to raise_error("Slack invitation failed")
+      stub_invite double(body: "hi", status: double(
+        ok?: false, code: 9001, reason: "noep"))
+      expect { slack.invite("a@b.c") }.to raise_error("Slack invitation failed: HTTP 9001 noep\nhi")
     end
   end
 end
