@@ -67,6 +67,9 @@ class CreateMembership
 
   def invite_to_slack(user, plan)
     Slack.invite(user.email) unless plan.id == "friend"
+  rescue => e
+    # Slack errors should not block signup, so report and continue
+    Rollbar.error(e)
   end
 
   def plan_for(kind)
