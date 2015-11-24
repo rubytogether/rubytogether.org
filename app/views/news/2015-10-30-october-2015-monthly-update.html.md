@@ -13,7 +13,7 @@ In the last month, André spoke at ROSSConf, the [Ruby Open Source Software Conf
 
 Attendees at both conferences were very positive and excited about the idea of Ruby Together, but most of them were hearing about Ruby Together for the first time. Since it seems like most Ruby developers and companies haven't heard about Ruby Together yet, we're going to work on doing more conferences and outreach in the coming months.
 
-Since the last update, we've had three news companies join: [Contributed Systems](http://contribsys.com) (makers of the popular [Sidekiq](http://sidekiq.org) gem), [Estately](http://estately.com), and [DevMynd](http://devmynd.com). We've had four new individual members join: Dave H, Sudodoki, Rebecca Skinner, and Raphael Campardou. Thanks for your support, everyone!
+Since the last update, we've had three new companies join: [Contributed Systems](http://contribsys.com) (makers of the popular [Sidekiq](http://sidekiq.org) gem), [Estately](http://estately.com), and [DevMynd](http://devmynd.com). We've had four new individual members join: Dave H, Sudodoki, Rebecca Skinner, and Raphael Campardou. Thanks for your support, everyone!
 
 With those new members, our projected monthly income is now $13,100 per month. With that income, we'll be able to not only pay for maintenance work on Bundler and RubyGems.org, but also pay for outreach and evangelism work to let more companies know about what we're doing. With more companies, we'll be able to support more Ruby open source projects and get things done even faster. Hooray!
 
