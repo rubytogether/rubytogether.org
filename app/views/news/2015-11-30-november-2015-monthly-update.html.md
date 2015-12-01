@@ -29,7 +29,7 @@ Thank you to everyone who signed up! With the new memberships, our projected mon
 
 ### Bundler news
 
-This was a great month for Bundler, as well. A prerelease of version 1.11 has been pushed to RubyGems.org, and anyone can use it with `gem install bundler --pre`. In a week or so, once we've seen it working in the wild, we'll update the website at [bundler.io][http://bundler.io] and announce the changes with a full blog post there. In the meantime, here's a brief summary of what's new:
+This was a great month for Bundler, as well. A prerelease of version 1.11 has been pushed to RubyGems.org, and anyone can use it with `gem install bundler --pre`. In a week or so, once we've seen it working in the wild, we'll update the website at [bundler.io](http://bundler.io) and announce the changes with a full blog post there. In the meantime, here's a brief summary of what's new:
 
   - Dramatically improved messages on permission errors
   - Resolver conflict messages now show the conflicting version numbers
