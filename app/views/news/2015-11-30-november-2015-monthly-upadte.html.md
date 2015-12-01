@@ -1,9 +1,11 @@
 ---
-summary: "Since last month, Ruby Together paid for 40 hours of developer time on Bundler and RubyGems.org, had 7 new members join, and visited ROSSConf and EuRuKo to hear from the community."
+summary: "In November, we went to RubyConf, hired @cczona, gave away 250 shirts, paid for 40 hours of developer work on Bundler and RubyGems.org. We also had 8 new developers and 9 new companies join as members!"
 ---
 <% title "November 2015 monthly update" %>
 
-Hello, and welcome to the Ruby Together update for the month of November! This was an extremely eventful month: we paid for 40 hours of development work on Bundler and RubyGems.org, and we were joined by a record 17 (!) new members. We also added a new Ruby Together team member, spoke at RubyConf 2015 in San Antonio, Texas, and lots more. Keep reading to hear about everything we managed to do this month, and if you're not a member yet, [sign up today!][join] to help us get even more done. 
+Hello, and welcome to the Ruby Together update for the month of November! This was an extremely eventful month: we paid for 40 hours of development work on Bundler and RubyGems.org, and we were joined by a record 17 (!) new members. We also added a new Ruby Together team member, spoke at RubyConf 2015 in San Antonio, Texas, and lots more.
+
+Keep reading to hear about everything we managed to do this month, and if you're not a member yet, [sign up today!][join] to help us get even more done. 
 
 [join]: https://rubytogether.org/#join
 
