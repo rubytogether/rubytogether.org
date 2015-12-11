@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   scope :live_login_token, -> { where("login_token_created_at > ?", Time.now) }
   scope :with_login_token, -> (token) { live_login_token.where(login_token: token) }
 
+  after_update :update_stripe_customer
   after_destroy :delete_stripe_customer
 
   attr_writer :stripe_customer
@@ -27,9 +28,17 @@ private
     !password.nil?
   end
 
+  def update_stripe_customer
+    return if stripe_customer.nil?
+    if stripe_customer.email != email
+      stripe_customer.email = email
+      stripe_customer.save
+    end
+  end
+
   def delete_stripe_customer
-    customer = stripe_id && Stripe::Customer.retrieve(stripe_id)
-    customer && customer.delete
+    return if stripe_customer.nil?
+    stripe_customer.delete
   rescue Stripe::InvalidRequestError => e
     Rails.logger.warn "Deleting stripe customer #{stripe_id} raised #{e}: #{e.message}"
   end
