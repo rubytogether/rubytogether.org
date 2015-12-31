@@ -55,5 +55,9 @@ namespace :stats do
     puts "#{people.count} new #{"person".pluralize(people.count)}"
     puts "#{companies.count} new #{"company".pluralize(companies.count)}"
     puts "#{new_members.size} new #{"member".pluralize(new_members.size)} total"
+    puts
+    estimate = MembershipPlan.projected_monthly_revenue(Membership.prepaid)
+    dollars = ActiveSupport::NumberHelper.number_to_currency(estimate/100)
+    puts "Projected monthly income is #{dollars} per month."
   end
 end

@@ -25,6 +25,16 @@ MembershipPlan = Struct.new(:id, :shortname, :name, :interval, :amount, :currenc
     [:corporate_topaz, :corporate_jade, :corporate_onyx]
   end
 
+  def self.projected_monthly_revenue(prepaid = {})
+    prepaid_plans = prepaid.group_by(&:plan)
+    estimate = subscriber_counts.inject(0) do |total, (plan, count)|
+      monthly_count = count - prepaid_plans.fetch(plan, []).size
+      total += plan.amount * monthly_count
+    end
+
+    estimate + 52000 # Stripe pays for 13 individual memberships, too
+  end
+
   def self.subscriber_counts
     all.map do |id, plan|
       [plan, plan.subscriber_count]
