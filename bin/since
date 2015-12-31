@@ -1,3 +1,9 @@
 #!/bin/bash
 
+if [[ -z $1 ]]; then
+  echo "USAGE: $0 DATE"
+  echo "  prints new members since DATE"
+  exit 1
+fi
+
 exec production surrogate bin/rake stats:since[$1]
