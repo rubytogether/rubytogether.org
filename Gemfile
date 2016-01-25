@@ -43,6 +43,6 @@ group :production do
 end
 
 group :test do
-  gem "webmock"
+  gem "webmock", require: false
   gem "vcr"
 end
