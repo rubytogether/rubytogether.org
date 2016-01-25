@@ -36,7 +36,7 @@ RSpec.describe "Stripe webhooks", :vcr do
 
   describe "customer.subscription.created" do
     let(:message) {
-      "1 Onyx Memberbership, 0 Emerald Memberberships, 0 Jade Memberberships, 2 Ruby Memberships, 0 Sapphire Memberships, 0 Topaz Memberships, 1 Friend of Ruby Together, and 3 Developer Memberships. Projected revenue now $11,500.00 per month."
+      "1 Onyx Memberbership, 0 Emerald Memberberships, 0 Jade Memberberships, 2 Ruby Memberships, 0 Sapphire Memberships, 0 Topaz Memberships, 1 Friend of Ruby Together, and 3 Developer Memberships. Projected revenue now $10,700.00 per month."
     }
 
     it "runs our hook" do
@@ -47,7 +47,7 @@ RSpec.describe "Stripe webhooks", :vcr do
 
   describe "customer.subscription.destroyed" do
     let(:message) {
-      "1 Onyx Memberbership, 0 Emerald Memberberships, 0 Jade Memberberships, 2 Ruby Memberships, 0 Sapphire Memberships, 0 Topaz Memberships, 0 Friends of Ruby Together, and 0 Developer Memberships. Projected revenue now $11,370.00 per month."
+      "1 Onyx Memberbership, 0 Emerald Memberberships, 0 Jade Memberberships, 2 Ruby Memberships, 0 Sapphire Memberships, 0 Topaz Memberships, 0 Friends of Ruby Together, and 0 Developer Memberships. Projected revenue now $10,570.00 per month."
     }
 
     it "runs our hook" do
