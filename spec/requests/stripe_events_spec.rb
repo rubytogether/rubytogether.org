@@ -38,8 +38,13 @@ RSpec.describe "Stripe webhooks", :vcr do
     let(:message) {
       "1 Onyx Memberbership, 0 Emerald Memberberships, 0 Jade Memberberships, 2 Ruby Memberships, 0 Sapphire Memberships, 0 Topaz Memberships, 1 Friend of Ruby Together, and 3 Developer Memberships. Projected revenue now $10,700.00 per month."
     }
+    let(:membership) { double(Membership) }
+    let(:user) { double(User, membership: membership) }
 
     it "runs our hook" do
+      expect(User).to receive(:find_by_stripe_id).with("cus_5zX7jk6DxkTfzh").and_return(user)
+      expect(membership).to receive(:update).with(kind: "individual")
+
       expect(Slack).to receive(:say).with(message, slack_options)
       post "/stripe/events", id: "evt_15nY3IAcWgwn5pBtisl4M4d6"
     end

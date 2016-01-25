@@ -3,6 +3,9 @@ module StripeEvent
     class Changed < Base
 
       def call(event)
+        user = User.find_by_stripe_id(event.data.object.customer)
+        user.try(:membership).try(:update, kind: event.data.object.plan.id)
+
         subscriber_counts = MembershipPlan.subscriber_counts
         message = subscriber_counts.map do |plan, count|
           "#{count} #{plan.name.pluralize(count)}"
