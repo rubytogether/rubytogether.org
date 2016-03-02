@@ -9,7 +9,7 @@ If you're not a member yet, help us do even more next month by [joining today](h
 
 ## Ruby Together news
 
-The end of December and January were a pretty quiet time, as usual for most businesses around the world. While it was quiet, we were still working away, and we have hired two more developers to work on Ruby gem infrastructure! Bundler maintainer [Samuel E. Giddins](https://twitter.com/segiddins) will be working on both Bundler and RubyGems when his studies permit. Also stepping in to give a hand with RubyGems work is [Marie Markwell](http://twitter.com/duckinator). See below for the results on RubyGems—we're making good progress.
+The end of December and January were a pretty quiet time, as usual for most businesses around the world. While it was quiet, we were still working away, and we have hired two more developers to work on Ruby gem infrastructure! Bundler maintainer [Samuel E. Giddins](https://twitter.com/segiddins) will be working on both Bundler and RubyGems when his studies permit. Also stepping in to give a hand with RubyGems work is [Ellen Marie Marshall](http://twitter.com/duckinator). See below for the results on RubyGems—we're making good progress.
 
 We had seven new developers join as members, including Sean Moubry, Simon Starr, Veronica Ray, Terry Finn, Barrett Clark, and Chris Thorn. Two companies joined, [Simplificator AG](http://www.simplificator.com/en) and [Travis CI](https://travis-ci.com). Travis CI has been a long-time supporter of Ruby open source, and provides free infrastructure to run the tests for Bundler, RubyGems, RubyGems.org, and countless other open source projects. With these new members, our projected monthly income is now $16,830.
 
