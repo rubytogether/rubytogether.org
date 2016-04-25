@@ -35,7 +35,7 @@ Some highlights from those changes include support for Ruby 2.3's frozen string 
 
 ## Budget & Expenses
 
-From December 19 to January 18, including Travis CI paying up front for an entire year, Ruby Together took in $18,556.94. In total, we spent $21,355.40. Here's a breakdown of where the money went:
+From January 19 to February 19, including Travis CI paying up front for an entire year, Ruby Together took in $18,556.94. In total, we spent $21,355.40. Here's a breakdown of where the money went:
 
   - $4,500 for 30 hours of developer time on Bundler at $150/hour
   - $2,887.50 for 19.25 hours of developer time on RubyGems.org at $150/hour
