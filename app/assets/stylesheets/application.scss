@@ -189,20 +189,40 @@ section.content {
   font-size: 28px;
 }
 
-.hollow-button {
+%button {
   @extend %body-text;
   font-size: 16px;
   display: inline-block;
-  background-color: $light;
   padding: 10px 15px 9px 15px;
   margin: 2px 0;
   border: 2px solid $dark;
   border-radius: 4px;
 
   &:hover {
+    text-decoration: none;
+  }
+}
+
+.hollow-button {
+  @extend %button;
+
+  background-color: $light;
+
+  &:hover {
     background-color: $dark;
     color: $light;
-    text-decoration: none;
+  }
+}
+
+.call-to-action {
+  @extend %button;
+
+  background-color: $red;
+  color: $light;
+
+  &:hover {
+    background-color: $pink;
+    color: $dark;
   }
 }
 
