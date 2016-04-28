@@ -25,7 +25,17 @@
 </section>
 
 <section>
-  <p>Support us along with <%= link_to "Basecamp", "http://basecamp.com" %>, <%= link_to "Stripe", "http://stripe.com" %>, <%= link_to "Travis CI", "https://travis-ci.com" %>, <%= link_to "Airbnb", "http://airbnb.com" %>, <%= link_to "Yammer", "http://yammer.com" %>, <%= link_to "GitLab", "http://gitlab.com" %>, <%= link_to "Kickstarter", "http://kickstarter.com" %>, <%= link_to "Square", "http://square.com" %>, and <%= link_to "many others", members_path %>!</p>
+  <p>
+    Support us along with companies like
+    <% @companies.each do |company, url| %>
+      <%= link_to company, url %>,
+    <% end %>
+    individuals like
+    <% @individuals.each do |individual| %>
+      <strong><%= individual %></strong>,
+    <% end %>
+    and <%= link_to "many others", members_path %>!
+  </p>
 </section>
 
 <%= render "join" %>
