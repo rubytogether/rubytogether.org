@@ -221,6 +221,17 @@ section.content {
   }
 }
 
+.hollow-button {
+  @extend %button;
+
+  background-color: $light;
+
+  &:hover {
+    background-color: $dark;
+    color: $light;
+  }
+}
+
 .join-box > .learn-more > a {
   font-size: 18px;
 }
