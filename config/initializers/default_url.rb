@@ -1,6 +1,12 @@
 require 'uri'
 
-uri = URI.parse ENV.fetch('DEFAULT_URL')
+app_url = if ENV.has_key?("HEROKU_APP_NAME")
+  "https://" + ENV["HEROKU_APP_NAME"] + ".herokuapp.com"
+else
+  ENV.fetch("DEFAULT_URL")
+end
+
+uri = URI.parse app_url
 
 defaults = {
   host: uri.host,

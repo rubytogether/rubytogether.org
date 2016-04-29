@@ -21,6 +21,12 @@
     "LIBRATO_SOURCE": {
       "required": true
     },
+    "HEROKU_APP_NAME": {
+      "required": true
+    },
+    "HEROKU_PARENT_APP_NAME": {
+      "required": true
+    },
     "NEW_RELIC_APP_NAME": {
       "required": true
     },
