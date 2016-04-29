@@ -1,0 +1,72 @@
+{
+  "name": "rubytogether.org",
+  "scripts": {
+  },
+  "env": {
+    "CDN_HOST": {
+      "required": true
+    },
+    "DEFAULT_URL": {
+      "required": true
+    },
+    "INTERCOM_KEY": {
+      "required": true
+    },
+    "LANG": {
+      "required": true
+    },
+    "LIBRATO_SOURCE": {
+      "required": true
+    },
+    "NEW_RELIC_APP_NAME": {
+      "required": true
+    },
+    "POSTMARK_API_KEY": {
+      "required": true
+    },
+    "POSTMARK_API_TOKEN": {
+      "required": true
+    },
+    "POSTMARK_INBOUND_ADDRESS": {
+      "required": true
+    },
+    "POSTMARK_SMTP_SERVER": {
+      "required": true
+    },
+    "RACK_ENV": {
+      "required": true
+    },
+    "RAILS_ENV": {
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "required": true
+    },
+    "STRIPE_PUBLIC_KEY": {
+      "required": true
+    },
+    "STRIPE_SECRET_KEY": {
+      "required": true
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1
+    },
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "heroku-postgresql",
+    "papertrail",
+    "newrelic",
+    "rollbar",
+    "librato"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ]
+}
