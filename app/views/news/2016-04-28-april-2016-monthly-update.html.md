@@ -78,6 +78,5 @@ Some evangelism and outreach work over the past six months had gone unbilled, an
 
 Check back next month to hear about board member elections, as well as the results of our new hires this month. By that time we will also have rolled out a set of plans for how we intend on updating Bundler, RubyGems, and Ruby Together in general. Towards the future!
 
-Until next time,
+Until next time,<br>
 André, Lynn, and the Ruby Together team
-"Not yet a member? Sign up now to help keep Ruby Together's work going."
