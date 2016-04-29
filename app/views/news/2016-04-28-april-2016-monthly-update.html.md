@@ -50,13 +50,13 @@ We also saw 29 merged pull requests and 67 commits from 8 authors for the Bundle
 
 ## rubygems.org news
 
-Rubygems.org got 13 merge requests and 85 commits from 8 authors. This month involved a lot of cleanup work, and a little bit of infrastructure changes to support the Bundler index format.
+RubyGems.org got 13 merge requests and 85 commits from 8 authors. This month involved a lot of cleanup work, and a little bit of infrastructure changes to support the Bundler index format.
 
 [rubygems.org-repo]: https://github.com/rubygems/rubygems.org
 
 ## rubygems news
 
-[Rubygems][rubygems-repo] has 15 merged pull requests and 24 commits from 10 authors. Rubygems released [version 2.6.4][rubygems-release] featuring symlinks on Windows, and using less hard coded strings. Rubygems releases have been fairly consistent since 2.5.2 at the beginning of this year, and we intent to keep them that way!
+[RubyGems][rubygems-repo] has 15 merged pull requests and 24 commits from 10 authors. RubyGems released [version 2.6.4][rubygems-release] featuring symlinks on Windows, and using less hard coded strings. RubyGems releases have been fairly consistent since 2.5.2 at the beginning of this year, and we intent to keep them that way!
 
 [rubygems-repo]: https://github.com/rubygems/rubygems
 [rubygems-release]: http://blog.rubygems.org/2016/04/26/2.6.4-released.html
