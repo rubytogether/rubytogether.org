@@ -6,6 +6,9 @@
     "CDN_HOST": {
       "required": true
     },
+    "DATABASE_URL": {
+      "required": true
+    },
     "DEFAULT_URL": {
       "required": true
     },
