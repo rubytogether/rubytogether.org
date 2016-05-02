@@ -210,10 +210,13 @@ section.content {
   }
 }
 
+.solid-button {
+  @extend %button;
+  background-color: $red;
+  color: $blue;
 
   &:hover {
-    background-color: $dark;
-    color: $light;
+    background-color: $dark_red;
     text-decoration: none;
   }
 }
