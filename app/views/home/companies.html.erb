@@ -19,9 +19,7 @@
 
   <ul>
     <li>Top-notch work on the Ruby tools your developers use, for a miniscule fraction of the costs involved.</li>
-    <li>Monthly <%= link_to "progress updates", news_index_path %> showing exactly where your money goes. We'll use it wisely, and you'll see how.</li>
-    <li>Voting rights to elect Ruby Together <%= link_to "board members", team_path(anchor: "board") %>, who decide which projects to fund are most in the members' interests.</li>
-    <li>Access to some of the best Ruby developers in the world. Chat with other members and the Ruby Together team in our members-only Slack channel.</li>
+    <%= render "member_benefit_items" %>
   </ul>
 
   <p><%= link_to "Our team", team_path %> has a proven track record of delivering year-over-year improvements to Ruby's <%= link_to "public infrastructure", roadmap_path %>. With funding, we'll transform the tools you use so that they work for you. Like tools should.</p>
@@ -33,9 +31,7 @@
   <% end %>
 </section>
 
-<section>
-  <p class="aside">Ruby Together is a 501(c)(6) non-profit trade association, which makes membership dues tax deductible. (Check with your accountant to be sure, though.)</p>
-</section>
+<%= render "ruby_together_is" %>
 
 <% content_for :corporate_faq do %>
   <p class="callout">Why do you limit how much I can give?</p>
@@ -48,3 +44,9 @@
 <% end %>
 
 <%= render 'faq' %>
+
+<section class="center">
+  <p>
+    <%= link_to "Join Ruby Together", companies_path(anchor: "plans"), class: "solid-button" %>
+  </p>
+</section>

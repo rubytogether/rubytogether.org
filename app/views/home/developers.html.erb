@@ -8,9 +8,7 @@
   <h4>When you support Ruby Together, you get:</h4>
 
   <ul>
-    <li>Monthly <%= link_to "progress updates", news_index_path %> showing exactly where your money goes. We'll use it wisely, and you'll see how.</li>
-    <li>Voting rights to elect Ruby Together <%= link_to "board members", team_path(anchor: "board") %>, who decide which projects to fund for the greatest community impact.</li>
-    <li>Access to some of the best Ruby developers in the world. Chat with other members and the Ruby Together team in our members-only Slack channel.</li>
+    <%= render "member_benefit_items" %>
   </ul>
 
   <p><%= link_to "Our team", team_path %> has a proven track record of delivering year-over-year improvements to Ruby's <%= link_to "public infrastructure", roadmap_path %>. With funding, we'll transform the tools you use so that they work for you. Like tools should.</p>
@@ -20,24 +18,25 @@
   <section class="join-box" id="plans">
     <p class="title">Developer Membership</p>
     <p class="price"><span class="currency">$</span>40 per month</p>
-    <p>Annual vote on Ruby Together board members</p>
-    <p>Monthly newsletter with progress updates</p>
-    <p>Invitation to members-only Slack team for group chat</p>
-    <p class="link"><%= link_to_plan "Become a member!", "individual" %></p>
+    <p>Annual vote on Ruby Together board members,</p>
+    <p>Monthly newsletter with progress updates,</p>
+    <p>Invitation to members-only Slack team for group chat.</p>
+    <p class="link"><%= link_to_plan "Become a member!", "individual", class: "solid-button" %></p>
   </section>
 
   <section class="join-box">
     <p class="title">Friends of Ruby Together</p>
     <p class="price"><span class="currency">$</span>10 per month</p>
-    <p>Don't have $40? You can still support our work
-    <p>Membership benefits are not included</p>
-    <p class="link"><%= link_to_plan "Be a friend!", "friend" %></p>
-    <p>Or contribute any amount, like say, $<%= text_field_tag "one-time-amount", "15", class: "inline", style: "width: 1.2em; padding: 5px 4px 0 4px; margin: -4px 2px 0 0;" %> <%= link_to "just this once", "javascript:;", "data-amount-input" => "one-time-amount", "data-charge" => true, "data-charge-name" => "Ruby Together" %>.
+    <p>Membership benefits are not included.</p>
+    <p class="link"><%= link_to_plan "Be a friend!", "friend", class: "solid-button" %></p>
+    <p>
+      Or contribute any amount, like say,
+      $<%= text_field_tag "one-time-amount", "15", class: "inline", style: "width: 1.2em; padding: 5px 4px 0 4px; margin: -4px 2px 0 0;" %>
+      <%= link_to "just this once", "javascript:;", "data-amount-input" => "one-time-amount", "data-charge" => true, "data-charge-name" => "Ruby Together" %>.
+    </p>
   </section>
 </section>
 
-<section>
-  <p class="aside">Ruby Together is a 501(c)(6) non-profit trade association, which makes membership dues tax deductible. (Check with your accountant to be sure, though.)</p>
-</section>
+<%= render "ruby_together_is" %>
 
 <%= render "faq" %>

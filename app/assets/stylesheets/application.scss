@@ -90,19 +90,6 @@ header {
 
 footer {
   padding-bottom: 25px;
-
-  nav {
-    text-align: center;
-    font-size: 14px;
-
-    a {
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-  }
 }
 
 nav {
@@ -119,6 +106,20 @@ nav {
   .iconic {
     position: relative;
     top: 3px;
+  }
+
+  &.site-nav {
+    text-align: center;
+    font-size: 14px;
+
+    a {
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
   }
 }
 
