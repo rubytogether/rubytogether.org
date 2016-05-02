@@ -24,7 +24,7 @@ img.iconic {
 /* Theme-specific rules */
 
 .iconic * {
-  @include iconic-color($dark);
+  @include iconic-color($dark_blue);
 }
 
 .iconic .iconic-property-accent {
