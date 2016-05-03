@@ -6,21 +6,18 @@
 <section>
   <p class="center super-callout">Shared tools should work.</p>
 
+  <p>Ruby Together is a grassroots initiative commited to supporting the critical Ruby infrastructure you rely on: Bundler, RubyGems, and other shared tools.</p>
+
   <p>
     Join companies like
-    <% @companies.each do |company, url| %>
-      <%= link_to company, url %>,
-    <% end %>
-    individuals like
-    <% @individuals.each do |individual| %>
-      <strong><%= individual %></strong>,
-    <% end %>
+    <%= @companies.map { |company, url| link_to(company, url) }.to_sentence.html_safe %>,
+    and individuals like
+    <%= @individuals.map { |individual| content_tag(:strong, individual) }.to_sentence.html_safe %>
     and <%= link_to "many others", members_path %>
-    in supporting the critical Ruby infrastructure you rely on:
-    Bundler, Rubygems, and other shared tools.
+    supporting the Ruby ecosystem.
   </p>
 
-  <p>Let's improve Ruby, <i>together</i>.</p>
+  <p>Let's improve Ruby, together!</p>
 </section>
 
 <%= render "funding_levels" %>
