@@ -1,7 +1,7 @@
 @import "colors";
 
 %text {
-  color: $dark;
+  color: $dark_blue;
   font-family: "Campton", "Verdana", sans-serif;
 }
 
@@ -12,7 +12,7 @@
 
 body {
   @extend %body-text;
-  background-color: $light;
+  background-color: $blue;
 }
 
 h1 {

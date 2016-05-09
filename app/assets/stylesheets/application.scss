@@ -189,19 +189,34 @@ section.content {
   font-size: 28px;
 }
 
-.hollow-button {
+%button {
   @extend %body-text;
   font-size: 16px;
   display: inline-block;
-  background-color: $light;
   padding: 10px 15px 9px 15px;
   margin: 2px 0;
-  border: 2px solid $dark;
   border-radius: 4px;
+}
+
+.hollow-button {
+  @extend %button;
+  background-color: $blue;
+  border: 2px solid $dark_blue;
 
   &:hover {
-    background-color: $dark;
-    color: $light;
+    background-color: $dark_blue;
+    color: $blue;
+    text-decoration: none;
+  }
+}
+
+.solid-button {
+  @extend %button;
+  background-color: $red;
+  color: $blue;
+
+  &:hover {
+    background-color: $dark_red;
     text-decoration: none;
   }
 }
@@ -238,10 +253,10 @@ section.content {
 }
 
 .spinner {
-  @include filter(drop-shadow( 0px  5px 15px $light)
-                  drop-shadow( 5px  0px 15px $light)
-                  drop-shadow(-0px -5px 15px $light)
-                  drop-shadow(-5px -0px 15px $light));
+  @include filter(drop-shadow( 0px  5px 15px $blue)
+                  drop-shadow( 5px  0px 15px $blue)
+                  drop-shadow(-0px -5px 15px $blue)
+                  drop-shadow(-5px -0px 15px $blue));
   @include animation(spin 2s ease-in-out infinite);
 }
 
@@ -306,7 +321,7 @@ section.content {
       rotateZ(-90deg)
       translateX(50%)
     );
-    color: $light;
+    color: $blue;
   }
 
   .title {
@@ -362,8 +377,8 @@ button,
 input[type="submit"] {
   @extend %body-text;
   font-size: 16px;
-  background-color: $dark;
-  color: $light;
+  background-color: $dark_blue;
+  color: $blue;
   border: 0;
   border-radius: 4px;
   padding: 12px 15px 9px 15px;
@@ -373,10 +388,10 @@ input[type="submit"] {
 
   &:hover {
     cursor: pointer;
-    background-color: $light;
-    border: 2px solid $dark;
+    background-color: $blue;
+    border: 2px solid $dark_blue;
     padding: 10px 13px 7px 13px;
-    color: $dark;
+    color: $dark_blue;
   }
 }
 
