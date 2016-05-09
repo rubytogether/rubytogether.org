@@ -224,11 +224,11 @@ section.content {
 .hollow-button {
   @extend %button;
 
-  background-color: $light;
+  background-color: $blue;
 
   &:hover {
-    background-color: $dark;
-    color: $light;
+    background-color: $dark_blue;
+    color: $blue;
   }
 }
 
