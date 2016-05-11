@@ -6,8 +6,9 @@ module StripeEvent
       return if customer.respond_to?(:deleted) && customer.deleted
 
       user = User.includes(:membership).where(stripe_id: customer.id).first
-      user.stripe_customer = customer if user
+      return nil if user.nil?
 
+      user.stripe_customer = customer
       Rollbar.scope!(person: {id: user.id, email: user.email})
       user
     end
