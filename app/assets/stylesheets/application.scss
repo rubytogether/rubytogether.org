@@ -221,6 +221,17 @@ section.content {
   }
 }
 
+.hollow-button {
+  @extend %button;
+
+  background-color: $blue;
+
+  &:hover {
+    background-color: $dark_blue;
+    color: $blue;
+  }
+}
+
 .join-box > .learn-more > a {
   font-size: 18px;
 }
@@ -269,7 +280,7 @@ section.content {
   &:before {
     content: "►";
     position: absolute;
-    bottom: 22%;
+    bottom: 26%;
     left: 0;
     font-size: 30px;
   }
@@ -419,7 +430,7 @@ input[type="submit"] {
 
 .quote {
   font-style: italic;
-  padding: 15px 40px 0 40px;
+  padding-top: 15px;
   margin-bottom: 0;
 
   &:before {

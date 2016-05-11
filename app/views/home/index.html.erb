@@ -6,10 +6,21 @@
 <section>
   <p class="center super-callout">Shared tools should work.</p>
 
-  <p>Stop hoping that volunteers will have free time to maintain the Ruby developer tools that your work depends on.</p>
+  <p>Ruby Together is a grassroots initiative commited to supporting the critical Ruby infrastructure you rely on: Bundler, RubyGems, and other shared tools.</p>
+
+  <p>
+    Join companies like
+    <%= @companies.map { |company, url| link_to(company, url) }.to_sentence.html_safe %>,
+    and individuals like
+    <%= @individuals.map { |individual| content_tag(:strong, individual) }.to_sentence.html_safe %>
+    and <%= link_to "many others", members_path %>
+    supporting the Ruby ecosystem.
+  </p>
 </section>
 
 <section>
+  <h3>Our goal</h3>
+
   <ul>
     <li>Community funding allows Ruby Together to pay developers to work on improving <%= link_to "Bundler, RubyGems, and other shared tools", roadmap_path %>.</li>
     <li>The Ruby Together <%= link_to "board of directors", team_path %>, elected by members, selects the most impactful projects to fund.</li>
@@ -17,13 +28,19 @@
   </ul>
 </section>
 
-<section class="clearfix group">
-  <p class="quote">The more contributors can live off their open-source work, the more they'll be able to devote to that work and the better their software will be for everyone. This is why we've been contributing funds to the open-source infrastructure we rely on.</p>
-  <p class="attribution">— Andreas Fuchs, Stripe</p>
-</section>
+<%= render "progress_so_far" %>
 
-<section>
-  <p>Support us along with <%= link_to "Basecamp", "http://basecamp.com" %>, <%= link_to "Stripe", "http://stripe.com" %>, <%= link_to "Travis CI", "https://travis-ci.com" %>, <%= link_to "Airbnb", "http://airbnb.com" %>, <%= link_to "Yammer", "http://yammer.com" %>, <%= link_to "GitLab", "http://gitlab.com" %>, <%= link_to "Kickstarter", "http://kickstarter.com" %>, <%= link_to "Square", "http://square.com" %>, and <%= link_to "many others", members_path %>!</p>
+<p class="center super-callout">Let's improve Ruby, together!</p>
+
+<%= render "join" %>
+
+<%= render "funding_levels" %>
+
+<section class="clearfix group">
+  <blockquote>
+    <p class="quote">The more contributors can live off their open-source work, the more they'll be able to devote to that work and the better their software will be for everyone. This is why we've been contributing funds to the open-source infrastructure we rely on.</p>
+    <p class="attribution">— Andreas Fuchs, Stripe</p>
+  </blockquote>
 </section>
 
 <%= render "join" %>
