@@ -5,11 +5,10 @@
 
   <p>
     Join companies like
-    <%= @companies.map { |company, url| link_to(company, url) }.to_sentence.html_safe %>,
-    and individuals like
-    <%= @individuals.map { |individual| content_tag(:strong, individual) }.to_sentence.html_safe %>
-    and <%= link_to "many others", members_path %>
-    supporting the Ruby ecosystem.
+    <%= @companies.map { |company, url| link_to(company, url) }.to_sentence.html_safe %>;
+    individuals like
+    <%= @individuals.map { |individual| content_tag(:strong, individual) }.to_sentence.html_safe %>;
+    plus <%= link_to "many others", members_path %> supporting the Ruby ecosystem.
   </p>
 </section>
 
