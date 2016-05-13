@@ -6,7 +6,7 @@
   <link href="/news.xml" rel="alternate" title="Ruby Together News" type="application/atom+xml">
   <%= stylesheet_link_tag "application", media: "all" %>
   <%= javascript_include_tag "https://checkout.stripe.com/checkout.js", async: true %>
-  <%= javascript_include_tag "application", async: true %>
+  <%= javascript_include_tag "application", defer: true %>
   <%= render "favicons" %>
   <%= stripe_meta_tag %>
   <%= csrf_meta_tags %>
