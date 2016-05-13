@@ -11,6 +11,8 @@ group :server do
     watch(%r{config/locales/.+\.yml})
     watch(%r{(app|vendor)(/assets/\w+/(.+\.(scss|css|js|html|png|jpg))).*}) { |m| "/assets/#{m[3]}" }
   end
+
+  guard "hologram"
 end
 
 group :rspec do
