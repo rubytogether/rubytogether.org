@@ -12,7 +12,11 @@ group :server do
     watch(%r{(app|vendor)(/assets/\w+/(.+\.(scss|css|js|html|png|jpg))).*}) { |m| "/assets/#{m[3]}" }
   end
 
-  guard "hologram"
+  guard "hologram", config_path: "app/assets/hologram/hologram_config.yml" do
+    watch(%r{app/assets/stylesheets/.*css})
+    watch(%r{app/assets/hologram/doc_assets/*})
+    watch(%Q{app/assets/hologram/hologram_config.yml})
+  end
 end
 
 group :rspec do

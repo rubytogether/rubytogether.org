@@ -2,3 +2,4 @@
 /.env.local
 /log/*
 /tmp
+/public/styleguide
