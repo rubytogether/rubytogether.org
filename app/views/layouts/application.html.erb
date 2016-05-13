@@ -14,12 +14,8 @@
 <body>
   <header>
     <section style="clear: both;">
-      <%- if content_for?(:header) -%>
-        <%= content_for :header %>
-      <%- else -%>
-          <%= link_to image_tag("rubies.svg", width: "200"), "/" %>
-          <%= content_tag :h1, title || "Ruby Together" %>
-      <%- end -%>
+      <%= link_to image_tag("rubies.svg", width: "200"), "/" %>
+      <%= content_tag :h1, title || "Ruby Together" %>
     </section>
   </header>
   <%= render partial: "flashes" %>

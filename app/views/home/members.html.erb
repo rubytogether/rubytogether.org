@@ -24,5 +24,7 @@
     include <%= @individual.to_sentence.html_safe %>.
   </p>
 
-  <p class="center"><%= link_to "Become a member today!", developers_path %></p>
+  <p class="center">
+    <%= link_to "Become a member today!", developers_path, class: "solid-button" %>
+  </p>
 </section>

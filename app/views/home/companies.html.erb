@@ -19,75 +19,19 @@
 
   <ul>
     <li>Top-notch work on the Ruby tools your developers use, for a miniscule fraction of the costs involved.</li>
-    <li>Monthly <%= link_to "progress updates", news_index_path %> showing exactly where your money goes. We'll use it wisely, and you'll see how.</li>
-    <li>Voting rights to elect Ruby Together <%= link_to "board members", team_path(anchor: "board") %>, who decide which projects to fund are most in the members' interests.</li>
-    <li>Access to some of the best Ruby developers in the world. Chat with other members and the Ruby Together team in our members-only Slack channel.</li>
+    <%= render "member_benefit_items" %>
   </ul>
 
   <p><%= link_to "Our team", team_path %> has a proven track record of delivering year-over-year improvements to Ruby's <%= link_to "public infrastructure", roadmap_path %>. With funding, we'll transform the tools you use so that they work for you. Like tools should.</p>
 </section>
 
 <section id="plans" class="group">
-  <section class="join-box">
-    <p class="title">Ruby Member</p>
-    <p class="price"><span class="currency">$</span>5000 per month</p>
-    <p>Meet with the Ruby Together team about your infrastructure needs</p>
-    <p>Two annual guest blog posts from the Ruby Together team</p>
-    <p>Twice-monthly status reports with more detail</p>
-    <%= link_to_plan "Become a Ruby Member!", "corporate_ruby", class: "solid-button" %>
-  </section>
-
-  <section class="join-box">
-    <p class="title">Sapphire Member</p>
-    <p class="price"><span class="currency">$</span>2000 per month</p>
-    <p>Logo on conference talk slides thanking members</p>
-    <p>One annual guest blog post from the Ruby Together team</p>
-    <p>Customized thank you tweet each month by @rubytogether</p>
-    <%= link_to_plan "Become a Sapphire Member!", "corporate_sapphire", class: "solid-button" %>
-  </section>
-
-  <section class="join-box">
-    <p class="title">Emerald Member</p>
-    <p class="price"><span class="currency">$</span>800 per month</p>
-    <p>Prominent position in the Ruby Together member list</p>
-    <p>Recognition as new member in Ruby Together blog post</p>
-    <p>Thank you tweet from @rubytogether</p>
-    <%= link_to_plan "Become an Emerald Member!", "corporate_emerald", class: "solid-button" %>
-  </section>
-
-  <section class="join-box">
-    <p class="title">Topaz Member</p>
-    <p class="price"><span class="currency">$</span>200 per month</p>
-    <p>Annual vote on Ruby Together board members</p>
-    <p>Monthly newsletter with progress updates</p>
-    <p>Invitation to members-only Slack team for group chat</p>
-    <%= link_to_plan "Become a Topaz Member!", "corporate_topaz", class: "solid-button" %>
-  </section>
-
-  <section class="join-box">
-    <p class="title">Jade Member</p>
-    <p class="price"><span class="currency">$</span>100 per month</p>
-    <p>3+ developers</p>
-    <p>Vote on board members,<br>
-      get progress updates,<br>
-      and join the members Slack</p>
-    <%= link_to_plan "Become a Jade Member!", "corporate_jade", class: "solid-button" %>
-  </section>
-
-  <section class="join-box">
-    <p class="title">Onyx Member</p>
-    <p class="price"><span class="currency">$</span>50 per month</p>
-    <p>1–2 developers</p>
-    <p>Vote on board members,<br>
-      get progress updates,<br>
-      and join the members Slack</p>
-    <%= link_to_plan "Become an Onyx Member!", "corporate_onyx", class: "solid-button" %>
-  </section>
+  <% %w(onyx jade topaz emerald sapphire ruby).each do |membership| %>
+    <%= render "home/memberships/#{membership}" %>
+  <% end %>
 </section>
 
-<section>
-  <p class="aside">Ruby Together is a 501(c)(6) non-profit trade association, which makes membership dues tax deductible. (Check with your accountant to be sure, though.)</p>
-</section>
+<%= render "ruby_together_is" %>
 
 <% content_for :corporate_faq do %>
   <p class="callout">Why do you limit how much I can give?</p>
@@ -100,3 +44,9 @@
 <% end %>
 
 <%= render 'faq' %>
+
+<section class="center">
+  <p>
+    <%= link_to "Join Ruby Together", companies_path(anchor: "plans"), class: "solid-button" %>
+  </p>
+</section>
