@@ -26,7 +26,7 @@ group :development do
   gem "guard-livereload", "~> 2.4", require: false
   gem "guard-rails", require: false
   gem "guard-rspec", require: false
-  gem "hologram"
+  gem "hologram", require: false
   gem "quiet_assets"
   gem "rack-livereload"
   gem "terminal-notifier-guard", "~> 1.6"
