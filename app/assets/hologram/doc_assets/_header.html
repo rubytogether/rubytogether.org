@@ -11,7 +11,7 @@
       <nav>
         <ul>
         <% @categories.each do |category, file_name| %>
-          <li><a href="<%= file_name %>"><%= category %></a></li>
+          <li><a href="/styleguide/<%= file_name %>"><%= category %></a></li>
         <% end %>
         </ul>
       </nav>
