@@ -22,9 +22,11 @@ gem "stripe_event", "~> 1.5"
 gem "uglifier", "~> 2.7"
 
 group :development do
+  gem "guard-hologram", require: false
   gem "guard-livereload", "~> 2.4", require: false
-  gem "guard-rails"
-  gem "guard-rspec"
+  gem "guard-rails", require: false
+  gem "guard-rspec", require: false
+  gem "hologram"
   gem "quiet_assets"
   gem "rack-livereload"
   gem "terminal-notifier-guard", "~> 1.6"
