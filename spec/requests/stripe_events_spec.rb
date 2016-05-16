@@ -32,6 +32,19 @@ RSpec.describe "Stripe webhooks", :vcr do
     end
   end
 
+  describe "invoice.payment_failed" do
+    let(:user) { User.create!(stripe_id: "cus_8U1TcYRfvl8VqP", email: "alice@example.com") }
+    let!(:membership) { Membership.create(user: user, card_last4: "0341", name: "Alice") }
+
+    it "runs our hook" do
+      expect {
+        post "/stripe/events", id: "evt_18D46XAcWgwn5pBtTNAPj1zx"
+      }.to change(ActionMailer::Base.deliveries, :count).by(1)
+
+      expect(ActionMailer::Base.deliveries.last.to).to include(user.email)
+    end
+  end
+
   let(:slack_options) { {:username=>"Subscribers", :channel=>"#stripe", :icon_emoji=>":chart_with_upwards_trend:"} }
 
   describe "customer.subscription.created" do

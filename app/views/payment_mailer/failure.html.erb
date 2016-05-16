@@ -1,0 +1,21 @@
+<p class="lead">Hi <%= @name %>,</p>
+
+<p>
+  Thanks for being a member of Ruby Together! We really appreciate your support.
+</p>
+
+<p>
+  We just wanted to let you know that your Ruby Together payment failed this month. If you need to, you can <a href="<%= membership_url(token: @token) %>">update your payment information using this link</a>.
+</p>
+
+<p>
+  Thanks,<br/>
+  Ruby Together
+</p>
+
+<p>
+  <br>
+  <span>
+    Keep the momentum going by <%= joined_tweet_link "tweeting" %> or <%= joined_mail_link "emailing" %> your Ruby friends about Ruby Together!
+  </span>
+</p>

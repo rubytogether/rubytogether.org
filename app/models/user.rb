@@ -20,6 +20,8 @@ class User < ActiveRecord::Base
     @stripe_customer ||= Stripe::Customer.retrieve(stripe_id)
   end
 
+  delegate :name, to: :membership, allow_nil: true
+
 private
 
   # Normally this method requires a password all the time. In this app,

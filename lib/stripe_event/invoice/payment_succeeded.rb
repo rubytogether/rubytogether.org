@@ -5,12 +5,9 @@ module StripeEvent
     class PaymentSucceeded < Base
 
       def call(event)
-        user = user_for_event(event)
-        return unless user
+        @event = event
 
-        subscription = user.stripe_customer.subscriptions.find do |s|
-          s.id == event.data.object.subscription
-        end
+        return unless user
         return unless subscription
 
         # move back membership expiration time to the end paid for
@@ -19,6 +16,16 @@ module StripeEvent
 
         # rebuild the members page in case this activated a membership
         FastlyRails.purge_by_key("members")
+      end
+
+      private
+
+      def subscription
+        @subscription ||= user_subscription_for_event(@user, @event)
+      end
+
+      def user
+        @user ||= user_for_event(@event)
       end
 
     end

@@ -134,6 +134,10 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
+    launchy (2.4.3)
+      addressable (~> 2.3)
+    letter_opener (1.4.1)
+      launchy (~> 2.2)
     listen (3.0.6)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9.7)
@@ -314,6 +318,7 @@ DEPENDENCIES
   guard-rspec
   http
   jquery-rails
+  letter_opener
   nilify_blanks
   nokogiri
   pg
@@ -342,4 +347,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.12.0.rc.4
+   1.12.4

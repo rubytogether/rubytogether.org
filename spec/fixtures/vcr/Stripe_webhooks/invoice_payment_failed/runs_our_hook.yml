@@ -1,0 +1,1168 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/events/evt_18D46XAcWgwn5pBtTNAPj1zx
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.41.0
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.41.0","lang":"ruby","lang_version":"2.3.1 p112 (2016-04-26)","platform":"x86_64-darwin15","engine":"ruby","publisher":"stripe","uname":"Darwin
+        thin.fritz.box 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
+        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"thin.fritz.box"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 20 May 2016 03:45:27 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1975'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_8U2fL1dbS7FwEW
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "evt_18D46XAcWgwn5pBtTNAPj1zx",
+          "object": "event",
+          "api_version": "2015-04-07",
+          "created": 1463714113,
+          "data": {
+            "object": {
+              "id": "in_18D45lAcWgwn5pBtU5JaLk9k",
+              "object": "invoice",
+              "amount_due": 500000,
+              "application_fee": null,
+              "attempt_count": 1,
+              "attempted": true,
+              "charge": "ch_18D46XAcWgwn5pBtJTzzp1Py",
+              "closed": false,
+              "currency": "usd",
+              "customer": "cus_8U1TcYRfvl8VqP",
+              "date": 1463714065,
+              "description": null,
+              "discount": null,
+              "ending_balance": 0,
+              "forgiven": false,
+              "lines": {
+                "object": "list",
+                "data": [
+                  {
+                    "id": "ii_18D3YMAcWgwn5pBtqEeM02bs",
+                    "object": "line_item",
+                    "amount": 500000,
+                    "currency": "usd",
+                    "description": null,
+                    "discountable": true,
+                    "livemode": false,
+                    "metadata": {},
+                    "period": {
+                      "start": 1463711994,
+                      "end": 1463711994
+                    },
+                    "plan": null,
+                    "proration": false,
+                    "quantity": null,
+                    "subscription": "sub_8U1VI45WcTmBFt",
+                    "type": "invoiceitem"
+                  }
+                ],
+                "has_more": false,
+                "total_count": 1,
+                "url": "/v1/invoices/in_18D45lAcWgwn5pBtU5JaLk9k/lines"
+              },
+              "livemode": false,
+              "metadata": {},
+              "next_payment_attempt": 1463973313,
+              "paid": false,
+              "period_end": 1463714065,
+              "period_start": 1463711601,
+              "receipt_number": null,
+              "starting_balance": 0,
+              "statement_descriptor": null,
+              "subscription": null,
+              "subtotal": 500000,
+              "tax": null,
+              "tax_percent": null,
+              "total": 500000,
+              "webhooks_delivered_at": 1463714102,
+              "payment": "ch_18D46XAcWgwn5pBtJTzzp1Py"
+            }
+          },
+          "livemode": false,
+          "pending_webhooks": 0,
+          "request": "req_8U2AhsQOCjAGy4",
+          "type": "invoice.payment_failed"
+        }
+    http_version: 
+  recorded_at: Fri, 20 May 2016 03:45:25 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers/cus_8U1TcYRfvl8VqP
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.41.0
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.41.0","lang":"ruby","lang_version":"2.3.1 p112 (2016-04-26)","platform":"x86_64-darwin15","engine":"ruby","publisher":"stripe","uname":"Darwin
+        thin.fritz.box 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
+        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"thin.fritz.box"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 20 May 2016 03:45:30 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2463'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_8U2fyEX1PsMUWM
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "cus_8U1TcYRfvl8VqP",
+          "object": "customer",
+          "account_balance": 0,
+          "business_vat_id": null,
+          "created": 1463711504,
+          "currency": "usd",
+          "default_source": "card_18D3RNAcWgwn5pBtT4l6eaNK",
+          "delinquent": true,
+          "description": "Fails invoice payments",
+          "discount": null,
+          "email": "alice@example.com",
+          "livemode": false,
+          "metadata": {},
+          "shipping": null,
+          "sources": {
+            "object": "list",
+            "data": [
+              {
+                "id": "card_18D3RNAcWgwn5pBtT4l6eaNK",
+                "object": "card",
+                "address_city": null,
+                "address_country": null,
+                "address_line1": null,
+                "address_line1_check": null,
+                "address_line2": null,
+                "address_state": null,
+                "address_zip": null,
+                "address_zip_check": null,
+                "brand": "Visa",
+                "country": "US",
+                "customer": "cus_8U1TcYRfvl8VqP",
+                "cvc_check": null,
+                "dynamic_last4": null,
+                "exp_month": 5,
+                "exp_year": 2017,
+                "fingerprint": "FLcmEzCB80ITlNjt",
+                "funding": "credit",
+                "last4": "0341",
+                "metadata": {},
+                "name": null,
+                "tokenization_method": null
+              }
+            ],
+            "has_more": false,
+            "total_count": 1,
+            "url": "/v1/customers/cus_8U1TcYRfvl8VqP/sources"
+          },
+          "subscriptions": {
+            "object": "list",
+            "data": [
+              {
+                "id": "sub_8U1VI45WcTmBFt",
+                "object": "subscription",
+                "application_fee_percent": null,
+                "cancel_at_period_end": false,
+                "canceled_at": null,
+                "created": 1463711601,
+                "current_period_end": 1463727599,
+                "current_period_start": 1463711601,
+                "customer": "cus_8U1TcYRfvl8VqP",
+                "discount": null,
+                "ended_at": null,
+                "metadata": {},
+                "plan": {
+                  "id": "corporate_ruby",
+                  "object": "plan",
+                  "amount": 500000,
+                  "created": 1453710393,
+                  "currency": "usd",
+                  "interval": "month",
+                  "interval_count": 1,
+                  "livemode": false,
+                  "metadata": {},
+                  "name": "Ruby Membership",
+                  "statement_descriptor": null,
+                  "trial_period_days": null
+                },
+                "quantity": 1,
+                "start": 1463712033,
+                "status": "trialing",
+                "tax_percent": null,
+                "trial_end": 1463727599,
+                "trial_start": 1463711601
+              }
+            ],
+            "has_more": false,
+            "total_count": 1,
+            "url": "/v1/customers/cus_8U1TcYRfvl8VqP/subscriptions"
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 20 May 2016 03:45:28 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers/cus_8U1TcYRfvl8VqP
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.41.0
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.41.0","lang":"ruby","lang_version":"2.3.1 p112 (2016-04-26)","platform":"x86_64-darwin15","engine":"ruby","publisher":"stripe","uname":"Darwin
+        thin.fritz.box 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
+        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"thin.fritz.box"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 20 May 2016 03:45:34 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2463'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_8U2flBlqdmFvty
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "cus_8U1TcYRfvl8VqP",
+          "object": "customer",
+          "account_balance": 0,
+          "business_vat_id": null,
+          "created": 1463711504,
+          "currency": "usd",
+          "default_source": "card_18D3RNAcWgwn5pBtT4l6eaNK",
+          "delinquent": true,
+          "description": "Fails invoice payments",
+          "discount": null,
+          "email": "alice@example.com",
+          "livemode": false,
+          "metadata": {},
+          "shipping": null,
+          "sources": {
+            "object": "list",
+            "data": [
+              {
+                "id": "card_18D3RNAcWgwn5pBtT4l6eaNK",
+                "object": "card",
+                "address_city": null,
+                "address_country": null,
+                "address_line1": null,
+                "address_line1_check": null,
+                "address_line2": null,
+                "address_state": null,
+                "address_zip": null,
+                "address_zip_check": null,
+                "brand": "Visa",
+                "country": "US",
+                "customer": "cus_8U1TcYRfvl8VqP",
+                "cvc_check": null,
+                "dynamic_last4": null,
+                "exp_month": 5,
+                "exp_year": 2017,
+                "fingerprint": "FLcmEzCB80ITlNjt",
+                "funding": "credit",
+                "last4": "0341",
+                "metadata": {},
+                "name": null,
+                "tokenization_method": null
+              }
+            ],
+            "has_more": false,
+            "total_count": 1,
+            "url": "/v1/customers/cus_8U1TcYRfvl8VqP/sources"
+          },
+          "subscriptions": {
+            "object": "list",
+            "data": [
+              {
+                "id": "sub_8U1VI45WcTmBFt",
+                "object": "subscription",
+                "application_fee_percent": null,
+                "cancel_at_period_end": false,
+                "canceled_at": null,
+                "created": 1463711601,
+                "current_period_end": 1463727599,
+                "current_period_start": 1463711601,
+                "customer": "cus_8U1TcYRfvl8VqP",
+                "discount": null,
+                "ended_at": null,
+                "metadata": {},
+                "plan": {
+                  "id": "corporate_ruby",
+                  "object": "plan",
+                  "amount": 500000,
+                  "created": 1453710393,
+                  "currency": "usd",
+                  "interval": "month",
+                  "interval_count": 1,
+                  "livemode": false,
+                  "metadata": {},
+                  "name": "Ruby Membership",
+                  "statement_descriptor": null,
+                  "trial_period_days": null
+                },
+                "quantity": 1,
+                "start": 1463712033,
+                "status": "trialing",
+                "tax_percent": null,
+                "trial_end": 1463727599,
+                "trial_start": 1463711601
+              }
+            ],
+            "has_more": false,
+            "total_count": 1,
+            "url": "/v1/customers/cus_8U1TcYRfvl8VqP/subscriptions"
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 20 May 2016 03:45:32 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers/cus_8U1TcYRfvl8VqP
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.41.0
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.41.0","lang":"ruby","lang_version":"2.3.1 p112 (2016-04-26)","platform":"x86_64-darwin15","engine":"ruby","publisher":"stripe","uname":"Darwin
+        thin.fritz.box 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
+        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"thin.fritz.box"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 20 May 2016 03:45:39 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2463'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_8U2f2Ppqqca069
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "cus_8U1TcYRfvl8VqP",
+          "object": "customer",
+          "account_balance": 0,
+          "business_vat_id": null,
+          "created": 1463711504,
+          "currency": "usd",
+          "default_source": "card_18D3RNAcWgwn5pBtT4l6eaNK",
+          "delinquent": true,
+          "description": "Fails invoice payments",
+          "discount": null,
+          "email": "alice@example.com",
+          "livemode": false,
+          "metadata": {},
+          "shipping": null,
+          "sources": {
+            "object": "list",
+            "data": [
+              {
+                "id": "card_18D3RNAcWgwn5pBtT4l6eaNK",
+                "object": "card",
+                "address_city": null,
+                "address_country": null,
+                "address_line1": null,
+                "address_line1_check": null,
+                "address_line2": null,
+                "address_state": null,
+                "address_zip": null,
+                "address_zip_check": null,
+                "brand": "Visa",
+                "country": "US",
+                "customer": "cus_8U1TcYRfvl8VqP",
+                "cvc_check": null,
+                "dynamic_last4": null,
+                "exp_month": 5,
+                "exp_year": 2017,
+                "fingerprint": "FLcmEzCB80ITlNjt",
+                "funding": "credit",
+                "last4": "0341",
+                "metadata": {},
+                "name": null,
+                "tokenization_method": null
+              }
+            ],
+            "has_more": false,
+            "total_count": 1,
+            "url": "/v1/customers/cus_8U1TcYRfvl8VqP/sources"
+          },
+          "subscriptions": {
+            "object": "list",
+            "data": [
+              {
+                "id": "sub_8U1VI45WcTmBFt",
+                "object": "subscription",
+                "application_fee_percent": null,
+                "cancel_at_period_end": false,
+                "canceled_at": null,
+                "created": 1463711601,
+                "current_period_end": 1463727599,
+                "current_period_start": 1463711601,
+                "customer": "cus_8U1TcYRfvl8VqP",
+                "discount": null,
+                "ended_at": null,
+                "metadata": {},
+                "plan": {
+                  "id": "corporate_ruby",
+                  "object": "plan",
+                  "amount": 500000,
+                  "created": 1453710393,
+                  "currency": "usd",
+                  "interval": "month",
+                  "interval_count": 1,
+                  "livemode": false,
+                  "metadata": {},
+                  "name": "Ruby Membership",
+                  "statement_descriptor": null,
+                  "trial_period_days": null
+                },
+                "quantity": 1,
+                "start": 1463712033,
+                "status": "trialing",
+                "tax_percent": null,
+                "trial_end": 1463727599,
+                "trial_start": 1463711601
+              }
+            ],
+            "has_more": false,
+            "total_count": 1,
+            "url": "/v1/customers/cus_8U1TcYRfvl8VqP/subscriptions"
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 20 May 2016 03:45:37 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers/cus_8U1TcYRfvl8VqP
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.41.0
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.41.0","lang":"ruby","lang_version":"2.3.1 p112 (2016-04-26)","platform":"x86_64-darwin15","engine":"ruby","publisher":"stripe","uname":"Darwin
+        thin.fritz.box 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
+        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"thin.fritz.box"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 20 May 2016 03:45:59 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2463'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_8U2fxND73e0gM4
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "cus_8U1TcYRfvl8VqP",
+          "object": "customer",
+          "account_balance": 0,
+          "business_vat_id": null,
+          "created": 1463711504,
+          "currency": "usd",
+          "default_source": "card_18D3RNAcWgwn5pBtT4l6eaNK",
+          "delinquent": true,
+          "description": "Fails invoice payments",
+          "discount": null,
+          "email": "alice@example.com",
+          "livemode": false,
+          "metadata": {},
+          "shipping": null,
+          "sources": {
+            "object": "list",
+            "data": [
+              {
+                "id": "card_18D3RNAcWgwn5pBtT4l6eaNK",
+                "object": "card",
+                "address_city": null,
+                "address_country": null,
+                "address_line1": null,
+                "address_line1_check": null,
+                "address_line2": null,
+                "address_state": null,
+                "address_zip": null,
+                "address_zip_check": null,
+                "brand": "Visa",
+                "country": "US",
+                "customer": "cus_8U1TcYRfvl8VqP",
+                "cvc_check": null,
+                "dynamic_last4": null,
+                "exp_month": 5,
+                "exp_year": 2017,
+                "fingerprint": "FLcmEzCB80ITlNjt",
+                "funding": "credit",
+                "last4": "0341",
+                "metadata": {},
+                "name": null,
+                "tokenization_method": null
+              }
+            ],
+            "has_more": false,
+            "total_count": 1,
+            "url": "/v1/customers/cus_8U1TcYRfvl8VqP/sources"
+          },
+          "subscriptions": {
+            "object": "list",
+            "data": [
+              {
+                "id": "sub_8U1VI45WcTmBFt",
+                "object": "subscription",
+                "application_fee_percent": null,
+                "cancel_at_period_end": false,
+                "canceled_at": null,
+                "created": 1463711601,
+                "current_period_end": 1463727599,
+                "current_period_start": 1463711601,
+                "customer": "cus_8U1TcYRfvl8VqP",
+                "discount": null,
+                "ended_at": null,
+                "metadata": {},
+                "plan": {
+                  "id": "corporate_ruby",
+                  "object": "plan",
+                  "amount": 500000,
+                  "created": 1453710393,
+                  "currency": "usd",
+                  "interval": "month",
+                  "interval_count": 1,
+                  "livemode": false,
+                  "metadata": {},
+                  "name": "Ruby Membership",
+                  "statement_descriptor": null,
+                  "trial_period_days": null
+                },
+                "quantity": 1,
+                "start": 1463712033,
+                "status": "trialing",
+                "tax_percent": null,
+                "trial_end": 1463727599,
+                "trial_start": 1463711601
+              }
+            ],
+            "has_more": false,
+            "total_count": 1,
+            "url": "/v1/customers/cus_8U1TcYRfvl8VqP/subscriptions"
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 20 May 2016 03:45:57 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers/cus_8U1TcYRfvl8VqP
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.41.0
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.41.0","lang":"ruby","lang_version":"2.3.1 p112 (2016-04-26)","platform":"x86_64-darwin15","engine":"ruby","publisher":"stripe","uname":"Darwin
+        thin.fritz.box 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
+        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"thin.fritz.box"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 20 May 2016 03:46:09 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2463'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_8U2fdJdKnmzwMZ
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "cus_8U1TcYRfvl8VqP",
+          "object": "customer",
+          "account_balance": 0,
+          "business_vat_id": null,
+          "created": 1463711504,
+          "currency": "usd",
+          "default_source": "card_18D3RNAcWgwn5pBtT4l6eaNK",
+          "delinquent": true,
+          "description": "Fails invoice payments",
+          "discount": null,
+          "email": "alice@example.com",
+          "livemode": false,
+          "metadata": {},
+          "shipping": null,
+          "sources": {
+            "object": "list",
+            "data": [
+              {
+                "id": "card_18D3RNAcWgwn5pBtT4l6eaNK",
+                "object": "card",
+                "address_city": null,
+                "address_country": null,
+                "address_line1": null,
+                "address_line1_check": null,
+                "address_line2": null,
+                "address_state": null,
+                "address_zip": null,
+                "address_zip_check": null,
+                "brand": "Visa",
+                "country": "US",
+                "customer": "cus_8U1TcYRfvl8VqP",
+                "cvc_check": null,
+                "dynamic_last4": null,
+                "exp_month": 5,
+                "exp_year": 2017,
+                "fingerprint": "FLcmEzCB80ITlNjt",
+                "funding": "credit",
+                "last4": "0341",
+                "metadata": {},
+                "name": null,
+                "tokenization_method": null
+              }
+            ],
+            "has_more": false,
+            "total_count": 1,
+            "url": "/v1/customers/cus_8U1TcYRfvl8VqP/sources"
+          },
+          "subscriptions": {
+            "object": "list",
+            "data": [
+              {
+                "id": "sub_8U1VI45WcTmBFt",
+                "object": "subscription",
+                "application_fee_percent": null,
+                "cancel_at_period_end": false,
+                "canceled_at": null,
+                "created": 1463711601,
+                "current_period_end": 1463727599,
+                "current_period_start": 1463711601,
+                "customer": "cus_8U1TcYRfvl8VqP",
+                "discount": null,
+                "ended_at": null,
+                "metadata": {},
+                "plan": {
+                  "id": "corporate_ruby",
+                  "object": "plan",
+                  "amount": 500000,
+                  "created": 1453710393,
+                  "currency": "usd",
+                  "interval": "month",
+                  "interval_count": 1,
+                  "livemode": false,
+                  "metadata": {},
+                  "name": "Ruby Membership",
+                  "statement_descriptor": null,
+                  "trial_period_days": null
+                },
+                "quantity": 1,
+                "start": 1463712033,
+                "status": "trialing",
+                "tax_percent": null,
+                "trial_end": 1463727599,
+                "trial_start": 1463711601
+              }
+            ],
+            "has_more": false,
+            "total_count": 1,
+            "url": "/v1/customers/cus_8U1TcYRfvl8VqP/subscriptions"
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 20 May 2016 03:46:07 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers/cus_8U1TcYRfvl8VqP
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.41.0
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.41.0","lang":"ruby","lang_version":"2.3.1 p112 (2016-04-26)","platform":"x86_64-darwin15","engine":"ruby","publisher":"stripe","uname":"Darwin
+        thin.fritz.box 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
+        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"thin.fritz.box"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 20 May 2016 03:46:22 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2463'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_8U2gj5mhYdSwp1
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "cus_8U1TcYRfvl8VqP",
+          "object": "customer",
+          "account_balance": 0,
+          "business_vat_id": null,
+          "created": 1463711504,
+          "currency": "usd",
+          "default_source": "card_18D3RNAcWgwn5pBtT4l6eaNK",
+          "delinquent": true,
+          "description": "Fails invoice payments",
+          "discount": null,
+          "email": "alice@example.com",
+          "livemode": false,
+          "metadata": {},
+          "shipping": null,
+          "sources": {
+            "object": "list",
+            "data": [
+              {
+                "id": "card_18D3RNAcWgwn5pBtT4l6eaNK",
+                "object": "card",
+                "address_city": null,
+                "address_country": null,
+                "address_line1": null,
+                "address_line1_check": null,
+                "address_line2": null,
+                "address_state": null,
+                "address_zip": null,
+                "address_zip_check": null,
+                "brand": "Visa",
+                "country": "US",
+                "customer": "cus_8U1TcYRfvl8VqP",
+                "cvc_check": null,
+                "dynamic_last4": null,
+                "exp_month": 5,
+                "exp_year": 2017,
+                "fingerprint": "FLcmEzCB80ITlNjt",
+                "funding": "credit",
+                "last4": "0341",
+                "metadata": {},
+                "name": null,
+                "tokenization_method": null
+              }
+            ],
+            "has_more": false,
+            "total_count": 1,
+            "url": "/v1/customers/cus_8U1TcYRfvl8VqP/sources"
+          },
+          "subscriptions": {
+            "object": "list",
+            "data": [
+              {
+                "id": "sub_8U1VI45WcTmBFt",
+                "object": "subscription",
+                "application_fee_percent": null,
+                "cancel_at_period_end": false,
+                "canceled_at": null,
+                "created": 1463711601,
+                "current_period_end": 1463727599,
+                "current_period_start": 1463711601,
+                "customer": "cus_8U1TcYRfvl8VqP",
+                "discount": null,
+                "ended_at": null,
+                "metadata": {},
+                "plan": {
+                  "id": "corporate_ruby",
+                  "object": "plan",
+                  "amount": 500000,
+                  "created": 1453710393,
+                  "currency": "usd",
+                  "interval": "month",
+                  "interval_count": 1,
+                  "livemode": false,
+                  "metadata": {},
+                  "name": "Ruby Membership",
+                  "statement_descriptor": null,
+                  "trial_period_days": null
+                },
+                "quantity": 1,
+                "start": 1463712033,
+                "status": "trialing",
+                "tax_percent": null,
+                "trial_end": 1463727599,
+                "trial_start": 1463711601
+              }
+            ],
+            "has_more": false,
+            "total_count": 1,
+            "url": "/v1/customers/cus_8U1TcYRfvl8VqP/subscriptions"
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 20 May 2016 03:46:20 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers/cus_8U1TcYRfvl8VqP
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.41.0
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.41.0","lang":"ruby","lang_version":"2.3.1 p112 (2016-04-26)","platform":"x86_64-darwin15","engine":"ruby","publisher":"stripe","uname":"Darwin
+        thin.fritz.box 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
+        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"thin.fritz.box"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 20 May 2016 03:46:57 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2463'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_8U2g4m6oE6Vt8j
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "cus_8U1TcYRfvl8VqP",
+          "object": "customer",
+          "account_balance": 0,
+          "business_vat_id": null,
+          "created": 1463711504,
+          "currency": "usd",
+          "default_source": "card_18D3RNAcWgwn5pBtT4l6eaNK",
+          "delinquent": true,
+          "description": "Fails invoice payments",
+          "discount": null,
+          "email": "alice@example.com",
+          "livemode": false,
+          "metadata": {},
+          "shipping": null,
+          "sources": {
+            "object": "list",
+            "data": [
+              {
+                "id": "card_18D3RNAcWgwn5pBtT4l6eaNK",
+                "object": "card",
+                "address_city": null,
+                "address_country": null,
+                "address_line1": null,
+                "address_line1_check": null,
+                "address_line2": null,
+                "address_state": null,
+                "address_zip": null,
+                "address_zip_check": null,
+                "brand": "Visa",
+                "country": "US",
+                "customer": "cus_8U1TcYRfvl8VqP",
+                "cvc_check": null,
+                "dynamic_last4": null,
+                "exp_month": 5,
+                "exp_year": 2017,
+                "fingerprint": "FLcmEzCB80ITlNjt",
+                "funding": "credit",
+                "last4": "0341",
+                "metadata": {},
+                "name": null,
+                "tokenization_method": null
+              }
+            ],
+            "has_more": false,
+            "total_count": 1,
+            "url": "/v1/customers/cus_8U1TcYRfvl8VqP/sources"
+          },
+          "subscriptions": {
+            "object": "list",
+            "data": [
+              {
+                "id": "sub_8U1VI45WcTmBFt",
+                "object": "subscription",
+                "application_fee_percent": null,
+                "cancel_at_period_end": false,
+                "canceled_at": null,
+                "created": 1463711601,
+                "current_period_end": 1463727599,
+                "current_period_start": 1463711601,
+                "customer": "cus_8U1TcYRfvl8VqP",
+                "discount": null,
+                "ended_at": null,
+                "metadata": {},
+                "plan": {
+                  "id": "corporate_ruby",
+                  "object": "plan",
+                  "amount": 500000,
+                  "created": 1453710393,
+                  "currency": "usd",
+                  "interval": "month",
+                  "interval_count": 1,
+                  "livemode": false,
+                  "metadata": {},
+                  "name": "Ruby Membership",
+                  "statement_descriptor": null,
+                  "trial_period_days": null
+                },
+                "quantity": 1,
+                "start": 1463712033,
+                "status": "trialing",
+                "tax_percent": null,
+                "trial_end": 1463727599,
+                "trial_start": 1463711601
+              }
+            ],
+            "has_more": false,
+            "total_count": 1,
+            "url": "/v1/customers/cus_8U1TcYRfvl8VqP/subscriptions"
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 20 May 2016 03:46:55 GMT
+recorded_with: VCR 3.0.1
