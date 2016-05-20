@@ -20,6 +20,9 @@ StripeEvent.configure do |events|
   events.subscribe "invoice.payment_succeeded",
     StripeEvent::Invoice::PaymentSucceeded.new
 
+  events.subscribe "invoice.payment_failed",
+    StripeEvent::Invoice::PaymentFailed.new
+
   events.subscribe "customer.source.created" do |event|
     card = event.data.object
     user_id = User.where(stripe_id: card.customer).pluck(:id).first
