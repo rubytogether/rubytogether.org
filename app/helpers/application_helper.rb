@@ -78,7 +78,7 @@ module ApplicationHelper
   def joined_mail_link(text)
     mail_to("", text,
       subject: "I joined Ruby Together. Here's why you should too.",
-      body: "I joined Ruby Together, a nonprofit that pays developers " \
+      body: "I joined Ruby Together (https://rubytogether.org), a nonprofit that pays developers " \
         "to dedicate time to improving Bundler and other shared Ruby tools. " \
         "\n\nSupporting Ruby Together means we can stop relying on developers " \
         "to fix shared tools in their spare time and start relying on the " \
