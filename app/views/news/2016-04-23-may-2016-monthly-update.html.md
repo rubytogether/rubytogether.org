@@ -1,5 +1,5 @@
 ---
-summary: "This month at Ruby Together was all about people, we worked with our community at RailsConf, got our Google Summer of Code students working, and started organizing Bundler and RubyGems issues better."
+summary: "This month at Ruby Together was all about people, we worked with our community at RailsConf, got our Google Summer of Code students working, and started reorganizing Bundler and RubyGems issues."
 ---
 
 <% title "May 2016 monthly update" %>
