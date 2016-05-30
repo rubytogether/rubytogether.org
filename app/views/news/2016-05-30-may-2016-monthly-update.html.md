@@ -8,11 +8,15 @@ Welcome to the May 2016 monthly update for Ruby Together. In the last month, we 
 
 ## ruby together news
 
-This month at Ruby Together was all about people. We went to [RailsConf](http://railsconf.com/), kicked off [Google Summer of Code](https://developers.google.com/open-source/gsoc/) student projects, and started reorganizing Bundler and RubyGems issues. At RailsConf, both [Gemstash](https://github.com/bundler/gemstash) and the [RubyGems Adoption Center](https://github.com/rubygems/adoption-center)) got shoutouts and work from attendees. Andre and Samuel also started working with the Google Summer of Code students on a variety of Bundler and RubyGems issues. 
+This month at Ruby Together was all about people. We went to [RailsConf](http://railsconf.com/), kicked off [Google Summer of Code](https://developers.google.com/open-source/gsoc/) student projects, and started reorganizing Bundler and RubyGems issues. At RailsConf, both [Gemstash](https://github.com/bundler/gemstash) and the [RubyGems Adoption Center](https://github.com/rubygems/adoption-center)) got shoutouts and work from attendees. Andre and Samuel also started working with the Google Summer of Code students on a variety of Bundler and RubyGems issues.
 
 We paid for 118.4 hours of time spent on Bundler. That time was primarily focused on bugfixes for Bundler's 1.12 release, and also laid the groundwork for Google Summer of Code students to start working on several different projects. Lynn reorganized Bundler's issues and Trello boards so that more information is public and accessible. Finally, we received nomination(s) for board members this month and will be holding an election to decide the state of the new Ruby Together board.
 
-We had three new developers join as members: James Wen, Adam Becker, and Asad Akbar. Three companies joined: [Thoughtbot](https://thoughtbot.com/), [Geckoboard](https://www.geckoboard.com/), and [Sabre Corp](https://www.sabre.com/). [Thoughtbot](https://thoughtbot.com/) is consulting company of small teams of designers and developers in 10 cities around the world, making software for clients, and contributing to open source software. Although [Icelab](http://icelab.com.au/) joined us last month, we forgot to mention them in last month's newsletter, so here they are: [Icelab](http://icelab.com.au/) is a studio in Australia with a team of problem solvers who want to work with you to build a better world. They work with Ruby every day, and do their best to push Ruby forward through our support of the [dry-rb](http://dry-rb.org/) project.
+We had three new developers join as members: James Wen, Adam Becker, and Asad Akbar. Three companies joined: [Thoughtbot](https://thoughtbot.com/), [Geckoboard](https://www.geckoboard.com/), and [Sabre Corp](https://www.sabre.com/).
+
+[Thoughtbot](https://thoughtbot.com/) is a consulting company with small teams of designers and developers in 10 cities around the world, making software for clients, and contributing to open source software.
+
+Although [Icelab](http://icelab.com.au/) joined us last month, we forgot to mention them in last month's newsletter, so here they are: [Icelab](http://icelab.com.au/) is a studio in Australia with a team of problem solvers who want to work with you to build a better world. They work with Ruby every day, and do their best to push Ruby forward through our support of the [dry-rb](http://dry-rb.org/) project.
 
 ## bundler news
 
