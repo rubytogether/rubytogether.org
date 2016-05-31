@@ -11,6 +11,19 @@ class User < ActiveRecord::Base
 
   attr_writer :stripe_customer
 
+  # Return users that have a trial subscription, i.e. annual members.
+  def self.on_trial
+    where stripe_id: trial_stripe_subscriptions.map(&:customer)
+  end
+
+  # Finds all subscriptions inside Stripe that have the status 'trialing'.
+  # This is better than Membership#prepaid, but it requires network activity.
+  def self.trial_stripe_subscriptions
+    Stripe::Subscription.list(limit: 50).auto_paging_each.select do |subscription|
+      subscription.status == 'trialing'
+    end
+  end
+
   def generate_reset_password_token!
     set_reset_password_token
   end

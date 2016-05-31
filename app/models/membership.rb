@@ -7,6 +7,11 @@ class Membership < ActiveRecord::Base
     kinds.flatten.map{|k| Membership.kinds[k] }
   end
 
+  # Find all memberships where the user is on trial, i.e. annual members.
+  def self.on_trial
+    where user_id: User.on_trial.pluck(:id)
+  end
+
   scope :active, -> { where("expires_at > ?", Time.now) }
   scope :named,  -> { where("name IS NOT NULL") }
   scope :since, -> (time) { where("created_at > ?", time) }
