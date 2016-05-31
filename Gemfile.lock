@@ -147,9 +147,9 @@ GEM
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
     method_source (0.8.2)
-    mime-types (2.99.1)
+    mime-types (2.99.2)
     mini_portile2 (2.0.0)
-    minitest (5.8.4)
+    minitest (5.9.0)
     multi_json (1.11.2)
     nenv (0.3.0)
     netrc (0.11.0)
@@ -275,7 +275,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
-    stripe (1.41.0)
+    stripe (1.43.0)
       rest-client (~> 1.4)
     stripe_event (1.5.0)
       activesupport (>= 3.1)
@@ -347,4 +347,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.12.4
+   1.12.5
