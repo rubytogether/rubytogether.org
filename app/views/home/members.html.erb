@@ -4,13 +4,13 @@
   <h3>Corporate Members</h3>
 
   <% @featured_companies.each do |name, desc, url| %>
-    <h4 class="company-name"><%= url.nil? ? name : link_to(name, url) %></h3>
+    <h4 class="company-name"><%= link_to_if url.present?, name, url %></h3>
     <p class="company-description"><%= desc %></p>
   <% end %>
 
   <p>
     As well as
-    <%= @other_companies.map{|n, u| u.nil? ? n : link_to(n, u) }.to_sentence.html_safe %>.
+    <%= @other_companies.map { |name, url| link_to_if(url.present?, name, url) }.to_sentence.html_safe %>.
   </p>
 
   <p class="center">Didn’t see your company’s name? <%= link_to "Add it!", companies_path %></p>
