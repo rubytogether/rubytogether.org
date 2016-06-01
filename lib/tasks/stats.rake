@@ -25,7 +25,7 @@ namespace :stats do
     puts "Projected monthly income is #{dollars} per month."
   end
 
-  desc "Calculate expiring annual memberships"
+  desc "Post expiring annual memberships to Slack."
   task :expiring_annual_memberships => [:environment] do |t, args|
     expiring_memberships = Membership.on_trial.where(
       "expires_at <= ?", 1.month.from_now
@@ -44,6 +44,23 @@ namespace :stats do
         username: "Expiring Annual Subscribers",
         channel: "#stripe",
         icon_emoji: ":chart_with_downwards_trend:"
+      )
+    end
+  end
+
+  desc "Post recently expired memberships (last day by default) to Slack."
+  task :expired_memberships, [:expires_at] => [:environment] do |t, args|
+    require 'action_view/helpers'
+    include ActionView::Helpers::DateHelper
+    expiries = Membership.where("expires_at BETWEEN ? AND ?", expires_at ||= 1.day.ago, Time.now).map do |member|
+      "#{member.user.email}: #{time_ago_in_words(member.expires_at)}"
+    end
+
+    if expiries.any?
+      Slack.say(expiries.join("\n"),
+        username: "Recently Expired Memberships",
+        channel: "#stripe",
+        icon_emoji: ":chart_with_downwards_trend"
       )
     end
   end
