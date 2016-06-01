@@ -60,7 +60,7 @@ namespace :stats do
       Slack.say(expiries.join("\n"),
         username: "Recently Expired Memberships",
         channel: "#stripe",
-        icon_emoji: ":chart_with_downwards_trend"
+        icon_emoji: ":chart_with_downwards_trend:"
       )
     end
   end
