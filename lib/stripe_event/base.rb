@@ -3,7 +3,7 @@ module StripeEvent
 
     def user_for_event(event)
       customer = Stripe::Customer.retrieve(event.data.object.customer)
-      return if customer.respond_to?(:deleted) && customer.deleted
+      return nil if customer.respond_to?(:deleted?) && customer.deleted?
 
       event_user = User.includes(:membership).where(stripe_id: customer.id).first
       return nil if event_user.nil?
