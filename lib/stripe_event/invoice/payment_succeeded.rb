@@ -7,12 +7,15 @@ module StripeEvent
       def call(event)
         @event = event
 
-        return unless user
-        return unless subscription
+        # If the event is an invoice, or has an invoice attached to it,
+        # then it is for a user and that user will have a subscription
+        return unless invoice?
+
+        @user = user_for_event(@event)
 
         # move back membership expiration time to the end paid for
         expiration = Time.at(subscription.current_period_end)
-        user.membership.update_attributes!(expires_at: expiration)
+        @user.membership.update_attributes!(expires_at: expiration)
 
         # rebuild the members page in case this activated a membership
         FastlyRails.purge_by_key("members")
@@ -20,12 +23,13 @@ module StripeEvent
 
       private
 
-      def subscription
-        @subscription ||= user_subscription_for_event(@user, @event)
+      def invoice?
+        Stripe::Invoice === @event.data.object ||
+          @event.data.object.invoice.present?
       end
 
-      def user
-        @user ||= user_for_event(@event)
+      def subscription
+        @subscription ||= user_subscription_for_event(@user, @event)
       end
 
     end
