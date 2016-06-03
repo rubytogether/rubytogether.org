@@ -9,7 +9,12 @@ module StripeEvent
 
         # If the event is an invoice, or has an invoice attached to it,
         # then it is for a user and that user will have a subscription
-        return unless invoice?
+        return unless invoice? || charge?
+
+        # if it is a charge object then we have to find the subscription
+        # through the invoice.  Alternatively, we *could* override the event's
+        # data object with the corresponding invoice.
+        set_event_subscription if charge?
 
         @user = user_for_event(@event)
 
@@ -23,9 +28,19 @@ module StripeEvent
 
       private
 
+      def charge?
+        Stripe::Charge === @event.data.object
+      end
+
       def invoice?
         Stripe::Invoice === @event.data.object ||
           @event.data.object.invoice.present?
+      end
+
+      def set_event_subscription
+        @event.data.object.subscription = Stripe::Invoice.retrieve(
+          @event.data.object.invoice
+        ).subscription
       end
 
       def subscription
