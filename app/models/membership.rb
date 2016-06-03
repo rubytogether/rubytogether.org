@@ -13,6 +13,7 @@ class Membership < ActiveRecord::Base
   end
 
   scope :active, -> { where("expires_at > ?", Time.now) }
+  scope :expired, -> { where("expires_at < ?", Time.now) }
   scope :named,  -> { where("name IS NOT NULL") }
   scope :since, -> (time) { where("created_at > ?", time) }
   scope :prepaid, -> { where("expires_at > ?", 1.month.from_now) }

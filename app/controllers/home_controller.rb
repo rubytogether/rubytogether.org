@@ -12,7 +12,7 @@ class HomeController < ApplicationController
       pluck(:name, :description, :url)
     @other_companies = Membership.nonfeatured_companies.named.active.order(:created_at).pluck(:name, :url)
     @individual = Membership.individual.named.active.order(:created_at).pluck(:name)
-    @individual_count = Membership.individual.count
+    @individual_count = Membership.individual.active.count
   end
 
   private
