@@ -52,7 +52,9 @@ namespace :stats do
   task :expired_memberships, [:expires_at] => [:environment] do |t, args|
     require 'action_view/helpers'
     include ActionView::Helpers::DateHelper
-    expiries = Membership.where("expires_at BETWEEN ? AND ?", expires_at ||= 1.day.ago, Time.now).map do |member|
+    expiries = Membership.where(
+      "expires_at BETWEEN ? AND ?", expires_at ||= 1.day.ago, Time.now
+    ).select { |membership| membership.user.stripe_customer.subscriptions.any? }.map do |member|
       "#{member.user.email}: #{time_ago_in_words(member.expires_at)}"
     end
 
