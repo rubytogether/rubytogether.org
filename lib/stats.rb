@@ -1,6 +1,6 @@
 class Stats
   def initialize(slack: true)
-    @slack = slack
+    @slack = slack && (Rails.env.test? || Slack.team.present?)
   end
 
   def since(last_date)
@@ -16,9 +16,9 @@ class Stats
 
     companies, people = new_members.partition(&:corporate?)
     message = "\n"
-    message << "#{people.count} new #{"person".pluralize(people.count)}"
-    message << "#{companies.count} new #{"company".pluralize(companies.count)}"
-    message << "#{new_members.size} new #{"member".pluralize(new_members.size)} total"
+    message << "#{people.count} new #{"person".pluralize(people.count)}\n"
+    message << "#{companies.count} new #{"company".pluralize(companies.count)}\n"
+    message << "#{new_members.size} new #{"member".pluralize(new_members.size)} total\n"
     message << "\n"
     estimate = MonthlyRevenue.projected(
       MembershipPlan.subscriber_counts,
