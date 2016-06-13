@@ -80,7 +80,7 @@ http_interactions:
               "object": "subscription",
               "start": 1428080032,
               "status": "active",
-              "customer": "cus_5zX7jk6DxkTfzh",
+              "customer": "cus_8U1TcYRfvl8VqP",
               "cancel_at_period_end": false,
               "current_period_start": 1428080032,
               "current_period_end": 1430672032,
@@ -100,7 +100,7 @@ http_interactions:
           "request": "iar_5zX7MhAJ6RJnbJ",
           "api_version": "2015-02-18"
         }
-    http_version: 
+    http_version:
   recorded_at: Fri, 03 Apr 2015 16:57:33 GMT
 - request:
     method: get
@@ -483,7 +483,7 @@ http_interactions:
             }
           ]
         }
-    http_version: 
+    http_version:
   recorded_at: Fri, 03 Apr 2015 16:57:34 GMT
 - request:
     method: get
@@ -549,7 +549,7 @@ http_interactions:
             {
               "object": "customer",
               "created": 1428080030,
-              "id": "cus_5zX7jk6DxkTfzh",
+              "id": "cus_8U1TcYRfvl8VqP",
               "livemode": false,
               "description": null,
               "email": "alice@example.com",
@@ -559,7 +559,7 @@ http_interactions:
                 "object": "list",
                 "total_count": 1,
                 "has_more": false,
-                "url": "/v1/customers/cus_5zX7jk6DxkTfzh/subscriptions",
+                "url": "/v1/customers/cus_8U1TcYRfvl8VqP/subscriptions",
                 "data": [
                   {
                     "id": "sub_5zX7ha6aVZ6Xeh",
@@ -580,7 +580,7 @@ http_interactions:
                     "object": "subscription",
                     "start": 1428080032,
                     "status": "active",
-                    "customer": "cus_5zX7jk6DxkTfzh",
+                    "customer": "cus_8U1TcYRfvl8VqP",
                     "cancel_at_period_end": false,
                     "current_period_start": 1428080032,
                     "current_period_end": 1430672032,
@@ -603,7 +603,7 @@ http_interactions:
                 "object": "list",
                 "total_count": 1,
                 "has_more": false,
-                "url": "/v1/customers/cus_5zX7jk6DxkTfzh/sources",
+                "url": "/v1/customers/cus_8U1TcYRfvl8VqP/sources",
                 "data": [
                   {
                     "id": "card_15nY3CAcWgwn5pBtwYqmzfec",
@@ -627,7 +627,7 @@ http_interactions:
                     "address_zip_check": null,
                     "dynamic_last4": null,
                     "metadata": {},
-                    "customer": "cus_5zX7jk6DxkTfzh"
+                    "customer": "cus_8U1TcYRfvl8VqP"
                   }
                 ]
               },
@@ -635,7 +635,7 @@ http_interactions:
             }
           ]
         }
-    http_version: 
+    http_version:
   recorded_at: Fri, 03 Apr 2015 16:57:35 GMT
 - request:
     method: get
@@ -787,7 +787,7 @@ http_interactions:
             }
           ]
         }
-    http_version: 
+    http_version:
   recorded_at: Fri, 03 Apr 2015 16:57:35 GMT
 - request:
     method: get
@@ -851,7 +851,7 @@ http_interactions:
           "url": "/v1/customers",
           "data": []
         }
-    http_version: 
+    http_version:
   recorded_at: Tue, 30 Jun 2015 03:32:40 GMT
 - request:
     method: get
@@ -915,7 +915,7 @@ http_interactions:
           "url": "/v1/customers",
           "data": []
         }
-    http_version: 
+    http_version:
   recorded_at: Tue, 30 Jun 2015 03:32:41 GMT
 - request:
     method: get
@@ -1365,7 +1365,7 @@ http_interactions:
             }
           ]
         }
-    http_version: 
+    http_version:
   recorded_at: Tue, 30 Jun 2015 03:32:41 GMT
 - request:
     method: get
@@ -1519,7 +1519,7 @@ http_interactions:
             }
           ]
         }
-    http_version: 
+    http_version:
   recorded_at: Sat, 03 Oct 2015 03:04:40 GMT
 - request:
     method: get
@@ -1583,7 +1583,7 @@ http_interactions:
           "url": "/v1/customers",
           "data": []
         }
-    http_version: 
+    http_version:
   recorded_at: Sat, 03 Oct 2015 03:04:40 GMT
 - request:
     method: get
@@ -1647,7 +1647,7 @@ http_interactions:
           "url": "/v1/customers",
           "data": []
         }
-    http_version: 
+    http_version:
   recorded_at: Sat, 03 Oct 2015 03:04:41 GMT
 - request:
     method: get
@@ -1711,7 +1711,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:32:13 GMT
 - request:
     method: get
@@ -1775,7 +1775,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:32:14 GMT
 - request:
     method: get
@@ -1839,7 +1839,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:32:14 GMT
 - request:
     method: get
@@ -1903,7 +1903,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:32:14 GMT
 - request:
     method: get
@@ -1967,7 +1967,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:32:14 GMT
 - request:
     method: get
@@ -2031,7 +2031,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:32:15 GMT
 - request:
     method: get
@@ -2095,7 +2095,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:32:15 GMT
 - request:
     method: get
@@ -2159,7 +2159,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:32:15 GMT
 - request:
     method: get
@@ -2223,7 +2223,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:36:03 GMT
 - request:
     method: get
@@ -2287,7 +2287,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:36:04 GMT
 - request:
     method: get
@@ -2351,7 +2351,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:36:04 GMT
 - request:
     method: get
@@ -2415,7 +2415,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:36:04 GMT
 - request:
     method: get
@@ -2479,7 +2479,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:36:04 GMT
 - request:
     method: get
@@ -2543,7 +2543,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:36:05 GMT
 - request:
     method: get
@@ -2607,7 +2607,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:36:05 GMT
 - request:
     method: get
@@ -2671,7 +2671,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:36:05 GMT
 - request:
     method: get
@@ -2735,7 +2735,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:36:12 GMT
 - request:
     method: get
@@ -2799,7 +2799,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:36:12 GMT
 - request:
     method: get
@@ -2863,7 +2863,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:36:12 GMT
 - request:
     method: get
@@ -2927,7 +2927,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:36:12 GMT
 - request:
     method: get
@@ -2991,7 +2991,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:36:12 GMT
 - request:
     method: get
@@ -3055,7 +3055,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:36:13 GMT
 - request:
     method: get
@@ -3119,7 +3119,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:36:13 GMT
 - request:
     method: get
@@ -3183,6 +3183,6 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 25 Jan 2016 08:36:13 GMT
 recorded_with: VCR 2.9.3

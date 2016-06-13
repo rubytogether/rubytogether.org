@@ -4,7 +4,7 @@ RSpec.describe "Stripe webhooks", :vcr do
 
   describe "customer.source.created" do
     it "runs our hook" do
-      user = User.create!(stripe_id: "cus_5zX7jk6DxkTfzh", email: "alice@example.com")
+      user = User.create!(stripe_id: "cus_8U1TcYRfvl8VqP", email: "alice@example.com")
       membership = Membership.create(user: user, card_last4: "1234")
 
       expect {
@@ -22,12 +22,12 @@ RSpec.describe "Stripe webhooks", :vcr do
   end
 
   describe "invoice.payment_succeeded" do
-    let(:user) { User.create!(stripe_id: "cus_5zX7jk6DxkTfzh", email: "alice@example.com") }
-    let(:membership) { Membership.create(user: user, card_last4: "4242") }
+    let!(:user) { User.create!(stripe_id: "cus_8U1TcYRfvl8VqP", email: "alice@example.com") }
+    let!(:membership) { Membership.create(user: user, card_last4: "4242") }
 
     it "runs our hook" do
       expect {
-        post "/stripe/events", id: "evt_15nY3IAcWgwn5pBtGGpjLCBH"
+        post "/stripe/events", id: "evt_18LmVXAcWgwn5pBtJT0nT3hc"
       }.to change { membership.reload.expires_at }
     end
   end
@@ -55,7 +55,7 @@ RSpec.describe "Stripe webhooks", :vcr do
     let(:user) { double(User, membership: membership) }
 
     it "runs our hook" do
-      expect(User).to receive(:find_by_stripe_id).with("cus_5zX7jk6DxkTfzh").and_return(user)
+      expect(User).to receive(:find_by_stripe_id).with("cus_8U1TcYRfvl8VqP").and_return(user)
       expect(membership).to receive(:update).with(kind: "individual")
 
       expect(Slack).to receive(:say).with(message, slack_options)
