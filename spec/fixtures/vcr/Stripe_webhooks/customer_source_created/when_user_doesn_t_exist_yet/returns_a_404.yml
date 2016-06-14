@@ -83,7 +83,7 @@ http_interactions:
               "address_zip_check": null,
               "dynamic_last4": null,
               "metadata": {},
-              "customer": "cus_5zX7jk6DxkTfzh"
+              "customer": "cus_8U1TcYRfvl8VqP"
             }
           },
           "object": "event",
@@ -91,6 +91,6 @@ http_interactions:
           "request": "iar_5zX7ZYrwpRhzH4",
           "api_version": "2015-02-18"
         }
-    http_version: 
+    http_version:
   recorded_at: Fri, 03 Apr 2015 16:57:37 GMT
 recorded_with: VCR 2.9.3
