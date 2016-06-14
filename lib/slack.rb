@@ -5,7 +5,12 @@ module Slack
     attr_accessor :team, :notifier
 
     def say(message, options = {})
-      Slack.notifier && Slack.notifier.ping(message, options)
+      if Slack.notifier
+        Slack.notifier.ping(message, options)
+      else
+        puts "== Slack is not configured ==\n\n"
+        puts message
+      end
     end
 
     def invite(email)

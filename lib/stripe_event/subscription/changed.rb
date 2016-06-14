@@ -6,7 +6,10 @@ module StripeEvent
         user = User.find_by_stripe_id(event.data.object.customer)
         user.try(:membership).try(:update, kind: event.data.object.plan.id)
 
-        Stats.new(slack: true).monthly_revenue_projection
+        Slack.say Stats.monthly_revenue_projection,
+          username: "Subscribers",
+          channel: "#stripe",
+          icon_emoji: ":chart_with_upwards_trend:"
       end
 
     end

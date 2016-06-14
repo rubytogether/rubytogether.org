@@ -1,9 +1,5 @@
 class Stats
-  def initialize(slack: true)
-    @slack = slack && (Rails.env.test? || Slack.team.present?)
-  end
-
-  def since(last_date)
+  def self.since(last_date)
     new_members = Membership.since(last_date)
     groups = new_members.group_by(&:kind)
     plans = MembershipPlan.all.values.sort_by(&:amount)
@@ -26,15 +22,9 @@ class Stats
     )
     dollars = ActiveSupport::NumberHelper.number_to_currency(estimate/100)
     message << "Projected monthly income is #{dollars} per month."
-
-    say(message,
-      username: "Memberships Since #{last_data}",
-      channel: "#stripe",
-      icon_emoji: ":chart_with_upwards_trend:"
-    )
   end
 
-  def expiring_annual_memberships
+  def self.expiring_annual_memberships
     expiring_memberships = Membership.on_trial.where(
       "expires_at <= ?", 1.month.from_now
     ).order("expires_at ASC")
@@ -48,15 +38,11 @@ class Stats
         message << "Expires at: #{membership.expires_at.strftime("%A, %d %B %Y")}\n\n"
       end
 
-      say(message,
-        username: "Expiring Annual Subscribers",
-        channel: "#stripe",
-        icon_emoji: ":chart_with_downwards_trend:"
-      )
+      message
     end
   end
 
-  def expired_memberships(expires_at)
+  def self.expired_memberships(expires_at)
     require 'action_view/helpers'
     include ActionView::Helpers::DateHelper
     expiries = Membership.where(
@@ -65,16 +51,10 @@ class Stats
       "#{member.user.email}: #{time_ago_in_words(member.expires_at)}"
     end
 
-    if expiries.any?
-      say(expiries.join("\n"),
-        username: "Recently Expired Memberships",
-        channel: "#stripe",
-        icon_emoji: ":chart_with_downwards_trend:"
-      )
-    end
+    expiries.join("\n")
   end
 
-  def monthly_revenue_projection
+  def self.monthly_revenue_projection
     subscriber_counts = MembershipPlan.subscriber_counts
     message = subscriber_counts.map do |plan, count|
       "#{count} #{plan.name.pluralize(count)}"
@@ -82,21 +62,5 @@ class Stats
     estimate = MonthlyRevenue.projected(subscriber_counts, Membership.prepaid)
     dollars = ActiveSupport::NumberHelper.number_to_currency(estimate/100)
     message << ". Projected revenue now #{dollars} per month."
-
-    say(message,
-      username: "Subscribers",
-      channel: "#stripe",
-      icon_emoji: ":chart_with_upwards_trend:"
-    )
-  end
-
-  private
-
-  def say(message, options = {})
-    if @slack
-      Slack.say(message, options)
-    else
-      puts message
-    end
   end
 end
