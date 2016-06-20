@@ -5,6 +5,8 @@ module Slack
     attr_accessor :team, :notifier
 
     def say(message, options = {})
+      return if message.blank?
+
       if Slack.notifier
         Slack.notifier.ping(message, options)
       else

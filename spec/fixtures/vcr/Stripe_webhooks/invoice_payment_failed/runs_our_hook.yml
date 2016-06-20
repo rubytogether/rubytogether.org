@@ -19,8 +19,8 @@ http_interactions:
       - application/x-www-form-urlencoded
       X-Stripe-Client-User-Agent:
       - '{"bindings_version":"1.41.0","lang":"ruby","lang_version":"2.3.1 p112 (2016-04-26)","platform":"x86_64-darwin15","engine":"ruby","publisher":"stripe","uname":"Darwin
-        thin.fritz.box 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
-        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"thin.fritz.box"}'
+        some.hostname 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
+        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"some.hostname"}'
   response:
     status:
       code: 200
@@ -127,7 +127,7 @@ http_interactions:
           "request": "req_8U2AhsQOCjAGy4",
           "type": "invoice.payment_failed"
         }
-    http_version: 
+    http_version:
   recorded_at: Fri, 20 May 2016 03:45:25 GMT
 - request:
     method: get
@@ -148,8 +148,8 @@ http_interactions:
       - application/x-www-form-urlencoded
       X-Stripe-Client-User-Agent:
       - '{"bindings_version":"1.41.0","lang":"ruby","lang_version":"2.3.1 p112 (2016-04-26)","platform":"x86_64-darwin15","engine":"ruby","publisher":"stripe","uname":"Darwin
-        thin.fritz.box 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
-        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"thin.fritz.box"}'
+        some.hostname 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
+        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"some.hostname"}'
   response:
     status:
       code: 200
@@ -275,7 +275,7 @@ http_interactions:
             "url": "/v1/customers/cus_8U1TcYRfvl8VqP/subscriptions"
           }
         }
-    http_version: 
+    http_version:
   recorded_at: Fri, 20 May 2016 03:45:28 GMT
 - request:
     method: get
@@ -296,8 +296,8 @@ http_interactions:
       - application/x-www-form-urlencoded
       X-Stripe-Client-User-Agent:
       - '{"bindings_version":"1.41.0","lang":"ruby","lang_version":"2.3.1 p112 (2016-04-26)","platform":"x86_64-darwin15","engine":"ruby","publisher":"stripe","uname":"Darwin
-        thin.fritz.box 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
-        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"thin.fritz.box"}'
+        some.hostname 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
+        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"some.hostname"}'
   response:
     status:
       code: 200
@@ -423,7 +423,7 @@ http_interactions:
             "url": "/v1/customers/cus_8U1TcYRfvl8VqP/subscriptions"
           }
         }
-    http_version: 
+    http_version:
   recorded_at: Fri, 20 May 2016 03:45:32 GMT
 - request:
     method: get
@@ -444,8 +444,8 @@ http_interactions:
       - application/x-www-form-urlencoded
       X-Stripe-Client-User-Agent:
       - '{"bindings_version":"1.41.0","lang":"ruby","lang_version":"2.3.1 p112 (2016-04-26)","platform":"x86_64-darwin15","engine":"ruby","publisher":"stripe","uname":"Darwin
-        thin.fritz.box 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
-        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"thin.fritz.box"}'
+        some.hostname 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
+        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"some.hostname"}'
   response:
     status:
       code: 200
@@ -571,7 +571,7 @@ http_interactions:
             "url": "/v1/customers/cus_8U1TcYRfvl8VqP/subscriptions"
           }
         }
-    http_version: 
+    http_version:
   recorded_at: Fri, 20 May 2016 03:45:37 GMT
 - request:
     method: get
@@ -592,8 +592,8 @@ http_interactions:
       - application/x-www-form-urlencoded
       X-Stripe-Client-User-Agent:
       - '{"bindings_version":"1.41.0","lang":"ruby","lang_version":"2.3.1 p112 (2016-04-26)","platform":"x86_64-darwin15","engine":"ruby","publisher":"stripe","uname":"Darwin
-        thin.fritz.box 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
-        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"thin.fritz.box"}'
+        some.hostname 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
+        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"some.hostname"}'
   response:
     status:
       code: 200
@@ -719,7 +719,7 @@ http_interactions:
             "url": "/v1/customers/cus_8U1TcYRfvl8VqP/subscriptions"
           }
         }
-    http_version: 
+    http_version:
   recorded_at: Fri, 20 May 2016 03:45:57 GMT
 - request:
     method: get
@@ -740,8 +740,8 @@ http_interactions:
       - application/x-www-form-urlencoded
       X-Stripe-Client-User-Agent:
       - '{"bindings_version":"1.41.0","lang":"ruby","lang_version":"2.3.1 p112 (2016-04-26)","platform":"x86_64-darwin15","engine":"ruby","publisher":"stripe","uname":"Darwin
-        thin.fritz.box 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
-        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"thin.fritz.box"}'
+        some.hostname 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
+        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"some.hostname"}'
   response:
     status:
       code: 200
@@ -867,7 +867,7 @@ http_interactions:
             "url": "/v1/customers/cus_8U1TcYRfvl8VqP/subscriptions"
           }
         }
-    http_version: 
+    http_version:
   recorded_at: Fri, 20 May 2016 03:46:07 GMT
 - request:
     method: get
@@ -888,8 +888,8 @@ http_interactions:
       - application/x-www-form-urlencoded
       X-Stripe-Client-User-Agent:
       - '{"bindings_version":"1.41.0","lang":"ruby","lang_version":"2.3.1 p112 (2016-04-26)","platform":"x86_64-darwin15","engine":"ruby","publisher":"stripe","uname":"Darwin
-        thin.fritz.box 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
-        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"thin.fritz.box"}'
+        some.hostname 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
+        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"some.hostname"}'
   response:
     status:
       code: 200
@@ -1015,7 +1015,7 @@ http_interactions:
             "url": "/v1/customers/cus_8U1TcYRfvl8VqP/subscriptions"
           }
         }
-    http_version: 
+    http_version:
   recorded_at: Fri, 20 May 2016 03:46:20 GMT
 - request:
     method: get
@@ -1036,8 +1036,8 @@ http_interactions:
       - application/x-www-form-urlencoded
       X-Stripe-Client-User-Agent:
       - '{"bindings_version":"1.41.0","lang":"ruby","lang_version":"2.3.1 p112 (2016-04-26)","platform":"x86_64-darwin15","engine":"ruby","publisher":"stripe","uname":"Darwin
-        thin.fritz.box 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
-        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"thin.fritz.box"}'
+        some.hostname 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT
+        2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64","hostname":"some.hostname"}'
   response:
     status:
       code: 200
@@ -1163,6 +1163,6 @@ http_interactions:
             "url": "/v1/customers/cus_8U1TcYRfvl8VqP/subscriptions"
           }
         }
-    http_version: 
+    http_version:
   recorded_at: Fri, 20 May 2016 03:46:55 GMT
 recorded_with: VCR 3.0.1

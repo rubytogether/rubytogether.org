@@ -12,6 +12,12 @@ class Membership < ActiveRecord::Base
     where user_id: User.on_trial.pluck(:id)
   end
 
+  delegate :email, to: :user, allow_nil: true, prefix: true
+
+  def has_stripe_subscriptions?
+    user.stripe_customer.subscriptions.any?
+  end
+
   scope :active, -> { where("expires_at > ?", Time.now) }
   scope :expired, -> { where("expires_at < ?", Time.now) }
   scope :named,  -> { where("name IS NOT NULL") }
