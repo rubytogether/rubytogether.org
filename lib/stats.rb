@@ -1,9 +1,8 @@
 class Stats
   def self.since(last_date)
-    new_members = Membership.since(last_date)
+    new_members = Membership.active.since(last_date)
     groups = new_members.group_by(&:kind)
     plans = MembershipPlan.all.values.sort_by(&:amount)
-
     plans.select{|plan| groups[plan.id] }.
       map{|plan| [plan, groups[plan.id]] }.
       each do |plan, group|
@@ -25,8 +24,9 @@ class Stats
   end
 
   def self.expiring_annual_memberships
+    # no need to look at memberships that are already expired.
     expiring_memberships = Membership.on_trial.where(
-      "expires_at <= ?", 1.month.from_now
+      "expires_at BETWEEN ? AND ?", Time.now, 1.month.from_now
     ).order("expires_at ASC")
 
     if expiring_memberships.any?
@@ -43,15 +43,9 @@ class Stats
   end
 
   def self.expired_memberships(expires_at)
-    require 'action_view/helpers'
-    include ActionView::Helpers::DateHelper
-    expiries = Membership.where(
+    Membership.includes(:user).where(
       "expires_at BETWEEN ? AND ?", expires_at, Time.now
-    ).select { |membership| membership.user.stripe_customer.subscriptions.any? }.map do |member|
-      "#{member.user.email}: #{time_ago_in_words(member.expires_at)}"
-    end
-
-    expiries.join("\n")
+    ).select(&:has_stripe_subscriptions?).map(&:user_email).join("\n")
   end
 
   def self.monthly_revenue_projection
