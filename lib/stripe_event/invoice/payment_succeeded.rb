@@ -19,15 +19,19 @@ module StripeEvent
 
         @user = user_for_event(@event)
 
-        # move back membership expiration time to the end paid for
-        expiration = Time.at(subscription.current_period_end)
-        @user.membership.update_attributes!(expires_at: expiration)
+        # move back membership expiration time to the end paid for + 3.5 days.
+        # The extra 3.5 days is for a payment failure grace period.
+        @user.membership.update_attributes!(expires_at: new_period_end)
 
         # rebuild the members page in case this activated a membership
         FastlyRails.purge_by_key("members")
       end
 
       private
+
+      def new_period_end
+        Time.at(subscription.current_period_end) + 3.5.days
+      end
 
       def charge?
         Stripe::Charge === @event.data.object

@@ -24,11 +24,17 @@ RSpec.describe "Stripe webhooks", :vcr do
   describe "invoice.payment_succeeded" do
     let!(:user) { User.create!(stripe_id: "cus_8U1TcYRfvl8VqP", email: "alice@example.com") }
     let!(:membership) { Membership.create(user: user, card_last4: "4242") }
+    let(:new_period_end) { Time.now + 3.5.days }
+
+    before do
+      allow_any_instance_of(StripeEvent::Invoice::PaymentSucceeded).
+        to receive(:new_period_end).and_return(new_period_end)
+    end
 
     it "runs our hook" do
       expect {
         post "/stripe/events", id: "evt_18LmVXAcWgwn5pBtJT0nT3hc"
-      }.to change { membership.reload.expires_at }
+      }.to change { membership.reload.expires_at }.from(nil).to be_within(0.1).of(new_period_end)
     end
   end
 
