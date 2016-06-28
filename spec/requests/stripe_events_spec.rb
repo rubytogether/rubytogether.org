@@ -48,6 +48,11 @@ RSpec.describe "Stripe webhooks", :vcr do
       }.to change(ActionMailer::Base.deliveries, :count).by(1)
 
       expect(ActionMailer::Base.deliveries.last.to).to include(user.email)
+      token = ActionMailer::Base.deliveries.last.body.parts.first.body.to_s.scan(
+        %r{\?token=(.*)}
+      ).flatten.first.to_s.chop
+      expect(token).to be_present, "Password reset token was not found in the email."
+      expect(User.with_reset_password_token(token)).to eq(user)
     end
   end
 
