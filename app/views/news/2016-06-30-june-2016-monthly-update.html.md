@@ -1,10 +1,10 @@
 ---
-summary: "RubyTogether paid for ??? hours of work, and had 6 new members join. Work this month includes RubyGems 2.6.6, Bundler 1.13 pre-release, and an array of minor improvements thanks to our Google Summer of Code students."
+summary: "RubyTogether paid for 119.6 hours of work, and had 7 new members join. Work this month includes RubyGems 2.6.6, Bundler 1.13 pre-release, and an array of minor improvements thanks to our Google Summer of Code students."
 ---
 
 <% title "June 2016 Monthly Update" %>
 
-Welcome to the June 2016 monthly update for RubyTogether! In the last month, we paid for ??? hours of work, and had 6 new members join. Our work this month includes RubyGems 2.6.6, Bundler 1.13 pre-release, and an array of minor improvements thanks to our Google Summer of Code students.
+Welcome to the June 2016 monthly update for RubyTogether! In the last month, we paid for 119.6 hours of work, and had 6 new members join. Our work this month includes RubyGems 2.6.6, Bundler 1.13 pre-release, and an array of minor improvements thanks to our Google Summer of Code students.
 
 ## ruby together news
 
@@ -18,7 +18,7 @@ Our Google Summer of Code ([GSoC](https://developers.google.com/open-source/gsoc
 
 ### new members
 
-We had a total of 6 new members this month, including 4 developers: ???. The 2 companies that joined this month are: [Powershop](http://www.powershop.co.nz/) and [Envato](https://envato.com)
+We had a total of 7 new members this month, including 5 developers: Joseph Method Daisuke Goto, George Claghorn, Joseph D. Marhee, and Aditya Sanghi. The 2 companies that joined this month are: [Powershop](http://www.powershop.co.nz/) and [Envato](https://envato.com)
 
 ## bundler news
 
@@ -39,15 +39,22 @@ In total, Bundler had 40 merged pull requests and 103 commits from 11 authors.
 
 ## rubygems news
 
-RubyGems [2.6.5](http://blog.rubygems.org/2016/06/21/2.6.5-released.html) and [2.6.6](http://blog.rubygems.org/2016/06/22/2.6.6-released.html) released this month, featuring a variety of bug fixes and minor enhancements that had accumulated since the last release. We also started working towards RubyGems 3.0, the Bundler and RubyGems merge. So far we have merged the [testing](https://github.com/rubygems/rubygems/pull/1650) and [issue semantics](https://github.com/rubygems/rubygems/issues/1442). *(???)* Pending a blog post detailing what the 3.0 release will entail, here is André describing [Bundler / RubyGems 3.0](https://github.com/rubygems/rubygems/pull/1639#issuecomment-227287369) informally.
+RubyGems [2.6.5](http://blog.rubygems.org/2016/06/21/2.6.5-released.html) and [2.6.6](http://blog.rubygems.org/2016/06/22/2.6.6-released.html) released this month, featuring a variety of bug fixes and minor enhancements that had accumulated since the last release. We also started working towards RubyGems 3.0, the Bundler and RubyGems merge. So far we have merged the [testing](https://github.com/rubygems/rubygems/pull/1650) and [issue semantics](https://github.com/rubygems/rubygems/issues/1442). Pending a blog post detailing what the 3.0 release will entail, here is André describing [Bundler / RubyGems 3.0](https://github.com/rubygems/rubygems/pull/1639#issuecomment-227287369) informally.
 
 In total, RubyGems had 12 merged pull requests and 19 commits from 6 authors.
 
 ## budget & expenses
 
-From May 20 to June XX, Ruby Together took in $$$. In total, we spent $$$. Here's a breakdown of where the money went:
+From May 20 to June 20, Ruby Together took in $$21162. In total, we spent $26813.03. Here's a breakdown of where the money went:
 
-* $$$
+* $7879.6- for 52.5 hours worked on Bundler at $150/hour
+* $5419.90 for 36.1 hours worked on RubyGems.org at $150/hour
+* $4650 for 31.0 hours worked on RubyGems at $150/hour
+* $75.11 on dedicated servers for RubyBench.org
+* $1723.25 on payment processing fees
+* $436.17 on company overhead like hosting, services, software, hardware, taxes, etc
+* $6600 on accounting, copywriting, design, and other professional services
+* $29 on marketing, evangelism, and community outreach
 
 Look forward in the next month to the completed [Bundler.io](https://bundler.io) redesign, the efforts of our many summer coding assistants, and the full Bundler 1.13 release.
 
