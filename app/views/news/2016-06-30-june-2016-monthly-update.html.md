@@ -1,24 +1,24 @@
 ---
-summary: "RubyTogether paid for 119.6 hours of work, and had 7 new members join. Work this month includes RubyGems 2.6.6, Bundler 1.13 pre-release, and an array of minor improvements thanks to our Google Summer of Code students."
+summary: "Ruby Together paid for 119.6 hours of work, and had 7 new members join. Work this month includes RubyGems 2.6.6, Bundler 1.13 pre-release, and an array of minor improvements thanks to our Google Summer of Code students."
 ---
 
 <% title "June 2016 Monthly Update" %>
 
-Welcome to the June 2016 monthly update for RubyTogether! In the last month, we paid for 119.6 hours of work, and had 6 new members join. Our work this month includes RubyGems 2.6.6, Bundler 1.13 pre-release, and an array of minor improvements thanks to our Google Summer of Code students.
+Welcome to the June 2016 monthly update for Ruby Together! In the last month, we paid for 119.6 hours of work, and had 6 new members join. Our work this month includes RubyGems 2.6.6, Bundler 1.13 pre-release, and an array of minor improvements thanks to our Google Summer of Code students.
 
 ## ruby together news
 
 ### tools for our tools
 
-We worked on two meta tools, [How Is](https://github.com/duckinator/how_is) for checking the status of issues and pull requests, and [Patronus](https://github.com/patronus-io/patronus) for testing and merging pull requests. Their broad goal is to take some of the legwork out of maintaining Bundler and RubyGems.
+We worked on two meta tools: [How Is](https://github.com/duckinator/how_is) for checking the status of issues and pull requests, and [Patronus](https://github.com/patronus-io/patronus) for testing and merging pull requests. Their broad goal is to take some of the legwork out of maintaining Bundler and RubyGems.
 
 ### summer of coders
 
-Our Google Summer of Code ([GSoC](https://developers.google.com/open-source/gsoc/)) students have done an array of work including an initial release of the plugin system, Bundler's site redesign, and resolving many [other issues](https://github.com/bundler/bundler/issues?utf8=%E2%9C%93&q=label%3AGSoC%20). They going pretty strong as we head into GSoC's midterms. We also got approval for a second set of summer assistance, and so next month we will be working with a team from [Rails Girls Summer of Code](http://railsgirlssummerofcode.org/blog/2016-06-24-more-teams-aye).
+Our Google Summer of Code ([GSoC](https://developers.google.com/open-source/gsoc/)) students have done an array of work including an initial release of the plugin system, Bundler's site redesign, and resolving many [other issues](https://github.com/bundler/bundler/issues?utf8=%E2%9C%93&q=label%3AGSoC%20). They are going pretty strong as we head into GSoC's midterms. We also got approval for a second set of summer assistance, and so next month we will be working with a team from [Rails Girls Summer of Code](http://railsgirlssummerofcode.org/blog/2016-06-24-more-teams-aye).
 
 ### new members
 
-We had a total of 7 new members this month, including 5 developers: Joseph Method Daisuke Goto, George Claghorn, Joseph D. Marhee, and Aditya Sanghi. The 2 companies that joined this month are: [Powershop](http://www.powershop.co.nz/) and [Envato](https://envato.com)
+We had a total of 7 new members this month, including 5 developers: Joseph Method, Daisuke Goto, George Claghorn, Joseph D. Marhee, and Aditya Sanghi. The 2 companies that joined this month are: [Powershop](http://www.powershop.co.nz/) and [Envato](https://envato.com)
 
 ## bundler news
 
@@ -45,7 +45,7 @@ In total, RubyGems had 12 merged pull requests and 19 commits from 6 authors.
 
 ## budget & expenses
 
-From May 20 to June 20, Ruby Together took in $$21162. In total, we spent $26813.03. Here's a breakdown of where the money went:
+From May 20 to June 20, Ruby Together took in $21162. In total, we spent $26813.03. Here's a breakdown of where the money went:
 
 * $7879.6- for 52.5 hours worked on Bundler at $150/hour
 * $5419.90 for 36.1 hours worked on RubyGems.org at $150/hour
