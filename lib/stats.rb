@@ -45,7 +45,9 @@ class Stats
   def self.expired_memberships(expires_at)
     Membership.includes(:user).where(
       "expires_at BETWEEN ? AND ?", expires_at, Time.now
-    ).select(&:has_stripe_subscriptions?).map(&:user_email).join("\n")
+    ).select(&:has_stripe_subscriptions?).map do |membership|
+      "#{membership.user_email} -> https://dashboard.stripe.com/customers/#{membership.user.stripe_id}"
+    end.join("\n")
   end
 
   def self.monthly_revenue_projection
