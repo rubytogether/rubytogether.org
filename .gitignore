@@ -1,4 +1,5 @@
 /.bundle
 /.env.local
+/.rspec_failures
 /log/*
 /tmp
