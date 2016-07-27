@@ -40,7 +40,7 @@ RSpec.describe Stats, :vcr do
       # revenue shall be:
       # individual $40 + Ruby $5,000 + Onyx $50 + $520 other individuals
       # = $5,610 per month
-      expect(response).to include("Projected monthly income is $5,610.00 per month")
+      expect(response).to include("Projected monthly income is $8,730.00 per month")
     end
   end
 
@@ -68,7 +68,7 @@ RSpec.describe Stats, :vcr do
   context "monthly_revenue_projection" do
     it "is accurate" do
       expect(subject.monthly_revenue_projection).to eq(
-        "1 Onyx Memberbership, 0 Emerald Memberberships, 0 Jade Memberberships, 1 Ruby Membership, 0 Sapphire Memberships, 0 Topaz Memberships, 0 Friends of Ruby Together, and 1 Developer Membership. Projected revenue now $5,610.00 per month."
+        "1 Onyx Memberbership, 0 Emerald Memberberships, 0 Jade Memberberships, 2 Ruby Memberships, 0 Sapphire Memberships, 1 Topaz Membership, 0 Friends of Ruby Together, and 1 Developer Membership. Projected revenue now $8,730.00 per month."
       )
     end
   end
