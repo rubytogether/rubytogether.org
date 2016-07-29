@@ -34,13 +34,13 @@ RSpec.describe Stats, :vcr do
     it "is accurate" do
       response = subject.since(4.weeks.ago)
       expect(response).to be_present
-      expect(response).to include("1 new person")
-      expect(response).to include("2 new companies")
-      expect(response).to include("3 new members total")
-      # revenue shall be:
-      # individual $40 + Ruby $5,000 + Onyx $50 + $520 other individuals
-      # = $5,610 per month
-      expect(response).to include("Projected monthly income is $5,610.00 per month")
+      expect(response).to include("1 new person") # $40/month
+      expect(response).to include("2 new companies") # Ruby $5,000 + Onyx $50
+      expect(response).to include("3 new members total") # Total $5,090
+      # To match the data in our test Stripe environment:
+      # + 1 existing Ruby $5,000 + 1 existing Topaz $200 + $520 other individuals
+      # = $10,810 per month
+      expect(response).to include("Projected monthly income is $10,810.00 per month")
     end
   end
 
@@ -68,7 +68,7 @@ RSpec.describe Stats, :vcr do
   context "monthly_revenue_projection" do
     it "is accurate" do
       expect(subject.monthly_revenue_projection).to eq(
-        "1 Onyx Memberbership, 0 Emerald Memberberships, 0 Jade Memberberships, 1 Ruby Membership, 0 Sapphire Memberships, 0 Topaz Memberships, 0 Friends of Ruby Together, and 1 Developer Membership. Projected revenue now $5,610.00 per month."
+        "1 Onyx Memberbership, 0 Emerald Memberberships, 0 Jade Memberberships, 2 Ruby Memberships, 0 Sapphire Memberships, 1 Topaz Membership, 0 Friends of Ruby Together, and 1 Developer Membership. Projected revenue now $10,810.00 per month."
       )
     end
   end

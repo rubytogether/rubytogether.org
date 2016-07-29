@@ -1,4 +1,8 @@
 class Stats
+  def self.debug(message)
+    puts(message) if ENV["DEBUG"]
+  end
+
   def self.since(last_date)
     new_members = Membership.active.since(last_date)
     groups = new_members.group_by(&:kind)
@@ -6,7 +10,7 @@ class Stats
     plans.select{|plan| groups[plan.id] }.
       map{|plan| [plan, groups[plan.id]] }.
       each do |plan, group|
-        puts "#{group.size} new #{plan.shortname} #{"member".pluralize(group.size)}: #{group.map(&:name).compact.to_sentence}"
+        debug "#{group.size} new #{plan.shortname} #{"member".pluralize(group.size)}: #{group.map(&:name).compact.to_sentence}"
       end
 
     companies, people = new_members.partition(&:corporate?)
