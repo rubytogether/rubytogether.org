@@ -1,19 +1,14 @@
-# {{ MONTH }} {{ YEAR }} monthly update
+# july 2016 monthly update
 
 * $ and hours spent on developer time
 * New members, new companies (broadly)
 
 ## ruby together news
 
-* Major development highlights
-* Big organizational changes
-* meta stuff
-* new hires
-* new members
-* new companies
-
 GoogleSoC on Bundler Plugin System, Bundler.io, convenience changes to Bundler commands (https://github.com/bundler/bundler/pull/4735, https://github.com/bundler/bundler/pull/4632)
 RailsGirlsSoC people working on Bundler analytics
+
+5 new members, 3 new developers and 2 new companies
 
 ## bundler news
 
@@ -28,10 +23,6 @@ bundle patch https://github.com/bundler/bundler/pull/4676
 
 15 authors, 35 merges, 251 commits
 
-* major development changes
-* commits, pull requests, authors
-* movement towards version releases
-
 ## rubygems.org news
 
 Mostly [content updates](https://github.com/rubygems/rubygems.org/pull/1359) and [minor security changes](https://github.com/rubygems/rubygems.org/pull/1342)
@@ -39,24 +30,23 @@ A first time open source contributor! https://github.com/rubygems/rubygems.org/p
 
 9 authors, 27 merges, 67 commits
 
-* major development changes
-* commits, pull requests, authors
-* movement towards version releases
-
 ## rubygems news
 
 Minor fixes
 1 author (our own [Samuel Giddins](https://github.com/segiddins)), 3 merges, 10 commits
 
-* major development changes
-* commits, pull requests, authors
-* movement towards version releases
-
 ## budget & expenses
 
-From {{ MONTH.LAST }} 19 to {{ MONTH }} 18, Ruby Together took in $X. In total, we spent $X. Here's a breakdown of where the money went:
+From June 21 to July 19, Ruby Together took in $19161. In total, we spent $18563.86. Here's a breakdown of where the money went:
 
-* $$$
+* $2452.0 for 16.3 hours worked on Bundler at $150/hour
+* $3613.0 for 24.1 hours worked on RubyGems.org at $150/hour
+* $3600.0 for 24.0 hours worked on RubyGems at $150/hour
+* $74.35 on dedicated servers for RubyBench.org
+* $1168.99 on payment processing fees
+* $351.52 on company overhead like hosting, services, software, hardware, taxes, etc
+* $7275.0 on accounting, copywriting, design, and other professional services
+* $29.0 on marketing, evangelism, and community outreach
 
 ## future plans
 
