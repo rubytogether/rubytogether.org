@@ -47,7 +47,7 @@ In total, RubyGems had 12 merged pull requests and 19 commits from 6 authors.
 
 From May 20 to June 20, Ruby Together took in $21162. In total, we spent $26813.03. Here's a breakdown of where the money went:
 
-* $7879.6- for 52.5 hours worked on Bundler at $150/hour
+* $7879.60 for 52.5 hours worked on Bundler at $150/hour
 * $5419.90 for 36.1 hours worked on RubyGems.org at $150/hour
 * $4650 for 31.0 hours worked on RubyGems at $150/hour
 * $75.11 on dedicated servers for RubyBench.org
