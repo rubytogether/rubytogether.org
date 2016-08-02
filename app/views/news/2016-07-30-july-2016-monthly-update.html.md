@@ -1,5 +1,5 @@
 ---
-summary: "Ruby Together paid for 64.4 hours of work, and had 5 new members join. We launched a new design for bundler.io, and made a big chunk of progress towards Bundler 1.13, 1.14, 2.0, and the combined Bundler+RubyGems 3.0.
+summary: "Ruby Together paid for 64.4 hours of work, and had 5 new members join. We launched a new design for bundler.io, and made a big chunk of progress towards Bundler 1.13, 1.14, 2.0, and the combined Bundler+RubyGems 3.0."
 ---
 
 <% title "July 2016 Monthly Update" %>
