@@ -1,4 +1,8 @@
-# july 2016 monthly update
+---
+summary: "Ruby Together paid for 64.4 hours of work, and had 5 new members join. Work done this month includes a designed <Bundler.io>, and prerequisites for Bundler 2.0 and Bundler / RubyGems 3.0."
+---
+
+<% title "July 2016 Monthly Update" %>
 
 Welcome to the Ruby Together update for July 2016. This month, we paid for 64.4 hours of work, had 5 new members join, and had another solid month from our summer coding students. Work done this month includes a designed <Bundler.io>, and prerequisites for Bundler 2.0 and Bundler / RubyGems 3.0.
 
@@ -35,4 +39,5 @@ From June 21 to July 19, Ruby Together took in $19161. In total, we spent $18563
 
 Check back next month for our last month of work from Google Summer of Code, more work towards major releases, and our regular diligent security updates and minor fixes.
 
+Until next time,<br>
 Lynn and the Ruby Together team
