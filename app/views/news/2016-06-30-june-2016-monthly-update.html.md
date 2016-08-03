@@ -51,8 +51,8 @@ From May 20 to June 20, Ruby Together took in $21162. In total, we spent $26813.
 * $5419.90 for 36.1 hours worked on RubyGems.org at $150/hour
 * $4650 for 31.0 hours worked on RubyGems at $150/hour
 * $75.11 on dedicated servers for RubyBench.org
-* $1723.25 on payment processing fees
-* $436.17 on company overhead like hosting, services, software, hardware, taxes, etc
+* $657.6 on payment processing fees
+* $2159.42 on company overhead like hosting, services, software, hardware, taxes, etc
 * $6600 on accounting, copywriting, design, and other professional services
 * $29 on marketing, evangelism, and community outreach
 
