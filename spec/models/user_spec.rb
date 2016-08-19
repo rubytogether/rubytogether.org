@@ -10,4 +10,18 @@ RSpec.describe User do
       expect(Stripe::Customer.retrieve("cus_7VmzGcohKDBG5L").email).to eq("bob@example.com")
     end
   end
+
+  describe ".never_notified_of_delinquency" do
+    let!(:alice) {
+      User.create! email: "alice@example.org", delinquent_notification_sent_at: Time.now
+    }
+    let!(:bob) {
+      User.create! email: "bob@example.org", delinquent_notification_sent_at: nil
+    }
+
+    it "only finds users who have never been notified" do
+      expect(User.never_notified_of_delinquency).to include(bob)
+      expect(User.never_notified_of_delinquency).not_to include(alice)
+    end
+  end
 end

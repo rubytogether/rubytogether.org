@@ -1,0 +1,29 @@
+<p class="lead">Hi <%= @name %>,</p>
+
+<p>
+  Thanks for being a member of Ruby Together! We really appreciate your support.
+</p>
+
+<p>
+  We just wanted to let you know that your Ruby Together payments failed a few
+  times, so Stripe automatically deactivated your subscription at some point.
+</p>
+
+<p>
+  If you're happy for us to reactivate your subscription then please just reply
+  to this email, to give us permission to do so, and we'll sort it out for you.
+</p>
+
+<p>
+  You can easily check whether your payment information is correct
+  <a href="<%= membership_url(token: @token) %>">using this link</a>.
+</p>
+
+<p>
+  We'd be delighted to have your support again!  It makes a big difference.
+</p>
+
+<p>
+  Thanks,<br>
+  Ruby Together
+</p>

@@ -16,12 +16,26 @@ class User < ActiveRecord::Base
     where stripe_id: trial_stripe_subscriptions.map(&:customer)
   end
 
+  # Return users that are in a payment status of "delinquent".
+  def self.delinquent
+    where stripe_id: delinquent_customers.map(&:id)
+  end
+
+  # Return users that haven't previously been notified of being delinquent
+  def self.never_notified_of_delinquency
+    where delinquent_notification_sent_at: nil
+  end
+
   # Finds all subscriptions inside Stripe that have the status 'trialing'.
   # This is better than Membership#prepaid, but it requires network activity.
   def self.trial_stripe_subscriptions
     Stripe::Subscription.list(limit: 50).auto_paging_each.select do |subscription|
       subscription.status == 'trialing'
     end
+  end
+
+  def self.delinquent_customers
+    Stripe::Customer.list(limit: 50, delinquent: true).auto_paging_each.select(&:delinquent?)
   end
 
   def generate_reset_password_token!
