@@ -130,7 +130,7 @@ http_interactions:
                   "interval_count": 1,
                   "livemode": false,
                   "metadata": {},
-                  "name": "Ruby Membership",
+                  "name": "Ruby Member",
                   "statement_descriptor": null,
                   "trial_period_days": null
                 },
@@ -279,7 +279,7 @@ http_interactions:
                   "interval_count": 1,
                   "livemode": false,
                   "metadata": {},
-                  "name": "Developer Membership",
+                  "name": "Developer Member",
                   "statement_descriptor": null,
                   "trial_period_days": null
                 },
@@ -428,7 +428,7 @@ http_interactions:
                   "interval_count": 1,
                   "livemode": false,
                   "metadata": {},
-                  "name": "Onyx Memberbership",
+                  "name": "Onyx Member",
                   "statement_descriptor": null,
                   "trial_period_days": null
                 },
@@ -577,7 +577,7 @@ http_interactions:
                   "interval_count": 1,
                   "livemode": false,
                   "metadata": {},
-                  "name": "Topaz Membership",
+                  "name": "Topaz Member",
                   "statement_descriptor": null,
                   "trial_period_days": null
                 },
@@ -726,7 +726,7 @@ http_interactions:
                   "interval_count": 1,
                   "livemode": false,
                   "metadata": {},
-                  "name": "Topaz Membership",
+                  "name": "Topaz Member",
                   "statement_descriptor": null,
                   "trial_period_days": null
                 },

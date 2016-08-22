@@ -68,7 +68,7 @@ RSpec.describe Stats, :vcr do
   context "monthly_revenue_projection" do
     it "is accurate" do
       expect(subject.monthly_revenue_projection).to eq(
-        "1 Onyx Memberbership, 0 Emerald Memberberships, 0 Jade Memberberships, 2 Ruby Memberships, 0 Sapphire Memberships, 1 Topaz Membership, 0 Friends of Ruby Together, and 1 Developer Membership. Projected revenue now $10,810.00 per month."
+        "1 Onyx Member, 0 Emerald Members, 0 Jade Members, 2 Ruby Members, 0 Sapphire Members, 1 Topaz Member, 0 Friends of Ruby Together, and 1 Developer Member. Projected revenue now $10,810.00 per month."
       )
     end
   end

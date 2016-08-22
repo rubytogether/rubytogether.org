@@ -130,7 +130,7 @@ http_interactions:
                   "interval_count": 1,
                   "livemode": false,
                   "metadata": {},
-                  "name": "Ruby Membership",
+                  "name": "Ruby Member",
                   "statement_descriptor": null,
                   "trial_period_days": null
                 },
@@ -147,7 +147,7 @@ http_interactions:
             "url": "/v1/customers/cus_8ff9tXc0ra8927/subscriptions"
           }
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 20 Jun 2016 04:56:44 GMT
 - request:
     method: get
@@ -279,7 +279,7 @@ http_interactions:
                   "interval_count": 1,
                   "livemode": false,
                   "metadata": {},
-                  "name": "Developer Membership",
+                  "name": "Developer Member",
                   "statement_descriptor": null,
                   "trial_period_days": null
                 },
@@ -296,7 +296,7 @@ http_interactions:
             "url": "/v1/customers/cus_8ff9KmLm6ZG9oW/subscriptions"
           }
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 20 Jun 2016 04:56:45 GMT
 - request:
     method: get
@@ -428,7 +428,7 @@ http_interactions:
                   "interval_count": 1,
                   "livemode": false,
                   "metadata": {},
-                  "name": "Onyx Memberbership",
+                  "name": "Onyx Member",
                   "statement_descriptor": null,
                   "trial_period_days": null
                 },
@@ -445,7 +445,7 @@ http_interactions:
             "url": "/v1/customers/cus_8ff95K9mtLvC4w/subscriptions"
           }
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 20 Jun 2016 04:56:46 GMT
 - request:
     method: get
@@ -558,7 +558,7 @@ http_interactions:
             "url": "/v1/customers/cus_8ffUbWEM9gofdR/subscriptions"
           }
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 20 Jun 2016 04:56:47 GMT
 - request:
     method: get
@@ -693,7 +693,7 @@ http_interactions:
                       "interval_count": 1,
                       "livemode": false,
                       "metadata": {},
-                      "name": "Onyx Memberbership",
+                      "name": "Onyx Member",
                       "statement_descriptor": null,
                       "trial_period_days": null
                     },
@@ -715,7 +715,7 @@ http_interactions:
           "total_count": 1,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 20 Jun 2016 04:56:47 GMT
 - request:
     method: get
@@ -779,7 +779,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 20 Jun 2016 04:56:48 GMT
 - request:
     method: get
@@ -843,7 +843,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 20 Jun 2016 04:56:49 GMT
 - request:
     method: get
@@ -978,7 +978,7 @@ http_interactions:
                       "interval_count": 1,
                       "livemode": false,
                       "metadata": {},
-                      "name": "Ruby Membership",
+                      "name": "Ruby Member",
                       "statement_descriptor": null,
                       "trial_period_days": null
                     },
@@ -1000,7 +1000,7 @@ http_interactions:
           "total_count": 1,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 20 Jun 2016 04:56:50 GMT
 - request:
     method: get
@@ -1064,7 +1064,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 20 Jun 2016 04:56:51 GMT
 - request:
     method: get
@@ -1128,7 +1128,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 20 Jun 2016 04:56:52 GMT
 - request:
     method: get
@@ -1192,7 +1192,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 20 Jun 2016 04:56:53 GMT
 - request:
     method: get
@@ -1327,7 +1327,7 @@ http_interactions:
                       "interval_count": 1,
                       "livemode": false,
                       "metadata": {},
-                      "name": "Developer Membership",
+                      "name": "Developer Member",
                       "statement_descriptor": null,
                       "trial_period_days": null
                     },
@@ -1349,7 +1349,7 @@ http_interactions:
           "total_count": 1,
           "url": "/v1/customers"
         }
-    http_version: 
+    http_version:
   recorded_at: Mon, 20 Jun 2016 04:56:54 GMT
 - request:
     method: get
@@ -1433,7 +1433,7 @@ http_interactions:
                 "interval_count": 1,
                 "livemode": false,
                 "metadata": {},
-                "name": "Onyx Memberbership",
+                "name": "Onyx Member",
                 "statement_descriptor": null,
                 "trial_period_days": null
               },
@@ -1449,7 +1449,7 @@ http_interactions:
           "total_count": 1,
           "url": "/v1/subscriptions"
         }
-    http_version: 
+    http_version:
   recorded_at: Wed, 27 Jul 2016 03:22:53 GMT
 - request:
     method: get
@@ -1513,7 +1513,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/subscriptions"
         }
-    http_version: 
+    http_version:
   recorded_at: Wed, 27 Jul 2016 03:22:53 GMT
 - request:
     method: get
@@ -1577,7 +1577,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/subscriptions"
         }
-    http_version: 
+    http_version:
   recorded_at: Wed, 27 Jul 2016 03:22:54 GMT
 - request:
     method: get
@@ -1661,7 +1661,7 @@ http_interactions:
                 "interval_count": 1,
                 "livemode": false,
                 "metadata": {},
-                "name": "Ruby Membership",
+                "name": "Ruby Member",
                 "statement_descriptor": null,
                 "trial_period_days": null
               },
@@ -1677,7 +1677,7 @@ http_interactions:
           "total_count": 2,
           "url": "/v1/subscriptions"
         }
-    http_version: 
+    http_version:
   recorded_at: Wed, 27 Jul 2016 03:22:54 GMT
 - request:
     method: get
@@ -1741,7 +1741,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/subscriptions"
         }
-    http_version: 
+    http_version:
   recorded_at: Wed, 27 Jul 2016 03:22:54 GMT
 - request:
     method: get
@@ -1825,7 +1825,7 @@ http_interactions:
                 "interval_count": 1,
                 "livemode": false,
                 "metadata": {},
-                "name": "Topaz Membership",
+                "name": "Topaz Member",
                 "statement_descriptor": null,
                 "trial_period_days": null
               },
@@ -1841,7 +1841,7 @@ http_interactions:
           "total_count": 1,
           "url": "/v1/subscriptions"
         }
-    http_version: 
+    http_version:
   recorded_at: Wed, 27 Jul 2016 03:22:54 GMT
 - request:
     method: get
@@ -1905,7 +1905,7 @@ http_interactions:
           "total_count": 0,
           "url": "/v1/subscriptions"
         }
-    http_version: 
+    http_version:
   recorded_at: Wed, 27 Jul 2016 03:22:54 GMT
 - request:
     method: get
@@ -1989,7 +1989,7 @@ http_interactions:
                 "interval_count": 1,
                 "livemode": false,
                 "metadata": {},
-                "name": "Developer Membership",
+                "name": "Developer Member",
                 "statement_descriptor": null,
                 "trial_period_days": null
               },
@@ -2005,6 +2005,6 @@ http_interactions:
           "total_count": 1,
           "url": "/v1/subscriptions"
         }
-    http_version: 
+    http_version:
   recorded_at: Wed, 27 Jul 2016 03:22:55 GMT
 recorded_with: VCR 3.0.3

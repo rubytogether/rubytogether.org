@@ -103,7 +103,7 @@ http_interactions:
                       "interval_count": 1,
                       "livemode": false,
                       "metadata": {},
-                      "name": "Ruby Membership",
+                      "name": "Ruby Member",
                       "statement_descriptor": null,
                       "trial_period_days": null
                     },
@@ -271,7 +271,7 @@ http_interactions:
                   "interval_count": 1,
                   "livemode": false,
                   "metadata": {},
-                  "name": "Ruby Membership",
+                  "name": "Ruby Member",
                   "statement_descriptor": null,
                   "trial_period_days": null
                 },
@@ -419,7 +419,7 @@ http_interactions:
                   "interval_count": 1,
                   "livemode": false,
                   "metadata": {},
-                  "name": "Ruby Membership",
+                  "name": "Ruby Member",
                   "statement_descriptor": null,
                   "trial_period_days": null
                 },
