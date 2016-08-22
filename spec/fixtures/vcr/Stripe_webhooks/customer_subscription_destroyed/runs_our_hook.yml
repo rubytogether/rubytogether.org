@@ -4024,7 +4024,7 @@ http_interactions:
   recorded_at: Mon, 25 Jan 2016 08:38:43 GMT
 - request:
     method: get
-    uri: https://api.stripe.com/v1/subscriptions?include%5B%5D=total_count&limit=1&plan=corporate_onyx
+    uri: https://api.stripe.com/v1/subscriptions?include%5B%5D=total_count&limit=1&plan=corporate_onyx&status=active
     body:
       encoding: US-ASCII
       string: ''
@@ -4124,7 +4124,7 @@ http_interactions:
   recorded_at: Wed, 27 Jul 2016 03:28:41 GMT
 - request:
     method: get
-    uri: https://api.stripe.com/v1/subscriptions?include%5B%5D=total_count&limit=1&plan=corporate_emerald
+    uri: https://api.stripe.com/v1/subscriptions?include%5B%5D=total_count&limit=1&plan=corporate_emerald&status=active
     body:
       encoding: US-ASCII
       string: ''
@@ -4188,7 +4188,7 @@ http_interactions:
   recorded_at: Wed, 27 Jul 2016 03:28:41 GMT
 - request:
     method: get
-    uri: https://api.stripe.com/v1/subscriptions?include%5B%5D=total_count&limit=1&plan=corporate_jade
+    uri: https://api.stripe.com/v1/subscriptions?include%5B%5D=total_count&limit=1&plan=corporate_jade&status=active
     body:
       encoding: US-ASCII
       string: ''
@@ -4252,7 +4252,7 @@ http_interactions:
   recorded_at: Wed, 27 Jul 2016 03:28:41 GMT
 - request:
     method: get
-    uri: https://api.stripe.com/v1/subscriptions?include%5B%5D=total_count&limit=1&plan=corporate_ruby
+    uri: https://api.stripe.com/v1/subscriptions?include%5B%5D=total_count&limit=1&plan=corporate_ruby&status=active
     body:
       encoding: US-ASCII
       string: ''
@@ -4352,7 +4352,7 @@ http_interactions:
   recorded_at: Wed, 27 Jul 2016 03:28:42 GMT
 - request:
     method: get
-    uri: https://api.stripe.com/v1/subscriptions?include%5B%5D=total_count&limit=1&plan=corporate_sapphire
+    uri: https://api.stripe.com/v1/subscriptions?include%5B%5D=total_count&limit=1&plan=corporate_sapphire&status=active
     body:
       encoding: US-ASCII
       string: ''
@@ -4416,7 +4416,7 @@ http_interactions:
   recorded_at: Wed, 27 Jul 2016 03:28:42 GMT
 - request:
     method: get
-    uri: https://api.stripe.com/v1/subscriptions?include%5B%5D=total_count&limit=1&plan=corporate_topaz
+    uri: https://api.stripe.com/v1/subscriptions?include%5B%5D=total_count&limit=1&plan=corporate_topaz&status=active
     body:
       encoding: US-ASCII
       string: ''
@@ -4516,7 +4516,7 @@ http_interactions:
   recorded_at: Wed, 27 Jul 2016 03:28:42 GMT
 - request:
     method: get
-    uri: https://api.stripe.com/v1/subscriptions?include%5B%5D=total_count&limit=1&plan=friend
+    uri: https://api.stripe.com/v1/subscriptions?include%5B%5D=total_count&limit=1&plan=friend&status=active
     body:
       encoding: US-ASCII
       string: ''
@@ -4580,7 +4580,7 @@ http_interactions:
   recorded_at: Wed, 27 Jul 2016 03:28:42 GMT
 - request:
     method: get
-    uri: https://api.stripe.com/v1/subscriptions?include%5B%5D=total_count&limit=1&plan=individual
+    uri: https://api.stripe.com/v1/subscriptions?include%5B%5D=total_count&limit=1&plan=individual&status=active
     body:
       encoding: US-ASCII
       string: ''
