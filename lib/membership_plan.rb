@@ -35,7 +35,8 @@ MembershipPlan = Struct.new(:id, :shortname, :name, :interval, :amount, :currenc
     Stripe::Subscription.list(
       "include[]" => "total_count",
       "limit" => 1,
-      "plan" => id
+      "plan" => id,
+      "status" => "active"
     ).total_count
   end
 
