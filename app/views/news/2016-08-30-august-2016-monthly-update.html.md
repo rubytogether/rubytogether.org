@@ -8,7 +8,7 @@ Welcome to the Ruby Together update for August 2016. This month, we paid for ???
 
 ## ruby together news
 
-This August at Ruby Together was marked by personnel shifts. The Google Summer of Code students finished their term, and the Rails Girls Summer of Code students shifted up with their first PR. Our ops engineer had a child and our project manager had a major surgery. Voting for the board of directors finished, with [Ines Sombra](http://twitter.com/randommood) and [Coraline Ada Ehmke](http://twitter.com/coralineada) being nominated for another term.
+This August at Ruby Together was marked by personnel shifts. The Google Summer of Code students finished their term, and the Rails Girls Summer of Code students shifted up with their first PR. Our ops engineer had a child and our project manager had a major surgery. Voting for the board of directors finished, and after an incredibly close election, board members [Ines Sombra](http://twitter.com/randommood) and [Coraline Ada Ehmke](http://twitter.com/coralineada) were re-elected to a three year term. Thanks to every member who participated! <3.
 
 We worked on a variety of smaller tools in development ecosystem, including [how-is](https://github.com/how-is/how_is), [vcr](https://github.com/vcr/vcr), and [lita](https://github.com/indirect/lita-tweet).
 
