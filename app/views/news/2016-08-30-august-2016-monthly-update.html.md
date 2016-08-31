@@ -16,40 +16,25 @@ Voting for the board of directors wrapped up this month. After an incredibly clo
 
 Ruby Together employees also worked on a variety of smaller tools in the Ruby development ecosystem, including [how-is](https://github.com/how-is/how_is), [vcr](https://github.com/vcr/vcr), and [lita](https://github.com/indirect/lita-tweet).
 
-* Major development highlights
-* Big organizational changes
-* meta stuff
-* new hires
-* new members
-* new companies
-
 ## bundler news
 
 We ironed out more bugs with Bundler 1.13, and arrived at [1.13.rc2](https://github.com/bundler/bundler/blob/master/CHANGELOG.md#1130rc2-2016-08-21). Andre created checklists for upcoming versions of Bundler, including [1.13](https://github.com/bundler/bundler/issues/4852), [1.14](https://github.com/bundler/bundler/issues/4853), and [2.0](https://github.com/bundler/bundler/issues/4856). [Bundler.io](https://bundler.io) got its last set of changes courtesy of Google Summer of Code, and will be returning to its mountain lair where it lies in wait for more motivated contributors.
 
-* major development changes
-* commits, pull requests, authors
-* movement towards version releases
+In total, Bundler had 53 merged pull requests and 184 commits from 18 authors, and closed 44 issues.
 
 ## rubygems.org news
 
-Rubygems.org got its regular maintenance work, and changes to address security vulnerabilities in the `gem yank` command.
-
-* major development changes
-* commits, pull requests, authors
-* movement towards version releases
+Rubygems.org got its regular maintenance work, and updates to address security vulnerabilities in the `gem yank` command. With those changes, Rubygems.org had 18 merged pull requests and 26 commits from 7 authors.
 
 ## rubygems news
 
-RubyGems got a lot of planning work done towards the 3.0 merge, and now has [an issue](https://github.com/rubygems/rubygems/issues/1681) to track merger considerations.
-
-* major development changes
-* commits, pull requests, authors
-* movement towards version releases
+RubyGems got a lot of planning work done towards the 3.0 merge, and now has [an issue](https://github.com/rubygems/rubygems/issues/1681) to track merger considerations. Including that work, RubyGems had 10 merged pull requests and 10 commits from 5 authors.
 
 ## budget & expenses
 
 From July 19 to August 18, Ruby Together took in $X. In total, we spent $X. Here's a breakdown of where the money went:
+
+???
 
 ## future plans
 
