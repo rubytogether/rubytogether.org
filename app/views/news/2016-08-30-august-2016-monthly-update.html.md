@@ -1,10 +1,10 @@
 ---
-summary: "Ruby Together paid for ??? hours of work, and had 2 new members join. This month we released Bundler 1.13.rc2, and created detailed roadmaps for Bundler 1.13, 1.14, 2.0 and the merged RubyGems + Bundler 3.0"
+summary: "Ruby Together paid for 65.5 hours of work, and had 2 new members join. This month we released Bundler 1.13.rc2, and created detailed roadmaps for Bundler 1.13, 1.14, 2.0 and the merged RubyGems + Bundler 3.0"
 ---
 
 <% title "August 2016 Monthly Update" %>
 
-Welcome to the Ruby Together update for August 2016. This month, we paid for ??? hours of work, had ??? new members join. We released Bundler 1.13 RC2, and created roadmaps for Bundler 1.13, 1.14, 2.0, and RubyGems + Bundler 3.0.
+Welcome to the Ruby Together update for August 2016. This month, we paid for 65.5 hours of work, had 2 new members join. We released Bundler 1.13 RC2, and created roadmaps for Bundler 1.13, 1.14, 2.0, and RubyGems + Bundler 3.0.
 
 ## ruby together news
 
@@ -34,7 +34,9 @@ RubyGems got a lot of planning work done towards the 3.0 merge, and now has [an 
 
 From July 19 to August 18, Ruby Together took in $X. In total, we spent $X. Here's a breakdown of where the money went:
 
-???
+* $3930 for 26.2 hours worked on Bundler at $150/hour
+* $3795 for 25.3 hours worked on RubyGems.org at $150/hour
+* $2100 for 14.0 hours worked on RubyGems at $150/hour
 
 ## future plans
 
