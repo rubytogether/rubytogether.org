@@ -35,7 +35,7 @@ In total, Bundler had 40 merged pull requests and 226 commits from 15 authors, a
 In addition to the standard Fastly optimizations, the RubyGems.org team started working towards
 better policies and more security. The policies work, which will be released in the coming months, is on terms of use in general and name disputes (see: [left pad and npm](http://blog.npmjs.org/post/141577284765/kik-left-pad-and-npm)) in particular. The security updates are also related to name issues, and inspired by a blog post about [typosquatting package managers](http://incolumitas.com/2016/06/08/typosquatting-package-managers/). If you have advice / want to contribute to this particular solving this particular problem, here is [the relevant issue](https://github.com/rubygems/rubygems.org/issues/1334).
 
-In total, Bundler had 40 merged pull requests and 103 commits from 11 authors.
+In total, RubyGems.org had 40 merged pull requests and 103 commits from 11 authors.
 
 ## rubygems news
 
