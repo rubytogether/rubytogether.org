@@ -38,10 +38,7 @@ From July 19 to August 18, Ruby Together took in $X. In total, we spent $X. Here
 * $3795 for 25.3 hours worked on RubyGems.org at $150/hour
 * $2100 for 14.0 hours worked on RubyGems at $150/hour
 
-## future plans
-
-* changes in hours, work, methods
-* major code changes
+Look forward next month to us capitalizing on the release planning work, and the efforts of our Rails Girls Summer of Code students!
 
 Until next time,<br>
 Lynn and the Ruby Together team
