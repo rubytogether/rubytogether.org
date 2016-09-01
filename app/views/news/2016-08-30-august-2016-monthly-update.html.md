@@ -43,7 +43,7 @@ From July 19 to August 18, Ruby Together took in $18577. In total, we spent $226
 * $6315.0 on accounting, copywriting, design, and other professional services
 * $2172.86 on marketing, evangelism, and community outreach
 
-## coming soon
+## next month
 
 Look forward next month to us capitalizing on the release planning work, and the efforts of our Rails Girls Summer of Code students!
 
