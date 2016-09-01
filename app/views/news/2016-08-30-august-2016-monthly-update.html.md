@@ -32,11 +32,16 @@ RubyGems got a lot of planning work done towards the 3.0 merge, and now has [an 
 
 ## budget & expenses
 
-From July 19 to August 18, Ruby Together took in $X. In total, we spent $X. Here's a breakdown of where the money went:
+From July 19 to August 18, Ruby Together took in $18577. In total, we spent $22637.63. Here's a breakdown of where the money went:
 
 * $3930 for 26.2 hours worked on Bundler at $150/hour
 * $3795 for 25.3 hours worked on RubyGems.org at $150/hour
 * $2100 for 14.0 hours worked on RubyGems at $150/hour
+* $74.2 on dedicated servers for RubyBench.org
+* $582.04 on payment processing fees
+* $3668.53 on company overhead like hosting, services, software, hardware, taxes, etc
+* $6315.0 on accounting, copywriting, design, and other professional services
+* $2172.86 on marketing, evangelism, and community outreach
 
 Look forward next month to us capitalizing on the release planning work, and the efforts of our Rails Girls Summer of Code students!
 
