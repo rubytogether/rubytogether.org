@@ -4,10 +4,15 @@ summary: "Ruby Together paid for ??? hours of work, and had ??? new members join
 
 <% title "September 2016 Monthly Update" %>
 
+* a variety of new feature in Bundler 1.13, and bug fixes in 1.13.1.
+* got more emotionally engaged with our work then we normally do, and fixed a variety of path issues.
+
 * $ and hours spent on developer time
 * New members, new companies (broadly)
 
 ## ruby together news
+
+Andre did a [1 year recap](https://rubytogether.org/news/2016-09-27-a-year-of-ruby-together) of working on Ruby, Together. That post was also given in [talk form](https://speakerdeck.com/indirect/a-year-of-ruby-together) at EuRuKo 2016. In it, he discusses scaling, volunteer work, hacks, and open source.
 
 * Major development highlights
 * Big organizational changes
@@ -18,21 +23,29 @@ summary: "Ruby Together paid for ??? hours of work, and had ??? new members join
 
 ## bundler news
 
-* major development changes
-* commits, pull requests, authors
-* movement towards version releases
+Early in the month, we released [Bundler 1.13](http://bundler.io/blog/2016/09/08/bundler-1-13.html). This update features `required_ruby_version`, `bundle doctor`, and platform `lock` commands. Later in the month, [Bundler 1.13.1](https://github.com/bundler/bundler/milestone/32?closed=1) shipped with a variety of minor bug fixes.
+
+Chris Morris ([@chrismo](https://github.com/chrismo)) was added to Bundler's [contributor team](http://bundler.io/contributors.html). His core team promotion was sponsored by the experimental [conservative update](http://bundler.io/blog/#experimental-conservative-updates) that shipped with 1.13.
+
+We fixed a [GEM_PATH regression](https://github.com/bundler/bundler/pull/4992) in release 1.13. This bug was truly an adventure, and threw our core team for a loop for most of two weeks. Finally, we started working towards the Better Platform Support update with [the help](https://github.com/bundler/bundler/issues/4984) of [@headius](https://github.com/headius) and [jruby](http://jruby.org/).
+
+In total, Bundler had 37 merged pull requests and 83 commits from 11 authors, and closed 50 issues.
 
 ## rubygems.org news
 
-* major development changes
-* commits, pull requests, authors
-* movement towards version releases
+We experienced the [life and death](https://github.com/rubygems/rubygems.org/issues/1429) of [@rubygems](https://twitter.com/rubygems) this month. Many thanks to our valiant users, always on hand to pull our Twitter accounts back from the abyss.
+
+We also worked on both server side ([rate limiting](https://github.com/rubygems/rubygems.org/pull/1414)), and end user focused ([gem yank](https://github.com/rubygems/rubygems.org/pull/1396)) security issues.
+
+In total, RubyGems.org had 13 merged pull requests and 26 commits from 5 authors.
 
 ## rubygems news
 
-* major development changes
-* commits, pull requests, authors
-* movement towards version releases
+We released [the last few months of changes](https://github.com/rubygems/rubygems/pulls?utf8=%E2%9C%93&q=merged%3A2016-06-22..2016-09-26) as RubyGems 2.6.7. This release features bug fixes for `--user-install`, and some initial bundler integration.
+
+We also worked on more [organization and infrastructure](https://github.com/rubygems/rubygems/issues/1681) for the upcoming 3.0 merger, in addition to an array of [small integration changes](https://github.com/bundler/bundler/pulls?utf8=%E2%9C%93&q=merged%3A2016-09-01..2016-09-27%20rubygems%20).
+
+In total, RubyGems had 8 merged pull requests and 21 commits from 6 authors.
 
 ## budget & expenses
 
@@ -48,8 +61,7 @@ From August 19 to September 18, Ruby Together took in $X ???. In total, we spent
 
 ## future plans
 
-* changes in hours, work, methods
-* major code changes
+??? Bundler 1.13.2 and / or Bundler 1.14 - held off due to [bundler/bundler#4956](https://github.com/bundler/bundler/pull/4956) and [bundler/bundler#4976](https://github.com/bundler/bundler/pull/4976)
 
 Until next time,<br>
 Lynn and the Ruby Together team
