@@ -24,7 +24,7 @@ In total, Bundler had 53 merged pull requests and 184 commits from 18 authors, a
 
 ## rubygems.org news
 
-Rubygems.org got its regular maintenance work, and updates to address security vulnerabilities in the `gem yank` command. With those changes, Rubygems.org had 18 merged pull requests and 26 commits from 7 authors.
+RubyGems.org got its regular maintenance work, and updates to address security vulnerabilities in the `gem yank` command. With those changes, RubyGems.org had 18 merged pull requests and 26 commits from 7 authors.
 
 ## rubygems news
 
@@ -49,3 +49,4 @@ Look forward next month to us capitalizing on the release planning work, and the
 
 Until next time,<br>
 Lynn, André, and the Ruby Together team
+
