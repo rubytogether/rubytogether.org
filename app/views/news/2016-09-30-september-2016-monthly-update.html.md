@@ -1,18 +1,14 @@
 ---
-summary: "Ruby Together paid for 71.3 hours of work, and had ??? new members join. This month we ???"
+summary: "Ruby Together paid for 71.3 hours of work, and had 18 new members join. This month we talked about a Year of Ruby Together, released Bundler 1.13, 1.13.1, 1.13.2, and generally got very engaged with the Ruby community."
 ---
 
 <% title "September 2016 Monthly Update" %>
 
-* a variety of new feature in Bundler 1.13, and bug fixes in 1.13.1.
-* got more emotionally engaged with our work then we normally do, and fixed a variety of path issues.
-
-* $ and hours spent on developer time
-* New members, new companies (broadly)
+Welcome to the September 2016 Ruby Together monthly update! This month we: added a variety of new features in Bundler 1.13, and bug fixes in 1.13.1 and 1.13.2. Paid for 71.3 hours of work on Bundler, RubyGems, and RubyGems.org. And gave a great talk at EuRuKo 2016 leading to 18 (!) new members.
 
 ## ruby together news
 
-Andre did a [1 year recap](https://rubytogether.org/news/2016-09-27-a-year-of-ruby-together) of working on Ruby, Together. That post was also given in [talk form](https://speakerdeck.com/indirect/a-year-of-ruby-together) at EuRuKo 2016. In it, he discusses scaling, volunteer work, hacks, and open source.
+André did a [1 year recap](https://rubytogether.org/news/2016-09-27-a-year-of-ruby-together) of working on Ruby, Together. That post was also given in [talk form](https://speakerdeck.com/indirect/a-year-of-ruby-together) at EuRuKo 2016. In it, he discusses scaling, volunteer work, hacks, and open source.
 
 * Major development highlights
 * Big organizational changes
@@ -62,7 +58,7 @@ From August 19 to September 18, Ruby Together took in $19237. In total, we spent
 
 ## future plans
 
-??? Bundler 1.13.2 and / or Bundler 1.14 - held off due to [bundler/bundler#4956](https://github.com/bundler/bundler/pull/4956) and [bundler/bundler#4976](https://github.com/bundler/bundler/pull/4976)
+Next month we plan on releasing Bundler 1.14, the platforms release, with extended support for jruby in particular. That's in addition to our planned work on Bundler 2.0 and Bundler / RubyGems 3.0.
 
 Until next time,<br>
 Lynn and the Ruby Together team
