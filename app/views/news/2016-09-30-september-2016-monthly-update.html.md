@@ -53,7 +53,7 @@ From August 19 to September 18, Ruby Together took in $19237. In total, we spent
 
 ## future plans
 
-Next month we plan on releasing Bundler 1.14, the platforms release, with extended support for jruby in particular. That's in addition to our planned work on Bundler 2.0 and Bundler / RubyGems 3.0.
+Next month we plan on working on a platform support release, including changes for jruby in particular. That's in addition to our planned work on Bundler 2.0 and Bundler / RubyGems 3.0.
 
 Until next time,<br>
 Lynn, André, and the Ruby Together team
