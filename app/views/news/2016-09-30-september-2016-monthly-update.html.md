@@ -10,12 +10,7 @@ Welcome to the September 2016 Ruby Together monthly update! This month we: added
 
 André did a [1 year recap](https://rubytogether.org/news/2016-09-27-a-year-of-ruby-together) of working on Ruby, Together. That post was also given in [talk form](https://speakerdeck.com/indirect/a-year-of-ruby-together) at EuRuKo 2016. In it, he discusses scaling, volunteer work, hacks, and open source.
 
-* Major development highlights
-* Big organizational changes
-* meta stuff
-* new hires
-* new members
-* new companies
+(( André write this part!!! ))
 
 ## bundler news
 
@@ -61,4 +56,4 @@ From August 19 to September 18, Ruby Together took in $19237. In total, we spent
 Next month we plan on releasing Bundler 1.14, the platforms release, with extended support for jruby in particular. That's in addition to our planned work on Bundler 2.0 and Bundler / RubyGems 3.0.
 
 Until next time,<br>
-Lynn and the Ruby Together team
+Lynn, André, and the Ruby Together team
