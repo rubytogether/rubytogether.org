@@ -1,5 +1,5 @@
 ---
-summary: "Ruby Together paid for ??? hours of work, and had ??? new members join. This month we ???"
+summary: "Ruby Together paid for 71.3 hours of work, and had ??? new members join. This month we ???"
 ---
 
 <% title "September 2016 Monthly Update" %>
@@ -49,15 +49,16 @@ In total, RubyGems had 8 merged pull requests and 21 commits from 6 authors.
 
 ## budget & expenses
 
-From August 19 to September 18, Ruby Together took in $X ???. In total, we spent $X ???. Here's a breakdown of where the money went:
+From August 19 to September 18, Ruby Together took in $19237. In total, we spent $13543.78. Here's a breakdown of where the money went:
 
-* $X for X hours of developer time on Bundler at $150/hour
-* $X for X hours of developer time on RubyGems.org at $150/hour
-* $X for X hours of developer time on RubyGems at $150/hour
-* $X on dedicated servers for RubyBench.org
-* $X on payment processing fees
-* $X on company overhead like hosting, services, software, hardware, taxes, etc.
-* $X on accounting, copywriting, design, and other professional services
+* $3690 for 24.6 hours worked on Bundler at $150/hour
+* $3923 for 26.2 hours worked on RubyGems.org at $150/hour
+* $3075 for 20.5 hours worked on RubyGems at $150/hour
+* $75.16 on dedicated servers for RubyBench.org
+* $604.78 on payment processing fees
+* $1547.34 on company overhead like hosting, services, software, hardware, taxes, etc
+* $600.0 on accounting, copywriting, design, and other professional services
+* $29.0 on marketing, evangelism, and community outreach
 
 ## future plans
 
