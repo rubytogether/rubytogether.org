@@ -32,7 +32,7 @@ In total, RubyGems.org had 13 merged pull requests and 26 commits from 5 authors
 
 ## rubygems news
 
-We released [the last few months of changes](https://github.com/rubygems/rubygems/pulls?utf8=%E2%9C%93&q=merged%3A2016-06-22..2016-09-26) as RubyGems 2.6.7. This release features bug fixes for `--user-install`, and some initial bundler integration.
+We released RubyGems 2.6.7 which features bug fixes for `--user-install`, and [other miscellaneous fixs](https://github.com/rubygems/rubygems/compare/v2.6.6...v2.6.7).
 
 We also worked on more [organization and infrastructure](https://github.com/rubygems/rubygems/issues/1681) for the upcoming 3.0 merger, in addition to an array of [small integration changes](https://github.com/bundler/bundler/pulls?utf8=%E2%9C%93&q=merged%3A2016-09-01..2016-09-27%20rubygems%20).
 
