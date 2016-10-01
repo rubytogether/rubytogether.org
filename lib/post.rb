@@ -2,8 +2,9 @@ require 'yaml'
 
 Post = Struct.new(:name, :date, :id) do
   def self.from_file(file)
-    date = Date.parse(file[0..9])
-    new(file[10..-1], date, file)
+    date, name = file.scan(/(\d\d\d\d-\d\d-\d\d)-(.*)/).flatten
+    date = Date.parse(date)
+    new(name, date, file)
   end
 
   def self.all
