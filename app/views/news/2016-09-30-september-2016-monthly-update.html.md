@@ -1,22 +1,26 @@
 ---
-summary: "Ruby Together paid for 71.3 hours of work, and had 18 new members join. This month we talked about a Year of Ruby Together, released Bundler 1.13, 1.13.1, 1.13.2, and generally got very engaged with the Ruby community."
+summary: "Ruby Together paid for 71.3 hours of work, and had 18 new members join. This month we went to Strangeloop, gave a talk at EuRuKo about the first year of Ruby Together, and released Bundler 1.13.0, 1.13.1, and 1.13.2. All part of the plan for ramping up Ruby community outreach and engagament."
 ---
 
 <% title "September 2016 Monthly Update" %>
 
-Welcome to the September 2016 Ruby Together monthly update! This month we: added a variety of new features in Bundler 1.13, and bug fixes in 1.13.1 and 1.13.2. Paid for 71.3 hours of work on Bundler, RubyGems, and RubyGems.org. And gave a great talk at EuRuKo 2016 leading to 18 (!) new members.
+Welcome to the September 2016 Ruby Together monthly update! This month we added a variety of new features in Bundler 1.13, as well as bug fixes in 1.13.1 and 1.13.2. We paid for 71.3 hours of work on Bundler, RubyGems, and RubyGems.org. Also, André gave a great talk at EuRuKo 2016 leading to 18 (!) new members.
 
 ## ruby together news
 
-André did a [1 year recap](https://rubytogether.org/news/2016-09-27-a-year-of-ruby-together) of working on Ruby, Together. That post was also given in [talk form](https://speakerdeck.com/indirect/a-year-of-ruby-together) at EuRuKo 2016. In it, he discusses scaling, volunteer work, hacks, and open source.
+André gave a talk at [EuRuKo](http://euruko2016.org/) about [the first year of of working on Ruby Together](https://speakerdeck.com/indirect/a-year-of-ruby-together). The video isn't posted yet, but you can read [our blog post based on the talk](https://rubytogether.org/news/2016-09-27-a-year-of-ruby-together).
 
-(( André write this part!!! ))
+The first year of Ruby Together has been amazing! We've done more than we ever expected, and the community has come together in the best way possible to improve things for everyone. We're not safe yet, though! The rapidly increasing demands of Ruby developers and companies are pushing us to the limit as we keep everything working.
+
+This is the time for companies with profitable businesses to step up and pay it forward to the next group of devs and companies that will benefit from open, free tools. Without more support, it's just a matter of time until we can't keep up. You can do it, Ruby community! We believe in you. <3
 
 Thanks so much to our many new developer members !!! Tiago Mendes-Costa, Colby M. White, Vincent Daubry, Pascal Betz, Marion Schleifer, Adam Niedzielski, Tony Drake, Cecile Veneziani, Fernando Seror, and Keycoopt !!!
 
-Another thanks to our corporate members, the valiant organizations committed to securing their income by funding their infrastructure. New corporate members this month are: [Hexagonal Consulting](http://www.hexagonconsulting.co/), [Kisko Labs](https://www.kiskolabs.com/), [Hired](https://hired.com/).
+Another thanks to our corporate members, the valiant organizations committed to securing their income by funding their infrastructure. New corporate members this month are: [Hexagonal Consulting](http://www.hexagonconsulting.co/), [Kisko Labs](https://www.kiskolabs.com/), and [Hired][hired].
 
-Hired in particular signed up as a sapphire member, putting $2,000/month towards helping maintain RubyGems. Hired is an organization for empowering developers to find job opportunities with groundbreaking companies&mdash;from household names to emerging startups, and everything in between. Developers with Hired get access to over 4,400 innovative companies, and can quickly evaluate multiple offers side-by-side to choose the right fit with confidence.
+[Hired][hired] in particular signed up as a Sapphire member, putting it up with just Stripe and CodeMiner42 in supporting our work on Ruby infrastructure. Hired is an organization for empowering developers to find job opportunities with groundbreaking companies&mdash;from household names to emerging startups, and everything in between. Developers with Hired get access to over 4,400 innovative companies, and can quickly evaluate multiple offers side-by-side to choose the right fit with confidence.
+
+[hired]: http://hired.com/?utm_source=sponsor&utm_medium=rubytogether&utm_campaign=q4-16-rubytogether
 
 ## bundler news
 
@@ -46,7 +50,7 @@ In total, RubyGems had 8 merged pull requests and 21 commits from 6 authors.
 
 ## budget & expenses
 
-From August 19 to September 18, Ruby Together took in $19237. In total, we spent $13543.78. Here's a breakdown of where the money went:
+From August 19 to September 18, Ruby Together took in $19,237. In total, we spent $13,543.78. Here's a breakdown of where the money went:
 
 * $3690 for 24.6 hours worked on Bundler at $150/hour
 * $3923 for 26.2 hours worked on RubyGems.org at $150/hour
@@ -59,7 +63,7 @@ From August 19 to September 18, Ruby Together took in $19237. In total, we spent
 
 ## future plans
 
-Next month we plan on working on a platform support release, including changes for jruby in particular. That's in addition to our planned work on Bundler 2.0 and Bundler / RubyGems 3.0.
+Next month we plan on working on a platform support release, including changes for JRuby in particular&mdash;in addition to our ongoing work on Bundler 2.0 and Bundler+RubyGems 3.0.
 
 Until next time,<br>
 Lynn, André, and the Ruby Together team
