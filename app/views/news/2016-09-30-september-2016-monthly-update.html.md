@@ -12,6 +12,12 @@ André did a [1 year recap](https://rubytogether.org/news/2016-09-27-a-year-of-r
 
 (( André write this part!!! ))
 
+Thanks so much to our many new developer members !!! Tiago Mendes-Costa, Colby M. White, Vincent Daubry, Pascal Betz, Marion Schleifer, Adam Niedzielski, Tony Drake, Cecile Veneziani, Fernando Seror, and Keycoopt !!!
+
+Another thanks to our corporate members, the valiant organizations committed to securing their income by funding their infrastructure. New corporate members this month are: [Hexagonal Consulting](http://www.hexagonconsulting.co/), [Kisko Labs](https://www.kiskolabs.com/), [Hired](https://hired.com/).
+
+Hired in particular signed up as a sapphire member, putting $2,000/month towards helping maintain RubyGems. Hired is an organization for empowering developers to find job opportunities with groundbreaking companies&mdash;from household names to emerging startups, and everything in between. Developers with Hired get access to over 4,400 innovative companies, and can quickly evaluate multiple offers side-by-side to choose the right fit with confidence.
+
 ## bundler news
 
 Early in the month, we released [Bundler 1.13](http://bundler.io/blog/2016/09/08/bundler-1-13.html). This update features `required_ruby_version`, `bundle doctor`, and platform `lock` commands. Later in the month, [Bundler 1.13.1](https://github.com/bundler/bundler/milestone/32?closed=1) shipped with a variety of minor bug fixes.
