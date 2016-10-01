@@ -4,17 +4,19 @@ class Stats
   end
 
   def self.since(last_date)
+    message = "\n"
     new_members = Membership.active.since(last_date)
     groups = new_members.group_by(&:kind)
     plans = MembershipPlan.all.values.sort_by(&:amount)
+
     plans.select{|plan| groups[plan.id] }.
       map{|plan| [plan, groups[plan.id]] }.
       each do |plan, group|
-        debug "#{group.size} new #{plan.shortname} #{"member".pluralize(group.size)}: #{group.map(&:name).compact.to_sentence}"
+        message << "#{group.size} new #{plan.shortname} #{"member".pluralize(group.size)} including\n - #{group.map(&:name).compact.join("\n - ")}\n"
       end
 
     companies, people = new_members.partition(&:corporate?)
-    message = "\n"
+    message << "\n"
     message << "#{people.count} new #{"person".pluralize(people.count)}\n"
     message << "#{companies.count} new #{"company".pluralize(companies.count)}\n"
     message << "#{new_members.size} new #{"member".pluralize(new_members.size)} total\n"
