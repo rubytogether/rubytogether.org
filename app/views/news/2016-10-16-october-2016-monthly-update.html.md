@@ -17,13 +17,17 @@ Welcome to the September 2016 Ruby Together monthly update! This month we ???. W
 
 ## bundler news
 
-???
+We released Bundler [1.13.3](https://github.com/bundler/bundler/blob/master/CHANGELOG.md#1133-2016-10-10), [1.13.4](https://github.com/bundler/bundler/blob/master/CHANGELOG.md#1134-2016-10-11), [1.13.5](https://github.com/bundler/bundler/blob/master/CHANGELOG.md#1135-2016-10-15), [1.13.6](https://github.com/bundler/bundler/blob/master/CHANGELOG.md#1136-2016-10-22). `1.13.3` was support for rubygems.org infrastructure changes, `1.13.[4..6]` was your regularly scheduled fixes and optimizations.
+
+We noticed from our traffic stats that a few thousand [Bash on Windows](https://msdn.microsoft.com/en-us/commandline/wsl/about) users were experiencing [bundler/bundler#4599](https://github.com/bundler/bundler/issues/4599). [The cause](https://github.com/Microsoft/BashOnWindows/issues/352) of this issue is home directory permissions, but we pushed out a fix for the sake of the number of effected users. [This fix](https://github.com/bundler/bundler/pull/5043) was deployed in `1.13.4`.
 
 In total, Bundler had 35 merged pull requests and 106 commits from 12 authors, and closed 59 issues.
 
 ## rubygems.org news
 
-???
+We finished moving Bundler server infrastructure into rubygems.org, culminating in resolving an issue with `/versions` mismatches. With this, we are now serving all of rubygems.org from [Fastly](https://www.fastly.com/). This change [cut down server response times by half](https://twitter.com/dwradcliffe/status/786280193107202048)!
+
+Later in the month, we survived the survived the [Great DNS Outage of 2016](http://motherboard.vice.com/read/blame-the-internet-of-things-for-destroying-the-internet-today). [rubygems.org](https://rubygems.org/) was up the entire time, although most of our other tools weren't.
 
 In total, RubyGems.org had 18 merged pull requests and 33 commits from 8 authors.
 
