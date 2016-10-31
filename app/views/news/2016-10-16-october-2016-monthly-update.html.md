@@ -52,7 +52,7 @@ From September 19 to October 18, Ruby Together took in $22851.42. In total, we s
 
 ## future plans
 
-???
+In the coming months we plan on releasing Bundler 1.14 with better permissions error handling. We also are going to do several rounds of updates on the documentation for [bundler.io](https://bundler.io) and [rubygems.org](https://rubygems.org)
 
 Until next time,<br>
 Lynn, André, and the Ruby Together team
