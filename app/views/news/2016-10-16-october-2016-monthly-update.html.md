@@ -33,7 +33,7 @@ In total, RubyGems.org had 18 merged pull requests and 33 commits from 8 authors
 
 ## rubygems news
 
-???
+We released RubyGems [2.6.8](https://github.com/rubygems/rubygems/commit/9fb8880976f5ab998912898b091d88aa10eb1d4a) this month. This release comes with [improved SSL error messaging](https://github.com/rubygems/rubygems/pull/1751), which will hopefully relieve some frustration during this time of great turmoil.
 
 In total, RubyGems had 18 merged pull requests and 29 commits from 10 authors.
 
