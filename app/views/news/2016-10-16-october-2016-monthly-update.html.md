@@ -1,19 +1,18 @@
 ---
-summary: "Ruby Together paid for 70.3 hours of work"
+summary: "This month we released Bundler `1.13.[3..6]`, weather great internet storms, and dramatically improved response times. We did it with 70.3 hours of paid work on Bundler, RubyGems, and RubyGems.org."
 ---
 
 <% title "October 2016 Monthly Update" %>
 
-Welcome to the September 2016 Ruby Together monthly update! This month we ???. We paid for 70.3 hours of work on Bundler, RubyGems, and RubyGems.org.
+Welcome to the September 2016 Ruby Together monthly update! This month we released Bundler `1.13.[3..6]`, weather great internet storms, and dramatically improved response times. We did it with 70.3 hours of paid work on Bundler, RubyGems, and RubyGems.org.
 
 ## ruby together news
 
-* Major development highlights
-* Big organizational changes
-* meta stuff
 * new hires
-* new members
-* new companies
+
+We got 6 new developer members this month! Many thanks to Megan Tiu, John Akers, Rob Nichols, Olivier Lacan, Cameron Dutro, and Christoph Lupprich ^_^ !!!
+
+We also got a new corporate member this month [Gleam](https://gleam.io/), a business growth and marketing platform.
 
 ## bundler news
 
