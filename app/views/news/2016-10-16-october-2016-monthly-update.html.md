@@ -1,18 +1,18 @@
 ---
-summary: "This month we released Bundler `1.13.[3..6]`, weather great internet storms, and dramatically improved response times. We did it with 70.3 hours of paid work on Bundler, RubyGems, and RubyGems.org."
+summary: "This month we released four bugfixes for Bundler 1.13, weathered great internet storms, and dramatically improved server response times. We did it with 70.3 hors of paid work on Bundler, RubyGems, and RubyGems.org."
 ---
 
 <% title "October 2016 Monthly Update" %>
 
-Welcome to the September 2016 Ruby Together monthly update! This month we released Bundler `1.13.[3..6]`, weather great internet storms, and dramatically improved response times. We did it with 70.3 hours of paid work on Bundler, RubyGems, and RubyGems.org.
+Welcome to the September 2016 Ruby Together monthly update! This month we released Bundler `1.13.[3..6]`, weathered great internet storms, and dramatically improved response times. We did it with 70.3 hours of paid work on Bundler, RubyGems, and RubyGems.org.
 
 ## ruby together news
 
-* new hires
+This month, Michael R. Bernstein (@mrb_bk) has joined us as a consultant to help with marketing, sales, and automation. (You can see more about what he does with his company Computer Modern at http://computermodern.io!)
 
-We got 6 new developer members this month! Many thanks to Megan Tiu, John Akers, Rob Nichols, Olivier Lacan, Cameron Dutro, and Christoph Lupprich ^_^ !!!
+There were 6 new developer members this month! Many thanks to Megan Tiu, John Akers, Rob Nichols, Olivier Lacan, Cameron Dutro, and Christoph Lupprich ^_^ !!!
 
-We also got a new corporate member this month [Gleam](https://gleam.io/), a business growth and marketing platform.
+We also saw signups from two new corporate members this month: [Gleam](https://gleam.io/), a business growth and marketing platform, and [Brakeman Pro](https://brakemanpro.com/), a Rails security auditing system.
 
 ## bundler news
 
