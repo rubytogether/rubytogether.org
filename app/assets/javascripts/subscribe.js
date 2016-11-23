@@ -37,12 +37,21 @@ jQuery(function($) {
       showFlash("Something went wrong. :(", "failure");
     };
 
-    var sendToken = function(kind) {
+    var recordConversion = function(type, value) {
+      window._dcq = window._dcq || [];
+      window._dcq.push(["track", type, { value: value }]);
+    };
+
+    var sendToken = function(el) {
       return function(token) {
         blockUI();
+        var kind = el.data("subscription");
 
         var url = (kind === "update") ? "/membership/card" : "/membership";
         var data = {email: token.email, token: token.id, kind: kind};
+
+        var val = el.data("dollar-amount")*100;
+        recordConversion("Membership", val);
 
         $.post(url, data).done(doneFn).fail(failFn);
       };
@@ -60,7 +69,7 @@ jQuery(function($) {
         key: $("meta[name=stripe-token]").attr("content"),
         name: "Ruby Together",
         panelLabel: "Subscribe",
-        token: sendToken(kind)
+        token: sendToken(el)
       };
 
       StripeCheckout.configure(options).open();
@@ -81,6 +90,7 @@ jQuery(function($) {
           blockUI();
           var url = "/charge";
           var data = {token: token.id, amount: amount, email: token.email};
+          recordConversion("One Time", amount*100);
           $.post(url, data).done(doneFn).fail(failFn);
         }
       };
