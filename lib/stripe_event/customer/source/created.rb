@@ -1,3 +1,5 @@
+require 'stripe_event/base'
+
 module StripeEvent
   module Customer
     module Source

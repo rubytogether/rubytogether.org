@@ -18,6 +18,7 @@ end
 require "membership_plan"
 require "stripe_event/customer/source/created"
 require "stripe_event/invoice/payment_succeeded"
+require "stripe_event/invoice/payment_failed"
 require "stripe_event/subscription/changed"
 require "stripe_event/subscription/deleted"
 
