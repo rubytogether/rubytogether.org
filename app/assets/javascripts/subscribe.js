@@ -38,8 +38,12 @@ jQuery(function($) {
     };
 
     var recordConversion = function(type, value) {
-      window._dcq = window._dcq || [];
-      window._dcq.push(["track", type, { value: value }]);
+      ga('send', 'event', {
+        eventCategory: "Purchase",
+        eventAction: "new",
+        eventLabel: type,
+        eventValue: value
+      });
     };
 
     var sendToken = function(el) {
@@ -50,7 +54,7 @@ jQuery(function($) {
         var url = (kind === "update") ? "/membership/card" : "/membership";
         var data = {email: token.email, token: token.id, kind: kind};
 
-        var val = el.data("dollar-amount")*100;
+        var val = el.data("dollar-amount");
         recordConversion("Membership", val);
 
         $.post(url, data).done(doneFn).fail(failFn);
@@ -90,7 +94,7 @@ jQuery(function($) {
           blockUI();
           var url = "/charge";
           var data = {token: token.id, amount: amount, email: token.email};
-          recordConversion("One Time", amount*100);
+          recordConversion("One Time", amount);
           $.post(url, data).done(doneFn).fail(failFn);
         }
       };
