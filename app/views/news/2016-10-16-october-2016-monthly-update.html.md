@@ -4,7 +4,7 @@ summary: "This month we released four bugfixes for Bundler 1.13, weathered great
 
 <% title "October 2016 Monthly Update" %>
 
-Welcome to the September 2016 Ruby Together monthly update! This month we released Bundler `1.13.[3..6]`, weathered great internet storms, and dramatically improved response times. We did it with 70.3 hours of paid work on Bundler, RubyGems, and RubyGems.org.
+Welcome to the October 2016 Ruby Together monthly update! This month we released Bundler `1.13.[3..6]`, weathered great internet storms, and dramatically improved response times. We did it with 70.3 hours of paid work on Bundler, RubyGems, and RubyGems.org.
 
 ## ruby together news
 
