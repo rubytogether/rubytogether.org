@@ -8,7 +8,11 @@ Welcome to the November 2016 Ruby Together monthly update! This month ???
 
 ## ruby together news
 
-???
+- talked about how to contribute to open source: http://andre.arko.net/2016/11/12/how-to-contribute-to-open-source/
+- shopify store
+- gave away about 1000 stickers
+- @mrb
+- @rubyconf https://twitter.com/rubytogether/status/795694158472048640
 
 ## bundler news
 
