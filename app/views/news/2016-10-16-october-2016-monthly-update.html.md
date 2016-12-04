@@ -8,7 +8,7 @@ Welcome to the October 2016 Ruby Together monthly update! This month we released
 
 ## ruby together news
 
-This month, Michael R. Bernstein (@mrb_bk) has joined us as a consultant to help with marketing, sales, and automation. (You can see more about what he does with his company Computer Modern at http://computermodern.io!)
+This month, Michael R. Bernstein (@mrb_bk) has joined us as a consultant to help with marketing, sales, and automation. (You can see more about what he does with his company Computer Modern at [computermodern.io](http://computermodern.io)!)
 
 There were 6 new developer members this month! Many thanks to Megan Tiu, John Akers, Rob Nichols, Olivier Lacan, Cameron Dutro, and Christoph Lupprich ^_^ !!!
 
