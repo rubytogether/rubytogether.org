@@ -16,7 +16,7 @@ Welcome to the November 2016 Ruby Together monthly update! This month ???
 
 ## bundler news
 
-???
+This month bundler and [bundler.io](bundler.io) got an array of documentation fixes / updates, due in large part to our new bundler contributor [@colby-swandale(https://github.com/colby-swandale).
 
 ## rubygems.org news
 
