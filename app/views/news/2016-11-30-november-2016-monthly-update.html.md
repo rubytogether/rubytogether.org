@@ -14,6 +14,8 @@ Welcome to the November 2016 Ruby Together monthly update! This month ???
 - @mrb
 - @rubyconf https://twitter.com/rubytogether/status/795694158472048640
 
+We had two improvements with our meta tooling this month. how-is got another [release](https://github.com/how-is/how_is/blob/v11.0.0/CHANGELOG.md#1100), and will soon be used to actively [appraise the status](https://how-is.github.io/how-is-rubygems/2016/12/01/report.html) of our various large projects. We also created a [time-card](https://github.com/rubytogether/rubytogether-lita/blob/84f6bec5d2faabbcb914132cd2880b8e7bacf33e/lib/lita/handlers/time_card.rb) handler for the [lita](https://www.lita.io/) bot, soon to be available for use in a chat room near you!
+
 ## bundler news
 
 This month bundler and [bundler.io](bundler.io) got an array of documentation fixes / updates, due in large part to our new bundler contributor [@colby-swandale(https://github.com/colby-swandale).
