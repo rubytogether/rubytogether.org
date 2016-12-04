@@ -18,7 +18,7 @@ We had two improvements with our meta tooling this month. how-is got another [re
 
 ## bundler news
 
-This month bundler and [bundler.io](bundler.io) got an array of documentation fixes / updates, due in large part to our new bundler contributor [@colby-swandale(https://github.com/colby-swandale).
+This month bundler and [bundler.io](bundler.io) got an array of documentation fixes / updates, due in large part to our new bundler contributor [@colby-swandale](https://github.com/colby-swandale). We got a [Request For Comments](https://github.com/bundler/rfcs) repo, inspired by the one utilized by [Rust](https://www.rust-lang.org/en-US/).
 
 ## rubygems.org news
 
