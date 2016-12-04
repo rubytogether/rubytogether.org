@@ -37,7 +37,7 @@ From October 19 to November 18, Ruby Together took in $22,109. In total, we spen
 * $694.5 on payment processing fees
 * $2,167.27 on company overhead like hosting, services, software, hardware, taxes, etc
 * $2,117.39 on accounting, copywriting, design, and other professional services
-* $2,869.75 on marketing, evangelism, and community outreach
+* $2,869.75 on marketing, evangelism, conferences, and community outreach
 
 ## future plans
 
