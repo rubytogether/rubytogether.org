@@ -16,7 +16,7 @@ Welcome to the November 2016 Ruby Together monthly update! This month ???
 
 ## bundler news
 
-???
+https://github.com/bundler/bundler/issues/5089
 
 ## rubygems.org news
 
