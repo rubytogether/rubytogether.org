@@ -57,9 +57,9 @@ Excluding merges, 8 authors have pushed 39 commits to master and 40 commits to a
 
 ## rubygems news
 
-This month in [RubyGems](https://github.com/rubygems/rubygems), we [added](https://github.com/rubygems/rubygems/pull/1789) displaying the current Ruby version when a version requirement is not met. We [updated](https://github.com/rubygems/rubygems/pull/1779) the messaging when getting errors during cert building. And we [fixed](https://github.com/rubygems/rubygems/pull/1767) a malformed version number error. Most of this work was done by [@bronzdoc](https://github.com/bronzdoc), one of our great RubyGems contributors.
+This month in [RubyGems](https://github.com/rubygems/rubygems), we [added](https://github.com/rubygems/rubygems/pull/1789) displaying the current Ruby version when a version requirement is not met. We [updated](https://github.com/rubygems/rubygems/pull/1779) the messaging when getting errors during cert building. And we [fixed](https://github.com/rubygems/rubygems/pull/1767) a malformed version number error.
 
-In totaly, 6 authors pushed 12 commits. 14 files changed, and there were 164 additions and 85 deletions.
+Most of this work was done by [@bronzdoc](https://github.com/bronzdoc), one of our great RubyGems contributors. In total, 6 authors pushed 12 commits. 14 files changed, and there were 164 additions and 85 deletions.
 
 ## gemstash news
 
