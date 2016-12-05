@@ -43,6 +43,8 @@ In total, 11 authors pushed 59 commits last month. 61 files changed and there we
 
 ## rubygems.org news
 
+This month in RubyGems.org, we [improved](https://github.com/rubygems/rubygems.org/pull/1423) messaging for yanked and reserved namespace gems. [Reduced](https://github.com/rubygems/rubygems.org/pull/1436) the database calls required for search requests. And [added](https://github.com/rubygems/rubygems.org/pull/1432) email verification to new user accounts. These changes were from RubyGems.org team member [Aditya Prakash](https://github.com/sonalkr132).
+
 Excluding merges, 8 authors have pushed 39 commits to master and 40 commits to all branches. On master, 70 files have changed and there have been 1,135 additions and 360 deletions.
 
 ## rubygems news
