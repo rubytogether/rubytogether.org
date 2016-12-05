@@ -39,7 +39,13 @@ This month bundler and [bundler.io](bundler.io) got an array of documentation fi
 
 Bundler got a [Request For Comments](https://github.com/bundler/rfcs) repo, inspired by the one utilized by [Rust](https://www.rust-lang.org/en-US/). [Fixed](https://github.com/bundler/bundler/pull/5176) outdated not listing all outdated gems. And [fixed](https://github.com/bundler/bundler/pull/5213) an `ObjectBoundsExceededError` with [Rubinius](https://rubinius.com/).
 
-In total, 11 authors pushed 59 commits last month. 61 files changed and there were 1,990 additions and 1,629 deletions.
+As mentioned last month, Bundler 1.13 shipped with [`required_ruby_version` support](http://bundler.io/blog/2016/09/08/bundler-1-13.html) for Gemfiles containing a `ruby` declaration. Building on that, we hoped to release 1.14 with automatic support for the currently running Ruby version.
+
+While @segiddins [nobly attempted](https://github.com/bundler/bundler/pull/5013) to implement it, we ran into a plethora of edge cases and problems with backwards compatibility. We'll aim to post a longer writeup of the situation on [the Bundler blog](https://bundler.io/blog) soon.
+
+In the meantime, the workaround for now is to put `ruby RUBY_VERSION` in your `Gemfile`. Now that we've concluded that automatic Ruby version management needs to wait for Bundler 2.0, we'll be able to release 1.14 very soon.
+
+In total, 11 authors pushed 59 commits to Bundler last month. 61 files changed and there were 1,990 additions and 1,629 deletions.
 
 ## rubygems.org news
 
