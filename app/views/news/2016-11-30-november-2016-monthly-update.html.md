@@ -28,7 +28,7 @@ Bundler got a [Request For Comments](https://github.com/bundler/rfcs) repo, insp
 
 ## rubygems news
 
-???
+This month in Rubygems, we [added](https://github.com/rubygems/rubygems/pull/1789) displaying the current Ruby version when a version requirement is not met. [Updated](https://github.com/rubygems/rubygems/pull/1779) the messaging when getting errors during cert building. And [fixed](https://github.com/rubygems/rubygems/pull/1767) a malformed version number error. Most of this work was done by [@bronzdoc](https://github.com/bronzdoc), one of our great RubyGems contributors.
 
 ## budget & expenses
 
