@@ -78,9 +78,5 @@ From October 19 to November 18, Ruby Together took in $22,109. In total, we spen
 * $2,117.39 on accounting, copywriting, design, and other professional services
 * $2,869.75 on marketing, evangelism, conferences, and community outreach
 
-## future plans
-
-???
-
 Until next time,<br>
 André, Lynn and the Ruby Together team
