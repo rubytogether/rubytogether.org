@@ -55,7 +55,7 @@ In totaly, 6 authors pushed 12 commits. 14 files changed, and there were 164 add
 
 ## gemstash news
 
-Excluding merges, 3 authors have pushed 15 commits to master and 15 commits to all branches. On master, 22 files have changed and there have been 254 additions and 66 deletions.
+Meanwhile in [Gemstash](https://github.com/bundler/gemstash), the documentation was completely rewritten using [Pandoc](http://pandoc.org) to pave the way for a website that shares documentation with the gem. During the month, 3 authors pushed 15 commits, 22 files changed, and there were 254 additions and 66 deletions.
 
 ## budget & expenses
 
