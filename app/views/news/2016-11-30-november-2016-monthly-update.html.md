@@ -4,7 +4,7 @@ summary: "This month 16 new members joined, André spoke at RubyConf about contr
 
 <% title "November 2016 Monthly Update" %>
 
-Welcome to the November 2016 Ruby Together monthly update! This month included maintenance work, security patches, helping users with problems, and @segiddins's heroic (but ultimately doomed) efforts to make Bundler respect `required_ruby_verison`. André travelled to Cincinnati, OH to give a talk about contributing to open source, and we paid for 129.5 hours of work on Bundler, RubyGems, and RubyGems.org.
+Welcome to the November 2016 Ruby Together monthly update! This month included maintenance work, security patches, helping users with problems, and [@segiddins](https://github.com/segiddins)'s heroic (but ultimately doomed) efforts to make Bundler respect `required_ruby_verison`. André travelled to Cincinnati, OH to give a talk about contributing to open source, and we paid for 129.5 hours of work on Bundler, RubyGems, and RubyGems.org.
 
 We'll also be using this update to highlight our international contributors! They're mentioned in each relevant news section.
 
