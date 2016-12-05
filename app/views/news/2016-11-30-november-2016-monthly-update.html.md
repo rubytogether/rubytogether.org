@@ -75,4 +75,4 @@ From October 19 to November 18, Ruby Together took in $22,109. In total, we spen
 ???
 
 Until next time,<br>
-Lynn and the Ruby Together team
+André, Lynn and the Ruby Together team
