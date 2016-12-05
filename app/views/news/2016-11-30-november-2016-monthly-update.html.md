@@ -4,7 +4,7 @@ summary: "This month we ???. 129.5 hours of paid work on Bundler, RubyGems, and 
 
 <% title "November 2016 Monthly Update" %>
 
-Welcome to the November 2016 Ruby Together monthly update! This month ???
+Welcome to the November 2016 Ruby Together monthly update! This month our US team members were dealing with some less than ideal circumstances, so we'll be using this update to highlight our international contributors! They're mentioned in each relevant news section.
 
 ## ruby together news
 
