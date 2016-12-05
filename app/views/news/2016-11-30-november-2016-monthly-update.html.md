@@ -41,8 +41,6 @@ Bundler got a [Request For Comments](https://github.com/bundler/rfcs) repo, insp
 
 In total, 11 authors pushed 59 commits last month. 61 files changed and there were 1,990 additions and 1,629 deletions.
 
-https://github.com/bundler/bundler/issues/5089
-
 ## rubygems.org news
 
 Excluding merges, 8 authors have pushed 39 commits to master and 40 commits to all branches. On master, 70 files have changed and there have been 1,135 additions and 360 deletions.
