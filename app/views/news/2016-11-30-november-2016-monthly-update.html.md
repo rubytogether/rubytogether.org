@@ -4,7 +4,7 @@ summary: "This month 16 new members joined, André spoke at RubyConf about contr
 
 <% title "November 2016 Monthly Update" %>
 
-Welcome to the November 2016 Ruby Together monthly update! This month included maintenance work, security patches, helping users with problems, and [@segiddins](https://github.com/segiddins)'s heroic (but ultimately doomed) efforts to make Bundler respect `required_ruby_verison`.
+Welcome to the November 2016 Ruby Together monthly update! This month included maintenance work, security patches, helping users with problems, and learning several bad ways to handle gems with `required_ruby_version`.
 
 André travelled to Cincinnati, OH to give a talk about contributing to open source, and we paid for 129.5 hours of work on Bundler, RubyGems, and RubyGems.org.
 
@@ -42,15 +42,15 @@ Last in Ruby Together news, this month we partnered with [@mrb_bk](https://twitt
 
 ## bundler news
 
-This month bundler and [bundler.io](bundler.io) got an array of documentation fixes / updates, due in large part to our new bundler contributor [@colby-swandale](https://github.com/colby-swandale).
+This month bundler and [bundler.io](bundler.io) got an array of documentation fixes / updates, due in large part to our new contributor [@colby-swandale](https://github.com/colby-swandale).
 
-Bundler got a [Request For Comments](https://github.com/bundler/rfcs) repo, inspired by the one utilized by [Rust](https://www.rust-lang.org/en-US/). [Fixed](https://github.com/bundler/bundler/pull/5176) outdated not listing all outdated gems. And [fixed](https://github.com/bundler/bundler/pull/5213) an `ObjectBoundsExceededError` with [Rubinius](https://rubinius.com/).
+Bundler got a [Request For Comments](https://github.com/bundler/rfcs) repo, inspired by the one utilized by [Rust](https://www.rust-lang.org/en-US/). We fixed [outdated not listing all outdated gems](https://github.com/bundler/bundler/pull/5176). And we also [fixed an `ObjectBoundsExceededError`](https://github.com/bundler/bundler/pull/5213) on [Rubinius](https://rubinius.com/).
 
 As mentioned last month, Bundler 1.13 shipped with [`required_ruby_version` support](http://bundler.io/blog/2016/09/08/bundler-1-13.html) for Gemfiles containing a `ruby` declaration. Building on that, we hoped to release 1.14 with automatic support for the currently running Ruby version.
 
-While @segiddins [nobly attempted](https://github.com/bundler/bundler/pull/5013) to implement it, we ran into a plethora of edge cases and problems with backwards compatibility. We'll aim to post a longer writeup of the situation on [the Bundler blog](https://bundler.io/blog) soon.
+Over the last two months or so, the Bundler team has been discussing and experimenting with different ways to handle Gemfiles without an explicit `ruby`. The heroic @segiddins [attempted to implement](https://github.com/bundler/bundler/pull/5013) our rough consensus for the feature, but we ran into a plethora of edge cases and problems with backwards compatibility. In the end, we went back to the drawing board and designed a new way to handle it that should be much better.
 
-In the meantime, the workaround for now is to put `ruby RUBY_VERSION` in your `Gemfile`. Now that we've concluded that automatic Ruby version management needs to wait for Bundler 2.0, we'll be able to release 1.14 very soon.
+Downside: this work delayed Bundler 1.14, and now we're going to ship 1.14 without automatic Ruby locking. Upside: it will be a much better feature when it's done. Hooray.
 
 In total, 11 authors pushed 59 commits to Bundler last month. 61 files changed and there were 1,990 additions and 1,629 deletions.
 
