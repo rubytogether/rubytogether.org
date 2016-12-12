@@ -59,7 +59,7 @@ module StripeEvent
       # Here we find out if the customer is signed up to a Ruby Together plan,
       # or some other kind of plan that doesn't fund Ruby Together directly.
       def customer_has_a_membership_plan?
-        return false if customer.nil? || customer.deleted
+        return false if customer.nil? || customer.deleted?
 
         customer.subscriptions.any? do |subscription|
           MembershipPlan.ids.map(&:to_s).include?(subscription.plan.id)
