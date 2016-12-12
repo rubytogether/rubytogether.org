@@ -10,7 +10,7 @@ module StripeEvent
         # If the event is an invoice, or has an invoice attached to it,
         # then it is for a user and that user will have a subscription
         return unless invoice? || charge?
-        return unless customer && customer_has_a_membership_plan?
+        return unless customer_has_a_membership_plan?
 
         # if it is a charge object then we have to find the subscription
         # through the invoice.  Alternatively, we *could* override the event's
@@ -59,6 +59,8 @@ module StripeEvent
       # Here we find out if the customer is signed up to a Ruby Together plan,
       # or some other kind of plan that doesn't fund Ruby Together directly.
       def customer_has_a_membership_plan?
+        return false if customer.nil? || customer.deleted
+
         customer.subscriptions.any? do |subscription|
           MembershipPlan.ids.map(&:to_s).include?(subscription.plan.id)
         end
