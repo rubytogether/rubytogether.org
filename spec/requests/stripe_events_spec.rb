@@ -13,10 +13,10 @@ RSpec.describe "Stripe webhooks", :vcr do
     end
 
     context "when user doesn't exist yet" do
-      it "returns a 404" do
-        expect {
-          post "/stripe/events", id: "evt_15nY3HAcWgwn5pBtBmDJZBZq"
-        }.to raise_error(ActiveRecord::RecordNotFound)
+      it "reports the missing user to Rollbar" do
+        expect(Rollbar).to receive(:error).with(ActiveRecord::RecordNotFound)
+        post "/stripe/events", id: "evt_15nY3HAcWgwn5pBtBmDJZBZq"
+        expect(response.status).to eq(200)
       end
     end
   end
