@@ -1,0 +1,60 @@
+@import "colors";
+
+body {
+  color: $dark_blue;
+  font-family: "Campton", "Verdana", sans-serif;
+  font-size: 14px;
+  background-color: $blue;
+  padding: 4em;
+  min-height: 975px;
+}
+
+a {
+  color: $dark_blue;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header .company-info {
+  float: right;
+  text-align: right;
+  font-size: 75%;
+}
+
+header .bill-to {
+  text-align: left;
+  margin-top: 35px;
+}
+
+.content {
+  line-height: 22px;
+}
+
+.invoice-table {
+  width: 100%;
+  margin-top: 60px;
+  border-collapse: collapse;
+
+  tr {
+    height: 30px;
+  }
+
+  th {
+    text-align: left;
+    color: $blue;
+    background-color: $dark_blue;
+  }
+
+  td, th {
+    padding: 0 10px;
+  }
+
+  .balance-due-row {
+    font-weight: bold;
+  }
+}
+
+.invoice-note {
+  margin-top: 50px;
+  width: 60%;
+}

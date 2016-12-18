@@ -25,11 +25,13 @@ group :development do
   gem "guard-livereload", "~> 2.4", require: false
   gem "guard-rails"
   gem "guard-rspec"
+  gem "letter_opener"
   gem "quiet_assets"
   gem "rack-livereload"
   gem "terminal-notifier-guard", "~> 1.6"
   gem "web-console", "~> 2.0"
-  gem "letter_opener"
+  gem "wicked_pdf", "~> 1.1"
+  gem "wkhtmltopdf-binary", "~> 0.12.3"
 end
 
 group :development, :test do

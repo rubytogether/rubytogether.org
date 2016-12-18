@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   end
 
   resource :charge, only: [:create]
+  resources :invoice, only: [:show]
   resource :membership, only: [:create, :show, :update, :destroy] do
     collection { post :card }
   end

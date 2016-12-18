@@ -308,6 +308,8 @@ GEM
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
+    wicked_pdf (1.1.0)
+    wkhtmltopdf-binary (0.12.3.1)
 
 PLATFORMS
   ruby
@@ -346,9 +348,11 @@ DEPENDENCIES
   vcr
   web-console (~> 2.0)
   webmock
+  wicked_pdf (~> 1.1)
+  wkhtmltopdf-binary (~> 0.12.3)
 
 RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.12.5
+   1.13.1

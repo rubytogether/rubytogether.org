@@ -12,4 +12,5 @@ Rails.application.config.assets.precompile += %w(
   subscribe.js
   campton.css
   mail.css
+  invoice.css
 )

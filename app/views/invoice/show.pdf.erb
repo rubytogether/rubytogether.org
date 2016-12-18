@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <style>
+    @font-face {
+      font-family: 'Campton';
+      font-weight: 600;
+      font-style: normal;
+      src: "<%= wicked_pdf_asset_base64('2D6CD5_0_0.eot') %>";
+    }
+
+    @font-face {
+      font-family: 'Campton';
+      font-weight: 300;
+      src: "<%= wicked_pdf_asset_base64('2D6CD5_1_0.eot') %>";
+    }
+  </style>
+  <%= stylesheet_link_tag wicked_pdf_asset_base64("invoice"), media: "all" %>
+  <%= title_tag %>
+  <base href="http://localhost:3000/">
+</head>
+<body class="invoice">
+  <header>
+    <section class="company-info">
+      <%= image_tag("ruby_together_logotype.png", width: 200) %><br>
+      548 Market St. #79434<br>
+      San Francisco, CA 94104<br>
+      (772) 444-7829
+    </section>
+    <%= content_tag :h1, title || "Invoice" %>
+    <section class="bill-to">
+      <p>
+        <%= @membership.name %><br>
+        <b>Attention: <%= @membership.contact_name %></b><br>
+        <%= @membership.contact_email %><br>
+        <%= number_to_phone(@membership.contact_phone.gsub(/\D/,''), area_code: true) %>
+      </p>
+    </section>
+  </header>
+
+  <section class="content" style="clear: both;">
+    <p>
+      Invoice Number: 1004<br>
+      Invoice Date: <%= Date.today %><br>
+      Terms: Due on receipt
+    </p>
+
+    <table class="invoice-table">
+      <tr>
+        <th>Item Description</th>
+        <th>Quantity</th>
+        <th>Rate</th>
+        <th>Amount</th>
+      </tr>
+      <tr>
+        <td>Ruby Together <%= @membership.plan.shortname %> Membership (Yearly)</td>
+        <td>1</td>
+        <td>$9,600 USD</td>
+        <td>$9,600 USD</td>
+      </tr>
+      <tr>
+      </tr>
+      <tr class="total-row">
+        <td></td>
+        <td></td>
+        <td>Total</td>
+        <td>$9,600 USD</td>
+      </tr>
+      <tr class="balance-due-row">
+        <td></td>
+        <td></td>
+        <td>Balance Due</td>
+        <td>$9,600 USD</td>
+      </tr>
+    </table>
+
+    <div class="invoice-note">
+      <p>Thank you for joining Ruby Together!</p>
+      <p>
+        Emerald membership includes the following benefits for members:
+        <ul>
+          <li>Prominent position in the Ruby Together member list</li>
+          <li>Annual vote on Ruby Together board members</li>
+          <li>Monthly newsletter with progress updates</li>
+          <li>Invitation to members-only Slack team for group chat</li>
+        </ul>
+      </p>
+      <p class="payment">Memberships may be paid via credit card at <%= link_to "https://rubytogether.org" %>, via PayPal to <%= mail_to "hello@rubytogether.org" %>, or via ACH electronic transfer. If bank transfer details are needed, please contact <%= mail_to "andre@rubytogether.org" %>.</p>
+      <p>Your prompt payment is greatly appreciated.</p>
+    </div>
+  </section>
+</body>
+</html>
