@@ -34,7 +34,7 @@
         <%= @membership.name %><br>
         <b>Attention: <%= @membership.contact_name %></b><br>
         <%= @membership.contact_email %><br>
-        <%= number_to_phone(@membership.contact_phone.gsub(/\D/,''), area_code: true) %>
+        <%= @membership.contact_phone %>
       </p>
     </section>
   </header>
