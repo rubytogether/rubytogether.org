@@ -54,7 +54,10 @@
         <th>Amount</th>
       </tr>
       <tr>
-        <td>Ruby Together <%= @membership.plan.shortname %> Membership (Yearly)</td>
+        <td>
+          Ruby Together <%= @membership.plan.shortname %> Membership<br>
+          from <%= @membership.expires_at.to_date.iso8601 %> to <%= (@membership.expires_at.to_date + 365).iso8601 %>
+        </td>
         <td>1</td>
         <td>$9,600 USD</td>
         <td>$9,600 USD</td>
@@ -78,7 +81,7 @@
     <div class="invoice-note">
       <p>Thank you for joining Ruby Together!</p>
       <p>
-        Emerald membership includes the following benefits for members:
+        Emerald membership includes the following benefits:
         <ul>
           <li>Prominent position in the Ruby Together member list</li>
           <li>Annual vote on Ruby Together board members</li>
