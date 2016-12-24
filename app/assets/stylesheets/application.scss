@@ -281,7 +281,7 @@ section.content {
   &:before {
     content: "►";
     position: absolute;
-    bottom: 29%;
+    bottom: 36%;
     left: 0;
     font-size: 30px;
   }
@@ -312,14 +312,16 @@ section.content {
 
   &:nth-child(4) {
     border-color: rgba(145, 60,  146, 1);
-    background-color: #fff;
     .amount { bottom: 13px; }
   }
 
   &:nth-child(5) {
     border-color: rgba(30, 23, 78, 1);
-    background-color: #fff;
     .amount { bottom: 8px; }
+  }
+
+  &.achieved {
+    background-color: #fff;
   }
 
   .amount {
