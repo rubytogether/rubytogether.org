@@ -18,6 +18,7 @@ module StripeEvent
         set_event_subscription if charge?
 
         @user = user_for_event(@event)
+        return unless @user
 
         # move back membership expiration time to the end paid for + 3.5 days.
         # The extra 3.5 days is for a payment failure grace period.
