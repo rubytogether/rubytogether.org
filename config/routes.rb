@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   }
 
   redirects.each do |page, destination|
-    get page, to: redirect(destination)
+    get page, to: redirect(path: destination)
   end
 
   scope :thanks, as: :thanks do
