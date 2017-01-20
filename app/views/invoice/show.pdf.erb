@@ -32,7 +32,9 @@
     <section class="bill-to">
       <p>
         <%= @membership.name %><br>
-        <b>Attention: <%= @membership.contact_name %></b><br>
+        <%- if @membership.contact_name -%>
+          <b>Attention: <%= @membership.contact_name %></b><br>
+        <%- end -%>
         <%= @membership.contact_email %><br>
         <%= @membership.contact_phone %>
       </p>
