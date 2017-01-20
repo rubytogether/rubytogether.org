@@ -93,6 +93,7 @@
       </p>
       <p class="payment">Memberships may be paid via credit card at <%= link_to "rubytogether.org", "https://rubytogether.org" %>,
         via PayPal to <%= mail_to "hello@rubytogether.org" %>, or via ACH electronic transfer.</p>
+      <%= content_tag(:p, @bank_info.join("<br>").html_safe) if @bank_info %>
       <p><b>Your prompt payment is greatly appreciated.</b></p>
     </div>
   </section>
