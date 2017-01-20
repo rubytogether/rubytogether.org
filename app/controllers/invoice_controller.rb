@@ -4,6 +4,7 @@ class InvoiceController < ApplicationController
     raise ActiveRecord::RecordNotFound unless Rails.env.development?
 
     @membership = Membership.find(params[:id])
+    @bank_info = Rails.configuration.bank_info.map{|k,v| "#{k.humanize}: #{v}" }
     respond_to do |format|
       format.pdf do
         render show_as_html: params.has_key?(:debug),

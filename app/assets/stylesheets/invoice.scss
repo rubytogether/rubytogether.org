@@ -5,20 +5,21 @@ body {
   font-family: "Campton", "Verdana", sans-serif;
   font-size: 14px;
   background-color: $blue;
-  padding: 4em;
-  min-height: 975px;
+  padding: 50px 65px;
+  margin: 0;
+  width: 180mm;
+  height: 277mm;
+  page-break-after: auto;
 }
 
 a {
   color: $dark_blue;
-  text-decoration: none;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 header .company-info {
   float: right;
   text-align: right;
-  font-size: 75%;
 }
 
 header .bill-to {
