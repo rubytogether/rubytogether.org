@@ -18,7 +18,7 @@
   </style>
   <%= stylesheet_link_tag wicked_pdf_asset_base64("invoice"), media: "all" %>
   <%= title_tag %>
-  <base href="http://localhost:3000/">
+  <%= tag :base, href: URI(request.original_url)+"/" %>
 </head>
 <body class="invoice">
   <header>
