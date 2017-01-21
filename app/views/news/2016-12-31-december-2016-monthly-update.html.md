@@ -54,5 +54,7 @@ From November 19 to December 18, Ruby Together took in $22.620. In total, we spe
 
 As always, if you'd like to spread the word about Ruby Together or just wear some great-looking shirts, check out the [Ruby Together shop](https://shop.rubytogether.org). It's also the only worldwide source for Bundler packing tape! 😎
 
+Keep an eye out for our much more timely January update, coming in about a week!
+
 Until next time,\<br\>
 André, Lynn, and the Ruby Together team
