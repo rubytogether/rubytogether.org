@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+def find_env(name)
+  case name
+  when /\As/
+    "staging"
+  when /\Ap/
+    "production"
+  else
+    "development"
+  end
+end
+
+dir = File.dirname(__FILE__)
+env = find_env(ARGV.first)
+
+if env == "development"
+  puts [File.join(dir, "rails"), "console", env].join(" ")
+  exec File.join(dir, "rails"), "console", env
+else
+  puts [File.join(dir, env), "surrogate", "bin/rails", "console"].join(" ")
+  exec File.join(dir, env), "surrogate", "bin/rails", "console"
+end

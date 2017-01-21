@@ -1,3 +1,0 @@
-#!/bin/bash
-
-exec production surrogate bin/rails console
