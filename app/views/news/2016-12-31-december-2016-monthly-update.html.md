@@ -40,7 +40,7 @@ Gemstash wasn’t super busy, but still gained some features: it is now possible
 
 ## budget & expenses
 
-From November 19 to December 18, Ruby Together took in $22.620. In total, we spent $23.552.35. Here's a breakdown of where the money went:
+From November 20 to December 19, Ruby Together took in $22,620. In total, we spent $23,552.35. Here's a breakdown of where the money went:
 
 * $3,600 for 24 hours worked on Bundler at $150/hour
 * $3,000 for 20 hours worked on RubyGems.org at $150/hour
