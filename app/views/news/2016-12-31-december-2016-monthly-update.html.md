@@ -12,11 +12,11 @@ To start things off, December was our biggest month ever since Ruby Together beg
 
 This month was also a great month for new members. Six new developers signed up to support our work as Friends of Ruby Together. On top of that, ten more developers joined as members, including Nishant Modak, Thom May, Jack Bracewell, George Millo, Karlotcha Hoa, Stanislav Katkov, Chris Holmes. In addition, five completely new companies added their support: [Chef](https://www.chef.io/), [Unboxed](http://www.unboxed.co/), [Carbon Five](http://carbonfive.com/), [Teezily](https://teezily.com/), and [Intellum](http://www.intellum.com/).
 
-Thanks to all of our members for making everything that we do possible. \<3
+Thanks to all of our members for making everything that we do possible. &lt;3
 
 In exciting news for the upcoming year, our team gained an Empress of Documentation: [Liz Abinante](https://twitter.com/feministy). We're super excited to have a mastermind behind making Bundler and RubyGems more understandable and accessible for new users.
 
-On the board of directors, we saw [Ines Sombra](http://twitter.com/randommood) step down from her position. Ines has been a fantastic and incredibly helpful board member, and we’re super grateful to have had her input. Thanks for everything, Ines. \<3
+On the board of directors, we saw [Ines Sombra](http://twitter.com/randommood) step down from her position. Ines has been a fantastic and incredibly helpful board member, and we’re super grateful to have had her input. Thanks for everything, Ines. &lt;3
 
 The remaining members of the board nominated [Camille Baldock](https://twitter.com/camille_) to fill the newly empty seat, and she graciously accepted. Camille participated in this year’s board election, coming in just one or two votes behind the other candidates. We’re incredibly glad to have another chance to work with Camille, and are looking forward to getting even more done in 2017.
 
@@ -56,5 +56,5 @@ As always, if you'd like to spread the word about Ruby Together or just wear som
 
 Keep an eye out for our much more timely January update, coming in about a week!
 
-Until next time,\<br\>
+Until next time,<br>
 André, Lynn, and the Ruby Together team
