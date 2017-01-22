@@ -1,22 +1,38 @@
-#!/bin/bash
-set -euo pipefail
-IFS=$'\n\t'
+#!/usr/bin/env ruby
 
-if [[ -z "$1" ]]; then
-  echo "Usage: $0 [ENVIRONMENT]"
-  exit 1
-fi
+if ARGV.empty?
+  abort "Usage: #{File.basename(__FILE__)} ENVIRONMENT"
+end
 
-"bin/$1" push
+def find_env(name)
+  case name
+  when /\As/
+    "staging"
+  when /\Ap/
+    "production"
+  else
+    "development"
+  end
+end
 
-case $1 in
-"production")
-  echo "Purging Fastly cache for $1..."
+@dir = File.dirname(__FILE__)
+@env = find_env(ARGV.first)
+abort "Can't deploy to development!" if @env == "development"
+
+def env_run(*cmd)
+  cmd.unshift File.join(@dir, @env)
+  system cmd.join(" ")
+end
+
+env_run "push"
+
+case @env
+when "production"
+  puts "Purging Fastly cache..."
   sleep 5
-  "bin/$1" surrogate bin/rake fastly:purge
-  ;;
-"staging")
+  env_run "surrogate", "bin/rake", "fastly:purge",
+    "db:migrate:status | grep -v ' up '"
+when "staging"
   echo "Migrating database..."
-  "bin/$1" surrogate bin/rake db:migrate
-  ;;
-esac
+  env_run "surrogate", "bin/rake", "db:migrate"
+end
