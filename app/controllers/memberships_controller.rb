@@ -12,7 +12,6 @@ class MembershipsController < ApplicationController
 
     render json: {result: "success", url: redirect_url(kind) }
   rescue CreateMembership::Error => e
-    user.destroy if user.persisted?
     render_failure
   rescue => e
     Rollbar.error(e)
