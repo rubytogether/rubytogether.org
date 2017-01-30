@@ -9,7 +9,7 @@ RSpec.describe MembershipsController, type: :controller do
         double(first_or_create!: user)
       end
 
-      request.env['warden'] = double("warden", user: nil)
+      request.env['warden'] = double("warden", user: nil, authenticate: nil)
       expect(request.env['warden']).to receive(:set_user)
     end
 
