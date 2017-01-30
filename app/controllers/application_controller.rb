@@ -24,4 +24,10 @@ private
   def after_sign_in_path_for(resource)
     stored_location_for(resource) || membership_path
   end
+
+  # Checking for `warden` allows this to work in tests, etc.
+  def current_user
+    return nil if warden.nil?
+    @current_user ||= warden.authenticate(scope: :user)
+  end
 end
