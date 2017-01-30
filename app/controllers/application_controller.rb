@@ -11,11 +11,17 @@ class ApplicationController < ActionController::Base
     }
   end
 
+  # Lograge method for adding extra info to Logging
+  def append_info_to_payload(payload)
+    super
+    payload[:remote_ip] = request.remote_ip
+    payload[:user_id] = current_user.try(:id) || 0
+  end
+
 private
 
   # Used by Devise to redirect after login
   def after_sign_in_path_for(resource)
     stored_location_for(resource) || membership_path
   end
-
 end

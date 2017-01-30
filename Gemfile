@@ -8,6 +8,7 @@ gem "devise"
 gem "fastly-rails"
 gem "http"
 gem "jquery-rails"
+gem "lograge"
 gem "nilify_blanks"
 gem "nokogiri"
 gem "pg"
@@ -35,7 +36,6 @@ group :development do
 end
 
 group :development, :test do
-  gem "dotenv-rails", "~> 2.0"
   gem "pry-byebug"
   gem "rspec-rails"
 end

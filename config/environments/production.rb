@@ -87,4 +87,10 @@ Rails.application.configure do
   config.action_mailer.delivery_method   = :postmark
   config.action_mailer.postmark_settings = { :api_token => ENV.fetch("POSTMARK_API_TOKEN") }
   config.action_mailer.asset_host = "http://" + config.action_controller.asset_host
+
+  # Logging with Lograge
+  config.lograge.enabled = true
+  config.lograge.custom_options = lambda do |event|
+    {remote_ip: event.payload[:remote_ip], user_id: event.payload[:user_id], params: event.payload[:params].except('controller', 'action', 'format', 'utf8')}
+  end
 end
