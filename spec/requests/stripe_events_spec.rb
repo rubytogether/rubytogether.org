@@ -5,15 +5,17 @@ RSpec.describe "Stripe webhooks", :vcr do
   describe "customer.source.created" do
     it "runs our hook" do
       user = User.create!(stripe_id: "cus_8U1TcYRfvl8VqP", email: "alice@example.com")
-      membership = Membership.create(user: user, card_last4: "1234")
+      membership = Membership.create!(user: user, card_last4: "1234")
 
       expect {
         post "/stripe/events", id: "evt_15nY3HAcWgwn5pBtBmDJZBZq"
       }.to change { membership.reload.card_last4 }
     end
 
-    context "when user doesn't exist yet" do
-      it "reports the missing user to Rollbar" do
+    context "when user's membership doesn't exist" do
+      it "reports the missing membership to Rollbar" do
+        user = User.create!(stripe_id: "cus_8U1TcYRfvl8VqP", email: "alice@example.com")
+
         expect(Rollbar).to receive(:error).with(ActiveRecord::RecordNotFound)
         post "/stripe/events", id: "evt_15nY3HAcWgwn5pBtBmDJZBZq"
         expect(response.status).to eq(200)
