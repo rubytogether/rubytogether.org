@@ -16,6 +16,8 @@ class CreateMembership
     create_membership_record(info, user, card, plan)
     email_new_member(user, plan)
     invite_to_slack(user, plan)
+  rescue Stripe::CardError => e
+    raise Error, e.message
   rescue => e
     Rollbar.error(e)
     raise Error, "#{e.class}: #{e.message}"
