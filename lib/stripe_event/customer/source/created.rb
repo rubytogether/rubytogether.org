@@ -7,7 +7,11 @@ module StripeEvent
 
         def call(event)
           card = event.data.object
-          user = User.where(stripe_id: card.customer).first!
+
+          # OpenCollective contributors don't have users
+          user = User.where(stripe_id: card.customer).first
+          return unless user
+
           membership = Membership.where(user: user).first!
           membership.update!(card_brand: card.brand, card_last4: card.last4)
         rescue ActiveRecord::RecordNotFound => e
