@@ -2,8 +2,8 @@ class HomeController < ApplicationController
   after_action :set_cache_control_headers
 
   def index
-    @individuals = Membership.individual.named.order('random()').limit(3).active.pluck(:name)
-    @companies = featured_companies.order('random()').limit(5).pluck(:name, :url)
+    @individuals = Membership.individual.named.active.order('random()').limit(3).pluck(:name)
+    @companies = Membership.featured_companies.named.active.order('random()').limit(5).pluck(:name, :url)
   end
 
   def members
