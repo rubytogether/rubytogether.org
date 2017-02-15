@@ -29,10 +29,18 @@
     <p class="price"><span class="currency">$</span>10 per month</p>
     <p>Membership benefits are not included.</p>
     <p class="link"><%= link_to_plan "Be a friend!", "friend", class: "solid-button" %></p>
-    <p>
-      Or contribute any amount, like say,
-      $<%= text_field_tag "one-time-amount", "15", class: "inline", style: "width: 1.2em; padding: 5px 4px 0 4px; margin: -4px 2px 0 0;" %>
-      <%= link_to "just this once", "javascript:;", "data-amount-input" => "one-time-amount", "data-charge" => true, "data-charge-name" => "Ruby Together" %>.
+    <div>
+      <p>
+        Or contribute any amount, like say,
+        $<%= text_field_tag "one-time-amount", "15", class: "inline", style: "width: 1.2em; padding: 5px 4px 0 4px; margin: -4px 2px 0 0;" %>.
+      </p>
+      <p class="link">
+        <%= link_to "Donate once", "javascript:;",
+          "class" => "solid-button",
+          "data-amount-input" => "one-time-amount",
+          "data-charge" => true,
+          "data-charge-name" => "Ruby Together" %>
+      </p>
     </p>
   </section>
 </section>
