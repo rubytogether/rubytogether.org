@@ -1,17 +1,20 @@
 <%- title "Ruby Together Members" -%>
 
 <section class="group">
-  <h3>Corporate Members</h3>
-
-  <% @featured_companies.each do |name, desc, url| %>
-    <h4 class="company-name"><%= link_to_if url.present?, name, url %></h3>
-    <p class="company-description"><%= desc %></p>
+  <% @featured_levels.each do |name, companies| %>
+    <h3><%= name.capitalize %> Members</h3>
+    <% companies.each do |name, url, desc| %>
+      <h4 class="company-name"><%= link_to_if url.present?, name, url %></h3>
+      <p class="company-description"><%= desc %></p>
+    <% end %>
   <% end %>
 
-  <p>
-    As well as
-    <%= @other_companies.map { |name, url| link_to_if(url.present?, name, url) }.to_sentence.html_safe %>.
-  </p>
+  <% @other_levels.each do |name, companies| %>
+    <p>
+      Our <%= name %> members include 
+      <%= companies.map { |name, url| link_to_if(url.present?, name, url) }.to_sentence.html_safe %>.
+    </p>
+  <% end %>
 
   <p class="center">Didn’t see your company’s name? <%= link_to "Add it!", companies_path %></p>
 </section>
