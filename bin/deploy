@@ -33,6 +33,6 @@ when "production"
   env_run "surrogate", "bin/rake", "fastly:purge",
     "db:migrate:status | grep -v ' up '"
 when "staging"
-  echo "Migrating database..."
+  puts "Migrating database..."
   env_run "surrogate", "bin/rake", "db:migrate"
 end
