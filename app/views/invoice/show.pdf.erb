@@ -61,8 +61,8 @@
           from <%= @membership.expires_at.to_date.iso8601 %> to <%= (@membership.expires_at.to_date + 365).iso8601 %>
         </td>
         <td>1</td>
-        <td>$9,600 USD</td>
-        <td>$9,600 USD</td>
+        <td><%= number_to_currency(@amount) %></td>
+        <td><%= number_to_currency(@amount) %></td>
       </tr>
       <tr>
       </tr>
@@ -70,25 +70,30 @@
         <td></td>
         <td></td>
         <td>Total</td>
-        <td>$9,600 USD</td>
+        <td><%= number_to_currency(@amount) %></td>
       </tr>
       <tr class="balance-due-row">
         <td></td>
         <td></td>
         <td>Balance Due</td>
-        <td>$9,600 USD</td>
+        <td><%= number_to_currency(@amount) %></td>
       </tr>
     </table>
 
     <div class="invoice-note">
       <p><b>Thank you</b> for joining Ruby Together!</p>
       <p>
-        Emerald membership includes the following benefits:
+        <%= @membership.plan.shortname %> membership includes the following benefits:
         <ul>
           <li>Prominent position in the Ruby Together member list</li>
           <li>Annual vote on Ruby Together board members</li>
           <li>Monthly newsletter with progress updates</li>
           <li>Invitation to members-only Slack team for group chat</li>
+          <%- if @membership.kind == "corporate_sapphire" -%>
+          <li>Logo on conference talk slides thanking members</li>
+          <li>One annual guest blog post from the Ruby Together team</li>
+          <li>Customized thank you tweet each month by @rubytogether</li>
+          <%- end -%>
         </ul>
       </p>
       <p class="payment">Memberships may be paid via credit card at <%= link_to "rubytogether.org", "https://rubytogether.org" %>,

@@ -5,6 +5,7 @@ class InvoiceController < ApplicationController
 
     @membership = Membership.find(params[:id])
     @bank_info = Rails.configuration.bank_info.map{|k,v| "#{k.humanize}: #{v}" }
+    @amount = @membership.plan.amount / 100 * 12
     respond_to do |format|
       format.pdf do
         render show_as_html: params.has_key?(:debug),
