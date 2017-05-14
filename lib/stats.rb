@@ -12,7 +12,10 @@ class Stats
     plans.select{|plan| groups[plan.id] }.
       map{|plan| [plan, groups[plan.id]] }.
       each do |plan, group|
-        message << "#{group.size} new #{plan.shortname} #{"member".pluralize(group.size)} including\n - #{group.map(&:name).compact.join("\n - ")}\n"
+        message << "#{group.size} new #{plan.shortname} #{"member".pluralize(group.size)}"
+        names = group.map(&:name).compact
+        message << " including\n - #{names.join("\n - ")}" if names.any?
+        message << "\n"
       end
 
     companies, people = new_members.partition(&:corporate?)
