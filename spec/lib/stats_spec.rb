@@ -37,10 +37,8 @@ RSpec.describe Stats, :vcr do
       expect(response).to include("1 new person") # $40/month
       expect(response).to include("2 new companies") # Ruby $5,000 + Onyx $50
       expect(response).to include("3 new members total") # Total $5,090
-      # To match the data in our test Stripe environment:
-      # + 1 existing Ruby $5,000 + 1 existing Topaz $200 + $520 other individuals
-      # = $10,810 per month
-      expect(response).to include("Projected monthly income is $10,810.00 per month")
+      expect(response).to include("2 companies (1 Ruby, 1 Onyx)")
+      expect(response).to include("1 developer (1 personal)")
     end
   end
 
