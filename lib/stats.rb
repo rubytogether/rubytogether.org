@@ -28,7 +28,7 @@ class Stats
     counts = Membership.active.group(:kind).count.map do |id,c|
       [MembershipPlan.all[MembershipPlan.ids[id]], c]
     end.to_h
-    corp, dev = counts.group_by{|s,c| s.id.start_with?("corporate") }.values
+    corp, dev = counts.partition{|s,c| s.id.start_with?("corporate") }
     message << "#{corp.map(&:last).inject(:+)} #{"company".pluralize(companies.count)} ("
     message << corp.sort_by{|s,c| -s.amount}.map{|s,c| "#{c} #{s.shortname}" }.join(", ")
     message << ")\n"
