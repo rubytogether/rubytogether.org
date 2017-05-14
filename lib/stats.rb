@@ -24,12 +24,18 @@ class Stats
     message << "#{companies.count} new #{"company".pluralize(companies.count)}\n"
     message << "#{new_members.size} new #{"member".pluralize(new_members.size)} total\n"
     message << "\n"
-    estimate = MonthlyRevenue.projected(
-      MembershipPlan.subscriber_counts,
-      Membership.prepaid
-    )
-    dollars = ActiveSupport::NumberHelper.number_to_currency(estimate/100)
-    message << "Projected monthly income is #{dollars} per month."
+
+    counts = Membership.active.group(:kind).count.map do |id,c|
+      [MembershipPlan.all[MembershipPlan.ids[id]], c]
+    end.to_h
+    corp, dev = counts.group_by{|s,c| s.id.start_with?("corporate") }.values
+    message << "#{corp.map(&:last).inject(:+)} companies ("
+    message << corp.sort_by{|s,c| -s.amount}.map{|s,c| "#{c} #{s.shortname}" }.join(", ")
+    message << ")\n"
+
+    message << "#{dev.map(&:last).inject(:+)} individuals ("
+    message << dev.sort_by{|s,c| -s.amount}.map{|s,c| "#{c} #{s.shortname}" }.join(", ")
+    message << ")\n"
   end
 
   def self.expiring_annual_memberships
