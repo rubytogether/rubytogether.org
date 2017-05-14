@@ -5,8 +5,9 @@ class ResendWelcome
   end
 
   def run(user)
+    plan = user.membership.kind
     token = user.generate_reset_password_token!
-    MembershipMailer.welcome(user, user.membership.kind, token).deliver_later
+    MembershipMailer.welcome(user, plan, token).deliver_later
   end
 
 end
