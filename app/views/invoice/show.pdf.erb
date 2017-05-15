@@ -58,7 +58,7 @@
       <tr>
         <td>
           Ruby Together <%= @membership.plan.shortname %> Membership<br>
-          from <%= @membership.expires_at.to_date.iso8601 %> to <%= (@membership.expires_at.to_date + 365).iso8601 %>
+          from <%= (@membership.expires_at - 1.year).to_date.iso8601 %> to <%= @membership.expires_at.to_date.iso8601 %>
         </td>
         <td>1</td>
         <td><%= number_to_currency(@amount) %></td>
