@@ -11,8 +11,7 @@
 
   <% @other_levels.each do |name, companies| %>
     <p>
-      Our <%= name %> members include 
-      <%= companies.map { |name, url| link_to_if(url.present?, name, url) }.to_sentence.html_safe %>.
+      Our <%= name %> members include <%= bold_link_sentence(companies) %>.
     </p>
   <% end %>
 
@@ -21,10 +20,9 @@
 
 <section class="group">
   <h3>Developer Members</h3>
-  <%- @individual << link_to("viewers like you", developers_path) -%>
   <p>
-    Our <%= @individual_count %> <%= "developer member".pluralize(@individual_count) %>
-    include <%= @individual.to_sentence.html_safe %>.
+    Our <%= @individual_count %> developer members include <%= @individual.join(", ") %>,
+    and <%= link_to("viewers like you", developers_path) %>.
   </p>
 
   <p class="center">

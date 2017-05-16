@@ -9,7 +9,7 @@ andre = User.create!(
   encrypted_password: "$2a$12$lPDc097WBP/Fds25KKLFmOvpVk8jF5.8rqyoiU2gICtCwNV7phzSq",
 )
 
-Membership.create!(user: andre, name: "André Arko",
+Membership.create!(user: andre, name: "André <script>alert(1);</script> Arko",
   kind: :individual, expires_at: expiration)
 
 directors = [
@@ -27,7 +27,7 @@ end
 
 corporations = [
   ["Stripe", "payments infrastructure for the internet", "http://stripe.com"],
-  ["Engine Yard", "the platform-as-a-service of your dreams", "http://engineyard.com"]
+  ["Engine <script>alert(1);</script> Yard", "the platform-as-a-service of your <script>alert(1);</script> dreams", "http://engineyard<script>alert(1);</script>.com"]
 ]
 
 corporations.each do |name, description, url|

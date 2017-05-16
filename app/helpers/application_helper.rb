@@ -93,4 +93,16 @@ module ApplicationHelper
       "https://rubytogether.org"
   end
 
+  def bold_link_sentence(items)
+    items.map do |name, url|
+      link_to_if(url.present?, h(name), url)
+    end.to_sentence.html_safe
+  end
+
+  def bold_sentence(items)
+    items.map do |name, url|
+      content_tag :strong, h(name)
+    end.to_sentence.html_safe
+  end
+
 end

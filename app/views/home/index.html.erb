@@ -4,10 +4,7 @@
   <p>Ruby Together is a grassroots initiative committed to supporting the critical Ruby infrastructure you rely on: Bundler, RubyGems, and other shared tools. Check out <%= link_to "what we've done in the last month.", news_path(Post.all.first.id), class: "post-name" %></p>
 
   <p>
-    Join companies like
-    <%= @companies.map { |company, url| link_to(company, url) }.to_sentence.html_safe %>;
-    individuals like
-    <%= @individuals.map { |individual| content_tag(:strong, individual) }.to_sentence.html_safe %>;
+    Join companies like <%= bold_link_sentence(@companies) %>; individuals like <%= bold_sentence(@individuals) %>;
     plus <%= link_to "many others", members_path %> supporting the Ruby ecosystem.
   </p>
 </section>
