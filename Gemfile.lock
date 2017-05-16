@@ -317,40 +317,40 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  compass-rails (~> 2.0.4)
-  devise
-  dotenv-rails (~> 2.0)
-  fastly-rails
-  guard-livereload (~> 2.4)
-  guard-rails
-  guard-rspec
-  http
-  jquery-rails
-  letter_opener
-  lograge
-  nilify_blanks
+  compass-rails (~> 2.0)
+  devise (~> 4.1)
+  dotenv-rails (~> 2.1)
+  fastly-rails (~> 0.6)
+  guard-livereload (~> 2.5)
+  guard-rails (~> 0.7)
+  guard-rspec (~> 4.7)
+  http (~> 2.0)
+  jquery-rails (~> 4.1)
+  letter_opener (~> 1.4)
+  lograge (~> 0.4)
+  nilify_blanks (~> 1.2)
   nokogiri (~> 1.7)
-  pg
-  postmark-rails
-  premailer-rails
-  pry-byebug
-  pry-rails
-  puma (~> 2.12)
-  quiet_assets
-  rack-livereload
+  pg (~> 0.18)
+  postmark-rails (~> 0.12)
+  premailer-rails (~> 1.9)
+  pry-byebug (~> 3.4)
+  pry-rails (~> 0.3)
+  puma (~> 2.16)
+  quiet_assets (~> 1.1)
+  rack-livereload (~> 0.3)
   rails (= 4.2.7.1)
-  rails_12factor
-  rdiscount
-  rollbar (~> 2.0)
-  rspec-rails
+  rails_12factor (~> 0.0)
+  rdiscount (~> 2.2)
+  rollbar (~> 2.11)
+  rspec-rails (~> 3.4)
   sass-rails (~> 5.0)
-  slack-notifier
+  slack-notifier (~> 1.5)
   stripe_event (~> 1.5)
-  terminal-notifier-guard (~> 1.6)
+  terminal-notifier-guard (~> 1.7)
   uglifier (~> 2.7)
-  vcr
-  web-console (~> 2.0)
-  webmock
+  vcr (~> 3.0)
+  web-console (~> 2.3)
+  webmock (~> 2.0)
   wicked_pdf (~> 1.1)
   wkhtmltopdf-binary (~> 0.12.3)
 
