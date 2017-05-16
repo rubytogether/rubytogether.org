@@ -2,6 +2,7 @@
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 
 [User, Membership].each(&:destroy_all)
+expiration = Time.parse("2016-05-15")
 
 andre = User.create!(
   email: "mail@arko.net",
@@ -9,7 +10,7 @@ andre = User.create!(
 )
 
 Membership.create!(user: andre, name: "André Arko",
-  kind: :individual, expires_at: 1.year.from_now)
+  kind: :individual, expires_at: expiration)
 
 directors = [
   "Aaron Patterson",
@@ -21,7 +22,7 @@ directors = [
 ]
 
 directors.each do |name|
-  Membership.create!(expires_at: 1.year.from_now, kind: :individual, name: name)
+  Membership.create!(expires_at: expiration, kind: :individual, name: name)
 end
 
 corporations = [
@@ -30,11 +31,11 @@ corporations = [
 ]
 
 corporations.each do |name, description, url|
-  Membership.create!(expires_at: 1.year.from_now, name: name, description: description, url: url, kind: :corporate_emerald)
+  Membership.create!(expires_at: expiration, name: name, description: description, url: url, kind: :corporate_emerald)
 end
 
 Membership.create!(
-  expires_at: 1.year.from_now,
+  expires_at: expiration,
   name: "Kickstarter",
   url: "https://kickstarter.com",
   kind: :corporate_topaz
