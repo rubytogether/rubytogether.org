@@ -2,7 +2,7 @@
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 
 [User, Membership].each(&:destroy_all)
-expiration = Time.parse("2016-05-15")
+expiration = 100.years.from_now
 
 andre = User.create!(
   email: "mail@arko.net",
@@ -40,3 +40,6 @@ Membership.create!(
   url: "https://kickstarter.com",
   kind: :corporate_topaz
 )
+
+User.update_all(created_at: 1.year.ago)
+Membership.update_all(created_at: 1.year.ago)
