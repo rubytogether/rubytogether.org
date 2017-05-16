@@ -1,3 +1,7 @@
+# Overwrite any env with values from .env.test
+require 'dotenv'
+Dotenv.overload(".env.test")
+
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
