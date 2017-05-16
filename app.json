@@ -30,9 +30,6 @@
     "NEW_RELIC_APP_NAME": {
       "required": true
     },
-    "POSTMARK_API_KEY": {
-      "required": true
-    },
     "POSTMARK_API_TOKEN": {
       "required": true
     },
