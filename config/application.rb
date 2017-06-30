@@ -33,9 +33,6 @@ module RubyTogether
     # Read the secret key base from ENV
     secrets.secret_key_base = ENV['SECRET_KEY_BASE']
 
-    # Serve fonts from the assets path
-    config.assets.paths << Rails.root.join('app/assets/fonts')
-
     # Automatically reload lib in development
     config.autoload_paths << Rails.root.join('lib')
   end
