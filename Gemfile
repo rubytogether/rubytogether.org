@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 ruby File.read(File.expand_path("../.ruby-version", __FILE__)).chomp
 
-gem "rails", "4.2.7.1"
+gem 'rails', '~> 4.2', '>= 4.2.9'
 
 gem "compass-rails", "~> 2.0"
 gem "devise", '~> 4.1.1'
@@ -12,7 +12,7 @@ gem "lograge", "~> 0.4"
 gem "mail", "~> 2.6.6.rc1"
 gem "nilify_blanks", "~> 1.2"
 gem "nokogiri", "~> 1.7"
-gem "pg", "~> 0.18"
+gem 'pg', '~> 0.21.0'
 gem "premailer-rails", "~> 1.9"
 gem "pry-rails", "~> 0.3"
 gem "puma", "~> 2.16"
