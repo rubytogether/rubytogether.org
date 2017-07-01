@@ -3,8 +3,8 @@
 if [[ -z $1 ]]; then
   echo "USAGE: $0 DATE"
   echo "  prints new members since DATE"
+  echo "  for example: $0 2017-06-25"
   exit 1
 fi
 
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-exec "$SCRIPT_DIR/production" surrogate bin/rake stats:since[$1]
+bin/rake stats:since[$1]
