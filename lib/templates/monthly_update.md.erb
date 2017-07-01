@@ -1,0 +1,46 @@
+---
+summary: In <%= update_month %>, we paid for <%= pluralize('hour', hours_paid) %> of developer work, <%= brief_summary %>.
+---
+
+Hello! Welcome to the monthly update. During <%= update_month %>, our work was supported by <%= link_list(top_companies) %>.
+
+## ruby together news
+
+<%= ruby_together_summary %>
+
+In <%= update_month %>, Ruby Together was supported by <%= company_count %> different companies, including Sapphire member [Stripe](https://stripe.com). <%= pluralize('company', new_company_count).capitalize %> joined as new members, including <%= link_list(new_companies) %>.
+
+On top of those companies, <%= pluralize('new developer', new_developer_count) %> signed up as members or friends of Ruby Together, including <%= link_list(new_developers) %>. In total, we were supported by <%= individual_count %> individual members and <%= friend_count %> friends of Ruby Together. Thanks to all of our members for making everything that we do possible. &lt;3
+
+## bundler news
+
+SUMMARIZE [BUNDLER CHANGES](<%= commits_link_for("bundler/bundler", update_date) %>)
+
+<%= git_summary("bundler/bundler", update_date) %>
+
+## rubygems.org news
+
+SUMMARIZE [RUBYGEMS.ORG CHANGES](<%= commits_link_for("rubygems/rubygems.org", update_date) %>)
+
+<%= git_summary("rubygems/rubygems.org", update_date) %>
+
+## rubygems news
+
+SUMMARIZE [RUBYGEMS CHANGES](<%= commits_link_for("rubygems/rubygems", update_date) %>)
+
+<%= git_summary("rubygems/rubygems", update_date) %>
+
+## gemstash news
+
+SUMMARIZE [GEMSTASH CHANGES](<%= commits_link_for("bundler/gemstash", update_date) %>)
+
+<%= git_summary("bundler/gemstash", update_date) %>
+
+## budget &amp; expenses
+
+In <%= update_month %>, we saw <%= number_to_currency(income) %> in total income, and spent a total of <%= number_to_currency(spent) %>.
+
+<%= budget_bullets %>
+
+Until next time,<br>
+André and the Ruby Together team

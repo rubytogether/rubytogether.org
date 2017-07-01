@@ -1,0 +1,159 @@
+#!/usr/bin/env ruby
+require "time"
+require "bundler/setup"
+require "active_support"
+require "active_support/time"
+require "active_support/core_ext/string/inflections"
+require "active_support/core_ext/array/conversions"
+include ActiveSupport::NumberHelper
+
+
+posts = Pathname.new("../app/views/news").expand_path(__dir__).children
+
+last_update = posts.map(&:basename).map(&:to_s).grep(/monthly-update/).sort.last
+last_pattern = /(\d{4}-\d{2}-\d{2})-(\w+?)-(\d{4})/
+last_published, last_month, last_year = last_update.match(last_pattern).to_a[1..-1]
+
+last_published = Date.parse(last_published)
+last_month_date = Date.parse("#{last_month} #{last_year}")
+update_date = last_month_date.advance(months: 1)
+update_month = update_date.strftime("%b")
+update_year = update_date.strftime("%Y")
+
+def pluralize(word, count)
+  [number_to_delimited(count.to_i), word.pluralize(count)].join(" ")
+end
+
+def link_list(data)
+  data.map do |name, link|
+    link.nil? ? name : "[#{name}](#{link})"
+  end.to_sentence
+end
+
+def commits_link_for(repo, date)
+  "https://github.com/" << repo << "/compare/master@%7B" <<
+    date.advance(months: -1).iso8601 << "%7D...master@%7B" <<
+    date.iso8601 << "%7D"
+end
+
+def git_summary(repo, date)
+  require "http"
+  changes_link      = commits_link_for(repo, date)
+  puts "Fetching summary information for #{repo}..."
+
+  changes_response  = HTTP.get(changes_link)
+  changes_html      = changes_response.body.to_s
+  contributor_count = changes_html.match(/([\d,]+)\s+contributors/){|m| m[1].tr(',','').to_i }
+  commit_count      = changes_html.match(/Commits\s+<span\s+class="Counter">\s+([\d,]+)\s+<\/span>/){|m| m[1].tr(',','').to_i }
+  files_count       = changes_html.match(/([\d,]+)\s+changed\s+files/){|m| m[1].tr(',','').to_i }
+  additions_count   = changes_html.match(/([\d,]+)\s+additions/){|m| m[1].tr(',','').to_i }
+  deletions_count   = changes_html.match(/([\d,]+)\s+deletions/){|m| m[1].tr(',','').to_i }
+  project = repo.split("/").last.capitalize
+
+  # Style options
+  # 1. In total, this month 13 authors pushed 149 commits, including 1,668 additions and 306 deletions across 78 files.
+  # 2. In total, RubyGems.org gained 21 new commits, with 4 different contributors changing 63 files. There were 851 additions and 305 deletions.
+  # 3. In total, Gemstash gained 3 new commits. 2 different authors changed 5 files, with 37 additions and 6 deletions.
+
+  "This month, #{project} gained #{pluralize('new commit', commit_count)}, " \
+    "contributed by #{pluralize('author', contributor_count)}. There " \
+    "#{additions_count == 1 ? 'was' : 'were'} " \
+    "#{pluralize('addition', additions_count)} and " \
+    "#{pluralize('deletion', deletions_count)} across " \
+    "#{pluralize('file', files_count)}."
+end
+
+def render(b)
+  require "erb"
+  update_template_path = Pathname.new("../lib/templates/monthly_update.md.erb").expand_path(__dir__)
+  update_template = update_template_path.read
+  erb = ERB.new(update_template, nil, "<>>-")
+  erb.location = update_template_path.to_s
+  puts erb.result(b)
+end
+
+# TODO: we should get this list from the database, including all Sapphire companies
+# and then randomly choosing 2-4 companies from the next level down each month.
+candidate_companies = {
+  "Cloud City" => "http://cloudcity.io",
+  "Bleacher Report" => "http://www.bleacherreport.com/",
+  "Basecamp" => "https://basecamp.com/",
+  "Digital Ocean" => "http://digitalocean.com/",
+  "Gitlab" => "http://gitlab.com/",
+  "Travis CI" => "https://travis-ci.org/",
+  "Icelab" => "http://icelab.com.au/",
+  "thoughtbot" => "https://thoughtbot.com/",
+}.to_a.sample(4).to_h
+top_companies = { "Stripe" => "http://stripe.com/" }
+top_companies.merge! candidate_companies
+top_companies.merge!("many others" => nil)
+
+# TODO: we can get all of this data the same way that the bin/since script does.
+new_developer_count = 6
+new_developers = [
+  "Josh Cass",
+  "Anıl İyidoğan",
+  "Dian Pan",
+  "Sangwon Yi"
+]
+new_company_count = 3
+new_companies = {
+  "Day of the Shirt" => "https://dayoftheshirt.com",
+  "ClickFunnels" => "http://www.clickfunnels.com"
+}
+company_count = 81
+individual_count = 116
+friend_count = 74
+
+# For reference, here's the output from bin/since
+# that was used to set the variables above.
+#
+# 2 new friend members including
+#  - Josh Cass
+# 4 new personal members including
+#  - Anıl İyidoğan
+#  - Dian Pan
+#  - Sangwon Yi
+# 2 new Onyx members including
+#  - Day of the Shirt https://dayoftheshirt.com
+#  - ClickFunnels http://www.clickfunnels.com
+# 1 new Sapphire member
+#
+# 6 new developers
+# 3 new companies
+# 9 new members total
+#
+# 81 companies (2 Sapphire, 8 Emerald, 17 Topaz, 10 Jade, 44 Onyx)
+# 190 developers (116 personal, 74 friend)
+
+# TODO: we can get this information from the financial_automation repo.
+income = 100
+spent  = 200
+hours_paid = 10
+budget_bullets = <<-END.gsub(/^  /, '').strip
+
+END
+
+# TODO: this part probably needs a human to write it. Should we have
+# the script prompt the human for input, or should we drop them into
+# an editor with the rest of the update already filled out?
+brief_summary = <<-END.gsub(/^  /, '').strip
+
+END
+ruby_together_summary = <<-END.gsub(/^  /, '').strip
+
+END
+bundler_summary = <<-END.gsub(/^  /, '').strip
+
+END
+rubygems_summary = <<-END.gsub(/^  /, '').strip
+
+END
+rubygems_org_summary = <<-END.gsub(/^  /, '').strip
+
+END
+gemstash_summary = <<-END.gsub(/^  /, '').strip
+
+END
+
+render(binding)
