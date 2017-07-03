@@ -1,13 +1,22 @@
 require File.expand_path('../boot', __FILE__)
 
-# Pick the frameworks you want:
-require "active_model/railtie"
-require "active_job/railtie"
-require "active_record/railtie"
-require "action_controller/railtie"
-require "action_mailer/railtie"
-require "action_view/railtie"
-require "sprockets/railtie"
+# From https://github.com/rails/rails/blob/v4.2.9/railties/lib/rails/all.rb
+# Instead of loading everything from Rails, we only load what we need.
+require 'rails'
+
+%w(
+  active_record
+  action_controller
+  action_view
+  action_mailer
+  active_job
+  sprockets
+).each do |framework|
+  begin
+    require "#{framework}/railtie"
+  rescue LoadError
+  end
+end
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -29,12 +38,6 @@ module RubyTogether
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-
-    # Read the secret key base from ENV
-    secrets.secret_key_base = ENV['SECRET_KEY_BASE']
-
-    # Serve fonts from the assets path
-    config.assets.paths << Rails.root.join('app/assets/fonts')
 
     # Automatically reload lib in development
     config.autoload_paths << Rails.root.join('lib')
