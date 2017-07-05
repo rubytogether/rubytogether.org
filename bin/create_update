@@ -17,7 +17,7 @@ last_published, last_month, last_year = last_update.match(last_pattern).to_a[1..
 last_published = Date.parse(last_published)
 last_month_date = Date.parse("#{last_month} #{last_year}")
 update_date = last_month_date.advance(months: 1)
-update_month = update_date.strftime("%b")
+update_month = update_date.strftime("%B")
 update_year = update_date.strftime("%Y")
 
 def pluralize(word, count)
