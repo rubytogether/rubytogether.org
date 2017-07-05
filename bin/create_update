@@ -63,13 +63,13 @@ def git_summary(repo, date)
     "#{pluralize('file', files_count)}."
 end
 
-def render(b)
+def render(b, path)
   require "erb"
   update_template_path = Pathname.new("../lib/templates/monthly_update.md.erb").expand_path(__dir__)
   update_template = update_template_path.read
   erb = ERB.new(update_template, nil, "<>>-")
   erb.location = update_template_path.to_s
-  puts erb.result(b)
+  File.write path, erb.result(b)
 end
 
 # TODO: we should get this list from the database, including all Sapphire companies
@@ -156,4 +156,7 @@ gemstash_summary = <<-END.gsub(/^  /, '').strip
 
 END
 
-render(binding)
+new_update_name = "#{update_month}-#{update_year}-monhtly-update"
+new_update_path = Pathname.new("../app/views/news/#{update_date.iso8601}-#{new_update_name}.html.md").expand_path(__dir__)
+render(binding, new_update_path)
+puts "Created new update at #{new_update_path}"
