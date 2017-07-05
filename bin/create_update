@@ -11,7 +11,7 @@ include ActiveSupport::NumberHelper
 posts = Pathname.new("../app/views/news").expand_path(__dir__).children
 
 last_update = posts.map(&:basename).map(&:to_s).grep(/monthly-update/).sort.last
-last_pattern = /(\d{4}-\d{2}-\d{2})-(\w+?)-(\d{4})/
+last_pattern = /(\d{4}-\d{2}-\d{2})(?:-[-\w]+)-(\w+?)-(\d{4})/
 last_published, last_month, last_year = last_update.match(last_pattern).to_a[1..-1]
 
 last_published = Date.parse(last_published)
