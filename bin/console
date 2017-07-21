@@ -18,6 +18,6 @@ if env == "development"
   puts [File.join(dir, "rails"), "console", env].join(" ")
   exec File.join(dir, "rails"), "console", env
 else
-  puts [File.join(dir, env), "surrogate", "bin/rails", "console"].join(" ")
-  exec File.join(dir, env), "surrogate", "bin/rails", "console"
+  puts [File.join(dir, env), "run:local", "bin/rails", "console"].join(" ")
+  exec File.join(dir, env), "run:local", "bin/rails", "console"
 end
