@@ -19,12 +19,12 @@ module Intercom
       email: user.email,
       created_at: user.created_at.to_i,
       name: user.try(:membership).try(:name),
-      user_hash: user_hash(user)
+      user_hash: email_hash(user.email)
     }
   end
 
-  def self.user_hash(user)
-    OpenSSL::HMAC.hexdigest('sha256', secret_key, current_user.email)
+  def self.email_hash(email)
+    OpenSSL::HMAC.hexdigest('sha256', secret_key, email)
   end
 
 end
