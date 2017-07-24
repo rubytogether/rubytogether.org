@@ -4,7 +4,7 @@ ruby File.read(File.expand_path("../.ruby-version", __FILE__)).chomp
 gem "rails", "4.2.9"
 
 gem "compass-rails", "~> 3.0"
-gem "devise", '~> 4.1.1'
+gem "devise", '~> 4.3.0'
 gem "fastly-rails", "~> 0.6"
 gem "http", "~> 2.0"
 gem "jquery-rails", "~> 4.1"
