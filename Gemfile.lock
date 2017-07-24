@@ -177,11 +177,11 @@ GEM
     postmark-rails (0.15.0)
       actionmailer (>= 3.0.0)
       postmark (~> 1.10.0)
-    premailer (1.10.3)
+    premailer (1.10.4)
       addressable
       css_parser (>= 1.4.10)
       htmlentities (>= 4.0.0)
-    premailer-rails (1.9.6)
+    premailer-rails (1.9.7)
       actionmailer (>= 3, < 6)
       premailer (~> 1.7, >= 1.7.9)
     pry (0.10.4)
