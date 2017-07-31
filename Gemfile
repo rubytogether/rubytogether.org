@@ -21,7 +21,7 @@ gem "rollbar", "~> 2.15"
 gem "sass-rails", "~> 5.0"
 gem "slack-notifier", "~> 2.2"
 gem "stripe_event", "~> 1.5"
-gem "uglifier", "~> 2.7"
+gem "uglifier", "~> 3.2"
 
 group :development do
   gem "guard-livereload", "~> 2.5", require: false
