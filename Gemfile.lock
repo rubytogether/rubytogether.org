@@ -279,6 +279,9 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    sprockets-redirect (1.0.0)
+      activesupport (>= 3.1.0)
+      rack
     stripe (3.0.3)
       faraday (~> 0.9)
     stripe_event (1.7.0)
@@ -342,6 +345,7 @@ DEPENDENCIES
   rspec-rails (~> 3.4)
   sass-rails (~> 5.0)
   slack-notifier (~> 2.2)
+  sprockets-redirect (~> 1.0)
   stripe_event (~> 1.7)
   terminal-notifier-guard (~> 1.7)
   uglifier (~> 3.2)
