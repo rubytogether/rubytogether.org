@@ -48,6 +48,6 @@ group :production do
 end
 
 group :test do
-  gem "webmock", "~> 2.0", require: false
+  gem "webmock", "~> 3.0", require: false
   gem "vcr", "~> 3.0"
 end

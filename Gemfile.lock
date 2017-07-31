@@ -302,7 +302,7 @@ GEM
       activemodel (>= 4.2)
       debug_inspector
       railties (>= 4.2)
-    webmock (2.3.2)
+    webmock (3.0.1)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
@@ -347,7 +347,7 @@ DEPENDENCIES
   uglifier (~> 3.2)
   vcr (~> 3.0)
   web-console (~> 3.3)
-  webmock (~> 2.0)
+  webmock (~> 3.0)
   wicked_pdf (~> 1.1)
   wkhtmltopdf-binary (~> 0.12.3)
 
