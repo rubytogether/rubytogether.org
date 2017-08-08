@@ -89,49 +89,31 @@ top_companies.merge! candidate_companies
 top_companies.merge!("many others" => nil)
 
 # TODO: we can get all of this data the same way that the bin/since script does.
-new_developer_count = 6
+new_developer_count = 1
 new_developers = [
-  "Josh Cass",
-  "Anıl İyidoğan",
-  "Dian Pan",
-  "Sangwon Yi"
+  "Josh Justice"
 ]
-new_company_count = 3
+new_company_count = 0
 new_companies = {
-  "Day of the Shirt" => "https://dayoftheshirt.com",
-  "ClickFunnels" => "http://www.clickfunnels.com"
 }
-company_count = 81
-individual_count = 116
-friend_count = 74
-
-# For reference, here's the output from bin/since
-# that was used to set the variables above.
-#
-# 2 new friend members including
-#  - Josh Cass
-# 4 new personal members including
-#  - Anıl İyidoğan
-#  - Dian Pan
-#  - Sangwon Yi
-# 2 new Onyx members including
-#  - Day of the Shirt https://dayoftheshirt.com
-#  - ClickFunnels http://www.clickfunnels.com
-# 1 new Sapphire member
-#
-# 6 new developers
-# 3 new companies
-# 9 new members total
-#
-# 81 companies (2 Sapphire, 8 Emerald, 17 Topaz, 10 Jade, 44 Onyx)
-# 190 developers (116 personal, 74 friend)
+company_count = 79
+individual_count = 109
+friend_count = 72
 
 # TODO: we can get this information from the financial_automation repo.
-income = 100
-spent  = 200
-hours_paid = 10
+income = 43114.34
+spent  = 25303.55
+hours_paid = 142.7
 budget_bullets = <<-END.gsub(/^  /, '').strip
-
+* $9109 for 60.7 hours worked on Bundler at $150/hour
+* $8396 for 56.0 hours worked on RubyGems.org at $150/hour
+* $900 for 6.0 hours worked on RubyGems at $150/hour
+* $3000 for 20.0 hours worked on other OSS and devtools at $150/hour
+* $76.11 on dedicated servers for RubyBench.org
+* $639.2 on payment processing fees
+* $2339.5 on company overhead like hosting, services, software, hardware, taxes, etc
+* $470.0 on accounting, copywriting, design, and other professional services
+* $373.74 on marketing, evangelism, and community outreach
 END
 
 # TODO: this part probably needs a human to write it. Should we have
