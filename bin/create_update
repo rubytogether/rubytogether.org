@@ -138,7 +138,7 @@ gemstash_summary = <<-END.gsub(/^  /, '').strip
 
 END
 
-new_update_name = "#{update_month}-#{update_year}-monhtly-update".downcase
-new_update_path = Pathname.new("../app/views/news/#{update_date.iso8601}-#{new_update_name}.html.md").expand_path(__dir__)
+new_update_name = "#{update_month}-#{update_year}-monthly-update".downcase
+new_update_path = Pathname.new("../app/views/news/#{Date.today.iso8601}-#{new_update_name}.html.md").expand_path(__dir__)
 render(binding, new_update_path)
 puts "Created new update at #{new_update_path}"
