@@ -42,7 +42,7 @@ Last in Ruby Together news, this month we partnered with [@mrb_bk](https://twitt
 
 ## bundler news
 
-This month bundler and [bundler.io](bundler.io) got an array of documentation fixes / updates, due in large part to our new contributor [@colby-swandale](https://github.com/colby-swandale).
+This month bundler and [bundler.io](https://bundler.io) got an array of documentation fixes / updates, due in large part to our new contributor [@colby-swandale](https://github.com/colby-swandale).
 
 Bundler got a [Request For Comments](https://github.com/bundler/rfcs) repo, inspired by the one utilized by [Rust](https://www.rust-lang.org/en-US/). We fixed [outdated not listing all outdated gems](https://github.com/bundler/bundler/pull/5176). And we also [fixed an `ObjectBoundsExceededError`](https://github.com/bundler/bundler/pull/5213) on [Rubinius](https://rubinius.com/).
 
