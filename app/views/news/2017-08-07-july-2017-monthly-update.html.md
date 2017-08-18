@@ -4,9 +4,10 @@ summary: In July, we paid for 142 hours of developer work, released Bundler bugf
 
 Hello! Welcome to the monthly update for Ruby Together, a non-profit trade association dedicated to maintaining and improving developer tools for the Ruby programming language.
 
-During July, we released two bugfix versions of Bundler, planned for the future, and made progress towards keeping RubyGems.org working for the months and years to come. Read on for more details!
+During the month of July, we released two bugfix versions of Bundler, planned for the future, and made progress towards keeping RubyGems.org working for the months and years to come. Read on for more details!
 
-Last month, our work was supported by [Stripe](http://stripe.com/), [Gitlab](http://gitlab.com/), [Cloud City](http://cloudcity.io), [Digital Ocean](http://digitalocean.com/), [Bleacher Report](http://www.bleacherreport.com/), and [viewers like you](http://rubytogether.org/join).
+Last month, our work was supported by [Stripe](http://stripe.com/), [Gitlab](http://gitlab.com/), [Cloud City](http://cloudcity.io), [Digital Ocean](http://digitalocean.com/), [Bleacher Report](http://www.bleacherreport.com/), and [viewers like you](http://rubytogether.org/join).  
+If you're not a member yet, you can learn more and help support our work at [rubytogether.org](https://rubytogether.org).
 
 ## ruby together news
 
