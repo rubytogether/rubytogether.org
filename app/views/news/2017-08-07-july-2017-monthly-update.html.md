@@ -20,10 +20,12 @@ In addition to industriously fixing bugs, the indomitable [@segiddins](https://g
 
 Even though Bundler 2 will contain changes to default settings and command options, it's incredibly important to us that all existing projects continue to work without breaking, and that each individual application can choose to switch from Bundler 1 to Bundler 2 at a time that's best for them.
 
-In addition to the work on 2.0, there were two new RFC proposals. RFCs are detailed writeups of potential changes, describing those changes in a way that can be evaluated and discussed before implementation work starts. If you're interested in the way that Bundler handles deploys or gem groups, we'd love to hear your feedback on the open proposals. The two new RFCs in July were:
+In addition to the work on 2.0, there were two new RFC proposals. RFCs are detailed writeups of potential changes, describing those changes in a way that can be evaluated and discussed before implementation work starts. The two new RFCs in July were:
 
   - [Add a `bundle deploy` command](https://github.com/bundler/rfcs/blob/aa-deploy-command/text/0000-bundle-deploy-command.md)
   - [Add a `bundle groups` command](https://github.com/bundler/rfcs/blob/49e08ccf04579a92c394e438074ca7e277d036f5/text/0000-bundle-groups.md)
+
+If you're interested in the way that Bundler handles deploys or gem groups, we'd love to hear your feedback on the open proposals.
 
 Finally, a special thanks to the new contributors to Bundler in the month of July:
 
