@@ -21,18 +21,20 @@ abort "Can't deploy to development!" if @env == "development"
 
 def env_run(*cmd)
   cmd.unshift File.join(@dir, @env)
+  puts "+ #{cmd.join(' ')}"
   system cmd.join(" ")
 end
 
-env_run "push"
+puts "+ git push #{@env} HEAD:master"
+system "git push #{@env} HEAD:master"
 
 case @env
 when "production"
   puts "Purging Fastly cache..."
   sleep 5
-  env_run "surrogate", "bin/rake", "fastly:purge",
+  env_run "run:local", "bin/rake", "fastly:purge",
     "db:migrate:status | grep -v ' up '"
 when "staging"
   puts "Migrating database..."
-  env_run "surrogate", "bin/rake", "db:migrate"
+  env_run "run:local", "bin/rake", "db:migrate"
 end
