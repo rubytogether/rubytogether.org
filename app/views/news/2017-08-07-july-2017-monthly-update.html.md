@@ -43,13 +43,15 @@ Thanks for your hard work, everyone!
 
 ## rubygems.org news
 
-This month was quieter for RubyGems.org, but we did regular maintenance, installed security updates, and generally kept everything running. Most of the time that we spent this month was work on an in-progress SSL troubleshooting guide. Next year, we'll be migrating RubyGems.org to require TLS v1.2 or newer, which is why we're focused on writing and shipping an excellent troubleshooting and upgrade guide before that happens. When the guide is finished, it will be a fantastic resource for anyone having trouble with HTTPS connections from Ruby.
+This month was quieter for RubyGems.org, but we did regular maintenance, installed security updates, and generally kept everything running. Most of the time that we spent this month was work on an in-progress SSL troubleshooting guide.
+
+Next year, we'll be migrating RubyGems.org to require TLS v1.2 or newer, which is why we're focused on writing and shipping an excellent troubleshooting and upgrade guide before that happens. When the guide is finished, it will be a fantastic resource for anyone having trouble with HTTPS connections from Ruby.
 
 Merged features included dependency updates, copy fixes, and a security fix of throttling requests to change or delete user profiles. Overall, Rubygems.org gained 23 new commits, contributed by 4 authors. There were 84 additions and 66 deletions across 20 files.
 
 ## rubygems news
 
-RubyGems saw some small changes and documentation updates, but stayed pretty stable. We've started working with ruby-core team member @hsbt on getting RubyGems and Bundler to be tested together as part of the Ruby build. Once that is done, it should be much harder for changes to Ruby to break anything inside RubyGems or Bundler, which will be a huge help.
+RubyGems saw some small changes and documentation updates, but stayed pretty stable. We've started working with ruby-core team member [@hsbt](https://github.com/hsbt) on getting RubyGems and Bundler to be tested together as part of the Ruby build. Once that is done, it should be much harder for changes to Ruby to break anything inside RubyGems or Bundler, which will be a huge help.
 
 This month, Rubygems gained 29 new commits, contributed by 7 authors. There were 348 additions and 102 deletions across 23 files.
 
