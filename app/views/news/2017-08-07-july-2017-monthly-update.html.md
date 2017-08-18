@@ -64,7 +64,7 @@ This month, Rubygems gained 29 new commits, contributed by 7 authors. There were
 
 ## gemstash news
 
-Gemstash didn't see any new features this month, but we did finally release [version 1.1.0](https://github.com/bundler/gemstash/blob/master/CHANGELOG.md#110-2017-07-31). Along with adding MySQL support, Gemstash now supports `gem install`, as well as [protected fetching](https://github.com/bundler/gemstash/blob/master/docs/gemstash-private-gems.7.md#protected-fetching) for hosting completely private gems that are only avaialble to authorized users.
+Gemstash didn't see any new features this month, but we did finally release [version 1.1.0](https://github.com/bundler/gemstash/blob/master/CHANGELOG.md#110-2017-07-31). Along with adding MySQL support, Gemstash now supports `gem install`, as well as [protected fetching](https://github.com/bundler/gemstash/blob/master/docs/gemstash-private-gems.7.md#protected-fetching) for hosting completely private gems that are only available to authorized users.
 
 ## budget &amp; expenses
 
