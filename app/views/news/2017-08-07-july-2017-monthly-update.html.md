@@ -6,7 +6,7 @@ Hello! Welcome to the monthly update. During July, our work was supported by [St
 
 ## ruby together news
 
-It was pretty quiet on the Ruby Together front&emdash;no new hires, but lots of ongoing work to make using Ruby easier and more reliable.
+It was pretty quiet on the Ruby Together front&mdash;no new hires, but lots of ongoing work to make using Ruby easier and more reliable.
 
 In July, Ruby Together was supported by 79 different companies, including Sapphire member [Stripe](https://stripe.com). On top of those companies, 1 new developer signed up a friend of Ruby Together, Josh Justice.
 
