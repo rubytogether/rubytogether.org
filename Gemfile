@@ -34,6 +34,11 @@ group :development do
   gem "web-console", "~> 3.3"
   gem "wicked_pdf", "~> 1.1"
   gem "wkhtmltopdf-binary", "~> 0.12.3"
+
+  # TODO: Fix the freaking dependency disaster
+  #       so this can be un-commented.
+  # how_is is used to generate monthly reports.
+  #gem "how_is", "~> 18.1", require: false
 end
 
 group :development, :test do
