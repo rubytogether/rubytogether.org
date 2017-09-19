@@ -75,52 +75,55 @@ end
 # TODO: we should get this list from the database, including all Sapphire companies
 # and then randomly choosing 2-4 companies from the next level down each month.
 candidate_companies = {
-  "Cloud City" => "http://cloudcity.io",
   "Bleacher Report" => "http://www.bleacherreport.com/",
-  "Basecamp" => "https://basecamp.com/",
+  "Cloud City" => "http://cloudcity.io",
   "Digital Ocean" => "http://digitalocean.com/",
   "Gitlab" => "http://gitlab.com/",
-  "Travis CI" => "https://travis-ci.org/",
   "Icelab" => "http://icelab.com.au/",
+  "Stitch Fix" => "http://engineering.stitchfix.com/",
+  "Travis CI" => "https://travis-ci.org/",
   "thoughtbot" => "https://thoughtbot.com/",
 }.to_a.sample(4).to_h
-top_companies = { "Stripe" => "http://stripe.com/" }
+top_companies = {
+  "reinteractive" => "http://reinteractive.com",
+  "Stripe" => "http://stripe.com/",
+}
 top_companies.merge! candidate_companies
 top_companies.merge!("many others" => nil)
 
 # TODO: we can get all of this data the same way that the bin/since script does.
-new_developer_count = 1
+new_developer_count = 2
 new_developers = [
-  "Josh Justice"
 ]
-new_company_count = 0
+new_company_count = 2
 new_companies = {
+ "reinteractive" => "https://reinteractive.com/",
 }
-company_count = 79
-individual_count = 109
+company_count = 83
+individual_count = 105
 friend_count = 72
 
 # TODO: we can get this information from the financial_automation repo.
-income = 43114.34
-spent  = 25303.55
-hours_paid = 142.7
+income = 19140
+spent  = 26217.61
+hours_paid = 139.4
 budget_bullets = <<-END.gsub(/^  /, '').strip
-* $9109 for 60.7 hours worked on Bundler at $150/hour
-* $8396 for 56.0 hours worked on RubyGems.org at $150/hour
-* $900 for 6.0 hours worked on RubyGems at $150/hour
-* $3000 for 20.0 hours worked on other OSS and devtools at $150/hour
-* $76.11 on dedicated servers for RubyBench.org
-* $639.2 on payment processing fees
-* $2339.5 on company overhead like hosting, services, software, hardware, taxes, etc
-* $470.0 on accounting, copywriting, design, and other professional services
-* $373.74 on marketing, evangelism, and community outreach
+  * $13,821 for 92.1 hours worked on Bundler at $150/hour
+  * $4,774 for 31.8 hours worked on RubyGems.org at $150/hour
+  * $446 for 3.0 hours worked on RubyGems at $150/hour
+  * $1,871 for 12.5 hours worked on other OSS and devtools at $150/hour
+  * $78.97 on dedicated servers for RubyBench.org
+  * $638.86 on payment processing fees
+  * $1,986.12 on company overhead like hosting, services, software, hardware, taxes, etc
+  * $1,287.50 on accounting, copywriting, design, and other professional services
+  * $1,313.66 on marketing, evangelism, and community outreach
 END
 
 # TODO: this part probably needs a human to write it. Should we have
 # the script prompt the human for input, or should we drop them into
 # an editor with the rest of the update already filled out?
 brief_summary = <<-END.gsub(/^  /, '').strip
-
+  focused mainly on Bundler milestones 1.16 and 2.0
 END
 ruby_together_summary = <<-END.gsub(/^  /, '').strip
 
