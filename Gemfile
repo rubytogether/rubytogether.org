@@ -25,7 +25,7 @@ gem "uglifier", "~> 3.2"
 
 group :development do
   gem "guard-livereload", "~> 2.5", require: false
-  gem "guard-rails", "~> 0.7"
+  gem "guard-rails", "~> 0.8"
   gem "guard-rspec", "~> 4.7"
   gem "letter_opener", "~> 1.4"
   gem "quiet_assets", "~> 1.1"
