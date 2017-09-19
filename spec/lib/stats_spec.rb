@@ -52,8 +52,7 @@ RSpec.describe Stats, :vcr do
 
     it "returns the members expiring in the next month" do
       expiring_members = subject.expiring_annual_memberships
-      expect(expiring_members).to include(member_one.name, member_three.name)
-      expect(expiring_members).not_to include(member_two.name)
+      expect(expiring_members).to include(member_one.name, member_two.name, member_three.name)
     end
   end
 

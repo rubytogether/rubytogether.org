@@ -41,7 +41,7 @@ class Stats
   def self.expiring_annual_memberships
     # no need to look at memberships that are already expired.
     expiring_memberships = Membership.on_trial.where(
-      "expires_at BETWEEN ? AND ?", Time.now, 1.month.from_now
+      "expires_at BETWEEN ? AND ?", Time.now, 90.days.from_now
     ).order("expires_at ASC")
 
     if expiring_memberships.any?
