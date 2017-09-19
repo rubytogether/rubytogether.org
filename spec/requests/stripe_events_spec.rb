@@ -1,6 +1,6 @@
 require 'vcr_helper'
 
-RSpec.describe "Stripe webhooks", :vcr do
+RSpec.describe "Stripe webhooks", type: :request, vcr: true do
 
   describe "customer.source.created" do
     it "runs our hook" do
