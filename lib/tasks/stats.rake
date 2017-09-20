@@ -2,6 +2,7 @@ namespace :stats do
   desc "Calculate monthly stats"
   task :since, [:last_date] => [:environment] do |t, args|
     puts Stats.since(args[:last_date])
+    puts Stats.expiring_annual_memberships
   end
 
   desc "Post expiring annual memberships to Slack."
