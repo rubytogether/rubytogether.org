@@ -10,7 +10,7 @@ In August, Ruby Together was supported by 83 different companies, including Sapp
 
 On top of those companies, 2 new developers joined as friends of Ruby Together. In total, we were supported by 105 individual members and 72 friends of Ruby Together. Thanks to all of our members for making everything that we do possible. &lt;3
 
-In Ruby Together news, we successfully wrapped up a summer of full-time work from [@segiddins](https://github.com/segiddins). His three months included a huge amount of extremely prouctive work, including:
+In Ruby Together news, we successfully wrapped up a summer of full-time work from [@segiddins](https://github.com/segiddins). His three months included a huge amount of extremely productive work, including:
 
   - addressing several RubyGems security reports
   - a RubyGems security release
