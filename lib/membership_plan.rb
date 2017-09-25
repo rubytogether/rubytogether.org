@@ -9,8 +9,16 @@ MembershipPlan = Struct.new(:id, :shortname, :name, :interval, :amount, :currenc
 
   def self.ids
     # Postgres enums can't be re-ordered, so we order the plan list here
-    [:individual, :corporate_emerald, :friend, :corporate_topaz, :corporate_sapphire,
-      :corporate_ruby, :corporate_jade, :corporate_onyx]
+    [
+      :friend,
+      :individual,
+      :corporate_jade,
+      :corporate_onyx,
+      :corporate_topaz,
+      :corporate_emerald,
+      :corporate_sapphire,
+      :corporate_ruby,
+    ]
   end
 
   def self.company_ids
