@@ -6,7 +6,7 @@ gem "rails", "4.2.9"
 gem "compass-rails", "~> 3.0"
 gem "devise", '~> 4.3.0'
 gem "fastly-rails", "~> 0.6"
-gem "http", "~> 2.0"
+gem "http", "~> 3.0"
 gem "jquery-rails", "~> 4.1"
 gem "lograge", "~> 0.6"
 gem "mail", "~> 2.6.6.rc1"
