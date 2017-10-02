@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 ruby File.read(File.expand_path("../.ruby-version", __FILE__)).chomp
 
-gem "rails", "4.2.9"
+gem "rails", "4.2.10"
 
 gem "compass-rails", "~> 3.0"
 gem "devise", '~> 4.3.0'
