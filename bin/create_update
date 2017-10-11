@@ -1,12 +1,7 @@
 #!/usr/bin/env ruby
 require "time"
-require "bundler/setup"
-require "active_support"
-require "active_support/time"
-require "active_support/core_ext/string/inflections"
-require "active_support/core_ext/array/conversions"
+require_relative "../config/environment"
 include ActiveSupport::NumberHelper
-
 
 posts = Pathname.new("../app/views/news").expand_path(__dir__).children
 
@@ -63,6 +58,70 @@ def git_summary(repo, date)
     "#{pluralize('file', files_count)}."
 end
 
+class MemberInfo
+  def initialize(last_published)
+    @last_published = last_published
+  end
+
+  def new_members
+    @new_members ||= Membership.active.since(@last_published).to_a
+  end
+
+  def new_companies
+    @new_companies ||= new_members.select(&:corporate?)
+  end
+
+  def new_people
+    @new_companies ||= new_members.reject(&:corporate?)
+  end
+
+  def new_member_groups
+    @new_member_groups ||= new_members.group_by(&:kind)
+  end
+
+  def plans
+    MembershipPlan.all.values.sort_by(&:amount)
+  end
+
+  def member_counts
+    @member_counts ||= Membership.active.group(:kind).count.map do |id, count|
+      [MembershipPlan.all[MembershipPlan.ids[id]], count]
+    end
+  end
+
+  def company_count
+    member_counts.select{|plan, count| MembershipPlan.company_ids.include?(plan.id.to_sym) }.map(&:last).sum
+  end
+
+  def individual_count
+    member_counts.find{|plan, count| plan.id == "individual" }.last
+  end
+
+  def friend_count
+    member_counts.find{|plan, count| plan.id == "friend" }.last
+  end
+
+  def companies_hash(kinds)
+    kind_ids = kinds.map{|name| MembershipPlan.ids.index(name) }
+    Membership.active.where(kind: kind_ids).
+      where("name IS NOT NULL AND url IS NOT NULL").
+      to_a.sort_by{|m| kinds.index(m.kind.to_sym) }.
+      map{|m| [m.name, m.url] }.to_h
+  end
+
+  def headline_companies
+    companies_hash %i[corporate_ruby corporate_sapphire]
+  end
+
+  def support_companies
+    companies_hash %i[corporate_emerald]
+  end
+
+  def top_companies
+    headline_companies.merge(support_companies.to_a.sample(2).to_h).merge("many others" => nil)
+  end
+end
+
 def render(b, path)
   require "erb"
   update_template_path = Pathname.new("../lib/templates/monthly_update.md.erb").expand_path(__dir__)
@@ -72,36 +131,18 @@ def render(b, path)
   File.write path, erb.result(b)
 end
 
-# TODO: we should get this list from the database, including all Sapphire companies
-# and then randomly choosing 2-4 companies from the next level down each month.
-candidate_companies = {
-  "Bleacher Report" => "http://www.bleacherreport.com/",
-  "Cloud City" => "http://cloudcity.io",
-  "Digital Ocean" => "http://digitalocean.com/",
-  "Gitlab" => "http://gitlab.com/",
-  "Icelab" => "http://icelab.com.au/",
-  "Stitch Fix" => "http://engineering.stitchfix.com/",
-  "Travis CI" => "https://travis-ci.org/",
-  "thoughtbot" => "https://thoughtbot.com/",
-}.to_a.sample(4).to_h
-top_companies = {
-  "reinteractive" => "http://reinteractive.com",
-  "Stripe" => "http://stripe.com/",
-}
-top_companies.merge! candidate_companies
-top_companies.merge!("many others" => nil)
+info = MemberInfo.new(last_published)
 
-# TODO: we can get all of this data the same way that the bin/since script does.
-new_developer_count = 2
-new_developers = [
-]
-new_company_count = 2
-new_companies = {
- "reinteractive" => "https://reinteractive.com/",
-}
-company_count = 83
-individual_count = 105
-friend_count = 72
+top_companies = info.top_companies
+
+new_developer_count = info.new_people.count
+new_developers = info.new_people.map(&:name).compact
+new_company_count = info.new_companies.count
+new_companies = info.new_companies.select{|c| c.name && c.url }.map{|c| [c.name, c.url] }.to_h
+
+company_count = info.company_count
+individual_count = info.individual_count
+friend_count = info.friend_count
 
 # TODO: we can get this information from the financial_automation repo.
 income = 19140
