@@ -12,9 +12,9 @@ posts = Pathname.new("../app/views/news").expand_path(__dir__).children
 
 last_update = posts.map(&:basename).map(&:to_s).grep(/monthly-update/).sort.last
 last_pattern = /(\d{4}-\d{2}-\d{2})(?:-[-\w]+-and)?-(\w+?)-(\d{4})/
-last_published, last_month, last_year = last_update.match(last_pattern).to_a[1..-1]
+last_date, last_month, last_year = last_update.match(last_pattern).to_a[1..-1]
 
-last_published = Date.parse(last_published)
+last_published = Date.parse(last_date)
 last_month_date = Date.parse("#{last_month} #{last_year}")
 update_date = last_month_date.advance(months: 1)
 update_month = update_date.strftime("%B")
