@@ -145,26 +145,26 @@ individual_count = info.individual_count
 friend_count = info.friend_count
 
 # TODO: we can get this information from the financial_automation repo.
-income = 19140
-spent  = 26217.61
-hours_paid = 139.4
+income = 25145.47
+spent  = 25995.27
+hours_paid = 143.3
 budget_bullets = <<-END.gsub(/^  /, '').strip
-  * $13,821 for 92.1 hours worked on Bundler at $150/hour
-  * $4,774 for 31.8 hours worked on RubyGems.org at $150/hour
-  * $446 for 3.0 hours worked on RubyGems at $150/hour
-  * $1,871 for 12.5 hours worked on other OSS and devtools at $150/hour
-  * $78.97 on dedicated servers for RubyBench.org
-  * $638.86 on payment processing fees
-  * $1,986.12 on company overhead like hosting, services, software, hardware, taxes, etc
-  * $1,287.50 on accounting, copywriting, design, and other professional services
-  * $1,313.66 on marketing, evangelism, and community outreach
+  * $14,163 for 94.4 hours worked on Bundler at $150/hour
+  * $4,670 for 31.1 hours worked on RubyGems.org at $150/hour
+  * $915 for 6.1 hours worked on RubyGems at $150/hour
+  * $1,740 for 11.6 hours worked on other OSS and devtools at $150/hour
+  * $80.37 on dedicated servers for RubyBench.org
+  * $812.12 on payment processing fees
+  * $1,976.62 on company overhead like hosting, services, software, hardware, taxes, etc
+  * $375.0 on accounting, copywriting, design, and other professional services
+  * $1,263.66 on marketing, evangelism, and community outreach
 END
 
 # TODO: this part probably needs a human to write it. Should we have
 # the script prompt the human for input, or should we drop them into
 # an editor with the rest of the update already filled out?
 brief_summary = <<-END.gsub(/^  /, '').strip
-  focused mainly on Bundler milestones 1.16 and 2.0
+  shipped a RubyGems security release, and hired some security-focused help
 END
 ruby_together_summary = <<-END.gsub(/^  /, '').strip
 
