@@ -10,9 +10,9 @@ module FastlyRails
     client.purge_by_key(key)
   end
 
-  def self.service
+  def self.purge_all
     return unless configuration.service_id
-    client.get_service(configuration.service_id)
+    client.client.post("#{Fastly::Service.get_path(service_id)}/purge_all")
   end
 
 end
