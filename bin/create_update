@@ -92,8 +92,7 @@ class MemberInfo
   end
 
   def companies_hash(kinds)
-    kind_ids = kinds.map{|name| MembershipPlan.ids.index(name) }
-    Membership.active.where(kind: kind_ids).
+    Membership.active.where(kind: Membership.kinds_for(kinds)).
       where("name IS NOT NULL AND url IS NOT NULL").
       to_a.sort_by{|m| kinds.index(m.kind.to_sym) }.
       map{|m| [m.name, m.url] }.to_h
