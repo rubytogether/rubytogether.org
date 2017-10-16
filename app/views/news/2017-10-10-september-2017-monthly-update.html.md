@@ -1,40 +1,60 @@
 ---
-summary: In September, we paid for 143 hours of developer work, shipped a RubyGems security release, and hired some security-focused help.
+summary: In September, we paid for 143 hours of developer work, shipped a RubyGems security release, and funded the new Ruby Toolbox.
 ---
 
-Hello! Welcome to the monthly update. During September, our work was supported by [Newington College](https://newington.nsw.edu.au), [Bear & Giraffe](http://bearandgiraffe.com), [Evolving Media Network / Moonfarmer](http://www.evolvingmedia.net/), [Scout RFP](http://www.scoutrfp.com), [Brandeis University](http://), [Atomic Object](http://atomicobject.com), [Rabid Technologies](https://www.rabid.co.nz/), [Hexagonal Consulting](http://www.hexagonalconsulting.com/), [MAKEMUSIC](http://www.makemusic.com/), [Rebased](http://rebased.com), [Intellum](http://www.intellum.com), [Tommy John](https://www.tommyjohn.com), [Flux Federation](http://Powershop.com), [Day of the Shirt](https://dayoftheshirt.com), [ChartMogul](https://chartmogul.com), [Kundigo](http://kundigo.pro), [The Conversation](https://theconversation.com), [Appcanary](https://appcanary.com), [Contributed Systems](http://www.contribsys.com), [Planio](https://plan.io), [Keycoopt](http://keycooptsystem.com), [Fretless](http://www.getfretless.com), [BoochTek](http://www.boochtek.com), [ClickFunnels](http://www.clickfunnels.com), [Okapi LLC](https://www.okapi.io), [Teezily](https://teezily.com), [Evil Martians](https://evilmartians.com), [Nulogy](http://www.nulogy.com), [Shakr](https://www.shakr.com/), [Substance Lab](http://substancelab.com), [Buildkite](https://buildkite.com), [SuperBorrowNet](http://superborrownet.com), [Codeminer 42](http://www.codeminer42.com), [Geckoboard](https://www.geckoboard.com), [Brakeman Pro](https://brakemanpro.com/), [Instrumental](https://instrumentalapp.com), [Honeybadger](https://www.honeybadger.io/), [bitcrowd](http://bitcrowd.net), [DocRaptor](https://docraptor.com), [Modern Message](http://www.modernmsg.com), [Minnesota Public Radio](http://www.mprnews.org), [makandra](https://makandra.com), [AddressFinder](https://addressfinder.nz), [reinteractive](https://reinteractive.com/), and many others.
+Hello! Welcome to the monthly update. During September, our work was supported by [reinteractive](https://reinteractive.com/), [Stripe](https://stripe.com), [Bleacher Report](http://www.bleacherreport.com), [GitLab](https://about.gitlab.com), and many others.
+
+Since the last update, we shipped a security release of RubyGems, hired a new developer to work on security, funded the new Ruby Toolbox, and patched RubyGems.org to protect it from a newly-found variant of an old security hole.
 
 ## ruby together news
 
+In September, Ruby Together was supported by 138 different companies, including Ruby member [reinteractive](https://reinteractive.com) and Sapphire member [Stripe](https://stripe.com), and one new company.  On top of those companies, 3 people signed up as members or friends of Ruby Together, including Stanislav (Stas) Katkov and Abu Nashir. In total, we were supported by 98 individual members and 70 friends of Ruby Together. Thanks to all of our members for making everything that we do possible. &lt;3
 
+The other Ruby Together news is pretty exciting!
 
-In September, Ruby Together was supported by 138 different companies, including Sapphire member [Stripe](https://stripe.com). 1 company joined as new members, including .
+To start with, we've brought on [@claudijd](https://twitter.com/claudijd) as a new developer, focused on security improvements for RubyGems. He'll be helping respond to security researcher reports, fix security issues, and do all of the inevitable paperwork that results.
 
-On top of those companies, 1 new developer signed up as members or friends of Ruby Together, including Stanislav (Stas) Katkov. In total, we were supported by 7 individual members and 101 friends of Ruby Together. Thanks to all of our members for making everything that we do possible. &lt;3
+Next, we're extremely excited to announce that we are funding the upcoming, new, and improved [Ruby Toolbox](https://github.com/rubytoolbox/rubytoolbox)! We'll be paying [@thedeadserious](https://twitter.com/thedeadserious) to rebuild the Ruby Toolbox back to its former glory, and beyond!
+
+If you're interested, you can also [read the announcement from the Ruby Toolbox side](https://github.com/rubytoolbox/rubytoolbox/issues/1#issuecomment-333950079), or just keep reading to reach the very first Ruby Toolbox monthly update.
 
 ## bundler news
 
-SUMMARIZE [BUNDLER CHANGES](https://github.com/bundler/bundler/compare/master@%7B2017-08-01%7D...master@%7B2017-09-01%7D)
+Bundler progress in September was steady. Along with @segiddins finishing off the last of his full-time summer hours, @arbonap continued to localize docs into Spanish, including automated tests for the Spanish documentation.
 
-This month, Bundler gained 131 new commits, contributed by 15 authors. There were 1,540 additions and 344 deletions across 127 files.
+We released the 1.16 prerelease, discovered some bugs, fixed them, and [removed the message asking users to upgrade to prerelease versions](https://github.com/bundler/bundler/pull/6031). We're expecting a final 1.16 release sometime this month, since the latest prerelease is looking pretty stable.
+
+After that, we'll be starting on the path to 2.0: updating documentation, writing blog posts, testing the upgrade path, and more. Most of all, we'll be making sure that Bundler 1.x and 2.x can coexist peacefully, so that no one is forced to upgrade or downgrade because of the projects they work on.
+
+This month, Bundler gained 104 new commits, contributed by 14 authors. There were 1,220 additions and 417 deletions across 65 files.
 
 ## rubygems.org news
 
-SUMMARIZE [RUBYGEMS.ORG CHANGES](https://github.com/rubygems/rubygems.org/compare/master@%7B2017-08-01%7D...master@%7B2017-09-01%7D)
+It was a quiet month for RubyGems.org&hellip; aside from the giant security issue, and the scramble to patch it, and then check every single existing gem to make sure it hadn't been tampered with anytime in the last few years. The security issue was a big one, and potentially allowed any attacker to do anything they wanted to the RubyGems.org servers.
 
-This month, Rubygems.org gained 0 new commits, contributed by 0 authors. There were 52 additions and 46 deletions across 10 files.
+After adding fixes just to the RubyGems.org server, the combined RubyGems and RubyGems.org teams ultimately decided to patch RubyGems itself to ensure that this kind of issue can't happen on other computers that use RubyGems, or other servers. For more information, check out [the RubyGems blog post about the security issue and its impact](http://blog.rubygems.org/2017/10/09/unsafe-object-deserialization-vulnerability.html).
+
+This month, Rubygems.org gained 4 new commits, contributed by 3 authors. There were 12 additions and 10 deletions across 7 files.
 
 ## rubygems news
 
-SUMMARIZE [RUBYGEMS CHANGES](https://github.com/rubygems/rubygems/compare/master@%7B2017-08-01%7D...master@%7B2017-09-01%7D)
+RubyGems itself saw only a little bit of activity this month. As a result of @hsbt's heroic work, Bundler has been merged into the version of RubyGems that ships with Ruby itself! Now we'll need to keep changes in sync between all three of ruby-core trunk, the RubyGems master branch, and the Bundler master branch. Oh boy. 😬
 
-This month, Rubygems gained 59 new commits, contributed by 11 authors. There were 979 additions and 303 deletions across 39 files.
+On the bright side, you can already check out the fruits of all these teams' labor in [Ruby 2.5-preview1](https://www.ruby-lang.org/en/news/2017/10/10/ruby-2-5-0-preview1-released/). When you install Ruby 2.5, Bundler is included! 🎉
+
+This month, Rubygems gained 10 new commits, contributed by 4 authors. There were 11 additions and 10 deletions across 5 files.
 
 ## gemstash news
 
-SUMMARIZE [GEMSTASH CHANGES](https://github.com/bundler/gemstash/compare/master@%7B2017-08-01%7D...master@%7B2017-09-01%7D)
+Gemstash saw a few fixes and upgrades land this month, thanks to contributors @olleolleolle and @koic. It gained 13 new commits, contributed by 4 authors. There were 9 additions and 8 deletions across 5 files.
 
-This month, Gemstash gained 0 new commits, contributed by 0 authors. There were 4 additions and 6 deletions across 4 files.
+## ruby toolbox news
+
+Hello everyone, great to be here :) I only just got started on bringing the Ruby Toolbox back the last week, but there's already a place you can contribute to if you'd like: The categorization catalog is now on Github, and your help in cleaning it up, bringing it back up to date and expanding it is very welcome: [github.com/rubytoolbox/catalog](https://github.com/rubytoolbox/catalog).
+
+In the next weeks I will be working on the core app itself, trying to bring it back online as quickly as possible and expanding from there. Over at GitHub, you can read [a more detailed outlook on my planned next steps](https://github.com/rubytoolbox/rubytoolbox/issues/1#issuecomment-333950079).
+
+> &mdash; Christoph Olszowka, @thedeadserious
 
 ## budget &amp; expenses
 
