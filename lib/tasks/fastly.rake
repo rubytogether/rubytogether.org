@@ -3,7 +3,7 @@ namespace :fastly do
   task :purge do
     require_relative "../../config/initializers/fastly"
     require_relative "../../config/initializers/slack"
-    FastlyRails.service.purge_all
+    FastlyRails.purge_all
     Slack.say("#{ENV["USER"]} purged Fastly cache for #{Rails.env}",
       channel: "#website",
       username: "fastly",
