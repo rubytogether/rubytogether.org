@@ -1,0 +1,191 @@
+#!/usr/bin/env ruby
+require "time"
+require_relative "../config/environment"
+include ActiveSupport::NumberHelper
+
+# posts = Pathname.new("../app/views/news").expand_path(__dir__).children
+
+def pluralize(word, count)
+  [number_to_delimited(count.to_i), word.pluralize(count)].join(" ")
+end
+
+def link_list(data)
+  data.map do |name, link|
+    link.nil? ? name : "[#{name}](#{link})"
+  end.to_sentence
+end
+
+def commits_link_for(repo, date)
+  "https://github.com/" << repo << "/compare/master@%7B" <<
+    date.advance(months: -1).iso8601 << "%7D...master@%7B" <<
+    date.iso8601 << "%7D"
+end
+
+def git_summary(repo, date)
+  require "http"
+  changes_link      = commits_link_for(repo, date)
+  puts "Fetching summary information for #{repo}..."
+
+  changes_response  = HTTP.get(changes_link)
+  changes_html      = changes_response.body.to_s
+  contributor_count = changes_html.match(/([\d,]+)\s+contributors/){|m| m[1].tr(',','').to_i }
+  commit_count      = changes_html.match(/Commits\s+<span\s+class="Counter">\s+([\d,]+)\s+<\/span>/){|m| m[1].tr(',','').to_i }
+  files_count       = changes_html.match(/([\d,]+)\s+changed\s+files/){|m| m[1].tr(',','').to_i }
+  additions_count   = changes_html.match(/([\d,]+)\s+additions/){|m| m[1].tr(',','').to_i }
+  deletions_count   = changes_html.match(/([\d,]+)\s+deletions/){|m| m[1].tr(',','').to_i }
+  project = repo.split("/").last.capitalize
+
+  # Style options
+  # 1. In total, this month 13 authors pushed 149 commits, including 1,668 additions and 306 deletions across 78 files.
+  # 2. In total, RubyGems.org gained 21 new commits, with 4 different contributors changing 63 files. There were 851 additions and 305 deletions.
+  # 3. In total, Gemstash gained 3 new commits. 2 different authors changed 5 files, with 37 additions and 6 deletions.
+
+  "This month, #{project} gained #{pluralize('new commit', commit_count)}, " \
+    "contributed by #{pluralize('author', contributor_count)}. There " \
+    "#{additions_count == 1 ? 'was' : 'were'} " \
+    "#{pluralize('addition', additions_count)} and " \
+    "#{pluralize('deletion', deletions_count)} across " \
+    "#{pluralize('file', files_count)}."
+end
+
+class MemberInfo
+  def initialize(last_published)
+    @last_published = last_published
+  end
+
+  def new_members
+    @new_members ||= Membership.active.since(@last_published).to_a
+  end
+
+  def new_companies
+    @new_companies ||= new_members.select(&:corporate?)
+  end
+
+  def new_people
+    @new_companies ||= new_members.reject(&:corporate?)
+  end
+
+  def new_member_groups
+    @new_member_groups ||= new_members.group_by(&:kind)
+  end
+
+  def plans
+    MembershipPlan.all.values.sort_by(&:amount)
+  end
+
+  def member_counts
+    @member_counts ||= Membership.active.group(:kind).count.map do |id, count|
+      [MembershipPlan.all[MembershipPlan.ids[id]], count]
+    end
+  end
+
+  def company_count
+    member_counts.select{|plan, count| MembershipPlan.company_ids.include?(plan.id.to_sym) }.map(&:last).sum
+  end
+
+  def individual_count
+    member_counts.find{|plan, count| plan.id == "individual" }.last
+  end
+
+  def friend_count
+    member_counts.find{|plan, count| plan.id == "friend" }.last
+  end
+
+  def companies_hash(kinds)
+    Membership.active.where(kind: Membership.kinds_for(kinds)).
+      where("name IS NOT NULL AND url IS NOT NULL").
+      to_a.sort_by{|m| kinds.index(m.kind.to_sym) }.
+      map{|m| [m.name, m.url] }.to_h
+  end
+
+  def headline_companies
+    companies_hash %i[corporate_ruby corporate_sapphire]
+  end
+
+  def support_companies
+    companies_hash %i[corporate_emerald]
+  end
+
+  def top_companies
+    headline_companies.merge(support_companies.to_a.sample(2).to_h).merge("many others" => nil)
+  end
+end
+
+def render(b, path)
+  require "erb"
+  update_template_path = Pathname.new("../lib/templates/monthly_update.md.erb").expand_path(__dir__)
+  update_template = update_template_path.read
+  erb = ERB.new(update_template, nil, "<>>-")
+  erb.location = update_template_path.to_s
+  File.write path, erb.result(b)
+end
+
+posts = Rails.root.join("app/views/news").children
+
+last_update = posts.map(&:basename).map(&:to_s).grep(/monthly-update/).sort.last
+last_pattern = /(\d{4}-\d{2}-\d{2})(?:-[-\w]+-and)?-(\w+?)-(\d{4})/
+last_date, last_month, last_year = last_update.match(last_pattern).to_a[1..-1]
+
+last_published = Date.parse(last_date)
+last_month_date = Date.parse("#{last_month} #{last_year}")
+update_date = last_month_date.advance(months: 1)
+update_month = update_date.strftime("%B")
+update_year = update_date.strftime("%Y")
+
+info = MemberInfo.new(last_published)
+
+top_companies = info.top_companies
+
+new_developer_count = info.new_people.count
+new_developers = info.new_people.map(&:name).compact
+new_company_count = info.new_companies.count
+new_companies = info.new_companies.select{|c| c.name && c.url }.map{|c| [c.name, c.url] }.to_h
+
+company_count = info.company_count
+individual_count = info.individual_count
+friend_count = info.friend_count
+
+# TODO: we can get this information from the financial_automation repo.
+income = 25145.47
+spent  = 25995.27
+hours_paid = 143.3
+budget_bullets = <<-END.gsub(/^  /, '').strip
+  * $14,163 for 94.4 hours worked on Bundler at $150/hour
+  * $4,670 for 31.1 hours worked on RubyGems.org at $150/hour
+  * $915 for 6.1 hours worked on RubyGems at $150/hour
+  * $1,740 for 11.6 hours worked on other OSS and devtools at $150/hour
+  * $80.37 on dedicated servers for RubyBench.org
+  * $812.12 on payment processing fees
+  * $1,976.62 on company overhead like hosting, services, software, hardware, taxes, etc
+  * $375.0 on accounting, copywriting, design, and other professional services
+  * $1,263.66 on marketing, evangelism, and community outreach
+END
+
+# TODO: this part probably needs a human to write it. Should we have
+# the script prompt the human for input, or should we drop them into
+# an editor with the rest of the update already filled out?
+brief_summary = <<-END.gsub(/^  /, '').strip
+  shipped a RubyGems security release, and hired some security-focused help
+END
+ruby_together_summary = <<-END.gsub(/^  /, '').strip
+
+END
+bundler_summary = <<-END.gsub(/^  /, '').strip
+
+END
+rubygems_summary = <<-END.gsub(/^  /, '').strip
+
+END
+rubygems_org_summary = <<-END.gsub(/^  /, '').strip
+
+END
+gemstash_summary = <<-END.gsub(/^  /, '').strip
+
+END
+
+if __FILE__ == $0
+  new_update_name = "#{update_month}-#{update_year}-monthly-update".downcase
+  new_update_path = Pathname.new("../app/views/news/#{Date.today.iso8601}-#{new_update_name}.html.md").expand_path(__dir__)
+  render(binding, new_update_path)
+  puts "Created new update at #{new_update_path}"
+end
