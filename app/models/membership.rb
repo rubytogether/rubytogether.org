@@ -31,6 +31,7 @@ class Membership < ActiveRecord::Base
     where(kind: kinds_for(MembershipPlan.featured_ids)) }
   scope :nonfeatured_companies, -> {
     where(kind: kinds_for(MembershipPlan.nonfeatured_ids)) }
+  scope :plan, -> (plan) { where(kind: kinds_for("corporate_#{plan}".to_sym)) }
 
   belongs_to :user
 
