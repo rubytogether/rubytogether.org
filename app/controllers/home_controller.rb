@@ -6,7 +6,7 @@ class HomeController < ApplicationController
     @companies = [
       Membership.plan(:ruby).named.active.order(:created_at).pluck(:name, :url),
       Membership.plan(:sapphire).named.active.order(:created_at).pluck(:name, :url),
-      Membership.featured_companies.named.active.order('random()').limit(2).pluck(:name, :url)
+      Membership.plan(:emerald).named.active.order('random()').limit(2).pluck(:name, :url)
     ].flatten(1)
   end
 
