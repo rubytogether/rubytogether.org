@@ -302,7 +302,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.4)
-    vcr (3.0.3)
+    vcr (4.0.0)
     warden (1.2.7)
       rack (>= 1.0)
     web-console (3.3.0)
@@ -353,7 +353,7 @@ DEPENDENCIES
   stripe_event (~> 1.8)
   terminal-notifier-guard (~> 1.7)
   uglifier (~> 3.2)
-  vcr (~> 3.0)
+  vcr (~> 4.0)
   web-console (~> 3.3)
   webmock (~> 3.0)
   wicked_pdf (~> 1.1)
