@@ -43,8 +43,8 @@
 
   <section class="content" style="clear: both;">
     <p>
-      Invoice Number: 1004<br>
-      Invoice Date: <%= Date.today %><br>
+      Invoice Number: <%= Date.today.year %>-<%= @membership.id %><br>
+      Invoice Date: <%= Date.today.to_s(:long) %><br>
       Terms: Due on receipt
     </p>
 
