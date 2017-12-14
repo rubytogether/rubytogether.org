@@ -31,7 +31,7 @@ Post = Struct.new(:name, :date, :id) do
   end
 
   def title
-    name.titleize
+    name.titleize.gsub('And', 'and')
   end
 
   def summary
