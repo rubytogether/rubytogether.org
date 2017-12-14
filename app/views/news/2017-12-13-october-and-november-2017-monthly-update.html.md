@@ -1,5 +1,5 @@
 ---
-summary: In October and November, we paid for 204 hours of developer work, 
+summary: In October and November, we paid for 204 hours of developer work, spoke at RubyConf, shipped Bundler 1.16, and started deploying the beta Ruby Toolbox 2.0.
 ---
 
 Hello! Welcome to a super-sized double monthly update for the months of October and November. During that time, our work was supported by [reinteractive](https://reinteractive.com/), [Stripe](http://stripe.com), [Bleacher Report](http://www.bleacherreport.com), [thoughtbot](https://thoughtbot.com), and many others.
