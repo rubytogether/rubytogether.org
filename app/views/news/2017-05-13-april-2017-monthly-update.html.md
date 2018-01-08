@@ -46,7 +46,7 @@ Gemstash didn't see any major changes during April, but it's still a solid optio
 
 ## budget & expenses
 
-In March, we saw $22,252 in total income, and spent a total of $9,479.49.
+In April, we saw $22,252 in total income, and spent a total of $9,479.49.
 
 * $1,950 for 13.0 hours worked on Bundler at $150/hour
 * $1,538 for 10.3 hours worked on RubyGems.org at $150/hour
