@@ -3,8 +3,6 @@ require "time"
 require_relative "../config/environment"
 include ActiveSupport::NumberHelper
 
-# posts = Pathname.new("../app/views/news").expand_path(__dir__).children
-
 def pluralize(word, count)
   [number_to_delimited(count.to_i), word.pluralize(count)].join(" ")
 end
