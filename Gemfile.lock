@@ -333,7 +333,7 @@ DEPENDENCIES
   lograge (~> 0.7)
   mail (~> 2.6.6.rc1)
   nilify_blanks (~> 1.2)
-  nokogiri (~> 1.7)
+  nokogiri (~> 1.8)
   pg (~> 0.21.0)
   postmark-rails (~> 0.12)
   premailer-rails (~> 1.9)
