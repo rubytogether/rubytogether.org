@@ -164,18 +164,10 @@ END
 ruby_together_summary = <<-END.gsub(/^  /, '').strip
 
 END
-bundler_summary = <<-END.gsub(/^  /, '').strip
-
-END
-rubygems_summary = <<-END.gsub(/^  /, '').strip
-
-END
-rubygems_org_summary = <<-END.gsub(/^  /, '').strip
-
-END
-gemstash_summary = <<-END.gsub(/^  /, '').strip
-
-END
+bundler_summary = git_summary("bundler/bundler", update_date)
+rubygems_summary = git_summary("rubygems/rubygems", update_date)
+rubygems_org_summary = git_summary("rubygems/rubygems.org", update_date)
+gemstash_summary = git_summary("bundler/gemstash", update_date)
 
 if __FILE__ == $0
   new_update_name = "#{update_month}-#{update_year}-monthly-update".downcase
