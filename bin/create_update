@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 require "time"
+require "how_is"
 require_relative "../config/environment"
 include ActiveSupport::NumberHelper
 
@@ -19,12 +20,12 @@ def commits_link_for(repo, date)
     date.iso8601 << "%7D"
 end
 
-def git_contributions(repo, date)
+def git_contributions(repository, date)
   @contributions ||= {}
-  @contributions[repo] ||= {}
+  @contributions[repository] ||= {}
 
-  user, repo = repo.split("/")
-  @contributions[repo][date] ||= HowIs::Contributions.new(user: user, repo: repo, start_date: date)
+  user, repo = repository.split("/")
+  @contributions[repository][date] ||= HowIs::Contributions.new(user: user, repo: repo, start_date: date)
 end
 
 # See also,
@@ -36,7 +37,7 @@ end
 
 # Returns a list of names of new contributors.
 def git_new_contributors(repo, date)
-  contributions = git_contributions
+  contributions = git_contributions(repo, date)
 
   contributions.new_contributors.map { |c| c["name"] }
 end
@@ -81,7 +82,7 @@ class MemberInfo
   end
 
   def friend_count
-    member_counts.find{|plan, count| plan.id == "friend" }.last
+    member_counts.find{|plan, count| plan.id == "friend" }&.last
   end
 
   def companies_hash(kinds)

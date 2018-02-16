@@ -27,7 +27,7 @@ group :development do
   gem "guard-livereload", "~> 2.5", require: false
   gem "guard-rails", "~> 0.8"
   gem "guard-rspec", "~> 4.7"
-  gem "how_is", "~> 19", require: false
+  gem "how_is", "~> 23", require: false
   gem "letter_opener", "~> 1.4"
   gem "quiet_assets", "~> 1.1"
   gem "rack-livereload", "~> 0.3"
