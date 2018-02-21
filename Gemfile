@@ -4,7 +4,7 @@ ruby File.read(File.expand_path("../.ruby-version", __FILE__)).chomp
 gem "rails", "4.2.10"
 
 gem "compass-rails", "~> 3.0"
-gem "devise", '~> 4.3.0'
+gem "devise", '~> 4.4.0'
 gem "fastly-rails", "~> 0.6"
 gem "http", "~> 3.0"
 gem "jquery-rails", "~> 4.1"
@@ -27,6 +27,7 @@ group :development do
   gem "guard-livereload", "~> 2.5", require: false
   gem "guard-rails", "~> 0.8"
   gem "guard-rspec", "~> 4.7"
+  gem "how_is", "~> 23", require: false
   gem "letter_opener", "~> 1.4"
   gem "quiet_assets", "~> 1.1"
   gem "rack-livereload", "~> 0.3"
