@@ -38,7 +38,7 @@ end
 
 group :development, :test do
   gem "dotenv-rails", "~> 2.1"
-  gem "pry-byebug", "~> 3.5"
+  gem "pry-byebug", "~> 3.6"
   gem "rspec-rails", "~> 3.6"
 end
 
