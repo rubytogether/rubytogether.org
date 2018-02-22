@@ -117,7 +117,7 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
-    hashdiff (0.3.4)
+    hashdiff (0.3.7)
     htmlentities (4.3.4)
     http (3.0.0)
       addressable (~> 2.3)
@@ -308,7 +308,7 @@ GEM
       activemodel (>= 4.2)
       debug_inspector
       railties (>= 4.2)
-    webmock (3.0.1)
+    webmock (3.3.0)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
@@ -354,7 +354,7 @@ DEPENDENCIES
   uglifier (~> 3.2)
   vcr (~> 4.0)
   web-console (~> 3.3)
-  webmock (~> 3.0)
+  webmock (~> 3.3)
   wicked_pdf (~> 1.1)
   wkhtmltopdf-binary (~> 0.12.3)
 
