@@ -8,7 +8,7 @@ gem "devise", '~> 4.4.3'
 gem "fastly-rails", "~> 0.6"
 gem "http", "~> 3.0"
 gem "jquery-rails", "~> 4.1"
-gem "lograge", "~> 0.7"
+gem "lograge", "~> 0.9"
 gem "mail", "~> 2.7.0"
 gem "nilify_blanks", "~> 1.3"
 gem "nokogiri", "~> 1.7"
