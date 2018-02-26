@@ -21,6 +21,10 @@ Dir.chdir APP_ROOT do
     puts " ✔"
   end
 
+  puts "\nAdding heroku git remotes =="
+  system("heroku git:remote -a rubytogether-staging -r staging")
+  system("heroku git:remote -a rubytogether -r production")
+
   puts "\n== Preparing database =="
   system "bin/rake db:setup"
 
