@@ -40,15 +40,16 @@ There were no new changes to Gemstash in February.
 
 ## ruby toolbox news
 
-Hello everyone!
-
 After bringing the Ruby Toolbox back to life at the beginning of February, the rest of the month was mostly about going through a variety of community contributions, mostly related to changes to the [catalog](https://github.com/rubytoolbox/catalog), which saw 61 pull requests from 43 contributors. I also tried to improve documentation and guidelines for catalog contributions, based on common mistakes happening on that end. The Rails app itself saw a bunch of improvements to the README that now gives an overview of how to get the app running for local development, and in total saw 4 pull requests submitted by 4 contributors.
 
 I also did some research and prototyping for charts and statistics that can be gathered from the existing project metrics, and how to make individual project metrics like gem downloads easier to put into context in relation to the rest of the ecosystem. In addition to converting the GitHub gathering to their GraphQL library, thus unlocking a whole bunch of additional project metrics (see [#94](https://github.com/rubytoolbox/rubytoolbox/pull/94)), in March I'd like to make daily database dumps available for download to make it easier to get a more realistic development environment, and to bring said project metrics display improvements live for at least one metric to get community feedback on the general approach.
 
 As always, your feedback is very welcome, if you have any suggestions or thoughts you'd like to share you can do so via [GitHub issues](https://github.com/rubytoolbox/rubytoolbox/issues) or by getting in touch with me directly.
 
-Finally, thank you to all of last month's PR contributors: BookOfGreg, GBH, andyjeffries, brandonweiss, bricesanchez, brodock, btrd, campreb, cedlemo, cyril, dogweather, drgcms, el-feo, emilebosch, eregon, filipewl, florentferry, gzigzigzeo, iridakos, itsderek23, kddeisz, kenn, kirillshevch, konung, lulalala, mediafinger, nilbus, ohler55, olleolleolle, palkan, pat, pboling, pedrozath, philnash, phlegx, pmackay, sacrebleu, sgeorgi, strzibny, tarcieri, tiagoamaro, varyonic, victords, westonganger, zach-capalbo, zoras
+Finally, thank you to all of last month's PR contributors: BookOfGreg, GBH, andyjeffries, brandonweiss, bricesanchez, brodock, btrd, campreb, cedlemo, cyril, dogweather, drgcms, el-feo, emilebosch, eregon, filipewl, florentferry, gzigzigzeo, iridakos, itsderek23, kddeisz, kenn, kirillshevch, konung, lulalala, mediafinger, nilbus, ohler55, olleolleolle, palkan, pat, pboling, pedrozath, philnash, phlegx, pmackay, sacrebleu, sgeorgi, strzibny, tarcieri, tiagoamaro, varyonic, victords, westonganger, zach-capalbo, zoras.
+
+See you next month!
+Christoph
 
 
 ## budget &amp; expenses
