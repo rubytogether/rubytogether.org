@@ -6,16 +6,29 @@ Hello and welcome to the monthly update! During February, our work was supported
 
 ## ruby together news
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 789719cc3f5b56bb5b329b284a5491fbeedf4343
 In February, Ruby Together was supported by 76 different companies, including Sapphire member [Stripe](https://stripe.com). Four companies joined as new members, including [Nebulab](https://nebulab.it/), [weLaika](https://dev.welaika.com/en/), [Kickass Partners](http://kickass.partners).
 
 In addition to those companies, 6 new developers signed up as members or friends of Ruby Together, including Stan Lo. In total, we were supported by 91 individual members and 68 friends of Ruby Together. Thanks to all of our members for making everything that we do possible. &lt;3
 
+<<<<<<< HEAD
 Ruby has been accepted as a project for [Google Summer of Code 2018](https://summerofcode.withgoogle.com/)! Student project applications will open on March 12. Until then, we’re looking for mentors for students who want to work on Ruby open source projects this summer. If you are interested in mentoring a student this summer, [get in touch](mailto:hello@rubytogether.org)!
 
 For more information about what it’s like to be a mentor, Google has written a [mentor guide](https://google.github.io/gsocguides/mentor/).
 
 We would also love contributions to the project ideas list. If you have an open source project or a feature idea that are one-student-summer sized, [add them here](https://github.com/rubygsoc/rubygsoc/wiki/Ideas-List).
+=======
+As we mentioned last month, Ruby Together applied to organize a [Google Summer of Code 2018](https://summerofcode.withgoogle.com/) project for work on any Ruby open source codebase. In February, Google announced projects, and our application was accepted! 🎉
+
+Now that we've been accepted, we're  looking for mentors for students who want to work on Ruby open source projects this summer. For more information about what it’s like to be a mentor, Google has written a [mentor guide](https://google.github.io/gsocguides/mentor/). If you are interested in mentoring a student this summer, [get in touch](mailto:hello@rubytogether.org)!
+
+If you're a student who's interested in applying, student applications will open on March 12. For help getting ready to apply, check out the [GSoC Student Guide](https://google.github.io/gsocguides/student/).
+
+Finally, we would also love contributions to the project ideas list. If you have an open source project or a feature idea that are one-student-summer sized, [add them here](https://github.com/rubygsoc/rubygsoc/wiki/Ideas-List).
+>>>>>>> 789719cc3f5b56bb5b329b284a5491fbeedf4343
 
 ## bundler news
 
@@ -23,6 +36,7 @@ Bundler saw some fixes in February thanks to contributors [@nholden](https://git
 
 This month, Bundler gained 23 new commits, contributed by 8 authors. There were 291 additions and 59 deletions across 50 files.
 
+<<<<<<< HEAD
 
 ## rubygems.org news
 
@@ -37,6 +51,19 @@ RubyGems gained 130 new commits, contributed by 12 authors. There were 755 addit
 ## gemstash news
 
 There were no new changes to Gemstash in February. 
+=======
+## rubygems.org news
+
+In February, we continued to apply security patches and other updates to the servers running RubyGems.org. We also made progress on a new project, collecting metrics from the server logs about what Ruby, RubyGems, and Bundler versions are being actively used. Hopefully we'll have something to show everyone next month!
+
+## rubygems news
+
+RubyGems saw a lot of activity this month, including the release 2.7.5 and 2.7.6 with _tons_ of bug fixes. The version 2.7.6 release contained some [critical security fixes](https://blog.rubygems.org/2018/02/15/2.7.6-released.html), and is a strongy recommended upgrade. Get out there and run `gem update --system` today!
+
+On top of releasing new code, we also managed to [write out the Ruby version support and release policies](https://github.com/rubygems/rubygems/pull/2202), and [draft of a minimally disruptive plan for RubyGems 3 and 4](https://github.com/rubygems/rubygems/pull/2182#issuecomment-364631805).
+
+In total, RubyGems gained 130 new commits, contributed by 12 authors. There were 755 additions and 340 deletions across 50 files.
+>>>>>>> 789719cc3f5b56bb5b329b284a5491fbeedf4343
 
 ## ruby toolbox news
 

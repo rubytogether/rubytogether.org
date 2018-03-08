@@ -4,6 +4,8 @@ RSpec.describe MembershipsController, type: :controller do
   let(:user) { double("User", stripe_id: "c_1", email: "alice@example.com", devise_scope: :user) }
 
   describe "create" do
+    include ActiveSupport::Testing::TimeHelpers
+
     before do
       expect(User).to receive(:where).with(email: "alice@example.com") do
         double(first_or_create!: user)
@@ -22,13 +24,15 @@ RSpec.describe MembershipsController, type: :controller do
     end
 
     it "forwards corporate membership information" do
-      membership = hash_including("contact_name" => "Some One", "expires_at" => 1.month.from_now.iso8601)
-      expect(CreateMembership).to receive(:run).with(membership, user, "abc", "corporate")
+      travel 1.hour do
+        membership = hash_including("contact_name" => "Some One", "expires_at" => 1.month.from_now.iso8601)
+        expect(CreateMembership).to receive(:run).with(membership, user, "abc", "corporate")
 
-      post :create, token: "abc", email: "alice@example.com", kind: "corporate",
-        membership: {contact_name: "Some One"}
+        post :create, token: "abc", email: "alice@example.com", kind: "corporate",
+          membership: {contact_name: "Some One"}
 
-      expect(JSON.parse(response.body)).to include("result" => "success")
+        expect(JSON.parse(response.body)).to include("result" => "success")
+      end
     end
   end
 

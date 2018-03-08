@@ -19,6 +19,16 @@ Dir.chdir APP_ROOT do
     print "postgres"
     system "brew install postgresql" unless system "which psql > /dev/null"
     puts " ✔"
+
+    puts "\n== Adding heroku git remotes =="
+
+    print "staging"
+    system "heroku git:remote -a rubytogether-staging -r staging"
+    puts " ✔"
+
+    print "production"
+    system "heroku git:remote -a rubytogether -r production"
+    puts " ✔"
   end
 
   puts "\n== Preparing database =="
