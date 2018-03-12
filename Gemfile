@@ -5,10 +5,10 @@ gem "rails", "4.2.10"
 
 gem "compass-rails", "~> 3.0"
 gem "devise", '~> 4.4.1'
-gem "fastly-rails", "~> 0.6"
+gem "fastly-rails", "~> 0.8"
 gem "http", "~> 3.0"
 gem "jquery-rails", "~> 4.1"
-gem "lograge", "~> 0.7"
+gem "lograge", "~> 0.9"
 gem "mail", "~> 2.7.0"
 gem "nilify_blanks", "~> 1.3"
 gem "nokogiri", "~> 1.7"
@@ -37,9 +37,9 @@ group :development do
 end
 
 group :development, :test do
-  gem "dotenv-rails", "~> 2.1"
+  gem "dotenv-rails", "~> 2.2"
   gem "pry-byebug", "~> 3.6"
-  gem "rspec-rails", "~> 3.6"
+  gem "rspec-rails", "~> 3.7"
 end
 
 group :production do
