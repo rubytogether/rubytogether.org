@@ -4,11 +4,11 @@ ruby File.read(File.expand_path("../.ruby-version", __FILE__)).chomp
 gem "rails", "4.2.10"
 
 gem "compass-rails", "~> 3.0"
-gem "devise", '~> 4.4.1'
-gem "fastly-rails", "~> 0.6"
+gem "devise", '~> 4.4.3'
+gem "fastly-rails", "~> 0.8"
 gem "http", "~> 3.0"
 gem "jquery-rails", "~> 4.1"
-gem "lograge", "~> 0.7"
+gem "lograge", "~> 0.9"
 gem "mail", "~> 2.7.0"
 gem "nilify_blanks", "~> 1.3"
 gem "nokogiri", "~> 1.7"
@@ -21,7 +21,7 @@ gem "rollbar", "~> 2.15"
 gem "sass-rails", "~> 5.0"
 gem "slack-notifier", "~> 2.3"
 gem "stripe_event", "~> 1.8"
-gem "uglifier", "~> 3.2"
+gem "uglifier", "~> 4.1"
 
 group :development do
   gem "guard-livereload", "~> 2.5", require: false
@@ -37,13 +37,13 @@ group :development do
 end
 
 group :development, :test do
-  gem "dotenv-rails", "~> 2.1"
+  gem "dotenv-rails", "~> 2.2"
   gem "pry-byebug", "~> 3.6"
-  gem "rspec-rails", "~> 3.6"
+  gem "rspec-rails", "~> 3.7"
 end
 
 group :production do
-  gem "postmark-rails", "~> 0.12"
+  gem "postmark-rails", "~> 0.16"
   gem "rails_12factor", "~> 0.0"
   gem "sprockets-redirect", "~> 1.0"
 end
