@@ -8,7 +8,8 @@ MembershipPlan = Struct.new(:id, :shortname, :name, :interval, :amount, :currenc
   end
 
   def self.ids
-    # Postgres enums can't be re-ordered, so we order the plan list here
+    # Postgres enums can't be re-ordered, so we have to keep this
+    # list in the order that the plans were created in.
     [
       :individual,
       :corporate_emerald,
@@ -21,8 +22,16 @@ MembershipPlan = Struct.new(:id, :shortname, :name, :interval, :amount, :currenc
     ]
   end
 
+  def self.sorted_ids
+    personal_ids + company_ids
+  end
+
+  def self.personal_ids
+    [:friend, :individual]
+  end
+
   def self.company_ids
-    featured_ids + nonfeatured_ids
+    nonfeatured_ids + featured_ids
   end
 
   def self.featured_ids
@@ -30,7 +39,7 @@ MembershipPlan = Struct.new(:id, :shortname, :name, :interval, :amount, :currenc
   end
 
   def self.nonfeatured_ids
-    [:corporate_topaz, :corporate_jade, :corporate_onyx]
+    [:corporate_onyx, :corporate_jade, :corporate_topaz]
   end
 
   def self.subscriber_counts
