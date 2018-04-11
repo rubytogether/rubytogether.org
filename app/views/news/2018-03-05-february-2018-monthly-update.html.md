@@ -24,22 +24,6 @@ Bundler saw some fixes in February thanks to contributors [@nholden](https://git
 
 This month, Bundler gained 23 new commits, contributed by 8 authors. There were 291 additions and 59 deletions across 50 files.
 
-<<<<<<< HEAD
-
-## rubygems.org news
-
-There were no changes to RubyGems.org in February.
-
-## rubygems news
-
-RubyGems saw a lot of activity this month, including the release 2.7.5 and 2.7.6 with _tons_ of bug fixes, as well as [finally writing out the Ruby version support and release policies](https://github.com/rubygems/rubygems/pull/2202). There was also the [drafting of a minimally disruptive plan for RubyGems 3 and 4](https://github.com/rubygems/rubygems/pull/2182#issuecomment-364631805).
-
-RubyGems gained 130 new commits, contributed by 12 authors. There were 755 additions and 340 deletions across 50 files.
-
-## gemstash news
-
-There were no new changes to Gemstash in February. 
-=======
 ## rubygems.org news
 
 In February, we continued to apply security patches and other updates to the servers running RubyGems.org. We also made progress on a new project, collecting metrics from the server logs about what Ruby, RubyGems, and Bundler versions are being actively used. Hopefully we'll have something to show everyone next month!
@@ -51,7 +35,6 @@ RubyGems saw a lot of activity this month, including the release 2.7.5 and 2.7.6
 On top of releasing new code, we also managed to [write out the Ruby version support and release policies](https://github.com/rubygems/rubygems/pull/2202), and [draft of a minimally disruptive plan for RubyGems 3 and 4](https://github.com/rubygems/rubygems/pull/2182#issuecomment-364631805).
 
 In total, RubyGems gained 130 new commits, contributed by 12 authors. There were 755 additions and 340 deletions across 50 files.
->>>>>>> 789719cc3f5b56bb5b329b284a5491fbeedf4343
 
 ## ruby toolbox news
 
