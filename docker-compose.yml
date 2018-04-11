@@ -1,0 +1,27 @@
+version: "2"
+services:
+  postgres:
+    image: postgres:10-alpine
+    volumes:
+      - .:/app
+    ports:
+      - "5432:5432"
+  app:
+    build: .
+    command: ./bin/docker/start
+    volumes:
+      - .:/app
+    volumes_from:
+      - cache
+    environment:
+      - WITHIN_DOCKER=1
+      - PGHOST=postgres
+      - PGUSER=postgres
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+  cache:
+    image: busybox
+    volumes:
+      - /cache
