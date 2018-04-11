@@ -4,4 +4,4 @@ bundle check || bundle install --jobs 5
 
 yarn check || yarn install
 
-bundle exec foreman start
+bundle exec rails server -b 0.0.0.0
