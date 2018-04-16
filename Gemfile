@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 ruby File.read(File.expand_path("../.ruby-version", __FILE__)).chomp
 
-gem "rails", "4.2.10"
+gem "rails", "~> 5.0.0"
 
 gem "compass-rails", "~> 3.0"
 gem "devise", '~> 4.4.3'
@@ -28,7 +28,7 @@ group :development do
   gem "guard-rails", "~> 0.8"
   gem "guard-rspec", "~> 4.7"
   gem "letter_opener", "~> 1.6"
-  gem "quiet_assets", "~> 1.1"
+  # gem "quiet_assets", "~> 1.1"
   gem "rack-livereload", "~> 0.3"
   gem "terminal-notifier-guard", "~> 1.7"
   gem "web-console", "~> 3.3"
