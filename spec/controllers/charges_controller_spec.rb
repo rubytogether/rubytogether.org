@@ -6,7 +6,9 @@ RSpec.describe ChargesController, type: :controller do
     it "runs the charge creator" do
       expect(CreateCharge).to receive(:run).with("abc", 1, "alice@example.com")
 
-      post :create, token: "abc", email: "alice@example.com", amount: "1"
+      post :create, params: {
+        token: "abc", email: "alice@example.com", amount: "1"
+      }
 
       expect(JSON.parse(response.body)).to include("result" => "success")
     end
