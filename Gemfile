@@ -28,7 +28,6 @@ group :development do
   gem "guard-rails", "~> 0.8"
   gem "guard-rspec", "~> 4.7"
   gem "letter_opener", "~> 1.6"
-  # gem "quiet_assets", "~> 1.1"
   gem "rack-livereload", "~> 0.3"
   gem "terminal-notifier-guard", "~> 1.7"
   gem "web-console", "~> 3.3"
