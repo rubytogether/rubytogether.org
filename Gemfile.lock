@@ -356,7 +356,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   slack-notifier (~> 2.3)
   sprockets-redirect (~> 1.0)
-  stripe_event (~> 2.1.1)
+  stripe_event (~> 2.1, >= 2.1.1)
   terminal-notifier-guard (~> 1.7)
   uglifier (~> 4.1)
   vcr (~> 4.0)
