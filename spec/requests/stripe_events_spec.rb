@@ -48,7 +48,7 @@ RSpec.describe "Stripe webhooks", type: :request, vcr: true do
       pending "this isn't incrementing correctly"
 
       expect {
-        post "/stripe/events", params:{  id: "evt_18D46XAcWgwn5pBtTNAPj1zx" }
+        post "/stripe/events", params: { id: "evt_18D46XAcWgwn5pBtTNAPj1zx" }
       }.to change(ActionMailer::Base.deliveries, :count).by(1)
 
       expect(ActionMailer::Base.deliveries.last.to).to include(user.email)
