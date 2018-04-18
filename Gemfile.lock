@@ -352,7 +352,7 @@ DEPENDENCIES
   rails_12factor (~> 0.0)
   rdiscount (~> 2.2)
   rollbar (~> 2.15)
-  rspec-rails (~> 3.7)
+  rspec-rails (~> 3.7, >= 3.7.2)
   sass-rails (~> 5.0)
   slack-notifier (~> 2.3)
   sprockets-redirect (~> 1.0)
