@@ -27,6 +27,9 @@ ActiveRecord::Migration.maintain_test_schema!
 # StripeEvent raises an error if this is nil, so ¯\_(ツ)_/¯
 StripeEvent.signing_secret = "blah blah blah"
 
+# ActiveJob doesn't let you test it in tests by default
+ActiveJob::Base.queue_adapter = :test
+
 module StripeEventHelpers
   def post_stripe_event(name)
     # Route around Stripe webhook signature verification
@@ -45,4 +48,5 @@ RSpec.configure do |config|
 
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include StripeEventHelpers, type: :request
+  config.include ActiveJob::TestHelper, type: :request
 end
