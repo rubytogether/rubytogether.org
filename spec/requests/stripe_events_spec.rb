@@ -46,7 +46,9 @@ RSpec.describe "Stripe webhooks", type: :request, vcr: true do
 
     it "runs our hook" do
       expect {
+        perform_enqueued_jobs do
           post_stripe_event "invoice_payment_failed"
+        end
       }.to change(ActionMailer::Base.deliveries, :count).by(1)
 
       expect(ActionMailer::Base.deliveries.last.to).to include(user.email)
