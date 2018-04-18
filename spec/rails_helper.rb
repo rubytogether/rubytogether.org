@@ -27,7 +27,22 @@ ActiveRecord::Migration.maintain_test_schema!
 # StripeEvent raises an error if this is nil, so ¯\_(ツ)_/¯
 StripeEvent.signing_secret = "blah blah blah"
 
+module StripeEventHelpers
+  def post_stripe_event(name)
+    # Route around Stripe webhook signature verification
+    expect(Stripe::Webhook).to receive(:construct_event) do |payload|
+      Stripe::Event.construct_from(JSON.parse(payload, symbolize_names: true))
+    end
+
+    # Post the named event payload as JSON to the webhook endpoint
+    payload = Rails.root.join("spec/fixtures/stripe_events", "#{name}.json").read
+    post "/stripe/events", params: payload, headers: {"CONTENT_TYPE" => "application/json"}
+  end
+end
+
+RSpec.configure do |config|
   config.use_transactional_fixtures = true
 
   config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include StripeEventHelpers, type: :request
 end

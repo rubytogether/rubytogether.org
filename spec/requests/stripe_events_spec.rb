@@ -8,7 +8,7 @@ RSpec.describe "Stripe webhooks", type: :request, vcr: true do
       membership = Membership.create!(user: user, card_last4: "1234")
 
       expect {
-        post "/stripe/events", params: { id: "evt_15nY3HAcWgwn5pBtBmDJZBZq" }
+        post_stripe_event "customer_source_created"
       }.to change { membership.reload.card_last4 }
     end
 
@@ -17,7 +17,7 @@ RSpec.describe "Stripe webhooks", type: :request, vcr: true do
         user = User.create!(stripe_id: "cus_8U1TcYRfvl8VqP", email: "alice@example.com")
 
         expect(Rollbar).to receive(:error).with(ActiveRecord::RecordNotFound)
-        post "/stripe/events", params: { id: "evt_15nY3HAcWgwn5pBtBmDJZBZq" }
+        post_stripe_event "customer_source_created"
         expect(response.status).to eq(200)
       end
     end
@@ -35,7 +35,7 @@ RSpec.describe "Stripe webhooks", type: :request, vcr: true do
 
     it "runs our hook" do
       expect {
-        post "/stripe/events", params: { id: "evt_18LmVXAcWgwn5pBtJT0nT3hc" }
+        post_stripe_event "invoice_payment_succeeded"
       }.to change { membership.reload.expires_at }.from(nil).to be_within(0.1).of(new_period_end)
     end
   end
@@ -45,10 +45,8 @@ RSpec.describe "Stripe webhooks", type: :request, vcr: true do
     let!(:membership) { Membership.create(user: user, card_last4: "0341", name: "Alice") }
 
     it "runs our hook" do
-      pending "this isn't incrementing correctly"
-
       expect {
-        post "/stripe/events", params: { id: "evt_18D46XAcWgwn5pBtTNAPj1zx" }
+          post_stripe_event "invoice_payment_failed"
       }.to change(ActionMailer::Base.deliveries, :count).by(1)
 
       expect(ActionMailer::Base.deliveries.last.to).to include(user.email)
@@ -64,7 +62,7 @@ RSpec.describe "Stripe webhooks", type: :request, vcr: true do
 
   describe "customer.subscription.created" do
     let(:message) {
-      "1 Onyx Member, 0 Emerald Members, 0 Jade Members, 2 Ruby Members, 0 Sapphire Members, 1 Topaz Member, 0 Friend of Ruby Togethers, and 1 Developer Member. Projected revenue now $10,810.00 per month."
+      "1 Onyx Member, 0 Emerald Members, 0 Jade Members, 2 Ruby Members, 0 Sapphire Members, 1 Topaz Member, 0 Friends of Ruby Together, and 1 Developer Member. Projected revenue now $10,810.00 per month."
     }
     let(:membership) { double(Membership) }
     let(:user) { double(User, membership: membership) }
@@ -74,7 +72,7 @@ RSpec.describe "Stripe webhooks", type: :request, vcr: true do
       expect(membership).to receive(:update).with(kind: "individual")
 
       expect(Slack).to receive(:say).with(message, slack_options)
-      post "/stripe/events", params: { id: "evt_15nY3IAcWgwn5pBtisl4M4d6" }
+      post_stripe_event "customer_subscription_created"
     end
   end
 
@@ -84,12 +82,11 @@ RSpec.describe "Stripe webhooks", type: :request, vcr: true do
     }
 
     it "runs our hook" do
-      pending "this isn't pluralizing correctly"
-
       User.create!(stripe_id: "cus_6VvtoGAz7B9hfA", email: "alice@example.com")
       expect(Slack).to receive(:say).with(message, slack_options)
       expect(Slack).to receive(:deactivate).with("alice@example.com")
-      post "/stripe/events", params: { id: "evt_16JFdCAcWgwn5pBtC5eqLlUX" }
+      post_stripe_event "customer_subscription_deleted"
+      expect(response.code).to eq "200"
     end
   end
 
