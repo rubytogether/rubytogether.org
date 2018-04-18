@@ -24,6 +24,8 @@ require 'rspec/rails'
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
 
+# StripeEvent raises an error if this is nil, so ¯\_(ツ)_/¯
+StripeEvent.signing_secret = "blah blah blah"
 
   config.use_transactional_fixtures = true
 

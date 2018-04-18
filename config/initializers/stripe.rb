@@ -1,9 +1,8 @@
 Rails.configuration.x.tap do |c|
   c.stripe_publishable_key = ENV.fetch("STRIPE_PUBLIC_KEY")
-  c.stripe_secret_key = ENV.fetch("STRIPE_SECRET_KEY")
 end
 
-Stripe.api_key = Rails.configuration.x.stripe_secret_key
+Stripe.api_key = ENV.fetch("STRIPE_SECRET_KEY")
 
 # Override Stripe API version to allow testing upgrades
 if ENV.has_key?("STRIPE_API_VERSION")
@@ -13,6 +12,11 @@ end
 # Enable HTTP basic auth if secret is set (for prod but not staging)
 if ENV.has_key?("STRIPE_WEBHOOK_SECRET")
   StripeEvent.authentication_secret = ENV.fetch("STRIPE_WEBHOOK_SECRET")
+end
+
+# Stripe now provides a signing secret for webhooks, hooray
+if ENV.has_key?("STRIPE_SIGNING_SECRET")
+  StripeEvent.signing_secret = ENV['STRIPE_SIGNING_SECRET']
 end
 
 require "membership_plan"
