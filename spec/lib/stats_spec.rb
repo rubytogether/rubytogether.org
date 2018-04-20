@@ -64,8 +64,6 @@ RSpec.describe Stats, :vcr do
 
   context "monthly_revenue_projection" do
     it "is accurate" do
-      pending "this isn't pluralizing correctly"
-
       expect(subject.monthly_revenue_projection).to eq(
         "1 Onyx Member, 0 Emerald Members, 0 Jade Members, 2 Ruby Members, 0 Sapphire Members, 1 Topaz Member, 0 Friends of Ruby Together, and 1 Developer Member. Projected revenue now $10,810.00 per month."
       )
