@@ -32,8 +32,6 @@ RSpec.describe Stats, :vcr do
 
   context "since" do
     it "is accurate" do
-      pending "no implicit conversion of Symbol into Integer"
-
       response = subject.since(4.weeks.ago)
       expect(response).to be_present
       expect(response).to include("1 new person") # $40/month

@@ -26,7 +26,7 @@ class Stats
     message << "\n"
 
     counts = Membership.active.group(:kind).count.map do |id,c|
-      [MembershipPlan.all[MembershipPlan.ids[id.to_sym]], c]
+      [MembershipPlan.all[id.to_sym], c]
     end.to_h
     corp, dev = counts.partition{|s,c| s.id.start_with?("corporate") }
     message << "#{corp.map(&:last).inject(:+)} #{"company".pluralize(companies.count)} ("
