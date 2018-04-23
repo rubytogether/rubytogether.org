@@ -158,7 +158,7 @@ GEM
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
-    multi_json (1.12.2)
+    multi_json (1.13.1)
     multipart-post (2.0.0)
     nenv (0.3.0)
     nilify_blanks (1.3.0)
@@ -240,7 +240,7 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
-    rollbar (2.15.5)
+    rollbar (2.15.6)
       multi_json
     rspec (3.7.0)
       rspec-core (~> 3.7.0)
