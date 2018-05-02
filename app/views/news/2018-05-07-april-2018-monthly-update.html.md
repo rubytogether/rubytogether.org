@@ -21,7 +21,7 @@ At RailsConf we also distributed stickers and copies of our latest project, a co
 
 ### community feedback
 
-In post-RailsConf news, the board met with Ruby developer Sam Phippen to discuss his concerns about Ruby Together's governance model. As a result of that conversation, we held a board meeting and created a new forum for communication between the community and the board. [We shared the results of the meeting](https://rubytogether.org/news/2018-04-25-april-22-board-meeting-results), and we expect to continue addressing community concerns in future work.
+In post-RailsConf news, the board met with Ruby developer Sam Phippen to discuss his concerns about Ruby Together's governance model. As a result of that conversation, we held a board meeting and created a new forum for communication between the community and the board. [We published the results of the meeting](https://rubytogether.org/news/2018-04-25-april-22-board-meeting-results), and we expect to continue addressing community concerns in future work.
 
 If you have feedback for the board, or concerns that you'd like to share open an issue in the Ruby Together [Board GitHub repo](https://github.com/rubytogether/board) or send us an email at [feedback@rubytogether.org](mailto:feedback@rubytogether.org). (And feel free take a look at our [frequently asked questions](https://rubytogether.org/companies#faq) to learn more about how we work.)
 
