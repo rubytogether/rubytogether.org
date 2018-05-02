@@ -11,13 +11,19 @@ In April, Ruby Together was supported by 80 different companies, including Sapph
 
 On top of those companies, 6 new developers signed up as members or friends of Ruby Together, including Tom Johnson, Pat Allan, Jameson Hampton, and Jeremy Flores. In total, we were supported by 92 individual members and 71 friends of Ruby Together. Thanks to all of our members for making everything that we do possible. &lt;3
 
-The board met with Ruby developer Sam Phippen to discuss his concerns about Ruby Together’s governance model. As a result of our conversation, we held a board meeting and created a new forum for communication between the community and the board. [We shared the results of the meeting](https://rubytogether.org/news/2018-04-25-april-22-board-meeting-results), and we expect to continue addressing community concerns in future work. If you have feedback for the board, or concerns that you’d like to share [open an issue in the Ruby Together [Board GitHub repo](https://github.com/rubytogether/board) or send us an email at [feedback@rubytogether.org](mailto:feedback@rubytogether.org). (And feel free take a look at our [frequently asked questions](https://rubytogether.org/companies#faq) to learn more about how we work.)
-
 [Luis Sagastume](https://github.com/bronzdoc), a longtime contributor to RubyGems, agreed to start helping us maintain RubyGems and Gemstash. He will continue working with the existing RubyGems and Gemstash teams, fixing bugs and adding features. Welcome to Ruby Together, Luis!
 
-Board members André, Coraline, Adarsh, and Valerie attended RailsConf 2018. Coraline gave a talk on “Scaling the Software Artisan” and André gave a talk titled “Pairing: a guide to fruitful collaboration :strawberry::peach::pear:“. Adarsh and Valerie arranged a scheduled session for in-person community feedback, and brought that feedback back to the board.
+### railsconf
 
-At RailsConf we also distributed stickers and copies of our latest project, a collaboration with bubblesort.io titled [“The Evolution of Bundler”](https://twitter.com/sailorhg/status/984232596870606848?s=12). Coming soon, members will be able to download a PDF of the zine for free, and anyone will be able to purchase a copy of the zine from the Ruby Together store. Stay tuned!
+Board members André, Coraline, Adarsh, and Valerie attended RailsConf 2018. Coraline gave a talk on "Scaling the Software Artisan" and André gave a talk titled "Pairing: a guide to fruitful collaboration 🍓🍑🍐". Adarsh and Valerie arranged a scheduled session for in-person community feedback, and brought that feedback back to the board.
+
+At RailsConf we also distributed stickers and copies of our latest project, a collaboration with bubblesort.io titled ["The Evolution of Bundler"](https://twitter.com/sailorhg/status/984232596870606848?s=12). Coming soon, members will be able to download a PDF of the zine for free, and anyone will be able to purchase a copy of the zine from the Ruby Together store. Stay tuned!
+
+### community feedback
+
+In post-RailsConf news, the board met with Ruby developer Sam Phippen to discuss his concerns about Ruby Together's governance model. As a result of that conversation, we held a board meeting and created a new forum for communication between the community and the board. [We shared the results of the meeting](https://rubytogether.org/news/2018-04-25-april-22-board-meeting-results), and we expect to continue addressing community concerns in future work.
+
+If you have feedback for the board, or concerns that you'd like to share open an issue in the Ruby Together [Board GitHub repo](https://github.com/rubytogether/board) or send us an email at [feedback@rubytogether.org](mailto:feedback@rubytogether.org). (And feel free take a look at our [frequently asked questions](https://rubytogether.org/companies#faq) to learn more about how we work.)
 
 ## bundler news
 
