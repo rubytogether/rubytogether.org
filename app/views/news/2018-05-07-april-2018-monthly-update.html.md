@@ -29,8 +29,6 @@ This month, RubyGems.org saw some minor site fixes. It gained 11 new commits, co
 
 ## rubygems news
 
-SUMMARIZE [RUBYGEMS CHANGES](https://github.com/rubygems/rubygems/compare/master@%7B2018-03-01%7D...master@%7B2018-04-01%7D)
-
 This month, RubyGems gained 17 new commits, contributed by 7 authors. There were 148 additions and 163 deletions across 28 files.
 
 ## gemstash news
