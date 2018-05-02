@@ -11,7 +11,11 @@ In April, Ruby Together was supported by 80 different companies, including Sapph
 
 On top of those companies, 6 new developers signed up as members or friends of Ruby Together, including Tom Johnson, Pat Allan, Jameson Hampton, and Jeremy Flores. In total, we were supported by 92 individual members and 71 friends of Ruby Together. Thanks to all of our members for making everything that we do possible. &lt;3
 
+### new devs
+
 [Luis Sagastume](https://github.com/bronzdoc), a longtime contributor to RubyGems, agreed to start helping us maintain RubyGems and Gemstash. He will continue working with the existing RubyGems and Gemstash teams, fixing bugs and adding features. Welcome to Ruby Together, Luis!
+
+[Aditya Prakash](https://github.com/sonalkr132), a longtime contributor to RubyGems.org, has joined us to work on RubyGems.org. We're excited to have him on board, and looking forward to his help keeping the servers running efficiently and securely.
 
 ### railsconf
 
