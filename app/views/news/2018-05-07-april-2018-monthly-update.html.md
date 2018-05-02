@@ -7,6 +7,8 @@ Hello! Welcome to the monthly update. During April, we paid for 133.5 hours of d
 
 ## ruby together news
 
+It's our birthday! 🎉🎂 As of this update, Ruby Together is officially 3 years old. We made it! Thanks for all of your help and support along the way.
+
 In April, Ruby Together was supported by 80 different companies, including Sapphire member [Stripe](https://stripe.com). 6 companies joined as new members, including [Piece of Code](http://www.pieceofcode.com) and [Coinbase](https://www.coinbase.com).
 
 On top of those companies, 6 new developers signed up as members or friends of Ruby Together, including Tom Johnson, Pat Allan, Jameson Hampton, and Jeremy Flores. In total, we were supported by 92 individual members and 71 friends of Ruby Together. Thanks to all of our members for making everything that we do possible. &lt;3
