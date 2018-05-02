@@ -25,15 +25,15 @@ This month, we fixed various bugs, worked towards releasing 1.16.2 with more bug
 
 ## rubygems.org news
 
-This month, RubyGems.org saw some minor site fixes. It gained 11 new commits, contributed by 4 authors. There were 62 additions and 54 deletions across 26 files.
+This month, RubyGems.org saw some minor site fixes, as well as ongoing server maintenance and security patches. The app gained 11 new commits, contributed by 4 authors. There were 62 additions and 54 deletions across 26 files.
 
 ## rubygems news
 
-This month, RubyGems gained 17 new commits, contributed by 7 authors. There were 148 additions and 163 deletions across 28 files.
+RubyGems saw improved error messages, fixes for several issues related to file permissions, encoding, and other minor issues. We also continued to implement the previously planned work for the long-term transision to RubyGems 3 before the end of the year. This month, RubyGems gained 17 new commits, contributed by 7 authors. There were 148 additions and 163 deletions across 28 files.
 
 ## gemstash news
 
-We made a few minor updates to Gemstash in April. Gemstash gained 8 new commits, contributed by 3 authors. There were 12 additions and 9 deletions across 3 files.
+We made a few minor updates to Gemstash in April, and picked back up work to add support for storing private gems in AWS S3, as well as starting work to provide the new compact index used by Bundler for faster gem installation. Gemstash gained 8 new commits, contributed by 3 authors. There were 12 additions and 9 deletions across 3 files.
 
 ## ruby toolbox news
 
