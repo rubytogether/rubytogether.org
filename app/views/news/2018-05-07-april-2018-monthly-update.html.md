@@ -1,8 +1,8 @@
 ---
-summary: In April, we paid for 97 hours of developer work, held a board meeting, and created a new feedback forum for Ruby Together.
+summary: In April, we paid for 133.5 hours of developer work, held a board meeting, and created a new feedback forum for Ruby Together.
 ---
 
-Hello! Welcome to the monthly update. During April, our work was supported by [Stripe](https://stripe.com), [Coinbase](https://coinbase.com), [reinteractive](https://reinteractive.com/), [Airbnb](http://airbnb.com), and many others.
+Hello! Welcome to the monthly update. During April, we paid for 133.5 hours of developer work, supported by [Stripe](https://stripe.com), [Coinbase](https://coinbase.com), [reinteractive](https://reinteractive.com/), [Airbnb](http://airbnb.com), and many others.
 
 
 ## ruby together news
@@ -50,17 +50,18 @@ Christoph
 
 ## budget &amp; expenses
 
-In April, we saw $18,145.00 in total income, and spent a total of $19,164.73.
+In April, we saw $18,145.00 in total income, and spent a total of $28,511.19.
 
-* $6,558 for 43.7 hours worked on Bundler at $150/hour
-* $4,058 for 27.1 hours worked on RubyGems.org at $150/hour
-* $1,080 for 7.2 hours worked on RubyGems at $150/hour
-* $2,918 for 19.5 hours worked on other OSS and dev tools at $150/hour
+* $6,557.50 for 43.7 hours worked on Bundler at $150/hour
+* $1,080 for 7.2 hours worked on RubyGems.org at $150/hour
+* $6,206.25 for 41.4 hours worked on RubyGems at $150/hour
+* $3,633.75 for 24.2 hours worked on other OSS and devtools at $150/hour
+* $2,550 for 17.0 hours worked on The Ruby Toolbox at $150/hour
 * $83.66 on dedicated servers for RubyBench.org
-* $551.5 on payment processing fees
-* $2,083.23 on company overhead like hosting, services, software, hardware, taxes, etc
-* $1,275 on accounting, copywriting, design, and other professional services
+* $551.50 on payment processing fees
+* $5,919.69 on company overhead like hosting, services, software, hardware, taxes, etc
+* $1,370 on accounting, copywriting, design, and other professional services
 * $558.84 on marketing, evangelism, and community outreach
 
 Until next time,<br>
-The Ruby Together Team
+Stephanie, André, and the Ruby Together Team
