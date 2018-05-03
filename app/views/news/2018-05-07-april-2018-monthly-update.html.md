@@ -19,6 +19,10 @@ On top of those companies, 6 new developers signed up as members or friends of R
 
 [Aditya Prakash](https://github.com/sonalkr132), a longtime contributor to RubyGems.org, has joined us to work on RubyGems.org. We're excited to have him on board, and looking forward to his help keeping the servers running efficiently and securely.
 
+### google summer of code
+
+As we mentioned last month, Google accepted our application to bring back the Ruby umbrella organization for Summer of Code projects improving not just implementations of Ruby, but any Ruby open source project. Our efforts were more successful than we expected, and more than 50 students submitted project applications! We were able to accept six of those students. We are very excited to be hosting Shlok Srivastava, Qio Chaofan, Nicholas Yang, Yimin Zhao, Agrim Mittal, and Yogesh Kataria this summer, as they work on RubyGems, MRI, Bundler, and RDoc. Check back for progress updates next month!
+
 ### railsconf
 
 Board members André, Coraline, Adarsh, and Valerie attended RailsConf 2018. Coraline gave a talk on "Scaling the Software Artisan" and André gave a talk titled "Pairing: a guide to fruitful collaboration 🍓🍑🍐". Adarsh and Valerie arranged a scheduled session for in-person community feedback, and brought that feedback back to the board.
