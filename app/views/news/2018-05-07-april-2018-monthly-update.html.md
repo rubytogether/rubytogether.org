@@ -7,7 +7,7 @@ Hello! Welcome to the monthly update. During April, we paid for 133.5 hours of d
 
 ## ruby together news
 
-It's our birthday! 🎉🎂 As of this update, Ruby Together is officially 3 years old. We made it! Thanks for all of your help and support along the way.
+It's our birthday! 🎉🎂 As of this update, Ruby Together is officially 3 years old. Thanks for all of your help and support along the way.
 
 In April, Ruby Together was supported by 80 different companies, including Sapphire member [Stripe](https://stripe.com). 6 companies joined as new members, including [Piece of Code](http://www.pieceofcode.com) and [Coinbase](https://www.coinbase.com).
 
@@ -49,7 +49,7 @@ RubyGems saw improved error messages, fixes for several issues related to file p
 
 ## gemstash news
 
-We made a few minor updates to Gemstash in April, and picked back up work to add support for storing private gems in AWS S3, as well as starting work to provide the new compact index used by Bundler for faster gem installation. Gemstash gained 8 new commits, contributed by 3 authors. There were 12 additions and 9 deletions across 3 files.
+We made a few minor updates to Gemstash in April, picked back up work to add support for storing private gems in AWS S3, and started work to provide the new compact index used by Bundler for faster gem installation. Gemstash gained 8 new commits, contributed by 3 authors. There were 12 additions and 9 deletions across 3 files.
 
 ## ruby toolbox news
 
