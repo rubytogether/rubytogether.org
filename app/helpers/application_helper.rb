@@ -35,6 +35,10 @@ module ApplicationHelper
     content_tag :a, "RubyBench.org", href: "http://rubybench.org"
   end
 
+  def gemstash
+    content_tag :a, "Gemstash", href: "http://github.com/bundler/gemstash"
+  end
+
   def stripe_meta_tag
     tag :meta, name: "stripe-token",
       content: Rails.configuration.x.stripe_publishable_key
