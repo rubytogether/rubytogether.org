@@ -38,9 +38,8 @@ class MembershipsController < ApplicationController
 
   def destroy
     customer = Stripe::Customer.retrieve(current_user.stripe_id)
-    subscription = customer.subscriptions.all.first
-    subscription.delete if subscription
     current_user.membership.update expires_at: Time.now
+    customer.subscriptions.each(&:delete)
     redirect_to membership_path
   end
 
