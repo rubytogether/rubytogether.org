@@ -38,12 +38,16 @@ jQuery(function($) {
     };
 
     var recordConversion = function(type, value) {
-      ga('send', 'event', {
-        eventCategory: "Purchase",
-        eventAction: "new",
-        eventLabel: type,
-        eventValue: value
-      });
+      try {
+        ga('send', 'event', {
+          eventCategory: "Purchase",
+          eventAction: "new",
+          eventLabel: type,
+          eventValue: value
+        });
+      } catch(e) {
+        console.error(e);
+      }
     };
 
     var sendToken = function(el) {
