@@ -31,6 +31,7 @@ group :development do
   gem "quiet_assets", "~> 1.1"
   gem "rack-livereload", "~> 0.3"
   gem "terminal-notifier-guard", "~> 1.7"
+  gem "terminal-notifier", "~> 2.0"
   gem "web-console", "~> 3.3"
   gem "wicked_pdf", "~> 1.1"
   gem "wkhtmltopdf-binary", "~> 0.12.3"
