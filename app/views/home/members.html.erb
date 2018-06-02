@@ -4,7 +4,7 @@
   <% @featured_levels.each do |name, companies| %>
     <h3><%= name.capitalize %> Members</h3>
     <% companies.each do |name, url, desc| %>
-      <h4 class="company-name"><%= link_to_if url.present?, name, url %></h3>
+      <h4 class="company-name"><%= link_to_if url.present?, name, url %></h4>
       <p class="company-description"><%= desc %></p>
     <% end %>
   <% end %>
