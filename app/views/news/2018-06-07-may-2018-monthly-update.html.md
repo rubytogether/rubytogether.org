@@ -8,13 +8,15 @@ Hello! Welcome to the monthly update. During May, our work was supported by [Git
 
 In May, Ruby Together was supported by 77 different companies, including Sapphire member [Stripe](https://stripe.com). [Murb](https://murb.nl/) and [StackPath](https://www.stackpath.com/) joined as Onyx members, and developer Gregory Brown (@practicingdev) became a member. 
 
-In total, we were supported by 86 individual members and 68 friends of Ruby Together. Thanks to all of our members for making everything that we do possible.
+We were supported by a total of 86 individual members and 68 friends of Ruby Together. Thanks to all of our members for making everything that we do possible.
 
-Our developer evangelist [PJ Hagerty](http://twitter.com/aspleenic) spoke at MalmoRB and Ruby Ireland, and visited CopenhagenRB among other Meetups. 
+In community events news, our developer evangelist [PJ Hagerty](http://twitter.com/aspleenic) spoke at MalmoRB and Ruby Ireland, and visited CopenhagenRB among other Meetups.
 
 ## bundler news
 
-In May, Bundler gained 9 new commits, contributed by 3 authors, including the [new `--skip-install` flag](https://github.com/bundler/bundler/commit/9e87a1ca4b0c3002ac2774e4837234cef7e3ce08) to `bundler add` which adds a gem to the Gemfile without installing it. There were 66 additions and 48 deletions across 17 files.
+In May, Bundler saw a few bug fixes, the addition of a [new `--skip-install` flag](https://github.com/bundler/bundler/commit/9e87a1ca4b0c3002ac2774e4837234cef7e3ce08) to `bundler add`, and a [new guide on writing Bundler plugins](https://bundler.io/v1.16/guides/bundler_plugins.html). (Thank you [@jules2689](https://github.com/jules2689) for producing this guide!)
+
+Bundler gained 9 new commits, contributed by 3 authors. There were 66 additions and 48 deletions across 17 files.
 
 ## rubygems.org news
 
