@@ -1,5 +1,5 @@
 ---
-summary: In May, we paid for 73 hours of developer work, prototyped new metrics rankings for Ruby Toolbox, and added a new flag to a Bundler command.
+summary: In May, we paid for 73 hours of developer work, prototyped new metrics rankings for Ruby Toolbox, and continued work on Google Summer of Code projects.
 ---
 
 Hello! Welcome to the monthly update. During May, our work was supported by [GitLab](https://about.gitlab.com/), [Stitch Fix](http://multithreaded.stitchfix.com/), and many others.
@@ -12,21 +12,23 @@ We were supported by a total of 86 individual members and 68 friends of Ruby Tog
 
 In community events news, our developer evangelist [PJ Hagerty](http://twitter.com/aspleenic) spoke at MalmoRB and Ruby Ireland, and visited CopenhagenRB among other Meetups.
 
+Meanwhile, the Ruby Google Summer of Code projects made progress on a new `bundle remove` command, created mockups for adding two-factor authentication to RubyGems.org, and continued to implement gem security avidsories.
+
 ## bundler news
 
-In May, Bundler saw a few bug fixes, the addition of a [new `--skip-install` flag](https://github.com/bundler/bundler/commit/9e87a1ca4b0c3002ac2774e4837234cef7e3ce08) to `bundler add`, and a [new guide on writing Bundler plugins](https://bundler.io/v1.16/guides/bundler_plugins.html). (Thank you [@jules2689](https://github.com/jules2689) for producing this guide!)
+In May, Bundler saw a few bug fixes, a [new `--skip-install` flag](https://github.com/bundler/bundler/commit/9e87a1ca4b0c3002ac2774e4837234cef7e3ce08) for `bundler add`, and a [new guide on writing Bundler plugins](https://bundler.io/v1.16/guides/bundler_plugins.html). (Thank you [@jules2689](https://github.com/jules2689) for producing this guide!)
 
 Bundler gained 9 new commits, contributed by 3 authors. There were 66 additions and 48 deletions across 17 files.
 
 ## rubygems.org news
 
-[Some significant changes in May.] In addition, we [revised the site footer](https://github.com/rubygems/rubygems.org/commit/8de0296d1222e9819ca3a70f678baca0484b99b1) to better clarify how Ruby Central, Ruby Together, and Fastly partnered on RubyGems.org.
+RubyGems.org saw 17 gem updates, and performance improvements for the search page. In addition, we [revised the site footer](https://github.com/rubygems/rubygems.org/commit/8de0296d1222e9819ca3a70f678baca0484b99b1) to better clarify how Ruby Central, Ruby Together, and Fastly work together on RubyGems.org.
 
 This month, RubyGems.org gained 27 new commits, contributed by 7 authors. There were 218 additions and 215 deletions across 13 files. 
 
 ## rubygems news
 
-This month, RubyGems gained 25 new commits, contributed by 4 authors. There were 132 additions and 80 deletions across 21 files.
+This month, RubyGems saw several bugfixes, support for reproducible gem builds, and a new command alias `i` for `install`, as well as prep for a prerelease of version 3. It gained 25 new commits, contributed by 4 authors. There were 132 additions and 80 deletions across 21 files.
 
 ## gemstash news
 
@@ -60,7 +62,6 @@ In May, we saw $15,950 in total income, and spent a total of $22,141.79.
 * $3,008.58 on company overhead like hosting, services, software, hardware, taxes, etc
 * $6,382.50 on accounting, copywriting, design, and other professional services
 * $1,127.31 on marketing, evangelism, and community outreach
-
 
 Until next time,<br>
 Stephanie, André and the Ruby Together team
