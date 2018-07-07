@@ -10,13 +10,11 @@ In June, Ruby Together was supported by 74 different companies. Two new develope
 
 Developer evangelist [PJ Hagerty](http://twitter.com/aspleenic) visited a number of conferences and meetups in June, including BostonRB, Texas Linux Fest, and RubyConf Kenya. 
 
-We also published the results from the [May 15 board meeting](https://github.com/rubytogether/board/blob/master/meetings/2018-05-15-board-meeting-results.md). The last board meeting took place on June 27. Those meeting minutes will be published soon in the Board repo.
-
-Last month, our Google Summer of Code (GSoC) students finished work on `bundle remove` and are currently working on an implementation of `bundle change`.
+We also published the results from the [June 23 board meeting](https://github.com/rubytogether/board/blob/master/meetings/2018-06-23.md).
 
 ## bundler news
 
-Last month, we fixed some bugs and finished work on the `bundle remove` feature. We also created the [checklist for the Bundler 2 release](https://github.com/bundler/bundler/issues/6582).
+Last month, we fixed some bugs and our Google Summer of Code (GSoC) students finished work on the `bundle remove` feature. We also created the [checklist for the Bundler 2 release](https://github.com/bundler/bundler/issues/6582).
 
 This month, Bundler gained 63 new commits, contributed by 12 authors. There were 738 additions and 102 deletions across 48 files.
 
