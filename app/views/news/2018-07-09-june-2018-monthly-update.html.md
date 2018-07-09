@@ -22,7 +22,7 @@ This month, Bundler gained 63 new commits, contributed by 12 authors. There were
 
 ## rubygems.org news
 
-In June, we updated over 25 dependencies, including nokogiri and the sprockets security release, and updated to Rails 5.1. We also fixed the race condition in Pusher which caused a mismatch in gem-checksum on parallel gem push. On June 27, we deprecated the “gem edit” page and it will be removed altogether on July 10. 
+In June, we updated over 25 dependencies, including nokogiri and the sprockets security release, and updated to Rails 5.1. We also fixed a longstanding and frustrating issue where multiple CI builds pushing a new gem version at the same time could result in a checksum error when trying to install the new version.  On June 27, we deprecated the “gem edit” page and it will be removed altogether on July 10. 
 
 Instead of editing gem metadata at rubygems.org, we recommend using the gem specification itself. Use `Gem::Specification#metadata` to setting links to a gem’s homepage, changelog, documentation, and other websites. This will help us reduce the complexity of rubygems.org by making `Gem::Specification#metadata` the single source of truth and it will also allow gem owners to set different URLs by version.
 
