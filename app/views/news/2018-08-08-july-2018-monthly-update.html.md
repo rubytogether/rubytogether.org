@@ -16,7 +16,7 @@ In community news, Developer Evangelist [PJ Hagerty](https://twitter.com/aspleen
 
 Last month, we released Bundler 1.16.3. The new release includes improvements such as [FEATURES], and fixes several bugs including [BUGS]. Since we announced the new RFC process last month, we’ve seen a few request for comments come into the [Bundler RFC repo](https://github.com/bundler/rfcs/pulls).
 
-In other exciting news, we added a new contributor to the core team. Welcome [HANDLE] to Bundler! :tada:
+In other exciting news, we added a new contributor to the core team. Welcome [Deivid Rodriguez](https://github.com/deivid-rodriguez) to Bundler! :tada:
 
 This month, Bundler gained 63 new commits, contributed by 8 authors. There were 1,442
 additions and 72 deletions across 33 files.
