@@ -8,9 +8,9 @@ Hello! Welcome to the monthly update. During July, our work was supported by [Co
 
 In July, Ruby Together was supported by 74 different companies, including Sapphire member [Stripe](https://stripe.com). In total, we were supported by 79 individual members and 66 friends of Ruby Together. Thanks to all of our members for making everything that we do possible!
 
-The Ruby Together Board of Directors met to finalize and ratified a plan to start a new Ruby open source mentorship program called RubyMe—stay tuned for future updates about the program!
+The Ruby Together Board of Directors met to finalize and ratify a plan for a new Ruby open source mentorship program called RubyMe—stay tuned for future updates about the program!
 
-In community news, Developer Evangelist [PJ Hagerty](https://twitter.com/aspleenic) continued to spread the word about Ruby Together at RubyConf Kenya. Our Google Summer of Code (GSoC) students made progress on the `bundle change` feature, and they also worked on a comment that rewrites a Gemfile into a canonical form. Additionally, [Kerri Miller](https://twitter.com/kerrizor) addressed outstanding issues in the RubyGems and RubyGems.org support queues. 
+In community news, Developer Evangelist [PJ Hagerty](https://twitter.com/aspleenic) continued to spread the word about Ruby Together at RubyConf Kenya. Our Google Summer of Code (GSoC) students made progress on the `bundle change` feature, and they also worked on a comment that rewrites a Gemfile into a canonical form. And [Kerri Miller](https://twitter.com/kerrizor) addressed outstanding issues in the RubyGems and RubyGems.org support queues. 
 
 ## bundler news
 
@@ -39,7 +39,7 @@ Hey everyone,
 
 Last month I did some maintenance work by [upgrading to Rails 5.2](https://github.com/rubytoolbox/rubytoolbox/pull/214) and addressing some common issues found when [syncing data from GitHub](https://github.com/rubytoolbox/rubytoolbox/pull/246).
 
-In order to reduce errors stemming from fetching old projects multiple times, I added logic to ignore old GitHub references from gems for 14 days (to allow us to unblock them if they reappear). This currently affects approximately 11,000 projects (note that renaming owners and moved ownership should redirect properly to the new location). In the future, it might make sense to indicate this in the UI for said projects somehow since those libraries seem to be unmaintained, but we'll see!
+In order to reduce errors stemming from fetching old projects multiple times, I added logic to ignore old GitHub references from gems for 14 days to allow us to unblock them if they reappear. Currently, this affects approximately 11,000 projects (note that renaming owners and moved ownership should redirect properly to the new location). In the future, it might make sense to indicate this in the UI for said projects somehow since these libraries seem to be unmaintained, but we'll see!
 
 I also began work on the public database dumps I mentioned last month. They are not quite ready yet, but I expect to ship them in the next few weeks, allowing you to also look at the mentioned gone repo numbers yourself in more detail.
 
