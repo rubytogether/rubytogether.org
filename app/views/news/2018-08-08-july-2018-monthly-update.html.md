@@ -1,5 +1,5 @@
 ---
-summary: In July, we paid for 90 hours of developer work, released Bundler 1.16.3, and shipped the alpha release of two-factor authentication for RubyGems.org.
+summary: In July, we paid for 90 hours of developer work, released Bundler 1.16.3, and started testing an alpha release of two-factor authentication for RubyGems.org.
 ---
 
 Hello! Welcome to the monthly update. During July, our work was supported by [Coinbase](https://coinbase.com), [Cloud City Development](http://www.cloudcity.io), [reinteractive](https://reinteractive.com/), and many others.
@@ -8,28 +8,31 @@ Hello! Welcome to the monthly update. During July, our work was supported by [Co
 
 In July, Ruby Together was supported by 74 different companies, including Sapphire member [Stripe](https://stripe.com). In total, we were supported by 79 individual members and 66 friends of Ruby Together. Thanks to all of our members for making everything that we do possible!
 
-The Ruby Together Board of Directors met to finalize and ratify a plan for a new Ruby open source mentorship program called RubyMe—stay tuned for future updates about the program!
+The Ruby Together Board of Directors met, and was able to finalize and ratify a plan for a new Ruby open source mentorship program called RubyMe--stay tuned for an official announcement with more details!
 
-In community news, Developer Evangelist [PJ Hagerty](https://twitter.com/aspleenic) continued to spread the word about Ruby Together at RubyConf Kenya. Our Google Summer of Code (GSoC) students made progress on the `bundle change` feature, and they also worked on a comment that rewrites a Gemfile into a canonical form. And [Kerri Miller](https://twitter.com/kerrizor) addressed outstanding issues in the RubyGems and RubyGems.org support queues. 
+In community news, Developer Evangelist [PJ Hagerty](https://twitter.com/aspleenic) continued to spread the word about Ruby Together at RubyConf Kenya. Our Google Summer of Code (GSoC) students made progress on the `bundle change` feature, and they also worked on a comment that rewrites a Gemfile into a canonical form. And [Kerri Miller](https://twitter.com/kerrizor) addressed outstanding issues in the RubyGems and RubyGems.org support queues.
 
 ## bundler news
 
-Last month, we released Bundler 1.16.3. The new release includes improvements such as [FEATURES], and fixes several bugs including [BUGS]. Since we announced the new RFC process last month, we’ve seen a few request for comments come into the [Bundler RFC repo](https://github.com/bundler/rfcs/pulls).
+We released Bundler 1.16.3 on July 17. The new release includes support for the upcoming Ruby 2.6, and fixes several bugs including symlink handling, temporary file handling, and improving error messages around filesystem access and installation errors.
 
-In other exciting news, we added a new contributor to the core team. Welcome [Deivid Rodriguez](https://github.com/deivid-rodriguez) to Bundler! :tada:
+Since we announced the new RFC process last month, we’ve seen new comments and new proposals in the [Bundler RFC repo](https://github.com/bundler/rfcs/pulls). Keep the comments and suggestions coming! If you're interested in ideas for the future of Bundler, definitely take a look.
 
-This month, Bundler gained 63 new commits, contributed by 8 authors. There were 1,442
-additions and 72 deletions across 33 files.
+In other exciting news, we added a new contributor to the core team. Welcome [David Rodríguez](https://github.com/deivid-rodriguez) to Bundler! :tada: Probably best known for his work on the `byebug` debugger gem, David was the driver behind updating gem templates to check in lockfiles, as well as work around ensuring that Bundler 2 will work on existing applications when it is released.
+
+This month, Bundler gained 63 new commits, contributed by 8 authors. There were 1,442 additions and 72 deletions across 33 files.
 
 ## rubygems.org news
 
-In July, we updated 15 dependencies in RubyGems.org, and we released the alpha version of [two-factor authentication](https://github.com/rubygems/rubygems.org/pull/1729) for logging into the website. If you’d like to try it now, enable it by running `document.cookie='mfa_feature=true;path=/'` in your browser console. We’re working on an implementation of the same for the CLI and you should see more updates on it in the coming month.
+In July, we updated 15 dependencies in RubyGems.org, and we released the alpha version of [two-factor authentication](https://github.com/rubygems/rubygems.org/pull/1729) for logging into the website. If you’d like to try it now, enable it by running `document.cookie='mfa_feature=true;path=/'` in your browser console. We’re working on adding support for multiple factors to the CLI as well, and you should see more updates on it next month.
+
+We also fixed a few small bugs around the dashboard and atom feeds for users who are logged out.
 
 This month, RubyGems.org gained 38 commits from 4 authors, making 1,124 additions and 183 deletions across 84 files.
 
 ## rubygems news
 
-[NEED SPECIFIC THINGS TO CALL OUT HERE] 
+RubyGems saw better symlink handling, some improved warning messages, and better testing on windows. We also made the flags for the `pristine` and `cleanup` commands more consistent with the existing `install` command, and did some code cleanup. Finally, we imported some fixes from ruby-core to make sure RubyGems continues to work when OpenSSL is not available in Ruby.
 
 This month, RubyGems gained 70 new commits, contributed by 9 authors. There were 429 additions and 186 deletions across 41 files.
 
