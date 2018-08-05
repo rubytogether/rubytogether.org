@@ -16,7 +16,7 @@ In community news, Developer Evangelist [PJ Hagerty](https://twitter.com/aspleen
 
 We released Bundler 1.16.3 on July 17. The new release includes support for the upcoming Ruby 2.6, and fixes several bugs including symlink handling, temporary file handling, and improving error messages around filesystem access and installation errors.
 
-Since we announced the new RFC process last month, we’ve seen new comments and new proposals in the [Bundler RFC repo](https://github.com/bundler/rfcs/pulls). Keep the comments and suggestions coming! If you're interested in ideas for the future of Bundler, definitely take a look.
+Since we announced the new RFC process last month, we’ve seen new comments and new proposals in the [Bundler RFC repo](https://github.com/bundler/rfcs/pulls). If you're interested in ideas for the future of Bundler, definitely take a look. Keep the comments and suggestions coming!
 
 In other exciting news, we added a new contributor to the core team. Welcome [David Rodríguez](https://github.com/deivid-rodriguez) to Bundler! :tada: Probably best known for his work on the `byebug` debugger gem, David was the driver behind updating gem templates to check in lockfiles, as well as work around ensuring that Bundler 2 will work on existing applications when it is released.
 
@@ -26,7 +26,7 @@ This month, Bundler gained 63 new commits, contributed by 8 authors. There were 
 
 In July, we updated 15 dependencies in RubyGems.org, and we released the alpha version of [two-factor authentication](https://github.com/rubygems/rubygems.org/pull/1729) for logging into the website. If you’d like to try it now, enable it by running `document.cookie='mfa_feature=true;path=/'` in your browser console. We’re working on adding support for multiple factors to the CLI as well, and you should see more updates on it next month.
 
-We also fixed a few small bugs around the dashboard and atom feeds for users who are logged out.
+We also fixed a few small bugs around the dashboard and Atom feeds for users who are logged out.
 
 This month, RubyGems.org gained 38 commits from 4 authors, making 1,124 additions and 183 deletions across 84 files.
 
