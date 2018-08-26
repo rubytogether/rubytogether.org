@@ -7,10 +7,12 @@
     <%= render "member_status" %>
   <% end %>
 
-  <%- if @membership.card_last4 -%>
+  <%- if @membership.card_last4 && !@membership.cancelled_at -%>
     <p><%= @membership.friend? ? "A monthly charge" : "Monthly membership dues" %> of <%= number_to_currency @membership.dollar_amount %> will be charged to your <span class="card-info"><%= @membership.card_brand %> ending in <%= @membership.card_last4 %></span>. To change the card we will charge, <%= link_to_card_form "update your payment information", @membership %>.</p>
+  <%- elsif @membership.cancelled_at -%>
+      <p>You're membership is currently inactive.</p>
   <%- else -%>
-    <p>You have no payment information stored. You can <%= link_to_card_form "update your payment information", @membership %>.</p>
+      <p>You have no payment information stored. You can <%= link_to_card_form "update your payment information", @membership %>.</p>
   <%- end -%>
 </section>
 

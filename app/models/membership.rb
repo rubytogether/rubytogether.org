@@ -18,7 +18,7 @@ class Membership < ActiveRecord::Base
     user && user.stripe_customer.subscriptions.any?
   end
 
-  scope :active, -> { where("expires_at > ?", Time.now) }
+  scope :active, -> { where("cancelled_at IS NOT NULL" && "expires_at > ?", Time.now) }
   scope :expired, -> { where("expires_at < ?", Time.now) }
   scope :cancelled, -> { where("cancelled_at IS NOT NULL") }
   scope :named,  -> { where("name IS NOT NULL") }
@@ -57,7 +57,7 @@ class Membership < ActiveRecord::Base
   def status
     if expires_at.nil?
       "pending"
-    elsif expires_at > Time.now
+    elsif expires_at > Time.now && !cancelled_at
       "active"
     elsif cancelled_at
       "cancelled"
