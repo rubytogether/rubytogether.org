@@ -16,7 +16,7 @@ In other community news, our Google Summer of Code students wrapped up their wor
 
 And with the help of [@eanlain](github.com/eanlain), we shipped a new guide: [“How to use Bundler with Docker”](https://bundler.io/v1.16/guides/bundler_docker_guide.html).
 
-We also added a new contributor to the core team: [Stephanie Morillo](https://www.twitter.com). Stephanie has helped create new Bundler docs (like the troubleshooting RubyGems and Bundler TLS/SSL issues guide), and update existing ones. She’s also responsible for updating the Bundler contributor guidelines and trying to make Bundler docs more accessible to new contributors.
+We also added a new contributor to the core team: [Stephanie Morillo](https://www.twitter.com/radiomorillo). Stephanie has helped create new Bundler docs (like the troubleshooting RubyGems and Bundler TLS/SSL issues guide), and update existing ones. She’s also responsible for updating the Bundler contributor guidelines and trying to make Bundler docs more accessible to new contributors.
 
 This month, Bundler gained 58 new commits, contributed by 9 authors. There were 334 additions and 54 deletions across 30 files.
 
