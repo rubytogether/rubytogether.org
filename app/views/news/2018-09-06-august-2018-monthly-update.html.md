@@ -33,22 +33,15 @@ This month, RubyGems gained 42 new commits, contributed by 10 authors. There wer
 ## ruby toolbox news
 Hey everyone,
 
-Despite my ambitious announcements in the last update, August turned out to be a 
-quiet month for me. I was mostly on vacation visiting family, and while I had 
-hoped to use the available time to also build a bunch of nice stuff for the 
-Toolbox, the need to find some rest and to have a bunch of time with family and 
-away from computers won in the end.
+Despite my ambitious announcements in the last update, August turned out to be a quiet month for me. I was mostly on vacation visiting family, and while I had hoped to use the available time to also build a bunch of nice stuff for the Toolbox, the need to find some rest and to have a bunch of time with family and away from computers won in the end.
 
 However, I'll finally have the time to ship the public data dumps and search improvements in September I spoke about in recent updates!
 
-In other news, towards the end of August I was in Vienna for the 2018 edition of 
-Euruko, the European Ruby Conference. I'd like to say a big thank you to everyone 
-involved, I think it was a great weekend and a powerful display of the health of 
-our community. Can't wait for next year!
+In other news, towards the end of August I was in Vienna for the 2018 edition of Euruko, the European Ruby Conference. I'd like to say a big thank you to everyone involved, I think it was a great weekend and a powerful display of the health of our community. Can't wait for next year!
 
 As always, your feedback is very welcome, if you have any suggestions or thoughts you'd like to share you can do so via [GitHub issues](https://github.com/rubytoolbox/rubytoolbox/issues) or by getting in touch with me directly.
 
-Thank you also to the contributor of our sole pull request in August: jrochkind (it seems there was more folks on vacation :smile: ).
+Thank you also to the contributor of our sole pull request in August: jrochkind (it seems there were more folks on vacation).
 
 Best,
 Christoph
