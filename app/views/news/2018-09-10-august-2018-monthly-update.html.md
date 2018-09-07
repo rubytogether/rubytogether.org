@@ -28,9 +28,11 @@ It’s hard to believe, but Ruby Together is more than three years old. In that 
 
 As you can probably imagine, it takes a lot more to organize ten developers than it took to organize two. Because of that, we’re making some changes to how Ruby Together is structured to make sure all of that work continues to get done.
 
-Starting this month, we’re retiring the position of CEO, and replacing it with an Executive Director position. Our first Executive Director will be the current CEO, André Arko. While it includes many of the previous responsibilities of the CEO, the ED position comes with a new job description, new criteria for success, and direct oversight by the board of directors.
+Starting this month, we’re retiring our existing position of CEO, and replacing it with an Executive Director position. While it includes many of the previous responsibilities of the CEO, the ED position comes with a new job description, new criteria for success, and direct oversight by the board of directors.
 
-The Executive Director will run Ruby Together on a day to day basis, implementing the strategy and plans decided on by the board. While the Executive Director is paid for administrative and corporate work, they will not be paid for any open source work, to allow them to focus effectively on fundraising and collaboration with the Ruby community.
+The Executive Director will not be a member of the Board of Directors, and will not determine budgets or spending. Instead, they will be responsible for running Ruby Together on a day to day basis, implementing the strategy and plans decided on by the board.
+
+The Executive Director will be paid for administrative and corporate work. They will not be paid for any open source work. This will allow them to focus their efforts on fundraising and collaboration with the Ruby community. Our first Executive Director will be André Arko.
 
 Along with the new ED position, we’re resetting the size of the board of directors to 5 people. No one is being added or removed from the board to make that happen, but that size will keep our core working group in the 5-7 person range. Keeping the core working group small and focused is especially important for our scheduling, discussion, and decision-making, and the board was in unanimous agreement that the new size will improve our work.
 
