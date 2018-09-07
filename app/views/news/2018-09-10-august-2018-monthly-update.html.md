@@ -56,7 +56,7 @@ In total, RubyGems.org gained 11 commits from 5 authors, making 44 additions and
 
 ## rubygems news
 
-In RubyGems, we fixed some bugs, fixed some tests, and made sure that gems with `allowed_push_host` set will be pushed to the correct host by `gem push`. In total there were 19 new commits, contributed by 5 authors, with 112 additions and 26 deletions across 13 files.
+In RubyGems, we fixed some bugs, including the ability to [auto re-sign expired certs](https://github.com/rubygems/rubygems/pull/2380), fixed some tests, and made sure that gems with `allowed_push_host` set will be pushed to the correct host by `gem push`. In total there were 19 new commits, contributed by 5 authors, with 112 additions and 26 deletions across 13 files.
 
 ## ruby toolbox news
 
