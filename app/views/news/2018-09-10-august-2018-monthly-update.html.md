@@ -8,6 +8,10 @@ Hello! Welcome to the monthly update. During August, our work was supported by [
 
 In August, Ruby Together was supported by 75 different companies, including our newest Ruby-level member, [Handshake](https://www.handshake.org). Thanks so much for the incredible support! We were also supported by 77 individual members and 64 friends of Ruby Together. Thanks to all 75 companies and 141 individuals for making everything that we do possible.
 
+### board nominations
+
+It's almost time for our yearly election to choose directors! Each year, one third of the seats on the board are up for election. This year, the seat currently held by Adarsh Pandit is up for election. Is there a member of Ruby Together you would want to represent you on the board of directors? Would you like to run for the board yourself? You have one week to [nominate a member or apply to run](https://goo.gl/forms/lshnSf7r0n1ruIpR2).
+
 ### events
 
 In community events, our developer evangelist PJ Hagerty spent some time at the Google Developer Group meetup in New York City, Scenic City Summit in Chattanooga, TN, and AmsterdamRB. Executive Director André Arko went to RailsCamp, experiencing the outdoors and talking with other developers about Ruby Together.
