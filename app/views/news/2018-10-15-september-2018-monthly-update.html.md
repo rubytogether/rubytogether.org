@@ -6,7 +6,7 @@ Hello! Welcome to the monthly update. During September, our work was supported b
 
 ## ruby together news
 
-In September, Ruby Together was supported by 73 different companies, including Sapphire member [Stripe](https://stripe.com), and [Triplebyte](https://triplebyte.com/os/rubytogether) joined Ruby Together as an Emerald member.
+In September, Ruby Together was supported by 73 different companies, including Sapphire member [Stripe](https://stripe.com). [Triplebyte](https://triplebyte.com/os/rubytogether) joined as our newest Emerald member.
 
 In addition, eight new developers signed up as members or friends of Ruby Together, including Rafael França. In total, we were supported by 77 individual members and 69 friends of Ruby Together. Thanks to all of our members for making everything that we do possible. 
 
@@ -14,26 +14,33 @@ In addition, eight new developers signed up as members or friends of Ruby Togeth
 
 Earlier this month, we announced a new, paid mentorship program called [Ruby Me](http://www.rubyme.org). Designed and planned by board member Coraline Ada Ehmke, Ruby Me pairs early-career developers with seasoned Rubyists to work on open source projects for three months. Both mentees and mentors are compensated for 8 hours of work per month. The goal of Ruby Me is to help bring people from underrepresented backgrounds into open source and support them in their professional growth. 
 
-We saw an overwhelmingly positive response come from the wider community. In one week, we received 900 from prospective apprentices and 125 from prospective mentors for spots in our first cohort. We selected and notified participants for this first batch on October [DATE]; these teams will work together until January 2019.
+We saw an overwhelmingly positive response come from the wider community. In one week, we received over 900 applications from prospective apprentices and over 125 applications from prospective mentors. It was incredibly difficult, but we selected the participants for our first batch and sent out notification emails on October 1. The selected teams will work together until January 2019, and we'll be sure to report back on how things went.
 
-Applications for the next cohort will open in [MONTH]. 
+We plan to open applications for Spring 2019 around the middle of December. If you'd like to get an email right away when we next open applications for Ruby Me, visit [rubyme.org](https://rubyme.org) and sign up to be notified at the bottom of the page.
 
 ### events
 
-Coraline Ada Ehmke and Kerri Miller gave talks at CodeDaze in Buffalo, NY earlier in September, and PJ Hagerty also spent time at Northeast PHP in Boston.
+Coraline Ada Ehmke and Kerri Miller gave talks at CodeDaze in Buffalo, NY earlier in September, and PJ Hagerty visited Northeast PHP in Boston.
+
 
 ## bundler news
 
-This month, Bundler gained 73 new commits, contributed by 12 authors. There were 419 additions and 151 deletions across 40 files.
+The Bundler team merged 29 pull requests, including fixes for nested `bundle exec`, various bugs around choosing and updating gem versions, documentation improvements, and full compatibility with TruffleRuby. We also released versions 1.16.5 and 1.17.0.pre.
+
+We also decided how to drop backwards compatibility with old Ruby versions, allowing us to resume work to merge Bundler into Ruby 2.6. We may or may not complete everything in time for the Ruby 2.6 release at Christmas, but we're still working towards it!
+
+In September, Bundler gained 73 new commits, contributed by 12 authors. There were 419 additions and 151 deletions across 40 files.
+
 
 ## rubygems.org news
 
-This month, we updated seven dependencies on rubygems.org. We also simplified and sped up some rack-attack integration tests with the help of [@mjankowski](https://github.com/mjankowski).
-Overall, rubygems.org got 15 commits from 2 authors making 146 additions and 263 deletions across 8 files.
+This month, we updated seven dependencies on rubygems.org and simplified and sped up some rack-attack integration tests with the help of [@mjankowski](https://github.com/mjankowski). We also discovered that it was possible to create "hidden" gems that would not show up in gem lists, and [@kerrizor](https://github.com/kerrizor) implemented a fix. Overall, rubygems.org got 15 commits from 2 authors making 146 additions and 263 deletions across 8 files.
+
 
 ## rubygems news
 
-This month, RubyGems gained 26 new commits, contributed by 6 authors. There were 251 additions and 163 deletions across 28 files.
+This month, RubyGems merged 12 pull requests, including downloading multiple gems in parallel during `install`, setting up a new mergebot, and adding a `--resign` flag to the `cert` command. There were 26 new commits, contributed by 6 authors, with 251 additions and 163 deletions across 28 files.
+
 
 ## ruby toolbox
 
