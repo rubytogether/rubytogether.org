@@ -10,6 +10,8 @@ In September, Ruby Together was supported by 73 different companies, including S
 
 In addition, eight new developers signed up as members or friends of Ruby Together, including Rafael França. In total, we were supported by 77 individual members and 69 friends of Ruby Together. Thanks to all of our members for making everything that we do possible. 
 
+As mentioned last month, we solicited suggestions or applications to run in the yearly election for the Ruby Together board of directors. This year, the only candidate was our existing board member, Adarsh Pandit. Since there was only one candidate, and one board seat up for election, the remaining directors chose to skip the voting period this year. If you're interested in nominating someone for the board of directors next year, or even running yourself, we'd love to hear from you! Reach out to us at hello@rubytogether.org and we can give you more information.
+
 ### ruby me
 
 Earlier this month, we announced a new, paid mentorship program called [Ruby Me](http://www.rubyme.org). Designed and planned by board member Coraline Ada Ehmke, Ruby Me pairs early-career developers with seasoned Rubyists to work on open source projects for three months. Both mentees and mentors are compensated for 8 hours of work per month. The goal of Ruby Me is to help bring people from underrepresented backgrounds into open source and support them in their professional growth. 
