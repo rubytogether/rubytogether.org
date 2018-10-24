@@ -7,7 +7,7 @@ gem "compass-rails", "~> 3.0"
 gem "devise", '~> 4.4.3'
 gem "fastly-rails", "~> 0.8"
 gem "http", "~> 4.0"
-gem "jquery-rails", "~> 4.1"
+gem "jquery-rails", "~> 4.3"
 gem "lograge", "~> 0.10"
 gem "mail", "~> 2.7.0"
 gem "nilify_blanks", "~> 1.3"
