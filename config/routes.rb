@@ -9,13 +9,17 @@ Rails.application.routes.draw do
     companies
     conflict_policy
     developers
+    example_proposal
     members
+    projects
     roadmap
     rubygems
     team
   ].each do |page|
     get "/#{page}" => "home##{page}"
   end
+
+  get "/proposal" => redirect("https://goo.gl/forms/tmom1adui2WOrkzN2")
 
   redirects = {
     "/benefits" => "/",
