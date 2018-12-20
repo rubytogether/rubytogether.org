@@ -4,19 +4,31 @@ Rails.application.routes.draw do
   get "/csrf" => "application#csrf"
   get "/news.xml" => "news#index", format: "xml"
 
-  %w[companies developers members roadmap rubygems team bylaws conflict_policy].each do |page|
+  %w[
+    bylaws
+    companies
+    conflict_policy
+    developers
+    example_proposal
+    members
+    projects
+    roadmap
+    rubygems
+    team
+  ].each do |page|
     get "/#{page}" => "home##{page}"
   end
+
+  get "/proposal" => redirect("https://goo.gl/forms/tmom1adui2WOrkzN2")
 
   redirects = {
     "/benefits" => "/",
     "/contact" => "/",
     "/friends" => "/developers",
     "/join" => "/#join",
+    "/membership/new" => "/companies",
     "/plans" => "/roadmap",
-    "/projects" => "/roadmap",
-    "/why" => "/developers",
-    "/membership/new" => "/companies"
+    "/why" => "/developers"
   }
 
   redirects.each do |page, destination|
