@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 ruby File.read(File.expand_path("../.ruby-version", __FILE__)).chomp
 
-gem "rails", "4.2.11"
+gem "rails", "~> 5.2"
 
 gem "compass-rails", "~> 3.1"
 gem "devise", '~> 4.5.0'
@@ -16,19 +16,19 @@ gem "pg", "~> 0.21.0"
 gem "premailer-rails", "~> 1.10"
 gem "pry-rails", "~> 0.3"
 gem "puma", "~> 3.12"
+gem "rails-controller-testing", "~> 1.0.2"
 gem "rdiscount", "~> 2.2"
 gem "rollbar", "~> 2.18"
 gem "sass-rails", "~> 5.0"
 gem "slack-notifier", "~> 2.3"
-gem "stripe_event", "~> 1.8"
+gem "stripe_event", "~> 2.1", ">= 2.1.1"
 gem "uglifier", "~> 4.1"
 
 group :development do
   gem "guard-livereload", "~> 2.5", require: false
   gem "guard-rails", "~> 0.8"
   gem "guard-rspec", "~> 4.7"
-  gem "letter_opener", "~> 1.7"
-  gem "quiet_assets", "~> 1.1"
+  gem "letter_opener", "~> 1.6"
   gem "rack-livereload", "~> 0.3"
   gem "terminal-notifier-guard", "~> 1.7"
   gem "terminal-notifier", "~> 2.0"

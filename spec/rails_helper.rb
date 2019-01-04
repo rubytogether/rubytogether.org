@@ -24,14 +24,29 @@ require 'rspec/rails'
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
 
-RSpec.configure do |config|
-  # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+# StripeEvent raises an error if this is nil, so ¯\_(ツ)_/¯
+StripeEvent.signing_secret = "blah blah blah"
 
-  # If you're not using ActiveRecord, or you'd prefer not to run each of your
-  # examples within a transaction, remove the following line or assign false
-  # instead of true.
+# ActiveJob doesn't let you test it in tests by default
+ActiveJob::Base.queue_adapter = :test
+
+module StripeEventHelpers
+  def post_stripe_event(name)
+    # Route around Stripe webhook signature verification
+    expect(Stripe::Webhook).to receive(:construct_event) do |payload|
+      Stripe::Event.construct_from(JSON.parse(payload, symbolize_names: true))
+    end
+
+    # Post the named event payload as JSON to the webhook endpoint
+    payload = Rails.root.join("spec/fixtures/stripe_events", "#{name}.json").read
+    post "/stripe/events", params: payload, headers: {"CONTENT_TYPE" => "application/json"}
+  end
+end
+
+RSpec.configure do |config|
   config.use_transactional_fixtures = true
 
   config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include StripeEventHelpers, type: :request
+  config.include ActiveJob::TestHelper, type: :request
 end

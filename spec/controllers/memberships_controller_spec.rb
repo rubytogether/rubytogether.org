@@ -18,7 +18,9 @@ RSpec.describe MembershipsController, type: :controller do
     it "runs the membership creator" do
       expect(CreateMembership).to receive(:run).with({}, user, "abc", "individual")
 
-      post :create, token: "abc", email: "alice@example.com", kind: "individual"
+      post :create, params: {
+        token: "abc", email: "alice@example.com", kind: "individual"
+      }
 
       expect(JSON.parse(response.body)).to include("result" => "success")
     end
@@ -28,8 +30,10 @@ RSpec.describe MembershipsController, type: :controller do
         membership = hash_including("contact_name" => "Some One", "expires_at" => 1.month.from_now.iso8601)
         expect(CreateMembership).to receive(:run).with(membership, user, "abc", "corporate")
 
-        post :create, token: "abc", email: "alice@example.com", kind: "corporate",
+        post :create, params: {
+          token: "abc", email: "alice@example.com", kind: "corporate",
           membership: {contact_name: "Some One"}
+        }
 
         expect(JSON.parse(response.body)).to include("result" => "success")
       end
@@ -48,7 +52,7 @@ RSpec.describe MembershipsController, type: :controller do
       allow(user).to receive(:membership){ membership }
       expect(membership).to receive(:update!).with(card_brand: "Visa", card_last4: "1234")
 
-      post :card, token: "abc"
+      post :card, params: { token: "abc" }
       expect(JSON.parse(response.body)).to include("result" => "success")
     end
   end

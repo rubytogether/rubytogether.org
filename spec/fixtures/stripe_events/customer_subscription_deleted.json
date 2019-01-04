@@ -1,0 +1,45 @@
+{
+  "id": "evt_16JFdCAcWgwn5pBtC5eqLlUX",
+  "created": 1435635718,
+  "livemode": false,
+  "type": "customer.subscription.deleted",
+  "data": {
+    "object": {
+      "id": "sub_6VyNZ79RpMRvQ5",
+      "plan": {
+        "interval": "month",
+        "name": "Friend of Ruby Together",
+        "created": 1433963947,
+        "amount": 1000,
+        "currency": "usd",
+        "id": "friend",
+        "object": "plan",
+        "livemode": false,
+        "interval_count": 1,
+        "trial_period_days": null,
+        "metadata": {},
+        "statement_descriptor": null
+      },
+      "object": "subscription",
+      "start": 1435561884,
+      "status": "canceled",
+      "customer": "cus_6VvtoGAz7B9hfA",
+      "cancel_at_period_end": false,
+      "current_period_start": 1435561884,
+      "current_period_end": 1438153884,
+      "ended_at": 1435635716,
+      "trial_start": null,
+      "trial_end": null,
+      "canceled_at": 1435635716,
+      "quantity": 1,
+      "application_fee_percent": null,
+      "discount": null,
+      "tax_percent": null,
+      "metadata": {}
+    }
+  },
+  "object": "event",
+  "pending_webhooks": 0,
+  "request": "iar_6WIDBg0wMNAfY1",
+  "api_version": "2015-04-07"
+}
