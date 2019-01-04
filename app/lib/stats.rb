@@ -72,6 +72,6 @@ class Stats
     end.to_sentence
     estimate = MonthlyRevenue.projected(subscriber_counts, Membership.prepaid)
     dollars = ActiveSupport::NumberHelper.number_to_currency(estimate/100)
-    message << ". Projected revenue now #{dollars} per month."
+    message += ". Projected revenue now #{dollars} per month."
   end
 end
