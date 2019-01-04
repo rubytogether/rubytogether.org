@@ -7,6 +7,8 @@ module StripeEvent
 
         def call(event)
           card = event.data.object
+          # ACH sources don't have information for us to add to the membership record
+          return unless card.is_a?(Stripe::Card)
 
           # OpenCollective contributors don't have users
           user = User.where(stripe_id: card.customer).first

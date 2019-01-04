@@ -1,5 +1,5 @@
 ---
-summary: In October and November, we paid for 204 hours of developer work, spoke at RubyConf, shipped Bundler 1.16, and started deploying the beta Ruby Toolbox 2.0.
+summary: In October and November, we paid for 165 hours of developer work, spoke at RubyConf, shipped Bundler 1.16, and started deploying the beta Ruby Toolbox 2.0.
 ---
 
 Hello! Welcome to a super-sized double monthly update for the months of October and November. During that time, our work was supported by [reinteractive](https://reinteractive.com/), [Stripe](http://stripe.com), [Bleacher Report](http://www.bleacherreport.com), [thoughtbot](https://thoughtbot.com), and many others.
@@ -64,30 +64,30 @@ Please feel warmly invited to join [github.com/rubytoolbox/rubytoolbox](https://
 
 ## budget &amp; expenses
 
-In October, we paid for 61 hours of developer time, saw $21,545.0 total income and spent a total of
-$12,234.08.
+In October, we paid for 103.9 hours of developer time, saw $21,700 total income and spent a total of
+$19,839.25.
+
+* $7,398.75 for 49.3 hours worked on Bundler at $150/hour
+* $3,000 for 20.0 hours worked on RubyGems.org at $150/hour
+* $3,426.25 for 22.8 hours worked on RubyGems at $150/hour
+* $1,762.50 for 11.8 hours worked on other OSS and devtools at $150/hour
+* $79.09 on dedicated servers for RubyBench.org
+* $707.21 on payment processing fees
+* $2,268.05 on company overhead like hosting, services, software, hardware, taxes, etc
+* $570 on accounting, copywriting, design, and other professional services
+* $627.40 on marketing, evangelism, and community outreach
+
+In November, we paid for 60.7 hours of developer time, saw $21,545 in total income, and spent a total of $12,234.08.
 
 * $4,260 for 28.4 hours worked on Bundler at $150/hour
-* $2,529 for 16.9 hours worked on RubyGems.org at $150/hour
-* $353 for 2.4 hours worked on RubyGems at $150/hour
-* $1,946 for 13.0 hours worked on other OSS and devtools at $150/hour
+* $352.50 for 2.4 hours worked on RubyGems.org at $150/hour
+* $2,528.75 for 16.9 hours worked on RubyGems at $150/hour
+* $1,946.25 for 13.0 hours worked on other OSS and devtools at $150/hour
 * $78.17 on dedicated servers for RubyBench.org
 * $700.91 on payment processing fees
-* $1,465.24 on company overhead like hosting, services, software, hardware, taxes, etc
-* $225.0 on accounting, copywriting, design, and other professional services
+* $1,370.24 on company overhead like hosting, services, software, hardware, taxes, etc
+* $320 on accounting, copywriting, design, and other professional services
 * $677.26 on marketing, evangelism, and community outreach
-
-In November, we paid for 143.2 hours of developer time, saw $25,145.47 in total income, and spent a total of $25,995.27.
-
-* $14,163 for 94.4 hours worked on Bundler at $150/hour
-* $4,670 for 31.1 hours worked on RubyGems.org at $150/hour
-* $915 for 6.1 hours worked on RubyGems at $150/hour
-* $1,740 for 11.6 hours worked on other OSS and devtools at $150/hour
-* $80.37 on dedicated servers for RubyBench.org
-* $812.12 on payment processing fees
-* $1,976.62 on company overhead like hosting, services, software, hardware, taxes, etc
-* $375.0 on accounting, copywriting, design, and other professional services
-* $1,263.66 on marketing, evangelism, and community outreach
 
 Keep an eye out for Ruby 2.5, which is currently scheduled to be released on Christmas Day! It will include the latest versions of RubyGems and Bundler right out of the box, with no installation needed, thanks to [@hsbt](https://twitter.com/hsbt).
 

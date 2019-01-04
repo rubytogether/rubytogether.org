@@ -6,6 +6,8 @@ module StripeEvent
 
       def call(event)
         @event = event
+        @user = user_for_event(@event)
+        return unless @user
 
         # If the event is an invoice, or has an invoice attached to it,
         # then it is for a user and that user will have a subscription
@@ -16,9 +18,7 @@ module StripeEvent
         # through the invoice.  Alternatively, we *could* override the event's
         # data object with the corresponding invoice.
         set_event_subscription if charge?
-
-        @user = user_for_event(@event)
-        return unless @user
+        return unless subscription
 
         # move back membership expiration time to the end paid for + 3.5 days.
         # The extra 3.5 days is for a payment failure grace period.

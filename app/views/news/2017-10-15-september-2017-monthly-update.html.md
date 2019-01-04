@@ -1,5 +1,5 @@
 ---
-summary: In September, we paid for 143 hours of developer work, shipped a RubyGems security release, and funded the new Ruby Toolbox.
+summary: In September, we paid for 182.6 hours of developer work, shipped a RubyGems security release, and funded the new Ruby Toolbox.
 ---
 
 Hello! Welcome to the monthly update. During September, our work was supported by [reinteractive](https://reinteractive.com/), [Stripe](https://stripe.com), [Bleacher Report](http://www.bleacherreport.com), [GitLab](https://about.gitlab.com), and many others.
@@ -58,16 +58,16 @@ In the next weeks I will be working on the core app itself, trying to bring it b
 
 ## budget &amp; expenses
 
-In September, we saw $25,145.47 in total income, and spent a total of $25,995.27.
+In September, we saw $25,145.47 in total income, and spent a total of $32,545.28.
 
-* $14,163 for 94.4 hours worked on Bundler at $150/hour
-* $4,670 for 31.1 hours worked on RubyGems.org at $150/hour
-* $915 for 6.1 hours worked on RubyGems at $150/hour
-* $1,740 for 11.6 hours worked on other OSS and devtools at $150/hour
+* $16,915 for 112.8 hours worked on Bundler at $150/hour
+* $1,590 for 10.6 hours worked on RubyGems.org at $150/hour
+* $5,967.50 for 39.8 hours worked on RubyGems at $150/hour
+* $2,902.50 for 19.4 hours worked on other OSS and devtools at $150/hour
 * $80.37 on dedicated servers for RubyBench.org
-* $812.12 on payment processing fees
-* $1,976.62 on company overhead like hosting, services, software, hardware, taxes, etc
-* $375.0 on accounting, copywriting, design, and other professional services
+* $811.53 on payment processing fees
+* $2,469.72 on company overhead like hosting, services, software, hardware, taxes, etc
+* $545 on accounting, copywriting, design, and other professional services
 * $1,263.66 on marketing, evangelism, and community outreach
 
 Until next time,<br>

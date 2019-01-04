@@ -1,10 +1,10 @@
 ---
-summary: In March, we paid for 126 hours of developer work, Coinbase became a high-profile member, we printed new Bundler shirts, and fixed many bugs.
+summary: In March, we paid for 147 hours of developer work, Coinbase became a high-profile member, we printed new Bundler shirts, and fixed many bugs.
 ---
 
 Hello! Welcome to the monthly update. During March, our work was supported by [Coinbase](https://coinbase.com), [Cloud City Development](http://www.cloudcity.io), [DigitalOcean](http://www.digitalocean.com) and many others.
 
-This month we were able to pay for 126 hours of developer work on Ruby open source. Thank you to all of the companies and individual developers that continue to support our work.
+This month we were able to pay for 147 hours of developer work on Ruby open source. Thank you to all of the companies and individual developers that continue to support our work.
 
 ## ruby together news
 
@@ -49,18 +49,18 @@ Christoph
 
 ## budget &amp; expenses
 
-In March, we saw $29,620 in total income, and spent a total of $25,311.52.
+In March, we saw $29,620 in total income, and spent a total of $35,308.59.
 
-* $4,482.50 for 29.9 hours worked on Bundler at $150/hour
-* $1,546.25 for 10.3 hours worked on RubyGems.org at $150/hour
-* $2,568.75 for 17.1 hours worked on RubyGems at $150/hour
-* $1,327.50 for 8.9 hours worked on other OSS and devtools at $150/hour
+* $5,188.75 for 34.6 hours worked on Bundler at $150/hour
+* $2,250.62 for 15.0 hours worked on RubyGems.org at $150/hour
+* $3,713.12 for 24.8 hours worked on RubyGems at $150/hour
+* $1,935 for 12.9 hours worked on other OSS and devtools at $150/hour
 * $8,925 for 59.5 hours worked on The Ruby Toolbox at $150/hour
 * $82.80 on dedicated servers for RubyBench.org
 * $1,570.52 on payment processing fees
-* $2,698.20 on company overhead like hosting, services, software, hardware, taxes, etc
-* $975 on accounting, copywriting, design, and other professional services
-* $1,135 on marketing, evangelism, and community outreach
+* $3,168.47 on company overhead like hosting, services, software, hardware, taxes, etc
+* $5,975 on accounting, copywriting, design, and other professional services
+* $2,499.30 on marketing, evangelism, and community outreach
 
 Until next time,<br>
 Stephanie, André and the Ruby Together team

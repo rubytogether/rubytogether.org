@@ -1,4 +1,4 @@
-require 'yaml'
+require "yaml"
 
 Post = Struct.new(:name, :date, :id) do
   def self.from_file(file)
