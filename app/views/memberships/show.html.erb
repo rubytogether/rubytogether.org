@@ -38,4 +38,7 @@
   <% end %>
 </section>
 
-<p>You can also <%= link_to "log out", destroy_user_session_path, method: :delete %>. For help with anything else, <%= contact_us %>.</p>
+<section>
+  <p>You can also <%= link_to "log out", destroy_user_session_path, method: :delete %> or <%= link_to "cancel your membership", membership_path, method: :delete %>. </p>
+  <p>For help with anything else, <%= contact_us %>.</p>
+</section>
