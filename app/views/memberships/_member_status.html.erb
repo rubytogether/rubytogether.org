@@ -1,11 +1,18 @@
-<p>Hello! Your <%= @membership.shortname %> membership with Ruby Together is <%= @membership.status %>.</p>
+<p>
+  Hello! Your <%= @membership.shortname %> membership with Ruby Together is <%= @membership.status %>.
+  <% if @membership.cancelled? %>
+    Thanks for all your support, and you won't be charged again.
+  </p>
+  <p>If you want to reactivate your subscription, use the same email to <%= link_to "sign up again", join_path %>.
+  <% end %>
+</p>
 
 <%- if @membership.active? -%>
-<p>
-  <%- if @membership.name -%>
-    You are credited on our <%= link_to "members page", members_path %> as &ldquo;<%= @membership.name %>&rdquo;.
-  <%- else -%>
-    You are not credited on our <%= link_to "members page", members_path %>. If you'd like to be credited, add your name below.
-  <%- end -%>
-</p>
+  <p>
+    <%- if @membership.name -%>
+      You are credited on our <%= link_to "members page", members_path %> as &ldquo;<%= @membership.name %>&rdquo;.
+    <%- else -%>
+      You are not credited on our <%= link_to "members page", members_path %>. If you'd like to be credited, add your name below.
+    <%- end -%>
+  </p>
 <%- end -%>

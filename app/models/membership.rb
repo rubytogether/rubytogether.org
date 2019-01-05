@@ -55,12 +55,12 @@ class Membership < ActiveRecord::Base
   end
 
   def status
-    if expires_at.nil?
+    if cancelled_at
+      "cancelled"
+    elsif expires_at.nil?
       "pending"
     elsif expires_at > Time.now
       "active"
-    elsif cancelled_at
-      "cancelled"
     else
       "expired"
     end
@@ -68,6 +68,10 @@ class Membership < ActiveRecord::Base
 
   def active?
     status == "active"
+  end
+
+  def cancelled?
+    !cancelled_at.nil?
   end
 
   def corporate?
