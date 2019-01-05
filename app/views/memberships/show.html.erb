@@ -1,11 +1,7 @@
 <%- title "your membership" -%>
 
 <section class="group">
-  <% if @membership.friend? %>
-    <%= render "friend_status" %>
-  <% else %>
-    <%= render "member_status" %>
-  <% end %>
+  <%= render "member_status" %>
 
   <%- if @membership.active? && @membership.card_last4 -%>
     <%= render "payment_info" %>
