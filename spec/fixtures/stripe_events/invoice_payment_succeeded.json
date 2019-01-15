@@ -1,0 +1,85 @@
+{
+  "id": "evt_18LmVXAcWgwn5pBtJT0nT3hc",
+  "object": "event",
+  "api_version": "2015-04-07",
+  "created": 1465791423,
+  "data": {
+    "object": {
+      "id": "in_18LmVWAcWgwn5pBttRijTnJy",
+      "object": "invoice",
+      "amount_due": 0,
+      "application_fee": null,
+      "attempt_count": 0,
+      "attempted": true,
+      "charge": null,
+      "closed": true,
+      "currency": "usd",
+      "customer": "cus_8U1TcYRfvl8VqP",
+      "date": 1465791422,
+      "description": null,
+      "discount": null,
+      "ending_balance": 0,
+      "forgiven": false,
+      "lines": {
+        "object": "list",
+        "data": [
+          {
+            "id": "sub_8d2aO41CzC39fS",
+            "object": "line_item",
+            "amount": 0,
+            "currency": "usd",
+            "description": null,
+            "discountable": true,
+            "livemode": false,
+            "metadata": {},
+            "period": {
+              "start": 1465791422,
+              "end": 1592031599
+            },
+            "plan": {
+              "id": "corporate_ruby",
+              "object": "plan",
+              "amount": 500000,
+              "created": 1453710393,
+              "currency": "usd",
+              "interval": "month",
+              "interval_count": 1,
+              "livemode": false,
+              "metadata": {},
+              "name": "Ruby Member",
+              "statement_descriptor": null,
+              "trial_period_days": null
+            },
+            "proration": false,
+            "quantity": 1,
+            "subscription": null,
+            "type": "subscription"
+          }
+        ],
+        "has_more": false,
+        "total_count": 1,
+        "url": "/v1/invoices/in_18LmVWAcWgwn5pBttRijTnJy/lines"
+      },
+      "livemode": false,
+      "metadata": {},
+      "next_payment_attempt": null,
+      "paid": true,
+      "period_end": 1465791422,
+      "period_start": 1465791422,
+      "receipt_number": null,
+      "starting_balance": 0,
+      "statement_descriptor": null,
+      "subscription": "sub_8d2aO41CzC39fS",
+      "subtotal": 0,
+      "tax": null,
+      "tax_percent": null,
+      "total": 0,
+      "webhooks_delivered_at": null,
+      "payment": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 0,
+  "request": "req_8d2aKYUYmY0xaW",
+  "type": "invoice.payment_succeeded"
+}

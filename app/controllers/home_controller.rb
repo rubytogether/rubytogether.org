@@ -18,6 +18,10 @@ class HomeController < ApplicationController
     @individual_count = Membership.individual.active.count
   end
 
+  def example_proposal
+    render layout: "application"
+  end
+
 private
 
   def levels_for(companies)

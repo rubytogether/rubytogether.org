@@ -26,7 +26,7 @@ class Stats
     message << "\n"
 
     counts = Membership.active.group(:kind).count.map do |id,c|
-      [MembershipPlan.all[MembershipPlan.ids[id]], c]
+      [MembershipPlan.all[id.to_sym], c]
     end.to_h
     corp, dev = counts.partition{|s,c| s.id.start_with?("corporate") }
     message << "#{corp.map(&:last).inject(:+)} #{"company".pluralize(companies.count)} ("
@@ -72,6 +72,6 @@ class Stats
     end.to_sentence
     estimate = MonthlyRevenue.projected(subscriber_counts, Membership.prepaid)
     dollars = ActiveSupport::NumberHelper.number_to_currency(estimate/100)
-    message << ". Projected revenue now #{dollars} per month."
+    message += ". Projected revenue now #{dollars} per month."
   end
 end

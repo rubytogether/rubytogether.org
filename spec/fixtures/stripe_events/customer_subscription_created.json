@@ -1,0 +1,45 @@
+{
+  "id": "evt_15nY3IAcWgwn5pBtisl4M4d6",
+  "created": 1428080032,
+  "livemode": false,
+  "type": "customer.subscription.created",
+  "data": {
+    "object": {
+      "id": "sub_5zX7ha6aVZ6Xeh",
+      "plan": {
+        "interval": "month",
+        "name": "Ruby Together Individual Member",
+        "created": 1425204514,
+        "amount": 4000,
+        "currency": "usd",
+        "id": "individual",
+        "object": "plan",
+        "livemode": false,
+        "interval_count": 1,
+        "trial_period_days": null,
+        "metadata": {},
+        "statement_descriptor": null
+      },
+      "object": "subscription",
+      "start": 1428080032,
+      "status": "active",
+      "customer": "cus_8U1TcYRfvl8VqP",
+      "cancel_at_period_end": false,
+      "current_period_start": 1428080032,
+      "current_period_end": 1430672032,
+      "ended_at": null,
+      "trial_start": null,
+      "trial_end": null,
+      "canceled_at": null,
+      "quantity": 1,
+      "application_fee_percent": null,
+      "discount": null,
+      "tax_percent": null,
+      "metadata": {}
+    }
+  },
+  "object": "event",
+  "pending_webhooks": 0,
+  "request": "iar_5zX7MhAJ6RJnbJ",
+  "api_version": "2015-02-18"
+}
