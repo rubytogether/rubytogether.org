@@ -113,7 +113,7 @@ def render(b, path)
   require "erb"
   update_template_path = Pathname.new("../lib/templates/monthly_update.md.erb").expand_path(__dir__)
   update_template = update_template_path.read
-  erb = ERB.new(update_template, nil, "<>>-")
+  erb = ERB.new(update_template, nil, ">")
   erb.location = update_template_path.to_s
   File.write path, erb.result(b)
 end
