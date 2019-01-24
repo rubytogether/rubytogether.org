@@ -73,7 +73,7 @@ class MemberInfo
 
   def member_counts
     @member_counts ||= Membership.active.group(:kind).count.map do |id, count|
-      [MembershipPlan.all[MembershipPlan.ids[id]], count]
+      [MembershipPlan.all[id.to_sym], count]
     end
   end
 
