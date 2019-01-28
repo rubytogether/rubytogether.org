@@ -1,4 +1,4 @@
-class AddTimestampsToMemberships < ActiveRecord::Migration
+class AddTimestampsToMemberships < ActiveRecord::Migration[4.2]
   def change
     add_column :memberships, :created_at, :timestamp
     add_column :memberships, :updated_at, :timestamp

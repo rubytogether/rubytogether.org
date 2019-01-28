@@ -15,8 +15,8 @@ dir = File.dirname(__FILE__)
 env = find_env(ARGV.first)
 
 if env == "development"
-  puts [File.join(dir, "rails"), "console", env].join(" ")
-  exec File.join(dir, "rails"), "console", env
+  puts [File.join(dir, "rails"), "console", "-e", env].join(" ")
+  exec File.join(dir, "rails"), "console", "-e", env
 else
   puts [File.join(dir, env), "run:local", "bin/rails", "console"].join(" ")
   exec File.join(dir, env), "run:local", "bin/rails", "console"

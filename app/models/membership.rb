@@ -20,6 +20,7 @@ class Membership < ActiveRecord::Base
 
   scope :active, -> { where("expires_at > ?", Time.now) }
   scope :expired, -> { where("expires_at < ?", Time.now) }
+  scope :cancelled, -> { where("cancelled_at IS NOT NULL") }
   scope :named,  -> { where("name IS NOT NULL") }
   scope :since, -> (time) { where("created_at > ?", time) }
   scope :prepaid, -> { where("expires_at > ?", 1.month.from_now) }
@@ -54,7 +55,9 @@ class Membership < ActiveRecord::Base
   end
 
   def status
-    if expires_at.nil?
+    if cancelled_at
+      "cancelled"
+    elsif expires_at.nil?
       "pending"
     elsif expires_at > Time.now
       "active"
@@ -65,6 +68,10 @@ class Membership < ActiveRecord::Base
 
   def active?
     status == "active"
+  end
+
+  def cancelled?
+    !cancelled_at.nil?
   end
 
   def corporate?

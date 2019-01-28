@@ -1,17 +1,11 @@
 <%- title "your membership" -%>
 
 <section class="group">
-  <% if @membership.friend? %>
-    <%= render "friend_status" %>
-  <% else %>
-    <%= render "member_status" %>
-  <% end %>
+  <%= render "member_status" %>
 
-  <%- if @membership.card_last4 -%>
-    <p><%= @membership.friend? ? "A monthly charge" : "Monthly membership dues" %> of <%= number_to_currency @membership.dollar_amount %> will be charged to your <span class="card-info"><%= @membership.card_brand %> ending in <%= @membership.card_last4 %></span>. To change the card we will charge, <%= link_to_card_form "update your payment information", @membership %>.</p>
-  <%- else -%>
-    <p>You have no payment information stored. You can <%= link_to_card_form "update your payment information", @membership %>.</p>
-  <%- end -%>
+  <%- if @membership.active? && @membership.card_last4 -%>
+    <%= render "payment_info" %>
+  <% end %>
 </section>
 
 <section class="group">
@@ -38,4 +32,15 @@
   <% end %>
 </section>
 
-<p>You can also <%= link_to "log out", destroy_user_session_path, method: :delete %>. For help with anything else, <%= contact_us %>.</p>
+<section>
+  <p>
+    You can also
+    <%- if @membership.cancelled? -%>
+      <%= link_to "log out", destroy_user_session_path, method: :delete %>.
+    <%- else -%>
+      <%= link_to "log out", destroy_user_session_path, method: :delete %>
+      or <%= link_to "cancel your membership", membership_path, method: :delete %>.
+    <%- end -%>
+  </p>
+  <p>For help with anything else, <%= contact_us %>.</p>
+</section>
