@@ -65,6 +65,30 @@ This month, RubyGems gained 149 new commits, contributed by 15 authors. There we
 
 ## ruby toolbox news
 
+Hey everyone,
+
+As mentioned in recent updates, I set aside some time and have been working on the Ruby Toolbox as my main project in December and January thanks to Ruby Together's backing.
+
+There's been a flurry of activity in that time. Based on the feedback I received from November's [community survey](https://www.ruby-toolbox.com/blog/2018-12-04/survey-results) I shipped the following (among many smaller improvements ):
+
+  * [A new landing page](https://www.ruby-toolbox.com/blog/2019-01-09/new-landing-page)
+  * [Project Health Indicators](https://www.ruby-toolbox.com/blog/2018-12-14/project-health-indicators)
+  * [Project Sorting](https://www.ruby-toolbox.com/blog/2019-01-09/project-sorting)
+  * [Bugfix fork filtering](https://www.ruby-toolbox.com/blog/2019-01-16/bugfix-fork-detection-and-filtering) (and, through that, improved search results)
+  * [A new documentation and stats section](https://www.ruby-toolbox.com/blog/2019-01-24/metrics-documentation-and-statistics)
+  * [Alternate project display modes](https://www.ruby-toolbox.com/blog/2019-01-31/alternate-project-display-modes)
+
+The feedback I received so far was very positive, and [two](https://rubyweekly.com/issues/430) [mentions](https://rubyweekly.com/issues/434) on the popular Ruby Weekly newsletter also brought in new intereset, contributions, and feedback.
+
+Since I have some budgeted hours from Ruby Together remaining, I will continue working on the Toolbox through part of February. My main focus for that time will be bringing back historical data and, through that, bringing trending projects to the site (another highly requested feature from the community survey). As my focused time of working on the Toolbox comes to an end, I will also prepare a blog post looking back on the endeavour towards the end of February.
+
+As always, your feedback is very welcome. If you have any suggestions or thoughts you'd like to share you can do so via [GitHub issues](https://github.com/rubytoolbox/rubytoolbox/issues) or by getting in touch with me directly.
+
+Thank you also to the PR contributors of December and January: FranklinYu, MrJoy, RuturajBisure, arbox, armandfardeau, bbatsell, bkuhlmann, bmedenwald, eveevans, gregors, grodowski, hsbt, janlelis, jsimpson, larskanis, mattyr, p0deje, and ttilberg
+
+Best,
+Christoph
+
 ## December budget &amp; expenses
 
 In December, we saw $13,623.32 in total income, and spent a total of $21,674.66.
