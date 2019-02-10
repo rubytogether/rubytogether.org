@@ -25,6 +25,10 @@ def env_run(*cmd)
   system cmd.join(" ")
 end
 
+if `git remote`.split.grep(@env).empty?
+  env_run "git:remote", "--remote", @env
+end
+
 puts "+ git push #{@env} HEAD:master"
 system "git push #{@env} HEAD:master"
 
