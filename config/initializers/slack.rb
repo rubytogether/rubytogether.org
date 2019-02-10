@@ -1,6 +1,5 @@
-require "slack"
-
 if ENV.has_key?("SLACK_TEAM")
+  require "slack"
   team = ENV.fetch("SLACK_TEAM")
   key  = ENV.fetch("SLACK_API_KEY")
   Slack.team = Slack::Team.new(team, key)
