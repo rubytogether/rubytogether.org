@@ -1,9 +1,9 @@
 ---
-summary: In December, we paid for 75 hours of developer work. In 2018, we paid for 1,394 hours of developer work and shipped 21 Bundler releases, and 11 versions of RubyGems.
+summary: In December, we paid for 75 hours of developer work. In all of 2018, we paid for 1,394 hours of developer work, which included 21 Bundler and 11 RubyGems releases.
 ---
-Hello, and happy belated new year! You can find our regular monthly update below, followed by a yearly summary. 
+Hello, and happy belated new year! Welcome to a year-end special edition of the monthly update: Ruby Together’s Yearly Update for 2018.
 
-Hello, and welcome to a year-end special edition of the monthly update: Ruby Together’s Yearly Update for 2018! There are more details in the following sections, but here’s the tl;dr: during 2018, we took in $300,183.32, we spent $266,900.32, and we paid for 1,394 hours of developer work on Ruby open source.
+There are more details in the following sections, but here’s the tl;dr: during 2018, we took in $300,183.32, we spent $266,900.32, and we paid for 1,394 hours of developer work on Ruby open source.
 
 Throughout the year, our work was supported by Handshake, Stripe, DigitalOcean, Airbnb, Travis CI, Coinbase, GitLab, reinteractive, Stitch Fix, Bleacher Report, Triplebyte, and many others.
 
@@ -29,15 +29,19 @@ We’re funding one project application in Q1 2019: Bundler deprecation and rele
 
 Here’s his message about the project:
 
-“During the next months, I'll be focusing on fixing some problems and surprises surfaced after the bundler 2.0 release, and I'll try to make sure we're protected against the same kind of things happening in future releases. I'd like the bundler team to be able to ship bug fix and feature releases more confidently, with less regressions, and without any surprises whatsoever for users.
-
-For example, users should be able to early opt in to certain new features, thus providing early feedback and bug reports without affecting the majority of the users not yet trying those features.
-The default availability of certain features should be toggleable in a smooth manner, by providing UI messages announcing the change, and a migration path for users who want to either migrate early, or stay in the old behavior.
-
-Features should be deprecatable, and finally removable through a smooth process that properly informs users about how to replace them with better alternatives.
-
-All of these ideas are currently half baked in Bundler's master, but still require some work and some actual releases to wrap them up and put them into action. My project is about making this happen.”
-----------------------------------------------------
+> During the next months, I'll be focusing on fixing some problems and surprises surfaced after the bundler 2.0 release, and bundler's integration into ruby-core. I'll also try to make sure we're protected against the same kind of things happening in future releases. I'd like the bundler team to be able to ship bug fix and feature releases more confidently, with less regressions, and without any surprises whatsoever for users.
+> 
+> For example,
+> 
+> * Users should be able to early opt in to certain new features, thus providing early feedback and bug reports without affecting the majority of the users not yet trying those features.
+> 
+> * The default availability of certain features should be toggleable in a smooth manner, by providing UI messages announcing the change, and a migration path for users who want to either migrate early, or stay in the old behavior.
+> 
+> * Features should be deprecatable, and finally removable through a smooth process that properly informs users about how to replace them with better alternatives.
+> 
+> * Really basic stuff, such as `gem install rails`, should be tested at the highest most realistic level, so that regressions never happen.
+> 
+> All of these ideas are currently half baked in bundler's master, but still require some work and some actual releases to wrap them up and put them into action. My project is about making this happen.
 
 In December, Bundler reached two huge and exciting milestones. First, Ruby included Bundler for the first time ever, including Bundler 1.17.2 in Ruby 2.6. Special thanks are due to [@hsbt](https://github.com/hsbt) for years worth of work integrating Bundler into the ruby-core test suite and keeping everything working and up to date.
 
@@ -130,6 +134,8 @@ On top of summing up our monthly reports, this report includes year-end compensa
 * Joel Watson, $0 for work as a board member
 * Jonan Scheffler, $0 for work as a board member
 * Valerie Woolard Srinivasan, $0 for work as a board member
+
+We're running somewhat behind from the holidays, but we're working to catch up—keep an eye out for the January monthly update soon.
 
 Until next time,<br>
 Stephanie, André and the Ruby Together team
