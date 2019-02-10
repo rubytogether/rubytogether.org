@@ -1,18 +1,16 @@
 ---
 summary: In December, we paid for 75 hours of developer work. In all of 2018, we paid for 1,394 hours of developer work, which included 21 Bundler and 11 RubyGems releases.
 ---
-Hello, and happy belated new year! Welcome to a year-end special edition of the monthly update: Ruby Together’s Yearly Update for 2018.
 
-There are more details in the following sections, but here’s the tl;dr: during 2018, we took in $300,183.32, we spent $266,900.32, and we paid for 1,394 hours of developer work on Ruby open source.
-
-Throughout the year, our work was supported by Handshake, Stripe, DigitalOcean, Airbnb, Travis CI, Coinbase, GitLab, reinteractive, Stitch Fix, Bleacher Report, Triplebyte, and many others.
-
-Some highlights from the year include shipping 21 Bundler releases, shipping 11 RubyGems releases, kicking off Ruby Toolbox 2.0, Bundler almost shipping with Ruby 2.5, and announcing Project Proposals and Ruby Me.
+Hello, and happy belated new year! Welcome to a year-end special edition of the monthly update: Ruby Together’s Yearly Update for 2018. Throughout the year, our work was supported by [Handshake](https://www.handshake.org), [Stripe](https://stripe.com/), [DigitalOcean](https://www.digitalocean.com/), [Airbnb](https://www.airbnb.com/), [Travis CI](https://travis-ci.org/), [Coinbase](https://www.coinbase.com), [GitLab](https://about.gitlab.com), [reinteractive](https://reinteractive.com), [Stitch Fix](https://www.stitchfix.com), [Bleacher Report](https://bleacherreport.com), [Triplebyte](https://triplebyte.com), and many others.
 
 ## ruby together news
 
-During December, Ruby Together was supported by a total of 65 different companies, including Sapphire member [Stripe](https://stripe.com), as well as 69 individual members and 64 friends of Ruby Together. Thanks to all of our members for making everything that we do possible. &lt;3
+There are more details in the following sections, but here’s the tl;dr: during 2018, we took in $300,183.32, we spent $266,900.32, and we paid for 1,394 hours of developer work on Ruby open source.
 
+Some highlights from the year include shipping 21 Bundler releases, shipping 11 RubyGems releases, kicking off Ruby Toolbox 2.0, Bundler almost shipping with Ruby 2.5, and announcing Project Proposals and Ruby Me.
+
+During December, Ruby Together was supported by a total of 65 different companies, including Sapphire member [Stripe](https://stripe.com), as well as 69 individual members and 64 friends of Ruby Together. Thanks to all of our members for making everything that we do possible. &lt;3
 
 ## now open: project funding proposals
 
