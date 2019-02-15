@@ -36,7 +36,7 @@ Rails.application.routes.draw do
   end
 
   scope :thanks, as: :thanks do
-    %w[friend member newsletter].each do |page|
+    %w[friend member newsletter confirmed].each do |page|
       get "/#{page}" => "thanks##{page}"
     end
   end
