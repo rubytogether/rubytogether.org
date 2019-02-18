@@ -15,7 +15,7 @@ class Membership < ActiveRecord::Base
   delegate :email, to: :user, allow_nil: true, prefix: true
 
   def has_stripe_subscriptions?
-    user && user.stripe_customer.subscriptions.any?
+    user&.stripe_customer&.subscriptions&.any?
   end
 
   scope :active, -> { where("expires_at > ?", Time.now) }
