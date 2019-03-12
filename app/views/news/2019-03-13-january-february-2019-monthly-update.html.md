@@ -56,7 +56,7 @@ In January and February, Bundler gained 110 new commits, contributed by 11 autho
 
 ## rubygems.org news
 
-In last two months, we released a new search API powered by Elasticsearch, which resolves multiple issues including [missing search results](https://github.com/rubygems/rubygems.org/issues/972) and [slow performance](https://github.com/rubygems/rubygems.org/issues/1256). Thanks to @lucianosousa, we are now using Rails 5.2.2. We would also like to let you know that we sprinkled some styling to our email templates and now they are no longer being marked as spam by some email providers. We haven't received any new help ticket for email being lost in last month—a good sign!
+In last two months, we updated the search API to use Elasticsearch, which resolves multiple issues including [missing search results](https://github.com/rubygems/rubygems.org/issues/972) and [slow performance](https://github.com/rubygems/rubygems.org/issues/1256). Thanks to @lucianosousa, we are now using Rails 5.2.2. We would also like to let you know that we sprinkled some styling to our email templates and now they are no longer being marked as spam by some email providers. We haven't received any new help ticket for email being lost in last month—a good sign!
 
 In mid February, we had to impose rate limit of one yank request per 10 min because we were seeing some users yank hundreds of gems at once. Our yank API endpoint was extremely slow, and hundreds of yanks at once was causing site instability. Since then we have worked hard on some optimizations and we are happy to report that we have brought down the average response time of Yank API from 4000 ms to 250 ms.
 
