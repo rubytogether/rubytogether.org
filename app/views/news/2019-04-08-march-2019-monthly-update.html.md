@@ -1,5 +1,5 @@
 ---
-summary: In March, we paid for 143 hours of developer work, shipped a RubyGems security release, and hired some security-focused help.
+summary: In March, we paid for 143 hours of developer work, re-opened applications for Ruby Me, and did a lot of maintenance work on Bundler, RubyGems, and RubyGems.org.
 ---
 
 Hello! Welcome to the monthly update. During March, our work was supported by [Handshake](https://handshake.org), [Stripe](https://stripe.com), [Triplebyte](https://triplebyte.com/os/rubytogether), [DigitalOcean](https://www.digitalocean.com), and many others.
