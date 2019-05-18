@@ -13,24 +13,43 @@ On top of those companies, 0 new developers signed up as members or friends of R
 
 ## bundler news
 
-SUMMARIZE [BUNDLER CHANGES](https://github.com/bundler/bundler/compare/master@%7B2019-03-01%7D...master@%7B2019-04-01%7D)
+In April, Bundler saw ongoing fixes for Windows, as well as progress on getting the test suite passing on Windows in Azure Pipelines. @deivid-rogriguez continued to clean up the test suite, making it more consistent, reliable, and organized. He also tested and repaired the mechanics for upcoming deprecations messages, ensuring that nothing will break, as well as `introducing [original\_env](https://github.com/bundler/bundler/pull/7052)` to clean up previous confusion around what `clean_env` might mean. We also fixed several other issues:
+  - Bundler could sometimes try to install versions that were not compatible with the running Ruby if it was rate-limited by RubyGems.org.
+  - The Bundler gemspec shipped with Ruby would sometimes be empty, because `git` is not available in the environment ruby-core uses to package default gems
+  - The `clean` command would not clean up unused extensions built for git gems
+  - Vendored dependencies like `fileutils` and `automatiek` were outdated
+  - The `info` command was missing some intended functionality
+  - The `exec` command was unable to run default gems that ship with Ruby
+
+Finally, in extremely exciting news, the process of merging Bundler and RubyGems has been [written down, discussed, and approved](https://github.com/bundler/rfcs/pull/18/) by both the RubyGems and Bundler maintainer teams! We'll keep you updated as we make progress on combining Bundler and RubyGems together.
 
 This month, Bundler gained 187 new commits, contributed by 10 authors. There were 2,613 additions and 1,743 deletions across 142 files.
+
 ## rubygems.org news
 
-SUMMARIZE [RUBYGEMS.ORG CHANGES](https://github.com/rubygems/rubygems.org/compare/master@%7B2019-03-01%7D...master@%7B2019-04-01%7D)
+Over on RubyGems.org, the yank rate limit was increased, password resets were updated to include two factor authentication, we added a webhook for yanking versions (thanks, @greysteil!), the Japanese translation was updated, and several other smaller issues were resolved.
 
 This month, Rubygems.org gained 36 new commits, contributed by 9 authors. There were 668 additions and 172 deletions across 43 files.
+
 ## rubygems news
 
-SUMMARIZE [RUBYGEMS CHANGES](https://github.com/rubygems/rubygems/compare/master@%7B2019-03-01%7D...master@%7B2019-04-01%7D)
+Various issues were resolved in RubyGems this month, including:
+  - Always expanding globbed file paths
+  - Setting permissions for non-owners on installed files
+  - Fixing `Gem::Requirement` so `~> 5.2` and `~> 5.2.0` are different, as intended
+  - Using `%x{}` for better Windows compatibility
+  - Removed a circular require in `rubygems/text`
+  - Added missing gem wrapper for default gem Bundler
+  - Bring back prompt for version if `uninstall` has multiple version options
+
+In addition to those issues, many old deprecations and other legacy code and test issues were cleaned up.
 
 This month, Rubygems gained 108 new commits, contributed by 9 authors. There were 618 additions and 219 deletions across 48 files.
+
 ## gemstash news
 
-SUMMARIZE [GEMSTASH CHANGES](https://github.com/bundler/gemstash/compare/master@%7B2019-03-01%7D...master@%7B2019-04-01%7D)
+Gemstash was pretty quiet this month, and only saw the test suite bumped to run against the latest versions of Ruby and some style fixes. There were 8 new commits from 4 contributors, including 8 additions and 8 deletions across 4 files.
 
-This month, Gemstash gained 0 new commits, contributed by 0 authors. There were 8 additions and 8 deletions across 4 files.
 ## budget &amp; expenses
 
 In April, we saw $25,145.47 in total income, and spent a total of $25,995.27.
