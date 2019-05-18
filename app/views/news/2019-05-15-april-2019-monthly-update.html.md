@@ -1,19 +1,20 @@
 ---
-summary: In April, we paid for 143 hours of developer work, shipped a RubyGems security release, and hired some security-focused help.
+summary: In April, we paid for 129 hours of developer work, hired new heads of community and growth, and saw a huge amount of work done on Bundler and RubyGems.
 ---
 
 Hello! Welcome to the monthly update. During April, our work was supported by [Handshake](https://handshake.org), [Stripe](https://stripe.com), [DigitalOcean](https://www.digitalocean.com), [Triplebyte](https://triplebyte.com/os/rubytogether), and many others.
 
 ## ruby together news
 
+The big news of April is that we grew our team to include new roles! [Matt Solt](https://twitter.com/mattsolt) joined us as our new head of growth, and [Monica Silvestre](https://twitter.com/monicasilvestre) is our new head of community. We're super excited to work with both of them to grow Ruby Together into a bigger and better resource for the entire Ruby community.
 
-In April, Ruby Together was supported by 60 different companies, including Sapphire member [Stripe](https://stripe.com). 0 companies joined as new members, including .
-
-On top of those companies, 0 new developers signed up as members or friends of Ruby Together, including . In total, we were supported by 62 individual members and 62 friends of Ruby Together. Thanks to all of our members for making everything that we do possible. &lt;3
+In April, Ruby Together was supported by 60 different companies, including Sapphire member [Stripe](https://stripe.com) and Ruby member [Handshake](https://handshake.org). 1 new company joined as a member. In addition to those companies, we were supported by 62 individual members and 62 friends of Ruby Together. Thanks to all of our members for making everything that we do possible. &lt;3
 
 ## bundler news
 
-In April, Bundler saw ongoing fixes for Windows, as well as progress on getting the test suite passing on Windows in Azure Pipelines. @deivid-rogriguez continued to clean up the test suite, making it more consistent, reliable, and organized. He also tested and repaired the mechanics for upcoming deprecations messages, ensuring that nothing will break, as well as `introducing [original\_env](https://github.com/bundler/bundler/pull/7052)` to clean up previous confusion around what `clean_env` might mean. We also fixed several other issues:
+In April, Bundler saw ongoing fixes for Windows, as well as progress on getting the test suite passing on Windows in Azure Pipelines. @deivid-rogriguez continued to clean up the test suite, making it more consistent, reliable, and organized. He also tested and repaired the mechanics for upcoming deprecations messages, ensuring that nothing will break, as well as introducing [`original_env`](https://github.com/bundler/bundler/pull/7052) to clean up previous confusion around what `clean_env` might mean.
+
+We also fixed several other issues:
   - Bundler could sometimes try to install versions that were not compatible with the running Ruby if it was rate-limited by RubyGems.org.
   - The Bundler gemspec shipped with Ruby would sometimes be empty, because `git` is not available in the environment ruby-core uses to package default gems
   - The `clean` command would not clean up unused extensions built for git gems
@@ -52,16 +53,19 @@ Gemstash was pretty quiet this month, and only saw the test suite bumped to run 
 
 ## budget &amp; expenses
 
-In April, we saw $25,145.47 in total income, and spent a total of $25,995.27.
+In April, we saw $13,057 in total income and $31,285.63 in total expenditure, to fund a total of 128.7 hours of developer work on Ruby open source.
 
-* $14,163 for 94.4 hours worked on Bundler at $150/hour
-* $4,670 for 31.1 hours worked on RubyGems.org at $150/hour
-* $915 for 6.1 hours worked on RubyGems at $150/hour
-* $1,740 for 11.6 hours worked on other OSS and devtools at $150/hour
-* $80.37 on dedicated servers for RubyBench.org
-* $812.12 on payment processing fees
-* $1,976.62 on company overhead like hosting, services, software, hardware, taxes, etc
-* $375.0 on accounting, copywriting, design, and other professional services
-* $1,263.66 on marketing, evangelism, and community outreach
+* $10,000 for 66.7 hours worked on Bundler at $150/hour
+* $1,562.50 for 10.4 hours worked on RubyGems.org at $150/hour
+* $4,678.12 for 31.2 hours worked on RubyGems at $150/hour
+* $2,559.38 for 17.1 hours worked on other OSS and devtools at $150/hour
+* $487.50 for 3.3 hours worked on The Ruby Toolbox at $150/hour
+* $77.18 on dedicated servers for RubyBench.org
+* $441.01 on payment processing fees
+* $7,023.65 on company overhead like hosting, services, software, hardware, taxes, etc
+* $1,952.33 on accounting, copywriting, design, and other professional services
+* $2,503.96 on marketing, evangelism, and community outreach
+
+
 Until next time,<br>
 André and the Ruby Together team
