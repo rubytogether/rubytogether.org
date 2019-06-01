@@ -1,44 +1,53 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 
-[User, Membership].each(&:destroy_all)
+[User, Membership].each(&:delete_all)
 expiration = 100.years.from_now
 
 andre = User.create!(
-  email: "mail@arko.net",
+  email: "andre@arko.net",
   encrypted_password: "$2a$12$lPDc097WBP/Fds25KKLFmOvpVk8jF5.8rqyoiU2gICtCwNV7phzSq",
 )
 
-Membership.create!(user: andre, name: "André <script>alert(1);</script> Arko",
-  kind: :individual, expires_at: expiration)
+Membership.create!(
+  user: andre,
+  name: "André <script>alert(1);</script> Arko",
+  level: :individual_medium,
+  expires_at: expiration
+)
 
-directors = [
-  "Aaron Patterson",
-  "Steve Klabnik",
-  "Sarah Mei",
-  "Terence Lee",
-  "Ines Sombra",
-  "Joel Watson"
-]
+directors = {
+  "Adarsh Pandit": :individual_large,
+  "Allison Sheren McMillan": :individual_medium,
+  "Coraline Ada Ehmke": :individual_small,
+  "Jonan Scheffler": :individual_large,
+  "Valerie Woolard Srinivasan": :individual_medium,
+}
 
-directors.each do |name|
-  Membership.create!(expires_at: expiration, kind: :individual, name: name)
+directors.each do |name, level|
+  Membership.create!(expires_at: expiration, level: level, name: name)
 end
 
 corporations = [
-  ["Stripe", "payments infrastructure for the internet", "http://stripe.com"],
-  ["Engine <script>alert(1);</script> Yard", "the platform-as-a-service of your <script>alert(1);</script> dreams", "http://engineyard<script>alert(1);</script>.com"]
+  ["Stripe", "payments infrastructure for the internet", "http://stripe.com", :corporate_ruby],
+  ["Bleacher <script>alert(1);</script> Report", "Bleacher <script>alert(1);</script> Report is the voice of today’s sports fan", "http://bleacherreport<script>alert(1);</script>.com", :corporate_sapphire]
 ]
 
-corporations.each do |name, description, url|
-  Membership.create!(expires_at: expiration, name: name, description: description, url: url, kind: :corporate_emerald)
+corporations.each do |name, description, url, level|
+  Membership.create!(
+    expires_at: expiration,
+    name: name,
+    description: description,
+    url: url,
+    level: level
+  )
 end
 
 Membership.create!(
   expires_at: expiration,
   name: "Kickstarter",
   url: "https://kickstarter.com",
-  kind: :corporate_topaz
+  kind: :corporate_emerald
 )
 
 User.update_all(created_at: 1.year.ago)

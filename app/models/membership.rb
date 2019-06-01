@@ -1,12 +1,6 @@
 require "membership_plan"
 
 class Membership < ActiveRecord::Base
-  enum kind: MembershipPlan.ids
-
-  def self.kinds_for(*kinds)
-    kinds.flatten.map{|k| Membership.kinds[k] }
-  end
-
   # Find all memberships where the user is on trial, i.e. annual members.
   def self.on_trial
     where user_id: User.on_trial.pluck(:id)
@@ -25,14 +19,12 @@ class Membership < ActiveRecord::Base
   scope :since, -> (time) { where("created_at > ?", time) }
   scope :prepaid, -> { where("expires_at > ?", 1.month.from_now) }
 
-  scope :developer, -> { where(kind: kinds_for(:individual)) }
-  scope :company, -> { where(kind: kinds_for(MembershipPlan.company_ids)) }
+  scope :individual, -> { where(levels: MembershipPlan.individual_ids) }
+  scope :company, -> { where(levels: MembershipPlan.company_ids) }
 
-  scope :featured_companies, -> {
-    where(kind: kinds_for(MembershipPlan.featured_ids)) }
-  scope :nonfeatured_companies, -> {
-    where(kind: kinds_for(MembershipPlan.nonfeatured_ids)) }
-  scope :plan, -> (plan) { where(kind: kinds_for("corporate_#{plan}".to_sym)) }
+  scope :featured_companies, -> { where(level: MembershipProduct.featured_ids) }
+  scope :nonfeatured_companies, -> { where(level: MembershipProduct.nonfeatured_ids) }
+  scope :plan, -> (plan) { where(level: "corporate_#{plan}") }
 
   belongs_to :user
 
