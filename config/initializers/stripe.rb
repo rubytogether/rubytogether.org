@@ -14,7 +14,6 @@ if ENV.has_key?("STRIPE_SIGNING_SECRET")
   StripeEvent.signing_secret = ENV['STRIPE_SIGNING_SECRET']
 end
 
-require "membership_plan"
 require "stripe_event/customer/source/created"
 require "stripe_event/invoice/payment_succeeded"
 require "stripe_event/invoice/payment_failed"
