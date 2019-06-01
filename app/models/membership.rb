@@ -27,7 +27,7 @@ class Membership < ActiveRecord::Base
   before_save :normalize_url
 
   def dollar_amount
-    amount / 100
+    plan.dollar_amount
   end
 
   def plan
