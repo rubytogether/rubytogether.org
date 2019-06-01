@@ -30,20 +30,16 @@ class Membership < ActiveRecord::Base
     amount / 100
   end
 
-  def product
-    MembershipProduct[level.to_sym]
+  def plan
+    MembershipPlan.monthly(level.to_sym)
   end
 
   def shortname
-    product.shortname
+    plan.product.shortname
   end
 
   def amount
-    stripe_subscription&.amount
-  end
-
-  def stripe_subscription
-    user&.stripe_customer&.subscriptions&.first
+    plan.amount
   end
 
   def status

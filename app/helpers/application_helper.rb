@@ -64,13 +64,13 @@ module ApplicationHelper
   end
 
   def link_to_plan(text, name, opts = {})
-    plan = MembershipPlan[name.to_sym]
+    plan = MembershipPlan.monthly(name.to_sym)
     dollars = plan.amount / 100
     text.gsub!("$$", "$#{dollars}")
     link_to(text, "javascript:;", opts.merge(
-      "data-subscription" => plan.id,
+      "data-subscription" => plan.stripe_id,
       "data-dollar-amount" => dollars,
-      "data-subscription-name" => plan.name
+      "data-subscription-name" => plan.nickname
     ))
   end
 
