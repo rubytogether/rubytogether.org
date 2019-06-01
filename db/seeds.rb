@@ -30,7 +30,8 @@ end
 
 corporations = [
   ["Stripe", "payments infrastructure for the internet", "http://stripe.com", :corporate_ruby],
-  ["Bleacher <script>alert(1);</script> Report", "Bleacher <script>alert(1);</script> Report is the voice of today’s sports fan", "http://bleacherreport<script>alert(1);</script>.com", :corporate_sapphire]
+  ["Bleacher <script>alert(1);</script> Report", "Bleacher <script>alert(1);</script> Report is the voice of today’s sports fan", "http://bleacherreport<script>alert(1);</script>.com", :corporate_sapphire],
+  ["Kickstarter", "won't show up", "https://kickstarter.com", :corporate_emerald],
 ]
 
 corporations.each do |name, description, url, level|
@@ -42,13 +43,6 @@ corporations.each do |name, description, url, level|
     level: level
   )
 end
-
-Membership.create!(
-  expires_at: expiration,
-  name: "Kickstarter",
-  url: "https://kickstarter.com",
-  kind: :corporate_emerald
-)
 
 User.update_all(created_at: 1.year.ago)
 Membership.update_all(created_at: 1.year.ago)

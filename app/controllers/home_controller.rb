@@ -25,9 +25,10 @@ class HomeController < ApplicationController
 private
 
   def levels_for(companies)
-    levels = companies.all.group_by{|c| c.kind.to_sym }.sort_by{|k,v| MembershipPlan.sorted_ids.index(k) }
+    levels = companies.all.group_by{|c| c.level.to_sym }.
+      sort_by{|k,v| MembershipProduct.sorted_ids.index(k) }
     levels.reverse.map do |plan_id, companies|
-      [MembershipPlan[plan_id].shortname, companies.map{|c| [c.name, c.url, c.description] }]
+      [MembershipProduct[plan_id].shortname, companies.map{|c| [c.name, c.url, c.description] }]
     end
   end
 

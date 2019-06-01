@@ -15,8 +15,8 @@ class Membership < ActiveRecord::Base
   scope :since, -> (time) { where("created_at > ?", time) }
   scope :prepaid, -> { where("expires_at > ?", 1.month.from_now) }
 
-  scope :individual, -> { where(levels: MembershipPlan.individual_ids) }
-  scope :company, -> { where(levels: MembershipPlan.company_ids) }
+  scope :individual, -> { where(level: MembershipProduct.individual_ids) }
+  scope :company, -> { where(level: MembershipProduct.company_ids) }
 
   scope :featured_companies, -> { where(level: MembershipProduct.featured_ids) }
   scope :nonfeatured_companies, -> { where(level: MembershipProduct.nonfeatured_ids) }
@@ -30,16 +30,20 @@ class Membership < ActiveRecord::Base
     amount / 100
   end
 
-  def plan
-    MembershipPlan[kind.to_sym]
+  def product
+    MembershipProduct[level.to_sym]
   end
 
   def shortname
-    plan.shortname
+    product.shortname
   end
 
   def amount
-    plan.amount
+    stripe_subscription&.amount
+  end
+
+  def stripe_subscription
+    user&.stripe_customer&.subscriptions&.first
   end
 
   def status
@@ -63,7 +67,7 @@ class Membership < ActiveRecord::Base
   end
 
   def corporate?
-    kind.start_with?("corporate")
+    level.start_with?("corporate")
   end
 
 private
