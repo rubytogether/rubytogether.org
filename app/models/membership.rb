@@ -1,10 +1,6 @@
 require "membership_plan"
 
 class Membership < ActiveRecord::Base
-  # Find all memberships where the user is on trial, i.e. annual members.
-  def self.on_trial
-    where user_id: User.on_trial.pluck(:id)
-  end
 
   delegate :email, to: :user, allow_nil: true, prefix: true
 
