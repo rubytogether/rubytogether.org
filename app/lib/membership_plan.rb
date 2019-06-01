@@ -1,8 +1,8 @@
 MembershipPlan = Struct.new(:product_id, :interval, :amount) do
   PLAN_INFO = {
-    individual_small: 10_00,
-    individual_medium: 50_00,
-    individual_large: 100_00,
+    developer_small: 10_00,
+    developer_medium: 50_00,
+    developer_large: 100_00,
     corporate_emerald: 500_00,
     corporate_sapphire: 2000_00,
     corporate_ruby: 5000_00,

@@ -81,12 +81,8 @@ class MemberInfo
     member_counts.select{|plan, count| MembershipPlan.company_ids.include?(plan.id.to_sym) }.map(&:last).sum
   end
 
-  def individual_count
-    member_counts.find{|plan, count| plan.id == "individual" }.last
-  end
-
-  def friend_count
-    member_counts.find{|plan, count| plan.id == "friend" }.last
+  def developer_count
+    member_counts.select{|plan, count| MembershipPlan.developer_ids.include?(plan.id.to_sym) }.map(&:last).sum
   end
 
   def companies_hash(kinds)
@@ -140,8 +136,7 @@ new_company_count = info.new_companies.count
 new_companies = info.new_companies.select{|c| c.name && c.url }.map{|c| [c.name, c.url] }.to_h
 
 company_count = info.company_count
-individual_count = info.individual_count
-friend_count = info.friend_count
+developer_count = info.developer_count
 
 # TODO: we can get this information from the financial_automation repo.
 income = 25145.47

@@ -12,16 +12,16 @@ andre = User.create!(
 Membership.create!(
   user: andre,
   name: "André <script>alert(1);</script> Arko",
-  level: :individual_medium,
+  level: :developer_medium,
   expires_at: expiration
 )
 
 directors = {
-  "Adarsh Pandit": :individual_large,
-  "Allison Sheren McMillan": :individual_medium,
-  "Coraline Ada Ehmke": :individual_small,
-  "Jonan Scheffler": :individual_large,
-  "Valerie Woolard Srinivasan": :individual_medium,
+  "Adarsh Pandit": :developer_large,
+  "Allison Sheren McMillan": :developer_medium,
+  "Coraline Ada Ehmke": :developer_small,
+  "Jonan Scheffler": :developer_large,
+  "Valerie Woolard Srinivasan": :developer_medium,
 }
 
 directors.each do |name, level|

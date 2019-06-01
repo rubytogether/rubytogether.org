@@ -1,12 +1,12 @@
 MembershipProduct = Struct.new(:id, :shortname, :name) do
 
   PRODUCT_MAP = {
-    individual_small: {name: 'Personal Member (Small)', shortname: 'personal'},
-    individual_medium: {name: 'Personal Member (Medium)', shortname: 'personal'},
-    individual_large: {name: 'Personal Member (Large)', shortname: 'personal'},
-    corporate_emerald: {name: 'Emerald Member', shortname: 'Emerald'},
-    corporate_sapphire: {name: 'Sapphire Member', shortname: 'Sapphire'},
-    corporate_ruby: {name: 'Ruby Member', shortname: 'Ruby'},
+    developer_small: {name: 'Developer Membership (Small)', shortname: 'developer'},
+    developer_medium: {name: 'Developer Membership (Medium)', shortname: 'developer'},
+    developer_large: {name: 'Developer Membership (Large)', shortname: 'developer'},
+    corporate_emerald: {name: 'Emerald Membership', shortname: 'Emerald'},
+    corporate_sapphire: {name: 'Sapphire Membership', shortname: 'Sapphire'},
+    corporate_ruby: {name: 'Ruby Membership', shortname: 'Ruby'},
   }.map{|id, i| [id, new(id, i[:shortname], i[:name])] }.to_h
 
   def self.all
@@ -23,11 +23,11 @@ MembershipProduct = Struct.new(:id, :shortname, :name) do
   end
 
   def self.sorted_ids
-    individual_ids + company_ids
+    developer_ids + company_ids
   end
 
-  def self.individual_ids
-    [:individual_small, :individual_medium, :individual_large]
+  def self.developer_ids
+    [:developer_small, :developer_medium, :developer_large]
   end
 
   def self.company_ids

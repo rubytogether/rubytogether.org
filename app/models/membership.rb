@@ -15,7 +15,7 @@ class Membership < ActiveRecord::Base
   scope :since, -> (time) { where("created_at > ?", time) }
   scope :prepaid, -> { where("expires_at > ?", 1.month.from_now) }
 
-  scope :individual, -> { where(level: MembershipProduct.individual_ids) }
+  scope :developer, -> { where(level: MembershipProduct.developer_ids) }
   scope :company, -> { where(level: MembershipProduct.company_ids) }
 
   scope :featured_companies, -> { where(level: MembershipProduct.featured_ids) }

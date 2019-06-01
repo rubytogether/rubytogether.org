@@ -6,8 +6,8 @@ class MigrateLegacySubsToLegacyPlans < ActiveRecord::Migration[5.2]
   def up
 
     map = {
-      friend: MembershipPlan.monthly(:individual_small),
-      individual: MembershipPlan.new(:individual_medium, :month, 40_00),
+      friend: MembershipPlan.monthly(:developer_small),
+      individual: MembershipPlan.new(:developer_medium, :month, 40_00),
       corporate_onyx: MembershipPlan.new(:corporate_emerald, :month, 50_00),
       corporate_jade: MembershipPlan.new(:corporate_emerald, :month, 100_00),
       corporate_topaz: MembershipPlan.new(:corporate_emerald, :month, 200_00),
