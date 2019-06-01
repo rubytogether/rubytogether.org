@@ -6,8 +6,8 @@ class MembershipsController < ApplicationController
 
   def create
     user = User.where(email: params.fetch(:email)).first_or_create!
-    token, kind = params.fetch(:token), params.fetch(:kind)
-    CreateMembership.run(membership_params, user, token, kind)
+    token, level = params.fetch(:token), params.fetch(:level)
+    CreateMembership.run(membership_params, user, token, level)
     sign_in(user)
 
     render json: {result: "success", url: thanks_member_path }
@@ -64,11 +64,6 @@ class MembershipsController < ApplicationController
   end
 
 private
-
-  def success_for(kind)
-    "Success! You are now a member of Ruby Together. " \
-      "We've sent you a welcome email with more information."
-  end
 
   def render_failure
     contact_us = self.class.helpers.contact_us

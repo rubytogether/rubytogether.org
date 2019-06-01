@@ -22,11 +22,11 @@ MembershipPlan = Struct.new(:product_id, :interval, :amount) do
   end
 
   def self.monthly(id)
-    PLAN_MAP.fetch(id).find{|plan| plan.interval == :month }
+    PLAN_MAP.fetch(id.to_sym).find{|plan| plan.interval == :month }
   end
 
   def self.yearly(id)
-    PLAN_MAP.fetch(id).find{|plan| plan.interval == :year }
+    PLAN_MAP.fetch(id.to_sym).find{|plan| plan.interval == :year }
   end
 
   def product
@@ -53,7 +53,8 @@ MembershipPlan = Struct.new(:product_id, :interval, :amount) do
   end
 
   def stripe_plan
-    self.class.stripe_plan(product.stripe_id, amount)
+    self.class.stripe_plan(product.stripe_id, amount) ||
+      raise("Could not find stripe plan for #{self.inspect}!")
   end
 
   def stripe_id
