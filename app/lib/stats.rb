@@ -38,40 +38,4 @@ class Stats
     message << ")\n"
   end
 
-  def self.expiring_annual_memberships
-    # no need to look at memberships that are already expired.
-    expiring_memberships = Membership.on_trial.where(
-      "expires_at BETWEEN ? AND ?", Time.now, 90.days.from_now
-    ).order("expires_at ASC")
-
-    if expiring_memberships.any?
-      message = "It appears that the following subscriptions are going to expire soon: \n"
-
-      expiring_memberships.each do |membership|
-        message << "*#{membership.name}* "
-        message << "https://dashboard.stripe.com/customers/#{membership.user.stripe_id}\n"
-        message << "Expires at: #{membership.expires_at.strftime("%A, %d %B %Y")}\n\n"
-      end
-
-      message
-    end
-  end
-
-  def self.expired_memberships(expires_at)
-    Membership.includes(:user).where(
-      "expires_at BETWEEN ? AND ?", expires_at, Time.now
-    ).select(&:has_stripe_subscriptions?).map do |membership|
-      "#{membership.user_email} -> https://dashboard.stripe.com/customers/#{membership.user.stripe_id}"
-    end.join("\n")
-  end
-
-  def self.monthly_revenue_projection
-    subscriber_counts = MembershipPlan.subscriber_counts
-    message = subscriber_counts.map do |plan, count|
-      "#{count} #{plan.name.pluralize(count)}"
-    end.to_sentence
-    estimate = MonthlyRevenue.projected(subscriber_counts, Membership.prepaid)
-    dollars = ActiveSupport::NumberHelper.number_to_currency(estimate/100)
-    message += ". Projected revenue now #{dollars} per month."
-  end
 end
