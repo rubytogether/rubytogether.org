@@ -5,14 +5,14 @@ class Stats
 
   def self.since(last_date)
     message = "\n"
-    new_members = Membership.active.since(last_date)
-    groups = new_members.group_by(&:kind)
-    plans = MembershipPlan.all.values.sort_by(&:amount)
+    new_members = Membership.active.since(last_date);
+    groups = new_members.group_by(&:level);
+    plans = MembershipPlan.all.sort_by(&:amount);
 
-    plans.select{|plan| groups[plan.id] }.
-      map{|plan| [plan, groups[plan.id]] }.
+    plans.select{|plan| groups[plan.product_id.to_s] }.
+      map{|plan| [plan, groups[plan.product_id.to_s]] }.
       each do |plan, group|
-        message << "#{group.size} new #{plan.shortname} #{"member".pluralize(group.size)}"
+        message << "#{group.size} new #{plan.product.shortname} #{"member".pluralize(group.size)}"
         names = group.map{|m| [m.name, m.url].compact.join(" ") if m.name }.compact
         message << " including\n - #{names.join("\n - ")}" if names.any?
         message << "\n"
@@ -25,16 +25,17 @@ class Stats
     message << "#{new_members.size} new #{"member".pluralize(new_members.size)} total\n"
     message << "\n"
 
-    counts = Membership.active.group(:kind).count.map do |id,c|
-      [MembershipPlan.all[id.to_sym], c]
+    counts = Membership.active.group(:level).count.map do |id, c|
+      [MembershipPlan.monthly(id), c]
     end.to_h
-    corp, dev = counts.partition{|s,c| s.id.start_with?("corporate") }
+
+    corp, dev = counts.partition{|s,c| s.corporate? }
     message << "#{corp.map(&:last).inject(:+)} #{"company".pluralize(companies.count)} ("
-    message << corp.sort_by{|s,c| -s.amount}.map{|s,c| "#{c} #{s.shortname}" }.join(", ")
+    message << corp.sort_by{|s,c| -s.amount}.map{|s,c| "#{c} #{s.product.shortname}" }.join(", ")
     message << ")\n"
 
     message << "#{dev.map(&:last).inject(:+)} #{"developer".pluralize(people.count)} ("
-    message << dev.sort_by{|s,c| -s.amount}.map{|s,c| "#{c} #{s.shortname}" }.join(", ")
+    message << dev.sort_by{|s,c| -s.amount}.map{|s,c| "#{c} #{s.product.shortname}" }.join(", ")
     message << ")\n"
   end
 

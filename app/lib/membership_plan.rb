@@ -29,6 +29,10 @@ MembershipPlan = Struct.new(:product_id, :interval, :amount) do
     PLAN_MAP.fetch(id.to_sym).find{|plan| plan.interval == :year }
   end
 
+  def corporate?
+    product_id.to_s.start_with?("corporate")
+  end
+
   def dollar_amount
     amount / 100
   end
