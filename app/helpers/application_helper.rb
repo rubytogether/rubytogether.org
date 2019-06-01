@@ -70,7 +70,7 @@ module ApplicationHelper
     link_to(text, "javascript:;", opts.merge(
       "data-subscription" => plan.product_id,
       "data-dollar-amount" => dollars,
-      "data-subscription-name" => plan.nickname
+      "data-subscription-name" => plan.name
     ))
   end
 

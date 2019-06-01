@@ -37,6 +37,10 @@ MembershipPlan = Struct.new(:product_id, :interval, :amount) do
     MembershipProduct[product_id]
   end
 
+  def name
+    "#{product.name.gsub(/ \(.*\)/, '')}"
+  end
+
   def nickname
     "#{product.name} #{interval.capitalize}ly"
   end
