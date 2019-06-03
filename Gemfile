@@ -51,5 +51,5 @@ end
 
 group :test do
   gem "webmock", "~> 3.5", require: false
-  gem "vcr", "~> 4.0"
+  gem "vcr", "~> 5.0"
 end
