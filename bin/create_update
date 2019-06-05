@@ -64,31 +64,25 @@ class MemberInfo
   end
 
   def new_member_groups
-    @new_member_groups ||= new_members.group_by(&:kind)
-  end
-
-  def plans
-    MembershipPlan.all.values.sort_by(&:amount)
+    @new_member_groups ||= new_members.group_by(&:level)
   end
 
   def member_counts
-    @member_counts ||= Membership.active.group(:kind).count.map do |id, count|
-      [MembershipPlan.all[id.to_sym], count]
-    end
+    @member_counts ||= Membership.active.group(:level).count
   end
 
   def company_count
-    member_counts.select{|plan, count| MembershipPlan.company_ids.include?(plan.id.to_sym) }.map(&:last).sum
+    member_counts.select{|plan, count| MembershipProduct.company_ids.include?(plan.to_sym) }.map(&:last).sum
   end
 
   def developer_count
-    member_counts.select{|plan, count| MembershipPlan.developer_ids.include?(plan.id.to_sym) }.map(&:last).sum
+    member_counts.select{|plan, count| MembershipProduct.developer_ids.include?(plan.to_sym) }.map(&:last).sum
   end
 
-  def companies_hash(kinds)
-    Membership.active.where(kind: Membership.kinds_for(kinds)).
+  def companies_hash(levels)
+    Membership.active.where(level: levels).
       where("name IS NOT NULL AND url IS NOT NULL").
-      to_a.sort_by{|m| kinds.index(m.kind.to_sym) }.
+      to_a.sort_by{|m| levels.index(level) }.
       map{|m| [m.name, m.url] }.to_h
   end
 
