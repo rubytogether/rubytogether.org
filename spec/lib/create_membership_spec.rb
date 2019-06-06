@@ -51,10 +51,10 @@ RSpec.describe CreateMembership do
   describe "#subscribe_to_plan" do
     let(:subs) { double("Subscriptions") }
     let(:user) { double("User", stripe_id: "cust_1", subscriptions: subs) }
-    let(:plan) { double("Plan", amount: 100, id: "plan") }
+    let(:plan) { double("Plan", amount: 100, stripe_id: "plan_1") }
 
     it "charges the user for the plan" do
-      expect(subs).to receive(:create).with(plan: plan.id)
+      expect(subs).to receive(:create).with(plan: plan.stripe_id)
       subject.subscribe_to_plan(user, plan)
     end
   end
@@ -66,13 +66,7 @@ RSpec.describe CreateMembership do
       slack = double("Slack").tap{|d| expect(d).to receive(:invite) }
       allow(Slack).to receive(:team) { slack }
 
-      plan = double(id: "individual")
-      subject.invite_to_slack(user, plan)
-    end
-
-    it "doesn't invite friends" do
-      plan = double(id: "friend")
-      subject.invite_to_slack(user, plan)
+      subject.invite_to_slack(user)
     end
   end
 

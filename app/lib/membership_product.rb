@@ -57,7 +57,7 @@ MembershipProduct = Struct.new(:id, :shortname, :name) do
   end
 
   def stripe_id
-    stripe_product.id
+    stripe_product&.id
   end
 
 end

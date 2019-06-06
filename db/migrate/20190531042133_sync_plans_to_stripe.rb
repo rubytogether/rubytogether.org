@@ -2,9 +2,11 @@ class SyncPlansToStripe < ActiveRecord::Migration[5.2]
   def up
 
     MembershipPlan.all.each do |plan|
-      if plan.stripe_plan
-        plan.stripe_plan.nickname = plan.nickname
-        plan.stripe_plan.save
+      existing = MembershipPlan.stripe_plan(plan.product, plan.amount)
+
+      if existing
+        existing.nickname = plan.nickname
+        existing.save
       else
         Stripe::Plan.create({
           amount: plan.amount,

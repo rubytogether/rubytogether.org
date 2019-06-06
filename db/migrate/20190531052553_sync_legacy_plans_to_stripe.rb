@@ -10,7 +10,7 @@ class SyncLegacyPlansToStripe < ActiveRecord::Migration[5.2]
     legacy_plans.each do |id, amounts|
       amounts.each do |amount|
         plan = MembershipPlan.new(id, :month, amount)
-        next if plan.stripe_plan
+        next if MembershipPlan.stripe_plan(plan.product, plan.amount)
 
         Stripe::Plan.create({
           amount: plan.amount,
