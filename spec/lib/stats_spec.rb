@@ -5,13 +5,13 @@ RSpec.describe Stats, :vcr do
   let!(:member_one) do
     stripe = Stripe::Customer.retrieve("cus_8ff9tXc0ra8927")
     Membership.create name: "Jane Doe", expires_at: 3.days.from_now,
-      level: :individual_small,
+      level: :developer_small,
       user: User.create(stripe_id: stripe.id, email: "jane@example.org")
   end
   let!(:member_two) do
     stripe = Stripe::Customer.retrieve("cus_8ff9KmLm6ZG9oW")
     Membership.create name: "Alice Re", expires_at: 3.weeks.from_now,
-      level: :developer_large,
+      level: :corporate_ruby,
       user: User.create(stripe_id: stripe.id, email: "alice@example.org")
   end
   let!(:member_three) do
@@ -33,11 +33,11 @@ RSpec.describe Stats, :vcr do
     it "is accurate" do
       response = subject.since(4.weeks.ago)
       expect(response).to be_present
-      expect(response).to include("1 new person") # $40/month
+      expect(response).to include("1 new developer") # $40/month
       expect(response).to include("2 new companies") # Ruby $5,000 + Onyx $50
       expect(response).to include("3 new members total") # Total $5,090
-      expect(response).to include("2 companies (1 Ruby, 1 Onyx)")
-      expect(response).to include("1 developer (1 personal)")
+      expect(response).to include("2 companies (1 Ruby, 1 Sapphire)")
+      expect(response).to include("1 developer (1 developer)")
     end
   end
 

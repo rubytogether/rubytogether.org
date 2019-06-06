@@ -14,7 +14,7 @@ RSpec.describe "Stripe webhooks", type: :request, vcr: true do
 
     context "when user's membership doesn't exist" do
       it "reports the missing membership to Rollbar" do
-        user = User.create!(stripe_id: "cus_8U1TcYRfvl8VqP", email: "alice@example.com")
+        User.create!(stripe_id: "cus_8U1TcYRfvl8VqP", email: "alice@example.com")
 
         expect(Rollbar).to receive(:error).with(ActiveRecord::RecordNotFound)
         post_stripe_event "customer_source_created"
@@ -57,38 +57,6 @@ RSpec.describe "Stripe webhooks", type: :request, vcr: true do
       ).flatten.first.to_s.chop
       expect(token).to be_present, "Password reset token was not found in the email."
       expect(User.with_reset_password_token(token)).to eq(user)
-    end
-  end
-
-  let(:slack_options) { {:username=>"Subscribers", :channel=>"#stripe", :icon_emoji=>":chart_with_upwards_trend:"} }
-
-  describe "customer.subscription.created" do
-    let(:message) {
-      "1 Onyx Member, 0 Emerald Members, 0 Jade Members, 2 Ruby Members, 0 Sapphire Members, 1 Topaz Member, 0 Friends of Ruby Together, and 1 Developer Member. Projected revenue now $10,810.00 per month."
-    }
-    let(:membership) { double(Membership) }
-    let(:user) { double(User, membership: membership) }
-
-    it "runs our hook" do
-      expect(User).to receive(:find_by_stripe_id).with("cus_8U1TcYRfvl8VqP").and_return(user)
-      expect(membership).to receive(:update).with(kind: "individual")
-
-      expect(Slack).to receive(:say).with(message, slack_options)
-      post_stripe_event "customer_subscription_created"
-    end
-  end
-
-  describe "customer.subscription.destroyed" do
-    let(:message) {
-      "1 Onyx Member, 0 Emerald Members, 0 Jade Members, 2 Ruby Members, 0 Sapphire Members, 1 Topaz Member, 0 Friends of Ruby Together, and 1 Developer Member. Projected revenue now $10,810.00 per month."
-    }
-
-    it "runs our hook" do
-      User.create!(stripe_id: "cus_6VvtoGAz7B9hfA", email: "alice@example.com")
-      expect(Slack).to receive(:say).with(message, slack_options)
-      expect(Slack).to receive(:deactivate).with("alice@example.com")
-      post_stripe_event "customer_subscription_deleted"
-      expect(response.code).to eq "200"
     end
   end
 

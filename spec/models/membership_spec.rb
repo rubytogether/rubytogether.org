@@ -41,17 +41,22 @@ RSpec.describe Membership, type: :model do
 
   describe "corporate?" do
     it "is true for :corporate_emerald" do
-      membership.kind = :corporate_emerald
+      membership.level = :corporate_emerald
       expect(membership).to be_corporate
     end
 
-    it "is false for :friend" do
-      membership.kind = :friend
+    it "is true for :corporate_ruby" do
+      membership.level = :corporate_ruby
+      expect(membership).to be_corporate
+    end
+
+    it "is false for :developer_small" do
+      membership.level = :developer_small
       expect(membership).to_not be_corporate
     end
 
-    it "is false for :individual" do
-      membership.kind = :individual
+    it "is false for :developer_medium" do
+      membership.level = :developer_medium
       expect(membership).to_not be_corporate
     end
   end
