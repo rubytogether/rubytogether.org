@@ -8,14 +8,14 @@ class CreateMembership
     new.run(*args)
   end
 
-  def run(info, user, token, plan_name)
+  def run(info, user, token, level)
     customer = customer_for(user)
     card = set_card(customer, token)
-    plan = plan_for(plan_name)
+    plan = MembershipPlan.monthly(level)
     subscribe_to_plan(customer, plan)
     create_membership_record(info, user, card, plan)
-    email_new_member(user, plan)
-    invite_to_slack(user, plan)
+    email_new_member(user)
+    invite_to_slack(user)
   rescue Stripe::CardError => e
     raise Error, e.message
   rescue => e
@@ -50,32 +50,28 @@ class CreateMembership
   end
 
   def subscribe_to_plan(customer, plan)
-    customer.subscriptions.create(plan: plan.id)
+    customer.subscriptions.create(plan: plan.stripe_id)
   end
 
   def create_membership_record(info, user, card, plan)
     attrs = info.merge(
-      kind: plan.id,
+      level: plan.product_id,
       card_brand: card.brand,
       card_last4: card.last4
     )
     user.create_membership!(attrs)
   end
 
-  def email_new_member(user, plan)
+  def email_new_member(user)
     token = user.generate_reset_password_token!
-    MembershipMailer.welcome(user, plan.id, token).deliver_later
+    MembershipMailer.welcome(user, token).deliver_later
   end
 
-  def invite_to_slack(user, plan)
-    Slack.invite(user.email) unless plan.id == "friend"
+  def invite_to_slack(user)
+    Slack.invite(user.email)
   rescue => e
     # Slack errors should not block signup, so report and continue
     Rollbar.error(e)
-  end
-
-  def plan_for(kind)
-    MembershipPlan[kind.to_sym] || raise("Unknown plan #{kind}")
   end
 
 end

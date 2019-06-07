@@ -16,10 +16,10 @@ RSpec.describe MembershipsController, type: :controller do
     end
 
     it "runs the membership creator" do
-      expect(CreateMembership).to receive(:run).with({}, user, "abc", "individual")
+      expect(CreateMembership).to receive(:run).with({}, user, "abc", "developer_medium")
 
       post :create, params: {
-        token: "abc", email: "alice@example.com", kind: "individual"
+        token: "abc", email: "alice@example.com", level: "developer_medium"
       }
 
       expect(JSON.parse(response.body)).to include("result" => "success")
@@ -28,10 +28,10 @@ RSpec.describe MembershipsController, type: :controller do
     it "forwards corporate membership information" do
       travel 1.hour do
         membership = hash_including("contact_name" => "Some One", "expires_at" => 1.month.from_now.iso8601)
-        expect(CreateMembership).to receive(:run).with(membership, user, "abc", "corporate")
+        expect(CreateMembership).to receive(:run).with(membership, user, "abc", "corporate_ruby")
 
         post :create, params: {
-          token: "abc", email: "alice@example.com", kind: "corporate",
+          token: "abc", email: "alice@example.com", level: "corporate_ruby",
           membership: {contact_name: "Some One"}
         }
 

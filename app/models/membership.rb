@@ -1,16 +1,6 @@
 require "membership_plan"
 
 class Membership < ActiveRecord::Base
-  enum kind: MembershipPlan.ids
-
-  def self.kinds_for(*kinds)
-    kinds.flatten.map{|k| Membership.kinds[k] }
-  end
-
-  # Find all memberships where the user is on trial, i.e. annual members.
-  def self.on_trial
-    where user_id: User.on_trial.pluck(:id)
-  end
 
   delegate :email, to: :user, allow_nil: true, prefix: true
 
@@ -25,29 +15,27 @@ class Membership < ActiveRecord::Base
   scope :since, -> (time) { where("created_at > ?", time) }
   scope :prepaid, -> { where("expires_at > ?", 1.month.from_now) }
 
-  scope :developer, -> { where(kind: kinds_for(:individual)) }
-  scope :company, -> { where(kind: kinds_for(MembershipPlan.company_ids)) }
+  scope :developer, -> { where(level: MembershipProduct.developer_ids) }
+  scope :company, -> { where(level: MembershipProduct.company_ids) }
 
-  scope :featured_companies, -> {
-    where(kind: kinds_for(MembershipPlan.featured_ids)) }
-  scope :nonfeatured_companies, -> {
-    where(kind: kinds_for(MembershipPlan.nonfeatured_ids)) }
-  scope :plan, -> (plan) { where(kind: kinds_for("corporate_#{plan}".to_sym)) }
+  scope :featured_companies, -> { where(level: MembershipProduct.featured_ids) }
+  scope :nonfeatured_companies, -> { where(level: MembershipProduct.nonfeatured_ids) }
+  scope :plan, -> (plan) { where(level: "corporate_#{plan}") }
 
   belongs_to :user
 
   before_save :normalize_url
 
   def dollar_amount
-    amount / 100
+    plan.dollar_amount
   end
 
   def plan
-    MembershipPlan[kind.to_sym]
+    MembershipPlan.monthly(level.to_sym)
   end
 
   def shortname
-    plan.shortname
+    plan.product.shortname
   end
 
   def amount
@@ -75,7 +63,7 @@ class Membership < ActiveRecord::Base
   end
 
   def corporate?
-    kind.start_with?("corporate")
+    level.start_with?("corporate")
   end
 
 private

@@ -37,29 +37,13 @@ jQuery(function($) {
       showFlash("Something went wrong. :(", "failure");
     };
 
-    var recordConversion = function(type, value) {
-      try {
-        ga('send', 'event', {
-          eventCategory: "Purchase",
-          eventAction: "new",
-          eventLabel: type,
-          eventValue: value
-        });
-      } catch(e) {
-        console.error(e);
-      }
-    };
-
     var sendToken = function(el) {
       return function(token) {
         blockUI();
-        var kind = el.data("subscription");
+        var level = el.data("subscription");
 
-        var url = (kind === "update") ? "/membership/card" : "/membership";
-        var data = {email: token.email, token: token.id, kind: kind};
-
-        var val = el.data("dollar-amount");
-        recordConversion("Membership", val);
+        var url = (level === "update") ? "/membership/card" : "/membership";
+        var data = {email: token.email, token: token.id, level: level};
 
         $.post(url, data).done(doneFn).fail(failFn);
       };
@@ -67,18 +51,18 @@ jQuery(function($) {
 
     $("a[data-subscription]").click(function(e) {
       var el = $(e.target);
-      var kind = el.data("subscription");
       var amount = el.data("dollar-amount");
+      var email = $(e.target).data("email");
 
       var options = {
         description: el.data("subscription-name") + " ($" + amount + "/mo)",
-        email: $(e.target).data("email"),
         image: "/images/rubies-square.png",
         key: $("meta[name=stripe-token]").attr("content"),
         name: "Ruby Together",
         panelLabel: "Subscribe",
         token: sendToken(el)
       };
+      if (email) { options["email"] = email; }
 
       StripeCheckout.configure(options).open();
       e.preventDefault();
@@ -87,6 +71,7 @@ jQuery(function($) {
     $("a[data-charge]").click(function(e) {
       var el = $(e.target);
       var amount = $("#" + el.data("amount-input")).val();
+      var email = $(e.target).data("email");
 
       var options = {
         description: "One-time contribution of $" + amount,
@@ -98,10 +83,10 @@ jQuery(function($) {
           blockUI();
           var url = "/charge";
           var data = {token: token.id, amount: amount, email: token.email};
-          recordConversion("One Time", amount);
           $.post(url, data).done(doneFn).fail(failFn);
         }
       };
+      if (email) { options["email"] = email; }
 
       StripeCheckout.configure(options).open();
       e.preventDefault();

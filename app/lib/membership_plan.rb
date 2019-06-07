@@ -1,85 +1,76 @@
-MembershipPlan = Struct.new(:id, :shortname, :name, :interval, :amount, :currency) do
-  class << self
-    attr_accessor :all
-  end
+MembershipPlan = Struct.new(:product_id, :interval, :amount) do
+  PLAN_INFO = {
+    developer_small: 10_00,
+    developer_medium: 50_00,
+    developer_large: 100_00,
+    corporate_emerald: 500_00,
+    corporate_sapphire: 2000_00,
+    corporate_ruby: 5000_00,
+  }
 
-  def self.[](name)
-    all[name]
-  end
-
-  def self.ids
-    # Postgres enums can't be re-ordered, so we have to keep this
-    # list in the order that the plans were created in.
-    [
-      :individual,
-      :corporate_emerald,
-      :friend,
-      :corporate_topaz,
-      :corporate_sapphire,
-      :corporate_ruby,
-      :corporate_jade,
-      :corporate_onyx,
+  PLAN_MAP = PLAN_INFO.inject({}) do |plans, (id, amount)|
+    plans[id] = [
+      new(id, :month, amount),
+      new(id, :year, amount * 12)
     ]
+
+    plans
   end
 
-  def self.sorted_ids
-    personal_ids + company_ids
+  def self.all
+    PLAN_MAP.values.flatten
   end
 
-  def self.personal_ids
-    [:friend, :individual]
+  def self.monthly(id)
+    PLAN_MAP.fetch(id.to_sym).find{|plan| plan.interval == :month }
   end
 
-  def self.company_ids
-    nonfeatured_ids + featured_ids
+  def self.yearly(id)
+    PLAN_MAP.fetch(id.to_sym).find{|plan| plan.interval == :year }
   end
 
-  def self.featured_ids
-    [:corporate_emerald, :corporate_sapphire, :corporate_ruby]
+  def corporate?
+    product_id.to_s.start_with?("corporate")
   end
 
-  def self.nonfeatured_ids
-    [:corporate_onyx, :corporate_jade, :corporate_topaz]
+  def dollar_amount
+    amount / 100
   end
 
-  def self.subscriber_counts
-    all.map do |id, plan|
-      [plan, plan.subscriber_count]
-    end.to_h
+  def product
+    MembershipProduct[product_id]
   end
 
-  def subscriber_count
-    Stripe::Subscription.list(
-      "include[]" => "total_count",
-      "limit" => 1,
-      "plan" => id,
-      "status" => "active"
-    ).total_count
+  def name
+    "#{product.name.gsub(/ \(.*\)/, '')}"
   end
 
-  def to_stripe
-    to_h.slice(:id, :name, :interval, :amount, :currency)
+  def nickname
+    "#{product.name} #{interval.capitalize}ly"
   end
+
+  def self.stripe_plans
+    @stripe_plans ||= Stripe::Plan.all.auto_paging_each.to_a
+  end
+
+  def self.reload_stripe_plans!
+    @stripe_plans = nil
+    stripe_plans
+  end
+
+  def self.stripe_plan(product_id, amount)
+    stripe_plans.find do |sp|
+      sp.product == product_id && sp.amount == amount
+    end
+  end
+
+  def stripe_plan
+    self.class.stripe_plan(product.stripe_id, amount) ||
+      raise("Could not find stripe plan for #{self.inspect}!")
+  end
+
+  def stripe_id
+    stripe_plan.id
+  end
+
 end
-
-MembershipPlan::INFO = {
-  corporate_onyx: {name: 'Onyx Member', amount: 5000, shortname: 'Onyx'},
-  corporate_emerald: {name: 'Emerald Member', amount: 80000, shortname: 'Emerald'},
-  corporate_jade: {name: 'Jade Member', amount: 10000, shortname: 'Jade'},
-  corporate_ruby: {name: 'Ruby Member', amount: 500000, shortname: 'Ruby'},
-  corporate_sapphire: {name: 'Sapphire Member', amount: 200000, shortname: 'Sapphire'},
-  corporate_topaz: {name: 'Topaz Member', amount: 20000, shortname: 'Topaz'},
-  friend: {name: 'Friend of Ruby Together', amount: 1000, shortname: 'friend'},
-  individual: {name: 'Developer Member', amount: 4000, shortname: 'personal'}
-}
-
-MembershipPlan.all = Hash[MembershipPlan::INFO.map do |id, info|
-  [id, MembershipPlan.new(
-    id.to_s,
-    info.fetch(:shortname),
-    info.fetch(:name),
-    info.fetch(:interval, 'month'),
-    info.fetch(:amount),
-    'usd'
-  )]
-end]

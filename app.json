@@ -1,6 +1,7 @@
 {
   "name": "rubytogether.org",
   "scripts": {
+    "postdeploy": "bundle exec rake db:migrate db:seed"
   },
   "env": {
     "CDN_HOST": {
@@ -56,9 +57,6 @@
     }
   },
   "formation": {
-    "worker": {
-      "quantity": 1
-    },
     "web": {
       "quantity": 1
     }

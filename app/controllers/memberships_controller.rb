@@ -6,11 +6,11 @@ class MembershipsController < ApplicationController
 
   def create
     user = User.where(email: params.fetch(:email)).first_or_create!
-    token, kind = params.fetch(:token), params.fetch(:kind)
-    CreateMembership.run(membership_params, user, token, kind)
+    token, level = params.fetch(:token), params.fetch(:level)
+    CreateMembership.run(membership_params, user, token, level)
     sign_in(user)
 
-    render json: {result: "success", url: redirect_url(kind) }
+    render json: {result: "success", url: thanks_member_path }
   rescue CreateMembership::Error => e
     render_failure
   rescue => e
@@ -65,12 +65,6 @@ class MembershipsController < ApplicationController
 
 private
 
-  def success_for(kind)
-    kind = "member" unless (kind == "friend")
-    "Success! You are now a #{kind} of Ruby Together. " \
-      "We've sent you a welcome email with more information."
-  end
-
   def render_failure
     contact_us = self.class.helpers.contact_us
     error = "There was an error while charging your card. It " \
@@ -95,15 +89,6 @@ private
 
     params.require(:membership).permit(:name, :url, :twitter, :description,
       :logo_url, :contact_name, :contact_phone, :contact_email).merge(expires_at: 1.month.from_now.iso8601)
-  end
-
-  def redirect_url(kind)
-    case kind
-    when "friend"
-      thanks_friend_path
-    else
-      thanks_member_path
-    end
   end
 
   def customer

@@ -11,11 +11,6 @@ class User < ActiveRecord::Base
 
   attr_writer :stripe_customer
 
-  # Return users that have a trial subscription, i.e. annual members.
-  def self.on_trial
-    where stripe_id: trial_stripe_subscriptions.map(&:customer)
-  end
-
   # Return users that are in a payment status of "delinquent".
   def self.delinquent
     where stripe_id: delinquent_customers.map(&:id)

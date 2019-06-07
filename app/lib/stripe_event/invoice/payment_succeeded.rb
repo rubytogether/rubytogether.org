@@ -62,8 +62,9 @@ module StripeEvent
       def customer_has_a_membership_plan?
         return false if customer.nil? || customer.deleted?
 
+        membership_plans = MembershipPlan.stripe_plans.map(&:id)
         customer.subscriptions.any? do |subscription|
-          MembershipPlan.ids.map(&:to_s).include?(subscription.plan.id)
+          membership_plans.include?(subscription.plan.id)
         end
       end
 
