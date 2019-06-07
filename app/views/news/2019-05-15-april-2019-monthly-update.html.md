@@ -35,6 +35,7 @@ This month, Rubygems.org gained 36 new commits, contributed by 9 authors. There 
 ## rubygems news
 
 Various issues were resolved in RubyGems this month, including:
+
   - Always expanding globbed file paths
   - Setting permissions for non-owners on installed files
   - Fixing `Gem::Requirement` so `~> 5.2` and `~> 5.2.0` are different, as intended
