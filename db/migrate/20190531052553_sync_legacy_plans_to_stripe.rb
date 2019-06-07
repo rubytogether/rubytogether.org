@@ -4,6 +4,7 @@ class SyncLegacyPlansToStripe < ActiveRecord::Migration[5.2]
     legacy_plans = {
       corporate_emerald: [50_00, 100_00, 200_00],
       corporate_sapphire: [800_00],
+      corporate_ruby: [2520_00],
       developer_medium: [40_00],
     }
 
