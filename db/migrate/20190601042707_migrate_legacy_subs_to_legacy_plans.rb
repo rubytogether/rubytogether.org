@@ -18,8 +18,8 @@ class MigrateLegacySubsToLegacyPlans < ActiveRecord::Migration[5.2]
     map.each do |source_plan_id, destination_plan|
       say "Migrating #{source_plan_id} to #{destination_plan.nickname} (Legacy)"
 
-      Membership.where(membership_plan_id: source_plan_id).
-        update(membership_plan_id: destination_plan.product_id)
+      Membership.where(level: source_plan_id).
+        update(level: destination_plan.product_id)
       say "Changed `#{source_plan_id}` in database to `#{destination_plan.product_id}`", true
 
       Stripe::Subscription.list(plan: source_plan_id).auto_paging_each do |sub|
