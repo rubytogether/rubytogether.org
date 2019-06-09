@@ -13,7 +13,7 @@ group :server do
   end
 end
 
-group :rspec do
+group :test do
   guard :rspec, cmd: "bin/rspec" do
     require "guard/rspec/dsl"
     dsl = Guard::RSpec::Dsl.new(self)
