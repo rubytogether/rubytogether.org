@@ -1,5 +1,5 @@
 # Overwrite any env with values from .env.test
-require 'dotenv'
+require "dotenv"
 Dotenv.overload(".env.test")
 
 $LOAD_PATH.unshift File.expand_path("../app/lib", __dir__)
@@ -19,7 +19,7 @@ RSpec.configure do |config|
   config.disable_monkey_patching!
 
   if config.files_to_run.one?
-    config.default_formatter = 'doc'
+    config.default_formatter = "doc"
   end
 
   config.order = :random
