@@ -40,20 +40,38 @@ RSpec.describe MembershipsController, type: :controller do
     end
   end
 
-  describe "card" do
+  shared_context "member" do
     let(:customer) { double(Customer) }
     let(:membership) { double(Membership) }
 
-    it "updates the card number locally and with stripe" do
+    before do
       allow(controller).to receive(:customer){ customer }
       allow(controller).to receive(:current_user){ user }
-      expect(customer).to receive(:replace_card).with("abc"){ double(last4: "1234", brand: "Visa") }
-
       allow(user).to receive(:membership){ membership }
+    end
+  end
+
+  describe "card" do
+    include_context "member"
+
+    it "updates the card number locally and with stripe" do
+      expect(customer).to receive(:replace_card).with("abc"){ double(last4: "1234", brand: "Visa") }
       expect(membership).to receive(:update!).with(card_brand: "Visa", card_last4: "1234")
 
       post :card, params: { token: "abc" }
       expect(JSON.parse(response.body)).to include("result" => "success")
+    end
+  end
+
+  describe "show" do
+    let(:user) { User.new(email: "alice@example.com") }
+    include_context "member"
+
+    it "renders successfully" do
+      token = "abc123"
+      expect(User).to receive(:with_reset_password_token).with(token){ user }
+      get :show, params: { token: token }
+      expect(response.body).to eq("")
     end
   end
 end
