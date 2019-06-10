@@ -1,5 +1,5 @@
 <%- if @membership.card_last4 -%>
-  <p><%= @membership.friend? ? "A monthly charge" : "Monthly membership dues" %> of <%= number_to_currency @membership.dollar_amount %> will be charged to your <span class="card-info"><%= @membership.card_brand %> ending in <%= @membership.card_last4 %></span>. To change the card we will charge, <%= link_to_card_form "update your payment information", @membership %>.</p>
+  <p>A <%= @membership.interval %>ly payment of <%= number_to_currency @membership.dollar_amount %> will be charged to your <span class="card-info"><%= @membership.card_brand %> ending in <%= @membership.card_last4 %></span>. To change the card we will charge, <%= link_to_card_form "update your payment information", @membership %>.</p>
 <%- else -%>
   <p>You have no payment information stored. You can <%= link_to_card_form "update your payment information", @membership %>.</p>
 <%- end -%>

@@ -31,7 +31,7 @@ class Membership < ActiveRecord::Base
   end
 
   def plan
-    MembershipPlan.monthly(level.to_sym)
+    MembershipPlan.send("#{interval}ly", level)
   end
 
   def shortname
