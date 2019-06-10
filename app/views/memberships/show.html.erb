@@ -3,7 +3,7 @@
 <section class="group">
   <%= render "member_status" %>
 
-  <%- if @membership.active? && @membership.card_last4 -%>
+  <%- if @membership.active? -%>
     <%= render "payment_info" %>
   <% end %>
 </section>
