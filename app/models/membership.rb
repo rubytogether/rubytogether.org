@@ -1,3 +1,28 @@
+# == Schema Information
+#
+# Table name: memberships
+#
+#  id            :integer          not null, primary key
+#  user_id       :integer
+#  name          :string
+#  description   :string
+#  kind          :integer          default(0)
+#  expires_at    :datetime
+#  card_brand    :string
+#  card_last4    :string
+#  url           :string
+#  twitter       :string
+#  contact_name  :string
+#  contact_phone :string
+#  logo_url      :string
+#  contact_email :string
+#  created_at    :datetime
+#  updated_at    :datetime
+#  cancelled_at  :datetime
+#  level         :string
+#  interval      :string           default("month")
+#
+
 require "membership_plan"
 
 class Membership < ActiveRecord::Base
