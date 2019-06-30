@@ -5,6 +5,8 @@ before_install: gem install bundler
 bundler_args: "--without production development"
 before_script: bin/setup
 script: bin/rake db:test:prepare spec
+services:
+  - postgresql
 notifications:
   slack:
     secure: A2U1yGwdkRCqimsBAUFFVxfqg0EqNEFHkQWLWpRcv5re4wJWKaDeZy2TAC50Ig+k+03ee3bEFs9ldgqvrj/ndPijqPShQq0vxKRTIVmVpyYB5iPLilI8bfgJPdBElvU12pEiIOs4fRegq3Xq3Gq/rMht/o2lBJEeJQFj3SP3nrg=
