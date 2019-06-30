@@ -25,6 +25,7 @@ gem "stripe_event", "~> 2.2"
 gem "uglifier", "~> 4.1"
 
 group :development do
+  gem "annotate", "~> 2.7"
   gem "guard-livereload", "~> 2.5", require: false
   gem "guard-rails", "~> 0.8"
   gem "guard-rspec", "~> 4.7"
@@ -53,3 +54,4 @@ group :test do
   gem "webmock", "~> 3.6", require: false
   gem "vcr", "~> 5.0"
 end
+
