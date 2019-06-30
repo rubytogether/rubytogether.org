@@ -34,8 +34,6 @@ group :development do
   gem "terminal-notifier-guard", "~> 1.7"
   gem "terminal-notifier", "~> 2.0"
   gem "web-console", "~> 3.7"
-  gem "wicked_pdf", "~> 1.4"
-  gem "wkhtmltopdf-binary", "~> 0.12.4"
 end
 
 group :development, :test do
