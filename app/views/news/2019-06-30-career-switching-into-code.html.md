@@ -43,4 +43,4 @@ Ruby Me is a three-month long paid mentorship program where early-career develop
 
 We’re also looking for experienced developers with a knack for teaching. Mentors and mentees work together remotely up to 8 hours every month, including documenting and sharing the results of their work. Each mentor and mentee earns USD$75 per hour for their work at the end of each month.
 
-Ruby Me is run by RubyTogether. We accept applications for apprentices and mentors about once every 3 months. Learn more about Ruby Me [here](https://rubyme.org/) and follow RubyTogether on [Twitter](www.twitter.com/rubytogether) to catch the next application window.
+Ruby Me is run by RubyTogether. We accept applications for apprentices and mentors about once every 3 months. Learn more about Ruby Me [here](https://rubyme.org/) and follow RubyTogether on [Twitter](https://www.twitter.com/rubytogether) to catch the next application window.
