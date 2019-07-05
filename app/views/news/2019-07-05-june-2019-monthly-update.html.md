@@ -1,5 +1,5 @@
 ---
-summary: In June, we paid for 143 hours of developer work, wrote a brief summary of what we did during the month.
+summary: In June, we paid for 61 hours of developer work, wrote a brief summary of what we did during the month.
 ---
 
 Hello! Welcome to the monthly update. During June, our work was supported by [Handshake](https://handshake.org), [Stripe](https://stripe.com), [Triplebyte](https://triplebyte.com/os/rubytogether), [Bleacher Report](http://www.bleacherreport.com), and many others.
@@ -40,13 +40,18 @@ This month, Gemstash gained 0 new commits, contributed by 0 authors. There were 
 
 ## budget &amp; expenses
 
-In June, we saw $25,145.47 in total income, and spent a total of $25,995.27.
+In June, we saw $11,474.28 in total income, and paid for 60.7 hours of development work while spending a total of $36,196.47.
 
-* Real
-* Financial
-* Report
-* Goes
-* Here
+* $2,117.50 for 14.1 hours worked on Bundler at $150/hour
+* $650 for 4.3 hours worked on RubyGems.org at $150/hour
+* $4,157.50 for 27.7 hours worked on RubyGems at $150/hour
+* $2,187.50 for 14.6 hours worked on other OSS and devtools at $150/hour
+* $9,018.09 for 60.1 hours of open source pairing in Ruby Me
+* $76.68 on dedicated servers for RubyBench.org
+* $391.22 on payment processing fees
+* $8,674.12 on company overhead like hosting, services, software, hardware, taxes, etc
+* $5,221.44 on accounting, copywriting, design, and other professional services
+* $3,702.42 on marketing, evangelism, and community outreach
 
 Until next time,<br>
 André and the Ruby Together team
