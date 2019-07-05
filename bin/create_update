@@ -82,16 +82,16 @@ class MemberInfo
   def companies_hash(levels)
     Membership.active.where(level: levels).
       where("name IS NOT NULL AND url IS NOT NULL").
-      to_a.sort_by{|m| levels.index(level) }.
+      to_a.sort_by{|m| levels.index(m) }.
       map{|m| [m.name, m.url] }.to_h
   end
 
   def headline_companies
-    companies_hash %i[corporate_ruby corporate_sapphire]
+    companies_hash %i[corporate_ruby]
   end
 
   def support_companies
-    companies_hash %i[corporate_emerald]
+    companies_hash %i[corporate_sapphire]
   end
 
   def top_companies
