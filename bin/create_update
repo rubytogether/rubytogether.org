@@ -15,8 +15,8 @@ end
 
 def commits_link_for(repo, date)
   "https://github.com/" << repo << "/compare/master@%7B" <<
-    date.advance(months: -1).iso8601 << "%7D...master@%7B" <<
-    date.iso8601 << "%7D"
+    date.beginning_of_month.iso8601 << "%7D...master@%7B" <<
+    date.end_of_month.iso8601 << "%7D"
 end
 
 def git_summary(repo, date)
@@ -137,22 +137,19 @@ income = 25145.47
 spent  = 25995.27
 hours_paid = 143.3
 budget_bullets = <<-END.gsub(/^  /, '').strip
-  * $14,163 for 94.4 hours worked on Bundler at $150/hour
-  * $4,670 for 31.1 hours worked on RubyGems.org at $150/hour
-  * $915 for 6.1 hours worked on RubyGems at $150/hour
-  * $1,740 for 11.6 hours worked on other OSS and devtools at $150/hour
-  * $80.37 on dedicated servers for RubyBench.org
-  * $812.12 on payment processing fees
-  * $1,976.62 on company overhead like hosting, services, software, hardware, taxes, etc
-  * $375.0 on accounting, copywriting, design, and other professional services
-  * $1,263.66 on marketing, evangelism, and community outreach
+  * Real
+  * Financial
+  * Report
+  * Goes
+  * Here
+
 END
 
 # TODO: this part probably needs a human to write it. Should we have
 # the script prompt the human for input, or should we drop them into
 # an editor with the rest of the update already filled out?
 brief_summary = <<-END.gsub(/^  /, '').strip
-  shipped a RubyGems security release, and hired some security-focused help
+  wrote a brief summary of what we did during the month
 END
 ruby_together_summary = <<-END.gsub(/^  /, '').strip
 
