@@ -43,7 +43,7 @@ def git_summary(repo, date)
     "#{additions_count == 1 ? 'was' : 'were'} " \
     "#{pluralize('addition', additions_count)} and " \
     "#{pluralize('deletion', deletions_count)} across " \
-    "#{pluralize('file', files_count)}."
+    "#{pluralize('file', files_count)}.\n"
 end
 
 class MemberInfo
@@ -150,21 +150,6 @@ END
 # an editor with the rest of the update already filled out?
 brief_summary = <<-END.gsub(/^  /, '').strip
   wrote a brief summary of what we did during the month
-END
-ruby_together_summary = <<-END.gsub(/^  /, '').strip
-
-END
-bundler_summary = <<-END.gsub(/^  /, '').strip
-
-END
-rubygems_summary = <<-END.gsub(/^  /, '').strip
-
-END
-rubygems_org_summary = <<-END.gsub(/^  /, '').strip
-
-END
-gemstash_summary = <<-END.gsub(/^  /, '').strip
-
 END
 
 if __FILE__ == $0
