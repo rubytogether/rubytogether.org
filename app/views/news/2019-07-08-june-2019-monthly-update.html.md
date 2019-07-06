@@ -10,37 +10,39 @@ In June, Ruby Together was supported by 57 different companies, including Sapphi
 
 Thanks to all of our members for making everything that we do possible. &lt;3
 
+We had a quieter month in June, but both [Ruby Me](https://rubyme.org) apprentices and [Google Summer of Code](https://summerofcode.withgoogle.com) students continued to work on Ruby open source projects.
+
 ## bundler news
 
-SUMMARIZE [BUNDLER CHANGES](https://github.com/bundler/bundler/compare/master@%7B2019-06-01%7D...master@%7B2019-06-30%7D)
+In June, Bundler saw ongoing fixes, including better support for Ruby 2.6 and integration with ruby-core. In addition, the `bundle clean` command was fixed for git gems in a symlinked location, and the gem management task `rake release` also added support for 2FA when pushing gems to RubyGems.org.
 
 This month, Bundler gained 151 new commits, contributed by 12 authors. There were 1,308 additions and 1,224 deletions across 137 files.
 
 ## rubygems.org news
 
-SUMMARIZE [RUBYGEMS.ORG CHANGES](https://github.com/rubygems/rubygems.org/compare/master@%7B2019-06-01%7D...master@%7B2019-06-30%7D)
+RubyGems.org had the usual ongoing security and dependency updates. It also saw improvements to the Fastly and Nginx configuration that will help us make it faster for newly uploaded gems to be able to be installed. Email notifications got visual design, password resets gained support for 2FA, API keys are now reset at the same time as passwords, and administrators now have more automation to deal with malicious gems or users more easily.
 
 This month, Rubygems.org gained 55 new commits, contributed by 8 authors. There were 2,458 additions and 1,961 deletions across 200 files.
 
 ## rubygems news
 
-SUMMARIZE [RUBYGEMS CHANGES](https://github.com/rubygems/rubygems/compare/master@%7B2019-06-01%7D...master@%7B2019-06-30%7D)
+RubyGems saw the usual ongoing fixes, including a fix for the `rubygems-update` gem that allows updating older versions of RubyGems to newer ones. David Rodriguez also did a huge amount of work on the RubyGems test suite, fixing many, many tests that either didn't clean up after themselves or didn't always pass.
 
 This month, Rubygems gained 103 new commits, contributed by 17 authors. There were 728 additions and 592 deletions across 37 files.
 
 ## gemstash news
 
-SUMMARIZE [GEMSTASH CHANGES](https://github.com/bundler/gemstash/compare/master@%7B2019-06-01%7D...master@%7B2019-06-30%7D)
+Gemstash had a calm month, seeing fixes for some rubocop and codeclimate issues, as well as fixes for some broken links.
 
-This month, Gemstash gained 0 new commits, contributed by 0 authors. There were 0 additions and 0 deletions across 0 files.
+This month, Gemstash gained 4 new commits, contributed by 4 authors. There were 19 additions and 18 deletions across 7 files.
 
-## ruby toolbox news
+## bridge troll news
 
-## bridgetroll news
+We've gotten two updates so far on work on Bridge Troll, which we've posted to [the Ruby Together news page](https://rubytogether.org/news). If you're interested in following the project, check out [the Bridge Troll project interview and updates](https://rubytogether.test/news/2019-07-07-helping-everyone-learn-to-code).
 
 ## budget &amp; expenses
 
-In June, we saw $11,474.28 in total income, and paid for 60.7 hours of development work while spending a total of $36,196.47.
+In June, we saw $11,474.28 in total income, and spent a total of $36,196.47.
 
 * $2,117.50 for 14.1 hours worked on Bundler at $150/hour
 * $650 for 4.3 hours worked on RubyGems.org at $150/hour
