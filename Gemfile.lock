@@ -259,8 +259,7 @@ GEM
     responders (2.4.1)
       actionpack (>= 4.2.0, < 6.0)
       railties (>= 4.2.0, < 6.0)
-    rollbar (2.20.2)
-      multi_json
+    rollbar (2.21.0)
     rspec (3.8.0)
       rspec-core (~> 3.8.0)
       rspec-expectations (~> 3.8.0)
@@ -367,7 +366,7 @@ DEPENDENCIES
   rails-controller-testing (~> 1.0.2)
   rails_12factor (~> 0.0)
   rdiscount (~> 2.2)
-  rollbar (~> 2.20)
+  rollbar (~> 2.21)
   rspec-rails (~> 3.8)
   sass-rails (~> 5.0)
   slack-notifier (~> 2.3)
