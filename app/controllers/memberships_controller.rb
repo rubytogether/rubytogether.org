@@ -22,6 +22,9 @@ class MembershipsController < ApplicationController
     # only set intercom user on this uncached page
     @intercom = Intercom.settings(current_user)
     get_membership
+
+    expires = customer.subscription_expires_at
+    @membership.update(expires_at: expires) if expires
   end
 
   def update

@@ -24,6 +24,10 @@ class Customer
     new_card
   end
 
+  def subscription_expires_at
+    Time.at(customer.subscriptions.map(&:current_period_end).max)
+  end
+
 private
 
   def find_customer(stripe_id)
