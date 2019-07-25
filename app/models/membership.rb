@@ -55,6 +55,13 @@ class Membership < ActiveRecord::Base
     plan.dollar_amount
   end
 
+  def stripe_dollar_amount
+    return @stripe_dollar_amount if @stripe_dollar_amount
+
+    stripe_amount = user&.stripe_customer&.subscriptions&.first&.plan&.amount
+    @stripe_dollar_amount = stripe_amount ? (stripe_amount / 100) : dollar_amount
+  end
+
   def plan
     MembershipPlan.send("#{interval}ly", level)
   end
