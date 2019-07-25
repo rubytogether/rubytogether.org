@@ -3,9 +3,14 @@ module StripeEvent
     class Changed < Base
 
       def call(event)
-        plan_id = event.data.object.plan.id.gsub(/_yearly$/, '')
-        user = User.find_by_stripe_id(event.data.object.customer)
-        user.try(:membership).try(:update, kind: plan_id)
+        user = user_for_event(event)
+        sub = subscription_for_event(user, event)
+
+        level = MembershipProduct.find_by_stripe_id(sub.plan.product).id
+        user&.membership&.update(
+          interval: sub.plan.interval,
+          level: level
+        )
       end
 
     end

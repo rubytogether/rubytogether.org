@@ -52,6 +52,10 @@ MembershipProduct = Struct.new(:id, :shortname, :name) do
     stripe_products
   end
 
+  def self.find_by_stripe_id(id)
+    all.find{|mp| mp.stripe_id == id }
+  end
+
   def stripe_product
     self.class.stripe_products.find{|product| product.name == name }
   end
