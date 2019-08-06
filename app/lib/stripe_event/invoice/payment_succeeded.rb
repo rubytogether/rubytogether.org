@@ -20,6 +20,10 @@ module StripeEvent
         set_event_subscription if charge?
         return unless subscription
 
+        # if there's no membership yet, our own write hasn't hit the database,
+        # and we should tell Stripe to try again later
+        return head(500) unless @user.membership
+
         # move back membership expiration time to the end paid for + 3.5 days.
         # The extra 3.5 days is for a payment failure grace period.
         @user.membership.update_attributes!(expires_at: new_period_end)
