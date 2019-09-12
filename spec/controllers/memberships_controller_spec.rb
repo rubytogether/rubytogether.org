@@ -41,13 +41,15 @@ RSpec.describe MembershipsController, type: :controller do
   end
 
   shared_context "member" do
-    let(:customer) { double(Customer) }
+    let(:expiration) { 1.week.from_now }
+    let(:customer) { double(Customer, subscription_expires_at: expiration) }
     let(:membership) { double(Membership) }
 
     before do
       allow(controller).to receive(:customer){ customer }
       allow(controller).to receive(:current_user){ user }
       allow(user).to receive(:membership){ membership }
+      allow(membership).to receive(:update).with(expires_at: expiration)
     end
   end
 
