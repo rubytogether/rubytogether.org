@@ -50,7 +50,7 @@ MembershipPlan = Struct.new(:product_id, :interval, :amount) do
   end
 
   def self.stripe_plans
-    @stripe_plans ||= Stripe::Plan.all.auto_paging_each.to_a
+    @stripe_plans ||= Stripe::Plan.list.auto_paging_each.to_a
   end
 
   def self.reload_stripe_plans!
