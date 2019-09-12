@@ -21,7 +21,7 @@ gem "rdiscount", "~> 2.2"
 gem "rollbar", "~> 2.22"
 gem "sass-rails", "~> 5.0"
 gem "slack-notifier", "~> 2.3"
-gem "stripe_event", "~> 2.2"
+gem "stripe_event", "~> 2.3"
 gem "uglifier", "~> 4.1"
 
 group :development do

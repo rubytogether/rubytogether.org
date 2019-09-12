@@ -44,7 +44,7 @@ MembershipProduct = Struct.new(:id, :shortname, :name) do
 
 
   def self.stripe_products
-    @stripe_products ||= Stripe::Product.all.auto_paging_each.to_a
+    @stripe_products ||= Stripe::Product.list.auto_paging_each.to_a
   end
 
   def self.reload_stripe_products!
