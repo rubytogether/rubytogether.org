@@ -44,7 +44,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    annotate (2.7.5)
+    annotate (3.0.2)
       activerecord (>= 3.2, < 7.0)
       rake (>= 10.4, < 13.0)
     arel (9.0.0)
@@ -168,7 +168,7 @@ GEM
     mimemagic (0.3.3)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.11.3)
+    minitest (5.12.2)
     multi_json (1.13.1)
     nenv (0.3.0)
     nilify_blanks (1.3.0)
@@ -332,7 +332,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  annotate (~> 2.7)
+  annotate (~> 3.0)
   compass-rails (~> 3.1)
   devise (~> 4.7.1)
   dotenv-rails (~> 2.7)
