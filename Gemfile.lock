@@ -307,7 +307,7 @@ GEM
     tilt (2.0.9)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    uglifier (4.1.20)
+    uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
@@ -366,7 +366,7 @@ DEPENDENCIES
   stripe_event (~> 2.3)
   terminal-notifier (~> 2.0)
   terminal-notifier-guard (~> 1.7)
-  uglifier (~> 4.1)
+  uglifier (~> 4.2)
   vcr (~> 5.0)
   web-console (~> 3.7)
   webmock (~> 3.7)
