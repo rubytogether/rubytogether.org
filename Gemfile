@@ -22,7 +22,7 @@ gem "rollbar", "~> 2.22"
 gem "sass-rails", "~> 5.0"
 gem "slack-notifier", "~> 2.3"
 gem "stripe_event", "~> 2.3"
-gem "uglifier", "~> 4.1"
+gem "uglifier", "~> 4.2"
 
 group :development do
   gem "annotate", "~> 2.7"
