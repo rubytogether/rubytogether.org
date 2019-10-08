@@ -1,5 +1,7 @@
-<%- if @membership.card_last4 -%>
-  <p>A <%= @membership.interval %>ly payment of <%= number_to_currency @membership.stripe_dollar_amount %> will be charged to your <span class="card-info"><%= @membership.card_brand %> ending in <%= @membership.card_last4 %></span>. To change the card we will charge, <%= link_to_card_form "update your payment information", @membership %>.</p>
-<%- else -%>
+<%- if @membership.active? && @membership.card_last4 -%>
+  <p>A <%= @membership.interval %>ly payment of <%= number_to_currency @membership.stripe_dollar_amount %> will be charged to your <span class="card-info"><%= @membership.card_brand %> ending in <%= @membership.card_last4 %></span>. The next charge will take place on <%= @membership.next_billing_date.to_s(:long) %>.</p>
+
+  <p>To change the card we will charge, <%= link_to_card_form "update your payment information", @membership %>.</p>
+<%- elsif @membership.active? -%>
   <p>You have no payment information stored. You can <%= link_to_card_form "update your payment information", @membership %>.</p>
 <%- end -%>

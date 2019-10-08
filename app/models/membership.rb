@@ -58,8 +58,16 @@ class Membership < ActiveRecord::Base
   def stripe_dollar_amount
     return @stripe_dollar_amount if @stripe_dollar_amount
 
-    stripe_amount = user&.stripe_customer&.subscriptions&.first&.plan&.amount
-    @stripe_dollar_amount = stripe_amount ? (stripe_amount / 100) : dollar_amount
+    amount = stripe_subscription&.plan&.amount
+    @stripe_dollar_amount = amount ? (amount / 100) : dollar_amount
+  end
+
+  def next_billing_date
+    return @next_billing_date if @next_billing_date
+
+    end_time = stripe_subscription&.current_period_end
+    end_time = end_time ? Time.at(end_time) : expires_at
+    @next_billing_date = end_time&.to_date
   end
 
   def plan
@@ -103,6 +111,10 @@ private
   def normalize_url
     return unless url
     self.url = "http://#{url}" unless url.match(/^https?\:\/\//)
+  end
+
+  def stripe_subscription
+    user&.stripe_customer&.subscriptions&.first
   end
 
 end
