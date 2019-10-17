@@ -33,7 +33,7 @@ Last but not least, we [announced an partnership with Tidelift](https://blog.tid
 Lots of great things are coming down the pipeline as we grow:
 
 - Merging Bundler and RubyGems into a single, unified project, simplifying updates and installation, eliminating version mismatches, and making the overall Ruby experience more seamless for new and existing Ruby developers.
-- Hiring full time developers to work on Bundler, RubyGems, Ruby Core, Rails and other critical projects within the Ruby ecosystem.
+- Hiring more developers to provide a steady cadence of ongoing maintenance and improvements for Bundler, RubyGems, the Ruby Toolbox, and other projects that benefit the Ruby community.
 - Increased opportunities for [RubyMe](rubyme.org) applicants and more awards through our open source [grant program](https://rubytogether.org/projects).
 - Expanding [RubyBench.org](https://rubybench.org/) into a public benchmark for every commit of Bundler, Rails, and Ruby itself. RubyBench is a long running benchmarking tool to ensure new code commits do not negatively impact performance.
 - Creating a public Ruby ecosystem analytics dashboard with vastly expanded statistics for Ruby, Bundler, and each gem.
