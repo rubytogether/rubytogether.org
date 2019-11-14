@@ -4,7 +4,7 @@ module StripeEvent
 
       def call(event)
         user = user_for_event(event)
-        sub = subscription_for_event(user, event)
+        sub = user_subscription_for_event(user, event)
 
         level = MembershipProduct.find_by_stripe_id(sub.plan.product).id
         user&.membership&.update(
