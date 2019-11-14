@@ -25,7 +25,8 @@ class Customer
   end
 
   def subscription_expires_at
-    Time.at(customer.subscriptions.map(&:current_period_end).max)
+    max = customer.subscriptions.map(&:current_period_end).max
+    max ? Time.at(max) : nil
   end
 
 private
