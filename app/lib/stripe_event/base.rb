@@ -20,8 +20,16 @@ module StripeEvent
     end
 
     def user_subscription_for_event(for_user, for_event)
-      for_user.stripe_customer.subscriptions.find do |subscription|
-        subscription.id == for_event.data.object.subscription
+      event_object = for_event.data.object
+      case event_object
+      when Stripe::Subscription
+        event_object
+      when Stripe::Invoice
+        for_user.stripe_customer.subscriptions.find do |subscription|
+          subscription.id == event_object.subscription
+        end
+      else
+        raise "oh no: #{for_event.inspect}"
       end
     end
 
