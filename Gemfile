@@ -25,7 +25,7 @@ gem "stripe_event", "~> 2.3"
 gem "uglifier", "~> 4.2"
 
 group :development do
-  gem "annotate", "~> 3.0"
+  gem "annotate", "~> 3.1"
   gem "guard-livereload", "~> 2.5", require: false
   gem "guard-rails", "~> 0.8"
   gem "guard-rspec", "~> 4.7"
