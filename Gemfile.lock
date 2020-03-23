@@ -74,7 +74,7 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.6)
-    css_parser (1.7.0)
+    css_parser (1.7.1)
       addressable
     devise (4.7.1)
       bcrypt (~> 3.0)
@@ -196,7 +196,7 @@ GEM
       addressable
       css_parser (>= 1.6.0)
       htmlentities (>= 4.0.0)
-    premailer-rails (1.10.3)
+    premailer-rails (1.11.0)
       actionmailer (>= 3)
       premailer (~> 1.7, >= 1.7.9)
     pry (0.12.2)
@@ -354,7 +354,7 @@ DEPENDENCIES
   nokogiri (~> 1.10)
   pg (~> 1.2)
   postmark-rails (~> 0.20)
-  premailer-rails (~> 1.10)
+  premailer-rails (~> 1.11)
   pry-byebug (~> 3.8)
   pry-rails (~> 0.3)
   puma (~> 4.3)
