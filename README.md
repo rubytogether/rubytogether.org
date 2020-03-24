@@ -1,6 +1,6 @@
 # rubytogether.org
 
-## local development
+## local development - TEST EDIT!!!
 
 Clone the repository and run `bin/setup`. Start a server with `bin/rails s`.
 
