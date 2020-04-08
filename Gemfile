@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 ruby File.read(File.expand_path("../.ruby-version", __FILE__)).chomp
 
-gem "rails", "~> 5.2"
+gem "rails", "~> 6.0.0"
 
 gem "compass-rails", "~> 4.0"
 gem "devise", '~> 4.7.1'
@@ -52,4 +52,3 @@ group :test do
   gem "webmock", "~> 3.8", require: false
   gem "vcr", "~> 5.1"
 end
-
