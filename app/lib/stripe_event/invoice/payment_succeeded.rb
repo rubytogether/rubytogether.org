@@ -22,7 +22,7 @@ module StripeEvent
 
         # if there's no membership yet, our own write hasn't hit the database,
         # and we should tell Stripe to try again later
-        return head(500) unless @user.membership
+        raise "Membership not ready yet" unless @user.membership
 
         # move back membership expiration time to the end paid for + 3.5 days.
         # The extra 3.5 days is for a payment failure grace period.
