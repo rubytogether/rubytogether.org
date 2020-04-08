@@ -30,4 +30,8 @@ private
     return nil if warden.nil?
     @current_user ||= warden.authenticate(scope: :user)
   end
+
+  def set_cache_control_headers
+    expires_in 24.hours, public: true
+  end
 end
