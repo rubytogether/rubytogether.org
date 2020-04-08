@@ -1,18 +1,19 @@
-FastlyRails.configure do |c|
-  c.api_key    = ENV.fetch("FASTLY_API_KEY")    # Fastly api key, required
-  c.service_id = ENV.fetch("FASTLY_SERVICE_ID") # The Fastly service you will be using, required
-end if ENV.has_key?("FASTLY_SERVICE_ID")
+require "fastly"
 
-module FastlyRails
+class FastlyRails
+  cattr_accessor :service
 
   def self.purge_by_key(key)
-    return unless configuration.service_id
-    client.purge_by_key(key)
+    self.service&.purge_by_key(key)
   end
 
   def self.purge_all
-    return unless configuration.service_id
-    client.client.post("#{Fastly::Service.get_path(service_id)}/purge_all")
+    self.service&.purge_all
   end
-
 end
+
+if ENV.has_key?("FASTLY_SERVICE_ID")
+  fastly = Fastly.new(api_key: ENV.fetch("FASTLY_API_KEY"))
+  FastlyRails.service = Fastly::Service.new({id: ENV.fetch("FASTLY_SERVICE_ID")}, fastly)
+end
+
