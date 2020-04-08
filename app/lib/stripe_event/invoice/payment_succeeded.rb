@@ -26,7 +26,7 @@ module StripeEvent
 
         # move back membership expiration time to the end paid for + 3.5 days.
         # The extra 3.5 days is for a payment failure grace period.
-        @user.membership.update_attributes!(expires_at: new_period_end)
+        @user.membership.update!(expires_at: new_period_end)
 
         # rebuild the members page in case this activated a membership
         FastlyRails.purge_by_key("members")

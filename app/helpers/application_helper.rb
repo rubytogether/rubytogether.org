@@ -49,8 +49,9 @@ module ApplicationHelper
   end
 
   def link_to_tweet(text, tweet, url = nil)
-    twitter_url = "https://twitter.com/intent/tweet?text=#{URI.escape(tweet)}"
-    twitter_url << "&url=#{URI.escape(url)}" if url
+    params = {text: tweet}
+    params[:url] = url if url
+    twitter_url = "https://twitter.com/intent/tweet?#{params.to_query}"
     link_to text, twitter_url
   end
 
