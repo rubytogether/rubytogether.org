@@ -48,8 +48,8 @@ private
 
   def build_surrogate_control(max_age, opts)
     surrogate_control = "max-age=#{max_age}"
-    stale_while_revalidate = opts[:stale_while_revalidate] || FastlyRails.configuration.stale_while_revalidate
-    stale_if_error = opts[:stale_if_error] || FastlyRails.configuration.stale_if_error
+    stale_while_revalidate = opts[:stale_while_revalidate]
+    stale_if_error = opts[:stale_if_error]
 
     surrogate_control += ", stale-while-revalidate=#{stale_while_revalidate}" if stale_while_revalidate
     surrogate_control += ", stale-if-error=#{stale_if_error}" if stale_if_error
