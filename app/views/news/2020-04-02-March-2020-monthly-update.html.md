@@ -39,15 +39,11 @@ For the month, RubyGems.org received [80 commits](https://github.com/rubygems/ru
 
 ## rubygems news
 
-Ruby Gems saw general maintenance and work on deprecations warnings improvements, as well as a fix to our internal bot that label PR's and issues. One of our developers on this project Louis also reviewed PR's, triaged issues, began to get familiar with Bundler issues as a part of the Bundler and RubyGems merging process. 
+As mentioned above, the huge news is that Bundler merged into RubyGems! Major props to @hsbt for sending the PR to combine repositories, as well as @deivid-rodruiguez for helping troubleshoot, fix CI, and get the PR landed.
 
-[RUBYGEMS CHANGES](https://github.com/rubygems/rubygems/compare/master@%7B2019-07-01%7D...master@%7B2019-07-31%7D)
+On top of that huge accomplishment, RubyGems saw ongoing maintenance and bugfixes, improved tests on JRuby, better deprecation warnings, and fixes for the internal bot that labels PRs and issues. The RubyGems team spent time to get more familiar with newly imported Bundler issues, and the Bundler team spent time getting more familiar with RubyGems, as well as the usual PR review and issue triage.
 
-This month, Rubygems gained 63 new commits, contributed by 8 authors. There were 476 additions and 222 deletions across 32 files.
-
-
-
-
+In March, RubyGems gained [more than 10,000 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2020-03-01%7D...master@%7B2020-03-31%7D) (which includes all of Bundler's history!) contributed by 21 authors. There were 96,617 additions and 961 deletions across 1,423 files.
 
 
 ## ruby toolbox news
