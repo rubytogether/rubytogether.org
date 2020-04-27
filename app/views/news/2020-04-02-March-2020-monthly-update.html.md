@@ -34,9 +34,7 @@ In March, thanks to Aditya and Colby we were able to update most of our gem depe
 
 To mitigate against typo-squatting, we were previously maintaining a protected list of gem names using the Levenshtein distance. Unfortunately, the check turned out to be too strict, and caused more problems than it was solving. We have disabled it for now, and we are looking into other ways to deal with typo-squatting. Thank you for bearing with us while we figure this out.
 
-[RUBYGEMS.ORG CHANGES](https://github.com/rubygems/rubygems.org/compare/master@%7B2019-07-01%7D...master@%7B2019-07-31%7D) 
-
-Last month, rubygems.org received 76 commits from 6 authors, who made  287 additions and 204 deletions across 13 files.
+For the month, RubyGems.org received [80 commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2020-03-01%7D...master@%7B2020-03-31%7D) from 6 authors, who made 294 additions and 206 deletions across 17 files.
 
 
 ## rubygems news
