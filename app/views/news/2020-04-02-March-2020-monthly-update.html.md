@@ -18,6 +18,16 @@ Since our last update, Ruby Together was supported by 46 different companies, in
 
 On top of those companies, 26 new developers signed up as members, including Matt Sias, Ollie Bennett, @MikeRogers0, Mike Boone, Crawford Wynnes, Philip Arndt, Jimmy Chu, Tobias Pfeiffer, Thomas Powell, Shupport, Brandon Weaver, Michelle Ng SY, Pascal Wengerter, David Revelo, Michael Verret Jr, and Jared White. In total, we were supported by 108 developer members. Thanks to all of our members for making everything that we do possible. &lt;3
 
+## ruby me news
+
+Although our last RubyMe session wasn't in March, we wanted to highlight our successful RubyMe session during 2019. We received almost 100 applications from prospective apprentices and about a dozen applications from prospective mentors. Our budget let us accept six mentor/apprentice pairs, and each pair worked together for 12 weeks between May and August 2019. They were able to contribute to several Ruby open source projects including [Ruby on Rails](https://rubyonrails.org), [If-me](), [Dev.to](), [Homebrew](), [Gemstash](), and [Babywearing]() from [Ruby for Good]().
+
+We're proud to report that two of our mentees landed jobs shortly after the session closed. Congrats to both of them!
+
+If you want to know right away next time we're able to open applications, sign up for our RubyMe-only newsletter at [rubyme.org](https://rubyme.org).
+
+Future RubyMe sessions will happen as often as we are able to set aside budget for them, but current circumstances mean we're not sure how soon that will be. If your company would be interested in sponsoring our next RubyMe session, please [get in touch](mailto:hello+rubymesponsor@rubytogether.org)!
+
 
 ## bundler news
 
@@ -56,24 +66,6 @@ For this month apart from officially launching the API I will mainly investigate
 
 I hope you all get through the ongoing crisis well and wish you all the best,
 Chris
-
-## ruby me news
-
-Although this work didn’t happen in March, we wanted to highlight our successful RubyMe session in Q2 of last year. We received over [900] applications from prospective apprentices and over [125] applications from prospective mentors. We selected nine pairs: 
-
-Ifunanya [last name] (mentee) and Jan [last name] (mentor)
-Alicia [last name] (mentee) and Juan [last name] (mentor) 
-Niko [last name] and (mentee) Maryam [last name] (mentor)
-Janessa [last name] (mentee) and Bracken [last name] (mentor)
-Morgan [last name] (mentee) and Alexis [last name] (mentor)
-
-[insert last three pairs] 
-
-The pairs worked together from May through July 2019 on projects including Ruby on Rails, If-me, Dev.to, Homebrew, Gemstash, CDN (?), ActiveRecord (?), a Google profile images feature, and the Babywearing open source project  
-
-Two of our mentees — Alicia and Janessa — landed jobs shortly after our session closed. Congrats!  
-
-[Optional: Current status/future plans (e.g. "We plan to open applications for Spring 2019 around the middle of December. If you'd like to get an email right away when we next open applications for Ruby Me, visit rubyme.org and sign up to be notified at the bottom of the page.")]
 
 ## google summer of code news
 
