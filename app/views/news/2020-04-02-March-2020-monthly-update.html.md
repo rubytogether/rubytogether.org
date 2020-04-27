@@ -19,18 +19,14 @@ Since our last update, Ruby Together was supported by 46 different companies, in
 On top of those companies, 26 new developers signed up as members, including Matt Sias, Ollie Bennett, @MikeRogers0, Mike Boone, Crawford Wynnes, Philip Arndt, Jimmy Chu, Tobias Pfeiffer, Thomas Powell, Shupport, Brandon Weaver, Michelle Ng SY, Pascal Wengerter, David Revelo, Michael Verret Jr, and Jared White. In total, we were supported by 108 developer members. Thanks to all of our members for making everything that we do possible. &lt;3
 
 
-
 ## bundler news
 
-Amazingly, all that work that the entire Bundler and RubyGems teams have been working at for years has paid off in a really big way: Bundler and RubyGems have merged repositories. On GitHub, `bundler/bundler` is archived, with all ongoing work on either project now taking place inside `rubygems/rubygems`. All other repositories from the Bundler organization have either been archived (if unused) or moved to the RubyGems organization.
+Amazingly, all that work that the entire Bundler and RubyGems teams have been working at for years has paid off in a really big way: Bundler and RubyGems have merged repositories! On GitHub, `bundler/bundler` is archived, and all ongoing work on both projects now takes place inside `RubyGems/RubyGems`. All other repositories from the Bundler organization have either been archived (if unused) or moved to the RubyGems organization.
 
-Not just the repositories have changed, either: the Bundler and RubyGems teams have merged as well. It’ll take us some time to work through 20 years worth of documentation and webpages, but we’re planning to combine and update them as fast as we can.
+Not just the repositories have changed, either: the Bundler and RubyGems teams have merged as well. It’ll take us some time to work through 20 years worth of documentation and webpages, but we’ll be combining and updating them as fast as we can.
 
-Starting with the next update, Bundler news will be reported together with RubyGems news. Hooray!
+From this point forward, Bundler news will be reported together with RubyGems news. Hooray! 🎉
 
-[BUNDLER CHANGES](https://github.com/bundler/bundler/compare/master@%7B2019-07-01%7D...master@%7B2019-07-31%7D)
-
-This month, Bundler gained 0 new commits, contributed by 0 authors. There were 0 additions and 0 deletions across 0 files.
 
 ## rubygems.org news
 
