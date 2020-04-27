@@ -4,15 +4,9 @@
     "postdeploy": "bundle exec rake db:migrate db:seed"
   },
   "env": {
-    "DATABASE_URL": {
-      "required": true
-    },
-    "LANG": "en_US.UTF-8",
     "POSTMARK_API_TOKEN": {
       "required": true
     },
-    "RACK_ENV": "production",
-    "RAILS_ENV": "production",
     "SECRET_KEY_BASE": {
       "required": true,
       "generator": "secret"
