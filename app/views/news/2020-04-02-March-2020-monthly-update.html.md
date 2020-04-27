@@ -14,11 +14,11 @@ Hello! Welcome to the monthly update. During March, our work was supported by [H
 >
 > &mdash; André
 
+Since our last update, Ruby Together was supported by 46 different companies, including Ruby members [Stripe](https://stripe.com) and [Handshake](https://handshake.org). In that time, 4 other companies joined as new members.
+
+On top of those companies, 26 new developers signed up as members, including Matt Sias, Ollie Bennett, @MikeRogers0, Mike Boone, Crawford Wynnes, Philip Arndt, Jimmy Chu, Tobias Pfeiffer, Thomas Powell, Shupport, Brandon Weaver, Michelle Ng SY, Pascal Wengerter, David Revelo, Michael Verret Jr, and Jared White. In total, we were supported by 108 developer members. Thanks to all of our members for making everything that we do possible. &lt;3
 
 
-In March, Ruby Together was supported by 46 different companies, including Sapphire member [Stripe](https://stripe.com). 15 companies joined as new members, including .
-
-On top of those companies, 15 new developers signed up as members, including Mike Boone, Tobias Pfeiffer, Ollie Bennett, Jimmy Chu (HKWTF), Philip Arndt, Thomas Powell, Matt Sias, Jimmy Chu, Brandon Weaver, Michael Verret Jr, Pascal Wengerter, Michelle Ng SY, and David Revelo. In total, we were supported by 108 developer members. Thanks to all of our members for making everything that we do possible. &lt;3
 
 ## bundler news
 
