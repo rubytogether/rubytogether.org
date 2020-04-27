@@ -96,9 +96,16 @@ Google Summer of Code is upon us again, and this year the inimitable volunteers 
 
 ## budget &amp; expenses
 
-In March, we saw $25,145.47 in total income, and spent a total of $25,995.27.
+Since our last update, we've changed bookkeepers, and we plan to use budget reports directly from the professionals from now on. With that said, here's our budget for March 2020.
 
-* (Need help with spreadsheet)
+In March, we saw $21,351.16 in total income, and spent a total of $25,995.27.
+
+* Stripe Payment Processing Fees $376.94
+* Employee Related $135.71
+* General & Administrative $3,328.13
+* IT & Software $1,072.74
+* Professional Fees	$319.00
+* 123.5 hours of development work $18,519.59
 
 Until next time,<br>
-André and the Ruby Together team
+Irene, André, and the Ruby Together team
