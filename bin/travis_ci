@@ -1,4 +1,0 @@
-#!/bin/bash
-set -v
-export RUBYOPT="-W:no-deprecated -W:no-experimental"
-bin/rake db:test:prepare spec

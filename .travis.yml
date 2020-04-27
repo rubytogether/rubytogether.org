@@ -4,7 +4,9 @@ language: ruby
 cache: bundler
 bundler_args: "--without production development"
 before_script: bin/setup
-script: bin/travis_ci
+script: bin/rake db:test:prepare spec
+env:
+  RUBYOPT: "-W:no-deprecated -W:no-experimental"
 services:
   - postgresql
 notifications:
