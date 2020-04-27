@@ -4,50 +4,18 @@
     "postdeploy": "bundle exec rake db:migrate db:seed"
   },
   "env": {
-    "CDN_HOST": {
-      "required": true
-    },
     "DATABASE_URL": {
       "required": true
     },
-    "DEFAULT_URL": {
-      "required": true
-    },
-    "INTERCOM_KEY": {
-      "required": true
-    },
-    "LANG": {
-      "required": true
-    },
-    "LIBRATO_SOURCE": {
-      "required": true
-    },
-    "HEROKU_APP_NAME": {
-      "required": true
-    },
-    "HEROKU_PARENT_APP_NAME": {
-      "required": true
-    },
-    "NEW_RELIC_APP_NAME": {
-      "required": true
-    },
+    "LANG": "en_US.UTF-8",
     "POSTMARK_API_TOKEN": {
       "required": true
     },
-    "POSTMARK_INBOUND_ADDRESS": {
-      "required": true
-    },
-    "POSTMARK_SMTP_SERVER": {
-      "required": true
-    },
-    "RACK_ENV": {
-      "required": true
-    },
-    "RAILS_ENV": {
-      "required": true
-    },
+    "RACK_ENV": "production",
+    "RAILS_ENV": "production",
     "SECRET_KEY_BASE": {
-      "required": true
+      "required": true,
+      "generator": "secret"
     },
     "STRIPE_PUBLIC_KEY": {
       "required": true
