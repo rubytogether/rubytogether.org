@@ -1,5 +1,5 @@
 ---
-summary: In March, we paid for xxx hours of developer work, [write brief summary of what we did during the month.]
+summary: In March, we paid for 123.5 hours of developer work, retired the Bundler repository and GitHub organization, and completed many fixes and improvements for the RubyGems.org website.
 ---
 
 Hello! Welcome to the monthly update. During March, our work was supported by [Handshake](https://handshake.org), [Stripe](https://stripe.com), [DigitalOcean](https://www.digitalocean.com), [Bleacher Report](http://www.bleacherreport.com), and many others.
