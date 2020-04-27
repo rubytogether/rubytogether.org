@@ -3,10 +3,8 @@ dist: xenial
 language: ruby
 cache: bundler
 bundler_args: "--without production development"
-before_script: bin/setup
-script: bin/rake db:test:prepare spec
-env:
-  RUBYOPT: "-W:no-deprecated -W:no-experimental"
+before_script: RUBYOPT="-W:no-deprecated -W:no-experimental" bin/setup
+script: RUBYOPT="-W:no-deprecated -W:no-experimental" bin/rake db:test:prepare spec
 services:
   - postgresql
 notifications:
