@@ -60,9 +60,9 @@ This month, Rubygems gained 63 new commits, contributed by 8 authors. There were
 
 Hey everyone,
 
-last month I wrapped up and launched an API for Ruby Toolbox which allows you to query project data. While it has not received the full announcement blog post treatment yet you can find the docs at https://www.ruby-toolbox.com/pages/docs/api/projects and an official API client is available as a gem, see https://github.com/rubytoolbox/rubytoolbox-api
+last month I wrapped up and launched an API for Ruby Toolbox which allows you to query project data. While it has not received the full announcement blog post treatment yet, you can still [read the project API docs](https://www.ruby-toolbox.com/pages/docs/api/projects), and an official API client is available as a gem at [rubytoolbox/rubytoolbox-api](https://github.com/rubytoolbox/rubytoolbox-api).
 
-For this month apart from officially launching the API I will mainly investigate and resolve some issues on the project updates that recently emerged, leading to many projects displaying wrongly their github repos being gone, see https://github.com/rubytoolbox/rubytoolbox/issues/615
+For this month apart from officially launching the API I will mainly investigate and resolve some issues on the project updates that recently emerged, leading to many projects displaying wrongly their github repos being gone, see [rubytoolbox/rubytoolbox#615](https://github.com/rubytoolbox/rubytoolbox/issues/615).
 
 I hope you all get through the ongoing crisis well and wish you all the best,
 Chris
