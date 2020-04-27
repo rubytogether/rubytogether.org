@@ -25,7 +25,8 @@ directors = {
 }
 
 directors.each do |name, level|
-  Membership.create!(expires_at: expiration, level: level, name: name)
+  user = User.create!(email: name.to_s.split(" ")[0]+"@example.com", encrypted_password: "abc")
+  Membership.create!(expires_at: expiration, level: level, name: name, user: user)
 end
 
 corporations = [
@@ -35,12 +36,14 @@ corporations = [
 ]
 
 corporations.each do |name, description, url, level|
+  user = User.create!(email: name.split(" ")[0]+"@example.com", encrypted_password: "123")
   Membership.create!(
     expires_at: expiration,
     name: name,
     description: description,
     url: url,
-    level: level
+    level: level,
+    user: user,
   )
 end
 
