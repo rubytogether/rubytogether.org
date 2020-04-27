@@ -51,15 +51,10 @@ Ruby Gems saw general maintenance and work on deprecations warnings improvements
 
 This month, Rubygems gained 63 new commits, contributed by 8 authors. There were 476 additions and 222 deletions across 32 files.
 
-## gemstash news
 
-(should we leave this section out for this month?)
 
-We didn't have any new changes to Gemstash this month, although Louis reviewed and followed up on a related Google Summer of Code proposal (more on that later).
 
-[GEMSTASH CHANGES](https://github.com/bundler/gemstash/compare/master@%7B2019-07-01%7D...master@%7B2019-07-31%7D)
 
-This month, Gemstash gained 0 new commits, contributed by 0 authors. There were 0 additions and 0 deletions across 0 files.
 
 ## ruby toolbox news
 
