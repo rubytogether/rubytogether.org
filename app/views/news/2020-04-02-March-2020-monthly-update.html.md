@@ -29,6 +29,11 @@ If you want to know right away next time we're able to open applications, sign u
 Future RubyMe sessions will happen as often as we are able to set aside budget for them, but current circumstances mean we're not sure how soon that will be. If your company would be interested in sponsoring our next RubyMe session, please [get in touch](mailto:hello+rubymesponsor@rubytogether.org)!
 
 
+## google summer of code news
+
+Google Summer of Code is upon us again, and this year the inimitable volunteers [@hiren](https://github.com/hmistry) and [@zoras](https://github.com/zoras) have stepped up from mentoring last year to running the program this year. Ruby Together is less directly involved, but is still providing advice, backup administrators, and mentorship for some student projects. Students have finished applying, and the selection process is currently ongoing. We’re excited to see what they’re able to accomplish this summer!
+
+
 ## bundler news
 
 Amazingly, all that work that the entire Bundler and RubyGems teams have been working at for years has paid off in a really big way: Bundler and RubyGems have merged repositories! On GitHub, `bundler/bundler` is archived, and all ongoing work on both projects now takes place inside `RubyGems/RubyGems`. All other repositories from the Bundler organization have either been archived (if unused) or moved to the RubyGems organization.
@@ -66,10 +71,6 @@ For this month apart from officially launching the API I will mainly investigate
 
 I hope you all get through the ongoing crisis well and wish you all the best,
 Chris
-
-## google summer of code news
-
-Google Summer of Code is upon us again, and this year the inimitable volunteers [@hiren](https://github.com/hmistry) and [@zoras](https://github.com/zoras) have stepped up from mentoring last year to running the program this year. Ruby Together is less directly involved, but is still providing advice, backup administrators, and mentorship for some student projects. Students have finished applying, and the selection process is currently ongoing. We’re excited to see what they’re able to accomplish this summer!
 
 ## budget &amp; expenses
 
