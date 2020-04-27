@@ -30,9 +30,9 @@ From this point forward, Bundler news will be reported together with RubyGems ne
 
 ## rubygems.org news
 
-In March, thanks to Aditya and Colby we were able to update most of our gem dependencies, which included a security release to Rails. Additionally, he helped us fix the incorrect rate limit on the gem push endpoint. It was a huge relief for users with high release volume like awscloud. We resolved the same issues of rate limit on other endpoints with MFA.
+In March, thanks to Aditya and Colby we were able to update most of our gem dependencies, which included a security release to Rails. Additionally, he helped us fix the incorrect rate limit on the gem push endpoint. This should be a big improvement for users with high release volume like AWS, which publishes hundreds of gems every time they update `aws-sdk`. We also resolved some related rate limit issues with multi-factor authentication.
 
-To mitigate against typo-squatting, we were maintaining a protected list of gem names using the Lavestine distance. The check against the protected list has been temporarily disabled; it was creating more issues than it was solving. We are looking into alternate ways of dealing with the issue of typo-squatting. Thank you for bearing with us while we figure this out.
+To mitigate against typo-squatting, we were previously maintaining a protected list of gem names using the Levenshtein distance. Unfortunately, the check turned out to be too strict, and caused more problems than it was solving. We have disabled it for now, and we are looking into other ways to deal with typo-squatting. Thank you for bearing with us while we figure this out.
 
 [RUBYGEMS.ORG CHANGES](https://github.com/rubygems/rubygems.org/compare/master@%7B2019-07-01%7D...master@%7B2019-07-31%7D) 
 
