@@ -1,4 +1,5 @@
-sudo: false # container infrastructure
+os: linux
+dist: xenial
 language: ruby
 cache: bundler
 before_install: gem install bundler
@@ -9,7 +10,8 @@ services:
   - postgresql
 notifications:
   slack:
-    secure: A2U1yGwdkRCqimsBAUFFVxfqg0EqNEFHkQWLWpRcv5re4wJWKaDeZy2TAC50Ig+k+03ee3bEFs9ldgqvrj/ndPijqPShQq0vxKRTIVmVpyYB5iPLilI8bfgJPdBElvU12pEiIOs4fRegq3Xq3Gq/rMht/o2lBJEeJQFj3SP3nrg=
+    rooms:
+      - secure: A2U1yGwdkRCqimsBAUFFVxfqg0EqNEFHkQWLWpRcv5re4wJWKaDeZy2TAC50Ig+k+03ee3bEFs9ldgqvrj/ndPijqPShQq0vxKRTIVmVpyYB5iPLilI8bfgJPdBElvU12pEiIOs4fRegq3Xq3Gq/rMht/o2lBJEeJQFj3SP3nrg=
     on_success: change
     on_failure: always
     on_start: never
