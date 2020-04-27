@@ -43,15 +43,6 @@ Not just the repositories have changed, either: the Bundler and RubyGems teams h
 From this point forward, Bundler news will be reported together with RubyGems news. Hooray! 🎉
 
 
-## rubygems.org news
-
-In March, thanks to Aditya and Colby we were able to update most of our gem dependencies, which included a security release to Rails. Additionally, he helped us fix the incorrect rate limit on the gem push endpoint. This should be a big improvement for users with high release volume like AWS, which publishes hundreds of gems every time they update `aws-sdk`. We also resolved some related rate limit issues with multi-factor authentication.
-
-To mitigate against typo-squatting, we were previously maintaining a protected list of gem names using the Levenshtein distance. Unfortunately, the check turned out to be too strict, and caused more problems than it was solving. We have disabled it for now, and we are looking into other ways to deal with typo-squatting. Thank you for bearing with us while we figure this out.
-
-For the month, RubyGems.org received [80 commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2020-03-01%7D...master@%7B2020-03-31%7D) from 6 authors, who made 294 additions and 206 deletions across 17 files.
-
-
 ## rubygems news
 
 As mentioned above, the huge news is that Bundler merged into RubyGems! Major props to @hsbt for sending the PR to combine repositories, as well as @deivid-rodruiguez for helping troubleshoot, fix CI, and get the PR landed.
@@ -59,6 +50,15 @@ As mentioned above, the huge news is that Bundler merged into RubyGems! Major pr
 On top of that huge accomplishment, RubyGems saw ongoing maintenance and bugfixes, improved tests on JRuby, better deprecation warnings, and fixes for the internal bot that labels PRs and issues. The RubyGems team spent time to get more familiar with newly imported Bundler issues, and the Bundler team spent time getting more familiar with RubyGems, as well as the usual PR review and issue triage.
 
 In March, RubyGems gained [more than 10,000 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2020-03-01%7D...master@%7B2020-03-31%7D) (which includes all of Bundler's history!) contributed by 21 authors. There were 96,617 additions and 961 deletions across 1,423 files.
+
+
+## rubygems.org news
+
+In March, thanks to Aditya and Colby we were able to update most of our gem dependencies, which included a security release to Rails. Additionally, he helped us fix the incorrect rate limit on the gem push endpoint. This should be a big improvement for users with high release volume like AWS, which publishes hundreds of gems every time they update `aws-sdk`. We also resolved some related rate limit issues with multi-factor authentication.
+
+To mitigate against typo-squatting, we were previously maintaining a protected list of gem names using the Levenshtein distance. Unfortunately, the check turned out to be too strict, and caused more problems than it was solving. We have disabled it for now, and we are looking into other ways to deal with typo-squatting. Thank you for bearing with us while we figure this out.
+
+For the month, RubyGems.org received [80 commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2020-03-01%7D...master@%7B2020-03-31%7D) from 6 authors, who made 294 additions and 206 deletions across 17 files.
 
 
 ## ruby toolbox news
