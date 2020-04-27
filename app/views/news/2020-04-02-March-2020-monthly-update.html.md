@@ -58,6 +58,17 @@ In March, thanks to Aditya and Colby we were able to update most of our gem depe
 
 To mitigate against typo-squatting, we were previously maintaining a protected list of gem names using the Levenshtein distance. Unfortunately, the check turned out to be too strict, and caused more problems than it was solving. We have disabled it for now, and we are looking into other ways to deal with typo-squatting. Thank you for bearing with us while we figure this out.
 
+Aditya was also able to complete a grab bag of other useful work, including:
+
+* revisit adoptions PR/issues
+* help a gsoc student write RFC for the ownership changes [rubygems/rfcs#25](https://github.com/rubygems/rfcs/issues/25)
+* fix incorrect backoff on mfa endpoints beside gem push [rubygems/rubygems.org#2270](https://github.com/rubygems/rubygems.org/issues/2270)
+* PR to migrate nginx to sidecar in staging deployment [rubygems/rubygems.org#2291](https://github.com/rubygems/rubygems.org/issues/2291)
+* PR to support prefix match [rubygems/rubygems.org#2308](https://github.com/rubygems/rubygems.org/issues/2308)
+* PRs to fix several open issues [rubygems/rubygems.org#2315](https://github.com/rubygems/rubygems.org/issues/2315), [#2316](https://github.com/rubygems/rubygems.org/issues/2316), [#2317](https://github.com/rubygems/rubygems.org/issues/2317).
+* debug 429 for info endpoint on nginx
+* debug partial requests being logged as not cacheable by fastly
+
 For the month, RubyGems.org received [80 commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2020-03-01%7D...master@%7B2020-03-31%7D) from 6 authors, who made 294 additions and 206 deletions across 17 files.
 
 
