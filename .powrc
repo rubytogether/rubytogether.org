@@ -1,0 +1,4 @@
+export RUBYOPT='-W:no-deprecated -W:no-experimental'
+
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+chruby $(cat .ruby-version)
