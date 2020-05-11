@@ -29,11 +29,11 @@ FileUtils.chdir APP_ROOT do
     puts "\n== Adding heroku git remotes =="
 
     print "staging"
-    system! "heroku git:remote -a rubytogether-staging -r staging"
+    system! "heroku git:remote -a rubytogether-staging -r staging > /dev/null"
     puts " ✔"
 
     print "production"
-    system! "heroku git:remote -a rubytogether -r production"
+    system! "heroku git:remote -a rubytogether -r production > /dev/null"
     puts " ✔"
   end
 
