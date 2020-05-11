@@ -25,7 +25,8 @@ directors = {
 }
 
 directors.each do |name, level|
-  Membership.create!(expires_at: expiration, level: level, name: name)
+  user = User.new(name: name, email: level + "@example.com")
+  Membership.create!(expires_at: expiration, level: level, name: name, user: user)
 end
 
 corporations = [
