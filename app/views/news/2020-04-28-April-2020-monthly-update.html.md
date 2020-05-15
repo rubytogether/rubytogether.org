@@ -11,8 +11,9 @@ Hello! Welcome to the monthly update. During April, our work was supported by  [
 > &mdash; André
 
 Since our last update, Ruby Together was supported by 46 different companies, including Sapphire member [Stripe](https://stripe.com). 2 companies joined as new members.
+Since our last update, Ruby Together was supported by 46 different companies, including Sapphire member [Stripe](https://stripe.com). 4 companies joined as new members.
 
-On top of those companies, 2 new developers signed up as members, including Ilya Zub. In total, we were supported by 105 developer members. Thanks to all of our members for making everything that we do possible. &lt;3
+On top of those companies, 4 new developers signed up as members, including Jared White, Manuel Meurer, and Ilya Zub. In total, we were supported by 105 developer members. Thanks to all of our members for making everything that we do possible. &lt;3
 
 ## rubygems news 
 
