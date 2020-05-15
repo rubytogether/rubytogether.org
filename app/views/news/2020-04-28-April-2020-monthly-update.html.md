@@ -1,5 +1,5 @@
 ---
-summary: In April, we paid for 143 hours of developer work, updated our CI to ruby 2.7, and completed several updates and optimizations for the Ruby Gems and RubyGems.org.
+summary: In April, we paid for 143 hours of developer work, updated our CI to ruby 2.7, and completed several updates and optimizations for Ruby Gems and RubyGems.org.
 ---
 
 Hello! Welcome to the monthly update. During April, our work was supported by  [Zendesk](https://www.zendesk.com), [Stripe](https://stripe.com), [DigitalOcean](https://www.digitalocean.com), [Bleacher Report](http://www.bleacherreport.com), and many others.
@@ -10,7 +10,7 @@ Hello! Welcome to the monthly update. During April, our work was supported by  [
 >
 > &mdash; André
 
-Since our last update, Ruby Together was supported by 46 different companies, including Sapphire member [Stripe](https://stripe.com). 2 companies joined as new members, including .
+Since our last update, Ruby Together was supported by 46 different companies, including Sapphire member [Stripe](https://stripe.com). 2 companies joined as new members.
 
 On top of those companies, 2 new developers signed up as members, including Ilya Zub. In total, we were supported by 105 developer members. Thanks to all of our members for making everything that we do possible. &lt;3
 
@@ -31,9 +31,9 @@ In addition to those developments, we worked on the following:
 * Merging bundler-site and RubyGems guides PRs.
 * Updating our ElasticSearch Index to support prefix queries; previously these were returning incomplete search results.
 * Investigating Intermittent CI failure rubygems/bundler-site/issues/519.
-* Merging a PR to add validation to string columns with user input rubygems/rubygems.org#2346
-* Fixed the broken animation on stats page and ensured Github stars count were using the metadata URI attributes rubygems/rubygems.org#2335
-* Working on optimizations for our stats and just_updated endpoints, this will help us reduce 1200ms and 600ms in response time respectively. rubygems/rubygems.org#2333
+* Working on a PR to add validation to string columns with user input rubygems/rubygems.org#2346
+* Fixing the broken animation on stats page and ensuring Github stars count were using the metadata URI attributes rubygems/rubygems.org#2335
+* Working on optimizations for our stats and just_updated endpoints; this will help us reduce 1200ms and 600ms in response time respectively. rubygems/rubygems.org#2333
 * Finishing work on reset of rate limit on successful gem push rubygems/rubygems.org#2311
 
 @johnfrancismccann helped us to make sure our releases page shows a consistent number of items per page.
@@ -45,7 +45,8 @@ For the month, Rubygems.org gained 70 new commits, contributed by 8 authors. Th
 
 Hey everyone,
 
-I hope you're safe and well! As mentioned in the previous update I investigated and fixed an issue with the github repo syncing mechanism via https://github.com/rubytoolbox/rubytoolbox/pull/649 and did some additional maiintenance like Rails 6 upgrade, other dependency upgrades and such. The API has now also received the official announcement blog post, which you can find at https://www.ruby-toolbox.com/blog/2020-04-29/api-for-project-data
+I hope you're safe and well! As mentioned in the previous update I investigated and fixed an issue with the github repo syncing mechanism via https://github.com/rubytoolbox/rubytoolbox/pull/649 and did some additional maintenance like Rails 6 upgrade, other dependency upgrades and such. The API has now also received the official announcement blog post, which you can find at https://www.ruby-toolbox.com/blog/2020-04-29/api-for-project-data. 
+
 In May I will do some additional maintenance like Ruby 2.7 upgrade and review catalog submissions, plus looking into some additional tooling around the API.
 
 Best and stay safe,
@@ -54,14 +55,14 @@ Chris
 ## budget &amp; expenses
 
 
-In March, we saw $ in total income, and spent a total of $.
+In March, we saw $20,283.95 in total income, and spent a total of $ 18,975.44.
 
-* Stripe Payment Processing Fees $
-* Employee Related $
-* General & Administrative $
-* IT & Software $
-* Professional Fees	$
-* 123.5 hours of development work $
+* Stripe Payment Processing Fees $415.53  
+* Employee Related $310.23  
+* General & Administrative $184.91  
+* IT & Software $691.00  
+* Professional Fees	$3,369.00  
+
 
 Until next time,<br>
 Irene, André, and the Ruby Together team
