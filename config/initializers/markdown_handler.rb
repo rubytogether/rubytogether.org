@@ -7,7 +7,7 @@ module MarkdownHandler
 
   def self.call(template, source)
     compiled_source = erb.call(template, source)
-    "RDiscount.new(begin;#{compiled_source};end).to_html"
+    "RDiscount.new(begin;#{compiled_source};end, :generate_toc, :smart).to_html"
   end
 end
 
