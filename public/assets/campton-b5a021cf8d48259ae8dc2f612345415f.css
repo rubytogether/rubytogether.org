@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Campton";
+  font-weight: 600;
+  font-style: normal;
+  src: url(/assets/2D6CD5_0_0-2c86067a5023fab2674455aa8d81355d7466fad6f3abd7fe29c51eae0f7bc60e.eot);
+  src: url(/assets/2D6CD5_0_0-2c86067a5023fab2674455aa8d81355d7466fad6f3abd7fe29c51eae0f7bc60e.eot?#iefix)
+      format("embedded-opentype"),
+    url(/assets/2D6CD5_0_0-09d5c00da2339aa9b3628593b774ee623b25ee777cee08150d09c111dae58e76.woff2)
+      format("woff2"),
+    url(/assets/2D6CD5_0_0-cb0727cbad706b433979b39b6b2fca1846287ce7db322a130bb08b28bc1f6f47.woff)
+      format("woff"),
+    url(/assets/2D6CD5_0_0-f6588d5c2520bee4d1e9343669a5683b18604d4aa188c2c522b0ba3351a7eca7.ttf)
+      format("truetype");
+}
+
+@font-face {
+  font-family: "Campton";
+  font-weight: 300;
+  src: url(/assets/2D6CD5_1_0-89f4fe2280e1776211bf82a565e98f634a47663937d899790603d599f17bb253.eot);
+  src: url(/assets/2D6CD5_1_0-89f4fe2280e1776211bf82a565e98f634a47663937d899790603d599f17bb253.eot?#iefix)
+      format("embedded-opentype"),
+    url(/assets/2D6CD5_1_0-57598bad8e4a80b7d11748f765992892d4dab4f2ed62c4e9c586e5b9da042758.woff2)
+      format("woff2"),
+    url(/assets/2D6CD5_1_0-e2389da3112e35331f614a12c330665e40af9bab8876ed3716dd2e96c6d5e7ab.woff)
+      format("woff"),
+    url(/assets/2D6CD5_1_0-0045a94571df9a2f9fe76645520c9663acfc8a1539abbea860f031e81b9f07dd.ttf)
+      format("truetype");
+}
