@@ -1,0 +1,2 @@
+#!/bin/bash
+exec bin/rake db:test:prepare spec
