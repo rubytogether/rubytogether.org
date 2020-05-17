@@ -11,7 +11,7 @@ Hello! Welcome to the monthly update. During April, our work was supported by  [
 > &mdash; André
 
 Since our last update, Ruby Together was supported by 46 different companies, including Sapphire member [Stripe](https://stripe.com). 2 companies joined as new members.
-Since our last update, Ruby Together was supported by 46 different companies, including Sapphire member [Stripe](https://stripe.com). 4 companies joined as new members.
+
 
 On top of those companies, 4 new developers signed up as members, including Jared White, Manuel Meurer, and Ilya Zub. In total, we were supported by 105 developer members. Thanks to all of our members for making everything that we do possible. &lt;3
 
@@ -21,7 +21,7 @@ In case you missed our announcement last month: all ongoing work on Bundler and 
 
 RubyGems changes in April included a fix for a recent regression in RubyGems to interfere with common bundler usages, improvement to a missing spec error, and shipping a new RSpec runner that works better with parallelization. We also updated our CI to ruby 2.7 and made a PR to manage bundler development dependencies through bundler.
 
-This month, Rubygems gained 181 new commits, contributed by 15 authors. There were 1857 additions and 1015 deletions across 132 files.
+This month, Rubygems gained 181 new commits, contributed by 15 authors. There were 1,857 additions and 1,015 deletions across 132 files.
 
 ## rubygems.org news
 
@@ -32,10 +32,10 @@ In addition to those developments, we worked on the following:
 * Merging bundler-site and RubyGems guides PRs.
 * Updating our ElasticSearch Index to support prefix queries; previously these were returning incomplete search results.
 * Investigating Intermittent CI failure rubygems/bundler-site/issues/519.
-* Working on a PR to add validation to string columns with user input rubygems/rubygems.org#2346
-* Fixing the broken animation on stats page and ensuring Github stars count were using the metadata URI attributes rubygems/rubygems.org#2335
-* Working on optimizations for our stats and just_updated endpoints; this will help us reduce 1200ms and 600ms in response time respectively. rubygems/rubygems.org#2333
-* Finishing work on reset of rate limit on successful gem push rubygems/rubygems.org#2311
+* Working on a PR to add validation to string columns with user input rubygems/rubygems.org#2346.
+* Fixing the broken animation on the stats page and ensuring Github stars count were using the metadata URI attributes rubygems/rubygems.org#2335.
+* Working on optimizations for our stats and just_updated endpoints; this will help us reduce 1200ms and 600ms in response time respectively. rubygems/rubygems.org#2333.
+* Finishing work on reset of rate limit on successful gem push rubygems/rubygems.org#2311.
 
 @johnfrancismccann helped us to make sure our releases page shows a consistent number of items per page.
 
@@ -56,7 +56,7 @@ Chris
 ## budget &amp; expenses
 
 
-In March, we saw $20,283.95 in total income, and spent a total of $ 18,975.44.
+In April, we saw $20,283.95 in total income, and spent a total of $18,975.44.
 
 * Stripe Payment Processing Fees $415.53  
 * Employee Related $310.23  
