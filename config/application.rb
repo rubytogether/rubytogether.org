@@ -18,6 +18,9 @@ require "rails"
   end
 end
 
+# Print deprication backtraces when DEBUG is set
+ActiveSupport::Deprecation.debug = true if ENV["DEBUG"]
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
