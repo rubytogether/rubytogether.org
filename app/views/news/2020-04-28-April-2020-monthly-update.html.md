@@ -1,5 +1,5 @@
 ---
-summary: In April, we paid for 143 hours of developer work, updated our CI to ruby 2.7, and completed several updates and optimizations for Ruby Gems and RubyGems.org.
+summary: In April, we paid for 96.1 hours of developer work, updated our CI to ruby 2.7, and completed several updates and optimizations for Ruby Gems and RubyGems.org.
 ---
 
 Hello! Welcome to the monthly update. During April, our work was supported by  [Zendesk](https://www.zendesk.com), [Stripe](https://stripe.com), [DigitalOcean](https://www.digitalocean.com), [Bleacher Report](http://www.bleacherreport.com), and many others.
@@ -17,7 +17,7 @@ On top of those companies, 4 new developers signed up as members, including Jare
 
 ## rubygems news 
 
-In case you missed our announcement last month: all ongoing work on Bundler and RubyGems now takes place inside `RubyGems/RubyGems` as, excitingly, we completed [merging](https://rubytogether.org/news/2020-04-02-March-2020-monthly-update) the two projects into one repository. 
+In case you missed our announcement last month: all ongoing work on Bundler and RubyGems now takes place inside `RubyGems/RubyGems` as, excitingly, we completed [merging](https://rubytogether.org/news/2020-04-02-March-2020-monthly-update#bundler.news) the two projects into one repository. 
 
 RubyGems changes in April included a fix for a recent regression in RubyGems to interfere with common bundler usages, improvement to a missing spec error, and shipping a new RSpec runner that works better with parallelization. We also updated our CI to ruby 2.7 and made a PR to manage bundler development dependencies through bundler.
 
@@ -62,7 +62,8 @@ In April, we saw $20,283.95 in total income, and spent a total of $18,975.44.
 * Employee Related $310.23  
 * General & Administrative $184.91  
 * IT & Software $691.00  
-* Professional Fees	$3,369.00  
+* Professional Fees	$3,369.00
+* 96.1 Hours of development work  $14,420.30  
 
 
 Until next time,<br>
