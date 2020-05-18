@@ -313,8 +313,8 @@ GEM
     sprockets-redirect (1.0.0)
       activesupport (>= 3.1.0)
       rack
-    stripe (5.0.1)
-    stripe_event (2.3.0)
+    stripe (5.22.0)
+    stripe_event (2.3.1)
       activesupport (>= 3.1)
       stripe (>= 2.8, < 6)
     terminal-notifier (2.0.0)
