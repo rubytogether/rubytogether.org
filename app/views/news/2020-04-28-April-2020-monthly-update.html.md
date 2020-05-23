@@ -25,7 +25,7 @@ This month, Rubygems gained 181 new commits, contributed by 15 authors. There
 
 ## rubygems.org news
 
-In April, we worked on keeping RubyGems.org dependencies up to date. We also sent an email notification requesting users to enable MFA, leading to a threefold increase in MFA enabled accounts (Thank you [@aditya](https://github.com/aditya)!.
+In April, we worked on keeping RubyGems.org dependencies up to date. We also sent an email notification requesting users to enable MFA, leading to a threefold increase in MFA enabled accounts (Thank you [@aditya](https://github.com/aditya)!).
 
 In addition to those developments, we worked on the following:
 
