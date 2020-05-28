@@ -14,7 +14,7 @@ MembershipProduct = Struct.new(:id, :shortname, :name) do
   end
 
   def self.[](id)
-    PRODUCT_MAP[id]
+    PRODUCT_MAP[id.to_sym]
   end
 
   def self.named(name)

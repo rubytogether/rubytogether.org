@@ -52,14 +52,7 @@ class Membership < ActiveRecord::Base
   before_save :normalize_url
 
   def dollar_amount
-    plan.dollar_amount
-  end
-
-  def stripe_dollar_amount
-    return @stripe_dollar_amount if @stripe_dollar_amount
-
-    amount = stripe_subscription&.plan&.amount
-    @stripe_dollar_amount = amount ? (amount / 100) : dollar_amount
+    amount / 100
   end
 
   def next_billing_date
@@ -70,16 +63,16 @@ class Membership < ActiveRecord::Base
     @next_billing_date = end_time&.to_date
   end
 
+  def product
+    MembershipProduct[level]
+  end
+
   def plan
-    MembershipPlan.send("#{interval}ly", level)
+    MembershipPlan.stripe_plan(product.stripe_id, amount)
   end
 
   def shortname
-    plan.product.shortname
-  end
-
-  def amount
-    plan.amount
+    product.shortname
   end
 
   def status
