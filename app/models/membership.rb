@@ -68,7 +68,7 @@ class Membership < ActiveRecord::Base
   end
 
   def plan
-    MembershipPlan.stripe_plan(product.stripe_id, amount)
+    amount ? MembershipPlan.stripe_plan(product.stripe_id, amount) : product.plan
   end
 
   def shortname
