@@ -56,8 +56,9 @@ class CreateMembership
   def create_membership_record(info, user, card, plan)
     attrs = info.merge(
       level: plan.product_id,
+      amount: plan.amount,
       card_brand: card.brand,
-      card_last4: card.last4
+      card_last4: card.last4,
     )
     user.create_membership!(attrs)
   end
