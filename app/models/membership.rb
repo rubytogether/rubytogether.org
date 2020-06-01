@@ -68,7 +68,12 @@ class Membership < ActiveRecord::Base
   end
 
   def plan
-    MembershipPlan[level]
+    case interval
+    when "year"
+      MembershipPlan.yearly(level)
+    else
+      MembershipPlan.monthly(level)
+    end
   end
 
   def shortname
