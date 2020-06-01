@@ -329,7 +329,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.7)
-    vcr (5.1.0)
+    vcr (6.0.0)
     warden (1.2.8)
       rack (>= 2.0.6)
     web-console (3.7.0)
@@ -384,7 +384,7 @@ DEPENDENCIES
   terminal-notifier (~> 2.0)
   terminal-notifier-guard (~> 1.7)
   uglifier (~> 4.2)
-  vcr (~> 5.1)
+  vcr (~> 6.0)
   web-console (~> 3.7)
   webmock (~> 3.8)
 
