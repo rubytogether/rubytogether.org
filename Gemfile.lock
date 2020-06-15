@@ -117,7 +117,7 @@ GEM
     erubi (1.9.0)
     eventmachine (1.2.0.1)
     execjs (2.7.0)
-    fastly (2.5.2)
+    fastly (2.5.3)
     ffi (1.12.2)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
