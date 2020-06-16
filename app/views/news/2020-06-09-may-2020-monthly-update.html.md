@@ -14,7 +14,7 @@ On top of those companies, five new developers signed up as members, including L
 
 ## rubygems news
 
-This month, we refactored the spec suite to be faster and collated changes that will be shipped in the next bundler release. We also fixed an activation issue on old versions of Bundler. In addition, we fixed several regressions in RubyGems custom require and made specific tests work when running from ruby-core (thanks to [@David Rodriguez](https://github.com/deivid-rodriguez)). Other work we did included revisiting a bunch of old PRs and work from the old repo and getting them ready to merge into the new repo.
+This month, we refactored the spec suite to be faster and collated changes that will be shipped in the next bundler release. We also fixed an [activation issue on old versions of Bundler](https://github.com/rubygems/rubygems/pull/3626). In addition, we fixed several regressions in RubyGems custom require and made specific tests work when running from ruby-core (thanks to [@David Rodriguez](https://github.com/deivid-rodriguez)). Other work we did included revisiting a bunch of old PRs and work from the old repo and getting them ready to merge into the new repo.
 
 In May, RubyGems gained 248 new commits, contributed by 19 authors. There were 2227 additions and 1857 deletions across 892 files.
 
