@@ -54,14 +54,14 @@ For this month, RubyGems.org gained 58 new commits, contributed by 8 authors. Th
 
 ## budget &amp; expenses
 
-In May, we saw $15,966.16 in total income, and spent a total of $21,195.46.
+In May, we saw $15,966.16 in total income, and spent a total of $24,103.34.
 
 * Stripe Payment Processing Fees $410.30   
 * Employee Related $317.17  
 * General & Administrative $180.77  
 * IT & Software $883.77   
 * Professional Fees	$319.00  
-* 77.8 Hours of development work $12,845.01  
+* 141.3 Hours of development work $12,845.01  
 
 Until next time,<br>
 Irene, André and the Ruby Together team
