@@ -1,5 +1,5 @@
 ---
-summary: In May, we paid for 77.8 hours of developer work which included several updates, fixes and changes in preparation for the next Bundler release.
+summary: In May, we paid for 141.3 hours of developer work which included several updates, fixes and changes in preparation for the next Bundler release.
 ---
 
 Hello! Welcome to the monthly update. During May, our work was supported by [Zendesk](https://www.zendesk.com), [Stripe](https://stripe.com), [DigitalOcean](https://www.digitalocean.com), [Bleacher Report](http://www.bleacherreport.com), and many others.
