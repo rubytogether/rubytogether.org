@@ -7,7 +7,7 @@ Hello! Welcome to the monthly update. During May, our work was supported by [Zen
 
 ## ruby together news
 
-In May, Ruby Together was supported by 45 different companies, including Sapphire member [Stripe](https://stripe.com). Five companies joined as new members, including .
+In May, Ruby Together was supported by 45 different companies, including Sapphire member [Stripe](https://stripe.com). Five companies joined as new members.
 
 On top of those companies, five new developers signed up as members, including Lola Odelola and Jakob Waller. In total, we were supported by 102 developer members. Thanks to all of our members for making everything that we do possible. &lt;3
 
