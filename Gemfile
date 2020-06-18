@@ -33,7 +33,7 @@ group :development do
   gem "rack-livereload", "~> 0.3"
   gem "terminal-notifier-guard", "~> 1.7"
   gem "terminal-notifier", "~> 2.0"
-  gem "web-console", "~> 3.7"
+  gem "web-console", "~> 4.0"
 end
 
 group :development, :test do
@@ -49,5 +49,5 @@ end
 
 group :test do
   gem "webmock", "~> 3.8", require: false
-  gem "vcr", "~> 5.1"
+  gem "vcr", "~> 6.0"
 end

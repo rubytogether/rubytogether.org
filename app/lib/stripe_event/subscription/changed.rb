@@ -14,7 +14,8 @@ module StripeEvent
 
         user.membership&.update(
           interval: sub.plan.interval,
-          level: product.id
+          level: product.id,
+          amount: sub.plan.amount,
         )
       end
 
