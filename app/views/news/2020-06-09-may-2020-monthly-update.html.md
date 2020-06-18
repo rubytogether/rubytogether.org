@@ -11,6 +11,8 @@ In May, Ruby Together was supported by 45 different companies, including Sapphir
 
 On top of those companies, five new developers signed up as members, including Lola Odelola and Jakob Waller. In total, we were supported by 102 developer members. Thanks to all of our members for making everything that we do possible. &lt;3
 
+Stay safe out there, and have a good [Juneteenth](https://www.nytimes.com/article/juneteenth-day-celebration.html)! Black lives matter, and if you support Ruby Together’s mission to provide fair compensation for open source work, you should support organizations working to end racism and discrimination, too. Donate to the [NAACP](https://www.naacp.org/), the [SPLC](https://www.splcenter.org/), or even better a local [bail fund](https://bailfunds.github.io/) or local direct action organization. While you’re at it, [change your git default branch names](https://andre.arko.net/2020/06/06/changing-git-and-githubs-default-branch-name/), too. See you next month! — André 
+
 
 ## rubygems news
 
