@@ -44,7 +44,7 @@ ComfortableMexicanSofa.configure do |config|
   # Sofa allows you to setup entire site from files. Database is updated with each
   # request (if necessary). Please note that database entries are destroyed if there's
   # no corresponding file. Seeds are disabled by default.
-  #   config.enable_seeds = false
+  config.enable_seeds = Rails.env.development?
 
   # Path where seeds can be located.
   #   config.seeds_path = File.expand_path('db/cms_seeds', Rails.root)
