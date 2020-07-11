@@ -49,7 +49,7 @@
 #   root POST /           stripe_event/webhook#event
 
 Rails.application.routes.draw do
-  root "home#index"
+  root "comfy/cms/content#show"
 
   get "/csrf" => "application#csrf"
   get "/news.xml" => "news#index", format: "xml"
