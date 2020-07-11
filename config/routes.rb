@@ -54,6 +54,8 @@ Rails.application.routes.draw do
   get "/csrf" => "application#csrf"
   get "/news.xml" => "news#index", format: "xml"
 
+  comfy_route :cms_admin, path: "/admin"
+
   %w[
     bylaws
     companies
@@ -100,4 +102,6 @@ Rails.application.routes.draw do
 
   mount StripeEvent::Engine, at: "/stripe/events"
   devise_for :users, path: "", controllers: {sessions: "sessions"}
+
+  comfy_route :cms, path: "/"
 end
