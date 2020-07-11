@@ -6,7 +6,8 @@ expiration = 100.years.from_now
 
 andre = User.create!(
   email: "andre@arko.net",
-  encrypted_password: "$2a$12$lPDc097WBP/Fds25KKLFmOvpVk8jF5.8rqyoiU2gICtCwNV7phzSq",
+  encrypted_password: "$2a$12$cArR8JXd.hWQcjlo397WNO5ZwBXKJFrR7FcZR5roeFx04V08/Fb3G",
+  admin: true
 )
 
 Membership.create!(
