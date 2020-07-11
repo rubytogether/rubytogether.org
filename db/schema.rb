@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_11_064134) do
+ActiveRecord::Schema.define(version: 2020_07_11_065932) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,23 @@ ActiveRecord::Schema.define(version: 2020_07_11_064134) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "comfy_blog_posts", force: :cascade do |t|
+    t.integer "site_id", null: false
+    t.string "title", null: false
+    t.string "slug", null: false
+    t.integer "layout_id"
+    t.text "content_cache"
+    t.integer "year", null: false
+    t.integer "month", limit: 2, null: false
+    t.boolean "is_published", default: true, null: false
+    t.datetime "published_at", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["created_at"], name: "index_comfy_blog_posts_on_created_at"
+    t.index ["site_id", "is_published"], name: "index_comfy_blog_posts_on_site_id_and_is_published"
+    t.index ["year", "month", "slug"], name: "index_comfy_blog_posts_on_year_and_month_and_slug"
   end
 
   create_table "comfy_cms_categories", force: :cascade do |t|

@@ -89,6 +89,8 @@ GEM
       rails (>= 5.2.0)
       rails-i18n (>= 5.0.0)
       sassc-rails (>= 2.0.0)
+    comfy_blog (2.0.7)
+      comfortable_mexican_sofa (>= 2.0.14)
     comfy_bootstrap_form (4.0.9)
       rails (>= 5.0.0)
     concurrent-ruby (1.1.6)
@@ -378,6 +380,7 @@ PLATFORMS
 DEPENDENCIES
   annotate (~> 3.1)
   comfortable_mexican_sofa (~> 2.0)
+  comfy_blog (~> 2.0)
   devise (~> 4.7.2)
   dotenv-rails (~> 2.7)
   fastly (~> 2.5)
