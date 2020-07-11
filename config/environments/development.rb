@@ -59,4 +59,6 @@ Rails.application.configure do
 
   # Allow puma-dev to run at rubytogether.test
   config.hosts << "rubytogether.test"
+
+  config.active_storage.service = :local
 end
