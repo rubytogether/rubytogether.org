@@ -252,30 +252,24 @@ section.content {
 }
 
 // please wait spinner
-@import "compass/css3/filter";
-@import "compass/css3/animation";
-@import "compass/css3/transform";
-
-@include keyframes(spin) {
+@keyframes spin {
   0% {
-    @include transform(rotate(-10deg));
+    transform:rotate(-10deg)
   }
+
   50% {
-    @include transform(rotate(10deg));
+    transform:rotate(10deg)
   }
+
   100% {
-    @include transform(rotate(-10deg));
+    transform:rotate(-10deg)
   }
 }
 
 .spinner {
-  @include filter(drop-shadow( 0px  5px 15px $blue)
-                  drop-shadow( 5px  0px 15px $blue)
-                  drop-shadow(-0px -5px 15px $blue)
-                  drop-shadow(-5px -0px 15px $blue));
-  @include animation(spin 2s ease-in-out infinite);
+  filter: drop-shadow(0px 5px 15px #d1d9e5) drop-shadow(5px 0px 15px #d1d9e5) drop-shadow(0px -5px 15px #d1d9e5) drop-shadow(-5px 0px 15px #d1d9e5);
+  animation:spin 2s ease-in-out infinite
 }
-
 
 // roadmap progress bar
 .progress-bar {
@@ -335,10 +329,7 @@ section.content {
     margin: 0;
     padding: 0;
     width: 95px;
-    @include transform(
-      rotateZ(-90deg)
-      translateX(50%)
-    );
+    transform: rotateZ(-90deg) translateX(50%);
     color: $blue;
   }
 
