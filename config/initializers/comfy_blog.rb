@@ -8,7 +8,7 @@ ComfyBlog.configure do |config|
   #   config.posts_per_page = 10
 end
 
-Rails.configuration.after_initialize do
+Rails.configuration.to_prepare do
   Comfy::Blog::Post.class_eval do
     def date
       published_at.to_date
