@@ -143,20 +143,22 @@ Rails.application.routes.draw do
 
   get "/csrf" => "application#csrf"
 
-  comfy_route :blog_admin, path: "/admin"
-  comfy_route :cms_admin,  path: "/admin"
+  get "/news.xml" => "comfy/blog/posts#index", format: "rss"
+  get "/news/:year-:month-:day-:slug" => "comfy/blog/posts#show", year: /\d{4}/, month: /\d{2}/, day: /\d{2}/, as: :news
+  get "/news" => "comfy/blog/posts#index", as: :news_index
+  comfy_route :blog, path: "/news"
 
   %w[
     bylaws
     companies
     conflict_policy
-    developers
     example_proposal
-    members
     projects
     roadmap
     rubygems
     team
+    developers
+    members
   ].each do |page|
     get "/#{page}" => "home##{page}"
   end
@@ -192,9 +194,7 @@ Rails.application.routes.draw do
   mount StripeEvent::Engine, at: "/stripe/events"
   devise_for :users, path: "", controllers: {sessions: "sessions"}
 
-  get "/news.xml" => "comfy/blog/posts#index", format: "rss"
-  get "/news/:year-:month-:day-:slug" => "comfy/blog/posts#show", year: /\d{4}/, month: /\d{2}/, day: /\d{2}/, as: :news
-  get "/news" => "comfy/blog/posts#index", as: :news_index
-  comfy_route :blog, path: "/news"
+  comfy_route :blog_admin, path: "/admin"
+  comfy_route :cms_admin,  path: "/admin"
   comfy_route :cms,  path: "/"
 end
