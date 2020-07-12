@@ -9,6 +9,17 @@
 #                                                  root GET    /                                                                                                comfy/cms/content#show
 #                                                  csrf GET    /csrf(.:format)                                                                                  application#csrf
 #                                                       GET    /news.xml(.:format)                                                                              news#index {:format=>/xml/}
+#                  form_fragments_comfy_admin_blog_post GET    /admin/sites/:site_id/blog-posts/:id/form_fragments(.:format)                                    comfy/admin/blog/posts#form_fragments
+#                 revert_comfy_admin_blog_post_revision PATCH  /admin/sites/:site_id/blog-posts/:blog_post_id/revisions/:id/revert(.:format)                    comfy/admin/blog/revisions/post#revert
+#                       comfy_admin_blog_post_revisions GET    /admin/sites/:site_id/blog-posts/:blog_post_id/revisions(.:format)                               comfy/admin/blog/revisions/post#index
+#                        comfy_admin_blog_post_revision GET    /admin/sites/:site_id/blog-posts/:blog_post_id/revisions/:id(.:format)                           comfy/admin/blog/revisions/post#show
+#                                comfy_admin_blog_posts GET    /admin/sites/:site_id/blog-posts(.:format)                                                       comfy/admin/blog/posts#index
+#                                                       POST   /admin/sites/:site_id/blog-posts(.:format)                                                       comfy/admin/blog/posts#create
+#                             new_comfy_admin_blog_post GET    /admin/sites/:site_id/blog-posts/new(.:format)                                                   comfy/admin/blog/posts#new
+#                            edit_comfy_admin_blog_post GET    /admin/sites/:site_id/blog-posts/:id/edit(.:format)                                              comfy/admin/blog/posts#edit
+#                                 comfy_admin_blog_post PATCH  /admin/sites/:site_id/blog-posts/:id(.:format)                                                   comfy/admin/blog/posts#update
+#                                                       PUT    /admin/sites/:site_id/blog-posts/:id(.:format)                                                   comfy/admin/blog/posts#update
+#                                                       DELETE /admin/sites/:site_id/blog-posts/:id(.:format)                                                   comfy/admin/blog/posts#destroy
 #                                       comfy_admin_cms GET    /admin(.:format)                                                                                 comfy/admin/cms/base#jump
 #                    reorder_comfy_admin_cms_site_pages PUT    /admin/sites/:site_id/pages/reorder(.:format)                                                    comfy/admin/cms/pages#reorder
 #              form_fragments_comfy_admin_cms_site_page GET    /admin/sites/:site_id/pages/:id/form_fragments(.:format)                                         comfy/admin/cms/pages#form_fragments
@@ -107,8 +118,6 @@
 #                                                       PUT    /membership(.:format)                                                                            memberships#update
 #                                                       DELETE /membership(.:format)                                                                            memberships#destroy
 #                                                       POST   /membership(.:format)                                                                            memberships#create
-#                                            news_index GET    /news(.:format)                                                                                  news#index
-#                                                  news GET    /news/:id(.:format)                                                                              news#show
 #                                          stripe_event        /stripe/events                                                                                   StripeEvent::Engine
 #                                      new_user_session GET    /sign_in(.:format)                                                                               sessions#new
 #                                          user_session POST   /sign_in(.:format)                                                                               sessions#create
@@ -118,6 +127,10 @@
 #                                         user_password PATCH  /password(.:format)                                                                              devise/passwords#update
 #                                                       PUT    /password(.:format)                                                                              devise/passwords#update
 #                                                       POST   /password(.:format)                                                                              devise/passwords#create
+#                              comfy_blog_posts_of_year GET    (/:cms_path)/news/:year(.:format)                                                                comfy/blog/posts#index {:year=>/\d{4}/}
+#                             comfy_blog_posts_of_month GET    (/:cms_path)/news/:year/:month(.:format)                                                         comfy/blog/posts#index {:year=>/\d{4}/, :month=>/\d{1,2}/}
+#                                       comfy_blog_post GET    (/:cms_path)/news/:year/:month/:slug(.:format)                                                   comfy/blog/posts#show {:year=>/\d{4}/, :month=>/\d{1,2}/}
+#                                      comfy_blog_posts GET    (/:cms_path)/news(.:format)                                                                      comfy/blog/posts#index
 #                                  comfy_cms_render_css GET    /cms-css/:site_id/:identifier(/:cache_buster)(.:format)                                          comfy/cms/assets#render_css
 #                                   comfy_cms_render_js GET    /cms-js/:site_id/:identifier(/:cache_buster)(.:format)                                           comfy/cms/assets#render_js
 #                                 comfy_cms_render_page GET    /(*cms_path)(.:format)                                                                           comfy/cms/content#show
@@ -129,7 +142,6 @@ Rails.application.routes.draw do
   root "comfy/cms/content#show"
 
   get "/csrf" => "application#csrf"
-  get "/news.xml" => "news#index", format: "xml"
 
   comfy_route :blog_admin, path: "/admin"
   comfy_route :cms_admin,  path: "/admin"
@@ -176,11 +188,13 @@ Rails.application.routes.draw do
   resource :membership, only: [:create, :show, :update, :destroy] do
     collection { post :card }
   end
-  resources :news, only: [:index, :show]
 
   mount StripeEvent::Engine, at: "/stripe/events"
   devise_for :users, path: "", controllers: {sessions: "sessions"}
 
+  get "/news.xml" => "comfy/blog/posts#index", format: "rss"
+  get "/news" => "comfy/blog/posts#index", as: :news_index
+  get "/news/:slug" => "comfy/blog/posts#show", as: :news
   comfy_route :blog, path: "/news"
   comfy_route :cms,  path: "/"
 end
