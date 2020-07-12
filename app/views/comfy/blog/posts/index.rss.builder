@@ -1,22 +1,18 @@
-# frozen_string_literal: true
+atom_feed root_url: news_index_path, schema_date: "2015" do |feed|
+  feed.title("Ruby Together News")
+  feed.updated(@blog_posts.first.published_at) if @blog_posts.length > 0
 
-xml.instruct! :xml, version: "1.0"
-xml.rss version: "2.0" do
-  xml.channel do
-    xml.title "My Blog"
-    xml.description "My Blog Description"
-    xml.link comfy_blog_posts_url(@cms_site.path)
+  @blog_posts.each do |post|
+    url = comfy_blog_post_url(@cms_site.path, post.year, post.month, post.slug)
 
-    @blog_posts.each do |post|
-      url = comfy_blog_post_url(@cms_site.path, post.year, post.month, post.slug)
+    feed.entry(post, id: post.id, url: url) do |entry|
+      entry.title(post.title)
+      entry.content(post.content_cache)
 
-      xml.item do
-        xml.title post.title
-        xml.description "blog post content"
-        xml.pubDate post.published_at.to_s(:rfc822)
-        xml.link url
-        xml.guid url
+      entry.author do |author|
+        author.name("Ruby Together")
       end
     end
   end
 end
+
