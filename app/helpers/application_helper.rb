@@ -1,15 +1,13 @@
 module ApplicationHelper
 
   def title(text = nil)
-    if text
-      @title = text
-    else
-      @title
-    end
+    return @title = text if text
+
+    @cms_page ? @cms_page.label : @title
   end
 
   def title_tag
-    text = @title || "Ruby Together"
+    text = title || "Ruby Together"
     text += " - Ruby Together" unless text[/ruby together/i]
     content_tag :title, text.gsub(/<br\/?>/, " ")
   end
