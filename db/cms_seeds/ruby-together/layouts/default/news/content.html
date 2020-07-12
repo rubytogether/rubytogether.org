@@ -3,5 +3,5 @@ label: News Layout
 app_layout: news
 
 [content]
-<!-- summary {{ cms:text summary }} -->
+{{ cms:text summary, render: false }}
 {{ cms:wysiwyg content }}
