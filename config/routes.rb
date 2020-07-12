@@ -150,7 +150,6 @@ Rails.application.routes.draw do
 
   %w[
     companies
-    conflict_policy
     example_proposal
     projects
     roadmap
