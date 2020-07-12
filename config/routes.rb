@@ -193,8 +193,8 @@ Rails.application.routes.draw do
   devise_for :users, path: "", controllers: {sessions: "sessions"}
 
   get "/news.xml" => "comfy/blog/posts#index", format: "rss"
+  get "/news/:year-:month-:day-:slug" => "comfy/blog/posts#show", year: /\d{4}/, month: /\d{2}/, day: /\d{2}/, as: :news
   get "/news" => "comfy/blog/posts#index", as: :news_index
-  get "/news/:slug" => "comfy/blog/posts#show", as: :news
   comfy_route :blog, path: "/news"
   comfy_route :cms,  path: "/"
 end
