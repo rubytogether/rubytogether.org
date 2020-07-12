@@ -151,10 +151,12 @@ Rails.application.routes.draw do
   %w[
     bylaws
     conflict_policy
+    companies
+    developers
     example_proposal
     projects
-    rubygems
     roadmap
+    rubygems
     team
   ].each do |page|
     get "/#{page}" => "comfy/cms/content#show", cms_path: page
@@ -162,8 +164,6 @@ Rails.application.routes.draw do
 
 
   %w[
-    companies
-    developers
     members
   ].each do |page|
     get "/#{page}" => "home##{page}"

@@ -8,42 +8,14 @@
   <h4>When you support Ruby Together, you get:</h4>
 
   <ul>
-    <%= render "member_benefit_items" %>
+    <%= render "home/member_benefit_items" %>
   </ul>
 
   <p><%= link_to "Our team", team_path %> has a proven track record of delivering year-over-year improvements to Ruby's <%= link_to "public infrastructure", roadmap_path %>. With funding, we'll transform the tools you use so that they work for you. Like tools should.</p>
 </section>
 
-<section class="group">
-  <% @developer_levels.each do |level, amount| %>
-    <section class="join-box" id="plans">
-      <p class="title">Developer Membership</p>
-      <p class="price"><span class="currency">$</span><%= amount %> per month</p>
-      <p>Annual vote on Ruby Together board members,</p>
-      <p>Monthly newsletter with progress updates,</p>
-      <p>Invitation to members-only Slack team for group chat.</p>
-      <p class="link"><%= link_to_plan "Become a member!", level, class: "solid-button" %></p>
-    </section>
-  <% end %>
+<%= render "home/developer_join_levels" %>
 
-  <section class="join-box">
-    <p class="title">One-time donation</p>
-    <p class="price">any amount, once</p>
-    <p>Membership benefits are not included.</p>
-    <p>
-      Enter an amount to donate:<br>
-      $<%= text_field_tag "one-time-amount", "150", class: "inline", style: "width: 60%; padding: 5px 4px 0 4px; margin: 4px 2px 0 0;" %>
-    </p>
-    <p class="link">
-      <%= link_to "Donate once", "javascript:;",
-        "class" => "solid-button",
-        "data-amount-input" => "one-time-amount",
-        "data-charge" => true,
-        "data-charge-name" => "Ruby Together" %>
-    </p>
-  </section>
-</section>
+<%= render "home/ruby_together_is" %>
 
-<%= render "ruby_together_is" %>
-
-<%= render "faq" %>
+<%= render "home/faq" %>

@@ -13,7 +13,16 @@
 
   <p>We're completely open about the projects that we're working on, and the progress that we've made so far. Unlike other fundraisers, we take funds and post <%= link_to "public updates", news_index_path %> every single month. If at any time you don't think our work is worth your money, you can stop supporting it. Easy peasy.</p>
 
-  <%= content_for :corporate_faq %>
+  <% if local_assigns["corporate"] %>
+    <p class="callout">Why do you limit how much I can give?</p>
+
+    <p>Ruby Together deliberately spreads the costs across many companies so that a single company’s actions can't bring an end to work on the tools everyone shares. If a company decides to stop funding our work, we remain financially solvent and can continue our development work without interruption.</p>
+
+    <p class="callout">Why not hire an internal tools developer?</p>
+
+    <p>You could, but it’s less expensive to outsource your Ruby tool problems to Ruby Together and let us pay expert developers to fix them for everyone. We estimate that if you give $10K each year, you’ll get a 15x ROI (the estimated cost of a full-time developer if you hired your own to work on tooling).</p>
+  <% end %>
+    
 
   <p class="callout">What about Ruby Central?</p>
 
