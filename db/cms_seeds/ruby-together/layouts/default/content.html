@@ -1,6 +1,8 @@
 [attributes]
-label: Site Layout
+label: Page Layout
 app_layout: application
 
 [content]
-{{ cms:markdown content }}
+{{ cms:wysiwyg content }}
+
+{{ cms:textarea footer, render: false }}
