@@ -149,7 +149,6 @@ Rails.application.routes.draw do
   comfy_route :blog, path: "/news"
 
   %w[
-    bylaws
     companies
     conflict_policy
     example_proposal
