@@ -139,7 +139,7 @@
 #   root POST /           stripe_event/webhook#event
 
 Rails.application.routes.draw do
-  root "comfy/cms/content#show"
+  root "home#index"
 
   get "/csrf" => "application#csrf"
 
