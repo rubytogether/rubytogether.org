@@ -155,6 +155,7 @@ Rails.application.routes.draw do
     projects
     rubygems
     roadmap
+    team
   ].each do |page|
     get "/#{page}" => "comfy/cms/content#show", cms_path: page
   end
@@ -162,7 +163,6 @@ Rails.application.routes.draw do
 
   %w[
     companies
-    team
     developers
     members
   ].each do |page|
