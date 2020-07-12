@@ -140,8 +140,9 @@
 
 Rails.application.routes.draw do
   root "home#index"
-
   get "/csrf" => "application#csrf"
+
+  get "/members" => "home#members"
 
   get "/news.xml" => "comfy/blog/posts#index", format: "rss"
   get "/news/:year-:month-:day-:slug" => "comfy/blog/posts#show", year: /\d{4}/, month: /\d{2}/, day: /\d{2}/, as: :news
@@ -162,26 +163,16 @@ Rails.application.routes.draw do
     get "/#{page}" => "comfy/cms/content#show", cms_path: page
   end
 
-
-  %w[
-    members
-  ].each do |page|
-    get "/#{page}" => "home##{page}"
-  end
-
-  get "/proposal" => redirect("https://goo.gl/forms/tmom1adui2WOrkzN2")
-
-  redirects = {
+  {
     "/benefits" => "/",
     "/contact" => "/",
     "/friends" => "/developers",
     "/join" => "/#join",
     "/membership/new" => "/companies",
     "/plans" => "/roadmap",
-    "/why" => "/developers"
-  }
-
-  redirects.each do |page, destination|
+    "/why" => "/developers",
+    "/proposal" => "https://goo.gl/forms/tmom1adui2WOrkzN2",
+  }.each do |page, destination|
     get page, to: redirect(path: destination)
   end
 
