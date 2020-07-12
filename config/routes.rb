@@ -154,6 +154,7 @@ Rails.application.routes.draw do
     example_proposal
     projects
     rubygems
+    roadmap
   ].each do |page|
     get "/#{page}" => "comfy/cms/content#show", cms_path: page
   end
@@ -161,7 +162,6 @@ Rails.application.routes.draw do
 
   %w[
     companies
-    roadmap
     team
     developers
     members
