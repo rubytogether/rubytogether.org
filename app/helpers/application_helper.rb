@@ -55,6 +55,15 @@ module ApplicationHelper
     link_to text, twitter_url
   end
 
+  def link_to_post(text, post, opts = {})
+    link_to text, news_path(
+      post.date.strftime("%Y"),
+      post.date.strftime("%m"),
+      post.date.strftime("%d"),
+      post.slug
+    ), opts
+  end
+
   def link_to_card_form(text, membership)
     link_to(text, "javascript:;",
       "data-subscription" => "update",
