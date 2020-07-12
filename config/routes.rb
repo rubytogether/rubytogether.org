@@ -149,8 +149,16 @@ Rails.application.routes.draw do
   comfy_route :blog, path: "/news"
 
   %w[
-    companies
+    bylaws
+    conflict_policy
     example_proposal
+  ].each do |page|
+    get "/#{page}" => "comfy/cms/content#show", cms_path: page
+  end
+
+
+  %w[
+    companies
     projects
     roadmap
     rubygems
