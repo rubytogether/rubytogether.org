@@ -152,6 +152,7 @@ Rails.application.routes.draw do
     bylaws
     conflict_policy
     example_proposal
+    projects
   ].each do |page|
     get "/#{page}" => "comfy/cms/content#show", cms_path: page
   end
@@ -159,7 +160,6 @@ Rails.application.routes.draw do
 
   %w[
     companies
-    projects
     roadmap
     rubygems
     team
