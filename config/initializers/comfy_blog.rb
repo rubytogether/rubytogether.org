@@ -8,8 +8,14 @@ ComfyBlog.configure do |config|
   #   config.posts_per_page = 10
 end
 
-class Comfy::Blog::Post < ActiveRecord::Base
-  def date
-    published_at.to_date
+Rails.configuration.after_initialize do
+  Comfy::Blog::Post.class_eval do
+    def date
+      published_at.to_date
+    end
+
+    def summary
+      fragments.find{|f| f.identifier == "summary" }&.content
+    end
   end
 end
