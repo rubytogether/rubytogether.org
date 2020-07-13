@@ -1,5 +1,7 @@
-<% title "Ruby Together roadmap" %>
+[attributes]
+label: "The RubyGems Partnership"
 
+[wysiwyg content]
 <p class="callout">Take a look at where we're headed.</p>
 
 <section class="group">
@@ -21,15 +23,15 @@
   <p>As time and funding permits, the Ruby Together team will:</p>
 
   <ul>
-    <li>Roll out a <%= link_to "new gem index", "http://andre.arko.net/2014/03/28/the-new-rubygems-index-format/" %> that will make installing gems two to ten times faster than today</li>
-    <li>Migrate all of RubyGems.org to the <%= link_to "Fastly CDN", "http://fastly.com" %>, providing dramatic speed improvements when downloading gems and gem data</li>
+    <li>Roll out a <a href="http://andre.arko.net/2014/03/28/the-new-rubygems-index-format/">new gem index</a> that will make installing gems two to ten times faster than today</li>
+    <li>Migrate all of RubyGems.org to the <a href="http://fastly.com">Fastly CDN</a>, providing dramatic speed improvements when downloading gems and gem data</li>
     <li>Build a gem caching server to easily allow data centers and offices to cache local copies of the gems they need, whether public or private</li>
-    <li>Improve <%= rubygems_org %>, adding search, statistics, and more gem information to every page</li>
+    <li>Improve <a href="http://rubygems.org">RubyGems.org</a>, adding search, statistics, and more gem information to every page</li>
   </ul>
 
   <p>And there will be more! We start new projects based on community need and Ruby Together's available funding.</p>
 </section>
 
-<%= render "funding_levels" %>
+{{ cms:partial "home/funding_levels" }}
 
-<%= render "join" %>
+{{ cms:partial "home/join" }}

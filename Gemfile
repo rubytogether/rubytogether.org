@@ -3,7 +3,9 @@ ruby File.read(File.expand_path("../.ruby-version", __FILE__)).chomp
 
 gem "rails", "~> 6.0.3"
 
-gem "compass-rails", "~> 4.0"
+gem "aws-sdk-s3", "~> 1.74", require: false
+gem "comfortable_mexican_sofa", "~> 2.0"
+gem "comfy_blog", "~> 2.0"
 gem "devise", '~> 4.7.2'
 gem "fastly", "~> 2.5"
 gem "http", "~> 4.4"
@@ -19,7 +21,7 @@ gem "puma", "~> 4.3"
 gem "rails-controller-testing", "~> 1.0.5", github: "rails/rails-controller-testing"
 gem "rdiscount", "~> 2.2"
 gem "rollbar", "~> 2.26"
-gem "sass-rails", "~> 5.0"
+gem "sassc-rails", "~> 2.1"
 gem "slack-notifier", "~> 2.3"
 gem "stripe_event", "~> 2.3"
 gem "uglifier", "~> 4.2"

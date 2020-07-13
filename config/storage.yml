@@ -1,0 +1,11 @@
+local:
+  service: Disk
+  root: <%= Rails.root.join("storage") %>
+ 
+test:
+  service: Disk
+  root: <%= Rails.root.join("tmp/storage") %>
+ 
+amazon:
+  service: S3
+  bucket: <%= ENV.fetch("AWS_BUCKET") if Rails.env.production? %>

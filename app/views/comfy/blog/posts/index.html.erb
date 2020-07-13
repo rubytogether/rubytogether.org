@@ -1,0 +1,22 @@
+<% title "Ruby Together News" %>
+
+<p class="center">Monthly progress reports and other Ruby Together updates. See exactly what we’re doing with with the money we raise.</p>
+
+<% @blog_posts.group_by{|p| p.published_at.to_date }.each do |date, posts| %>
+  <p class="post-date"><%= date.strftime("%B %e, %Y") %></p>
+  <ul class="post-names">
+  <% posts.each do |post| %>
+    <li>
+      <%= link_to_post post.title, post, class: "post-name" %>
+      <% if post.summary %>
+        <p class="post-summary">
+          <%= cms_fragment_content(:summary, post) %>
+          <%= link_to_post "read more…", post %>
+        </p>
+      <% end %>
+    </li>
+  <% end %>
+  </ul>
+<% end %>
+
+<%= comfy_paginate @blog_posts %>

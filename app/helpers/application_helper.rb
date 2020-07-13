@@ -1,15 +1,13 @@
 module ApplicationHelper
 
   def title(text = nil)
-    if text
-      @title = text
-    else
-      @title
-    end
+    return @title = text if text
+
+    @cms_page ? @cms_page.label : @title
   end
 
   def title_tag
-    text = @title || "Ruby Together"
+    text = title || "Ruby Together"
     text += " - Ruby Together" unless text[/ruby together/i]
     content_tag :title, text.gsub(/<br\/?>/, " ")
   end
@@ -53,6 +51,15 @@ module ApplicationHelper
     params[:url] = url if url
     twitter_url = "https://twitter.com/intent/tweet?#{params.to_query}"
     link_to text, twitter_url
+  end
+
+  def link_to_post(text, post, opts = {})
+    link_to text, news_path(
+      post.date.strftime("%Y"),
+      post.date.strftime("%m"),
+      post.date.strftime("%d"),
+      post.slug
+    ), opts
   end
 
   def link_to_card_form(text, membership)

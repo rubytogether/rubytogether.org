@@ -1,5 +1,7 @@
-<% title "Ruby OSS Project Funding" %>
+[attributes]
+label: "Ruby OSS Project Funding"
 
+[wysiwyg content]
 <p class="callout">Nominate your project for funding.</p>
 
 <section class="group">
@@ -23,7 +25,7 @@
 <section class="group">
   <h3 id="how-to-apply">How To Apply</h3>
 
-  <p>Open <%= link_to "the project proposal form", proposal_path %> and fill it out. We ask questions to be able to understand and evaluate the project and your work proposal. It shouldn’t take you more than a few minutes to fill out a proposal (and if it does, please tell us about it so we can fix it!)</p>
+  <p>Open {{ cms:helper link_to "the project proposal form", proposal_path }} and fill it out. We ask questions to be able to understand and evaluate the project and your work proposal. It shouldn’t take you more than a few minutes to fill out a proposal (and if it does, please tell us about it so we can fix it!)</p>
 </section>
 
 <section class="group">
@@ -47,13 +49,13 @@
     <li>Track record (what is the history of the project? what about the history of the person applying?)</li>
   </ul>
 
-  <p>Today, the project committee includes the <%= link_to "board of directors", "https://rubytogether.org/team" %>. Funded projects will be announced in the Ruby Together monthly update each cycle.</p>
+  <p>Today, the project committee includes the <a href="/team">board of directors</a>. Funded projects will be announced in the Ruby Together monthly update each cycle.</p>
 </section>
 
 <section class="group">
   <h3 id="project-reports">Project reports</h3>
 
-  <p>Each accepted project will be expected to submit a project report twice per month. Project reports should demonstrate that the work proposed is being accomplished, and will be used to provide updates to Ruby Together’s members. For example project reports, see the Ruby Toolbox section in <%= link_to "Ruby Together’s monthly updates", news_index_path %>.</p>
+  <p>Each accepted project will be expected to submit a project report twice per month. Project reports should demonstrate that the work proposed is being accomplished, and will be used to provide updates to Ruby Together’s members. For example project reports, see the Ruby Toolbox section in <a href="/news">Ruby Together’s monthly updates</a>.</p>
 </section>
 
 <section class="group">
@@ -88,9 +90,9 @@
 <section class="group">
   <h3 id="apply-now">Apply now!</h3>
 
-  <p><%= link_to "Submit your application for project funding today", proposal_url %>.</p>
+  <p>{{ cms:helper link_to "Submit your application for project funding today", proposal_url }}.</p>
 
-  <p>Feel free to refer to the <%= link_to "example application", example_proposal_path %> as your fill out your application.</p>
+  <p>Feel free to refer to the {{ cms:helper link_to "example application", example_proposal_path }} as your fill out your application.</p>
 </section>
 
 <section class="group">
@@ -98,5 +100,5 @@
 
   <p>Help us fund Ruby open source projects by signing up for a developer membership or encouraging your company to join as a member.</p>
 
-  <%= render "join" %>
+  {{ cms:partial "home/join" }}
 </section>

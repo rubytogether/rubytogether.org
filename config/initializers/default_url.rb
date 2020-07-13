@@ -1,10 +1,15 @@
 require 'uri'
 
-app_url = if ENV.has_key?("HEROKU_APP_NAME")
-  "https://" + ENV["HEROKU_APP_NAME"] + ".herokuapp.com"
-else
-  ENV.fetch("DEFAULT_URL")
+if ENV.has_key?("HEROKU_APP_NAME")
+  app_url = "https://" + ENV["HEROKU_APP_NAME"] + ".herokuapp.com"
 end
+
+# Detect puma-dev setup running in a console
+if File.exist? File.expand_path("~/.puma-dev/rubytogether")
+  app_url = "https://rubytogether.test"
+end
+
+app_url ||= ENV.fetch("DEFAULT_URL")
 
 uri = URI.parse app_url
 

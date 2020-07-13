@@ -1,4 +1,5 @@
 export RUBYOPT='-W:no-deprecated -W:no-experimental'
+export DEFAULT_URL=https://rubytogether.test
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 chruby $(cat .ruby-version)

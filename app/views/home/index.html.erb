@@ -1,7 +1,7 @@
 <section>
   <p class="center super-callout">Community funded developer infrastructure</p>
 
-  <p>Ruby Together is a grassroots initiative committed to supporting the critical Ruby infrastructure you rely on: Bundler, RubyGems, and other shared tools. Check out <%= link_to "what we've done in the last month.", news_path(Post.all.first.id), class: "post-name" %></p>
+  <p>Ruby Together is a grassroots initiative committed to supporting the critical Ruby infrastructure you rely on: Bundler, RubyGems, and other shared tools. Check out <%= link_to_post "what we've done in the last month.", Comfy::Blog::Post.published.order(:published_at).last, class: "post-name" %></p>
 
   <p>
     Join companies like <%= bold_link_sentence(@companies) %>; developers like <%= bold_sentence(@developers) %>;

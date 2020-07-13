@@ -17,16 +17,6 @@ class HomeController < ApplicationController
     @developer_count = Membership.developer.active.count
   end
 
-  def developers
-    @developer_levels = MembershipProduct.developer_ids.map do |id|
-      [id, MembershipPlan.monthly(id).dollar_amount]
-    end.to_h
-  end
-
-  def example_proposal
-    render layout: "application"
-  end
-
 private
 
   def levels_for(companies)
