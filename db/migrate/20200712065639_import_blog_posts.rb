@@ -1,7 +1,7 @@
 class ImportBlogPosts < ActiveRecord::Migration[6.0]
   def change
     Post.all.reverse.each do |np|
-      md = NewsController.render(inline: np.body)
+      md = ApplicationController.render(inline: np.body)
 
       ::Comfy::Blog::Post.create_with(
         created_at: np.date,
