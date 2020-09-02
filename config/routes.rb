@@ -171,10 +171,10 @@ Rails.application.routes.draw do
     "/membership/new" => "/companies",
     "/plans" => "/roadmap",
     "/why" => "/developers",
-    "/proposal" => "https://goo.gl/forms/tmom1adui2WOrkzN2",
   }.each do |page, destination|
     get page, to: redirect(path: destination)
   end
+  get "/proposal", to: redirect("https://goo.gl/forms/tmom1adui2WOrkzN2")
 
   scope :thanks, as: :thanks do
     %w[member newsletter confirmed].each do |page|
