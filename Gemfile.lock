@@ -262,7 +262,7 @@ GEM
       pry (~> 0.13.0)
     pry-rails (0.3.9)
       pry (>= 0.10.4)
-    public_suffix (4.0.4)
+    public_suffix (4.0.6)
     puma (4.3.6)
       nio4r (~> 2.0)
     rack (2.2.3)
@@ -382,7 +382,7 @@ GEM
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
-    webmock (3.8.3)
+    webmock (3.9.1)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
@@ -433,7 +433,7 @@ DEPENDENCIES
   uglifier (~> 4.2)
   vcr (~> 6.0)
   web-console (~> 4.0)
-  webmock (~> 3.8)
+  webmock (~> 3.9)
 
 RUBY VERSION
    ruby 2.7.1p83
