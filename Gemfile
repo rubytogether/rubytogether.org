@@ -6,7 +6,7 @@ gem "rails", "~> 6.0.3"
 gem "aws-sdk-s3", "~> 1.80", require: false
 gem "comfortable_mexican_sofa", "~> 2.0"
 gem "comfy_blog", "~> 2.0"
-gem "devise", '~> 4.7.2'
+gem "devise", '~> 4.7.3'
 gem "fastly", "~> 2.5"
 gem "http", "~> 4.4"
 gem "jquery-rails", "~> 4.4"
