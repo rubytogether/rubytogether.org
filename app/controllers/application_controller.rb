@@ -18,17 +18,17 @@ class ApplicationController < ActionController::Base
     payload[:user_id] = current_user.try(:id) || 0
   end
 
+  # Checking for `warden` allows this to work in tests, etc.
+  def current_user
+    return nil if warden.nil?
+    @current_user ||= warden.authenticate(scope: :user)
+  end
+
 private
 
   # Used by Devise to redirect after login
   def after_sign_in_path_for(resource)
     stored_location_for(resource) || membership_path
-  end
-
-  # Checking for `warden` allows this to work in tests, etc.
-  def current_user
-    return nil if warden.nil?
-    @current_user ||= warden.authenticate(scope: :user)
   end
 
   # imported from ye olde fastly-rails, now abandoned
