@@ -79,6 +79,12 @@ Rails.application.configure do
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
+    config.lograge.enabled = true
+    config.lograge.custom_payload do |controller|
+      {
+        user_id: controller.current_user&.id
+      }
+    end
   end
 
   # Do not dump schema after migrations.
