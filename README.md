@@ -1,5 +1,5 @@
 # rubytogether.org
-
+An Amazing Website
 ## local development
 
 Clone the repository and run `bin/setup`. Start a server with `bin/rails s`.
