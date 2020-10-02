@@ -1,4 +1,4 @@
-# rubytogether.org
+# Rubytogether.org
 
 ## local development
 
@@ -12,7 +12,7 @@ You can find the staging app here: https://rubytogether-staging.herokuapp.com
 
 Deploy to production by running `bin/production push`.
 
-## contributing
+## Contributing
 
 Ruby Together is a community effort
 supported by Ruby developers
