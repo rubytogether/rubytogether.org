@@ -35,7 +35,7 @@ group :development do
   gem "rack-livereload", "~> 0.3"
   gem "terminal-notifier-guard", "~> 1.7"
   gem "terminal-notifier", "~> 2.0"
-  gem "web-console", "~> 4.0"
+  gem "web-console", "~> 4.1"
 end
 
 group :development, :test do
