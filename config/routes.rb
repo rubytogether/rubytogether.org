@@ -191,7 +191,7 @@ Rails.application.routes.draw do
   mount StripeEvent::Engine, at: "/stripe/events"
   devise_for :users, path: "", controllers: {sessions: "sessions"}
 
-  comfy_route :blog_admin, path: "/admin"
-  comfy_route :cms_admin,  path: "/admin"
-  comfy_route :cms,  path: "/"
+  comfy_route_blog_admin path: "/admin"
+  comfy_route_cms_admin path: "/admin"
+  comfy_route_cms path: "/"
 end
