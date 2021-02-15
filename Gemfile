@@ -9,6 +9,7 @@ gem "comfy_blog", "~> 2.0"
 gem "devise", '~> 4.7.3'
 gem "fastly", "~> 3.0"
 gem "http", "~> 4.4"
+gem "http-parser", "~> 1.2.3" # required for Apple Silicon
 gem "jquery-rails", "~> 4.4"
 gem "lograge", "~> 0.11"
 gem "mail", "~> 2.7.1"
