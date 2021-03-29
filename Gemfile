@@ -46,7 +46,7 @@ group :development, :test do
 end
 
 group :production do
-  gem "postmark-rails", "~> 0.20"
+  gem "postmark-rails", "~> 0.21"
   gem "sprockets-redirect", "~> 1.0"
 end
 
