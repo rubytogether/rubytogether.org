@@ -6,7 +6,7 @@ gem "rails", "~> 6.1.3"
 gem "aws-sdk-s3", "~> 1.94", require: false
 gem "comfortable_mexican_sofa", "~> 2.0"
 gem "comfy_blog", "~> 2.0"
-gem "devise", '~> 4.7.3'
+gem "devise", '~> 4.8.0'
 gem "fastly", "~> 3.0"
 gem "http", "~> 4.4"
 gem "http-parser", "~> 1.2.3" # required for Apple Silicon
