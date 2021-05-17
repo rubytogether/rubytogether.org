@@ -23,7 +23,7 @@ gem "rails-controller-testing", "~> 1.0.5", github: "rails/rails-controller-test
 gem "rdiscount", "~> 2.2"
 gem "rollbar", "~> 3.1"
 gem "sassc-rails", "~> 2.1"
-gem "slack-notifier", "~> 2.3"
+gem "slack-notifier", "~> 2.4"
 gem "stripe_event", "~> 2.3"
 gem "uglifier", "~> 4.2"
 
