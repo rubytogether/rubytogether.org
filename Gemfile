@@ -8,7 +8,7 @@ gem "comfortable_mexican_sofa", "~> 2.0"
 gem "comfy_blog", "~> 2.0"
 gem "devise", '~> 4.8.0'
 gem "fastly", "~> 3.0"
-gem "http", "~> 4.4"
+gem "http", "~> 5.0"
 gem "http-parser", "~> 1.2.3" # required for Apple Silicon
 gem "jquery-rails", "~> 4.4"
 gem "lograge", "~> 0.11"
