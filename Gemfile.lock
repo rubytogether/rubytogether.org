@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/comfy/comfy-blog.git
+  revision: 767f3848165a3799db76c26ebe2901d5a9c3b93f
+  specs:
+    comfy_blog (2.0.7)
+      comfortable_mexican_sofa (>= 2.0.14)
+
+GIT
   remote: https://github.com/rails/rails-controller-testing.git
   revision: bc6f3356803d7c5d373f89a44625d59953dc0cef
   specs:
@@ -109,8 +116,6 @@ GEM
       rails (>= 5.2.0)
       rails-i18n (>= 5.0.0)
       sassc-rails (>= 2.0.0)
-    comfy_blog (2.0.7)
-      comfortable_mexican_sofa (>= 2.0.14)
     comfy_bootstrap_form (4.0.9)
       rails (>= 5.0.0)
     concurrent-ruby (1.1.8)
@@ -242,7 +247,7 @@ GEM
       activerecord (>= 4.0.0)
       activesupport (>= 4.0.0)
     nio4r (2.5.7)
-    nokogiri (1.11.4)
+    nokogiri (1.11.5)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     notiffany (0.1.1)
@@ -341,8 +346,8 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.10.2)
-    ruby_parser (3.15.1)
-      sexp_processor (~> 4.9)
+    ruby_parser (3.16.0)
+      sexp_processor (~> 4.15, >= 4.15.1)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -351,7 +356,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    sexp_processor (4.15.2)
+    sexp_processor (4.15.3)
     shellany (0.0.1)
     slack-notifier (2.4.0)
     sprockets (4.0.2)
@@ -404,7 +409,7 @@ DEPENDENCIES
   annotate (~> 3.1)
   aws-sdk-s3 (~> 1.94)
   comfortable_mexican_sofa (~> 2.0)
-  comfy_blog (~> 2.0)
+  comfy_blog (~> 2.0)!
   devise (~> 4.8.0)
   dotenv-rails (~> 2.7)
   fastly (~> 3.0)
