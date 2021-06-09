@@ -14,8 +14,6 @@ class CreateMembership
     plan = MembershipPlan.monthly(level)
     subscribe_to_plan(customer, plan)
     create_membership_record(info, user, card, plan)
-    email_new_member(user)
-    invite_to_slack(user)
   rescue Stripe::CardError => e
     raise Error, e.message
   rescue => e
@@ -61,18 +59,6 @@ class CreateMembership
       card_last4: card.last4,
     )
     user.create_membership!(attrs)
-  end
-
-  def email_new_member(user)
-    token = user.generate_reset_password_token!
-    MembershipMailer.welcome(user, token).deliver_later
-  end
-
-  def invite_to_slack(user)
-    Slack.invite(user.email)
-  rescue => e
-    # Slack errors should not block signup, so report and continue
-    Rollbar.error(e)
   end
 
 end

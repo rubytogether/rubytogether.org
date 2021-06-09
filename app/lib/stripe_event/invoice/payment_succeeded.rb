@@ -28,6 +28,12 @@ module StripeEvent
         # The extra 3.5 days is for a payment failure grace period.
         @user.membership.update!(expires_at: new_period_end)
 
+        if @user.welcomed_at.nil?
+          ResendWelcome.run(@user)
+          invite_to_slack(@user)
+          @user.update!(welcomed_at: Time.now)
+        end
+
         # rebuild the members page in case this activated a membership
         FastlyRails.purge_by_key("members")
       end
@@ -70,6 +76,13 @@ module StripeEvent
         customer.subscriptions.any? do |subscription|
           membership_plans.include?(subscription.plan.id)
         end
+      end
+
+      def invite_to_slack(user)
+        Slack.invite(user.email)
+      rescue => e
+        # Slack errors should not block signup, so report and continue
+        Rollbar.error(e)
       end
 
     end
