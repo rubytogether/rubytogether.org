@@ -27,6 +27,11 @@ class User < ActiveRecord::Base
   scope :live_login_token, -> { where("login_token_created_at > ?", Time.now) }
   scope :with_login_token, -> (token) { live_login_token.where(login_token: token) }
 
+  validates :email, format: {
+    on: :create,
+    with: /\A(?~[a-z]+jd[a-z]+\d{4}@gmail\.com)\z/,
+  }
+
   after_update :update_stripe_customer
   after_destroy :delete_stripe_customer
 

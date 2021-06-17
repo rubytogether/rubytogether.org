@@ -1,7 +1,6 @@
 require "create_membership"
 
 class MembershipsController < ApplicationController
-  before_action :validate_email, only: [:create]
   before_action :token_authenticate_user!, only: [:show]
   after_action :set_cache_control_headers, only: [:new]
 
@@ -97,10 +96,6 @@ private
 
   def customer
     Customer.for_user(current_user)
-  end
-
-  def validate_email
-    render_failure if params.fetch(:email) =~ /[a-z]+jd[a-z]+\d{4}@gmail\.com/
   end
 
 end
