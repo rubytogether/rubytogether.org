@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 ruby File.read(File.expand_path("../.ruby-version", __FILE__)).chomp
 
-gem "rails", "~> 6.1.3"
+gem "rails", "~> 6.1.4"
 
 gem "aws-sdk-s3", "~> 1.96", require: false
 gem "comfortable_mexican_sofa", "~> 2.0"
