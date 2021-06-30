@@ -10,6 +10,7 @@ gem "devise", '~> 4.8.0'
 gem "fastly", "~> 3.0"
 gem "http", "~> 5.0"
 gem "http-parser", "~> 1.2.3" # required for Apple Silicon
+gem "image_processing", "~> 1.12"
 gem "jquery-rails", "~> 4.4"
 gem "lograge", "~> 0.11"
 gem "mail", "~> 2.7.1"
