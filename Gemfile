@@ -4,13 +4,12 @@ ruby File.read(File.expand_path("../.ruby-version", __FILE__)).chomp
 gem "rails", "~> 6.1.3"
 
 gem "aws-sdk-s3", "~> 1.96", require: false
-gem "comfortable_mexican_sofa", "~> 2.0"
+gem "comfortable_mexican_sofa", "~> 2.0", github: "rubytogether/comfortable-mexican-sofa"
 gem "comfy_blog", "~> 2.0", github: "comfy/comfy-blog"
 gem "devise", '~> 4.8.0'
 gem "fastly", "~> 3.0"
 gem "http", "~> 5.0"
 gem "http-parser", "~> 1.2.3" # required for Apple Silicon
-gem "image_processing", "~> 1.12"
 gem "jquery-rails", "~> 4.4"
 gem "lograge", "~> 0.11"
 gem "mail", "~> 2.7.1"
