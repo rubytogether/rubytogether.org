@@ -3,7 +3,7 @@ ruby File.read(File.expand_path("../.ruby-version", __FILE__)).chomp
 
 gem "rails", "~> 6.1.3"
 
-gem "aws-sdk-s3", "~> 1.96", require: false
+gem "aws-sdk-s3", "~> 1.98", require: false
 gem "comfortable_mexican_sofa", "~> 2.0", github: "rubytogether/comfortable-mexican-sofa"
 gem "comfy_blog", "~> 2.0", github: "comfy/comfy-blog"
 gem "devise", '~> 4.8.0'
