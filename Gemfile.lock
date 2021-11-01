@@ -434,7 +434,7 @@ DEPENDENCIES
   lograge (~> 0.11)
   mail (~> 2.7.1)
   nilify_blanks (~> 1.4)
-  nokogiri (~> 1.11)
+  nokogiri (~> 1.12)
   pg (~> 1.2)
   postmark-rails (~> 0.21)
   premailer-rails (~> 1.11)
