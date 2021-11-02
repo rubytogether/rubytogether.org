@@ -48,7 +48,7 @@ p.small {
 }
 
 header {
-  margin: 2em 0 2.5em 0;
+  margin: 4em 0 2.5em 0;
   text-align: center;
 
   h1.home {
@@ -62,6 +62,22 @@ header {
 
   a {
     font-weight: normal;
+  }
+
+  .banner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 1em;
+    background-color: $dark-blue;
+    color: $blue;
+    padding: 0.5em;
+
+    a {
+      color: $blue;
+      font-weight: bold;
+    }
   }
 }
 
