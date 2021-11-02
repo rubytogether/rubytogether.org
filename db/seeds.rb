@@ -53,3 +53,27 @@ end
 
 User.update_all(created_at: 1.year.ago)
 Membership.update_all(created_at: 1.year.ago)
+
+# Import CMS seeds
+Comfy::Cms::Site.create_with(
+  label: "Ruby Together",
+  hostname: Rails.application.routes.default_url_options.fetch(:host),
+  locale: "en"
+).find_or_create_by!(identifier: "ruby-together")
+ComfortableMexicanSofa::Seeds::Importer.new("ruby-together", "ruby-together").import!
+
+# Import existing text blog posts
+Post.all.reverse.each do |np|
+  md = ApplicationController.render(inline: np.body)
+
+  ::Comfy::Blog::Post.create_with(
+    created_at: np.date,
+    published_at: np.date,
+    site: ::Comfy::Cms::Site.find_by(identifier: "ruby-together"),
+    layout: ::Comfy::Cms::Layout.find_by(identifier: "news"),
+    title: np.title,
+    fragments_attributes: [
+      {identifier: "summary", content: np.summary},
+      {identifier: "content", content: md},
+    ]).find_or_create_by!(slug: np.name)
+end
